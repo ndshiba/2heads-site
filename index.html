@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiba & Associates — Digital Marketing, GEO & Sales Optimization</title>
+  <meta name="description" content="Shiba & Associates is a digital marketing, GEO, and sales optimization agency helping businesses grow through data-driven strategy." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0d;
+      --white: #f9f9f9;
+      --accent: #c8a96e;
+      --gray: #888;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+    nav a.cta {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 0.45rem 1.1rem;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a.cta:hover { background: var(--accent); color: var(--black); }
+
+    /* HERO */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5rem 2rem 4rem;
+    }
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      max-width: 720px;
+      margin-bottom: 1.4rem;
+    }
+    h1 em { font-style: normal; color: var(--accent); }
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--gray);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* SERVICES */
+    .services {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 4.5rem;
+    }
+    .service-pill {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.5rem 1.2rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: #ccc;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto 3rem;
+      opacity: 0.5;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      padding: 0 2rem 5rem;
+    }
+    .contact h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1.4rem;
+    }
+    .contact-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .contact-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+    .contact-links a {
+      font-size: 0.95rem;
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .contact-links a:hover { opacity: 0.7; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="/"><span>2.0</span>Heads</a>
+    <a class="cta" href="mailto:shiba@2.0heads.com">Get in Touch</a>
+  </nav>
+
+  <section class="hero">
+    <p class="eyebrow">Shiba &amp; Associates</p>
+    <h1>Digital Marketing, <em>GEO</em> &amp; Sales Optimization</h1>
+    <p class="subtitle">
+      Data-driven strategy that turns traffic into revenue. We help businesses grow through search, paid media, and sales pipeline optimization.
+    </p>
+
+    <div class="services">
+      <span class="service-pill">Search &amp; SEO</span>
+      <span class="service-pill">Paid Media</span>
+      <span class="service-pill">GEO / AI Search Optimization</span>
+      <span class="service-pill">Sales Pipeline Analytics</span>
+      <span class="service-pill">E-Commerce Growth</span>
+      <span class="service-pill">Reporting &amp; Attribution</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="contact">
+      <h2>Contact</h2>
+      <p class="contact-name">David Shiba</p>
+      <div class="contact-links">
+        <a href="mailto:shiba@2.0heads.com">shiba@2.0heads.com</a>
+        <a href="tel:+13477662034">347-766-2034</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Shiba &amp; Associates &nbsp;·&nbsp; 2.0heads.com
+  </footer>
+
+</body>
+</html>
