@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shiba & Associates — Digital Marketing, GEO & Sales Optimization</title>
-  <meta name="description" content="Shiba & Associates is a digital marketing, GEO, and sales optimization agency helping businesses grow through data-driven strategy." />
+  <title>Shiba & Associates — Digital Marketing, Google Ads & Sales Optimization</title>
+  <meta name="description" content="Shiba & Associates is a digital marketing agency providing Google Ads management, SEO, GEO, and sales optimization services to small and mid-size businesses." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -41,6 +41,18 @@
       text-decoration: none;
     }
     .logo span { color: var(--accent); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    .nav-links a.nav-link {
+      font-size: 0.85rem;
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a.nav-link:hover { color: var(--accent); }
     nav a.cta {
       font-size: 0.85rem;
       font-weight: 500;
@@ -55,11 +67,9 @@
 
     /* HERO */
     .hero {
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
       padding: 5rem 2rem 4rem;
     }
@@ -76,19 +86,19 @@
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -0.02em;
-      max-width: 720px;
+      max-width: 760px;
       margin-bottom: 1.4rem;
     }
     h1 em { font-style: normal; color: var(--accent); }
     .subtitle {
       font-size: 1.05rem;
       color: var(--gray);
-      max-width: 540px;
+      max-width: 560px;
       line-height: 1.7;
       margin-bottom: 3rem;
     }
 
-    /* SERVICES */
+    /* SERVICES PILLS */
     .services {
       display: flex;
       gap: 1.2rem;
@@ -105,6 +115,81 @@
       border-radius: 100px;
       color: #ccc;
     }
+    .service-pill.highlight {
+      border-color: rgba(200, 169, 110, 0.4);
+      color: var(--accent);
+    }
+
+    /* SECTION DIVIDER */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin: 0;
+    }
+
+    /* GOOGLE ADS SECTION */
+    .google-ads-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      width: 100%;
+    }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+    .google-ads-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .google-ads-section .intro {
+      font-size: 1rem;
+      color: #bbb;
+      line-height: 1.75;
+      max-width: 680px;
+      margin-bottom: 2.5rem;
+    }
+    .ads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+    .ads-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+    }
+    .ads-card h3 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .ads-card p {
+      font-size: 0.88rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+    .ads-learn-more {
+      display: inline-block;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid rgba(200,169,110,0.4);
+      padding: 0.55rem 1.4rem;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .ads-learn-more:hover { background: var(--accent); color: var(--black); }
 
     /* DIVIDER */
     .divider {
@@ -118,7 +203,7 @@
     /* CONTACT */
     .contact {
       text-align: center;
-      padding: 0 2rem 5rem;
+      padding: 3rem 2rem 5rem;
     }
     .contact h2 {
       font-size: 1rem;
@@ -156,50 +241,91 @@
       align-items: center;
       justify-content: center;
       font-size: 0.75rem;
-      color: #444;
+      color: #555;
+      gap: 0.3rem;
+      flex-wrap: wrap;
     }
+    footer a {
+      color: #777;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--accent); }
   </style>
 </head>
 <body>
 
   <nav>
     <a class="logo" href="/"><span>2.0</span>Heads</a>
-    <a class="cta" href="mailto:shiba@2.0heads.com">Get in Touch</a>
+    <div class="nav-links">
+      <a class="nav-link" href="/google-ads-services.html">Google Ads Services</a>
+      <a class="cta" href="mailto:shiba@2.0heads.com">Get in Touch</a>
+    </div>
   </nav>
 
   <section class="hero">
     <p class="eyebrow">Shiba &amp; Associates</p>
-    <h1>Digital Marketing, <em>GEO</em> &amp; Sales Optimization</h1>
+    <h1>Digital Marketing, <em>Google Ads</em> &amp; Sales Optimization</h1>
     <p class="subtitle">
-      Data-driven strategy that turns traffic into revenue. We help businesses grow through search, paid media, and sales pipeline optimization.
+      Data-driven strategy that turns traffic into revenue. We help small and mid-size businesses grow through Google Ads management, search, and sales pipeline optimization.
     </p>
 
     <div class="services">
+      <span class="service-pill highlight">Google Ads Management</span>
       <span class="service-pill">Search &amp; SEO</span>
-      <span class="service-pill">Paid Media</span>
       <span class="service-pill">GEO / AI Search Optimization</span>
       <span class="service-pill">Sales Pipeline Analytics</span>
       <span class="service-pill">E-Commerce Growth</span>
       <span class="service-pill">Reporting &amp; Attribution</span>
     </div>
+  </section>
 
-    <div class="divider"></div>
+  <div class="section-divider"></div>
 
-    <div class="contact">
-      <h2>Contact</h2>
-      <p class="contact-name">David Shiba</p>
-      <div class="contact-links">
-        <a href="mailto:shiba@2.0heads.com">shiba@2.0heads.com</a>
-        <a href="tel:+13477662034">347-766-2034</a>
+  <div class="google-ads-section">
+    <p class="section-label">Core Service</p>
+    <h2>Google Ads Management</h2>
+    <p class="intro">
+      Shiba &amp; Associates manages Google Ads campaigns on behalf of a portfolio of business clients under a Google Ads Manager Account (MCC). We use the Google Ads API to automate campaign management, reporting, and optimization across client accounts — enabling efficient, accurate, and scalable paid media management.
+    </p>
+    <div class="ads-grid">
+      <div class="ads-card">
+        <h3>Search Campaigns</h3>
+        <p>Keyword research, match type strategy, ad copywriting, bid management, and ongoing optimization based on search term performance.</p>
+      </div>
+      <div class="ads-card">
+        <h3>Shopping &amp; Performance Max</h3>
+        <p>Product feed strategy, campaign structure, bidding, and audience segmentation for e-commerce clients on Google Shopping and PMax.</p>
+      </div>
+      <div class="ads-card">
+        <h3>Reporting &amp; Attribution</h3>
+        <p>Monthly performance reports covering impressions, clicks, conversions, ROAS, and CPA — generated via the Google Ads API and delivered to clients.</p>
+      </div>
+      <div class="ads-card">
+        <h3>Account Management via API</h3>
+        <p>We use the Google Ads API exclusively for internal campaign management across our MCC. API access is not exposed to clients or third parties.</p>
       </div>
     </div>
-  </section>
+    <a class="ads-learn-more" href="/google-ads-services.html">View Full Google Ads Services &amp; API Usage Details →</a>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div class="contact">
+    <div class="divider"></div>
+    <h2>Contact</h2>
+    <p class="contact-name">David Shiba</p>
+    <div class="contact-links">
+      <a href="mailto:shiba@2.0heads.com">shiba@2.0heads.com</a>
+      <a href="tel:+13477662034">347-766-2034</a>
+    </div>
+  </div>
 
   <footer>
     &copy; 2026 Shiba &amp; Associates &nbsp;·&nbsp; 2.0heads.com
-    &nbsp;·&nbsp; <a href="/privacy-policy.html" style="color:#555;text-decoration:none;">Privacy Policy</a>
-    &nbsp;·&nbsp; <a href="/terms-of-service.html" style="color:#555;text-decoration:none;">Terms of Service</a>
-    &nbsp;·&nbsp; <a href="/google-ads-services.html" style="color:#555;text-decoration:none;">Google Ads Services</a>
+    &nbsp;·&nbsp; <a href="/privacy-policy.html">Privacy Policy</a>
+    &nbsp;·&nbsp; <a href="/terms-of-service.html">Terms of Service</a>
+    &nbsp;·&nbsp; <a href="/google-ads-services.html">Google Ads Services</a>
   </footer>
 
 </body>
