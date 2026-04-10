@@ -93,9 +93,21 @@
     .subtitle {
       font-size: 1.05rem;
       color: var(--gray);
-      max-width: 560px;
+      max-width: 720px;
       line-height: 1.7;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-note {
+      max-width: 760px;
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #cfcfcf;
+      margin-bottom: 2.6rem;
+      padding: 1rem 1.2rem;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      background: rgba(255,255,255,0.02);
     }
 
     /* SERVICES PILLS */
@@ -200,6 +212,35 @@
       opacity: 0.5;
     }
 
+    .trust-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem;
+      width: 100%;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+    .trust-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.3rem 1.5rem;
+      background: rgba(255,255,255,0.015);
+    }
+    .trust-card h3 {
+      font-size: 0.92rem;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+      color: var(--white);
+    }
+    .trust-card p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
     /* CONTACT */
     .contact {
       text-align: center;
@@ -267,7 +308,10 @@
     <p class="eyebrow">Shiba &amp; Associates</p>
     <h1>Digital Marketing, <em>Google Ads</em> &amp; Sales Optimization</h1>
     <p class="subtitle">
-      Data-driven strategy that turns traffic into revenue. We help small and mid-size businesses grow through Google Ads management, search, and sales pipeline optimization.
+      2.0Heads is the website for Shiba &amp; Associates, a digital marketing agency that manages Google Ads accounts and growth programs for client businesses.
+    </p>
+    <p class="hero-note">
+      We operate as a client services agency, not a software platform. We manage Google Ads accounts under a Google Ads Manager Account (MCC) and use the Google Ads API only for internal reporting, campaign management, optimization, and account monitoring on behalf of authorized clients.
     </p>
 
     <div class="services">
@@ -311,10 +355,35 @@
 
   <div class="section-divider"></div>
 
+  <section class="trust-section">
+    <p class="section-label">Business Model</p>
+    <h2>Built for direct client services, not public software access</h2>
+    <p class="intro">
+      We work with small and mid-size businesses across industries including industrial products, home improvement, and e-commerce. Google Ads API access supports internal agency operations only and is never resold, published as a product, or exposed to clients.
+    </p>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <h3>Agency, not SaaS</h3>
+        <p>Shiba &amp; Associates provides managed marketing services under direct client agreements. We do not operate a public ads platform or developer product.</p>
+      </div>
+      <div class="trust-card">
+        <h3>MCC-Based Management</h3>
+        <p>Client Google Ads accounts are managed through a Google Ads Manager Account so reporting, optimization, and campaign maintenance can be handled centrally by authorized personnel.</p>
+      </div>
+      <div class="trust-card">
+        <h3>Internal API Use Only</h3>
+        <p>The Google Ads API is used only for internal reporting, campaign changes, anomaly monitoring, and workflow automation. Clients receive services and reports, not API access.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <div class="contact">
     <div class="divider"></div>
     <h2>Contact</h2>
     <p class="contact-name">David Shiba</p>
+    <p style="color:#888; margin-bottom:0.4rem;">Shiba &amp; Associates • 2.0Heads</p>
     <div class="contact-links">
       <a href="mailto:shiba@2.0heads.com">shiba@2.0heads.com</a>
       <a href="tel:+13477662034">347-766-2034</a>
@@ -322,7 +391,7 @@
   </div>
 
   <footer>
-    &copy; 2026 Shiba &amp; Associates &nbsp;·&nbsp; 2.0heads.com
+    &copy; 2026 Shiba &amp; Associates / 2.0Heads &nbsp;·&nbsp; 2.0heads.com
     &nbsp;·&nbsp; <a href="/privacy-policy.html">Privacy Policy</a>
     &nbsp;·&nbsp; <a href="/terms-of-service.html">Terms of Service</a>
     &nbsp;·&nbsp; <a href="/google-ads-services.html">Google Ads Services</a>
