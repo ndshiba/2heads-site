@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LloydPans — GEO Content Brief | Shiba &amp; Associates</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    a { color: #e07b00; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .page-wrap { max-width: 960px; margin: 0 auto; padding: 0 28px 100px; }
+
+    /* ── Hero ── */
+    .hero {
+      background: #10542d;
+      border-bottom: 4px solid #ffa933;
+      padding: 52px 28px 32px;
+      text-align: center;
+    }
+    .hero .eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffa933;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      margin-bottom: 10px;
+    }
+    .hero h1 span { color: #ffa933; }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: #aaaaaa;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    .hero .meta {
+      display: inline-flex;
+      gap: 32px;
+      font-size: 12px;
+      color: #666666;
+      border-top: 1px solid #333333;
+      padding-top: 18px;
+    }
+    .hero .meta span { color: #999999; }
+
+    /* ── Table of Contents ── */
+    .toc {
+      background: #f4f9f6;
+      border: 1px solid #a8d4b8;
+      border-left: 5px solid #10542d;
+      border-radius: 6px;
+      padding: 32px 36px;
+      margin: 48px 0 56px;
+    }
+    .toc h2 {
+      font-size: 0.75rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #10542d;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .toc .toc-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 6px;
+    }
+    .toc .toc-intro {
+      font-size: 0.88rem;
+      color: #555555;
+      margin-bottom: 22px;
+      line-height: 1.6;
+    }
+    .toc ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .toc ol li {
+      font-size: 0.95rem;
+      color: #333333;
+    }
+    .toc ol li a {
+      color: #cc6f00;
+      font-weight: 600;
+    }
+    .toc ol li a:hover { text-decoration: underline; }
+    .toc ol li .toc-desc {
+      display: block;
+      font-size: 0.82rem;
+      color: #777777;
+      font-weight: 400;
+      margin-top: 1px;
+    }
+    .toc .coming-soon {
+      color: #aaaaaa;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    /* ── Section ── */
+    .section { margin-bottom: 72px; }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #10542d;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .section h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #10542d;
+      padding-bottom: 10px;
+    }
+    .section .section-intro {
+      font-size: 0.95rem;
+      color: #444444;
+      max-width: 760px;
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    /* ── Tier Labels ── */
+    .tier-block { margin-bottom: 40px; }
+    .tier-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .tier-badge {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .tier-1 .tier-badge { background: #10542d; color: #ffffff; }
+    .tier-2 .tier-badge { background: #ffa933; color: #000000; }
+    .tier-3 .tier-badge { background: #f0f0f0; color: #555555; border: 1px solid #dddddd; }
+
+    .tier-label-text {
+      font-size: 0.82rem;
+      color: #777777;
+    }
+
+    /* ── Principle Cards ── */
+    .principles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .principle-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #fafafa;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      padding: 22px 24px;
+      transition: box-shadow 0.15s;
+    }
+    .principle-card:hover { box-shadow: 0 2px 12px rgba(255,169,51,0.12); }
+    .tier-1 .principle-card { border-left: 5px solid #10542d; }
+    .tier-2 .principle-card { border-left: 5px solid #ffa933; }
+    .tier-3 .principle-card { border-left: 5px solid #dddddd; }
+
+    .principle-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .tier-1 .principle-num { background: #10542d; color: #ffffff; }
+    .tier-2 .principle-num { background: #ffa933; color: #000000; }
+    .tier-3 .principle-num { background: #eeeeee; color: #666666; }
+
+    .principle-body h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 5px;
+    }
+    .principle-body p {
+      font-size: 0.88rem;
+      color: #555555;
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+    .principle-body .why-now {
+      font-size: 0.8rem;
+      color: #cc6f00;
+      font-style: italic;
+      border-top: 1px solid #eeeeee;
+      padding-top: 8px;
+      margin-top: 4px;
+    }
+    .principle-body .applies-to {
+      font-size: 0.78rem;
+      color: #888888;
+      margin-top: 4px;
+    }
+    .principle-body .applies-to strong { color: #555555; }
+
+    .weight-stars {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      color: #ffa933;
+      margin-top: 2px;
+      text-align: right;
+      min-width: 60px;
+    }
+
+    /* ── Placeholder Section ── */
+    .placeholder {
+      background: #f9f9f9;
+      border: 2px dashed #dddddd;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      color: #aaaaaa;
+    }
+    .placeholder .ph-label {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #cccccc;
+      margin-bottom: 8px;
+    }
+    .placeholder p {
+      font-size: 0.9rem;
+      color: #bbbbbb;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: #10542d;
+      border-top: 3px solid #ffa933;
+      padding: 28px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    .footer p {
+      font-size: 0.8rem;
+      color: #666666;
+    }
+    .footer p span { color: #ffa933; }
+
+    /* ── Print ── */
+    @media print {
+      .hero { background: #000 !important; -webkit-print-color-adjust: exact; }
+      .footer { background: #000 !important; -webkit-print-color-adjust: exact; }
+      .tier-1 .tier-badge { background: #000 !important; -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">Shiba &amp; Associates — GEO Content Strategy</div>
+    <h1>LloydPans <span>GEO Brief</span></h1>
+    <p class="subtitle">A working guide to Generative Engine Optimization — built for Brightly Creative and updated through discussion with Forge (Claude Sonnet), Pete (GPT-5.4), and Grok (xai/grok-4.3).</p>
+    <div class="meta">
+      <div>Client <span>LloydPans</span></div>
+      <div>Agency <span>Brightly Creative</span></div>
+      <div>Date <span>June 2026</span></div>
+      <div>Status <span>In Progress</span></div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+
+    <!-- SECTION 01: CORE GEO PRINCIPLES -->
+    <div class="section" id="section-01" style="padding-top: 48px;">
+      <h2>Core GEO Principles</h2>
+      <p class="section-intro">These eight principles govern how AI engines select and cite content — regardless of industry, product, or audience. They apply equally to LloydPans pizza pans and American Lamb Board content — and every other client Brightly manages. Before any content is created or restructured, measure it against these principles. The weight tier tells you where to focus first.</p>
+
+      <!-- TIER 1 -->
+      <div class="tier-block tier-1">
+        <div class="tier-header">
+          <div class="tier-badge">Tier 1 — Do These First, Always</div>
+          <div class="tier-label-text">These four principles are non-negotiable. If Brightly internalizes nothing else, these change output quality immediately.</div>
+        </div>
+        <div class="principles-list">
+
+          <div class="principle-card">
+            <div class="principle-num">1</div>
+            <div class="principle-body">
+              <h4>Answer the Exact Question First</h4>
+              <p>The first 60–100 words of any page, article, or FAQ must deliver the direct answer — not context, not brand history, not a preamble. AI models extract from openings. If the answer isn't there, the page won't be cited, even if the rest of the content is excellent.</p>
+              <p class="applies-to"><strong>Applies to:</strong> Every content type — product pages, guides, FAQs, blog posts, case studies.</p>
+              <p class="why-now">Why this matters more now: Traditional SEO rewarded comprehensive pages that built to a conclusion. AI engines reward immediate answers. The writing habit has to change.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">2</div>
+            <div class="principle-body">
+              <h4>Make Every Claim Provable — With Named Evidence</h4>
+              <p>Vague brand language (&ldquo;premium quality,&rdquo; &ldquo;trusted by professionals&rdquo;) gets ignored by AI engines. Named, specific, verifiable claims get cited. The strongest proof is a hierarchy: expert editorial citations at the top, named operator results in the middle, manufacturer specs at the base — each tier amplifying the one above it.</p>
+              <p class="applies-to"><strong>Applies to LP — the proof pyramid:</strong> At the top: J. Kenji L&oacute;pez-Alt (James Beard Award&ndash;winning author, Serious Eats Chief Culinary Advisor) specified the LloydPans Detroit-Style Pan by name in his widely-cited recipe, and Serious Eats awarded LloydPans Best-in-Class across three pan styles — rating even heat distribution, non-stick performance, and warp resistance. Mid-tier: named competition operators like Ryan Ososky (DTown Pizzeria, 2025 Pizza Maker of the Year) and Leo Dicesaris (Cerrone&rsquo;s Brick Oven Pizzeria). Creator layer: @notapizzeria, @realcleverfood, @thepizzadad3, Scott Wiener (@scottspizzatours). Base: ISO 9001:2015 certified, manufactured in Spokane Valley WA, proprietary PSTK/Silver-Kote/Dura-Kote finishes, 30+ years, in-house anodizing. <em>The gap: the Serious Eats findings exist but aren&rsquo;t yet written as extractable, quoted sentences attached to Kenji&rsquo;s name on LloydPans&rsquo; own pages.</em></p>
+              <p class="why-now">Why this matters more now: AI models are trained to prefer attributable information at every tier. &ldquo;The pan J. Kenji L&oacute;pez-Alt chose for his Detroit-style recipe resists warping at sustained temperatures&rdquo; is citable. &ldquo;Our pans are durable&rdquo; is not.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">3</div>
+            <div class="principle-body">
+              <h4>Write Critical Facts in Quotable, Extraction-Ready Language</h4>
+              <p>Every specification, measurement, temperature range, weight limit, or technical comparison should be written as a complete, self-contained sentence that makes sense when quoted out of context. "The 16-gauge hard-coat anodized aluminum pan handles sustained temperatures up to 550°F without warping" is extractable. "Our pans are durable" is not.</p>
+              <p class="applies-to"><strong>Applies to:</strong> Spec sheets, product pages, comparison guides, FAQ answers, case study outcomes.</p>
+              <p class="why-now">Why this matters more now: AI systems literally quote sentences verbatim. If your key facts aren't written to stand alone, they won't be quoted — even if the underlying truth is there.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">4</div>
+            <div class="principle-body">
+              <h4>Own a Narrow Source-of-Record Position</h4>
+              <p>AI engines default to citing whoever they&rsquo;ve seen most consistently as the authoritative source for a specific, narrow topic. The goal isn&rsquo;t to rank for everything &mdash; it&rsquo;s to become the unchallenged reference for a precise problem that your audience actually has. Narrow dominance beats broad presence every time.</p>
+              <p class="applies-to"><strong>LP in practice:</strong> LloydPans already owns the operator-maintenance conversation around pizza screens &mdash; the most widely used, most frustrating, least-documented problem in commercial pizza kitchens. Operators who rely on traditional mesh screens face a familiar cycle: holes clog with carbon buildup, airflow drops, crusts become inconsistent, and the screens require constant hand-washing and re-seasoning. LloydPans&rsquo; Quik-Disk solves this directly &mdash; NSF approved, no seasoning required, holes designed to resist clogging, outlasts screens by years. LloydPans has already published &ldquo;Ask Paul: Is it Time to Replace My Pizza Screens?&rdquo; and &ldquo;Are you still using pizza screens?&rdquo; &mdash; exactly the kind of narrow, problem-first content AI engines cite when an operator asks why their crust is inconsistent. No competitor has built this argument. That&rsquo;s a source-of-record position.<br><br><strong>ALB in practice:</strong> Own the &ldquo;how to cook American lamb&rdquo; preparation authority &mdash; sourcing, grading, and technique content that foodservice operators and home cooks can&rsquo;t find anywhere else with the same depth.</p>
+              <p class="why-now">Why this matters more now: Classic SEO allowed brands to compete across many keywords simultaneously. AI citation is winner-take-most within narrow categories. Trying to own too many topics dilutes the signal &mdash; and cedes the most citable ground to whoever commits to it first.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TIER 2 -->
+      <div class="tier-block tier-2">
+        <div class="tier-header">
+          <div class="tier-badge">Tier 2 — High Leverage, Build Early</div>
+          <div class="tier-label-text">Once Tier 1 is embedded, these three amplify the signal significantly.</div>
+        </div>
+        <div class="principles-list">
+
+          <div class="principle-card">
+            <div class="principle-num">5</div>
+            <div class="principle-body">
+              <h4>Map the Full Question Tree</h4>
+              <p>When a user asks an AI a question, the engine fans out into dozens of sub-queries to build a complete answer. Ahrefs found that 62% of AI Overview citations come from pages ranked outside the top 10 — because those pages answered the specific sub-question, not the head term. A hub page on "commercial pizza pans" must link to spoke pages for every downstream question: gauge, finish type, oven compatibility, care, failure modes.</p>
+              <p class="applies-to"><strong>Applies to:</strong> Site architecture decisions — every major topic needs a hub + spokes, not just one comprehensive page.</p>
+              <p class="why-now">Why this matters more now: In classic search, one strong page could rank for many variations. AI engines pull from many different pages to construct one answer. You need coverage across the tree, not depth on one branch.</p>
+            </div>
+            <div class="weight-stars">★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">6</div>
+            <div class="principle-body">
+              <h4>Match the Answer to the Audience's Use Context</h4>
+              <p>The same product serves different audiences with different decision criteria, vocabularies, and concerns. Mixing those audiences on the same page trains AI engines to treat the brand as a generalist — weakening the source-of-record signal. Commercial buyers need throughput, durability, and operational specs. Home users need ease, safety, and instructions. Route them to separate, purpose-built content.</p>
+              <p class="applies-to"><strong>Applies to:</strong> LP: commercial operator pages vs. home baker guides. ALB: foodservice operator content vs. home cook recipes.</p>
+              <p class="why-now">Why this matters more now: AI engines are better than ever at inferring search intent. Mixed-intent pages get cited for neither audience well.</p>
+            </div>
+            <div class="weight-stars">★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">7</div>
+            <div class="principle-body">
+              <h4>Structure Choices with Comparisons, Tables, and Frameworks</h4>
+              <p>Wherever a buyer is choosing between options — materials, finishes, product sizes, installation methods, cuts of meat — a structured comparison table is one of the highest-citation content formats available. AI engines are optimized to extract structured data. A clear table beats five paragraphs of prose every time for comparison queries.</p>
+              <p class="applies-to"><strong>Applies to:</strong> LP: pan material vs. pan style vs. finish type. ALB: cut vs. cooking method vs. flavor profile.</p>
+              <p class="why-now">Why this matters more now: AI-generated answers frequently include comparison tables. If your table already exists on-page, the engine will often lift it directly.</p>
+            </div>
+            <div class="weight-stars">★★★★</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TIER 3 -->
+      <div class="tier-block tier-3">
+        <div class="tier-header">
+          <div class="tier-badge">Tier 3 — Important, Build Up To It</div>
+          <div class="tier-label-text">This principle requires Tier 1 and 2 to be in place first — but it's often the content AI engines love most to quote.</div>
+        </div>
+        <div class="principles-list">
+
+          <div class="principle-card">
+            <div class="principle-num">8</div>
+            <div class="principle-body">
+              <h4>Pre-empt Failure Modes and Edge Cases</h4>
+              <p>Operators and buyers search for problems, not just products. "Why do pizza pans warp in deck ovens," "what happens if a ramp exceeds weight capacity," "why does lamb get tough when overcooked" — these queries often have no good authoritative source. The brand that answers them definitively, in specific technical language, owns that citation permanently. AI engines love failure-mode content because it provides the balanced, cautionary perspective they need to give complete answers.</p>
+              <p class="applies-to"><strong>Applies to:</strong> Any brand with a technical or operational product. Think: what are the top 5 things that go wrong, and does your site answer them?</p>
+              <p class="why-now">Why this matters more now: AI engines are specifically tasked with providing balanced answers. Content that addresses failure modes, limitations, and edge cases gets cited to provide that balance — even on competitor-comparison queries.</p>
+            </div>
+            <div class="weight-stars">★★★</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- If Brightly Remembers Only Three -->
+      <div style="background:#10542d; border-radius:8px; padding:28px 32px; margin-top:36px;">
+        <div style="font-size:10px; letter-spacing:2.5px; text-transform:uppercase; color:#ffa933; font-weight:700; margin-bottom:10px;">If Brightly Remembers Only Three Things</div>
+        <div style="display:flex; gap:24px; flex-wrap:wrap;">
+          <div style="flex:1; min-width:200px;">
+            <div style="font-size:1.3rem; font-weight:700; color:#ffa933;">Answer first.</div>
+            <div style="font-size:0.85rem; color:#c8e6d4; margin-top:4px;">The direct answer in the first 60–100 words — always.</div>
+          </div>
+          <div style="flex:1; min-width:200px;">
+            <div style="font-size:1.3rem; font-weight:700; color:#ffa933;">Make it provable.</div>
+            <div style="font-size:0.85rem; color:#c8e6d4; margin-top:4px;">Named sources, specific measurements, attributable claims.</div>
+          </div>
+          <div style="flex:1; min-width:200px;">
+            <div style="font-size:1.3rem; font-weight:700; color:#ffa933;">Write to be quoted.</div>
+            <div style="font-size:0.85rem; color:#c8e6d4; margin-top:4px;">Every key fact written as a complete, self-contained sentence.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Prepared by <span>Shiba &amp; Associates</span> &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; <span>In collaboration with Pete (GPT-5.4) and Grok (xai/grok-4.3)</span></p>
+  </div>
+
+</body>
+</html>

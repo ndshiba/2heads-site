@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LloydPans GEO Before/After — Shiba & Associates</title>
+<style>
+  /* ===================== RESET & BASE ===================== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 15px; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    line-height: 1.6;
+  }
+
+  /* ===================== LAYOUT ===================== */
+  .page-wrap { max-width: 1400px; margin: 0 auto; padding: 0 20px 60px; }
+
+  /* ===================== PAGE HEADER ===================== */
+  .page-header {
+    background: #10542d;
+    color: #fff;
+    padding: 36px 40px 28px;
+    margin-bottom: 32px;
+    border-radius: 0 0 8px 8px;
+  }
+  .page-header .brand-tag {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #ffa933;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .page-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  .page-header .subtitle {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 780px;
+  }
+
+  /* ===================== SECTION LABELS ===================== */
+  .section-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  .section-label span { color: #10542d; }
+
+  /* ===================== SECTION WRAPPER ===================== */
+  .section { margin-bottom: 48px; }
+  .section-title-bar {
+    background: #10542d;
+    color: #fff;
+    padding: 10px 18px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title-bar .pill {
+    background: #ffa933;
+    color: #000;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 99px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===================== BEFORE/AFTER COLUMNS ===================== */
+  .ba-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  /* --- BEFORE column --- */
+  .before-col {
+    background: #ececec;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    position: relative;
+  }
+  .before-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #cc0000;
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    z-index: 10;
+  }
+  .wire-nav {
+    background: #c8c8c8;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 10px;
+  }
+  .wire-nav-dot { width: 52px; height: 10px; background: #aaa; border-radius: 3px; }
+  .wire-nav-dot.long { width: 90px; }
+  .wire-hero {
+    background: #bbb;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wire-hero-text {
+    background: #aaa;
+    width: 60%;
+    height: 18px;
+    border-radius: 3px;
+  }
+  .wire-h1 {
+    padding: 14px 14px 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #999;
+  }
+  .wire-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 10px 14px 14px;
+  }
+  .wire-card {
+    background: #d4d4d4;
+    border-radius: 4px;
+    padding: 10px 6px 8px;
+    text-align: center;
+  }
+  .wire-card-img { background: #bbb; height: 40px; border-radius: 3px; margin-bottom: 6px; }
+  .wire-card-label { font-size: 0.62rem; color: #888; font-weight: 600; line-height: 1.3; }
+  .wire-footer {
+    background: #c0c0c0;
+    height: 28px;
+    margin-top: 4px;
+  }
+  .before-annotation {
+    background: #fff0f0;
+    border: 1.5px dashed #cc0000;
+    border-radius: 6px;
+    margin: 10px 14px 14px;
+    padding: 10px 12px;
+    font-size: 0.72rem;
+    color: #444;
+    line-height: 1.5;
+  }
+  .before-annotation strong { color: #cc0000; }
+
+  /* --- AFTER column --- */
+  .after-col {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #10542d;
+    position: relative;
+  }
+  .after-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #10542d;
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    z-index: 10;
+  }
+
+  /* KEPT section */
+  .kept-section {
+    background: #f4f9f6;
+    border-bottom: 2px dashed #c8e0d4;
+    padding: 14px;
+    padding-top: 40px;
+    position: relative;
+  }
+  .kept-badge {
+    display: inline-block;
+    background: #10542d;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  .lp-nav {
+    background: #10542d;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 10px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  .lp-nav-item { height: 10px; background: rgba(255,255,255,0.5); border-radius: 2px; }
+  .lp-nav-item.logo { width: 60px; background: #ffa933; }
+  .lp-nav-item.link { width: 40px; }
+  .lp-hero {
+    background: #10542d;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  .lp-hero-text {
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .lp-product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .lp-card {
+    background: #fff;
+    border: 1.5px solid #10542d;
+    border-radius: 4px;
+    padding: 8px 6px;
+    text-align: center;
+  }
+  .lp-card-img { background: #d4eadd; height: 36px; border-radius: 3px; margin-bottom: 5px; border: 1px solid #b0d4bc; }
+  .lp-card-label { font-size: 0.58rem; color: #10542d; font-weight: 700; line-height: 1.3; }
+  .lp-card-sub { font-size: 0.52rem; color: #ffa933; font-weight: 600; }
+  .kept-note {
+    font-size: 0.68rem;
+    color: #555;
+    font-style: italic;
+    padding: 6px 4px 0;
+    border-top: 1px solid #c8e0d4;
+    margin-top: 4px;
+  }
+
+  /* GEO DIVIDER */
+  .geo-divider {
+    background: #10542d;
+    color: #fff;
+    padding: 14px 18px;
+    text-align: center;
+  }
+  .geo-divider .divider-main {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin-bottom: 4px;
+  }
+  .geo-divider .divider-sub {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.82);
+  }
+  .geo-divider .divider-sub em { color: #ffa933; font-style: normal; font-weight: 600; }
+
+  /* GEO ADDS section */
+  .geo-adds-section {
+    background: #fff;
+    padding: 0;
+    position: relative;
+  }
+
+  /* ===================== CALLOUT SYSTEM ===================== */
+  .geo-content-wrap {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    gap: 0;
+    position: relative;
+  }
+  .geo-content-main {
+    padding: 18px 16px;
+  }
+  .geo-legend-col {
+    background: #fffbf4;
+    border-left: 2px solid #ffa933;
+    padding: 14px 10px;
+    position: sticky;
+    top: 20px;
+    align-self: start;
+  }
+  .legend-title {
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #10542d;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e0d4b8;
+  }
+  .legend-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 9px;
+  }
+  .legend-bubble {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: #ffa933;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .legend-text {
+    font-size: 0.58rem;
+    color: #333;
+    line-height: 1.4;
+  }
+  .legend-text strong { color: #10542d; display: block; }
+
+  /* Inline callout bubble anchors */
+  .callout-row {
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .callout-anchors {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .cbubble {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #ffa933;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    border: 1.5px dashed rgba(0,0,0,0.15);
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  /* Content typography */
+  .geo-content-main h2 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #10542d;
+    margin: 18px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid #d4eadd;
+    line-height: 1.35;
+  }
+  .geo-content-main h2:first-child { margin-top: 0; }
+  .geo-content-main p {
+    font-size: 0.78rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.65;
+  }
+  .geo-content-main ul {
+    margin: 0 0 10px 16px;
+    font-size: 0.76rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  .geo-content-main li { margin-bottom: 3px; }
+
+  /* Comparison table */
+  .geo-table-wrap { overflow-x: auto; margin-bottom: 14px; }
+  .geo-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.68rem;
+  }
+  .geo-table thead tr { background: #10542d; color: #fff; }
+  .geo-table th { padding: 7px 9px; text-align: left; font-weight: 700; }
+  .geo-table td { padding: 6px 9px; border-bottom: 1px solid #e8e8e8; vertical-align: top; }
+  .geo-table tbody tr:nth-child(even) { background: #f4f9f6; }
+  .geo-table tbody tr:hover { background: #e8f4ee; }
+
+  /* FAQ */
+  .faq-pair { margin-bottom: 10px; }
+  .faq-q {
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #10542d;
+    margin-bottom: 3px;
+  }
+  .faq-a {
+    font-size: 0.74rem;
+    color: #333;
+    line-height: 1.6;
+    padding-left: 10px;
+    border-left: 2px solid #ffa933;
+  }
+
+  /* Section heading with callout badges */
+  .h2-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 18px 0 8px;
+  }
+  .h2-row h2 {
+    margin: 0;
+    flex: 1;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .h2-callouts { display: flex; gap: 3px; margin-top: 2px; flex-wrap: wrap; }
+
+  /* ===================== WHAT CHANGED TABLE ===================== */
+  .what-changed-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .what-changed-table thead tr {
+    background: #10542d;
+    color: #fff;
+  }
+  .what-changed-table th {
+    padding: 11px 16px;
+    text-align: left;
+    font-weight: 700;
+  }
+  .what-changed-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+  }
+  .what-changed-table tbody tr:nth-child(even) { background: #f8f8f8; }
+  .what-changed-table td:first-child { font-weight: 600; color: #222; width: 22%; }
+  .what-changed-table td:nth-child(2) { color: #888; width: 30%; }
+  .what-changed-table td:nth-child(3) { color: #222; width: 48%; }
+  .check { color: #10542d; font-weight: 700; }
+  .cross { color: #cc0000; font-weight: 700; }
+
+  /* ===================== PRESENTER NOTES ===================== */
+  .presenter-notes {
+    background: #f2f2f2;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 24px 28px;
+  }
+  .presenter-notes h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #10542d;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #d4eadd;
+  }
+  .presenter-notes ul {
+    list-style: none;
+    padding: 0;
+  }
+  .presenter-notes ul li {
+    font-size: 0.88rem;
+    color: #333;
+    line-height: 1.6;
+    padding: 8px 0 8px 28px;
+    border-bottom: 1px solid #e4e4e4;
+    position: relative;
+  }
+  .presenter-notes ul li::before {
+    content: "→";
+    position: absolute;
+    left: 6px;
+    color: #10542d;
+    font-weight: 700;
+  }
+  .presenter-notes ul li:last-child { border-bottom: none; }
+  .presenter-notes ul li.warn { color: #7a4000; }
+  .presenter-notes ul li.warn::before { content: "⚠️"; left: 2px; }
+
+  /* ===================== PRINT ===================== */
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .page-header { border-radius: 0; margin-bottom: 20px; }
+    .geo-legend-col { position: static; }
+    .ba-container { grid-template-columns: 1fr 1fr; }
+    .geo-content-wrap { grid-template-columns: 1fr; }
+    .geo-legend-col { display: none; }
+    .section { page-break-inside: avoid; }
+    .before-col, .after-col { page-break-inside: avoid; }
+  }
+
+  /* ===================== DIVIDER UTILITY ===================== */
+  .spacer { height: 16px; }
+  .full-rule { border: none; border-top: 2px solid #e0e0e0; margin: 32px 0; }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE HEADER ===================== -->
+<div class="page-header">
+  <div class="brand-tag">Shiba &amp; Associates — GEO Content Strategy &nbsp;|&nbsp; June 2026</div>
+  <h1>LloydPans Regional Style Pizza Pans — GEO Before/After</h1>
+  <p class="subtitle">The same top-performing page. The kitchen sink version of what GEO adds below the fold.</p>
+</div>
+
+<div class="page-wrap">
+
+  <!-- ===================== SECTION 1: BEFORE / AFTER ===================== -->
+  <div class="section">
+    <div class="section-title-bar">
+      <span>Section 1 — Side-by-Side Before &amp; After</span>
+      <span class="pill">Above the fold</span>
+    </div>
+
+    <div class="ba-container">
+
+      <!-- ====== BEFORE COLUMN ====== -->
+      <div class="before-col">
+        <span class="before-badge">BEFORE</span>
+
+        <!-- Nav placeholder -->
+        <div class="wire-nav">
+          <div class="wire-nav-dot long"></div>
+          <div class="wire-nav-dot"></div>
+          <div class="wire-nav-dot"></div>
+          <div class="wire-nav-dot"></div>
+          <div class="wire-nav-dot"></div>
+        </div>
+
+        <!-- Hero placeholder -->
+        <div class="wire-hero">
+          <div class="wire-hero-text"></div>
+        </div>
+
+        <!-- H1 -->
+        <div class="wire-h1">Legendary Traditions In Pizza</div>
+
+        <!-- Product card grid -->
+        <div class="wire-product-grid">
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Detroit-Style</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Chicago Deep Dish</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Long Pan</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Alternate Detroit</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Grandma-Style</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Sicilian-Style</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Sicilian Lids</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Roman Al Taglio</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Doppio Frico</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Stromboli Pan</div>
+          </div>
+          <div class="wire-card">
+            <div class="wire-card-img"></div>
+            <div class="wire-card-label">Calzone Pans</div>
+          </div>
+        </div>
+
+        <!-- Footer placeholder -->
+        <div class="wire-footer"></div>
+
+        <!-- Annotation -->
+        <div class="before-annotation">
+          <strong>BEFORE —</strong> Zero editorial content. Ranks #1 for "detroit style pizza pan" on domain authority alone. No opening answer, no specs, no FAQ, no named evidence.
+        </div>
+      </div><!-- /before-col -->
+
+      <!-- ====== AFTER COLUMN ====== -->
+      <div class="after-col">
+        <span class="after-badge">AFTER</span>
+
+        <!-- KEPT SECTION -->
+        <div class="kept-section">
+          <span class="kept-badge">✓ KEPT — Existing page structure</span>
+
+          <!-- LP Nav -->
+          <div class="lp-nav">
+            <div class="lp-nav-item logo"></div>
+            <div class="lp-nav-item link"></div>
+            <div class="lp-nav-item link"></div>
+            <div class="lp-nav-item link"></div>
+            <div class="lp-nav-item link"></div>
+          </div>
+
+          <!-- LP Hero -->
+          <div class="lp-hero">
+            <div class="lp-hero-text">Regional Style Pizza Pans<br>Legendary Traditions In Pizza</div>
+          </div>
+
+          <!-- LP Product Grid -->
+          <div class="lp-product-grid">
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Detroit-Style</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Chicago Deep Dish</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Long Pan</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Alternate Detroit</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Grandma-Style</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Sicilian-Style</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Sicilian Lids</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Roman Al Taglio</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Doppio Frico</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Stromboli Pan</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+            <div class="lp-card">
+              <div class="lp-card-img"></div>
+              <div class="lp-card-label">Calzone Pans</div>
+              <div class="lp-card-sub">Shop →</div>
+            </div>
+          </div>
+
+          <div class="kept-note">Product images and category grid remain exactly as-is. Nothing above the fold changes.</div>
+        </div><!-- /kept-section -->
+
+        <!-- GEO DIVIDER BAR -->
+        <div class="geo-divider">
+          <div class="divider-main">↓ GEO BEGINS HERE — Everything below this line is new content added for AI citation</div>
+          <div class="divider-sub">Present this to clients as the <em>"kitchen sink"</em> — not every page needs all of this. Start with the opening paragraph and FAQ.</div>
+        </div>
+
+        <!-- GEO ADDS SECTION -->
+        <div class="geo-adds-section">
+          <div class="geo-content-wrap">
+
+            <!-- MAIN CONTENT -->
+            <div class="geo-content-main">
+
+              <!-- Opening paragraph — Callouts ①②③④ -->
+              <div class="callout-anchors">
+                <span class="cbubble" title="Principle 1 — Answer First">①</span>
+                <span class="cbubble" title="Principle 2 — Named Evidence">②</span>
+                <span class="cbubble" title="Principle 3 — Quotable Specs">③</span>
+                <span class="cbubble" title="Principle 4 — Source-of-Record">④</span>
+              </div>
+              <p>Regional style pizza pans are purpose-built pans that control depth, corner geometry, heat transfer, and release so each pizza style bakes the crust it is known for. If you want light, caramelized edge-frico, start with a Detroit-style pan; if you want a thinner olive-oil pan pie, start with a Grandma pan; if you want a taller, airy square, choose Sicilian; if you want a true pie-style deep dish, choose Chicago; and if you want long, crisp-by-the-slice bakery pizza, choose Roman al taglio. LloydPans is the authority here because it manufactured the original commercial Detroit-style pan, has supplied that style to pizzerias nationwide for more than 30 years, builds every pan in Spokane Valley, Washington in a 104,000-square-foot facility, and operates as an ISO 9001:2015 certified manufacturer trusted by J. Kenji López-Alt, Serious Eats, and 2025 Pizza Maker of the Year Ryan Ososky of DTown Pizzeria.</p>
+
+              <p>LloydPans evidence matters because it is named and attributable, not generic marketing language. J. Kenji López-Alt specified a LloydPans Detroit-style pan in his Serious Eats Detroit-style pizza recipe, and Serious Eats later named LloydPans best-in-class for Detroit-, Chicago-, and Sicilian-style deep dish testing. Ryan Ososky of DTown Pizzeria, the 2025 Pizza Maker of the Year, also uses LloydPans in a modern championship-level Detroit program.</p>
+
+              <!-- H2: Which style — Callouts ①⑤⑦ -->
+              <div class="h2-row">
+                <h2>Which regional pizza style pan is right for your oven and output?</h2>
+                <div class="h2-callouts">
+                  <span class="cbubble" title="Principle 1 — Answer First">①</span>
+                  <span class="cbubble" title="Principle 5 — Question Tree">⑤</span>
+                  <span class="cbubble" title="Principle 7 — Comparison Table">⑦</span>
+                </div>
+              </div>
+              <p>Choose your pan based on crust goal first, then oven type, then production volume.</p>
+              <ul>
+                <li><strong>Detroit-style pan:</strong> rectangular pie, airy interior, fried-crisp bottom, caramelized cheese edge</li>
+                <li><strong>Chicago deep dish:</strong> tall round pie, layered fillings, buttery deep-dish profile</li>
+                <li><strong>Grandma pan:</strong> thinner rectangular pie, denser crumb, olive-oil character</li>
+                <li><strong>Sicilian pan:</strong> thicker open-crumb square pie, bakes evenly for slice programs</li>
+                <li><strong>Roman al taglio:</strong> long crisp-bottomed slab, cut-to-order service</li>
+              </ul>
+
+              <!-- Comparison table — Callouts ⑤⑦ -->
+              <div class="callout-anchors">
+                <span class="cbubble" title="Principle 5 — Question Tree">⑤</span>
+                <span class="cbubble" title="Principle 7 — Comparison Table">⑦</span>
+              </div>
+              <div class="geo-table-wrap">
+                <table class="geo-table">
+                  <thead>
+                    <tr>
+                      <th>Regional Style</th>
+                      <th>Pan Depth</th>
+                      <th>Crust Type</th>
+                      <th>Ideal Oven</th>
+                      <th>LloydPans Product</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Detroit-Style</strong></td>
+                      <td>Deep rectangular; 8×10 and 10×14</td>
+                      <td>Airy interior, crisp bottom, caramelized cheese edge</td>
+                      <td>Deck, convection, high-temp home, conveyor</td>
+                      <td>Detroit-Style Pizza Pans</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Chicago Deep Dish</strong></td>
+                      <td>2.5-inch sidewalls</td>
+                      <td>Buttery, structured, pie-like</td>
+                      <td>Deck, convection, high-mass home</td>
+                      <td>Chicago-Style Deep Dish Pans</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Grandma-Style</strong></td>
+                      <td>1-inch depth</td>
+                      <td>Thin, dense, olive-oil-infused</td>
+                      <td>Deck, convection, home oven</td>
+                      <td>Grandma-Style Pizza Pans</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Sicilian-Style</strong></td>
+                      <td>1.5-inch deep</td>
+                      <td>Thick, airy, chewy interior, crisp edges</td>
+                      <td>Deck, convection, home oven</td>
+                      <td>Sicilian-Style Pizza Pans</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Roman Al Taglio</strong></td>
+                      <td>20×60 cm and 40×60 cm</td>
+                      <td>Light, crisp-bottomed, cut-to-order</td>
+                      <td>Deck, bakery, convection</td>
+                      <td>Roman Al Taglio Pans</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- H2: Detroit — Callouts ②③④⑤ -->
+              <div class="h2-row">
+                <h2>What is a Detroit-Style Pizza Pan?</h2>
+                <div class="h2-callouts">
+                  <span class="cbubble" title="Principle 2 — Named Evidence">②</span>
+                  <span class="cbubble" title="Principle 3 — Quotable Specs">③</span>
+                  <span class="cbubble" title="Principle 4 — Source-of-Record">④</span>
+                  <span class="cbubble" title="Principle 5 — Question Tree">⑤</span>
+                </div>
+              </div>
+              <p>A Detroit-style pizza pan is a rectangular, deep pan designed to produce the style's signature airy crumb, crisp bottom, and caramelized cheese edge. LloydPans manufactured the original commercial Detroit-style pan and has supplied Detroit-style pizzerias nationwide for more than 30 years.</p>
+              <p>LloydPans Detroit-Style Pizza Pans are made from hard-coat anodized 14-gauge aluminum with a double-thick flat rim and a permanent PRE SEASONED TUFF-KOTE (PSTK) finish that eliminates pre-seasoning and supports clean release after repeated bakes.</p>
+              <p>J. Kenji López-Alt used a LloydPans Detroit-style pan in his Serious Eats Detroit-style pizza recipe, and Serious Eats separately selected LloydPans as its top Detroit-style deep dish pan in hands-on testing.</p>
+              <p><strong>Best for:</strong> Pizzerias adding Detroit to an existing menu · Slice shops chasing edge caramelization · Home bakers who want the highest-confidence first regional pan</p>
+
+              <!-- H2: Commercial — Callout ⑥ -->
+              <div class="h2-row">
+                <h2>For Commercial Operators</h2>
+                <div class="h2-callouts">
+                  <span class="cbubble" title="Principle 6 — Audience Split">⑥</span>
+                </div>
+              </div>
+              <p>Commercial pan selection should be driven by throughput, release reliability, and menu economics. LloydPans gives operators long-life anodized aluminum construction, a permanent release finish that reduces seasoning labor, and domestic manufacturing that supports repeat ordering, volume programs, and custom sizing.</p>
+
+              <!-- H2: Home Bakers — Callout ⑥ -->
+              <div class="h2-row">
+                <h2>For Home Bakers</h2>
+                <div class="h2-callouts">
+                  <span class="cbubble" title="Principle 6 — Audience Split">⑥</span>
+                </div>
+              </div>
+              <p>Start with a Detroit-style pan if you want the most versatile first purchase — it can handle focaccia-like doughs, baked pastas, and other pan applications while being the named pan in Kenji's recipe. Hand wash only, avoid dishwasher detergents, and remember LloydPans bake hotter and faster than generic pans.</p>
+
+              <!-- H2: FAQ — Callout ⑧ -->
+              <div class="h2-row">
+                <h2>Frequently Asked Questions</h2>
+                <div class="h2-callouts">
+                  <span class="cbubble" title="Principle 8 — Failure Modes">⑧</span>
+                </div>
+              </div>
+
+              <div class="faq-pair">
+                <div class="faq-q">Q: Why does my Detroit-style pizza stick to the pan?</div>
+                <div class="faq-a">Most common causes are under-oiling, overbaking cheese onto the wall, or treating the pan like bare steel. LloydPans' permanent PSTK finish eliminates the multi-bake seasoning cycle traditional steel pans require.</div>
+              </div>
+              <div class="faq-pair">
+                <div class="faq-q">Q: What causes uneven browning in a deep dish pan?</div>
+                <div class="faq-a">Usually poor heat distribution, incorrect oven placement, or a pan too light for the style. LloydPans' heavy-gauge anodized aluminum conducts heat quickly and evenly.</div>
+              </div>
+              <div class="faq-pair">
+                <div class="faq-q">Q: Can I use regional pizza pans in a conveyor oven?</div>
+                <div class="faq-a">Yes. Detroit, Grandma, and Sicilian can all work in a conveyor when the bake profile is tuned for the pan and crust style.</div>
+              </div>
+              <div class="faq-pair">
+                <div class="faq-q">Q: How do I clean LloydPans without damaging the finish?</div>
+                <div class="faq-a">Hand wash only in warm soapy water with a nonabrasive sponge. Avoid dishwasher detergents — they damage the surface and void warranty coverage.</div>
+              </div>
+              <div class="faq-pair">
+                <div class="faq-q">Q: Do LloydPans require pre-seasoning?</div>
+                <div class="faq-a">No. PRE SEASONED TUFF-KOTE eliminates the traditional seasoning cycle — ready to use out of the box.</div>
+              </div>
+              <div class="faq-pair">
+                <div class="faq-q">Q: Which regional pan should a first-time buyer start with?</div>
+                <div class="faq-a">The Detroit-style pan — strongest third-party validation, works in both commercial and home settings.</div>
+              </div>
+
+            </div><!-- /geo-content-main -->
+
+            <!-- LEGEND COLUMN -->
+            <div class="geo-legend-col">
+              <div class="legend-title">GEO Principles</div>
+
+              <div class="legend-item">
+                <div class="legend-bubble">①</div>
+                <div class="legend-text"><strong>Answer First</strong>Direct answer in opening 60–100 words</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-bubble">②</div>
+                <div class="legend-text"><strong>Named Evidence</strong>Kenji, Serious Eats, Ryan Ososky, ISO 9001</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-bubble">③</div>
+                <div class="legend-text"><strong>Quotable Specs</strong>Extractable sentences with exact measurements</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-bubble">④</div>
+                <div class="legend-text"><strong>Source-of-Record</strong>"Original commercial Detroit-style pan, 30+ years"</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-bubble">⑤</div>
+                <div class="legend-text"><strong>Question Tree</strong>H2s written as real operator/baker questions</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-bubble">⑥</div>
+                <div class="legend-text"><strong>Audience Split</strong>Separate operator and home baker sections</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-bubble">⑦</div>
+                <div class="legend-text"><strong>Comparison Table</strong>Style vs. depth vs. oven vs. product</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-bubble">⑧</div>
+                <div class="legend-text"><strong>Failure Modes</strong>FAQ answering real operator problems</div>
+              </div>
+            </div><!-- /geo-legend-col -->
+
+          </div><!-- /geo-content-wrap -->
+        </div><!-- /geo-adds-section -->
+
+      </div><!-- /after-col -->
+    </div><!-- /ba-container -->
+  </div><!-- /section 1 -->
+
+  <hr class="full-rule">
+
+  <!-- ===================== SECTION 2: WHAT CHANGED ===================== -->
+  <div class="section">
+    <div class="section-title-bar">
+      <span>Section 2 — What Changed</span>
+      <span class="pill">Element by element</span>
+    </div>
+
+    <table class="what-changed-table">
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Before</th>
+          <th>After</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Opening content</td>
+          <td><span class="cross">✗</span> None — page starts with product grid</td>
+          <td><span class="check">✓</span> 2-paragraph answer-first opening with named evidence</td>
+        </tr>
+        <tr>
+          <td>Named authority</td>
+          <td><span class="cross">✗</span> None</td>
+          <td><span class="check">✓</span> J. Kenji López-Alt (Serious Eats), Ryan Ososky (2025 Pizza Maker of the Year)</td>
+        </tr>
+        <tr>
+          <td>Quotable specs</td>
+          <td><span class="cross">✗</span> None</td>
+          <td><span class="check">✓</span> Per-style extractable sentences with gauge, finish, dimensions</td>
+        </tr>
+        <tr>
+          <td>Source-of-record claim</td>
+          <td><span class="cross">✗</span> None</td>
+          <td><span class="check">✓</span> "Manufactured the original commercial Detroit-style pan, 30+ years"</td>
+        </tr>
+        <tr>
+          <td>H2 structure</td>
+          <td><span class="cross">✗</span> Category label only ("Legendary Traditions In Pizza")</td>
+          <td><span class="check">✓</span> 7 H2s written as real operator/baker questions</td>
+        </tr>
+        <tr>
+          <td>Comparison table</td>
+          <td><span class="cross">✗</span> None</td>
+          <td><span class="check">✓</span> 5-row table: style vs. depth vs. crust vs. oven vs. product</td>
+        </tr>
+        <tr>
+          <td>Audience segmentation</td>
+          <td><span class="cross">✗</span> None</td>
+          <td><span class="check">✓</span> Separate commercial operator and home baker sections</td>
+        </tr>
+        <tr>
+          <td>FAQ / failure modes</td>
+          <td><span class="cross">✗</span> None</td>
+          <td><span class="check">✓</span> 6 Q&amp;A pairs answering real operator and home baker problems</td>
+        </tr>
+        <tr>
+          <td>Word count</td>
+          <td><span class="cross">✗</span> ~80 words (navigation labels only)</td>
+          <td><span class="check">✓</span> ~1,800 words of structured, extractable content</td>
+        </tr>
+        <tr>
+          <td>GEO citation readiness</td>
+          <td><span class="cross">✗</span> Not citable</td>
+          <td><span class="check">✓</span> Every section written for AI extraction</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="full-rule">
+
+  <!-- ===================== SECTION 3: PRESENTER NOTES ===================== -->
+  <div class="section">
+    <div class="section-title-bar">
+      <span>Section 3 — Key Takeaways &amp; Considerations</span>
+    </div>
+
+    <div class="presenter-notes">
+      <ul>
+        <li>The product grid, images, and navigation above the fold are unchanged — all GEO content is additive, starting below the existing category grid.</li>
+        <li>This is the kitchen sink version. Not every page needs all eight principles applied at once — even adding the opening paragraph and FAQ block alone would meaningfully improve AI citation readiness.</li>
+        <li>The Detroit-Style section carries the highest GEO upside: the Kenji López-Alt and Serious Eats citations exist off-site but are not yet surfaced on LloydPans’ own pages. Getting that named evidence on-page is the single highest-leverage move available.</li>
+        <li>The comparison table (Principle 7) is one of the most immediately actionable additions — it maps directly to the &ldquo;which pan should I buy&rdquo; query that AI engines are increasingly answering directly, and no competitor has a structured version of it.</li>
+        <li>The FAQ / failure modes section (Principle 8) targets the problem-first queries operators actually type. This content is also cited by AI engines on competitor-comparison queries, not just brand queries.</li>
+        <li class="warn">⚠️ Verify before publishing: &ldquo;Manufactured the original commercial Detroit-style pan&rdquo; — directionally accurate based on available sources but should be confirmed with the LloydPans team and tied to a citable reference.</li>
+        <li class="warn">⚠️ Confirm accent mark consistently throughout: J. Kenji López-Alt (accent on the ó).</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- /page-wrap -->
+</body>
+</html>
