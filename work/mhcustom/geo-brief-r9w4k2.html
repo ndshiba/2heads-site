@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Mother Hubbard's Custom Cabinetry — GEO Strategy Brief | Shiba &amp; Associates</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    a { color: #b07d3a; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Layout ── */
+    .page-wrap { max-width: 960px; margin: 0 auto; padding: 0 28px 100px; }
+
+    /* ── Hero ── */
+    .hero {
+      background: #1e1a16;
+      border-bottom: 4px solid #c49a5a;
+      padding: 52px 28px 40px;
+      text-align: center;
+    }
+    .hero .eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c49a5a;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      margin-bottom: 10px;
+    }
+    .hero h1 span { color: #c49a5a; }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: #999999;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+    .hero .meta {
+      display: inline-flex;
+      gap: 32px;
+      font-size: 12px;
+      color: #666666;
+      border-top: 1px solid #333333;
+      padding-top: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero .meta span { color: #999999; }
+
+    /* ── Context Banner ── */
+    .context-banner {
+      background: #f9f7f4;
+      border: 1px solid #e0d5c5;
+      border-left: 5px solid #c49a5a;
+      border-radius: 6px;
+      padding: 28px 32px;
+      margin: 48px 0 24px;
+    }
+    .context-banner h3 {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #b07d3a;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .context-banner p {
+      font-size: 0.95rem;
+      color: #444444;
+      line-height: 1.75;
+    }
+    .context-banner .big-stat {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #1e1a16;
+      line-height: 1;
+      margin: 16px 0 4px;
+    }
+    .context-banner .stat-label {
+      font-size: 0.85rem;
+      color: #888888;
+      margin-bottom: 16px;
+    }
+    .context-banner .stats-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 20px 0 0;
+    }
+    .context-banner .stat-block { flex: 1; min-width: 140px; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 72px; }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #b07d3a;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .section h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #c49a5a;
+      padding-bottom: 10px;
+    }
+    .section .section-intro {
+      font-size: 0.95rem;
+      color: #444444;
+      max-width: 760px;
+      margin-bottom: 36px;
+      line-height: 1.75;
+    }
+
+    /* ── Tier Labels ── */
+    .tier-block { margin-bottom: 40px; }
+    .tier-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .tier-badge {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .tier-1 .tier-badge { background: #1e1a16; color: #c49a5a; border: 1px solid #c49a5a; }
+    .tier-2 .tier-badge { background: #c49a5a; color: #ffffff; }
+    .tier-3 .tier-badge { background: #f0f0f0; color: #555555; border: 1px solid #dddddd; }
+
+    .tier-label-text {
+      font-size: 0.82rem;
+      color: #777777;
+    }
+
+    /* ── Principle Cards ── */
+    .principles-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .principle-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #fafaf9;
+      border: 1px solid #eeeeee;
+      border-radius: 8px;
+      padding: 22px 24px;
+      transition: box-shadow 0.15s;
+    }
+    .principle-card:hover { box-shadow: 0 2px 12px rgba(196,154,90,0.14); }
+    .tier-1 .principle-card { border-left: 5px solid #1e1a16; }
+    .tier-2 .principle-card { border-left: 5px solid #c49a5a; }
+    .tier-3 .principle-card { border-left: 5px solid #dddddd; }
+
+    .principle-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .tier-1 .principle-num { background: #1e1a16; color: #c49a5a; }
+    .tier-2 .principle-num { background: #c49a5a; color: #ffffff; }
+    .tier-3 .principle-num { background: #eeeeee; color: #666666; }
+
+    .principle-body { flex: 1; }
+    .principle-body h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 5px;
+    }
+    .principle-body p {
+      font-size: 0.88rem;
+      color: #555555;
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+    .principle-body .why-now {
+      font-size: 0.8rem;
+      color: #b07d3a;
+      font-style: italic;
+      border-top: 1px solid #eeeeee;
+      padding-top: 8px;
+      margin-top: 4px;
+    }
+    .principle-body .applies-to {
+      font-size: 0.83rem;
+      color: #555555;
+      margin-top: 8px;
+      background: #f5f2ed;
+      border-left: 3px solid #c49a5a;
+      padding: 10px 14px;
+      border-radius: 0 4px 4px 0;
+      line-height: 1.6;
+    }
+    .principle-body .applies-to strong { color: #1e1a16; }
+
+    .weight-stars {
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      color: #c49a5a;
+      margin-top: 2px;
+      text-align: right;
+      min-width: 60px;
+    }
+
+    /* ── Callout Box ── */
+    .callout-dark {
+      background: #1e1a16;
+      border-radius: 8px;
+      padding: 28px 32px;
+      margin-top: 36px;
+    }
+    .callout-dark .callout-label {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #c49a5a;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .callout-dark .callout-cols {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .callout-dark .callout-col { flex: 1; min-width: 180px; }
+    .callout-dark .callout-headline {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #c49a5a;
+    }
+    .callout-dark .callout-body {
+      font-size: 0.85rem;
+      color: #b0a898;
+      margin-top: 4px;
+    }
+
+    /* ── Sources ── */
+    .sources {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid #e0e0e0;
+    }
+    .sources h3 {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999999;
+      margin-bottom: 12px;
+    }
+    .sources ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .sources ul li {
+      font-size: 0.82rem;
+      color: #777777;
+    }
+    .sources ul li a { color: #b07d3a; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #1e1a16;
+      border-top: 3px solid #c49a5a;
+      padding: 28px;
+      text-align: center;
+      margin-top: 80px;
+    }
+    .footer p {
+      font-size: 0.8rem;
+      color: #666666;
+    }
+    .footer p span { color: #c49a5a; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.7rem; }
+      .hero .meta { gap: 16px; }
+      .context-banner .stats-row { gap: 20px; }
+      .principle-card { flex-wrap: wrap; }
+      .weight-stars { min-width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="eyebrow">Shiba &amp; Associates — GEO Strategy</div>
+    <h1>Mother Hubbard's <span>GEO Brief</span></h1>
+    <p class="subtitle">How AI is changing the way homeowners find kitchen designers — and what Mother Hubbard's Custom Cabinetry can do to be the answer they find.</p>
+    <div class="meta">
+      <div>Client <span>Mother Hubbard's Custom Cabinetry</span></div>
+      <div>Prepared for <span>John Petrie &amp; Family</span></div>
+      <div>Date <span>June 2026</span></div>
+      <div>Prepared by <span>Shiba &amp; Associates</span></div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+
+    <!-- CONTEXT: THE SHIFT -->
+    <div class="context-banner" style="margin-top: 48px;">
+      <h3>First — What's Actually Changing</h3>
+      <p>For years, getting found online meant one thing: show up near the top of Google. A homeowner would search "custom kitchen designer Harrisburg," click a few results, and eventually call someone. That system still exists — but it's shrinking fast.</p>
+      <div class="stats-row">
+        <div class="stat-block">
+          <div class="big-stat">68%</div>
+          <div class="stat-label">of Google searches in early 2026 ended without a single click to any website</div>
+        </div>
+        <div class="stat-block">
+          <div class="big-stat">60%</div>
+          <div class="stat-label">drop in click-through rate when Google's AI answers appear above search results</div>
+        </div>
+        <div class="stat-block">
+          <div class="big-stat">20%+</div>
+          <div class="stat-label">of all Google searches now show an AI-generated answer at the top</div>
+        </div>
+      </div>
+      <p style="margin-top: 20px; font-size: 0.9rem; color: #555;">Google is increasingly answering questions itself — before anyone visits a website. And beyond Google, homeowners are turning to ChatGPT, Perplexity, and other AI tools to ask things like "what should I know before hiring a custom cabinet maker?" or "who does luxury kitchen design near Harrisburg?" Those tools give a direct answer. If your business isn't part of that answer, you're invisible at the most important moment in the decision.</p>
+      <p style="margin-top: 12px; font-size: 0.9rem; color: #555;">This isn't a prediction about the future. It's already happening. The strategy to address it is called <strong>Generative Engine Optimization (GEO)</strong> — and it's what this brief covers.</p>
+    </div>
+
+    <!-- SECTION 01: CORE GEO PRINCIPLES -->
+    <div class="section" id="section-01" style="padding-top: 48px;">
+      <div class="section-label">What This Means in Practice</div>
+      <h2>Eight Principles — Applied to Mother Hubbard's</h2>
+      <p class="section-intro">These eight principles govern how AI engines select and cite businesses when someone asks a relevant question. They're not theoretical. Each one has a direct application for Mother Hubbard's right now. The tier tells you where to focus first.</p>
+
+      <!-- TIER 1 -->
+      <div class="tier-block tier-1">
+        <div class="tier-header">
+          <div class="tier-badge">Tier 1 — Do These First</div>
+          <div class="tier-label-text">These four have the most immediate impact. If nothing else changes, these move the needle.</div>
+        </div>
+        <div class="principles-list">
+
+          <div class="principle-card">
+            <div class="principle-num">1</div>
+            <div class="principle-body">
+              <h4>Answer the Question Before Explaining Who You Are</h4>
+              <p>When a homeowner asks an AI tool "what does a custom kitchen remodel cost in Harrisburg?" — the AI reads the first 60–100 words of any page it finds. If those words are about your company's history and philosophy, it moves on. If they answer the question directly, you get cited.</p>
+              <p>Traditional website writing builds to an answer. AI-era writing leads with it. That's a simple but significant shift in how every page on your site should open.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> A page on kitchen remodeling costs should open with a real number range and what drives it — not with "At Mother Hubbard's, we believe every kitchen should reflect your personal style." That's a great line for the second paragraph. The first paragraph needs to answer the question a homeowner is actually asking.
+              </div>
+              <p class="why-now">Why it matters now: Classic SEO rewarded comprehensive pages that built toward a conclusion. AI engines reward pages that answer immediately. The writing habit has to shift.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">2</div>
+            <div class="principle-body">
+              <h4>Replace Vague Claims with Named, Verifiable Evidence</h4>
+              <p>Phrases like "exceptional craftsmanship," "unmatched quality," and "trusted by homeowners" are invisible to AI engines. They're not citable. What gets cited is specific, attributable, verifiable: a named homeowner who describes a specific outcome, an industry award with a year and issuing body, a designer credential with a certification number.</p>
+              <p>The more specific the claim, the more citable it is. The more citable it is, the more likely an AI mentions your business by name when someone asks the right question.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> How many kitchens have you designed and installed? Over how many years? In which communities? Do any designers hold NKBA (National Kitchen &amp; Bath Association) credentials? Have you won any regional design awards? Has a local publication or home show featured a project? These are the facts that become the sentences AI tools quote — and they belong on your website, written as complete, attributable statements.
+              </div>
+              <p class="why-now">Why it matters now: AI tools are specifically trained to prefer attributable information. "Mother Hubbard's has designed over 400 custom kitchens in the Harrisburg–Mechanicsburg area since 2001" is something an AI will quote. "We're passionate about beautiful kitchens" is not.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">3</div>
+            <div class="principle-body">
+              <h4>Write Every Key Fact as a Self-Contained Sentence</h4>
+              <p>AI engines quote sentences, not paragraphs. A fact buried in the middle of a paragraph, dependent on the sentences before it for context, won't get pulled. The same fact written as a complete, standalone sentence — one that makes sense even if it's the only thing someone reads — will.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> Instead of: "Our team works closely with you throughout the entire process to ensure the finished kitchen matches your vision." Try: "Mother Hubbard's provides a dedicated project manager from initial design consultation through final installation — a single point of contact for the duration of your kitchen project." The second version is extractable. It answers "what's the process like?" on its own. The first requires context to understand.
+              </div>
+              <p class="why-now">Why it matters now: AI systems literally lift sentences verbatim when constructing answers. If your key facts aren't written to stand alone, they won't be quoted — even if the underlying truth is there.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">4</div>
+            <div class="principle-body">
+              <h4>Own One Narrow Topic Completely Before Expanding</h4>
+              <p>AI engines default to citing whoever they've seen most consistently as the authoritative source for a specific, narrow topic. Trying to rank for "kitchen design," "bathroom remodel," "custom cabinetry," and "home renovation" simultaneously spreads the signal thin. Owning one narrow category deeply — becoming the definitive source for that topic in your market — creates citation momentum that compounds.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> The most defensible narrow position right now is probably "custom kitchen design in Mechanicsburg and Harrisburg" — not as a keyword phrase, but as a genuine content territory. Every question a Harrisburg-area homeowner asks about custom kitchen design — cost, timeline, process, materials, what to look for in a designer, what goes wrong — should have a clear, well-written answer on your site. No competitor in your market has built that library. That's the gap.
+              </div>
+              <p class="why-now">Why it matters now: Classic SEO allowed brands to compete across many search terms at once. AI citation is winner-take-most within narrow categories. Committing early to a specific territory — and building it out completely — is what creates a durable citation advantage.</p>
+            </div>
+            <div class="weight-stars">★★★★★</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TIER 2 -->
+      <div class="tier-block tier-2">
+        <div class="tier-header">
+          <div class="tier-badge">Tier 2 — High Leverage, Build Early</div>
+          <div class="tier-label-text">Once Tier 1 is in place, these three amplify the signal significantly.</div>
+        </div>
+        <div class="principles-list">
+
+          <div class="principle-card">
+            <div class="principle-num">5</div>
+            <div class="principle-body">
+              <h4>Answer Every Question in the Decision Journey</h4>
+              <p>When a homeowner asks an AI "what should I know before hiring a custom kitchen designer?" — the AI fans out into dozens of related sub-questions to build a complete answer. A site that answers only the top-level question gets partial credit. A site that answers the full tree — cost, timeline, process, what questions to ask, what red flags to watch for, what good looks like — gets cited repeatedly.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> The full question tree for a custom kitchen buyer includes: How much does it cost? How long does it take? What's the process? How do I choose materials? What's the difference between semi-custom and fully custom? What should I ask a designer before hiring them? What can go wrong? How do I know if a quote is fair? Each of these deserves its own clear answer on your site — not a paragraph buried inside a longer page.
+              </div>
+              <p class="why-now">Why it matters now: In classic search, one strong page could rank for many related searches. AI engines pull from many different pages to construct one answer. Coverage across the full question tree — not depth on a single page — is what wins.</p>
+            </div>
+            <div class="weight-stars">★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">6</div>
+            <div class="principle-body">
+              <h4>Speak to Each Buyer Where They Are in the Process</h4>
+              <p>A homeowner just beginning to think about a kitchen remodel has completely different questions than one who has already gotten two quotes and is trying to make a final decision. Mixing those audiences on the same page dilutes the signal for both. Content that's tightly matched to one stage of the journey — and one type of buyer — performs better with AI engines than content written for everyone.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> "Dreaming" buyers want inspiration, ballpark costs, and a sense of what's possible. "Shopping" buyers want to understand process, timeline, and how to evaluate designers. "Deciding" buyers want to know what working with Mother Hubbard's specifically is like — the process, the people, the guarantees. These are three different conversations. Your site should have content that speaks clearly to each one.
+              </div>
+              <p class="why-now">Why it matters now: AI engines are increasingly good at inferring where a searcher is in their decision process. Content that matches that stage gets cited for that stage. Mixed-intent pages get cited for neither audience well.</p>
+            </div>
+            <div class="weight-stars">★★★★</div>
+          </div>
+
+          <div class="principle-card">
+            <div class="principle-num">7</div>
+            <div class="principle-body">
+              <h4>Use Comparisons and Choices to Structure Content</h4>
+              <p>AI engines are optimized to extract structured data. Wherever a buyer is comparing options — cabinet materials, door styles, countertop surfaces, finish types, layout approaches — a clear comparison (even a simple table or bulleted breakdown) is one of the highest-cited content formats available. A well-organized comparison beats five paragraphs of prose every time for "which is better" queries.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> High-value comparison content for your market: solid wood vs. plywood box construction (what the difference means for durability and cost), inset vs. overlay doors (look, function, price point), painted vs. stained finishes (maintenance, longevity, style), shaker vs. raised panel vs. flat-front cabinetry (aesthetics, trends, resale value). Homeowners ask these questions constantly. Nobody in your market has answered them in a clear, structured, citable way.
+              </div>
+              <p class="why-now">Why it matters now: AI-generated answers frequently include structured comparisons. If your comparison already exists on-page in a clear format, the engine will often pull it directly.</p>
+            </div>
+            <div class="weight-stars">★★★★</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TIER 3 -->
+      <div class="tier-block tier-3">
+        <div class="tier-header">
+          <div class="tier-badge">Tier 3 — Important, Build Up To It</div>
+          <div class="tier-label-text">This requires Tier 1 and 2 first — but it earns some of the most durable citations.</div>
+        </div>
+        <div class="principles-list">
+
+          <div class="principle-card">
+            <div class="principle-num">8</div>
+            <div class="principle-body">
+              <h4>Answer What Can Go Wrong</h4>
+              <p>Homeowners search for problems as much as they search for solutions. "Why do custom cabinets take so long," "what should I watch out for when hiring a kitchen designer," "why did my cabinet finish crack" — these queries often have no good authoritative answer from a business in your category. The designer who answers them honestly and specifically owns that citation territory permanently.</p>
+              <p>AI engines are specifically tasked with providing balanced answers. Content that addresses real risks, honest timelines, and legitimate concerns gets cited to provide that balance — including on competitor-comparison queries where a homeowner is trying to choose between two designers.</p>
+              <div class="applies-to">
+                <strong>For Mother Hubbard's:</strong> What are the most common reasons a custom kitchen project goes over budget? What causes delays? What should a homeowner do if they're unhappy with the design direction mid-project? What's the honest timeline from first consultation to installed kitchen? Answering these questions openly — with your actual process as the context — builds trust and citation authority at the same time.
+              </div>
+              <p class="why-now">Why it matters now: A business that's willing to answer the hard questions honestly is one AI tools trust to give their users accurate information. That trust translates into citations — even when the searcher hasn't heard of your business yet.</p>
+            </div>
+            <div class="weight-stars">★★★</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Three Things Callout -->
+      <div class="callout-dark">
+        <div class="callout-label">The Three Things That Matter Most</div>
+        <div class="callout-cols">
+          <div class="callout-col">
+            <div class="callout-headline">Answer first.</div>
+            <div class="callout-body">Lead every page with the direct answer to the question a homeowner is actually asking — not with your story.</div>
+          </div>
+          <div class="callout-col">
+            <div class="callout-headline">Be specific.</div>
+            <div class="callout-body">Named credentials, real numbers, attributable outcomes. Vague language doesn't get cited.</div>
+          </div>
+          <div class="callout-col">
+            <div class="callout-headline">Own your territory.</div>
+            <div class="callout-body">Be the definitive source for custom kitchen design in the Harrisburg–Mechanicsburg market. Nobody else has claimed it.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SOURCES -->
+    <div class="sources">
+      <h3>Research Sources</h3>
+      <ul>
+        <li><a href="https://searchengineland.com/google-zero-click-searches-2026-study-479717" target="_blank">Search Engine Land — "Google zero-click searches hit 68% in early 2026" (2026)</a></li>
+        <li><a href="https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/" target="_blank">SparkToro — "In 2026, Less Than One Third of Google Searches Still Send a Click" (2026)</a></li>
+        <li><a href="https://searchengineland.com/mastering-generative-engine-optimization-in-2026-full-guide-469142" target="_blank">Search Engine Land — "Mastering Generative Engine Optimization in 2026: Full Guide" (Feb 2026)</a></li>
+        <li><a href="https://ahrefs.com/blog/ai-overview-citations-top-10/" target="_blank">Ahrefs — "AI Overview Citations: Top 10?" (March 2026)</a> — 62% of AI Overview citations come from pages ranked outside the top 10.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>Prepared by <span>Shiba &amp; Associates</span> &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; Confidential — shared by private link</p>
+  </div>
+
+</body>
+</html>
