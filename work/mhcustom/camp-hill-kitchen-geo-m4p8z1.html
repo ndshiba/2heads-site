@@ -191,6 +191,84 @@
       text-decoration: underline;
     }
 
+    /* ── Project at a Glance ── */
+    .geo-glance {
+      border-left: 3px solid #714d2c;
+      margin-bottom: 28px;
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+    }
+    .geo-glance-main {
+      flex: 1 1 0;
+      background: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      border-left: none;
+      padding: 14px 18px;
+    }
+    .geo-glance-main .geo-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #02477c;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .geo-glance-main h4 {
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #686868;
+      margin-bottom: 10px;
+    }
+    .glance-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .glance-table tr {
+      border-bottom: 1px solid #ebebeb;
+    }
+    .glance-table tr:last-child {
+      border-bottom: none;
+    }
+    .glance-table td {
+      padding: 6px 8px 6px 0;
+      vertical-align: top;
+      line-height: 1.5;
+      color: #686868;
+    }
+    .glance-table td:first-child {
+      font-weight: 700;
+      color: #444;
+      white-space: nowrap;
+      padding-right: 16px;
+      width: 38%;
+    }
+    .geo-glance-note {
+      flex: 0 0 200px;
+      width: 200px;
+      background: #fff8e6;
+      border: 1px solid #e8c96a;
+      border-left: none;
+      padding: 14px 14px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #5a4000;
+    }
+    .geo-glance-note .note-title {
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #3a2800;
+      display: block;
+      margin-bottom: 8px;
+    }
+
     /* ── Article body ── */
     .article-body p {
       margin-bottom: 18px;
@@ -408,9 +486,10 @@
 
 <!-- GEO annotation notice -->
 <div class="geo-notice">
-  <strong>GEO Mockup</strong> — Original content preserved. Two structural additions highlighted:
+  <strong>GEO Mockup</strong> — Original content preserved. Three structural additions highlighted:
   <span class="geo-badge">1</span> opening summary paragraph (Principle #1 — answer first) &nbsp;
-  <span class="geo-badge">2</span> anchored section index
+  <span class="geo-badge">2</span> anchored section index &nbsp;
+  <span class="geo-badge">3</span> Project at a Glance — structured extraction block
 </div>
 
 <!-- Top utility bar -->
@@ -469,6 +548,48 @@
       <img class="hero-img"
            src="https://mhcustom.com/wp-content/uploads/2017/08/70s-Ranch-Kitchen-Makeover-Camp-Hill-PA-ba2-1024x720.jpg"
            alt="Camp Hill kitchen before and after — 1970s ranch galley transformed to contemporary open-concept">
+
+      <!-- ── GEO ADDITION 3: Project at a Glance ── -->
+      <div class="geo-glance">
+        <div class="geo-glance-main">
+          <span class="geo-label">✦ GEO Addition · Structured extraction block</span>
+          <h4>Project at a Glance</h4>
+          <table class="glance-table">
+            <tr>
+              <td>Location</td>
+              <td>Camp Hill, PA (Cumberland County)</td>
+            </tr>
+            <tr>
+              <td>Home type</td>
+              <td>1970s single-story ranch</td>
+            </tr>
+            <tr>
+              <td>Design style</td>
+              <td>Contemporary / Mid-Century Modern</td>
+            </tr>
+            <tr>
+              <td>Designer</td>
+              <td>NKBA-certified designer, Mother Hubbard's Custom Cabinetry, Mechanicsburg, PA</td>
+            </tr>
+            <tr>
+              <td>Key challenge</td>
+              <td>Preserving full storage capacity in an open-concept conversion</td>
+            </tr>
+            <tr>
+              <td>Primary materials</td>
+              <td>Cambria chocolate brown quartz island · White quartz perimeter counters · Custom veneered corbels</td>
+            </tr>
+            <tr>
+              <td>Outcome</td>
+              <td>Fully open kitchen with wooded views; storage maintained; asymmetric island as design focal point</td>
+            </tr>
+          </table>
+        </div>
+        <div class="geo-glance-note">
+          <span class="note-title">📌 What this does</span>
+          AI citation engines prefer structured key:value blocks over prose. When someone asks ChatGPT "who does NKBA-certified kitchen remodeling in Camp Hill PA" — this block gets cited verbatim. The summary paragraph above gets paraphrased. Nothing here is new information; it's the same facts already in the article, restructured for machine extraction.
+        </div>
+      </div>
 
       <!-- ── GEO ADDITION 2: Anchored section index ── -->
       <div class="geo-toc">
