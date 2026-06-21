@@ -308,47 +308,68 @@
 
     /* ── Click Shift Visual ── */
     .click-shift-section {
-      background: #141210;
-      border-bottom: 1px solid #2a2218;
+      background: #f5f2ed;
+      border-bottom: 1px solid #e0d5c5;
       padding: 60px 28px;
     }
     .cs-inner { max-width: 860px; margin: 0 auto; }
-    .cs-header { text-align: center; margin-bottom: 44px; }
+    .cs-header { text-align: center; margin-bottom: 28px; }
     .cs-eyebrow {
       font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-      color: #c49a5a; font-weight: 700; margin-bottom: 12px;
+      color: #b07d3a; font-weight: 700; margin-bottom: 12px;
     }
     .cs-title {
-      font-size: 1.85rem; font-weight: 700; color: #ffffff;
+      font-size: 1.85rem; font-weight: 700; color: #1e1a16;
       letter-spacing: -0.3px; margin-bottom: 10px;
     }
     .cs-sub {
-      font-size: 0.92rem; color: #888;
+      font-size: 0.92rem; color: #555;
       max-width: 520px; margin: 0 auto; line-height: 1.7;
     }
+    /* Drop highlight */
+    .cs-delta {
+      background: #1e1a16;
+      border-radius: 8px;
+      padding: 22px 32px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .cs-delta-drop {
+      font-size: 3rem; font-weight: 800; color: #c49a5a;
+      letter-spacing: -1px; line-height: 1; flex-shrink: 0;
+    }
+    .cs-delta-divider {
+      width: 1px; height: 44px; background: #3a3428; flex-shrink: 0;
+    }
+    .cs-delta-label { font-size: 0.88rem; color: #aaa; line-height: 1.7; }
+    .cs-delta-label strong { color: #d4b06a; }
+    .cs-delta-label em { color: #888; font-style: normal; font-size: 0.82rem; }
+    /* Panels */
     .cs-panels {
       display: flex; gap: 3px; border-radius: 10px; overflow: hidden;
-      margin-bottom: 28px; box-shadow: 0 6px 32px rgba(0,0,0,0.4);
+      margin-bottom: 28px; box-shadow: 0 3px 14px rgba(0,0,0,0.09);
     }
     .cs-panel { flex: 1; padding: 36px 32px; }
-    .cs-then { background: #1d1b17; border-top: 4px solid #4a4a4a; }
-    .cs-now  { background: #1f1709; border-top: 4px solid #c49a5a; }
+    .cs-then { background: #eae7e2; border-top: 4px solid #999; }
+    .cs-now  { background: #fdf5e6; border-top: 4px solid #c49a5a; }
     .cs-panel-label {
       font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
       font-weight: 700; margin-bottom: 20px;
     }
-    .cs-then .cs-panel-label { color: #666; }
-    .cs-now  .cs-panel-label { color: #c49a5a; }
+    .cs-then .cs-panel-label { color: #777; }
+    .cs-now  .cs-panel-label { color: #b07d3a; }
     .cs-big-num {
-      font-size: 4.8rem; font-weight: 800; color: #cccccc;
+      font-size: 4.8rem; font-weight: 800; color: #1e1a16;
       line-height: 1; letter-spacing: -3px; margin-bottom: 8px;
     }
     .cs-big-num.cs-gold { color: #c49a5a; }
     .cs-pct { font-size: 2.4rem; letter-spacing: 0; font-weight: 700; }
-    .cs-then .cs-pct { color: #aaa; }
+    .cs-then .cs-pct { color: #666; }
     .cs-now  .cs-pct { color: #a07830; }
     .cs-panel-desc {
-      font-size: 0.87rem; color: #888; line-height: 1.6; margin-bottom: 24px;
+      font-size: 0.87rem; color: #555; line-height: 1.6; margin-bottom: 24px;
     }
     .cs-grid {
       display: grid; grid-template-columns: repeat(10, 1fr);
@@ -357,25 +378,28 @@
     .cs-dot { width: 100%; aspect-ratio: 1; border-radius: 2px; }
     .cs-dot-lit-then { background: #888888; }
     .cs-dot-lit-now  { background: #c49a5a; }
-    .cs-dot-dim      { background: #252320; }
+    .cs-then .cs-dot-dim { background: #c4c0b8; }
+    .cs-now  .cs-dot-dim { background: #e2d0a0; }
     .cs-bar-wrap {
-      background: #252320; border-radius: 4px; height: 8px;
+      border-radius: 4px; height: 8px;
       overflow: hidden; margin-bottom: 8px;
     }
+    .cs-then .cs-bar-wrap { background: #ccc8c0; }
+    .cs-now  .cs-bar-wrap { background: #e8d5a0; }
     .cs-bar { height: 100%; border-radius: 4px; }
-    .cs-bar-then { background: #777; }
+    .cs-bar-then { background: #888; }
     .cs-bar-now  { background: #c49a5a; }
-    .cs-bar-label { font-size: 0.75rem; color: #666; line-height: 1.5; }
-    .cs-now .cs-bar-label em { color: #c49a5a; font-style: normal; }
+    .cs-bar-label { font-size: 0.75rem; color: #888; line-height: 1.5; }
+    .cs-now .cs-bar-label em { color: #b07d3a; font-style: normal; }
     .cs-callout {
-      background: #1a1209; border: 1px solid #2e2010;
+      background: #fff; border: 1px solid #e0d5c5;
       border-left: 4px solid #c49a5a; border-radius: 6px;
       padding: 20px 26px;
     }
     .cs-callout p {
-      font-size: 0.9rem; color: #999; line-height: 1.8; margin: 0;
+      font-size: 0.9rem; color: #444; line-height: 1.8; margin: 0;
     }
-    .cs-callout p strong { color: #d4b06a; }
+    .cs-callout p strong { color: #b07d3a; }
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.7rem; }
@@ -384,8 +408,11 @@
       .principle-card { flex-wrap: wrap; }
       .weight-stars { min-width: auto; }
       .cs-panels { flex-direction: column; }
+      .cs-delta { flex-direction: column; text-align: center; }
+      .cs-delta-divider { display: none; }
       .cs-title { font-size: 1.4rem; }
       .cs-big-num { font-size: 3.6rem; }
+      .cs-delta-drop { font-size: 2.2rem; }
     }
   </style>
 </head>
@@ -412,6 +439,16 @@
         <div class="cs-eyebrow">The Fundamental Shift</div>
         <h2 class="cs-title">Most Searches No Longer Lead to Your Website</h2>
         <p class="cs-sub">Five years ago, roughly half of all Google searches ended with someone clicking a website. That's changed — dramatically.</p>
+      </div>
+
+      <!-- Drop highlight -->
+      <div class="cs-delta">
+        <div class="cs-delta-drop">↓ 36%</div>
+        <div class="cs-delta-divider"></div>
+        <div class="cs-delta-label">
+          <strong>Fewer searches reach any website today</strong> than before AI search features arrived<br>
+          <em>From ~50% of searches sending a click, down to ~32% — an 18 percentage-point drop</em>
+        </div>
       </div>
 
       <div class="cs-panels">
