@@ -313,7 +313,7 @@
       padding: 60px 28px;
     }
     .cs-inner { max-width: 860px; margin: 0 auto; }
-    .cs-header { text-align: center; margin-bottom: 28px; }
+    .cs-header { text-align: center; margin-bottom: 36px; }
     .cs-eyebrow {
       font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
       color: #b07d3a; font-weight: 700; margin-bottom: 12px;
@@ -324,73 +324,58 @@
     }
     .cs-sub {
       font-size: 0.92rem; color: #555;
-      max-width: 520px; margin: 0 auto; line-height: 1.7;
+      max-width: 600px; margin: 0 auto; line-height: 1.7;
     }
-    /* Drop highlight */
-    .cs-delta {
-      background: #1e1a16;
-      border-radius: 8px;
-      padding: 22px 32px;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .cs-delta-drop {
-      font-size: 3rem; font-weight: 800; color: #c49a5a;
-      letter-spacing: -1px; line-height: 1; flex-shrink: 0;
-    }
-    .cs-delta-divider {
-      width: 1px; height: 44px; background: #3a3428; flex-shrink: 0;
-    }
-    .cs-delta-label { font-size: 0.88rem; color: #aaa; line-height: 1.7; }
-    .cs-delta-label strong { color: #d4b06a; }
-    .cs-delta-label em { color: #888; font-style: normal; font-size: 0.82rem; }
     /* Panels */
     .cs-panels {
       display: flex; gap: 3px; border-radius: 10px; overflow: hidden;
-      margin-bottom: 28px; box-shadow: 0 3px 14px rgba(0,0,0,0.09);
+      margin-bottom: 24px; box-shadow: 0 3px 14px rgba(0,0,0,0.09);
     }
-    .cs-panel { flex: 1; padding: 36px 32px; }
-    .cs-then { background: #eae7e2; border-top: 4px solid #999; }
-    .cs-now  { background: #fdf5e6; border-top: 4px solid #c49a5a; }
-    .cs-panel-label {
+    .cs-panel { flex: 1; padding: 32px 28px; }
+    .cs-find     { background: #eae7e2; border-top: 4px solid #999; }
+    .cs-research { background: #fdf5e6; border-top: 4px solid #c49a5a; }
+    /* Type labels */
+    .cs-type-label {
       font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
-      font-weight: 700; margin-bottom: 20px;
+      font-weight: 700; margin-bottom: 14px;
     }
-    .cs-then .cs-panel-label { color: #777; }
-    .cs-now  .cs-panel-label { color: #b07d3a; }
-    .cs-big-num {
-      font-size: 4.8rem; font-weight: 800; color: #1e1a16;
-      line-height: 1; letter-spacing: -3px; margin-bottom: 8px;
+    .cs-find .cs-type-label     { color: #777; }
+    .cs-research .cs-type-label { color: #b07d3a; }
+    /* Icon */
+    .cs-type-icon { font-size: 1.6rem; margin-bottom: 14px; line-height: 1; }
+    /* Query pills */
+    .cs-queries { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+    .cs-query {
+      font-size: 0.77rem; border-radius: 20px;
+      padding: 5px 12px; font-style: italic;
     }
-    .cs-big-num.cs-gold { color: #c49a5a; }
-    .cs-pct { font-size: 2.4rem; letter-spacing: 0; font-weight: 700; }
-    .cs-then .cs-pct { color: #666; }
-    .cs-now  .cs-pct { color: #a07830; }
+    .cs-find .cs-query     { background: rgba(0,0,0,0.07); color: #555; }
+    .cs-research .cs-query { background: rgba(196,154,90,0.15); color: #7a5a1a; }
+    /* Status bars */
+    .cs-status {
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: 16px; padding: 10px 14px; border-radius: 6px;
+    }
+    .cs-status-ok   { background: #e6efe6; }
+    .cs-status-warn { background: #fef3e0; border: 1px solid #e8d090; }
+    .cs-status-dot {
+      width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; margin-top: 4px;
+    }
+    .cs-status-ok .cs-status-dot   { background: #5a9a5a; }
+    .cs-status-warn .cs-status-dot { background: #c49a5a; }
+    .cs-status-text { font-size: 0.83rem; color: #444; line-height: 1.55; }
+    .cs-status-text strong { color: #1e1a16; }
+    /* Panel body */
     .cs-panel-desc {
-      font-size: 0.87rem; color: #555; line-height: 1.6; margin-bottom: 24px;
+      font-size: 0.87rem; color: #555; line-height: 1.65; margin-bottom: 16px;
     }
-    .cs-grid {
-      display: grid; grid-template-columns: repeat(10, 1fr);
-      gap: 3px; margin-bottom: 16px;
+    .cs-panel-note {
+      font-size: 0.82rem; line-height: 1.6;
+      border-radius: 5px; padding: 10px 14px;
     }
-    .cs-dot { width: 100%; aspect-ratio: 1; border-radius: 2px; }
-    .cs-dot-lit-then { background: #888888; }
-    .cs-dot-lit-now  { background: #c49a5a; }
-    .cs-then .cs-dot-dim { background: #c4c0b8; }
-    .cs-now  .cs-dot-dim { background: #e2d0a0; }
-    .cs-bar-wrap {
-      border-radius: 4px; height: 8px;
-      overflow: hidden; margin-bottom: 8px;
-    }
-    .cs-then .cs-bar-wrap { background: #ccc8c0; }
-    .cs-now  .cs-bar-wrap { background: #e8d5a0; }
-    .cs-bar { height: 100%; border-radius: 4px; }
-    .cs-bar-then { background: #888; }
-    .cs-bar-now  { background: #c49a5a; }
-    .cs-bar-label { font-size: 0.75rem; color: #888; line-height: 1.5; }
-    .cs-now .cs-bar-label em { color: #b07d3a; font-style: normal; }
+    .cs-note-neutral { background: #d8d4cc; color: #666; }
+    .cs-note-mhcc    { background: #1e1a16; color: #c49a5a; font-weight: 500; }
+    /* Callout */
     .cs-callout {
       background: #fff; border: 1px solid #e0d5c5;
       border-left: 4px solid #c49a5a; border-radius: 6px;
@@ -408,11 +393,8 @@
       .principle-card { flex-wrap: wrap; }
       .weight-stars { min-width: auto; }
       .cs-panels { flex-direction: column; }
-      .cs-delta { flex-direction: column; text-align: center; }
-      .cs-delta-divider { display: none; }
       .cs-title { font-size: 1.4rem; }
-      .cs-big-num { font-size: 3.6rem; }
-      .cs-delta-drop { font-size: 2.2rem; }
+      .cs-query { white-space: normal; }
     }
   </style>
 </head>
@@ -431,52 +413,57 @@
     </div>
   </div>
 
-  <!-- CLICK SHIFT VISUAL -->
+  <!-- QUERY TYPE SPLIT VISUAL -->
   <div class="click-shift-section">
     <div class="cs-inner">
 
       <div class="cs-header">
-        <div class="cs-eyebrow">The Fundamental Shift</div>
-        <h2 class="cs-title">Most Searches No Longer Lead to Your Website</h2>
-        <p class="cs-sub">Five years ago, roughly half of all Google searches ended with someone clicking a website. That's changed — dramatically.</p>
-      </div>
-
-      <!-- Drop highlight -->
-      <div class="cs-delta">
-        <div class="cs-delta-drop">↓ 36%</div>
-        <div class="cs-delta-divider"></div>
-        <div class="cs-delta-label">
-          <strong>Fewer searches reach any website today</strong> than before AI search features arrived<br>
-          <em>From ~50% of searches sending a click, down to ~32% — an 18 percentage-point drop</em>
-        </div>
+        <div class="cs-eyebrow">The Shift That Actually Matters for MHCC</div>
+        <h2 class="cs-title">Two Types of Local Searches. Two Very Different Futures.</h2>
+        <p class="cs-sub">Not all local searches are affected the same way by AI. The question is which type Mother Hubbard’s buyers actually use — and that answer changes everything.</p>
       </div>
 
       <div class="cs-panels">
 
-        <!-- THEN -->
-        <div class="cs-panel cs-then">
-          <div class="cs-panel-label">Before AI Search Features (2019)</div>
-          <div class="cs-big-num">~50<span class="cs-pct">%</span></div>
-          <div class="cs-panel-desc">of searches led someone<br>to click a website</div>
-          <div class="cs-grid" id="grid-then"></div>
-          <div class="cs-bar-wrap"><div class="cs-bar cs-bar-then" style="width:50%"></div></div>
-          <div class="cs-bar-label">50 of every 100 searches → a website visit</div>
+        <!-- TYPE 1: FIND A BUSINESS -->
+        <div class="cs-panel cs-find">
+          <div class="cs-type-label">Type 1 — “Find a Business” Queries</div>
+          <div class="cs-type-icon">📍</div>
+          <div class="cs-queries">
+            <span class="cs-query">“kitchen designer near me”</span>
+            <span class="cs-query">“cabinet shop Harrisburg PA”</span>
+            <span class="cs-query">“custom cabinets phone number”</span>
+          </div>
+          <div class="cs-status cs-status-ok">
+            <div class="cs-status-dot"></div>
+            <div class="cs-status-text">Local pack still appears in <strong>90%+</strong> of these queries — clicks still happen</div>
+          </div>
+          <p class="cs-panel-desc">The person is ready to call. They need an address or a phone number. They click — often directly to the Google Business Profile, not the website.</p>
+          <div class="cs-panel-note cs-note-neutral">MHCC participates in this — but it’s rarely where a custom kitchen buyer’s journey starts.</div>
         </div>
 
-        <!-- NOW -->
-        <div class="cs-panel cs-now">
-          <div class="cs-panel-label">Today (2026)</div>
-          <div class="cs-big-num cs-gold">~32<span class="cs-pct">%</span></div>
-          <div class="cs-panel-desc">of searches lead someone<br>to click a website</div>
-          <div class="cs-grid" id="grid-now"></div>
-          <div class="cs-bar-wrap"><div class="cs-bar cs-bar-now" style="width:32%"></div></div>
-          <div class="cs-bar-label">32 of every 100 searches → a website visit<br><em>68 are answered by Google or AI — no click needed</em></div>
+        <!-- TYPE 2: RESEARCH / CONSIDERATION -->
+        <div class="cs-panel cs-research">
+          <div class="cs-type-label">Type 2 — Research &amp; Consideration Queries</div>
+          <div class="cs-type-icon">🔍</div>
+          <div class="cs-queries">
+            <span class="cs-query">“what to know before hiring a kitchen designer”</span>
+            <span class="cs-query">“custom kitchen remodel cost Harrisburg”</span>
+            <span class="cs-query">“best kitchen designers near me”</span>
+            <span class="cs-query">“semi-custom vs fully custom cabinets”</span>
+          </div>
+          <div class="cs-status cs-status-warn">
+            <div class="cs-status-dot"></div>
+            <div class="cs-status-text">AI Overviews now answer <strong>~40%</strong> of local-intent queries like these — directly, without a click</div>
+          </div>
+          <p class="cs-panel-desc">The person is in the 8–12 week research phase. They want an answer, not a website. AI gives it to them — completely, before they ever click anywhere.</p>
+          <div class="cs-panel-note cs-note-mhcc">This is where MHCC’s pipeline is built — and where AI is absorbing the conversation.</div>
         </div>
 
       </div>
 
       <div class="cs-callout">
-        <p>A homeowner searching "custom kitchen designers near Harrisburg" today is more likely to read a Google AI summary — or ask ChatGPT — than to ever click your website. <strong>Being found online now means being the business AI recommends, not just the one that ranks.</strong></p>
+        <p>The 68% zero-click figure is a blunt instrument — it bundles together weather lookups and news stories with the research questions that drive $40,000 kitchen projects. <strong>The number that matters for MHCC: roughly 40% of the consideration questions your buyers ask are now answered before they ever reach a website.</strong> That’s where your pipeline starts. That’s what GEO addresses.</p>
       </div>
 
     </div>
@@ -691,20 +678,6 @@
     <p>Prepared by <span>Shiba &amp; Associates</span> &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; Confidential — shared by private link</p>
   </div>
 
-  <script>
-    // Render 10×10 dot grids for click-shift visual
-    function makeDots(id, lit, total, litClass) {
-      var el = document.getElementById(id);
-      if (!el) return;
-      for (var i = 0; i < total; i++) {
-        var d = document.createElement('div');
-        d.className = 'cs-dot ' + (i < lit ? litClass : 'cs-dot-dim');
-        el.appendChild(d);
-      }
-    }
-    makeDots('grid-then', 50, 100, 'cs-dot-lit-then');
-    makeDots('grid-now',  32, 100, 'cs-dot-lit-now');
-  </script>
 
 </body>
 </html>
