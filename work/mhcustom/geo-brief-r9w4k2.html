@@ -306,12 +306,86 @@
     }
     .footer p span { color: #c49a5a; }
 
+    /* ── Click Shift Visual ── */
+    .click-shift-section {
+      background: #141210;
+      border-bottom: 1px solid #2a2218;
+      padding: 60px 28px;
+    }
+    .cs-inner { max-width: 860px; margin: 0 auto; }
+    .cs-header { text-align: center; margin-bottom: 44px; }
+    .cs-eyebrow {
+      font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+      color: #c49a5a; font-weight: 700; margin-bottom: 12px;
+    }
+    .cs-title {
+      font-size: 1.85rem; font-weight: 700; color: #ffffff;
+      letter-spacing: -0.3px; margin-bottom: 10px;
+    }
+    .cs-sub {
+      font-size: 0.92rem; color: #888;
+      max-width: 520px; margin: 0 auto; line-height: 1.7;
+    }
+    .cs-panels {
+      display: flex; gap: 3px; border-radius: 10px; overflow: hidden;
+      margin-bottom: 28px; box-shadow: 0 6px 32px rgba(0,0,0,0.4);
+    }
+    .cs-panel { flex: 1; padding: 36px 32px; }
+    .cs-then { background: #1d1b17; border-top: 4px solid #4a4a4a; }
+    .cs-now  { background: #1f1709; border-top: 4px solid #c49a5a; }
+    .cs-panel-label {
+      font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+      font-weight: 700; margin-bottom: 20px;
+    }
+    .cs-then .cs-panel-label { color: #666; }
+    .cs-now  .cs-panel-label { color: #c49a5a; }
+    .cs-big-num {
+      font-size: 4.8rem; font-weight: 800; color: #cccccc;
+      line-height: 1; letter-spacing: -3px; margin-bottom: 8px;
+    }
+    .cs-big-num.cs-gold { color: #c49a5a; }
+    .cs-pct { font-size: 2.4rem; letter-spacing: 0; font-weight: 700; }
+    .cs-then .cs-pct { color: #aaa; }
+    .cs-now  .cs-pct { color: #a07830; }
+    .cs-panel-desc {
+      font-size: 0.87rem; color: #888; line-height: 1.6; margin-bottom: 24px;
+    }
+    .cs-grid {
+      display: grid; grid-template-columns: repeat(10, 1fr);
+      gap: 3px; margin-bottom: 16px;
+    }
+    .cs-dot { width: 100%; aspect-ratio: 1; border-radius: 2px; }
+    .cs-dot-lit-then { background: #888888; }
+    .cs-dot-lit-now  { background: #c49a5a; }
+    .cs-dot-dim      { background: #252320; }
+    .cs-bar-wrap {
+      background: #252320; border-radius: 4px; height: 8px;
+      overflow: hidden; margin-bottom: 8px;
+    }
+    .cs-bar { height: 100%; border-radius: 4px; }
+    .cs-bar-then { background: #777; }
+    .cs-bar-now  { background: #c49a5a; }
+    .cs-bar-label { font-size: 0.75rem; color: #666; line-height: 1.5; }
+    .cs-now .cs-bar-label em { color: #c49a5a; font-style: normal; }
+    .cs-callout {
+      background: #1a1209; border: 1px solid #2e2010;
+      border-left: 4px solid #c49a5a; border-radius: 6px;
+      padding: 20px 26px;
+    }
+    .cs-callout p {
+      font-size: 0.9rem; color: #999; line-height: 1.8; margin: 0;
+    }
+    .cs-callout p strong { color: #d4b06a; }
+
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.7rem; }
       .hero .meta { gap: 16px; }
       .context-banner .stats-row { gap: 20px; }
       .principle-card { flex-wrap: wrap; }
       .weight-stars { min-width: auto; }
+      .cs-panels { flex-direction: column; }
+      .cs-title { font-size: 1.4rem; }
+      .cs-big-num { font-size: 3.6rem; }
     }
   </style>
 </head>
@@ -327,6 +401,47 @@
       <div>Prepared for <span>John Petrie &amp; Family</span></div>
       <div>Date <span>June 2026</span></div>
       <div>Prepared by <span>Shiba &amp; Associates</span></div>
+    </div>
+  </div>
+
+  <!-- CLICK SHIFT VISUAL -->
+  <div class="click-shift-section">
+    <div class="cs-inner">
+
+      <div class="cs-header">
+        <div class="cs-eyebrow">The Fundamental Shift</div>
+        <h2 class="cs-title">Most Searches No Longer Lead to Your Website</h2>
+        <p class="cs-sub">Five years ago, roughly half of all Google searches ended with someone clicking a website. That's changed — dramatically.</p>
+      </div>
+
+      <div class="cs-panels">
+
+        <!-- THEN -->
+        <div class="cs-panel cs-then">
+          <div class="cs-panel-label">Before AI Search Features (2019)</div>
+          <div class="cs-big-num">~50<span class="cs-pct">%</span></div>
+          <div class="cs-panel-desc">of searches led someone<br>to click a website</div>
+          <div class="cs-grid" id="grid-then"></div>
+          <div class="cs-bar-wrap"><div class="cs-bar cs-bar-then" style="width:50%"></div></div>
+          <div class="cs-bar-label">50 of every 100 searches → a website visit</div>
+        </div>
+
+        <!-- NOW -->
+        <div class="cs-panel cs-now">
+          <div class="cs-panel-label">Today (2026)</div>
+          <div class="cs-big-num cs-gold">~32<span class="cs-pct">%</span></div>
+          <div class="cs-panel-desc">of searches lead someone<br>to click a website</div>
+          <div class="cs-grid" id="grid-now"></div>
+          <div class="cs-bar-wrap"><div class="cs-bar cs-bar-now" style="width:32%"></div></div>
+          <div class="cs-bar-label">32 of every 100 searches → a website visit<br><em>68 are answered by Google or AI — no click needed</em></div>
+        </div>
+
+      </div>
+
+      <div class="cs-callout">
+        <p>A homeowner searching "custom kitchen designers near Harrisburg" today is more likely to read a Google AI summary — or ask ChatGPT — than to ever click your website. <strong>Being found online now means being the business AI recommends, not just the one that ranks.</strong></p>
+      </div>
+
     </div>
   </div>
 
@@ -538,6 +653,21 @@
   <div class="footer">
     <p>Prepared by <span>Shiba &amp; Associates</span> &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; Confidential — shared by private link</p>
   </div>
+
+  <script>
+    // Render 10×10 dot grids for click-shift visual
+    function makeDots(id, lit, total, litClass) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      for (var i = 0; i < total; i++) {
+        var d = document.createElement('div');
+        d.className = 'cs-dot ' + (i < lit ? litClass : 'cs-dot-dim');
+        el.appendChild(d);
+      }
+    }
+    makeDots('grid-then', 50, 100, 'cs-dot-lit-then');
+    makeDots('grid-now',  32, 100, 'cs-dot-lit-now');
+  </script>
 
 </body>
 </html>
