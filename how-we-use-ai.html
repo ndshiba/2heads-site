@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How We Use AI — 2.0 Heads</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+    --ink-muted: #888;
+    --rule: #e4e2dc;
+    --bg: #faf9f6;
+    --white: #ffffff;
+    --accent: #2c5f8a;
+    --accent-soft: #e8f0f8;
+    --green: #1f7a46;
+    --green-soft: #eaf5ef;
+    --amber: #b45309;
+    --amber-soft: #fef3e2;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Georgia, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--white);
+    border-bottom: 1.5px solid var(--rule);
+    padding: 52px 40px 48px;
+  }
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .byline {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .lead {
+    font-size: 18px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    max-width: 640px;
+  }
+
+  /* ── Body ── */
+  .body-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+  }
+
+  /* ── Section ── */
+  .section {
+    margin-top: 64px;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink-muted);
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+  p:last-child { margin-bottom: 0; }
+
+  /* ── Callout box ── */
+  .callout {
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 28px 0;
+  }
+  .callout-blue {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+  }
+  .callout-green {
+    background: var(--green-soft);
+    border-left: 3px solid var(--green);
+  }
+  .callout p {
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+  .callout strong {
+    color: var(--ink);
+  }
+
+  /* ── Two-column contrast ── */
+  .contrast-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+  @media (max-width: 600px) {
+    .contrast-grid { grid-template-columns: 1fr; }
+  }
+  .contrast-card {
+    border-radius: 12px;
+    padding: 22px 24px;
+    border: 1.5px solid var(--rule);
+  }
+  .contrast-card h3 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 14px;
+  }
+  .contrast-card ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contrast-card li {
+    font-size: 14px;
+    color: var(--ink-soft);
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+  }
+  .contrast-card li::before {
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+  .card-without { background: var(--white); }
+  .card-without h3 { color: var(--ink-muted); }
+  .card-without li::before { content: '○'; color: #ccc; }
+
+  .card-with { background: var(--accent-soft); border-color: #c0d4ea; }
+  .card-with h3 { color: var(--accent); }
+  .card-with li::before { content: '●'; color: var(--accent); }
+  .card-with li { color: var(--ink); }
+
+  /* ── Data sources ── */
+  .sources-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 28px 0;
+  }
+  .source-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--white);
+    border: 1.5px solid var(--rule);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .source-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .source-body {}
+  .source-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .source-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── Agent team ── */
+  .team-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 28px 0;
+  }
+  .team-node {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--white);
+    border: 1.5px solid var(--rule);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .team-node-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .team-node-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+  .team-node-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .flow-arrow {
+    text-align: center;
+    font-size: 16px;
+    color: #ccc;
+    padding: 2px 0;
+  }
+
+  /* ── Closing ── */
+  .closing {
+    margin-top: 64px;
+    background: var(--white);
+    border: 1.5px solid var(--rule);
+    border-radius: 14px;
+    padding: 36px 40px;
+    text-align: center;
+  }
+  .closing h2 {
+    margin-bottom: 12px;
+  }
+  .closing p {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  /* ── Divider ── */
+  hr {
+    border: none;
+    border-top: 1.5px solid var(--rule);
+    margin: 64px 0 0;
+  }
+
+  /* ── Footer ── */
+  footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 40px 40px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  @media (max-width: 640px) {
+    header { padding: 40px 24px 36px; }
+    .body-wrap { padding: 0 24px 60px; }
+    footer { padding: 24px 24px 40px; }
+    .closing { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="byline">2.0 Heads — How We Work</div>
+    <h1>AI that knows your business before it says a word.</h1>
+    <p class="lead">A short explanation of how we use artificial intelligence in our work together — and why the approach matters more than the technology.</p>
+  </div>
+</header>
+
+<div class="body-wrap">
+
+  <!-- Section 1: The landscape -->
+  <div class="section">
+    <div class="section-label">The starting point</div>
+    <h2>AI tools are everywhere. Context is not.</h2>
+    <p>Over the last couple of years, AI has become genuinely impressive. It can write, summarize, analyze, and brainstorm — often faster and more thoroughly than any individual could. You may have experimented with it yourself, and you've almost certainly seen vendors offering "AI-powered" marketing recommendations.</p>
+    <p>Most of those tools follow a simple pattern: feed in a website, ask for suggestions, get output. The results look polished and often sound reasonable. The problem is that they're built on a blank slate — no actual knowledge of your business, your customers, or your performance.</p>
+
+    <div class="callout callout-blue">
+      <p><strong>The core issue:</strong> An AI that hasn't seen your data can only tell you what tends to work in general. It has no way to know what's specifically working — or failing — for you right now.</p>
+    </div>
+
+    <p>That's not a knock on AI. It's a constraint of how it's being used. And it's exactly what we've built our process to address.</p>
+  </div>
+
+  <!-- Section 2: The contrast -->
+  <div class="section">
+    <div class="section-label">The difference</div>
+    <h2>Context changes everything.</h2>
+    <p>Here's a straightforward way to see the difference between a context-free AI recommendation and one grounded in your actual data.</p>
+
+    <div class="contrast-grid">
+      <div class="contrast-card card-without">
+        <h3>Without your data</h3>
+        <ul>
+          <li>Reads your website pages</li>
+          <li>Compares to general best practices</li>
+          <li>Suggests improvements based on patterns</li>
+          <li>Has no idea what's converting</li>
+          <li>Has no idea where you're losing traffic</li>
+          <li>Can't see competitor performance</li>
+          <li>Produces advice that could apply to anyone</li>
+        </ul>
+      </div>
+      <div class="contrast-card card-with">
+        <h3>With your data loaded first</h3>
+        <ul>
+          <li>Knows your actual visitor behavior</li>
+          <li>Knows which pages are growing or declining</li>
+          <li>Knows what people search before finding you</li>
+          <li>Knows where your checkout or contact form loses people</li>
+          <li>Knows how your rankings compare to competitors</li>
+          <li>Produces advice specific to your business, right now</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The difference between these two isn't the AI model. It's what the AI knows before it speaks.</p>
+  </div>
+
+  <!-- Section 3: Data sources -->
+  <div class="section">
+    <div class="section-label">What we bring in</div>
+    <h2>The sources we connect before any recommendation.</h2>
+    <p>Before our team makes a suggestion about your marketing, we've pulled and reviewed data from the platforms that tell the real story of your business. Here's what each one contributes.</p>
+
+    <div class="sources-grid">
+      <div class="source-row">
+        <div class="source-icon">📊</div>
+        <div class="source-body">
+          <div class="source-name">Google Analytics 4</div>
+          <p class="source-desc">Real visitor behavior — which pages people visit, how long they stay, where they leave, and what actions they take before converting or leaving.</p>
+        </div>
+      </div>
+      <div class="source-row">
+        <div class="source-icon">🔍</div>
+        <div class="source-body">
+          <div class="source-name">Google Search Console</div>
+          <p class="source-desc">Exactly what people type into Google before finding you, where you rank for those searches, and where you're close to breaking through to page one.</p>
+        </div>
+      </div>
+      <div class="source-row">
+        <div class="source-icon">📈</div>
+        <div class="source-body">
+          <div class="source-name">Semrush</div>
+          <p class="source-desc">How your search visibility compares to competitors, which keywords have growth potential, and where competitors are outranking you and why.</p>
+        </div>
+      </div>
+      <div class="source-row">
+        <div class="source-icon">💰</div>
+        <div class="source-body">
+          <div class="source-name">Google Ads</div>
+          <p class="source-desc">Where your ad spend is going, which campaigns and terms are actually driving conversions, and where budget could be working harder.</p>
+        </div>
+      </div>
+      <div class="source-row">
+        <div class="source-icon">🛒</div>
+        <div class="source-body">
+          <div class="source-name">WooCommerce / E-Commerce Data</div>
+          <p class="source-desc">What customers buy, what they add to cart and abandon, at what price points, and which product pages are converting vs. just collecting views.</p>
+        </div>
+      </div>
+      <div class="source-row">
+        <div class="source-icon">📋</div>
+        <div class="source-body">
+          <div class="source-name">CRM & Lead Data</div>
+          <p class="source-desc">Where your real customers came from, how long they took to decide, and which marketing channels are producing leads that actually close.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-green">
+      <p><strong>The result:</strong> When we make a recommendation, it's tied to something specific we saw in your numbers — not something we assumed based on your industry.</p>
+    </div>
+  </div>
+
+  <!-- Section 4: The team -->
+  <div class="section">
+    <div class="section-label">How the work gets done</div>
+    <h2>A coordinated team, not a single prompt.</h2>
+    <p>We work with a structured team of AI agents — purpose-built tools that each handle a specific part of the analysis. Think of it less like asking a question and more like briefing a small team that then goes to work.</p>
+
+    <div class="team-flow">
+      <div class="team-node">
+        <div class="team-node-icon">🧭</div>
+        <div>
+          <div class="team-node-title">Strategy & Analysis</div>
+          <p class="team-node-desc">Coordinates the work, reviews all incoming data, identifies the real opportunities and gaps, and decides what questions need answering before any recommendation is made.</p>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="team-node">
+        <div class="team-node-icon">🔬</div>
+        <div>
+          <div class="team-node-title">Data Collection</div>
+          <p class="team-node-desc">Pulls and processes data from GA4, Search Console, Semrush, and your other platforms — structured, cleaned, and ready for analysis. No manual export, no spreadsheet errors.</p>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="team-node">
+        <div class="team-node-icon">🖥️</div>
+        <div>
+          <div class="team-node-title">Research & Verification</div>
+          <p class="team-node-desc">Checks live pages, competitor sites, and search results against the data — so we're not just analyzing numbers in isolation, but verifying what's actually visible in the market.</p>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="team-node">
+        <div class="team-node-icon">📝</div>
+        <div>
+          <div class="team-node-title">Synthesis & Delivery</div>
+          <p class="team-node-desc">Assembles the findings into clear, actionable output — a report, a recommendation, a page brief, or a strategy document — grounded in everything the team found.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>Each step happens before a recommendation reaches you. The goal is that by the time we're suggesting an action, we've already asked "but is that actually true for this client?" and checked the answer.</p>
+  </div>
+
+  <!-- Section 5: What it means -->
+  <div class="section">
+    <div class="section-label">What this means for you</div>
+    <h2>Fewer opinions. More answers.</h2>
+    <p>Marketing has always had a lot of opinions and not enough data. Our process doesn't eliminate judgment — but it replaces assumptions with evidence wherever possible.</p>
+    <p>When we tell you a page needs work, we can show you the traffic pattern that says so. When we suggest a keyword opportunity, we can show you the search volume, the current ranking, and the competitor gap. When we recommend a change to your checkout or your ads, it's tied to something specific we saw in your numbers.</p>
+    <p>You don't have to take our word for it. The data is there.</p>
+  </div>
+
+  <!-- Closing -->
+  <div class="closing">
+    <h2>Questions about how we work?</h2>
+    <p>We're happy to walk through what data we're looking at for your account and how it's shaping our recommendations. Just ask.</p>
+  </div>
+
+</div>
+
+<hr>
+<footer>
+  <span>2.0 Heads — Internal Client Resource</span>
+  <span>2026</span>
+</footer>
+
+</body>
+</html>
