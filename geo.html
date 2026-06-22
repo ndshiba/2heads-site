@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEO — Generative Engine Optimization | Shiba &amp; Associates</title>
+  <meta name="description" content="Shiba &amp; Associates helps businesses get cited by AI-powered search engines. GEO — Generative Engine Optimization — is the practice of making your content the answer AI tools reach for." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0d0d0d;
+      --white: #f9f9f9;
+      --accent: #c8a96e;
+      --gray: #888;
+      --border: rgba(255,255,255,0.08);
+      --panel: rgba(255,255,255,0.02);
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(200, 169, 110, 0.14), transparent 30%),
+        var(--black);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { opacity: 0.75; }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link, .cta {
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color 0.2s, background 0.2s, border-color 0.2s;
+    }
+
+    .nav-link { color: #aaa; }
+    .nav-link:hover { color: var(--accent); opacity: 1; }
+    .nav-link.active { color: var(--accent); }
+
+    .cta {
+      font-weight: 500;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.45rem 1.1rem;
+      border-radius: 4px;
+    }
+    .cta:hover { background: var(--accent); color: var(--black); opacity: 1; }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 2rem 100px;
+      width: 100%;
+    }
+
+    .eyebrow, .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.1rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem 3rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      max-width: 820px;
+      margin: 0 auto 1.25rem;
+    }
+
+    .hero h1 em { font-style: normal; color: var(--accent); }
+
+    .hero .subtitle {
+      font-size: 1.05rem;
+      color: #bababa;
+      max-width: 700px;
+      line-height: 1.75;
+      margin: 0 auto 2rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.7rem 1.4rem;
+      border-radius: 4px;
+      background: var(--accent);
+      color: var(--black);
+      border: 1px solid var(--accent);
+      text-decoration: none;
+    }
+    .hero-cta:hover { opacity: 0.85; }
+
+    /* ── Divider ── */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Stat strip ── */
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .stat-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 1.2rem 1.3rem;
+    }
+
+    .stat-item .big {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-item .label {
+      font-size: 0.82rem;
+      color: #aaa;
+      line-height: 1.55;
+    }
+
+    /* ── Sections ── */
+    .section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      width: 100%;
+    }
+
+    .section h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .section .lead {
+      font-size: 1rem;
+      color: #b8b8b8;
+      max-width: 760px;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    /* ── Query type cards ── */
+    .query-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .query-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 1.6rem;
+    }
+
+    .query-card.t2 {
+      border-color: rgba(200, 169, 110, 0.3);
+      background: rgba(200, 169, 110, 0.04);
+    }
+
+    .query-card .type-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(200, 169, 110, 0.4);
+      padding: 0.2rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 0.8rem;
+    }
+
+    .query-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .query-card .examples {
+      list-style: none;
+      margin-bottom: 0.9rem;
+    }
+
+    .query-card .examples li {
+      font-size: 0.85rem;
+      color: #aaa;
+      padding: 0.2rem 0;
+    }
+
+    .query-card .examples li::before {
+      content: '"';
+      color: var(--accent);
+      margin-right: 2px;
+    }
+
+    .query-card .examples li::after {
+      content: '"';
+      color: var(--accent);
+    }
+
+    .query-card .verdict {
+      font-size: 0.85rem;
+      color: #bbb;
+      border-top: 1px solid var(--border);
+      padding-top: 0.75rem;
+      line-height: 1.6;
+    }
+
+    .query-card.t2 .verdict {
+      color: #d4b882;
+    }
+
+    /* ── Principles ── */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .principle-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 1.4rem;
+    }
+
+    .principle-card .num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .principle-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+      line-height: 1.35;
+    }
+
+    .principle-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+      line-height: 1.65;
+    }
+
+    /* ── Case study ── */
+    .case-study {
+      border: 1px solid rgba(200, 169, 110, 0.25);
+      border-radius: 12px;
+      background: rgba(200, 169, 110, 0.04);
+      padding: 2rem 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .case-study .cs-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .case-study h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .case-study p {
+      font-size: 0.9rem;
+      color: #b8b8b8;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .case-study p:last-of-type { margin-bottom: 1.4rem; }
+
+    .cs-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .cs-link {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.5rem 1.1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      border: 1px solid rgba(200, 169, 110, 0.45);
+      color: var(--accent);
+      transition: background 0.2s;
+    }
+
+    .cs-link:hover { background: rgba(200, 169, 110, 0.1); opacity: 1; }
+
+    .cs-link.primary {
+      background: var(--accent);
+      color: var(--black);
+      border-color: var(--accent);
+    }
+
+    .cs-link.primary:hover { opacity: 0.85; background: var(--accent); }
+
+    /* ── What's included ── */
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .included-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel);
+      padding: 1.4rem;
+    }
+
+    .included-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.55rem;
+    }
+
+    .included-card p {
+      font-size: 0.85rem;
+      color: #aaa;
+      line-height: 1.65;
+    }
+
+    /* ── CTA block ── */
+    .cta-block {
+      text-align: center;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .cta-block h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+
+    .cta-block .contact-name {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-block p {
+      font-size: 0.95rem;
+      color: #b8b8b8;
+      max-width: 640px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.7;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      color: var(--accent);
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto 2rem;
+      opacity: 0.5;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: #666;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { opacity: 0.75; }
+
+    @media (max-width: 720px) {
+      nav { padding: 1.1rem 1.2rem; }
+      .nav-link { display: none; }
+      .query-grid, .principles-grid { grid-template-columns: 1fr; }
+      .hero { padding: 3.5rem 1.2rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="logo" href="/"><span>2.0</span>Heads</a>
+    <div class="nav-links">
+      <a class="nav-link" href="/#operating-model">Operating Model</a>
+      <a class="nav-link" href="/google-ads-services.html">Google Ads</a>
+      <a class="nav-link active" href="/geo.html">GEO</a>
+      <a class="cta" href="mailto:shiba@2.0heads.com">Get in Touch</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">Shiba &amp; Associates — Search Services</p>
+    <h1>When AI answers the question, <em>you need to be the answer</em></h1>
+    <p class="subtitle">
+      Generative Engine Optimization (GEO) is the practice of making your content the source AI-powered search tools reach for when a buyer is researching a purchase. We help businesses build that foundation before a competitor does.
+    </p>
+    <a class="hero-cta" href="mailto:shiba@2.0heads.com">Talk to us about GEO</a>
+  </section>
+
+  <!-- STAT STRIP -->
+  <div class="stat-strip">
+    <div class="stat-item">
+      <div class="big">40%</div>
+      <div class="label">of high-consideration local queries are now answered directly by AI Overviews — before the buyer clicks anywhere</div>
+    </div>
+    <div class="stat-item">
+      <div class="big">62%</div>
+      <div class="label">of AI Overview citations come from pages ranked outside the top 10 in traditional search</div>
+    </div>
+    <div class="stat-item">
+      <div class="big">45%</div>
+      <div class="label">overlap between Google map-pack winners and AI-cited businesses in local categories</div>
+    </div>
+    <div class="stat-item">
+      <div class="big">8–12<span style="font-size:1.4rem">wk</span></div>
+      <div class="label">typical research phase for high-value purchases — exactly the window AI is now absorbing</div>
+    </div>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- THE SHIFT -->
+  <section class="section">
+    <p class="section-label">The Shift</p>
+    <h2>Not all search queries work the same way anymore</h2>
+    <p class="lead">The headline "68% of searches end without a click" bundles weather lookups and sports scores with the research questions that drive real purchases. The more useful frame is the type of query — because the two types have very different exposure to AI disruption.</p>
+
+    <div class="query-grid">
+      <div class="query-card">
+        <div class="type-badge">Type 1 — Find a Business</div>
+        <h3>Local pack still works here</h3>
+        <ul class="examples">
+          <li>kitchen designer near me</li>
+          <li>cabinet shop Harrisburg PA</li>
+          <li>custom cabinets phone number</li>
+        </ul>
+        <p class="verdict">The buyer knows what they want and needs a location or number. The local pack still appears in 90%+ of these queries. Clicks still happen. Your Google Business Profile does the work.</p>
+      </div>
+      <div class="query-card t2">
+        <div class="type-badge">Type 2 — Research &amp; Consideration</div>
+        <h3>This is where AI is absorbing the conversation</h3>
+        <ul class="examples">
+          <li>what to know before hiring a kitchen designer</li>
+          <li>semi-custom vs fully custom cabinets</li>
+          <li>custom kitchen remodel cost Harrisburg</li>
+        </ul>
+        <p class="verdict">The buyer is 8–12 weeks into a research phase. AI gives them a complete answer before they ever reach your site. If your content isn't the source AI cites, you're invisible in the conversation that matters most.</p>
+      </div>
+    </div>
+
+    <p style="font-size: 0.9rem; color: #888; line-height: 1.7;">For businesses that sell high-consideration products and services — custom work, specialty products, professional services — the pipeline is built almost entirely in Type 2. That's where GEO has the highest return.</p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- WHAT WE DO -->
+  <section class="section">
+    <p class="section-label">How We Work</p>
+    <h2>Eight principles that govern AI citation — applied to your business</h2>
+    <p class="lead">AI engines don't select content randomly. There are consistent, learnable patterns governing which pages get cited and which get passed over. We identify the highest-leverage gaps for each client and close them.</p>
+
+    <div class="principles-grid">
+      <div class="principle-card">
+        <div class="num">Principle 01 — Highest Priority</div>
+        <h3>Answer the question before explaining who you are</h3>
+        <p>AI engines read the first 60–100 words of any page it considers. If those words are about your story and values, it moves on. If they answer the question directly, you get cited. This single change affects every page on your site.</p>
+      </div>
+      <div class="principle-card">
+        <div class="num">Principle 02 — Highest Priority</div>
+        <h3>Replace vague claims with named, verifiable evidence</h3>
+        <p>"Exceptional craftsmanship" and "trusted quality" are invisible to AI. What gets cited: specific credentials, real numbers, named outcomes. We audit your existing content for what's citable — and what isn't.</p>
+      </div>
+      <div class="principle-card">
+        <div class="num">Principle 03 — Highest Priority</div>
+        <h3>Write key facts as self-contained sentences</h3>
+        <p>AI tools quote sentences, not paragraphs. A fact buried mid-paragraph won't be pulled. The same fact written to stand alone — with full context in one sentence — will. We rewrite for extractability without changing your voice.</p>
+      </div>
+      <div class="principle-card">
+        <div class="num">Principle 04 — Highest Priority</div>
+        <h3>Own one narrow topic completely before expanding</h3>
+        <p>AI citation is winner-take-most within narrow categories. We identify the specific territory where you have the strongest claim — and build it out completely before any competitor in your market does.</p>
+      </div>
+      <div class="principle-card">
+        <div class="num">Principle 05 — High Leverage</div>
+        <h3>Answer every question in the decision journey</h3>
+        <p>AI engines pull from many pages to construct one answer. Coverage across the full question tree — cost, timeline, process, what can go wrong — is what earns repeated citation. We map the tree and identify what's missing.</p>
+      </div>
+      <div class="principle-card">
+        <div class="num">Principle 06 — High Leverage</div>
+        <h3>Speak to each buyer stage separately</h3>
+        <p>Dreaming buyers, shopping buyers, and deciding buyers have completely different questions. Content that's tightly matched to one stage performs better with AI engines than content written for everyone simultaneously.</p>
+      </div>
+      <div class="principle-card">
+        <div class="num">Principle 07 — High Leverage</div>
+        <h3>Use comparisons and structured choices</h3>
+        <p>AI engines are optimized to extract structured data. Clear comparisons — materials, methods, options — are among the highest-cited content formats available. A well-organized comparison beats five paragraphs of prose for "which is better" queries.</p>
+      </div>
+      <div class="principle-card">
+        <div class="num">Principle 08 — Build Toward</div>
+        <h3>Answer what can go wrong</h3>
+        <p>Homeowners and buyers search for problems as much as solutions. The business that answers honestly owns that citation territory permanently — and earns trust with AI tools specifically designed to provide balanced, risk-aware answers.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CASE STUDY -->
+  <section class="section">
+    <p class="section-label">In Practice</p>
+    <h2>Work in progress: Mother Hubbard's Custom Cabinetry</h2>
+    <p class="lead">A real GEO engagement looks like this. We start with a strategy brief that applies all eight principles to the client's specific market and question territory. Then we show exactly what the changes look like on existing pages — before a single word is changed on the live site.</p>
+
+    <div class="case-study">
+      <div class="cs-label">Strategy Brief</div>
+      <h3>GEO Strategy Brief — Mother Hubbard's Custom Cabinetry, Mechanicsburg PA</h3>
+      <p>Mother Hubbard's is a high-end custom kitchen design-build firm in the Harrisburg–Mechanicsburg market. Their buyers are Type 2 research queries — they're in the 8–12 week consideration phase where AI is absorbing the conversation. We built a full GEO strategy brief applying all eight principles to their specific market position, competitive landscape, and content gaps.</p>
+      <p>The brief explains why the standard "68% zero-click" framing understates the real problem for high-consideration categories — and what MHCC can do about it before any competitor in their market does.</p>
+      <div class="cs-links">
+        <a class="cs-link primary" href="/work/mhcustom/geo-brief-r9w4k2.html" target="_blank">Read the full GEO brief →</a>
+      </div>
+    </div>
+
+    <div class="case-study">
+      <div class="cs-label">Annotated Page Mockup</div>
+      <h3>What a GEO upgrade looks like on an existing page</h3>
+      <p>This is the approach we take with every page: no redesign, no voice change, no total rewrite. The existing design, fonts, and visual identity stay intact. We add the minimum mechanical elements that create AI citation opportunities — a direct-answer summary paragraph, an anchored table of contents, and a structured "at a glance" fact block.</p>
+      <p>Each addition is annotated in-line with amber panels that explain why it helps, so clients can see the reasoning alongside the execution.</p>
+      <div class="cs-links">
+        <a class="cs-link primary" href="/work/mhcustom/camp-hill-kitchen-geo-m4p8z1.html" target="_blank">View the annotated page mockup →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="section">
+    <p class="section-label">What's Included</p>
+    <h2>A GEO engagement from Shiba &amp; Associates</h2>
+    <p class="lead">GEO is a companion to ongoing search and content strategy, not a replacement for it. We scope each engagement based on what your existing content does and doesn't do for AI citation.</p>
+
+    <div class="included-grid">
+      <div class="included-card">
+        <h3>GEO Audit &amp; Strategy Brief</h3>
+        <p>A custom brief applying all eight citation principles to your business, your specific market, and your buyers' question territory. Includes competitive gap analysis and a prioritized action plan.</p>
+      </div>
+      <div class="included-card">
+        <h3>Page-Level Mockups</h3>
+        <p>Before-and-after annotated mockups of key existing pages. We show exactly what each addition is, why it helps, and how it fits into your existing visual identity — nothing gets changed without your sign-off.</p>
+      </div>
+      <div class="included-card">
+        <h3>Question Tree Mapping</h3>
+        <p>A complete map of the buyer questions your content should answer across all three stages of the decision journey: dreaming, shopping, and deciding. We identify which questions have no good answer in your market right now.</p>
+      </div>
+      <div class="included-card">
+        <h3>Content Execution</h3>
+        <p>We write the additions, rewrites, and new pages. Structured for AI citation, written in your voice, consistent with your existing design. Nothing gets published that you haven't reviewed.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- CTA -->
+  <section class="cta-block">
+    <div class="divider"></div>
+    <h2>Get in Touch</h2>
+    <p class="contact-name">David Shiba</p>
+    <p>If you're curious whether your business has a GEO opportunity — or if you've already seen AI Overviews taking over your category queries — we're worth talking to. Reach out directly.</p>
+    <div class="contact-links">
+      <a href="mailto:shiba@2.0heads.com">shiba@2.0heads.com</a>
+      <a href="tel:+13477662034">347-766-2034</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Shiba &amp; Associates / 2.0Heads &nbsp;·&nbsp; 2.0heads.com
+    &nbsp;·&nbsp; <a href="/privacy-policy.html">Privacy Policy</a>
+    &nbsp;·&nbsp; <a href="/terms-of-service.html">Terms of Service</a>
+    &nbsp;·&nbsp; <a href="/google-ads-services.html">Google Ads Services</a>
+    &nbsp;·&nbsp; <a href="/geo.html">GEO</a>
+  </footer>
+
+</body>
+</html>
