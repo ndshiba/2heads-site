@@ -242,6 +242,99 @@
     padding: 2px 0;
   }
 
+  /* ── Resource cards ── */
+  .resource-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+  }
+  @media (max-width: 640px) {
+    .resource-grid { grid-template-columns: 1fr; }
+  }
+  .resource-card {
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid var(--rule);
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background: var(--white);
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .resource-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.09);
+    transform: translateY(-2px);
+  }
+  .resource-thumb {
+    width: 100%;
+    position: relative;
+    background: #111;
+    overflow: hidden;
+  }
+  .video-thumb { aspect-ratio: 16/9; }
+  .video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.88;
+  }
+  .play-btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    pointer-events: none;
+  }
+  .article-thumb {
+    aspect-ratio: 16/9;
+    background: var(--accent-soft);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .article-icon { font-size: 40px; }
+  .article-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+  }
+  .resource-body {
+    padding: 18px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .resource-source {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--ink-muted);
+  }
+  .resource-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+  }
+  .resource-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin: 0;
+  }
+
   /* ── Closing ── */
   .closing {
     margin-top: 64px;
@@ -455,6 +548,45 @@
     <p>Marketing has always had a lot of opinions and not enough data. Our process doesn't eliminate judgment, but it replaces assumptions with evidence wherever possible.</p>
     <p>When we tell you a page needs work, we can show you the traffic pattern that says so. When we suggest a keyword opportunity, we can show you the search volume, the current ranking, and the competitor gap. When we recommend a change to your checkout or your ads, it's tied to something specific we saw in your numbers.</p>
     <p>You don't have to take our word for it. The data is there.</p>
+  </div>
+
+  <!-- Further reading -->
+  <div class="section">
+    <div class="section-label">Worth your time</div>
+    <h2>If you want to go deeper.</h2>
+    <p>These two resources cover the same shift from different angles. One is a short read, one is a video. Both are worth 10 minutes.</p>
+
+    <div class="resource-grid">
+
+      <!-- YouTube -->
+      <a class="resource-card" href="https://www.youtube.com/watch?v=iKLNxU9RO_E" target="_blank" rel="noopener">
+        <div class="resource-thumb video-thumb">
+          <img src="https://img.youtube.com/vi/iKLNxU9RO_E/maxresdefault.jpg"
+               alt="5 AI CEOs Said the Same Thing About 2026"
+               onerror="this.src='https://img.youtube.com/vi/iKLNxU9RO_E/hqdefault.jpg'">
+          <div class="play-btn">&#9654;</div>
+        </div>
+        <div class="resource-body">
+          <div class="resource-source">YouTube &middot; Neil Patel</div>
+          <div class="resource-title">5 AI CEOs Said the Same Thing About 2026 (Marketing Changes Forever)</div>
+          <div class="resource-desc">Sam Altman, Jensen Huang, and three other AI leaders all pointed to the same shift: AI works when it's integrated with real business data and agentic systems. Most marketers missed it.</div>
+        </div>
+      </a>
+
+      <!-- Article -->
+      <a class="resource-card" href="https://www.iviewlabs.com/post/how-businesses-are-using-ai-to-grow-faster-in-2026" target="_blank" rel="noopener">
+        <div class="resource-thumb article-thumb">
+          <div class="article-icon">&#128196;</div>
+          <div class="article-label">Article</div>
+        </div>
+        <div class="resource-body">
+          <div class="resource-source">iView Labs</div>
+          <div class="resource-title">How Businesses Are Using AI to Grow Faster in 2026</div>
+          <div class="resource-desc">A practical breakdown of how companies are actually deploying AI for growth, with the pattern that separates effective use from expensive noise: starting with your own data.</div>
+        </div>
+      </a>
+
+    </div>
   </div>
 
   <!-- Closing -->
