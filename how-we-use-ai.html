@@ -12,10 +12,10 @@
     --ink-soft: #555;
     --ink-muted: #888;
     --rule: #e4e2dc;
-    --bg: #faf9f6;
+    --bg: #ffffff;
     --white: #ffffff;
-    --accent: #2c5f8a;
-    --accent-soft: #e8f0f8;
+    --accent: #c8a96e;
+    --accent-soft: rgba(200, 169, 110, 0.1);
     --green: #1f7a46;
     --green-soft: #eaf5ef;
     --amber: #b45309;
@@ -28,6 +28,44 @@
     color: var(--ink);
     line-height: 1.7;
   }
+
+  /* ── Nav ── */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 2.5rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .logo {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .nav-link {
+    font-size: 0.85rem;
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: var(--accent); }
+  .nav-link.active { color: var(--accent); }
+  .nav-cta {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.45rem 1.1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .nav-cta:hover { background: var(--accent); color: #fff; }
 
   /* ── Header ── */
   header {
@@ -162,7 +200,7 @@
   .card-without h3 { color: var(--ink-muted); }
   .card-without li::before { content: '○'; color: #ccc; }
 
-  .card-with { background: var(--accent-soft); border-color: #c0d4ea; }
+  .card-with { background: var(--accent-soft); border-color: rgba(200, 169, 110, 0.35); }
   .card-with h3 { color: var(--accent); }
   .card-with li::before { content: '●'; color: var(--accent); }
   .card-with li { color: var(--ink); }
@@ -362,16 +400,18 @@
 
   /* ── Footer ── */
   footer {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 24px 40px 40px;
-    font-size: 12px;
-    color: var(--ink-muted);
+    border-top: 1px solid var(--rule);
+    padding: 1.2rem 2.5rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: #999;
+    gap: 0.35rem;
     flex-wrap: wrap;
-    gap: 8px;
   }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { opacity: 0.75; }
 
   @media (max-width: 640px) {
     header { padding: 40px 24px 36px; }
@@ -383,13 +423,13 @@
 </head>
 <body>
 
-<nav style="display:flex;align-items:center;justify-content:space-between;padding:1.1rem 2.5rem;background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,0.08);">
-  <a href="/" style="font-size:1.05rem;font-weight:600;letter-spacing:0.04em;color:#f9f9f9;text-decoration:none;">Shiba <span style="color:#c8a96e;">&amp;</span> Associates</a>
-  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-    <a href="/google-ads-services.html" style="font-size:0.85rem;color:#aaa;text-decoration:none;">Google Ads</a>
-    <a href="/geo.html" style="font-size:0.85rem;color:#aaa;text-decoration:none;">GEO</a>
-    <a href="/how-we-use-ai.html" style="font-size:0.85rem;color:#c8a96e;text-decoration:none;">How We Use AI</a>
-    <a href="mailto:shiba@2.0heads.com" style="font-size:0.85rem;font-weight:500;color:#c8a96e;border:1px solid #c8a96e;padding:0.45rem 1.1rem;border-radius:4px;text-decoration:none;">Get in Touch</a>
+<nav>
+  <a class="logo" href="/">Shiba <span>&amp;</span> Associates</a>
+  <div class="nav-links">
+    <a class="nav-link" href="/google-ads-services.html">Google Ads</a>
+    <a class="nav-link" href="/geo.html">GEO</a>
+    <a class="nav-link active" href="/how-we-use-ai.html">How We Use AI</a>
+    <a class="nav-cta" href="mailto:shiba@2.0heads.com">Get in Touch</a>
   </div>
 </nav>
 
@@ -607,10 +647,12 @@
 
 </div>
 
-<hr>
 <footer>
-  <span>Shiba &amp; Associates — Client Resource</span>
-  <span>2026</span>
+  &copy; 2026 Shiba &amp; Associates / 2.0Heads &nbsp;&middot;&nbsp; 2.0heads.com
+  &nbsp;&middot;&nbsp; <a href="/privacy-policy.html">Privacy Policy</a>
+  &nbsp;&middot;&nbsp; <a href="/terms-of-service.html">Terms of Service</a>
+  &nbsp;&middot;&nbsp; <a href="/google-ads-services.html">Google Ads Services</a>
+  &nbsp;&middot;&nbsp; <a href="/geo.html">GEO</a>
 </footer>
 
 </body>
