@@ -150,7 +150,7 @@
 
     /* ── Services ── */
     .services-section {
-      max-width: 1060px;
+      max-width: 1240px;
       margin: 0 auto;
       padding: 5rem 2rem;
       width: 100%;
@@ -182,18 +182,17 @@
 
     .service-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.4rem;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
     }
 
     .service-card {
       border: 1px solid var(--border);
       border-radius: 12px;
       background: var(--panel);
-      padding: 2rem 1.8rem;
+      padding: 1.6rem 1.5rem;
       display: flex;
       flex-direction: column;
-      gap: 0;
       transition: border-color 0.2s;
     }
 
@@ -202,54 +201,56 @@
     }
 
     .service-card .icon {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
       line-height: 1;
     }
 
     .service-card h3 {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       letter-spacing: -0.01em;
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.6rem;
       color: var(--white);
+      line-height: 1.3;
     }
 
     .service-card p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #aaa;
-      line-height: 1.7;
+      line-height: 1.65;
       flex: 1;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
     }
 
     .service-card .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 1.5rem;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
     }
 
     .tag {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 500;
-      letter-spacing: 0.06em;
-      padding: 0.28rem 0.7rem;
+      letter-spacing: 0.05em;
+      padding: 0.22rem 0.6rem;
       border: 1px solid var(--border);
       border-radius: 100px;
       color: #999;
     }
 
     .service-card .learn-more {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 500;
       color: var(--accent);
       text-decoration: none;
       border-top: 1px solid var(--border);
-      padding-top: 1rem;
+      padding-top: 0.9rem;
+      margin-top: auto;
       display: flex;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.3rem;
     }
 
     .service-card .learn-more:hover { opacity: 0.75; }
@@ -376,9 +377,14 @@
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { opacity: 0.75; }
 
+    @media (max-width: 1000px) {
+      .service-cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
     @media (max-width: 760px) {
       nav { padding: 1.1rem 1.2rem; }
       .nav-link { display: none; }
+      .service-cards { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
   </style>
@@ -422,13 +428,11 @@
       <div class="service-card">
         <div class="icon">📊</div>
         <h3>SMB Digital Marketing &amp; Analytics</h3>
-        <p>We connect your marketing channels to your actual business outcomes. GA4, Google Search Console, Semrush, and ad platform data are pulled together into clear reporting that shows what's driving revenue — and what isn't.</p>
+        <p>GA4, GSC, Semrush, and ad data connected into clear reporting. We show what's driving revenue — and what isn't.</p>
         <div class="tags">
           <span class="tag">GA4 &amp; GSC</span>
           <span class="tag">Semrush</span>
           <span class="tag">Attribution</span>
-          <span class="tag">SEO Strategy</span>
-          <span class="tag">Monthly Reporting</span>
         </div>
         <a class="learn-more" href="mailto:shiba@2.0heads.com">Talk to us about analytics →</a>
       </div>
@@ -437,11 +441,9 @@
       <div class="service-card">
         <div class="icon">🎯</div>
         <h3>Google Ads Services &amp; Management</h3>
-        <p>Hands-on management of Search, Shopping, and Performance Max campaigns. We handle keyword strategy, ad copy, bid management, search term review, and budget optimization — and we report back in plain language.</p>
+        <p>Search, Shopping, and Performance Max campaign management. Keyword strategy, bid management, and search term review — reported back in plain language.</p>
         <div class="tags">
-          <span class="tag">Search Campaigns</span>
-          <span class="tag">Shopping / PMax</span>
-          <span class="tag">Negative Keywords</span>
+          <span class="tag">Search &amp; Shopping</span>
           <span class="tag">Bid Management</span>
           <span class="tag">ROAS Reporting</span>
         </div>
@@ -452,12 +454,10 @@
       <div class="service-card">
         <div class="icon">⚙️</div>
         <h3>SMB AI Process Implementation &amp; Improvement</h3>
-        <p>We identify where AI creates real leverage in your business — and build it in. From GEO content strategy that gets your business cited by AI-powered search tools, to internal workflow automation that replaces hours of manual work each week.</p>
+        <p>We identify where AI creates real leverage in your business and build it in — from content workflows to internal automation that replaces hours of manual work weekly.</p>
         <div class="tags">
-          <span class="tag">GEO / AI Search</span>
           <span class="tag">Workflow Automation</span>
-          <span class="tag">Content Strategy</span>
-          <span class="tag">Process Improvement</span>
+          <span class="tag">Content Workflows</span>
           <span class="tag">AI Tooling</span>
         </div>
         <a class="learn-more" href="/how-we-use-ai.html">Read how we use AI →</a>
@@ -467,13 +467,11 @@
       <div class="service-card">
         <div class="icon">🔍</div>
         <h3>Our GEO Approach</h3>
-        <p>Generative Engine Optimization — making your business the answer AI-powered search tools reach for. We apply a structured 8-principle framework to help SMBs get cited when buyers are in the research and consideration phase.</p>
+        <p>Making your business the answer AI-powered search tools cite. An 8-principle framework applied to your specific market before a competitor claims the territory.</p>
         <div class="tags">
           <span class="tag">AI Overviews</span>
           <span class="tag">Citation Strategy</span>
           <span class="tag">Content Structure</span>
-          <span class="tag">Question Mapping</span>
-          <span class="tag">Page Mockups</span>
         </div>
         <a class="learn-more" href="/geo.html">See our GEO approach →</a>
       </div>
