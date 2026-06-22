@@ -46,14 +46,30 @@
 
     .logo span { color: var(--accent); }
 
-    nav a.back {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .nav-link {
+      font-size: 0.85rem;
+      color: #aaa;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--accent); }
+    .nav-cta {
       font-size: 0.85rem;
       font-weight: 500;
       color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.45rem 1.1rem;
+      border-radius: 4px;
       text-decoration: none;
+      transition: background 0.2s, color 0.2s;
     }
-
-    nav a.back:hover,
+    .nav-cta:hover { background: var(--accent); color: var(--black); }
     a:hover { opacity: 0.75; }
 
     .content {
@@ -184,12 +200,12 @@
 <body>
 
   <nav>
-    <a class="logo" href="/"><span>2.0</span>Heads</a>
-    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
-      <a style="font-size:0.85rem;color:#aaa;text-decoration:none;" href="/">Home</a>
-      <a style="font-size:0.85rem;color:#aaa;text-decoration:none;" href="/geo.html">GEO</a>
-      <a style="font-size:0.85rem;color:#aaa;text-decoration:none;" href="/how-we-use-ai.html">How We Use AI</a>
-      <a style="font-size:0.85rem;font-weight:500;color:#c8a96e;border:1px solid #c8a96e;padding:0.45rem 1.1rem;border-radius:4px;text-decoration:none;" href="mailto:shiba@2.0heads.com">Get in Touch</a>
+    <a class="logo" href="/">Shiba <span>&amp;</span> Associates</a>
+    <div class="nav-links">
+      <a class="nav-link" href="/google-ads-services.html" style="color:var(--accent);">Google Ads</a>
+      <a class="nav-link" href="/geo.html">GEO</a>
+      <a class="nav-link" href="/how-we-use-ai.html">How We Use AI</a>
+      <a class="nav-cta" href="mailto:shiba@2.0heads.com">Get in Touch</a>
     </div>
   </nav>
 
