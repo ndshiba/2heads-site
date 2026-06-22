@@ -9,20 +9,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black: #0d0d0d;
-      --white: #f9f9f9;
+      --ink: #1a1a1a;
+      --bg: #ffffff;
       --accent: #c8a96e;
-      --gray: #888;
-      --border: rgba(255,255,255,0.08);
-      --panel: rgba(255,255,255,0.02);
+      --muted: #666;
+      --border: rgba(0,0,0,0.1);
+      --panel: rgba(0,0,0,0.025);
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background:
-        radial-gradient(circle at top, rgba(200, 169, 110, 0.14), transparent 30%),
-        var(--black);
-      color: var(--white);
+      background: var(--bg);
+      color: var(--ink);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -43,7 +41,7 @@
       font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: 0.04em;
-      color: var(--white);
+      color: var(--ink);
       text-decoration: none;
     }
     .logo span { color: var(--accent); }
@@ -61,7 +59,7 @@
       transition: color 0.2s, background 0.2s, border-color 0.2s;
     }
 
-    .nav-link { color: #aaa; }
+    .nav-link { color: #777; }
     .nav-link:hover { color: var(--accent); opacity: 1; }
     .nav-link.active { color: var(--accent); }
 
@@ -72,7 +70,7 @@
       padding: 0.45rem 1.1rem;
       border-radius: 4px;
     }
-    .cta:hover { background: var(--accent); color: var(--black); opacity: 1; }
+    .cta:hover { background: var(--accent); color: #fff; opacity: 1; }
 
     /* ── Layout ── */
     .page-wrap {
@@ -110,7 +108,7 @@
 
     .hero .subtitle {
       font-size: 1.05rem;
-      color: #bababa;
+      color: #555;
       max-width: 700px;
       line-height: 1.75;
       margin: 0 auto 2rem;
@@ -123,7 +121,7 @@
       padding: 0.7rem 1.4rem;
       border-radius: 4px;
       background: var(--accent);
-      color: var(--black);
+      color: #fff;
       border: 1px solid var(--accent);
       text-decoration: none;
     }
@@ -164,7 +162,7 @@
 
     .stat-item .label {
       font-size: 0.82rem;
-      color: #aaa;
+      color: var(--muted);
       line-height: 1.55;
     }
 
@@ -185,7 +183,7 @@
 
     .section .lead {
       font-size: 1rem;
-      color: #b8b8b8;
+      color: #555;
       max-width: 760px;
       line-height: 1.75;
       margin-bottom: 2rem;
@@ -207,7 +205,7 @@
     }
 
     .query-card.t2 {
-      border-color: rgba(200, 169, 110, 0.3);
+      border-color: rgba(200, 169, 110, 0.35);
       background: rgba(200, 169, 110, 0.04);
     }
 
@@ -218,7 +216,7 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--accent);
-      border: 1px solid rgba(200, 169, 110, 0.4);
+      border: 1px solid rgba(200, 169, 110, 0.45);
       padding: 0.2rem 0.6rem;
       border-radius: 3px;
       margin-bottom: 0.8rem;
@@ -237,7 +235,7 @@
 
     .query-card .examples li {
       font-size: 0.85rem;
-      color: #aaa;
+      color: var(--muted);
       padding: 0.2rem 0;
     }
 
@@ -254,14 +252,14 @@
 
     .query-card .verdict {
       font-size: 0.85rem;
-      color: #bbb;
+      color: #555;
       border-top: 1px solid var(--border);
       padding-top: 0.75rem;
       line-height: 1.6;
     }
 
     .query-card.t2 .verdict {
-      color: #d4b882;
+      color: #8a6a28;
     }
 
     /* ── Principles ── */
@@ -296,13 +294,13 @@
 
     .principle-card p {
       font-size: 0.85rem;
-      color: #aaa;
+      color: var(--muted);
       line-height: 1.65;
     }
 
     /* ── Case study ── */
     .case-study {
-      border: 1px solid rgba(200, 169, 110, 0.25);
+      border: 1px solid rgba(200, 169, 110, 0.3);
       border-radius: 12px;
       background: rgba(200, 169, 110, 0.04);
       padding: 2rem 2.2rem;
@@ -326,7 +324,7 @@
 
     .case-study p {
       font-size: 0.9rem;
-      color: #b8b8b8;
+      color: #555;
       line-height: 1.7;
       margin-bottom: 1rem;
     }
@@ -346,7 +344,7 @@
       padding: 0.5rem 1.1rem;
       border-radius: 4px;
       text-decoration: none;
-      border: 1px solid rgba(200, 169, 110, 0.45);
+      border: 1px solid rgba(200, 169, 110, 0.5);
       color: var(--accent);
       transition: background 0.2s;
     }
@@ -355,7 +353,7 @@
 
     .cs-link.primary {
       background: var(--accent);
-      color: var(--black);
+      color: #fff;
       border-color: var(--accent);
     }
 
@@ -383,7 +381,7 @@
 
     .included-card p {
       font-size: 0.85rem;
-      color: #aaa;
+      color: var(--muted);
       line-height: 1.65;
     }
 
@@ -398,7 +396,7 @@
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--gray);
+      color: var(--muted);
       margin-bottom: 1rem;
     }
 
@@ -410,7 +408,7 @@
 
     .cta-block p {
       font-size: 0.95rem;
-      color: #b8b8b8;
+      color: #555;
       max-width: 640px;
       margin: 0 auto 1.2rem;
       line-height: 1.7;
@@ -423,9 +421,7 @@
       flex-wrap: wrap;
     }
 
-    .contact-links a {
-      color: var(--accent);
-    }
+    .contact-links a { color: var(--accent); }
 
     .divider {
       width: 48px;
@@ -442,7 +438,7 @@
       align-items: center;
       justify-content: center;
       font-size: 0.75rem;
-      color: #666;
+      color: #999;
       gap: 0.35rem;
       flex-wrap: wrap;
     }
@@ -513,9 +509,9 @@
         <div class="type-badge">Type 1 — Find a Business</div>
         <h3>Local pack still works here</h3>
         <ul class="examples">
-          <li>kitchen designer near me</li>
-          <li>cabinet shop Harrisburg PA</li>
-          <li>custom cabinets phone number</li>
+          <li>plumber near me</li>
+          <li>kitchen designer Chicago IL</li>
+          <li>hvac company phone number</li>
         </ul>
         <p class="verdict">The buyer knows what they want and needs a location or number. The local pack still appears in 90%+ of these queries. Clicks still happen. Your Google Business Profile does the work.</p>
       </div>
@@ -523,15 +519,15 @@
         <div class="type-badge">Type 2 — Research &amp; Consideration</div>
         <h3>This is where AI is absorbing the conversation</h3>
         <ul class="examples">
-          <li>what to know before hiring a kitchen designer</li>
+          <li>what to know before hiring a contractor</li>
           <li>semi-custom vs fully custom cabinets</li>
-          <li>custom kitchen remodel cost Harrisburg</li>
+          <li>how long does a kitchen remodel take</li>
         </ul>
         <p class="verdict">The buyer is 8–12 weeks into a research phase. AI gives them a complete answer before they ever reach your site. If your content isn't the source AI cites, you're invisible in the conversation that matters most.</p>
       </div>
     </div>
 
-    <p style="font-size: 0.9rem; color: #888; line-height: 1.7;">For businesses that sell high-consideration products and services — custom work, specialty products, professional services — the pipeline is built almost entirely in Type 2. That's where GEO has the highest return.</p>
+    <p style="font-size: 0.9rem; color: #666; line-height: 1.7;">For businesses that sell high-consideration products and services — custom work, specialty products, professional services — the pipeline is built almost entirely in Type 2. That's where GEO has the highest return.</p>
   </section>
 
   <div class="section-divider"></div>
@@ -588,29 +584,29 @@
 
   <div class="section-divider"></div>
 
-  <!-- CASE STUDY -->
+  <!-- IN PRACTICE -->
   <section class="section">
     <p class="section-label">In Practice</p>
-    <h2>Work in progress: Mother Hubbard's Custom Cabinetry</h2>
-    <p class="lead">A real GEO engagement looks like this. We start with a strategy brief that applies all eight principles to the client's specific market and question territory. Then we show exactly what the changes look like on existing pages — before a single word is changed on the live site.</p>
+    <h2>What a real GEO engagement produces</h2>
+    <p class="lead">Every engagement starts with a strategy brief and ends with annotated page mockups — showing exactly what changes and why, before anything goes live on the client's site.</p>
 
     <div class="case-study">
       <div class="cs-label">Strategy Brief</div>
-      <h3>GEO Strategy Brief — Mother Hubbard's Custom Cabinetry, Mechanicsburg PA</h3>
-      <p>Mother Hubbard's is a high-end custom kitchen design-build firm in the Harrisburg–Mechanicsburg market. Their buyers are Type 2 research queries — they're in the 8–12 week consideration phase where AI is absorbing the conversation. We built a full GEO strategy brief applying all eight principles to their specific market position, competitive landscape, and content gaps.</p>
-      <p>The brief explains why the standard "68% zero-click" framing understates the real problem for high-consideration categories — and what MHCC can do about it before any competitor in their market does.</p>
+      <h3>Eight principles applied to one specific market</h3>
+      <p>We build a custom strategy brief for each engagement — applying all eight citation principles to the client's business, market position, and buyer question territory. The brief includes a competitive gap analysis and a prioritized action plan ordered by expected impact.</p>
+      <p>For a recent home services client, this meant identifying exactly which Type 2 research queries their buyers were asking — and mapping which competitors were already positioned to answer them in AI search.</p>
       <div class="cs-links">
-        <a class="cs-link primary" href="/work/mhcustom/geo-brief-r9w4k2.html" target="_blank">Read the full GEO brief →</a>
+        <a class="cs-link primary" href="/work/mhcustom/geo-brief-r9w4k2.html" target="_blank">View sample brief →</a>
       </div>
     </div>
 
     <div class="case-study">
       <div class="cs-label">Annotated Page Mockup</div>
-      <h3>What a GEO upgrade looks like on an existing page</h3>
-      <p>This is the approach we take with every page: no redesign, no voice change, no total rewrite. The existing design, fonts, and visual identity stay intact. We add the minimum mechanical elements that create AI citation opportunities — a direct-answer summary paragraph, an anchored table of contents, and a structured "at a glance" fact block.</p>
-      <p>Each addition is annotated in-line with amber panels that explain why it helps, so clients can see the reasoning alongside the execution.</p>
+      <h3>Exactly what changes — and why</h3>
+      <p>Before a single word changes on a live page, we produce annotated mockups showing each proposed addition in context. The existing design, fonts, and visual identity stay intact. We add the minimum mechanical elements that create AI citation opportunities: a direct-answer summary paragraph, an anchored table of contents, and a structured "at a glance" fact block.</p>
+      <p>Each addition is annotated in-line with amber panels explaining the reasoning — so clients see the logic alongside the execution, and can approve with confidence.</p>
       <div class="cs-links">
-        <a class="cs-link primary" href="/work/mhcustom/camp-hill-kitchen-geo-m4p8z1.html" target="_blank">View the annotated page mockup →</a>
+        <a class="cs-link primary" href="/work/mhcustom/camp-hill-kitchen-geo-m4p8z1.html" target="_blank">View sample mockup →</a>
       </div>
     </div>
   </section>
