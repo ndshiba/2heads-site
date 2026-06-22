@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shiba &amp; Associates — Digital Marketing, Google Ads &amp; Sales Optimization</title>
-  <meta name="description" content="Shiba &amp; Associates is a client-services marketing agency providing Google Ads management, SEO, reporting, and sales optimization for small and mid-size businesses." />
+  <title>Shiba &amp; Associates — SMB Digital Marketing, Google Ads &amp; AI Implementation</title>
+  <meta name="description" content="Shiba &amp; Associates is a digital marketing agency serving small and mid-size businesses. We provide Google Ads management, marketing analytics, and practical AI process implementation." />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -28,6 +28,10 @@
       flex-direction: column;
     }
 
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { opacity: 0.75; }
+
+    /* ── Nav ── */
     nav {
       display: flex;
       align-items: center;
@@ -43,7 +47,6 @@
       color: var(--white);
       text-decoration: none;
     }
-
     .logo span { color: var(--accent); }
 
     .nav-links {
@@ -53,18 +56,14 @@
       flex-wrap: wrap;
     }
 
-    .nav-link,
-    .cta {
+    .nav-link, .cta {
       font-size: 0.85rem;
       text-decoration: none;
-      transition: color 0.2s, background 0.2s, border-color 0.2s;
+      transition: color 0.2s, background 0.2s;
     }
 
-    .nav-link {
-      color: #aaa;
-    }
-
-    .nav-link:hover { color: var(--accent); }
+    .nav-link { color: #aaa; }
+    .nav-link:hover { color: var(--accent); opacity: 1; }
 
     .cta {
       font-weight: 500;
@@ -73,19 +72,18 @@
       padding: 0.45rem 1.1rem;
       border-radius: 4px;
     }
+    .cta:hover { background: var(--accent); color: var(--black); opacity: 1; }
 
-    .cta:hover { background: var(--accent); color: var(--black); }
-
+    /* ── Hero ── */
     .hero {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 5rem 2rem 2.5rem;
+      padding: 5.5rem 2rem 3.5rem;
     }
 
-    .eyebrow,
-    .section-label {
+    .eyebrow {
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.18em;
@@ -95,7 +93,7 @@
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
       font-weight: 700;
       line-height: 1.1;
       letter-spacing: -0.03em;
@@ -108,9 +106,9 @@
     .subtitle {
       font-size: 1.05rem;
       color: #bababa;
-      max-width: 720px;
+      max-width: 700px;
       line-height: 1.75;
-      margin-bottom: 2rem;
+      margin-bottom: 2.2rem;
     }
 
     .hero-actions {
@@ -118,176 +116,213 @@
       gap: 1rem;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 2.6rem;
     }
 
-    .hero-actions a,
-    .ads-learn-more {
+    .btn-primary, .btn-secondary {
       display: inline-block;
       font-size: 0.9rem;
       font-weight: 500;
       text-decoration: none;
       border-radius: 4px;
-      padding: 0.7rem 1.2rem;
-      transition: color 0.2s, background 0.2s, border-color 0.2s;
+      padding: 0.7rem 1.3rem;
+      transition: background 0.2s, color 0.2s;
     }
 
-    .hero-actions .primary {
+    .btn-primary {
       background: var(--accent);
       color: var(--black);
       border: 1px solid var(--accent);
     }
+    .btn-primary:hover { opacity: 0.85; }
 
-    .hero-actions .secondary,
-    .ads-learn-more {
+    .btn-secondary {
       color: var(--accent);
       border: 1px solid rgba(200, 169, 110, 0.45);
     }
+    .btn-secondary:hover { background: rgba(200, 169, 110, 0.1); opacity: 1; }
 
-    .hero-actions .secondary:hover,
-    .ads-learn-more:hover {
-      background: var(--accent);
-      color: var(--black);
-    }
-
-    .services {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 1rem;
-    }
-
-    .service-pill {
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      padding: 0.55rem 1.1rem;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      color: #ccc;
-    }
-
-    .service-pill.highlight {
-      border-color: rgba(200, 169, 110, 0.4);
-      color: var(--accent);
-    }
-
-    .proof-strip,
-    .model-grid,
-    .engagement-grid,
-    .ads-grid {
-      display: grid;
-      gap: 1.2rem;
-    }
-
-    .proof-strip {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      max-width: 1080px;
-      width: 100%;
-      margin: 0 auto 4rem;
-      padding: 0 2rem;
-    }
-
-    .proof-item,
-    .ads-card,
-    .model-card,
-    .engagement-step {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--panel);
-    }
-
-    .proof-item {
-      padding: 1rem 1.1rem;
-    }
-
-    .proof-item strong {
-      display: block;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    .proof-item span,
-    .intro,
-    .lead,
-    .ads-card p,
-    .model-card p,
-    .engagement-step p,
-    .contact-copy {
-      color: #b8b8b8;
-      line-height: 1.72;
-    }
-
+    /* ── Divider ── */
     .section-divider {
       width: 100%;
       height: 1px;
       background: var(--border);
     }
 
-    .google-ads-section,
-    .business-model,
-    .engagements {
-      max-width: 1040px;
+    /* ── Services ── */
+    .services-section {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      width: 100%;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .services-section > h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.9rem;
+    }
+
+    .services-section > .lead {
+      font-size: 1rem;
+      color: #b8b8b8;
+      max-width: 720px;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--panel);
+      padding: 2rem 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: border-color 0.2s;
+    }
+
+    .service-card:hover {
+      border-color: rgba(200, 169, 110, 0.3);
+    }
+
+    .service-card .icon {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.7rem;
+      color: var(--white);
+    }
+
+    .service-card p {
+      font-size: 0.9rem;
+      color: #aaa;
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 1.4rem;
+    }
+
+    .service-card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.28rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: #999;
+    }
+
+    .service-card .learn-more {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .service-card .learn-more:hover { opacity: 0.75; }
+
+    /* ── About strip ── */
+    .about-section {
+      max-width: 1060px;
       margin: 0 auto;
       padding: 4rem 2rem;
       width: 100%;
     }
 
-    .google-ads-section h2,
-    .business-model h2,
-    .engagements h2 {
-      font-size: 1.9rem;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-copy h2 {
+      font-size: 1.7rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
     }
 
-    .intro,
-    .lead {
-      font-size: 1rem;
-      max-width: 760px;
-      margin-bottom: 2rem;
+    .about-copy p {
+      font-size: 0.95rem;
+      color: #b8b8b8;
+      line-height: 1.75;
+      margin-bottom: 0.9rem;
     }
 
-    .ads-grid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      margin-bottom: 2rem;
+    .about-copy a {
+      color: var(--accent);
     }
 
-    .ads-card,
-    .model-card,
-    .engagement-step {
-      padding: 1.4rem;
+    .about-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
 
-    .ads-card h3,
-    .model-card h3,
-    .engagement-step h3 {
-      font-size: 1rem;
-      margin-bottom: 0.55rem;
+    .fact-item {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 1rem 1.2rem;
     }
 
-    .model-grid {
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-    .engagement-grid {
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    }
-
-    .engagement-step .step {
+    .fact-item strong {
+      display: block;
       font-size: 0.75rem;
-      letter-spacing: 0.16em;
+      font-weight: 600;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.35rem;
     }
 
-    .divider {
+    .fact-item span {
+      font-size: 0.85rem;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    /* ── CTA ── */
+    .contact-section {
+      text-align: center;
+      padding: 3rem 2rem 5rem;
+    }
+
+    .divider-line {
       width: 48px;
       height: 1px;
       background: var(--accent);
@@ -295,29 +330,27 @@
       opacity: 0.5;
     }
 
-    .contact {
-      text-align: center;
-      padding: 3rem 2rem 5rem;
-    }
-
-    .contact h2 {
-      font-size: 1rem;
+    .contact-section h2 {
+      font-size: 0.85rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gray);
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
     }
 
-    .contact-name {
+    .contact-section .name {
       font-size: 1.35rem;
       font-weight: 600;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.7rem;
     }
 
-    .contact-copy {
-      max-width: 640px;
-      margin: 0 auto;
+    .contact-section p {
+      font-size: 0.95rem;
+      color: #b8b8b8;
+      max-width: 580px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.7;
     }
 
     .contact-links {
@@ -325,20 +358,9 @@
       gap: 2rem;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 1rem;
     }
 
-    .contact-links a,
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-links a:hover,
-    footer a:hover {
-      opacity: 0.75;
-    }
-
+    /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 1.2rem 2.5rem;
@@ -346,29 +368,18 @@
       align-items: center;
       justify-content: center;
       font-size: 0.75rem;
-      color: #666;
+      color: #555;
       gap: 0.35rem;
       flex-wrap: wrap;
     }
 
-    @media (max-width: 720px) {
-      nav {
-        padding: 1.1rem 1.2rem;
-      }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { opacity: 0.75; }
 
-      .nav-link {
-        display: none;
-      }
-
-      .hero,
-      .proof-strip,
-      .google-ads-section,
-      .business-model,
-      .engagements,
-      .contact {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-      }
+    @media (max-width: 760px) {
+      nav { padding: 1.1rem 1.2rem; }
+      .nav-link { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
   </style>
 </head>
@@ -377,143 +388,125 @@
   <nav>
     <a class="logo" href="/"><span>2.0</span>Heads</a>
     <div class="nav-links">
-      <a class="nav-link" href="#operating-model">Operating Model</a>
       <a class="nav-link" href="/google-ads-services.html">Google Ads</a>
       <a class="nav-link" href="/geo.html">GEO</a>
+      <a class="nav-link" href="/how-we-use-ai.html">How We Use AI</a>
       <a class="cta" href="mailto:shiba@2.0heads.com">Get in Touch</a>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section class="hero">
     <p class="eyebrow">Shiba &amp; Associates</p>
-    <h1>Managed <em>Google Ads</em> and practical growth work for businesses that need an operator, not another dashboard</h1>
+    <h1>Digital marketing that runs on <em>real data</em> — not assumptions</h1>
     <p class="subtitle">
-      2.0Heads is the public website for Shiba &amp; Associates, an independent client-services agency. We manage Google Ads campaigns, reporting, search strategy, and sales optimization for a focused portfolio of small and mid-size businesses.
+      We help small and mid-size businesses grow through hands-on Google Ads management, marketing analytics, and practical AI implementation. Every engagement is direct, account-specific, and handled by people who know your numbers.
     </p>
     <div class="hero-actions">
-      <a class="primary" href="mailto:shiba@2.0heads.com">Email David Shiba</a>
-      <a class="secondary" href="/google-ads-services.html">Review Google Ads Service Details</a>
-    </div>
-    <div class="services">
-      <span class="service-pill highlight">Google Ads Management</span>
-      <span class="service-pill">Search &amp; SEO</span>
-      <span class="service-pill">GEO / AI Search Optimization</span>
-      <span class="service-pill">Sales Pipeline Analytics</span>
-      <span class="service-pill">E-Commerce Growth</span>
-      <span class="service-pill">Reporting &amp; Attribution</span>
-    </div>
-  </section>
-
-  <div class="proof-strip">
-    <div class="proof-item">
-      <strong>Agency Model</strong>
-      <span>Direct client engagements under service agreements. No self-serve ad-tech product and no public campaign software.</span>
-    </div>
-    <div class="proof-item">
-      <strong>MCC Oversight</strong>
-      <span>Client Google Ads accounts are managed through a Google Ads Manager Account so reporting, maintenance, and optimization can be handled centrally.</span>
-    </div>
-    <div class="proof-item">
-      <strong>Internal Tooling</strong>
-      <span>The Google Ads API is used only by agency personnel for reporting, campaign edits, budget monitoring, and search term analysis.</span>
-    </div>
-    <div class="proof-item">
-      <strong>Client Delivery</strong>
-      <span>Clients receive managed service, recommendations, and reports. They do not receive API access, resale tooling, or a white-label dashboard.</span>
-    </div>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <section class="google-ads-section">
-    <p class="section-label">Core Service</p>
-    <h2>Google Ads management with reporting built in</h2>
-    <p class="intro">
-      Shiba &amp; Associates manages Google Ads campaigns on behalf of business clients under a Google Ads Manager Account. We use the Google Ads API to support internal reporting, campaign management, optimization, and account monitoring across authorized accounts.
-    </p>
-    <div class="ads-grid">
-      <div class="ads-card">
-        <h3>Search Campaigns</h3>
-        <p>Keyword research, match type strategy, ad copywriting, bid management, negative keyword review, and ongoing optimization based on search term performance.</p>
-      </div>
-      <div class="ads-card">
-        <h3>Shopping &amp; Performance Max</h3>
-        <p>Product feed strategy, campaign structure, bidding, and audience segmentation for e-commerce accounts running Google Shopping and Performance Max.</p>
-      </div>
-      <div class="ads-card">
-        <h3>Reporting &amp; Attribution</h3>
-        <p>Regular reporting covering impressions, clicks, conversions, ROAS, CPA, and account trends using data retrieved from authorized Google Ads accounts.</p>
-      </div>
-      <div class="ads-card">
-        <h3>Internal API Workflows</h3>
-        <p>The API is used exclusively for internal campaign management across our MCC. Access is not exposed to clients, resold, or turned into a public product.</p>
-      </div>
-    </div>
-    <a class="ads-learn-more" href="/google-ads-services.html">View Full Google Ads Services &amp; API Usage Details</a>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <section class="business-model" id="operating-model">
-    <p class="section-label">Operating Model</p>
-    <h2>Built for managed service work, not software resale</h2>
-    <p class="lead">
-      Shiba &amp; Associates operates as a hands-on marketing partner for a small portfolio of businesses. The work is account-specific, strategy-led, and handled directly by authorized personnel. This site exists to describe the agency, its services, and how client campaign data is handled.
-    </p>
-    <div class="model-grid">
-      <div class="model-card">
-        <h3>Agency, not SaaS</h3>
-        <p>There is no public dashboard, no self-serve campaign workflow, and no multi-tenant software product. Engagements begin through direct outreach and service agreements.</p>
-      </div>
-      <div class="model-card">
-        <h3>Authorized Account Access</h3>
-        <p>Accounts are accessed only after a client links our manager account or grants the permissions required for the work we are performing.</p>
-      </div>
-      <div class="model-card">
-        <h3>Focused Client Portfolio</h3>
-        <p>Work typically supports small and mid-size businesses in categories such as industrial products, home improvement, trailers, and e-commerce.</p>
-      </div>
+      <a class="btn-primary" href="mailto:shiba@2.0heads.com">Get in Touch</a>
+      <a class="btn-secondary" href="#services">See Our Services</a>
     </div>
   </section>
 
   <div class="section-divider"></div>
 
-  <section class="engagements">
-    <p class="section-label">How Engagements Work</p>
-    <h2>Practical campaign management with a clear workflow</h2>
-    <div class="engagement-grid">
-      <div class="engagement-step">
-        <p class="step">01</p>
-        <h3>Account Review</h3>
-        <p>We review account structure, search terms, budgets, conversion tracking, and policy issues before recommending a working plan.</p>
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <p class="section-label">What We Do</p>
+    <h2>Three services. One focused agency.</h2>
+    <p class="lead">We work with a small portfolio of SMB clients across industrial products, home improvement, food service, and professional services. The work is specific, measurable, and handled directly.</p>
+
+    <div class="service-cards">
+
+      <!-- Service 1: Digital Marketing & Analytics -->
+      <div class="service-card">
+        <div class="icon">📊</div>
+        <h3>SMB Digital Marketing &amp; Analytics</h3>
+        <p>We connect your marketing channels to your actual business outcomes. GA4, Google Search Console, Semrush, and ad platform data are pulled together into clear reporting that shows what's driving revenue — and what isn't.</p>
+        <div class="tags">
+          <span class="tag">GA4 &amp; GSC</span>
+          <span class="tag">Semrush</span>
+          <span class="tag">Attribution</span>
+          <span class="tag">SEO Strategy</span>
+          <span class="tag">Monthly Reporting</span>
+        </div>
+        <a class="learn-more" href="mailto:shiba@2.0heads.com">Talk to us about analytics →</a>
       </div>
-      <div class="engagement-step">
-        <p class="step">02</p>
-        <h3>Campaign Buildout</h3>
-        <p>We build or restructure search, shopping, and Performance Max campaigns around the client’s product mix, margins, and lead quality goals.</p>
+
+      <!-- Service 2: Google Ads -->
+      <div class="service-card">
+        <div class="icon">🎯</div>
+        <h3>Google Ads Services &amp; Management</h3>
+        <p>Hands-on management of Search, Shopping, and Performance Max campaigns. We handle keyword strategy, ad copy, bid management, search term review, and budget optimization — and we report back in plain language.</p>
+        <div class="tags">
+          <span class="tag">Search Campaigns</span>
+          <span class="tag">Shopping / PMax</span>
+          <span class="tag">Negative Keywords</span>
+          <span class="tag">Bid Management</span>
+          <span class="tag">ROAS Reporting</span>
+        </div>
+        <a class="learn-more" href="/google-ads-services.html">View full service details →</a>
       </div>
-      <div class="engagement-step">
-        <p class="step">03</p>
-        <h3>Optimization</h3>
-        <p>Routine bid checks, search term analysis, negative keyword management, budget pacing, and anomaly review are handled on an ongoing basis.</p>
+
+      <!-- Service 3: AI Implementation -->
+      <div class="service-card">
+        <div class="icon">⚙️</div>
+        <h3>SMB AI Process Implementation &amp; Improvement</h3>
+        <p>We identify where AI creates real leverage in your business — and build it in. From GEO content strategy that gets your business cited by AI-powered search tools, to internal workflow automation that replaces hours of manual work each week.</p>
+        <div class="tags">
+          <span class="tag">GEO / AI Search</span>
+          <span class="tag">Workflow Automation</span>
+          <span class="tag">Content Strategy</span>
+          <span class="tag">Process Improvement</span>
+          <span class="tag">AI Tooling</span>
+        </div>
+        <a class="learn-more" href="/geo.html">See our GEO approach →</a>
       </div>
-      <div class="engagement-step">
-        <p class="step">04</p>
-        <h3>Reporting</h3>
-        <p>Clients receive performance reporting, account summaries, and recommendations based on the data we retrieve from the accounts they authorize us to manage.</p>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ABOUT -->
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="section-label">About the Agency</p>
+        <h2>Managed service work, not software</h2>
+        <p>Shiba &amp; Associates is a privately operated marketing agency led by David Shiba. We manage a focused portfolio of SMB clients under direct service agreements. There's no public dashboard, no self-serve product, and no account handoff to a junior team.</p>
+        <p>We use the Google Ads API, GA4 Data API, and a growing stack of AI tooling to do the work faster and more accurately than manual methods allow — but every decision is made by a human who knows your account.</p>
+        <p><a href="/how-we-use-ai.html">Read more about how we use AI in our work →</a></p>
+      </div>
+      <div class="about-facts">
+        <div class="fact-item">
+          <strong>Agency Model</strong>
+          <span>Direct client engagements under service agreements. No self-serve ad-tech product and no public campaign software.</span>
+        </div>
+        <div class="fact-item">
+          <strong>MCC Oversight</strong>
+          <span>Client Google Ads accounts are managed through a Google Ads Manager Account for centralized reporting, maintenance, and optimization.</span>
+        </div>
+        <div class="fact-item">
+          <strong>Focused Portfolio</strong>
+          <span>Industrial products, home improvement, food service, trailers, and e-commerce. We know these categories well.</span>
+        </div>
+        <div class="fact-item">
+          <strong>Data-First</strong>
+          <span>GA4, GSC, Semrush, and ad platform data connected across every client account. Reporting is built in, not bolted on.</span>
+        </div>
       </div>
     </div>
   </section>
 
   <div class="section-divider"></div>
 
-  <section class="contact">
-    <div class="divider"></div>
+  <!-- CONTACT -->
+  <section class="contact-section">
+    <div class="divider-line"></div>
     <h2>Contact</h2>
-    <p class="contact-name">David Shiba</p>
-    <p class="contact-copy">
-      Principal, Shiba &amp; Associates. For Google Ads management inquiries, account access questions, or questions about our use of the Google Ads API, contact us directly.
-    </p>
+    <p class="name">David Shiba</p>
+    <p>Principal, Shiba &amp; Associates. For Google Ads management, analytics engagements, or questions about AI process work, reach out directly.</p>
     <div class="contact-links">
       <a href="mailto:shiba@2.0heads.com">shiba@2.0heads.com</a>
       <a href="tel:+13477662034">347-766-2034</a>
@@ -525,6 +518,8 @@
     &nbsp;·&nbsp; <a href="/privacy-policy.html">Privacy Policy</a>
     &nbsp;·&nbsp; <a href="/terms-of-service.html">Terms of Service</a>
     &nbsp;·&nbsp; <a href="/google-ads-services.html">Google Ads Services</a>
+    &nbsp;·&nbsp; <a href="/geo.html">GEO</a>
+    &nbsp;·&nbsp; <a href="/how-we-use-ai.html">How We Use AI</a>
   </footer>
 
 </body>
