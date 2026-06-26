@@ -4,163 +4,231 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Colao & Peter — Work | Shiba &amp; Associates</title>
+  <title>Colao & Peter — Analytics & Reports</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.7;
-      font-size: 15px;
+      background: #F5F4F0;
+      color: #1a1a18;
+      line-height: 1.6;
+      font-size: 14px;
     }
 
-    .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 28px 100px; }
-
-    /* ── Hero ── */
-    .hero {
-      background: #f7f5f1;
-      border-bottom: 1px solid #e0d8cc;
-      padding: 20px 28px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .hero .eyebrow {
-      font-size: 10px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #8a7a5a;
-      margin-bottom: 2px;
-    }
-    .hero h1 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      letter-spacing: -0.2px;
-    }
-    .hero h1 span { color: #8a7a5a; }
-    .hero .subtitle {
-      display: none;
-    }
-
-    /* ── Section ── */
-    .section { margin-top: 52px; }
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #8a7a5a;
-      font-weight: 700;
-      margin-bottom: 18px;
-      border-bottom: 1px solid #e8e2d8;
-      padding-bottom: 10px;
-    }
-
-    /* ── Card list ── */
-    .card-list { display: flex; flex-direction: column; gap: 2px; }
-    .card {
+    /* ── Header ── */
+    .header {
+      background: #1a1a18;
+      border-bottom: 3px solid #BDA26B;
+      padding: 14px 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 20px;
-      border: 1px solid #e8e2d8;
-      border-radius: 6px;
-      text-decoration: none;
-      color: #1a1a1a;
-      transition: background 0.15s, border-color 0.15s;
-      gap: 20px;
     }
-    .card:hover { background: #faf8f5; border-color: #c8b89a; }
-    .card-body { flex: 1; }
-    .card-title { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 3px; }
-    .card-meta { font-size: 12px; color: #999; }
-    .card-tag {
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .header-mark {
+      width: 4px;
+      height: 28px;
+      background: #BDA26B;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .header h1 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.2px;
+    }
+    .header h1 span { color: #BDA26B; }
+    .header-sub {
+      font-size: 11px;
+      color: #888;
+      margin-top: 1px;
+      letter-spacing: 0.3px;
+    }
+    .header-badge {
       font-size: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #8a7a5a;
-      background: #f4f1ec;
-      border: 1px solid #e0d5c5;
+      color: #BDA26B;
+      border: 1px solid #3a3830;
+      padding: 4px 10px;
       border-radius: 3px;
-      padding: 3px 8px;
-      white-space: nowrap;
     }
-    .card-arrow { color: #ccc; font-size: 18px; flex-shrink: 0; }
+
+    /* ── Layout ── */
+    .container { max-width: 860px; margin: 0 auto; padding: 32px 32px 80px; }
+
+    /* ── Section ── */
+    .section { margin-top: 36px; }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #BDA26B;
+      border-bottom: 1px solid #ddd8cf;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    /* ── Dashboard card (featured) ── */
+    .dashboard-card {
+      background: #fff;
+      border-radius: 6px;
+      border: 1px solid #e2ddd5;
+      display: flex;
+      align-items: stretch;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .dashboard-card:hover { box-shadow: 0 3px 14px rgba(0,0,0,0.09); }
+    .dashboard-card .accent { width: 5px; background: #BDA26B; flex-shrink: 0; }
+    .dashboard-card .body { padding: 16px 18px; flex: 1; }
+    .dashboard-card .body h3 { font-size: 14px; font-weight: 700; color: #1a1a18; margin-bottom: 3px; }
+    .dashboard-card .body p { font-size: 12px; color: #777; }
+    .dashboard-card .body .meta { font-size: 11px; color: #aaa; margin-top: 8px; }
+    .dashboard-card .arrow { display: flex; align-items: center; padding: 0 18px; color: #BDA26B; font-size: 18px; }
+
+    /* ── Archive year group ── */
+    .year-group { margin-bottom: 24px; }
+    .year-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #999;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    /* ── Month report row ── */
+    .report-list { display: flex; flex-direction: column; gap: 6px; }
+    .report-row {
+      background: #fff;
+      border-radius: 6px;
+      border: 1px solid #e2ddd5;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.15s;
+      overflow: hidden;
+    }
+    .report-row:hover { box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+    .report-row .accent { width: 4px; background: #BDA26B; flex-shrink: 0; align-self: stretch; }
+    .report-row .date-badge {
+      min-width: 88px;
+      padding: 14px 14px;
+      text-align: center;
+      border-right: 1px solid #f0ece5;
+    }
+    .report-row .date-badge .month { font-size: 14px; font-weight: 700; color: #1a1a18; }
+    .report-row .date-badge .year-sm { font-size: 10px; color: #bbb; margin-top: 1px; }
+    .report-row .info { padding: 12px 16px; flex: 1; }
+    .report-row .info h4 { font-size: 13px; font-weight: 600; color: #1a1a18; margin-bottom: 2px; }
+    .report-row .info p { font-size: 12px; color: #888; }
+    .report-row .tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 10px;
+      margin-right: 16px;
+      white-space: nowrap;
+      background: #FDF6E8;
+      color: #8a6a20;
+      border: 1px solid #e8d49a;
+    }
+    .report-row .tag.new { background: #EEF7EE; color: #2a6e2a; border-color: #a5cfa5; }
+
+    /* ── Attribution card (same as dashboard but different accent) ── */
+    .attr-card .accent { background: #7a9ab0; }
+    .attr-card .arrow { color: #7a9ab0; }
 
     /* ── Footer ── */
     .footer {
-      margin-top: 72px;
-      padding-top: 24px;
-      border-top: 1px solid #e8e2d8;
-      font-size: 12px;
-      color: #aaa;
-      text-align: center;
-      line-height: 1.7;
+      margin-top: 48px;
+      padding-top: 14px;
+      border-top: 1px solid #ddd8cf;
+      font-size: 11px;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <div>
-      <div class="eyebrow">Shiba &amp; Associates</div>
-      <h1>Colao <span>&amp;</span> Peter</h1>
+  <div class="header">
+    <div class="header-left">
+      <div class="header-mark"></div>
+      <div>
+        <h1>Colao <span>&amp;</span> Peter</h1>
+        <div class="header-sub">Analytics &amp; Reports · Private client portal</div>
+      </div>
     </div>
+    <div class="header-badge">Shiba &amp; Associates</div>
   </div>
 
-  <div class="page-wrap">
+  <div class="container">
 
+    <!-- DASHBOARD -->
     <div class="section">
-      <div class="section-label">Monthly Dashboard</div>
-      <div class="card-list">
-        <a class="card" href="cp-ga4-dashboard.html">
-          <div class="card-body">
-            <div class="card-title">GA4 + Search Console + Semrush — Monthly Dashboard</div>
-            <div class="card-meta">Channel traffic, organic search performance, keyword rankings, and AI traffic · Jan 2025 through most recent month · Updated monthly</div>
-          </div>
-          <span class="card-tag">Dashboard</span>
-          <span class="card-arrow">›</span>
-        </a>
+      <div class="section-title">Monthly Dashboard</div>
+      <a class="dashboard-card" href="cp-ga4-dashboard.html">
+        <div class="accent"></div>
+        <div class="body">
+          <h3>GA4 + Search Console + Semrush — Monthly Dashboard</h3>
+          <p>Channel traffic, organic search performance, keyword rankings, and AI traffic. Covers Jan 2025 through the most recently completed month.</p>
+          <div class="meta">Updated monthly · GA4 · Google Search Console · Semrush</div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
+    </div>
+
+    <!-- MONTHLY REPORTS ARCHIVE -->
+    <div class="section">
+      <div class="section-title">Monthly Performance Reports</div>
+
+      <div class="year-group">
+        <div class="year-label">2026</div>
+        <div class="report-list">
+          <a class="report-row" href="cp-may-2026-summary.html">
+            <div class="accent"></div>
+            <div class="date-badge">
+              <div class="month">May</div>
+              <div class="year-sm">2026</div>
+            </div>
+            <div class="info">
+              <h4>May 2026 — Digital Performance Summary</h4>
+              <p>Traffic overview · GSC impression drop analysis · Semrush keyword health · Next steps</p>
+            </div>
+            <span class="tag new">New</span>
+          </a>
+        </div>
       </div>
     </div>
 
+    <!-- ATTRIBUTION & CONVERSION -->
     <div class="section">
-      <div class="section-label">Monthly Performance Reports</div>
-      <div class="card-list">
-        <a class="card" href="cp-may-2026-summary.html">
-          <div class="card-body">
-            <div class="card-title">May 2026 — Digital Performance Summary</div>
-            <div class="card-meta">Traffic overview · GSC impression drop analysis · Semrush keyword health · Next steps</div>
-          </div>
-          <span class="card-tag">Report</span>
-          <span class="card-arrow">›</span>
-        </a>
-      </div>
+      <div class="section-title">Attribution &amp; Conversion</div>
+      <a class="dashboard-card attr-card" href="contact-attribution-apr-jun-2026.html">
+        <div class="accent"></div>
+        <div class="body">
+          <h3>Contact Form Attribution — Apr 1 – Jun 25, 2026</h3>
+          <p>Sessions that reached the contact form. Landing page and source/medium breakdown across 87 sessions.</p>
+          <div class="meta">Generated June 26, 2026 · GA4 · generate_lead signal · Submit-click proxy</div>
+        </div>
+        <div class="arrow">→</div>
+      </a>
     </div>
 
-    <div class="section">
-      <div class="section-label">Attribution &amp; Conversion</div>
-      <div class="card-list">
-        <a class="card" href="contact-attribution-apr-jun-2026.html">
-          <div class="card-body">
-            <div class="card-title">Contact Form Attribution — Apr 1 – Jun 25, 2026</div>
-            <div class="card-meta">87 sessions · Landing page &amp; source/medium breakdown · Submit-click proxy</div>
-          </div>
-          <span class="card-tag">Analytics</span>
-          <span class="card-arrow">›</span>
-        </a>
-      </div>
+    <div class="footer">
+      Private and intended for Colao &amp; Peter use only. Pages are blocked from search engine indexing.
     </div>
 
-
   </div>
-
-  <div class="footer">
-    Shiba &amp; Associates · Colao &amp; Peter<br>
-    For internal use only · Not for distribution
-  </div>
-
 </body>
 </html>
