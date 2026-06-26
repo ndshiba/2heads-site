@@ -99,7 +99,7 @@
     .data-table tbody tr:hover { background: #faf8f5; }
     .data-table tbody td { padding: 13px 16px; color: #1a1a1a; vertical-align: middle; }
     .data-table tbody td.right { text-align: right; color: #444; }
-    .data-table tbody td.mono { font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace; font-size: 13px; color: #444; }
+    .data-table tbody td.mono { font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace; font-size: 14px; color: #1a1a1a; }
     .data-table tfoot td {
       padding: 13px 16px;
       font-weight: 700;
@@ -159,7 +159,6 @@
     <div class="subtitle">Sessions that reached and interacted with the contact form — April &amp; May 2026 combined</div>
     <div class="meta">
       <div><span>Period</span><br>Apr 1 – May 31, 2026</div>
-      <div><span>Property</span><br>GA4 · 387610456</div>
       <div><span>Signal</span><br>generate_lead · /contact page</div>
       <div><span>Total Sessions</span><br>61</div>
     </div>
@@ -333,12 +332,22 @@
             </td>
           </tr>
           <tr>
-            <td style="color:#888">Other referrals <em style="font-size:12px">(chatgpt.com, docs.google.com, fisherpaykel, instagram.com, phmediagroup, upwork.com, awwhouse)</em></td>
-            <td class="right">7</td>
+            <td>chatgpt.com / (none)</td>
+            <td class="right">1</td>
             <td>
               <div class="bar-wrap">
-                <div class="bar-track"><div class="bar-fill" style="width:11%"></div></div>
-                <div class="bar-pct">11%</div>
+                <div class="bar-track"><div class="bar-fill" style="width:1.6%"></div></div>
+                <div class="bar-pct">2%</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="color:#888">Other referrals <em style="font-size:13px;color:#aaa">(docs.google.com, fisherpaykel, instagram.com, phmediagroup, upwork.com, awwhouse)</em></td>
+            <td class="right">6</td>
+            <td>
+              <div class="bar-wrap">
+                <div class="bar-track"><div class="bar-fill" style="width:10%"></div></div>
+                <div class="bar-pct">10%</div>
               </div>
             </td>
           </tr>
@@ -357,7 +366,7 @@
     <div class="section">
       <div class="section-label">Methodology</div>
       <div class="prose">
-        <p>Data source: GA4 Data API, property <strong>387610456</strong>, date range April 1 – May 31, 2026.</p>
+        <p>Data source: GA4 Data API, date range April 1 – May 31, 2026.</p>
         <p>The signal used is the <strong>generate_lead</strong> GA4 event, filtered to sessions where the event fired on a page path containing <code>/contact</code>. The <strong>sessions</strong> metric counts distinct GA4 sessions meeting that condition — not individual event firings.</p>
         <p>Landing page is the first page a user hit in their session before eventually reaching the contact page. Source and medium reflect GA4's last-non-direct session attribution model.</p>
         <p>One row containing <code>colaopeter1stg.wpenginepowered.com</code> as session source was excluded as staging traffic.</p>
