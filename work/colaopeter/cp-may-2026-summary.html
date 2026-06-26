@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colao &amp; Peter — May 2026 Performance Summary</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+/* ── Reset & base — mirrors dashboard exactly ─────────────────────────────── */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F5F4F0;color:#333;font-size:14px;line-height:1.6}
+
+/* ── Header — same as dashboard ──────────────────────────────────────────── */
+.header{background:#1a1a18;color:#fff;padding:22px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.header h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
+.header p{color:#aaa;font-size:12px;margin-top:3px}
+.header-accent{color:#BDA26B}
+
+/* ── Layout ───────────────────────────────────────────────────────────────── */
+.container{max-width:900px;margin:0 auto;padding:28px 32px 64px}
+
+/* ── Section titles — same border-left treatment ─────────────────────────── */
+.section-title{font-size:15px;font-weight:700;color:#1a1a18;margin:32px 0 12px;border-left:4px solid #BDA26B;padding-left:10px}
+.section-title.gsc{border-color:#1976D2}
+.section-title.smr{border-color:#FF6B35}
+.section-title.steps{border-color:#43A047}
+
+/* ── Cards — same as dashboard ───────────────────────────────────────────── */
+.card{background:#fff;border-radius:8px;padding:20px;border:1px solid #e8e3dc;margin-bottom:18px}
+
+/* ── KPI tiles — same as dashboard ───────────────────────────────────────── */
+.kpi-row-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+.kpi{background:#fff;border-radius:8px;padding:16px 18px;border:1px solid #e8e3dc}
+.kpi .label{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.kpi .value{font-size:26px;font-weight:700;color:#1a1a18;line-height:1}
+.kpi .sub{font-size:11px;color:#999;margin-top:5px}
+.kpi .delta-up{color:#2E7D32;font-weight:700}
+.kpi .delta-down{color:#C62828;font-weight:700}
+.kpi .old{font-size:12px;color:#bbb;text-decoration:line-through;margin-right:4px}
+
+/* ── Tables — same as dashboard ──────────────────────────────────────────── */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#F0EDE7;padding:9px 12px;text-align:left;font-weight:600;color:#555;border-bottom:2px solid #ddd;white-space:nowrap}
+th.r{text-align:right}
+td{padding:8px 12px;border-bottom:1px solid #f0ede7;vertical-align:middle}
+td.r{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none;font-weight:600}
+tr:hover td{background:#FAF8F5}
+
+/* ── Insight boxes — same as dashboard ───────────────────────────────────── */
+.insight{background:#F9F5EE;border:1px solid #DDD0B8;border-radius:6px;padding:12px 16px;font-size:13px;color:#5a4a2a;margin:14px 0}
+.insight.gsc{background:#E3F2FD;border-color:#90CAF9;color:#0D47A1}
+.insight.good{background:#E8F5E9;border-color:#A5D6A7;color:#1B5E20}
+.insight.warn{background:#FFF3E0;border-color:#FFCC02;color:#7a3500}
+
+/* ── Charts ───────────────────────────────────────────────────────────────── */
+.chart-wrap{position:relative;height:260px}
+.chart-wrap.short{height:200px}
+.chart-note{font-size:11px;color:#aaa;margin-top:6px;font-style:italic}
+
+/* ── URL code block ───────────────────────────────────────────────────────── */
+.url-block{background:#F0EDE7;border-radius:6px;padding:10px 14px;margin:12px 0;font-family:'SF Mono','Menlo',monospace;font-size:11px;color:#666;word-break:break-all;border:1px solid #ddd}
+
+/* ── Next step cards ──────────────────────────────────────────────────────── */
+.step{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid #f0ede7}
+.step:last-child{border-bottom:none}
+.step-num{font-size:22px;font-weight:700;color:#BDA26B;min-width:28px;padding-top:1px}
+.step h4{font-size:14px;font-weight:700;color:#1a1a18;margin-bottom:5px}
+.step p{font-size:13px;color:#555;line-height:1.6;margin:0}
+
+/* ── Source badges ────────────────────────────────────────────────────────── */
+.src-badge{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.3px;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle;text-transform:uppercase}
+.src-ga4{background:#E8F5E9;color:#1B5E20;border:1px solid #A5D6A7}
+.src-gsc{background:#E3F2FD;color:#0D47A1;border:1px solid #90CAF9}
+.src-smr{background:#FFF0E8;color:#BF360C;border:1px solid #FFAB91}
+
+/* ── Body text spacing ────────────────────────────────────────────────────── */
+.body-text p{margin-bottom:14px;font-size:14px;line-height:1.7;color:#333}
+.body-text p:last-child{margin-bottom:0}
+
+/* ── Footer ───────────────────────────────────────────────────────────────── */
+.footer{margin-top:48px;padding-top:14px;border-top:1px solid #e8e3dc;font-size:11px;color:#bbb;line-height:1.9}
+
+@media(max-width:700px){
+  .kpi-row-4{grid-template-columns:repeat(2,1fr)}
+  .container{padding:20px 16px 48px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div>
+    <h1>🏡 <span class="header-accent">Colao &amp; Peter</span> — May 2026 Performance Summary</h1>
+    <p>Prepared June 5, 2026 &nbsp;&middot;&nbsp; GA4 &nbsp;&middot;&nbsp; Google Search Console &nbsp;&middot;&nbsp; Semrush</p>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ── OVERVIEW ────────────────────────────────────────────────────────────── -->
+<div class="section-title">Overview</div>
+<div class="body-text">
+  <p>May was a solid month for organic performance. Website traffic reached 1,418 sessions, driven primarily by Direct, Organic Search, and Organic Social. Real organic search traffic — the visitors who found the site through Google — grew compared to May 2025 in both volume and quality, and overall site engagement improved meaningfully.</p>
+  <p>There is one metric that looks alarming on the surface: Google Search impressions dropped roughly 70% year over year. The data tells a more nuanced story — that number does not reflect a loss of real traffic. It reflects the removal of low-quality, buried rankings that were never driving business anyway. That story is covered in full below.</p>
+</div>
+
+<!-- ── TRAFFIC ─────────────────────────────────────────────────────────────── -->
+<div class="section-title">Traffic — May 2026 <span class="src-badge src-ga4">📊 GA4</span></div>
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>Channel</th>
+        <th class="r">Sessions</th>
+        <th class="r">Share</th>
+        <th class="r">Engagement rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Direct</td><td class="r">497</td><td class="r">35%</td><td class="r">45%</td></tr>
+      <tr><td>Organic Search</td><td class="r">448</td><td class="r">32%</td><td class="r">63%</td></tr>
+      <tr><td>Organic Social</td><td class="r">348</td><td class="r">25%</td><td class="r">9%</td></tr>
+      <tr><td>All other</td><td class="r">125</td><td class="r">8%</td><td class="r">—</td></tr>
+      <tr><td>Total</td><td class="r">1,418</td><td class="r">100%</td><td class="r">42.2%</td></tr>
+    </tbody>
+  </table>
+  <div class="insight good" style="margin-top:14px">✅ <strong>Organic Search is the highest-quality channel on the site</strong> — 448 sessions at 63% engagement and an average session duration over 3 minutes. These are visitors who were actively searching for what Colao &amp; Peter offers, found the site, and stayed.</div>
+</div>
+<div class="body-text">
+  <p>Organic Social (Instagram + Facebook) brought 348 sessions — up sharply from just 9 in May 2025, virtually all from Instagram referrals. Engagement is low at 9%, which is expected for social traffic. Worth watching as volume continues to grow.</p>
+  <p>Overall site engagement reached 42.2%, up from 38.9% in April. Quality is improving across channels.</p>
+</div>
+
+<!-- ── GOOGLE SEARCH ────────────────────────────────────────────────────────── -->
+<div class="section-title gsc">Google Search — What the Numbers Actually Mean <span class="src-badge src-gsc">🔍 GSC</span></div>
+
+<div class="kpi-row-4">
+  <div class="kpi">
+    <div class="label">Organic Clicks</div>
+    <div class="value"><span class="old">248</span>265</div>
+    <div class="sub"><span class="delta-up">↑ +7%</span> vs May 2025</div>
+  </div>
+  <div class="kpi" style="border-color:#E65100">
+    <div class="label">Impressions</div>
+    <div class="value" style="color:#BF360C"><span class="old" style="font-size:11px">163,094</span>50,413</div>
+    <div class="sub"><span class="delta-down">↓ −69%</span> vs May 2025</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Click-Through Rate</div>
+    <div class="value"><span class="old">0.15%</span>0.53%</div>
+    <div class="sub"><span class="delta-up">↑ +253%</span> vs May 2025</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Avg. Position</div>
+    <div class="value"><span class="old">43.9</span>22.6</div>
+    <div class="sub"><span class="delta-up">↑ +21 spots</span> vs May 2025</div>
+  </div>
+</div>
+
+<div class="body-text">
+  <p>The chart below shows the divergence plainly. Impressions collapsed. Clicks held flat. These two lines tell opposite stories — and that gap is the whole point.</p>
+</div>
+
+<div class="card">
+  <div class="chart-wrap"><canvas id="gscChart"></canvas></div>
+  <p class="chart-note">May 2025 vs. May 2026 &nbsp;&middot;&nbsp; Impressions on left axis (bars), Clicks on right axis (line)</p>
+</div>
+
+<div class="body-text">
+  <p>Between mid-2024 and early 2025, Google updated its algorithm to demote <strong>location-stacked service area pages</strong> — pages built to capture search traffic by combining a service keyword with a long list of city names. Colao &amp; Peter had dozens of these:</p>
+</div>
+
+<div class="url-block">/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/</div>
+
+<div class="body-text">
+  <p>These pages were ranking on pages 4–9 of Google for searches like “landscape design,” “pool installation,” and “custom deck builder.” They generated enormous impression counts — but at positions 40–90, essentially no one sees them. Click-through rates were effectively zero. Of the 163,094 impressions in May 2025, over 100,000 came from those buried rankings and contributed fewer than a dozen actual clicks.</p>
+  <p>Google removed those rankings. 24 of the 25 top impression-driving pages from May 2025 are no longer appearing in search results. The impressions disappeared with them.</p>
+</div>
+
+<div class="insight">
+  The site is appearing less often in search results — but where it does appear, it ranks better and gets clicked more. <strong>Average position improved from 43.9 to 22.6. Click-through rate tripled. Actual clicks grew.</strong> The impression decline is not a business problem.
+</div>
+
+<!-- ── SEMRUSH ──────────────────────────────────────────────────────────────── -->
+<div class="section-title smr">Keyword Rankings <span class="src-badge src-smr">📈 Semrush</span></div>
+
+<div class="kpi-row-4" style="grid-template-columns:repeat(2,1fr);max-width:480px">
+  <div class="kpi">
+    <div class="label">Keywords ranking</div>
+    <div class="value">459</div>
+    <div class="sub">all positions · US</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Est. monthly traffic</div>
+    <div class="value">279</div>
+    <div class="sub"><span class="delta-up">+90% YoY</span> vs 147 May 2025</div>
+  </div>
+</div>
+
+<div class="body-text">
+  <p>Semrush estimates 279 monthly organic sessions — closely matching the 265 actual clicks from Google Search Console. Both sources agree: real organic traffic has improved year over year.</p>
+  <p>The strongest non-branded rankings are exactly where they should be: “landscape design McLean VA” (#1), “Potomac MD landscape designer” (#1), “luxury pool contractor” (#4), “deck builder Washington DC” (#10).</p>
+  <p>The chart below shows where the site’s 459 tracked keywords currently sit by position group. The 60 in the top 10 are driving the majority of real clicks. The 337 below position 20 represent largely untapped potential.</p>
+</div>
+
+<div class="card">
+  <div class="chart-wrap short"><canvas id="posChart"></canvas></div>
+  <p class="chart-note">459 keywords by position group &nbsp;&middot;&nbsp; Semrush US, May 2026</p>
+</div>
+
+<!-- ── NEXT STEPS ──────────────────────────────────────────────────────────── -->
+<div class="section-title steps">Recommended Next Steps</div>
+<div class="card">
+  <div class="step">
+    <div class="step-num">1</div>
+    <div>
+      <h4>“Luxury pool contractor” — dedicated content opportunity</h4>
+      <p>Semrush shows the site ranking #4 for “luxury pool contractor” (390 monthly searches). Position 4 is firmly in clickable territory, but the ranking is likely spread across multiple pages rather than anchored to one strong page. A focused page — portfolio content, process detail, specifics — could consolidate that ranking and push it into the top 3.</p>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div>
+      <h4>Service page content depth — medium term</h4>
+      <p>The pages that were penalized were thin on substance. The pages that survived are stronger. Continuing to build genuine depth — project case studies, process explanations, specific materials and techniques — protects existing rankings and creates the foundation for recovering broader keyword visibility over time.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  Data: Google Analytics 4 (property 387610456) &nbsp;&middot;&nbsp; Google Search Console (sc-domain:colaopeter.com) &nbsp;&middot;&nbsp; Semrush US database &nbsp;&middot;&nbsp; May 2026<br>
+  Dashboard: <a href="https://colaopeter.com/wp-content/uploads/analytics/cp-ga4-dashboard.html" style="color:#BDA26B">colaopeter.com/wp-content/uploads/analytics/cp-ga4-dashboard.html</a>
+</div>
+
+</div><!-- /container -->
+
+<script>
+Chart.defaults.font.family = "-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
+
+// ── GSC impressions vs clicks ─────────────────────────────────────────────────
+(function(){
+  var ctx = document.getElementById('gscChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["May '25", "May '26"],
+      datasets: [
+        {
+          label: 'Impressions',
+          data: [163094, 50413],
+          backgroundColor: ['rgba(180,180,180,0.4)', 'rgba(230,81,0,0.2)'],
+          borderColor:      ['#bbb', '#E65100'],
+          borderWidth: 1,
+          borderRadius: 4,
+          yAxisID: 'yImps',
+          order: 2
+        },
+        {
+          label: 'Clicks',
+          data: [248, 265],
+          type: 'line',
+          borderColor: '#43A047',
+          backgroundColor: 'rgba(67,160,71,0.1)',
+          borderWidth: 3,
+          pointRadius: 7,
+          pointBackgroundColor: '#43A047',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          fill: false,
+          tension: 0,
+          yAxisID: 'yClicks',
+          order: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position:'bottom', labels:{ boxWidth:12, padding:14, font:{size:11} } },
+        tooltip: { callbacks:{ label:function(c){ return ' '+c.dataset.label+': '+c.parsed.y.toLocaleString(); } } }
+      },
+      scales: {
+        x: { grid:{display:false}, ticks:{font:{size:13,weight:'600'}} },
+        yImps: {
+          type:'linear', position:'left',
+          grid:{color:'rgba(0,0,0,0.05)'},
+          ticks:{font:{size:11}, callback:function(v){return v>=1000?(v/1000).toFixed(0)+'k':v;}},
+          title:{display:true,text:'Impressions',font:{size:10},color:'#aaa'}
+        },
+        yClicks: {
+          type:'linear', position:'right',
+          min:0, max:400,
+          grid:{display:false},
+          ticks:{font:{size:11}},
+          title:{display:true,text:'Clicks',font:{size:10},color:'#43A047'}
+        }
+      }
+    }
+  });
+})();
+
+// ── Position distribution ─────────────────────────────────────────────────────
+(function(){
+  var ctx = document.getElementById('posChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Pos 1–3','Pos 4–10','Pos 11–20','Pos 21–30','Pos 31–50','Pos 51–100'],
+      datasets:[{
+        label: 'Keywords',
+        data: [20,40,62,94,110,133],
+        backgroundColor: ['#2E7D32','#43A047','#81C784','#FFB74D','#FF7043','#E53935'],
+        borderWidth: 0,
+        borderRadius: 3
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend:{display:false},
+        tooltip:{callbacks:{label:function(c){return ' '+c.parsed.x+' keywords';}}}
+      },
+      scales: {
+        x:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:11}}},
+        y:{grid:{display:false},ticks:{font:{size:11}}}
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
