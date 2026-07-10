@@ -134,8 +134,24 @@ tr:hover td{background:#FAF8F5}
   <div class="kpi ai-highlight"><div class="label">Monthly Avg</div><div class="value">10.5</div><div class="sub">sessions/month from AI tools</div></div>
 </div>
 <div class="card">
-  <div class="chart-wrap short"><canvas id="aiChart"></canvas></div>
-  <div class="insight ai">✦ <strong>AI Assistants deliver 62% engagement and 3m 27s avg session duration</strong> — on par with Organic Search. June 2026 saw the highest single-month count in months at 14 sessions, with ChatGPT driving 11 of them. Total all-time: 189 sessions (Jan '25–Jun '26). Volume is small but quality is the highest on the site.</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px">
+    <div style="font-weight:600;font-size:13px;color:#1a1a18">AI Sessions &amp; Share of Traffic — Monthly Trend</div>
+    <div style="font-size:11px;color:#888">Jan 2025 – Jun 2026</div>
+  </div>
+  <div style="font-size:11px;color:#999;margin-bottom:12px">Bars = AI sessions &nbsp;·&nbsp; Line = % of total monthly sessions &nbsp;·&nbsp; Orange line shows when AI tools are sending a disproportionate share of traffic</div>
+  <div class="chart-wrap"><canvas id="aiTrendChart"></canvas></div>
+  <div class="insight ai" style="margin-top:12px">✦ <strong>May 2025 peak: 18 sessions = 2.59% of all traffic</strong> — the highest AI share on record. June 2026 is recovering (14 sessions, 0.69% share) after a trough in late 2025 when paid social inflated the denominator. The AI quality story is consistent: 62% engagement, 3m+ sessions. Volume is small but these are high-intent visitors actively researching luxury outdoor living.</div>
+</div>
+<div class="two-col" style="margin-top:18px">
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">June 2026 — AI Traffic by Tool</div>
+    <div class="chart-wrap short"><canvas id="aiToolChart"></canvas></div>
+  </div>
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">June 2026 — AI Landing Pages</div>
+    <div class="chart-wrap short"><canvas id="aiPagesChart"></canvas></div>
+    <div style="font-size:11px;color:#888;margin-top:8px">Sessions counted at page level — one session may visit multiple pages</div>
+  </div>
 </div>
 
 <!-- ── GSC Tables ── -->
@@ -438,12 +454,604 @@ function showAllChannels(){
   });
 })();
 
+// ── AI Trend combo chart (sessions + % of traffic) ──
 (function(){
-  var ctx = document.getElementById('aiChart').getContext('2d');
+  var ctx = document.getElementById('aiTrendChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Jan '25","Feb '25","Mar '25","Apr '25","May '25","Jun '25","Jul '25","Aug '25",
+               "Sep '25","Oct '25","Nov '25","Dec '25","Jan '26","Feb '26","Mar '26","Apr '26","May '26","Jun '26"],
+      datasets: [
+        {
+          label: 'AI Sessions',
+          data: [2,1,9,9,18,16,7,9,16,27,9,10,11,9,13,5,4,14],
+          backgroundColor: 'rgba(0,188,212,0.35)',
+          borderColor: '#00838F',
+          borderWidth: 1.5,
+          borderRadius: 3,
+          yAxisID: 'ySess',
+          order: 2
+        },
+        {
+          label: '% of Total Traffic',
+          data: [0.28,0.15,1.24,1.32,2.59,1.78,1.01,1.31,0.77,0.85,0.18,0.20,0.24,0.48,1.14,0.45,0.28,0.69],
+          type: 'line',
+          borderColor: '#FF6B35',
+          backgroundColor: 'rgba(255,107,53,0.07)',
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: '#FF6B35',
+          pointHoverRadius: 6,
+          fill: true,
+          tension: 0.4,
+          yAxisID: 'yPct',
+          order: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {position:'bottom',labels:{boxWidth:12,padding:12,font:{size:11}}},
+        tooltip: {callbacks:{label:function(c){
+          if(c.datasetIndex===1) return ' % of traffic: '+c.parsed.y.toFixed(2)+'%';
+          return ' AI sessions: '+c.parsed.y;
+        }}},
+        annotation: {
+          annotations: {
+            peakLabel: {
+              type: 'label',
+              xValue: "May '25",
+              yValue: 18,
+              yAdjust: -18,
+              yScaleID: 'ySess',
+              content: ['Peak: 2.59%'],
+              color: '#00838F',
+              font: {size: 10, weight: 'bold'},
+              backgroundColor: 'rgba(224,247,250,0.9)',
+              borderColor: '#80DEEA',
+              borderWidth: 1,
+              borderRadius: 4,
+              padding: {x:5,y:3}
+            }
+          }
+        }
+      },
+      scales: {
+        x: {grid:{display:false}, ticks:{font:{size:10}, maxRotation:45}},
+        ySess: {
+          type: 'linear', position: 'left',
+          grid: {color:'rgba(0,0,0,0.05)'},
+          ticks: {font:{size:11}, stepSize:5},
+          title: {display:true, text:'Sessions', font:{size:10}, color:'#00838F'}
+        },
+        yPct: {
+          type: 'linear', position: 'right',
+          min: 0, suggestedMax: 3.5,
+          grid: {display:false},
+          ticks: {font:{size:11}, callback:function(v){return v.toFixed(1)+'%';}},
+          title: {display:true, text:'% of Traffic', font:{size:10}, color:'#FF6B35'}
+        }
+      }
+    }
+  });
+})();
+
+// ── AI Tool breakdown — June 2026 ──
+(function(){
+  var ctx = document.getElementById('aiToolChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['ChatGPT', 'Gemini'],
+      datasets: [{
+        label: 'Sessions',
+        data: [12, 2],
+        backgroundColor: ['rgba(0,188,212,0.5)', 'rgba(25,118,210,0.5)'],
+        borderColor: ['#00838F','#1565C0'],
+        borderWidth: 2,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {display:false},
+        tooltip: {callbacks:{label:function(c){return ' '+c.parsed.x+' sessions';}}}
+      },
+      scales: {
+        x: {grid:{color:'rgba(0,0,0,0.05)'}, ticks:{font:{size:12}, stepSize:2}, suggestedMax:14},
+        y: {grid:{display:false}, ticks:{font:{size:13,weight:'600'}}}
+      }
+    }
+  });
+})();
+
+// ── AI Landing pages — June 2026 ──
+(function(){
+  var ctx = document.getElementById('aiPagesChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['/ (home)','portfolio','about','our-team','services','fire-water','before-after','media-awards','deck-builder','pool-houses','sanctuary'],
+      datasets: [{
+        label: 'Page visits from AI',
+        data: [6,3,2,2,1,1,1,1,1,1,1],
+        backgroundColor: 'rgba(0,188,212,0.4)',
+        borderColor: '#00838F',
+        borderWidth: 1.5,
+        borderRadius: 3
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {display:false},
+        tooltip: {callbacks:{label:function(c){return ' '+c.parsed.x+' page visit(s) from AI';}}}
+      },
+      scales: {
+        x: {grid:{color:'rgba(0,0,0,0.05)'}, ticks:{font:{size:11}, stepSize:1}, suggestedMax:7},
+        y: {grid:{display:false}, ticks:{font:{size:10}}}
+      }
+    }
+  });
+})();ad>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colao &amp; Peter — GA4 + Search Console Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F5F4F0;color:#333;font-size:14px}
+.header{background:#1a1a18;color:#fff;padding:22px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.header h1{font-size:20px;font-weight:700;letter-spacing:-0.3px}
+.header p{color:#aaa;font-size:12px;margin-top:3px}
+.header-accent{color:#BDA26B}
+.container{max-width:1200px;margin:0 auto;padding:24px 32px}
+.section-title{font-size:15px;font-weight:700;color:#1a1a18;margin:28px 0 12px;border-left:4px solid #BDA26B;padding-left:10px}
+.section-title.gsc{border-color:#1976D2}
+.section-title.ai{border-color:#00BCD4}
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:4px}
+.kpi-row-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:4px}
+.kpi{background:#fff;border-radius:8px;padding:16px 18px;border:1px solid #e8e3dc}
+.kpi.ai-highlight{border-color:#00BCD4;border-width:2px}
+.kpi.gsc-highlight{border-color:#1976D2;border-width:2px}
+.kpi.warn-highlight{border-color:#E65100;border-width:2px}
+.kpi .label{font-size:11px;color:#888;text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.kpi .value{font-size:28px;font-weight:700;color:#1a1a18;line-height:1}
+.kpi .sub{font-size:11px;color:#999;margin-top:4px}
+.kpi.ai-highlight .value{color:#00838F}
+.kpi.gsc-highlight .value{color:#1565C0}
+.kpi.warn-highlight .value{color:#BF360C}
+.card{background:#fff;border-radius:8px;padding:20px;border:1px solid #e8e3dc;margin-bottom:18px}
+.chart-wrap{position:relative;height:280px}
+.chart-wrap.short{height:200px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{background:#F0EDE7;padding:9px 12px;text-align:left;font-weight:600;color:#555;border-bottom:2px solid #ddd;white-space:nowrap}
+th.num{text-align:right}
+td{padding:8px 12px;border-bottom:1px solid #f0ede7;vertical-align:middle}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#FAF8F5}
+.bar-wrap{background:#eee;border-radius:3px;height:7px;width:100%}
+.bar-fill{height:7px;border-radius:3px}
+.ch-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.ai-badge{display:inline-block;background:#E0F7FA;color:#00838F;font-size:10px;font-weight:700;padding:1px 5px;border-radius:10px;margin-left:4px;vertical-align:middle;border:1px solid #80DEEA}
+.warn-badge{display:inline-block;background:#FFF3E0;color:#E65100;font-size:10px;font-weight:700;padding:1px 5px;border-radius:10px;margin-left:4px;vertical-align:middle;border:1px solid #FFCC02}
+.pos-badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px}
+.pos-top{background:#E8F5E9;color:#2E7D32}
+.pos-mid{background:#E3F2FD;color:#1565C0}
+.pos-low{background:#FBE9E7;color:#BF360C}
+.insight{background:#F9F5EE;border:1px solid #DDD0B8;border-radius:6px;padding:10px 14px;font-size:12px;color:#5a4a2a;margin-top:12px}
+.insight.ai{background:#E0F7FA;border-color:#80DEEA;color:#006064}
+.insight.gsc{background:#E3F2FD;border-color:#90CAF9;color:#0D47A1}
+.insight.warn{background:#FFF3E0;border-color:#FFCC02;color:#7a3500}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.source-label{font-size:10px;color:#888;font-weight:600;letter-spacing:.6px;text-transform:uppercase;display:inline-block;background:#F0EDE7;padding:2px 7px;border-radius:4px;margin-left:6px;vertical-align:middle}
+.src-badge{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;letter-spacing:.3px;padding:3px 10px;border-radius:20px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
+.src-ga4{background:#E8F5E9;color:#1B5E20;border:1px solid #A5D6A7}
+.src-gsc{background:#E3F2FD;color:#0D47A1;border:1px solid #90CAF9}
+.src-smr{background:#FFF0E8;color:#BF360C;border:1px solid #FFAB91}
+.section-src{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;padding:10px 14px;border-radius:6px}
+.section-src.ga4{background:#F1F8F2;border-left:4px solid #43A047}
+.section-src.gsc{background:#E8F3FD;border-left:4px solid #1976D2}
+.section-src.smr{background:#FFF5F0;border-left:4px solid #FF6B35}
+.section-src .src-name{font-weight:700;font-size:13px;color:#1a1a18}
+.section-src .src-desc{font-size:12px;color:#666}
+.tab-btn{border:1px solid #ddd;background:#f9f9f9;padding:5px 14px;font-size:12px;cursor:pointer;border-radius:4px;margin-right:6px}
+.tab-btn.active{background:#1a1a18;color:#fff;border-color:#1a1a18}
+.gsc-note{font-size:11px;color:#888;margin-top:8px;font-style:italic}
+@media(max-width:900px){.kpi-row,.kpi-row-4{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}}
+.breadcrumb{background:#F0EDE7;border-bottom:1px solid #e2ddd5;padding:8px 32px;font-size:12px;color:#888}
+.breadcrumb a{color:#BDA26B;text-decoration:none;font-weight:600}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb span{margin:0 6px;color:#ccc}
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>🏡 <span class="header-accent">Colao &amp; Peter</span> — GA4 + Search Console Dashboard</h1>
+    <p>GA4: Jan 2025 – Jun 2026 &nbsp;·&nbsp; GSC: Jan 2025–Jan 2026 (URL property) + Feb–Jun 2026 (Domain property) &nbsp;·&nbsp; Session AI Channel Group &nbsp;·&nbsp; Updated July 10, 2026 · v2 + Semrush</p>
+  </div>
+</div>
+<div class="breadcrumb"><a href="index.html">← Reports</a><span>/</span>GA4 + Search Console Dashboard</div>
+<div class="container">
+
+<!-- ── GA4 KPIs ── -->
+<div class="section-title">Traffic Overview — June 2026</div><div class="section-src ga4"><span class="src-badge src-ga4">📊 GA4</span><span class="src-name">Google Analytics 4</span><span class="src-desc">· Session AI Channel Group · Property 387610456 · June 2026</span></div>
+<div class="kpi-row">
+  <div class="kpi"><div class="label">Total Sessions</div><div class="value">2,041</div><div class="sub">June 2026</div></div>
+  <div class="kpi"><div class="label">Organic Search</div><div class="value">468</div><div class="sub">23% of traffic · 65% engaged</div></div>
+  <div class="kpi"><div class="label">Organic Social</div><div class="value">548</div><div class="sub">27% of traffic · 10% engaged</div></div>
+  <div class="kpi"><div class="label">Overall Engagement</div><div class="value">30.8%</div><div class="sub">629 engaged sessions</div></div>
+  <div class="kpi ai-highlight"><div class="label">AI Assistants ✦</div><div class="value">14</div><div class="sub">64% engaged · 6m 37s avg</div></div>
+</div>
+
+<!-- ── GSC KPIs ── -->
+<div class="section-title" style="margin-top:24px">Search Visibility</div><div class="section-src gsc"><span class="src-badge src-gsc">🔍 GSC</span><span class="src-name">Google Search Console</span><span class="src-desc">· Domain property sc-domain:colaopeter.com · June 2026</span></div>
+<div class="kpi-row-4">
+  <div class="kpi gsc-highlight"><div class="label">Organic Clicks</div><div class="value">285</div><div class="sub">June 2026 · Domain property</div></div>
+  <div class="kpi"><div class="label">Impressions</div><div class="value">48,793</div><div class="sub">June 2026</div></div>
+  <div class="kpi"><div class="label">Click-Through Rate</div><div class="value">0.58%</div><div class="sub">Industry avg ~2–3%</div></div>
+  <div class="kpi"><div class="label">Avg. Position</div><div class="value">20.9</div><div class="sub">June 2026 avg ranking</div></div>
+</div>
+
+<!-- ── Monthly Trend ── -->
+<div class="section-title">Sessions by Channel — Monthly Trend <span class="src-badge src-ga4" style="font-size:9px;padding:2px 8px">📊 GA4</span></div>
+<div class="card">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:6px">
+    <div>
+      <button class="tab-btn active" id="btnStack" onclick="switchChart('stack')">All Channels (stacked)</button>
+      <button class="tab-btn" id="btnOrganic" onclick="switchChart('organic')">Organic Search only</button>
+    </div>
+    <button onclick="showAllChannels()" style="font-size:11px;padding:4px 11px;border:1px solid #BDA26B;background:#F9F5EE;color:#8a6a1a;border-radius:4px;cursor:pointer;line-height:1.5" id="showAllBtn">↺ Show All Channels</button>
+  </div>
+  <div class="chart-wrap" id="stackWrap"><canvas id="trendChart"></canvas></div>
+  <div class="chart-wrap" id="organicWrap" style="display:none"><canvas id="organicChart"></canvas></div>
+  <div style="font-size:11px;color:#999;margin-top:8px" id="stackHint">💡 Click any channel in the legend to show or hide it</div>
+</div>
+
+<!-- ── GSC Monthly ── -->
+<div class="section-title gsc">Organic Clicks &amp; Impressions — Monthly <span class="src-badge src-gsc" style="font-size:9px;padding:2px 8px">🔍 GSC</span></div>
+<div class="card">
+  <div class="chart-wrap"><canvas id="gscChart"></canvas></div>
+  <p class="gsc-note">Jan 2025–Jan 2026: URL property (https://www.colaopeter.com/) &nbsp;·&nbsp; Feb 2026–Jun 2026: Domain property (sc-domain:colaopeter.com) &nbsp;·&nbsp; Dashed line marks the transition.</p>
+</div>
+
+<!-- ── AI Assistants ── -->
+<div class="section-title ai">AI Assistants <span class="src-badge src-ga4" style="font-size:9px;padding:2px 8px">📊 GA4</span></div>
+<div class="kpi-row-4" style="margin-bottom:14px">
+  <div class="kpi ai-highlight"><div class="label">Total AI Sessions</div><div class="value">189</div><div class="sub">Jan '25–Jun '26</div></div>
+  <div class="kpi ai-highlight"><div class="label">Engagement Rate</div><div class="value">62%</div><div class="sub">vs 31% site avg (Jun)</div></div>
+  <div class="kpi ai-highlight"><div class="label">Avg Session Duration</div><div class="value">3m 27s</div><div class="sub">High intent, research-driven</div></div>
+  <div class="kpi ai-highlight"><div class="label">Monthly Avg</div><div class="value">10.5</div><div class="sub">sessions/month from AI tools</div></div>
+</div>
+<div class="card">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px;flex-wrap:wrap;gap:6px">
+    <div style="font-weight:600;font-size:13px;color:#1a1a18">AI Sessions &amp; Share of Traffic — Monthly Trend</div>
+    <div style="font-size:11px;color:#888">Jan 2025 – Jun 2026</div>
+  </div>
+  <div style="font-size:11px;color:#999;margin-bottom:12px">Bars = AI sessions &nbsp;·&nbsp; Line = % of total monthly sessions &nbsp;·&nbsp; Orange line shows when AI tools are sending a disproportionate share of traffic</div>
+  <div class="chart-wrap"><canvas id="aiTrendChart"></canvas></div>
+  <div class="insight ai" style="margin-top:12px">✦ <strong>May 2025 peak: 18 sessions = 2.59% of all traffic</strong> — the highest AI share on record. June 2026 is recovering (14 sessions, 0.69% share) after a trough in late 2025 when paid social inflated the denominator. The AI quality story is consistent: 62% engagement, 3m+ sessions. Volume is small but these are high-intent visitors actively researching luxury outdoor living.</div>
+</div>
+<div class="two-col" style="margin-top:18px">
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">June 2026 — AI Traffic by Tool</div>
+    <div class="chart-wrap short"><canvas id="aiToolChart"></canvas></div>
+  </div>
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">June 2026 — AI Landing Pages</div>
+    <div class="chart-wrap short"><canvas id="aiPagesChart"></canvas></div>
+    <div style="font-size:11px;color:#888;margin-top:8px">Sessions counted at page level — one session may visit multiple pages</div>
+  </div>
+</div>
+
+<!-- ── GSC Tables ── -->
+<div class="section-title gsc">Top Search Queries &amp; Pages</div><div class="section-src gsc"><span class="src-badge src-gsc">🔍 GSC</span><span class="src-name">Google Search Console</span><span class="src-desc">· Domain property sc-domain:colaopeter.com · June 2026 only</span></div>
+<div class="two-col">
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">Top Queries by Clicks &mdash; June 2026</div>
+    <table>
+      <thead><tr><th>Query</th><th class="num">Clicks</th><th class="num">Imps</th><th class="num">CTR</th><th class="num">Pos</th><th></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=colao%20and%20peter" target="_blank" style="color:#1a1a2e;text-decoration:none">colao and peter</a></td>
+          <td class="num">77</td><td class="num">134</td><td class="num">57.5%</td>
+          <td class="num"><span class="pos-badge pos-top">#1</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:100%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=colao+%26+peter" target="_blank" style="color:#1a1a2e;text-decoration:none">colao &amp; peter</a></td>
+          <td class="num">10</td><td class="num">22</td><td class="num">45.5%</td>
+          <td class="num"><span class="pos-badge pos-top">#1</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:13%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=colao+%26+peter+luxury+outdoor+living" target="_blank" style="color:#1a1a2e;text-decoration:none">colao &amp; peter luxury outdoor living</a></td>
+          <td class="num">5</td><td class="num">16</td><td class="num">31.3%</td>
+          <td class="num"><span class="pos-badge pos-top">#1</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:6.5%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=deck+builder+washington+dc" target="_blank" style="color:#1a1a2e;text-decoration:none">deck builder washington dc</a></td>
+          <td class="num">1</td><td class="num">126</td><td class="num">0.8%</td>
+          <td class="num"><span class="pos-badge pos-mid">#6</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:1.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=swimming+pool+contractors" target="_blank" style="color:#1a1a2e;text-decoration:none">swimming pool contractors</a></td>
+          <td class="num">1</td><td class="num">270</td><td class="num">0.4%</td>
+          <td class="num"><span class="pos-badge pos-low">#32</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:1.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=pool+builder" target="_blank" style="color:#1a1a2e;text-decoration:none">pool builder</a></td>
+          <td class="num">1</td><td class="num">144</td><td class="num">0.7%</td>
+          <td class="num"><span class="pos-badge pos-low">#24</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:1.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=landscape+design+near+me" target="_blank" style="color:#1a1a2e;text-decoration:none">landscape design near me</a></td>
+          <td class="num">1</td><td class="num">121</td><td class="num">0.8%</td>
+          <td class="num"><span class="pos-badge pos-mid">#7</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:1.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=landscape+design+arlington+va" target="_blank" style="color:#1a1a2e;text-decoration:none">landscape design arlington va</a></td>
+          <td class="num">1</td><td class="num">90</td><td class="num">1.1%</td>
+          <td class="num"><span class="pos-badge pos-low">#17</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:1.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=hardscape+designers+near+me" target="_blank" style="color:#1a1a2e;text-decoration:none">hardscape designers near me</a></td>
+          <td class="num">1</td><td class="num">61</td><td class="num">1.6%</td>
+          <td class="num"><span class="pos-badge pos-low">#40</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:1.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&q=pool+designers+near+me" target="_blank" style="color:#1a1a2e;text-decoration:none">pool designers near me</a></td>
+          <td class="num">1</td><td class="num">12</td><td class="num">8.3%</td>
+          <td class="num"><span class="pos-badge pos-mid">#9</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:1.3%;background:#1976D2"></div></div></td>
+        </tr></tbody>
+    </table>
+    <div class="insight gsc">🔍 <strong>Brand = 92 of 105 tracked clicks (88%).</strong> GSC export covers top queries by impressions — ~180 additional clicks are distributed across long-tail queries not shown. <strong>"deck builder washington dc" (pos 6)</strong> and <strong>"landscape design near me" (pos 7)</strong> are standout non-brand terms with actual clicks this month.</div>
+  </div>
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">Top Pages by Organic Clicks &mdash; June 2026</div>
+    <table>
+      <thead><tr><th>Page</th><th class="num">Clicks</th><th class="num">Imps</th><th class="num">CTR</th><th class="num">Pos</th><th></th></tr></thead>
+      <tbody>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/">home (colaopeter.com/)</a></td>
+          <td class="num">120</td><td class="num">1,090</td><td class="num">11.0%</td>
+          <td class="num"><span class="pos-badge pos-mid">#10</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:100%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fwww.colaopeter.com%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/">home (www.colaopeter.com/)</a></td>
+          <td class="num">68</td><td class="num">4,956</td><td class="num">1.4%</td>
+          <td class="num"><span class="pos-badge pos-top">#3</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:56.7%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2Fcustom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/custom-pool-design-renovations-…">custom-pool-design-renovations-sterling-…</a></td>
+          <td class="num">23</td><td class="num">11,775</td><td class="num">0.2%</td>
+          <td class="num"><span class="pos-badge pos-low">#26</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:19.2%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2Four-team%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/our-team/">our-team</a></td>
+          <td class="num">22</td><td class="num">528</td><td class="num">4.2%</td>
+          <td class="num"><span class="pos-badge pos-top">#4</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:18.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2Fcustom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/custom-deck-builder-…">custom-deck-builder-washington-dc-sterli…</a></td>
+          <td class="num">6</td><td class="num">4,653</td><td class="num">0.1%</td>
+          <td class="num"><span class="pos-badge pos-low">#18</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:5.0%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2Foutdoor-landscape-design-landscaping-company-landscape-architect-potomac-md%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/outdoor-landscape-design-potomac/">outdoor-landscape-design-potomac-md</a></td>
+          <td class="num">4</td><td class="num">3,672</td><td class="num">0.1%</td>
+          <td class="num"><span class="pos-badge pos-low">#31</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:3.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2Fprofessional-landscape-design-arlington-va%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/professional-landscape-design-arlington-va/">professional-landscape-design-arlington-va</a></td>
+          <td class="num">4</td><td class="num">1,932</td><td class="num">0.2%</td>
+          <td class="num"><span class="pos-badge pos-low">#18</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:3.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2Fportfolio%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/portfolio/">portfolio</a></td>
+          <td class="num">4</td><td class="num">379</td><td class="num">1.1%</td>
+          <td class="num"><span class="pos-badge pos-top">#3</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:3.3%;background:#1976D2"></div></div></td>
+        </tr>
+        <tr>
+          <td><a href="https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Acolaopeter.com&page=https%3A%2F%2Fcolaopeter.com%2Fpool-builder-luxury-landscaping-deck-builder-loudoun-county-va%2F" target="_blank" style="color:#1a1a2e;text-decoration:none" title="/pool-builder-loudoun-county-va/">pool-builder-luxury-landscaping-deck-bui…</a></td>
+          <td class="num">3</td><td class="num">2,386</td><td class="num">0.1%</td>
+          <td class="num"><span class="pos-badge pos-low">#18</span></td>
+          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:2.5%;background:#1976D2"></div></div></td>
+        </tr></tbody>
+    </table>
+    <div class="insight gsc">📄 <strong>Homepage combined (both variants): 188 of 285 clicks (66%).</strong> custom-pool-design page: 23 clicks from 11,775 impressions (0.2% CTR, pos 26) — massive impression volume that a title/meta rewrite could convert. our-team ranks #4 with solid 4.2% CTR.</div>
+  </div>
+</div>
+
+
+<div class="section-title" style="border-color:#FF6B35;margin-top:32px">Keyword Rankings</div>
+<div class="section-src smr">
+  <span class="src-badge src-smr">📈 Semrush</span>
+  <span class="src-name">Semrush</span>
+  <span class="src-desc">· US database · May 2026 snapshot · traffic is modeled estimate, not actual clicks</span>
+</div>
+
+<div class="kpi-row-4" style="margin-bottom:18px">
+  <div class="kpi" style="border-color:#FF6B35;border-width:2px">
+    <div class="label">Total Keywords Ranking</div>
+    <div class="value" style="color:#CC4400">459</div>
+    <div class="sub">May 2026 · all positions</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Keywords in Top 10</div>
+    <div class="value">60</div>
+    <div class="sub">20 in pos 1–3 &nbsp;·&nbsp; 40 in pos 4–10</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Est. Monthly Traffic</div>
+    <div class="value">279</div>
+    <div class="sub">vs 147 May 2025 · +90% YoY</div>
+  </div>
+  <div class="kpi">
+    <div class="label">Peak Keywords</div>
+    <div class="value">633</div>
+    <div class="sub">Aug 2024 · down 27% to today</div>
+  </div>
+</div>
+
+<div class="card" style="margin-bottom:18px">
+  <div style="font-weight:600;font-size:13px;margin-bottom:3px;color:#1a1a18">Organic Keywords &amp; Estimated Traffic — 24-Month Trend</div>
+  <div style="font-size:11px;color:#999;margin-bottom:14px">Semrush monthly snapshot &nbsp;·&nbsp; Traffic is modeled (not actual clicks) &nbsp;·&nbsp; Feb 2025 spike capped at 350 — actual Semrush anomaly was 1,214</div>
+  <div class="chart-wrap"><canvas id="semrushTrendChart"></canvas></div>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:3px;color:#1a1a18">Position Distribution</div>
+    <div style="font-size:11px;color:#999;margin-bottom:14px">459 total keywords &nbsp;·&nbsp; 337 (73%) below position 20</div>
+    <div class="chart-wrap short"><canvas id="posDistChart"></canvas></div>
+    <div class="insight" style="background:#FFF0E8;border-color:#FFCCAA;color:#7a2800;margin-top:12px">
+      ⚠️ <strong>73% of keywords rank below position 20.</strong> Strong in hyper-local McLean/Potomac terms but minimal reach beyond that. Title &amp; meta rewrites on the surviving service pages are the fastest path to more clicks from existing impressions.
+    </div>
+  </div>
+  <div class="card">
+    <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">Top Non-Branded Opportunities <span class="src-badge src-smr" style="font-size:9px;padding:2px 8px">📈 Semrush</span></div>
+    <table>
+      <thead><tr><th>Keyword</th><th class="num">Pos</th><th class="num">Vol/mo</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>luxury pool contractor</td><td class="num"><span class="pos-badge pos-top">#4</span></td><td class="num">390</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:100%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>shenandoah retreat</td><td class="num"><span class="pos-badge pos-mid">#10</span></td><td class="num">320</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:82%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>deck builder washington dc</td><td class="num"><span class="pos-badge pos-mid">#10</span></td><td class="num">210</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:54%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>landscape design arlington va</td><td class="num"><span class="pos-badge pos-low">#10</span></td><td class="num">140</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:36%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>landscape design mclean va</td><td class="num"><span class="pos-badge pos-top">#1</span></td><td class="num">140</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:36%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>landscape design arlington</td><td class="num"><span class="pos-badge pos-mid">#8</span></td><td class="num">140</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:36%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>modern farmhouse backyard</td><td class="num"><span class="pos-badge pos-top">#5</span></td><td class="num">110</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:28%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>landscape lighting potomac md</td><td class="num"><span class="pos-badge pos-top">#4</span></td><td class="num">110</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:28%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>backyard renovation in loudoun</td><td class="num"><span class="pos-badge pos-top">#1</span></td><td class="num">110</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:28%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>deck and patio contractors dc</td><td class="num"><span class="pos-badge pos-top">#3</span></td><td class="num">90</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:23%;background:#FF6B35"></div></div></td></tr>
+        <tr><td>deck contractors washington dc</td><td class="num"><span class="pos-badge pos-mid">#7</span></td><td class="num">90</td><td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:23%;background:#FF6B35"></div></div></td></tr>
+      </tbody>
+    </table>
+    <div class="insight" style="background:#FFF0E8;border-color:#FFCCAA;color:#7a2800;margin-top:12px">
+      🏆 <strong>luxury pool contractor (pos 4, 390/mo)</strong> is the strongest non-branded opportunity — position 4 drives real clicks and 390/mo is meaningful for a luxury service.
+    </div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+Chart.defaults.font.family = "-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
+var trendChartInst, organicChartInst;
+
+(function(){
+  var ctx = document.getElementById('trendChart').getContext('2d');
+  trendChartInst = new Chart(ctx, {
+    type:'bar',
+    data:{ labels:["Jan '25", "Feb '25", "Mar '25", "Apr '25", "May '25", "Jun '25", "Jul '25", "Aug '25", "Sep '25", "Oct '25", "Nov '25", "Dec '25", "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26", "Jun '26"], datasets:[{"label": "Paid Social", "data": [0, 0, 0, 0, 0, 0, 0, 0, 962, 1598, 1394, 1604, 1273, 2, 1, 0, 6, 281], "backgroundColor": "#E91E63", "stack": "s"}, {"label": "Unassigned", "data": [18, 50, 1, 12, 7, 19, 8, 18, 158, 41, 339, 193, 113, 73, 6, 33, 73, 1], "backgroundColor": "#90A4AE", "stack": "s"}, {"label": "Organic Social", "data": [11, 39, 7, 11, 10, 14, 29, 21, 57, 64, 24, 40, 37, 240, 231, 298, 348, 548], "backgroundColor": "#FF7043", "stack": "s"}, {"label": "Referral", "data": [16, 13, 13, 27, 9, 40, 24, 7, 14, 13, 22, 68, 63, 17, 27, 35, 42, 49], "backgroundColor": "#8E24AA", "stack": "s"}, {"label": "AI Assistants", "data": [2, 1, 9, 9, 18, 16, 7, 9, 16, 27, 9, 10, 11, 9, 13, 5, 4, 14], "backgroundColor": "#00BCD4", "stack": "s"}, {"label": "Paid Other", "data": [0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 15, 40, 19, 0, 0, 0, 0, 0], "backgroundColor": "#FFA726", "stack": "s"}, {"label": "Direct", "data": [268, 240, 218, 208, 218, 365, 229, 242, 421, 1009, 2828, 2706, 2682, 1252, 459, 298, 497, 679], "backgroundColor": "#5C6BC0", "stack": "s"}, {"label": "Organic Search", "data": [388, 339, 478, 416, 434, 443, 393, 391, 437, 443, 345, 244, 388, 281, 399, 453, 448, 468], "backgroundColor": "#43A047", "stack": "s"}] },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{position:'bottom',labels:{boxWidth:12,padding:10,font:{size:11}}},
+        tooltip:{callbacks:{label:function(c){return ' '+c.dataset.label+': '+c.parsed.y.toLocaleString();}}}
+      },
+      scales:{
+        x:{stacked:true,grid:{display:false},ticks:{font:{size:11}}},
+        y:{stacked:true,grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:11},callback:function(v){return v>=1000?(v/1000).toFixed(1)+'k':v;}}}
+      }
+    }
+  });
+})();
+
+(function(){
+  var ctx = document.getElementById('organicChart').getContext('2d');
+  organicChartInst = new Chart(ctx, {
+    type:'line',
+    data:{
+      labels:["Jan '25", "Feb '25", "Mar '25", "Apr '25", "May '25", "Jun '25", "Jul '25", "Aug '25", "Sep '25", "Oct '25", "Nov '25", "Dec '25", "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26", "Jun '26"],
+      datasets:[{label:'Organic Search Sessions',data:[388, 339, 478, 416, 434, 443, 393, 391, 437, 443, 345, 244, 388, 281, 399, 453, 448, 468],borderColor:'#43A047',backgroundColor:'rgba(67,160,71,0.1)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#43A047',fill:true,tension:0.3}]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return ' Organic Search: '+c.parsed.y.toLocaleString();}}}},
+      scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:11}}}}
+    }
+  });
+})();
+
+function switchChart(mode){
+  var isStack = mode==='stack';
+  document.getElementById('stackWrap').style.display   = isStack ? '' : 'none';
+  document.getElementById('organicWrap').style.display = isStack ? 'none' : '';
+  document.getElementById('showAllBtn').style.display  = isStack ? '' : 'none';
+  document.getElementById('stackHint').style.display   = isStack ? '' : 'none';
+  document.getElementById('btnStack').classList.toggle('active', isStack);
+  document.getElementById('btnOrganic').classList.toggle('active', !isStack);
+}
+function showAllChannels(){
+  if(!trendChartInst) return;
+  trendChartInst.data.datasets.forEach(function(_,i){ trendChartInst.setDatasetVisibility(i,true); });
+  trendChartInst.update();
+}
+
+// GSC chart with annotation at property split (Feb 2026 = index 13)
+(function(){
+  var ctx = document.getElementById('gscChart').getContext('2d');
   new Chart(ctx, {
     type:'bar',
-    data:{labels:["Jan '25", "Feb '25", "Mar '25", "Apr '25", "May '25", "Jun '25", "Jul '25", "Aug '25", "Sep '25", "Oct '25", "Nov '25", "Dec '25", "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26", "Jun '26"],datasets:[{label:'AI Assistant Sessions',data:[2, 1, 9, 9, 18, 16, 7, 9, 16, 27, 9, 10, 11, 9, 13, 5, 4, 14],backgroundColor:'#00BCD4'}]},
-    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:11}}}}}
+    data:{
+      labels:["Jan '25", "Feb '25", "Mar '25", "Apr '25", "May '25", "Jun '25", "Jul '25", "Aug '25", "Sep '25", "Oct '25", "Nov '25", "Dec '25", "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26", "Jun '26"],
+      datasets:[
+        {label:'Impressions',data:[70366, 132443, 158907, 176390, 163094, 133094, 137627, 128337, 81222, 57521, 51857, 56210, 79314, 66111, 53735, 51006, 50413, 48793],backgroundColor:'rgba(25,118,210,0.18)',borderColor:'#1976D2',borderWidth:1,yAxisID:'yImps',order:2},
+        {label:'Clicks',data:[140, 230, 260, 212, 248, 257, 237, 220, 253, 235, 182, 131, 220, 184, 273, 300, 265, 285],type:'line',borderColor:'#43A047',backgroundColor:'rgba(67,160,71,0.12)',borderWidth:2,pointRadius:4,pointBackgroundColor:'#43A047',fill:true,tension:0.3,yAxisID:'yClicks',order:1}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{position:'bottom',labels:{boxWidth:12,padding:10,font:{size:11}}},
+        annotation:{
+          annotations:{
+            splitLine:{
+              type:'line',
+              xMin:13 - 0.5,
+              xMax:13 - 0.5,
+              borderColor:'rgba(180,0,0,0.5)',
+              borderWidth:2,
+              borderDash:[5,4],
+              label:{content:'Property split',display:true,position:'start',font:{size:10},color:'rgba(180,0,0,0.7)',backgroundColor:'rgba(255,255,255,0.8)'}
+            }
+          }
+        }
+      },
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:11}}},
+        yImps:{type:'linear',position:'right',grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:11},callback:function(v){return v>=1000?(v/1000).toFixed(0)+'k':v;}}},
+        yClicks:{type:'linear',position:'left',grid:{display:false},ticks:{font:{size:11}}}
+      }
+    }
   });
 })();
 
