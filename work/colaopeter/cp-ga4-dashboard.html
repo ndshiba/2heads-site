@@ -454,154 +454,7 @@ function showAllChannels(){
   });
 })();
 
-// ── AI Trend combo chart (sessions + % of traffic) ──
-(function(){
-  var ctx = document.getElementById('aiTrendChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ["Jan '25","Feb '25","Mar '25","Apr '25","May '25","Jun '25","Jul '25","Aug '25",
-               "Sep '25","Oct '25","Nov '25","Dec '25","Jan '26","Feb '26","Mar '26","Apr '26","May '26","Jun '26"],
-      datasets: [
-        {
-          label: 'AI Sessions',
-          data: [2,1,9,9,18,16,7,9,16,27,9,10,11,9,13,5,4,14],
-          backgroundColor: 'rgba(0,188,212,0.35)',
-          borderColor: '#00838F',
-          borderWidth: 1.5,
-          borderRadius: 3,
-          yAxisID: 'ySess',
-          order: 2
-        },
-        {
-          label: '% of Total Traffic',
-          data: [0.28,0.15,1.24,1.32,2.59,1.78,1.01,1.31,0.77,0.85,0.18,0.20,0.24,0.48,1.14,0.45,0.28,0.69],
-          type: 'line',
-          borderColor: '#FF6B35',
-          backgroundColor: 'rgba(255,107,53,0.07)',
-          borderWidth: 2,
-          pointRadius: 4,
-          pointBackgroundColor: '#FF6B35',
-          pointHoverRadius: 6,
-          fill: true,
-          tension: 0.4,
-          yAxisID: 'yPct',
-          order: 1
-        }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {position:'bottom',labels:{boxWidth:12,padding:12,font:{size:11}}},
-        tooltip: {callbacks:{label:function(c){
-          if(c.datasetIndex===1) return ' % of traffic: '+c.parsed.y.toFixed(2)+'%';
-          return ' AI sessions: '+c.parsed.y;
-        }}},
-        annotation: {
-          annotations: {
-            peakLabel: {
-              type: 'label',
-              xValue: "May '25",
-              yValue: 18,
-              yAdjust: -18,
-              yScaleID: 'ySess',
-              content: ['Peak: 2.59%'],
-              color: '#00838F',
-              font: {size: 10, weight: 'bold'},
-              backgroundColor: 'rgba(224,247,250,0.9)',
-              borderColor: '#80DEEA',
-              borderWidth: 1,
-              borderRadius: 4,
-              padding: {x:5,y:3}
-            }
-          }
-        }
-      },
-      scales: {
-        x: {grid:{display:false}, ticks:{font:{size:10}, maxRotation:45}},
-        ySess: {
-          type: 'linear', position: 'left',
-          grid: {color:'rgba(0,0,0,0.05)'},
-          ticks: {font:{size:11}, stepSize:5},
-          title: {display:true, text:'Sessions', font:{size:10}, color:'#00838F'}
-        },
-        yPct: {
-          type: 'linear', position: 'right',
-          min: 0, suggestedMax: 3.5,
-          grid: {display:false},
-          ticks: {font:{size:11}, callback:function(v){return v.toFixed(1)+'%';}},
-          title: {display:true, text:'% of Traffic', font:{size:10}, color:'#FF6B35'}
-        }
-      }
-    }
-  });
-})();
-
-// ── AI Tool breakdown — June 2026 ──
-(function(){
-  var ctx = document.getElementById('aiToolChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['ChatGPT', 'Gemini'],
-      datasets: [{
-        label: 'Sessions',
-        data: [12, 2],
-        backgroundColor: ['rgba(0,188,212,0.5)', 'rgba(25,118,210,0.5)'],
-        borderColor: ['#00838F','#1565C0'],
-        borderWidth: 2,
-        borderRadius: 4
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {display:false},
-        tooltip: {callbacks:{label:function(c){return ' '+c.parsed.x+' sessions';}}}
-      },
-      scales: {
-        x: {grid:{color:'rgba(0,0,0,0.05)'}, ticks:{font:{size:12}, stepSize:2}, suggestedMax:14},
-        y: {grid:{display:false}, ticks:{font:{size:13,weight:'600'}}}
-      }
-    }
-  });
-})();
-
-// ── AI Landing pages — June 2026 ──
-(function(){
-  var ctx = document.getElementById('aiPagesChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['/ (home)','portfolio','about','our-team','services','fire-water','before-after','media-awards','deck-builder','pool-houses','sanctuary'],
-      datasets: [{
-        label: 'Page visits from AI',
-        data: [6,3,2,2,1,1,1,1,1,1,1],
-        backgroundColor: 'rgba(0,188,212,0.4)',
-        borderColor: '#00838F',
-        borderWidth: 1.5,
-        borderRadius: 3
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {display:false},
-        tooltip: {callbacks:{label:function(c){return ' '+c.parsed.x+' page visit(s) from AI';}}}
-      },
-      scales: {
-        x: {grid:{color:'rgba(0,0,0,0.05)'}, ticks:{font:{size:11}, stepSize:1}, suggestedMax:7},
-        y: {grid:{display:false}, ticks:{font:{size:10}}}
-      }
-    }
-  });
-})();ad>
+d>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex, nofollow"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Colao &amp; Peter — GA4 + Search Console Dashboard</title>
@@ -1154,6 +1007,160 @@ function showAllChannels(){
   });
 })();
 
+
+// ── AI Trend combo chart (sessions + % of traffic) ──
+(function(){
+  var ctx = document.getElementById('aiTrendChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ["Jan '25","Feb '25","Mar '25","Apr '25","May '25","Jun '25","Jul '25","Aug '25",
+               "Sep '25","Oct '25","Nov '25","Dec '25","Jan '26","Feb '26","Mar '26","Apr '26","May '26","Jun '26"],
+      datasets: [
+        {
+          label: 'AI Sessions',
+          data: [2,1,9,9,18,16,7,9,16,27,9,10,11,9,13,5,4,14],
+          backgroundColor: 'rgba(0,188,212,0.35)',
+          borderColor: '#00838F',
+          borderWidth: 1.5,
+          borderRadius: 3,
+          yAxisID: 'ySess',
+          order: 2
+        },
+        {
+          label: '% of Total Traffic',
+          data: [0.28,0.15,1.24,1.32,2.59,1.78,1.01,1.31,0.77,0.85,0.18,0.20,0.24,0.48,1.14,0.45,0.28,0.69],
+          type: 'line',
+          borderColor: '#FF6B35',
+          backgroundColor: 'rgba(255,107,53,0.07)',
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: '#FF6B35',
+          pointHoverRadius: 6,
+          fill: true,
+          tension: 0.4,
+          yAxisID: 'yPct',
+          order: 1
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {position:'bottom',labels:{boxWidth:12,padding:12,font:{size:11}}},
+        tooltip: {callbacks:{label:function(c){
+          if(c.datasetIndex===1) return ' % of traffic: '+c.parsed.y.toFixed(2)+'%';
+          return ' AI sessions: '+c.parsed.y;
+        }}},
+        annotation: {
+          annotations: {
+            peakLine: {
+              type: 'line',
+              xMin: 4,
+              xMax: 4,
+              borderColor: 'rgba(0,131,143,0.5)',
+              borderWidth: 2,
+              borderDash: [4,4],
+              label: {
+                content: "Peak: May '25 · 2.59%",
+                display: true,
+                position: 'start',
+                font: {size: 10},
+                color: '#00838F',
+                backgroundColor: 'rgba(224,247,250,0.92)',
+                borderColor: '#80DEEA',
+                borderWidth: 1,
+                borderRadius: 4,
+                padding: 4
+              }
+            }
+          }
+        }
+      },
+      scales: {
+        x: {grid:{display:false}, ticks:{font:{size:10}, maxRotation:45}},
+        ySess: {
+          type: 'linear', position: 'left',
+          grid: {color:'rgba(0,0,0,0.05)'},
+          ticks: {font:{size:11}, stepSize:5},
+          title: {display:true, text:'Sessions', font:{size:10}, color:'#00838F'}
+        },
+        yPct: {
+          type: 'linear', position: 'right',
+          min: 0, suggestedMax: 3.5,
+          grid: {display:false},
+          ticks: {font:{size:11}, callback:function(v){return v.toFixed(1)+'%';}},
+          title: {display:true, text:'% of Traffic', font:{size:10}, color:'#FF6B35'}
+        }
+      }
+    }
+  });
+})();
+
+// ── AI Tool breakdown — June 2026 ──
+(function(){
+  var ctx = document.getElementById('aiToolChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['ChatGPT', 'Gemini'],
+      datasets: [{
+        label: 'Sessions',
+        data: [12, 2],
+        backgroundColor: ['rgba(0,188,212,0.5)', 'rgba(25,118,210,0.5)'],
+        borderColor: ['#00838F','#1565C0'],
+        borderWidth: 2,
+        borderRadius: 4
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {display:false},
+        tooltip: {callbacks:{label:function(c){return ' '+c.parsed.x+' sessions';}}}
+      },
+      scales: {
+        x: {grid:{color:'rgba(0,0,0,0.05)'}, ticks:{font:{size:12}, stepSize:2}, suggestedMax:14},
+        y: {grid:{display:false}, ticks:{font:{size:13,weight:'600'}}}
+      }
+    }
+  });
+})();
+
+// ── AI Landing pages — June 2026 ──
+(function(){
+  var ctx = document.getElementById('aiPagesChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['/ (home)','portfolio','about','our-team','services','fire-water','before-after','media-awards','deck-builder','pool-houses','sanctuary'],
+      datasets: [{
+        label: 'Page visits from AI',
+        data: [6,3,2,2,1,1,1,1,1,1,1],
+        backgroundColor: 'rgba(0,188,212,0.4)',
+        borderColor: '#00838F',
+        borderWidth: 1.5,
+        borderRadius: 3
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {display:false},
+        tooltip: {callbacks:{label:function(c){return ' '+c.parsed.x+' page visit(s) from AI';}}}
+      },
+      scales: {
+        x: {grid:{color:'rgba(0,0,0,0.05)'}, ticks:{font:{size:11}, stepSize:1}, suggestedMax:7},
+        y: {grid:{display:false}, ticks:{font:{size:10}}}
+      }
+    }
+  });
+})();
 </script>
 </body>
 </html>
