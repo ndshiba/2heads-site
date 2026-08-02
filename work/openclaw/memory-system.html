@@ -513,7 +513,7 @@
           <text x="40" y="44" class="svg-title">OpenClaw memory system: structured truth plus prose recall</text>
           <text x="40" y="68" class="svg-subtitle">No LLM-extracted graph facts. Config facts come from parsers; the active model summarizes after retrieval.</text>
 
-          <rect x="36" y="92" width="1108" height="160" rx="18" class="zone"></rect>
+          <path d="M54 92 H1126 Q1144 92 1144 110 V234 Q1144 252 1126 252 H54 Q36 252 36 234 V110 Q36 92 54 92 Z" class="zone"></path>
           <text x="58" y="122" class="node-tiny">Request layer</text>
 
           <rect x="86" y="146" width="250" height="74" rx="8" class="node neutral"></rect>
@@ -532,40 +532,40 @@
           <path d="M 336 183 C 390 183, 412 183, 466 183" class="edge-strong" marker-end="url(#arrow-strong)"></path>
           <path d="M 716 183 C 766 183, 786 183, 836 183" class="edge-strong" marker-end="url(#arrow-strong)"></path>
 
-          <rect x="36" y="286" width="532" height="346" rx="18" class="zone"></rect>
+          <path d="M54 286 H550 Q568 286 568 304 V614 Q568 632 550 632 H54 Q36 632 36 614 V304 Q36 286 54 286 Z" class="zone"></path>
           <text x="58" y="316" class="node-tiny">Deterministic ConfigGraph</text>
 
           <rect x="72" y="354" width="160" height="80" rx="8" class="node source"></rect>
           <text x="96" y="382" class="node-text">openclaw.json</text>
-          <text x="96" y="404" class="node-small">Agents, models, fallbacks</text>
-          <text x="96" y="424" class="node-small">tools and providers</text>
+          <text x="96" y="404" class="node-small">Agents + models</text>
+          <text x="96" y="424" class="node-small">Fallbacks + tools</text>
 
           <rect x="72" y="458" width="160" height="80" rx="8" class="node source"></rect>
           <text x="96" y="486" class="node-text">state SQLite</text>
-          <text x="96" y="508" class="node-small">Crons, sessions, DB rows</text>
-          <text x="96" y="528" class="node-small">subagent runs</text>
+          <text x="96" y="508" class="node-small">Crons + sessions</text>
+          <text x="96" y="528" class="node-small">DB rows + runs</text>
 
           <rect x="72" y="562" width="160" height="80" rx="8" class="node source"></rect>
           <text x="96" y="590" class="node-text">Shared docs</text>
-          <text x="96" y="612" class="node-small">projects, kb/wiki</text>
+          <text x="96" y="612" class="node-small">Projects + KB</text>
           <text x="96" y="632" class="node-small">MEMORY pointers</text>
 
           <rect x="300" y="442" width="180" height="108" rx="8" class="node process"></rect>
           <text x="324" y="470" class="node-text">openclaw-kg build</text>
-          <text x="324" y="492" class="node-small">Typed nodes and edges</text>
-          <text x="324" y="512" class="node-small">Secret redaction</text>
-          <text x="324" y="532" class="node-small">Atomic rebuild lock</text>
+          <text x="324" y="492" class="node-small">Typed graph facts</text>
+          <text x="324" y="512" class="node-small">Redacted metadata</text>
+          <text x="324" y="532" class="node-small">Atomic build lock</text>
 
           <rect x="300" y="582" width="180" height="72" rx="8" class="node storage"></rect>
           <text x="324" y="610" class="node-text">openclaw-kg.sqlite</text>
-          <text x="324" y="632" class="node-small">Derived, rebuildable graph</text>
+          <text x="324" y="632" class="node-small">Rebuildable graph DB</text>
 
           <path d="M 232 394 C 262 394, 270 472, 300 472" class="edge" marker-end="url(#arrow)"></path>
           <path d="M 232 498 C 262 498, 270 496, 300 496" class="edge" marker-end="url(#arrow)"></path>
           <path d="M 232 602 C 262 602, 270 522, 300 522" class="edge" marker-end="url(#arrow)"></path>
           <path d="M 390 550 L 390 582" class="edge" marker-end="url(#arrow)"></path>
 
-          <rect x="612" y="286" width="532" height="346" rx="18" class="zone"></rect>
+          <path d="M630 286 H1126 Q1144 286 1144 304 V614 Q1144 632 1126 632 H630 Q612 632 612 614 V304 Q612 286 630 286 Z" class="zone"></path>
           <text x="634" y="316" class="node-tiny">Existing text memory</text>
 
           <rect x="650" y="354" width="178" height="80" rx="8" class="node source"></rect>
@@ -575,12 +575,12 @@
 
           <rect x="650" y="458" width="178" height="80" rx="8" class="node source"></rect>
           <text x="674" y="486" class="node-text">Daily notes</text>
-          <text x="674" y="508" class="node-small">Chronology and flushes</text>
+          <text x="674" y="508" class="node-small">Chronology + logs</text>
           <text x="674" y="528" class="node-small">Recent session facts</text>
 
           <rect x="650" y="562" width="178" height="80" rx="8" class="node source"></rect>
           <text x="674" y="590" class="node-text">Projects and KB</text>
-          <text x="674" y="612" class="node-small">Current state, runbooks</text>
+          <text x="674" y="612" class="node-small">Current runbooks</text>
           <text x="674" y="632" class="node-small">Durable rules</text>
 
           <rect x="896" y="430" width="178" height="108" rx="8" class="node process"></rect>
@@ -621,10 +621,10 @@
           <path d="M 985 654 C 985 690, 632 660, 606 704" class="edge" marker-end="url(#arrow)"></path>
           <path d="M 684 750 L 722 750" class="edge-strong" marker-end="url(#arrow-strong)"></path>
 
-          <rect x="86" y="704" width="124" height="92" rx="8" class="node risk"></rect>
-          <text x="110" y="732" class="node-text">Stale scan</text>
-          <text x="110" y="754" class="node-small">8 nonfatal</text>
-          <text x="110" y="774" class="node-small">issues surfaced</text>
+          <rect x="76" y="704" width="156" height="92" rx="8" class="node risk"></rect>
+          <text x="100" y="732" class="node-text">Stale scan</text>
+          <text x="100" y="754" class="node-small">8 nonfatal</text>
+          <text x="100" y="774" class="node-small">issues found</text>
           <path d="M 300 618 C 220 650, 148 662, 148 704" class="edge" marker-end="url(#arrow)"></path>
 
           <rect x="970" y="704" width="126" height="92" rx="8" class="node neutral"></rect>
@@ -633,8 +633,9 @@
           <text x="994" y="774" class="node-small">for claims</text>
           <path d="M 985 654 C 1038 674, 1033 680, 1033 704" class="edge-soft" marker-end="url(#arrow)"></path>
 
-          <rect x="304" y="842" width="572" height="48" rx="8" class="node neutral"></rect>
-          <text x="330" y="872" class="node-text">Rule of thumb: structured config facts come from parsers; prose explains why those facts exist.</text>
+          <rect x="304" y="832" width="572" height="64" rx="8" class="node neutral"></rect>
+          <text x="330" y="860" class="node-text">Rule: config facts come from parsers.</text>
+          <text x="330" y="880" class="node-small">Prose explains why those facts exist.</text>
         </svg>
       </div>
     </section>
