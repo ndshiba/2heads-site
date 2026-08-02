@@ -381,7 +381,9 @@
     .button-link {
       display: inline-flex;
       align-items: center;
-      min-height: 38px;
+      justify-content: center;
+      min-height: 42px;
+      min-width: 0;
       padding: 9px 12px;
       border: 1px solid var(--border);
       border-radius: 4px;
@@ -389,6 +391,7 @@
       text-decoration: none;
       font-weight: 680;
       background: #ffffff;
+      overflow-wrap: anywhere;
     }
 
     .button-link.primary {
@@ -441,6 +444,10 @@
 
       main {
         padding: 34px 16px 52px;
+      }
+
+      .button-link {
+        flex: 1 1 100%;
       }
     }
   </style>
@@ -783,7 +790,7 @@
           <p><code>openclaw-kg why model openai/gpt-5.5 --json</code></p>
         </article>
       </div>
-      <div class="link-row">
+      <div class="link-row" aria-label="Related AI system pages">
         <a class="button-link primary" href="/work/openclaw/memory-system.html">View the system diagram</a>
         <a class="button-link" href="/how-we-use-ai.html">How 2.0Heads uses AI</a>
       </div>

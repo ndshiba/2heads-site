@@ -304,6 +304,35 @@
       background: var(--panel);
     }
 
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      min-width: 0;
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 680;
+      background: #ffffff;
+      overflow-wrap: anywhere;
+    }
+
+    .button-link.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #ffffff;
+    }
+
     code {
       font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
       font-size: 0.9em;
@@ -448,6 +477,10 @@
       .grid,
       .query-strip {
         grid-template-columns: 1fr;
+      }
+
+      .button-link {
+        flex: 1 1 100%;
       }
 
       .mobile-flow {
@@ -767,11 +800,15 @@
         </article>
       </div>
       <div class="callout">
-        <strong>Why this exists</strong>
+        <strong>Related AI system pages</strong>
         <p>
-          The decision rationale lives on the companion explainer:
-          <a href="/work/openclaw/why-openclaw-kg.html">why OpenClaw uses <code>openclaw-kg.sqlite</code></a>.
+          The diagram is one part of the story. The companion pages explain the database decision
+          and the public-facing AI operating model.
         </p>
+      </div>
+      <div class="link-row" aria-label="Related AI system pages">
+        <a class="button-link primary" href="/work/openclaw/why-openclaw-kg.html">Why openclaw-kg.sqlite</a>
+        <a class="button-link" href="/how-we-use-ai.html">How 2.0Heads uses AI</a>
       </div>
     </section>
 

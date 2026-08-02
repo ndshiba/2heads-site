@@ -373,6 +373,46 @@
     margin: 0;
   }
 
+  /* ── Related pages ── */
+  .related-pages {
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1.5px solid var(--rule);
+  }
+  .related-pages p {
+    font-size: 15px;
+    max-width: 640px;
+  }
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .button-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    min-width: 0;
+    padding: 9px 12px;
+    border: 1.5px solid var(--rule);
+    border-radius: 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 680;
+    background: var(--white);
+    overflow-wrap: anywhere;
+  }
+  .button-link.primary {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #ffffff;
+  }
+  .button-link:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  }
+
   /* ── Closing ── */
   .closing {
     margin-top: 64px;
@@ -418,6 +458,7 @@
     .body-wrap { padding: 0 24px 60px; }
     footer { padding: 24px 24px 40px; }
     .closing { padding: 28px 24px; }
+    .button-link { flex: 1 1 100%; }
   }
 </style>
 </head>
@@ -636,6 +677,17 @@
         </div>
       </a>
 
+    </div>
+  </div>
+
+  <!-- Related AI architecture pages -->
+  <div class="related-pages">
+    <div class="section-label">Related AI architecture pages</div>
+    <h2>The system behind the workflow.</h2>
+    <p>The client-facing process depends on a stricter internal memory system: prose recall for history, ConfigGraph for operational wiring, and model synthesis only after evidence is retrieved.</p>
+    <div class="link-row" aria-label="Related AI architecture pages">
+      <a class="button-link primary" href="/work/openclaw/memory-system.html">View the system diagram</a>
+      <a class="button-link" href="/work/openclaw/why-openclaw-kg.html">Why openclaw-kg.sqlite</a>
     </div>
   </div>
 
