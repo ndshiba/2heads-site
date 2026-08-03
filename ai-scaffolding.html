@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Scaffolding - Shiba &amp; Associates</title>
+<meta name="description" content="A practical explanation of AI scaffolding: the structure, context, rules, tools, memory, and verification that turn AI from a prompt into a repeatable work system.">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+    --ink-muted: #888;
+    --rule: #e4e2dc;
+    --bg: #ffffff;
+    --white: #ffffff;
+    --accent: #c8a96e;
+    --accent-soft: rgba(200, 169, 110, 0.1);
+    --panel: #f7f7f4;
+    --blue: #e7f0ff;
+    --green: #e7f6ed;
+    --gold: #fff2cc;
+    --lavender: #efe8ff;
+    --rose: #ffe8e1;
+    --shadow: 0 18px 54px rgba(0,0,0,0.07);
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 2.5rem;
+    border-bottom: 1px solid var(--rule);
+    background: var(--white);
+  }
+
+  .logo {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .logo span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active { color: var(--accent); }
+
+  .nav-cta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 0.45rem 1.1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .nav-cta:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  header {
+    border-bottom: 1.5px solid var(--rule);
+    padding: 54px 40px 46px;
+    background: var(--white);
+  }
+
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .byline {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  h1 {
+    max-width: 840px;
+    font-size: clamp(34px, 5vw, 64px);
+    font-weight: 850;
+    line-height: 1.03;
+    letter-spacing: 0;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+
+  .lead {
+    max-width: 760px;
+    font-size: 18px;
+    color: var(--ink-soft);
+  }
+
+  .body-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px 86px;
+  }
+
+  .section {
+    margin-top: 64px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--ink-muted);
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 26px;
+    font-weight: 850;
+    line-height: 1.18;
+    letter-spacing: 0;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  .callout {
+    border: 1px solid rgba(200,169,110,0.5);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    background: #fffaf0;
+    padding: 20px 22px;
+    margin-top: 28px;
+  }
+
+  .callout strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--ink);
+  }
+
+  .diagram {
+    margin-top: 32px;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+
+  .diagram-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--panel);
+  }
+
+  .diagram-head strong { display: block; }
+  .diagram-head span { color: var(--ink-muted); font-size: 14px; }
+
+  .scaffold-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .scaffold-piece {
+    position: relative;
+    min-height: 172px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 42px 14px 14px;
+  }
+
+  .scaffold-piece::before {
+    content: attr(data-step);
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--ink);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .scaffold-piece.goal { background: var(--blue); }
+  .scaffold-piece.context { background: var(--lavender); }
+  .scaffold-piece.rules { background: var(--gold); }
+  .scaffold-piece.tools { background: var(--green); }
+  .scaffold-piece.memory { background: #f0ede3; }
+  .scaffold-piece.verify { background: var(--rose); }
+
+  .scaffold-piece p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .bridge {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 58px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    margin-top: 28px;
+  }
+
+  .bridge-card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 22px;
+    background: var(--white);
+  }
+
+  .bridge-card.weak {
+    background: #fbfbfa;
+  }
+
+  .bridge-card.strong {
+    background: var(--accent-soft);
+    border-color: rgba(200,169,110,0.42);
+  }
+
+  .bridge-arrow {
+    height: 58px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    display: grid;
+    place-items: center;
+    color: var(--accent);
+    font-weight: 900;
+    font-size: 24px;
+    background: var(--white);
+  }
+
+  .layer-stack {
+    display: grid;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .layer {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: var(--white);
+  }
+
+  .layer strong {
+    color: var(--ink);
+  }
+
+  .layer span {
+    color: var(--ink-soft);
+  }
+
+  .example {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 18px;
+    margin-top: 26px;
+  }
+
+  .prompt-box {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 20px;
+    background: var(--white);
+  }
+
+  .prompt-box.good {
+    background: var(--accent-soft);
+    border-color: rgba(200,169,110,0.42);
+  }
+
+  .prompt-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    font-weight: 850;
+    color: var(--ink-muted);
+    margin-bottom: 10px;
+  }
+
+  .prompt-text {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .check-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 26px;
+  }
+
+  .check-card {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    background: var(--white);
+    padding: 20px;
+  }
+
+  .check-card p {
+    font-size: 15px;
+  }
+
+  .related-pages {
+    margin-top: 70px;
+    padding: 30px;
+    border-radius: 8px;
+    background: var(--panel);
+    border: 1px solid var(--rule);
+  }
+
+  .link-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .button-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 9px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 700;
+    background: var(--white);
+  }
+
+  .button-link.primary {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: #fff;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 28px 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+  }
+
+  footer a {
+    color: #777;
+    text-decoration: none;
+  }
+
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 900px) {
+    .scaffold-grid,
+    .check-grid,
+    .example,
+    .bridge {
+      grid-template-columns: 1fr;
+    }
+
+    .bridge-arrow {
+      width: 58px;
+      margin: 0 auto;
+      transform: rotate(90deg);
+    }
+
+    .layer {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    nav {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 1.2rem 1.4rem;
+    }
+
+    header {
+      padding: 38px 22px 34px;
+    }
+
+    .body-wrap {
+      padding: 0 22px 64px;
+    }
+
+    .scaffold-grid {
+      padding: 14px;
+    }
+
+    .button-link {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="/">2.0<span>Heads</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="/geo.html">GEO</a>
+    <a class="nav-link" href="/google-ads-services.html">Google Ads</a>
+    <a class="nav-link active" href="/how-we-use-ai.html">How We Use AI</a>
+    <a class="nav-cta" href="mailto:shiba@2.0heads.com">Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div class="header-inner">
+    <div class="byline">AI Operating Concepts</div>
+    <h1>Scaffolding is how AI work stays useful, grounded, and repeatable.</h1>
+    <p class="lead">The model is not the whole system. Scaffolding is the structure around the model: the goal, context, rules, tools, memory, and verification that keep AI from freelancing.</p>
+  </div>
+</header>
+
+<div class="body-wrap">
+
+  <div class="section">
+    <div class="section-label">Plain English</div>
+    <h2>Scaffolding is the temporary structure that lets the real work stand up straight.</h2>
+    <p>In construction, scaffolding is not the building. It is the support structure that lets workers reach the right places, keep alignment, and build safely.</p>
+    <p>In AI work, scaffolding is everything you put around the model so it can produce a reliable outcome: clear instructions, source material, constraints, tools, checkpoints, examples, and verification.</p>
+    <div class="callout">
+      <strong>The short version</strong>
+      <p>Bad AI use asks the model to guess. Scaffolded AI work gives the model a job site, a blueprint, the right tools, and an inspection process.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Diagram</div>
+    <h2>The six pieces of useful AI scaffolding.</h2>
+    <div class="diagram" aria-label="Six pieces of AI scaffolding">
+      <div class="diagram-head">
+        <div>
+          <strong>From vague prompt to managed workflow</strong>
+          <span>Each piece reduces guesswork.</span>
+        </div>
+        <span>AI scaffolding loop</span>
+      </div>
+      <div class="scaffold-grid">
+        <div class="scaffold-piece goal" data-step="1">
+          <h3>Goal</h3>
+          <p>What should exist when the work is done, and what counts as success.</p>
+        </div>
+        <div class="scaffold-piece context" data-step="2">
+          <h3>Context</h3>
+          <p>Relevant files, data, examples, audience, brand voice, and current state.</p>
+        </div>
+        <div class="scaffold-piece rules" data-step="3">
+          <h3>Rules</h3>
+          <p>Boundaries, approval requirements, formats, privacy limits, and things not to touch.</p>
+        </div>
+        <div class="scaffold-piece tools" data-step="4">
+          <h3>Tools</h3>
+          <p>Search, browser, code, database queries, validators, render checks, and deployment systems.</p>
+        </div>
+        <div class="scaffold-piece memory" data-step="5">
+          <h3>Memory</h3>
+          <p>Project files, runbooks, KB notes, prior decisions, and reusable patterns.</p>
+        </div>
+        <div class="scaffold-piece verify" data-step="6">
+          <h3>Verification</h3>
+          <p>Tests, screenshots, live status checks, diffs, logs, and human review when needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Why it matters</div>
+    <h2>Scaffolding turns AI from a clever assistant into an operating system.</h2>
+    <div class="bridge">
+      <div class="bridge-card weak">
+        <h3>Unscaffolded prompt</h3>
+        <p class="prompt-text">"Make this better."</p>
+        <p>The model guesses the goal, the audience, the standard, the source of truth, and the definition of done.</p>
+      </div>
+      <div class="bridge-arrow">></div>
+      <div class="bridge-card strong">
+        <h3>Scaffolded task</h3>
+        <p class="prompt-text">"Read these files, preserve this voice, build this page, verify mobile layout, deploy through this repo, confirm the live URL, then document the result."</p>
+        <p>The model operates inside a workflow. The output becomes easier to trust.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">The layers</div>
+    <h2>Good scaffolding stacks the work in layers.</h2>
+    <p>Every serious AI workflow should move from intent to evidence to action to verification. Skipping layers is how you get confident nonsense.</p>
+    <div class="layer-stack">
+      <div class="layer">
+        <strong>1. Intent</strong>
+        <span>What are we trying to accomplish, for whom, and why does it matter?</span>
+      </div>
+      <div class="layer">
+        <strong>2. Evidence</strong>
+        <span>What files, data, screenshots, logs, examples, or live systems should ground the work?</span>
+      </div>
+      <div class="layer">
+        <strong>3. Constraints</strong>
+        <span>What must stay unchanged? What needs approval? What quality bar applies?</span>
+      </div>
+      <div class="layer">
+        <strong>4. Execution</strong>
+        <span>What tools should be used, in what order, to produce the artifact?</span>
+      </div>
+      <div class="layer">
+        <strong>5. Verification</strong>
+        <span>How do we prove the work actually functions in the real environment?</span>
+      </div>
+      <div class="layer">
+        <strong>6. Memory</strong>
+        <span>What should be written down so the next session starts from the truth?</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Example</div>
+    <h2>The same request, with and without scaffolding.</h2>
+    <div class="example">
+      <div class="prompt-box">
+        <div class="prompt-label">Weak prompt</div>
+        <p class="prompt-text">"Write a page explaining scaffolding."</p>
+        <p>The model can produce words, but it has no durable standard. It may be generic, off-brand, unverified, or disconnected from the rest of the site.</p>
+      </div>
+      <div class="prompt-box good">
+        <div class="prompt-label">Scaffolded task</div>
+        <p class="prompt-text">"Create a 2.0Heads HTML page explaining scaffolding for AI, use the existing site style, include a diagram, link it from other AI pages, deploy to GitHub Pages, verify live 200 and mobile layout, then document the change."</p>
+        <p>Now the work has a goal, context, design constraints, integration points, deployment path, and verification standard.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">What to ask for</div>
+    <h2>Useful scaffolding questions.</h2>
+    <div class="check-grid">
+      <div class="check-card">
+        <h3>Before the work</h3>
+        <p>What is the outcome? Who is it for? What source files or examples matter? What should not be changed?</p>
+      </div>
+      <div class="check-card">
+        <h3>During the work</h3>
+        <p>What should the AI inspect first? Which tools should it use? What intermediate checks should happen?</p>
+      </div>
+      <div class="check-card">
+        <h3>Before calling it done</h3>
+        <p>What proves it worked? Should there be tests, screenshots, a live URL, logs, a diff, or a written handoff?</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Bottom line</div>
+    <h2>Scaffolding is how you stop buying AI output and start building AI capability.</h2>
+    <p>A single prompt can create a draft. A scaffolded workflow can create a repeatable business process. That is the difference between AI as a novelty and AI as operating leverage.</p>
+  </div>
+
+  <div class="related-pages">
+    <div class="section-label">Related AI pages</div>
+    <h2>The surrounding system.</h2>
+    <p>Scaffolding sits between the client-facing AI workflow and the internal memory architecture that keeps agent work grounded over time.</p>
+    <div class="link-row" aria-label="Related AI pages">
+      <a class="button-link primary" href="/how-we-use-ai.html">How 2.0Heads uses AI</a>
+      <a class="button-link" href="/work/openclaw/memory-explained.html">C-level memory explainer</a>
+      <a class="button-link" href="/work/openclaw/memory-system.html">OpenClaw memory diagram</a>
+      <a class="button-link" href="/work/openclaw/why-openclaw-kg.html">Why ConfigGraph exists</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Shiba &amp; Associates / 2.0Heads &nbsp;&middot;&nbsp; 2.0heads.com
+  &nbsp;&middot;&nbsp; <a href="/privacy-policy.html">Privacy Policy</a>
+  &nbsp;&middot;&nbsp; <a href="/terms-of-service.html">Terms of Service</a>
+  &nbsp;&middot;&nbsp; <a href="/google-ads-services.html">Google Ads Services</a>
+  &nbsp;&middot;&nbsp; <a href="/geo.html">GEO</a>
+</footer>
+
+</body>
+</html>
