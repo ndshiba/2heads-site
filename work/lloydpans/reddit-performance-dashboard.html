@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>LloydPans Reddit Ads Performance Dashboard | 2.0Heads</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --bg: #ffffff;
+      --accent: #c8a96e;
+      --muted: #666666;
+      --border: rgba(0, 0, 0, 0.12);
+      --panel: #f7f7f4;
+      --panel-strong: #efeee8;
+      --green: #1f7a4d;
+      --green-soft: #e6f4ed;
+      --blue: #245f9f;
+      --blue-soft: #e8f1fb;
+      --red: #a4372f;
+      --red-soft: #f8e6e4;
+      --amber: #8b6200;
+      --amber-soft: #f8efd5;
+      --purple: #6a4c93;
+      --purple-soft: #eee7f7;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 760;
+      font-size: 1.08rem;
+      letter-spacing: 0;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.92rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--ink);
+      opacity: 1;
+    }
+
+    .cta {
+      border: 1px solid var(--accent);
+      color: var(--ink);
+      text-decoration: none;
+      padding: 9px 14px;
+      border-radius: 4px;
+      font-weight: 650;
+    }
+
+    .cta:hover {
+      background: var(--accent);
+      color: #ffffff;
+      opacity: 1;
+    }
+
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 34px 24px 72px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      margin-bottom: 26px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 760;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.15rem;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 14px 0 0;
+      max-width: 800px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .status-stack {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      min-width: 280px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--panel);
+      color: var(--ink);
+      font-size: 0.84rem;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .pill.ok {
+      background: var(--green-soft);
+      border-color: rgba(31, 122, 77, 0.25);
+      color: var(--green);
+    }
+
+    .pill.warn {
+      background: var(--amber-soft);
+      border-color: rgba(139, 98, 0, 0.25);
+      color: var(--amber);
+    }
+
+    .pill.bad {
+      background: var(--red-soft);
+      border-color: rgba(164, 55, 47, 0.22);
+      color: var(--red);
+    }
+
+    .section {
+      margin-top: 34px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.18rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      max-width: 660px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .kpi {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 15px 16px;
+      min-height: 118px;
+    }
+
+    .kpi .label {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 720;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .kpi .value {
+      font-size: 1.85rem;
+      font-weight: 760;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .kpi .sub {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 8px;
+    }
+
+    .kpi.green {
+      border-color: rgba(31, 122, 77, 0.28);
+      background: linear-gradient(180deg, #ffffff 0%, var(--green-soft) 170%);
+    }
+
+    .kpi.blue {
+      border-color: rgba(36, 95, 159, 0.28);
+      background: linear-gradient(180deg, #ffffff 0%, var(--blue-soft) 170%);
+    }
+
+    .kpi.red {
+      border-color: rgba(164, 55, 47, 0.25);
+      background: linear-gradient(180deg, #ffffff 0%, var(--red-soft) 170%);
+    }
+
+    .kpi.amber {
+      border-color: rgba(139, 98, 0, 0.25);
+      background: linear-gradient(180deg, #ffffff 0%, var(--amber-soft) 170%);
+    }
+
+    .board {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #ffffff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .board-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 15px 18px;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .board-title strong {
+      display: block;
+      font-size: 0.98rem;
+    }
+
+    .board-title span {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+      font-size: 0.88rem;
+    }
+
+    th {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      background: #fbfbf8;
+      color: #555555;
+      font-size: 0.74rem;
+      font-weight: 760;
+      letter-spacing: 0.04em;
+      text-align: left;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      vertical-align: middle;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    td.num,
+    th.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .row-label strong {
+      display: block;
+      color: var(--ink);
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .row-label span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.76rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+
+    .status.active {
+      color: var(--green);
+      background: var(--green-soft);
+    }
+
+    .status.processing {
+      color: var(--amber);
+      background: var(--amber-soft);
+    }
+
+    .status.paused {
+      color: #555555;
+      background: #eeeeee;
+    }
+
+    .status.bad {
+      color: var(--red);
+      background: var(--red-soft);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+      gap: 16px;
+    }
+
+    .funnel {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      gap: 10px;
+      padding: 18px;
+    }
+
+    .funnel-step {
+      position: relative;
+      min-height: 134px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 13px;
+      background: #ffffff;
+    }
+
+    .funnel-step::after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      width: 10px;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .funnel-step:last-child::after {
+      display: none;
+    }
+
+    .funnel-step .name {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 760;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .funnel-step .big {
+      margin-top: 10px;
+      font-size: 1.65rem;
+      font-weight: 760;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .funnel-step .detail {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 13px;
+      padding: 18px;
+    }
+
+    .bar-row {
+      display: grid;
+      grid-template-columns: 142px minmax(140px, 1fr) 76px;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+
+    .bar-track {
+      height: 10px;
+      border-radius: 4px;
+      background: #ececec;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: var(--accent);
+    }
+
+    .bar-fill.blue {
+      background: var(--blue);
+    }
+
+    .bar-fill.green {
+      background: var(--green);
+    }
+
+    .bar-fill.purple {
+      background: var(--purple);
+    }
+
+    .bar-value {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+    }
+
+    .notes {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+    }
+
+    .note {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 13px 14px;
+      background: #ffffff;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.92rem;
+    }
+
+    .note span {
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .note.warn {
+      border-color: rgba(139, 98, 0, 0.24);
+      background: var(--amber-soft);
+    }
+
+    .note.ok {
+      border-color: rgba(31, 122, 77, 0.24);
+      background: var(--green-soft);
+    }
+
+    .note.bad {
+      border-color: rgba(164, 55, 47, 0.22);
+      background: var(--red-soft);
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: 140px repeat(4, minmax(120px, 1fr));
+      gap: 0;
+      overflow-x: auto;
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline > div {
+      min-height: 74px;
+      padding: 12px;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .timeline > div:nth-child(5n) {
+      border-right: 0;
+    }
+
+    .timeline .head {
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 760;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .timeline .metric {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 720;
+    }
+
+    .timeline strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .foot {
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 1080px) {
+      .kpi-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .funnel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .funnel-step::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav,
+      .topbar,
+      .section-head,
+      .board-title {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      main {
+        padding: 26px 16px 56px;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      .status-stack {
+        justify-content: flex-start;
+        min-width: 0;
+      }
+
+      .kpi-grid,
+      .funnel {
+        grid-template-columns: 1fr;
+      }
+
+      .bar-row {
+        grid-template-columns: 106px minmax(100px, 1fr) 62px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="../../index.html" class="logo">Shiba <span>&amp;</span> Associates</a>
+      <div class="nav-links">
+        <a class="nav-link" href="../../index.html">Home</a>
+        <a class="nav-link" href="../../google-ads-services.html">Google Ads</a>
+        <a class="nav-link" href="../../geo.html">GEO</a>
+        <a class="nav-link" href="../../how-we-use-ai.html">How We Use AI</a>
+        <a class="cta" href="mailto:ndshiba@2.0heads.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="topbar">
+      <div>
+        <p class="eyebrow">LloydPans Reddit Ads</p>
+        <h1>Campaign performance from impressions to sales</h1>
+        <p class="lead">A working view of Reddit delivery, GA4 session capture, cart activity, purchases, revenue, and tracking health for the July baseline and the August regional pizza pan tests.</p>
+      </div>
+      <div class="status-stack" id="statusPills"></div>
+    </div>
+
+    <section class="section" aria-labelledby="overview-title">
+      <div class="section-head">
+        <div>
+          <h2 id="overview-title">Executive Snapshot</h2>
+          <p class="section-note">July is the completed baseline. August test cells are active, but the new ads were still processing at the last status check.</p>
+        </div>
+      </div>
+      <div class="kpi-grid" id="kpiGrid"></div>
+    </section>
+
+    <section class="section split" aria-label="Funnel and attribution quality">
+      <div class="board">
+        <div class="board-title">
+          <div>
+            <strong>July Paid Reddit Funnel</strong>
+            <span>Reddit Ads clicks matched against GA4 paid plus likely untagged Reddit leakage.</span>
+          </div>
+          <span id="captureLabel"></span>
+        </div>
+        <div class="funnel" id="funnel"></div>
+      </div>
+
+      <div class="board">
+        <div class="board-title">
+          <div>
+            <strong>Attribution Health</strong>
+            <span>Signals that determine whether Reddit can be judged end to end.</span>
+          </div>
+        </div>
+        <div class="notes" id="healthNotes"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="campaign-title">
+      <div class="section-head">
+        <div>
+          <h2 id="campaign-title">Campaign and Test Cell Performance</h2>
+          <p class="section-note">Use this table to compare Reddit click quality against GA4 session and sales behavior. August rows are ready for daily updates as data comes in.</p>
+        </div>
+      </div>
+      <div class="board">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Campaign / Test Cell</th>
+                <th>Status</th>
+                <th class="num">Spend</th>
+                <th class="num">Impr.</th>
+                <th class="num">Clicks</th>
+                <th class="num">CTR</th>
+                <th class="num">CPC</th>
+                <th class="num">GA4 Sessions</th>
+                <th class="num">Capture</th>
+                <th class="num">ATC</th>
+                <th class="num">Purch.</th>
+                <th class="num">Revenue</th>
+                <th class="num">ROAS</th>
+              </tr>
+            </thead>
+            <tbody id="campaignRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split" aria-label="Product intent and benchmark">
+      <div class="board">
+        <div class="board-title">
+          <div>
+            <strong>Product Intent Budget Split</strong>
+            <span>August regional test allocation and intended measurement key.</span>
+          </div>
+        </div>
+        <div class="bar-list" id="budgetBars"></div>
+      </div>
+
+      <div class="board">
+        <div class="board-title">
+          <div>
+            <strong>Organic Reddit Benchmark</strong>
+            <span>Proof that Reddit traffic can convert when context and intent are right.</span>
+          </div>
+        </div>
+        <div class="bar-list" id="organicBars"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="timeline-title">
+      <div class="section-head">
+        <div>
+          <h2 id="timeline-title">Daily Snapshot Timeline</h2>
+          <p class="section-note">The table is structured for daily Reddit + GA4 snapshots. Existing rows show the July baseline, August pre-test baseline, and launch state.</p>
+        </div>
+      </div>
+      <div class="board">
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="setup-title">
+      <div class="section-head">
+        <div>
+          <h2 id="setup-title">Active August Setup</h2>
+          <p class="section-note">IDs and URLs needed to audit delivery, GA4 attribution, and Reddit Pixel behavior.</p>
+        </div>
+      </div>
+      <div class="board">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Ad Group</th>
+                <th>Ad</th>
+                <th>Status</th>
+                <th class="num">Daily Budget</th>
+                <th>UTM Content</th>
+                <th>Destination</th>
+              </tr>
+            </thead>
+            <tbody id="setupRows"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split" aria-label="Notes and action list">
+      <div class="board">
+        <div class="board-title">
+          <div>
+            <strong>Readout Notes</strong>
+            <span>What the numbers mean right now.</span>
+          </div>
+        </div>
+        <div class="notes" id="readoutNotes"></div>
+      </div>
+      <div class="board">
+        <div class="board-title">
+          <div>
+            <strong>Next Actions</strong>
+            <span>The operational follow-up list.</span>
+          </div>
+        </div>
+        <div class="notes" id="actionNotes"></div>
+      </div>
+    </section>
+
+    <p class="foot">Source data: Reddit Ads dashboard, Reddit Ads backend entity checks, GA4 property 251766040, and the LloydPans Reddit project note. This page is noindex and intended for internal campaign review.</p>
+  </main>
+
+  <script>
+    const dashboardData = window.dashboardData = {
+      updatedAt: "2026-08-04 09:05 CT",
+      account: "LloydPans Ad Account 04/19/2026",
+      campaign: "Traffic Campaign 2026-04-24 17:14:31 CDT",
+      pixel: {
+        id: "a2_ivbcn8rdh46y",
+        loaderInstalled: true,
+        installedAt: "2026-08-04",
+        status: "PageVisit verified; Purchase/AddToCart verification still needed"
+      },
+      july: {
+        reddit: {
+          spend: 563.05,
+          impressions: 55392,
+          clicks: 908,
+          ctr: 0.01639,
+          cpc: 0.62,
+          cpm: 10.16
+        },
+        ga4Paid: {
+          sessions: 425,
+          engagedSessions: 363,
+          events: 4136,
+          addToCarts: 2,
+          checkouts: 2,
+          purchases: 0,
+          revenue: 0
+        },
+        ga4PaidProxy: {
+          sessions: 709,
+          engagedSessions: 626,
+          events: 6065,
+          addToCarts: 3,
+          checkouts: 2,
+          purchases: 0,
+          revenue: 0
+        },
+        leakage: {
+          redditCpcSessions: 425,
+          redditNotSetSessions: 284,
+          rdtCidSessions: 731
+        },
+        organicBenchmark: {
+          sessions: 169,
+          engagedSessions: 156,
+          addToCarts: 12,
+          checkouts: 10,
+          purchases: 7,
+          revenue: 1238.88
+        }
+      },
+      august: {
+        preTestMtd: {
+          label: "Aug 1-4 original Detroit setup",
+          status: "Active",
+          spend: 51.78,
+          impressions: 5998,
+          clicks: 74,
+          ctr: 0.01234,
+          cpc: 0.70,
+          sessions: null,
+          addToCarts: null,
+          purchases: null,
+          revenue: null
+        },
+        tests: [
+          {
+            label: "Detroit Pizza Pans",
+            adGroup: "LP Reddit Test - Detroit Pizza Pans",
+            adGroupId: "2561191720260837851",
+            ad: "LP Reddit Test Ad - Detroit Pizza Pans",
+            adId: "2561205216656677051",
+            status: "Processing",
+            backendStatus: "Active / admin approved",
+            dailyBudget: 8.93,
+            monthlyTarget: 250,
+            endTime: "2026-09-01T04:59:59+00:00",
+            utmContent: "detroit",
+            destination: "https://lloydpans.com/detroit-style-pizza-pans.html?utm_source=reddit&utm_medium=cpc&utm_campaign=reddit_regional_pizza&utm_content=detroit",
+            spend: 0,
+            impressions: 0,
+            clicks: 0,
+            sessions: null,
+            addToCarts: null,
+            purchases: null,
+            revenue: null
+          },
+          {
+            label: "Sicilian Pizza Pans",
+            adGroup: "LP Reddit Test - Sicilian Pizza Pans",
+            adGroupId: "2561191720255880103",
+            ad: "LP Reddit Test Ad - Sicilian Pizza Pans",
+            adId: "2561205216656824602",
+            status: "Processing",
+            backendStatus: "Active / admin approved",
+            dailyBudget: 8.93,
+            monthlyTarget: 250,
+            endTime: "2026-09-01T04:59:59+00:00",
+            utmContent: "sicilian",
+            destination: "https://lloydpans.com/sicilian-style-pizza-pans.html?utm_source=reddit&utm_medium=cpc&utm_campaign=reddit_regional_pizza&utm_content=sicilian",
+            spend: 0,
+            impressions: 0,
+            clicks: 0,
+            sessions: null,
+            addToCarts: null,
+            purchases: null,
+            revenue: null
+          },
+          {
+            label: "Regional Pizza Pans Mix",
+            adGroup: "LP Reddit Test - Regional Pizza Pans Mix",
+            adGroupId: "2561191720262192411",
+            ad: "LP Reddit Test Ad - Regional Pizza Pans Mix",
+            adId: "2561205216658004190",
+            status: "Processing",
+            backendStatus: "Active / admin approved",
+            dailyBudget: 8.93,
+            monthlyTarget: 250,
+            endTime: "2026-09-01T04:59:59+00:00",
+            utmContent: "regional_mix",
+            destination: "https://lloydpans.com/pizza-tools/regional-style-pizza-pans?utm_source=reddit&utm_medium=cpc&utm_campaign=reddit_regional_pizza&utm_content=regional_mix",
+            spend: 0,
+            impressions: 0,
+            clicks: 0,
+            sessions: null,
+            addToCarts: null,
+            purchases: null,
+            revenue: null
+          }
+        ]
+      },
+      notes: [
+        {
+          type: "bad",
+          title: "July bought traffic, not paid-attributed sales",
+          body: "$563.05 in Reddit spend produced 908 clicks and 709 practical paid/proxy GA4 sessions, but 0 purchases and $0 revenue."
+        },
+        {
+          type: "ok",
+          title: "Organic Reddit proves the audience can work",
+          body: "Organic Reddit delivered 169 sessions, 12 add-to-carts, 7 purchases, and $1,238.88 revenue in July."
+        },
+        {
+          type: "warn",
+          title: "Reddit Pixel is newly installed",
+          body: "The loader is verified, but AddToCart and Purchase event verification still needs a real checkout/confirmation test."
+        }
+      ],
+      actions: [
+        {
+          type: "warn",
+          title: "Check processing status",
+          body: "The three August test ads were active and admin-approved, but still processing at the final 2026-08-04 check."
+        },
+        {
+          type: "ok",
+          title: "Pull daily snapshots",
+          body: "Update Reddit spend/impressions/clicks and GA4 sessions/add-to-carts/purchases by utm_content: detroit, sicilian, regional_mix."
+        },
+        {
+          type: "warn",
+          title: "Hold budget decisions until session capture is visible",
+          body: "Judge early by capture rate, CTR, CPC, add-to-cart rate, and purchase signal. Do not optimize on Reddit clicks alone."
+        }
+      ]
+    };
+
+    const fmt = {
+      currency(value) {
+        if (value === null || value === undefined) return "Pending";
+        return value.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: value >= 100 ? 0 : 2 });
+      },
+      number(value) {
+        if (value === null || value === undefined) return "Pending";
+        return value.toLocaleString("en-US");
+      },
+      pct(value) {
+        if (value === null || value === undefined) return "Pending";
+        return `${(value * 100).toFixed(value < 0.02 ? 2 : 1)}%`;
+      },
+      ratio(value) {
+        if (!isFinite(value) || value === null || value === undefined) return "Pending";
+        return `${value.toFixed(2)}x`;
+      }
+    };
+
+    function safeDivide(numerator, denominator) {
+      if (!denominator || numerator === null || numerator === undefined) return null;
+      return numerator / denominator;
+    }
+
+    function statusClass(status) {
+      const normalized = String(status || "").toLowerCase();
+      if (normalized.includes("active")) return "active";
+      if (normalized.includes("processing")) return "processing";
+      if (normalized.includes("paused") || normalized.includes("pending")) return "paused";
+      return "bad";
+    }
+
+    function renderStatusPills() {
+      const el = document.getElementById("statusPills");
+      el.innerHTML = [
+        `<span class="pill ok">Pixel ${dashboardData.pixel.id}</span>`,
+        `<span class="pill warn">Updated ${dashboardData.updatedAt}</span>`,
+        `<span class="pill">Account ${dashboardData.account}</span>`
+      ].join("");
+    }
+
+    function renderKpis() {
+      const july = dashboardData.july;
+      const proxy = july.ga4PaidProxy;
+      const reddit = july.reddit;
+      const organic = july.organicBenchmark;
+      const capture = safeDivide(proxy.sessions, reddit.clicks);
+      const roas = safeDivide(proxy.revenue, reddit.spend);
+      const organicCr = safeDivide(organic.purchases, organic.sessions);
+
+      const cards = [
+        ["July Reddit Spend", fmt.currency(reddit.spend), `${fmt.number(reddit.impressions)} impressions`, "blue"],
+        ["Reddit Clicks", fmt.number(reddit.clicks), `${fmt.pct(reddit.ctr)} CTR / ${fmt.currency(reddit.cpc)} CPC`, ""],
+        ["GA4 Paid/Proxy Sessions", fmt.number(proxy.sessions), `${fmt.pct(capture)} click-to-session capture`, "green"],
+        ["Paid Purchases", fmt.number(proxy.purchases), `${fmt.currency(proxy.revenue)} revenue / ${fmt.ratio(roas)} ROAS`, "red"],
+        ["Organic Reddit Benchmark", `${fmt.pct(organicCr)} CR`, `${fmt.currency(organic.revenue)} from ${fmt.number(organic.sessions)} sessions`, "amber"]
+      ];
+
+      document.getElementById("kpiGrid").innerHTML = cards.map(([label, value, sub, tone]) => `
+        <div class="kpi ${tone}">
+          <div class="label">${label}</div>
+          <div class="value">${value}</div>
+          <div class="sub">${sub}</div>
+        </div>
+      `).join("");
+    }
+
+    function renderFunnel() {
+      const reddit = dashboardData.july.reddit;
+      const proxy = dashboardData.july.ga4PaidProxy;
+      const steps = [
+        ["Impressions", reddit.impressions, "Reddit Ads served"],
+        ["Clicks", reddit.clicks, `${fmt.pct(reddit.ctr)} CTR`],
+        ["GA4 Sessions", proxy.sessions, `${fmt.pct(safeDivide(proxy.sessions, reddit.clicks))} capture`],
+        ["Add-to-Carts", proxy.addToCarts, `${fmt.pct(safeDivide(proxy.addToCarts, proxy.sessions))} of sessions`],
+        ["Purchases", proxy.purchases, `${fmt.currency(proxy.revenue)} revenue`]
+      ];
+
+      document.getElementById("funnel").innerHTML = steps.map(([name, value, detail]) => `
+        <div class="funnel-step">
+          <div class="name">${name}</div>
+          <div class="big">${fmt.number(value)}</div>
+          <div class="detail">${detail}</div>
+        </div>
+      `).join("");
+
+      document.getElementById("captureLabel").textContent = `${fmt.pct(safeDivide(proxy.sessions, reddit.clicks))} click-to-session capture`;
+    }
+
+    function renderHealth() {
+      const july = dashboardData.july;
+      const health = [
+        {
+          type: "ok",
+          title: "UTM path verified",
+          body: "Live GTM/GA4 test preserved Reddit UTMs into GA4 page_view."
+        },
+        {
+          type: "warn",
+          title: "July leakage remains visible",
+          body: `${fmt.number(july.leakage.redditNotSetSessions)} July sessions landed as reddit / (not set), mostly before the URL fix.`
+        },
+        {
+          type: "ok",
+          title: "Reddit Pixel loader verified",
+          body: `Pixel ${dashboardData.pixel.id} loads on the LloydPans homepage.`
+        },
+        {
+          type: "warn",
+          title: "Conversion events still need proof",
+          body: "Purchase/AddToCart pixel firing needs a test order or confirmation-page validation."
+        }
+      ];
+
+      document.getElementById("healthNotes").innerHTML = health.map(noteTemplate).join("");
+    }
+
+    function noteTemplate(item) {
+      return `<div class="note ${item.type || ""}"><strong>${item.title}</strong><span>${item.body}</span></div>`;
+    }
+
+    function campaignRow(row) {
+      const capture = safeDivide(row.sessions, row.clicks);
+      const roas = safeDivide(row.revenue || 0, row.spend || 0);
+      const ctr = row.ctr ?? safeDivide(row.clicks, row.impressions);
+      const cpc = row.cpc ?? safeDivide(row.spend, row.clicks);
+      return `
+        <tr data-campaign-row="${row.label}">
+          <td class="row-label"><strong>${row.label}</strong><span>${row.sub || ""}</span></td>
+          <td><span class="status ${statusClass(row.status)}">${row.status}</span></td>
+          <td class="num">${fmt.currency(row.spend)}</td>
+          <td class="num">${fmt.number(row.impressions)}</td>
+          <td class="num">${fmt.number(row.clicks)}</td>
+          <td class="num">${fmt.pct(ctr)}</td>
+          <td class="num">${fmt.currency(cpc)}</td>
+          <td class="num">${fmt.number(row.sessions)}</td>
+          <td class="num">${fmt.pct(capture)}</td>
+          <td class="num">${fmt.number(row.addToCarts)}</td>
+          <td class="num">${fmt.number(row.purchases)}</td>
+          <td class="num">${fmt.currency(row.revenue)}</td>
+          <td class="num">${fmt.ratio(roas)}</td>
+        </tr>
+      `;
+    }
+
+    function renderCampaignTable() {
+      const july = dashboardData.july;
+      const rows = [
+        {
+          label: "July baseline: Reddit paid/proxy",
+          sub: "traffic-2026 plus likely reddit / (not set) leakage",
+          status: "Completed",
+          spend: july.reddit.spend,
+          impressions: july.reddit.impressions,
+          clicks: july.reddit.clicks,
+          ctr: july.reddit.ctr,
+          cpc: july.reddit.cpc,
+          sessions: july.ga4PaidProxy.sessions,
+          addToCarts: july.ga4PaidProxy.addToCarts,
+          purchases: july.ga4PaidProxy.purchases,
+          revenue: july.ga4PaidProxy.revenue
+        },
+        {
+          label: dashboardData.august.preTestMtd.label,
+          sub: "original active Detroit v1 setup before regional tests",
+          status: dashboardData.august.preTestMtd.status,
+          ...dashboardData.august.preTestMtd
+        },
+        ...dashboardData.august.tests.map(test => ({
+          label: test.label,
+          sub: `${test.utmContent} / ${test.adId}`,
+          status: test.status,
+          spend: test.spend,
+          impressions: test.impressions,
+          clicks: test.clicks,
+          sessions: test.sessions,
+          addToCarts: test.addToCarts,
+          purchases: test.purchases,
+          revenue: test.revenue
+        }))
+      ];
+
+      document.getElementById("campaignRows").innerHTML = rows.map(campaignRow).join("");
+    }
+
+    function renderBars() {
+      const maxBudget = Math.max(...dashboardData.august.tests.map(test => test.monthlyTarget));
+      document.getElementById("budgetBars").innerHTML = dashboardData.august.tests.map((test, index) => {
+        const tones = ["blue", "green", "purple"];
+        return `
+          <div class="bar-row">
+            <strong>${test.label}</strong>
+            <div class="bar-track"><div class="bar-fill ${tones[index]}" style="width:${(test.monthlyTarget / maxBudget) * 100}%"></div></div>
+            <div class="bar-value">${fmt.currency(test.monthlyTarget)}</div>
+          </div>
+        `;
+      }).join("");
+
+      const organic = dashboardData.july.organicBenchmark;
+      const organicRows = [
+        ["Sessions", organic.sessions, organic.sessions, "blue"],
+        ["Add-to-carts", organic.addToCarts, organic.sessions, "green"],
+        ["Purchases", organic.purchases, organic.sessions, "purple"],
+        ["Revenue", organic.revenue, organic.revenue, ""]
+      ];
+      document.getElementById("organicBars").innerHTML = organicRows.map(([label, value, max, tone]) => `
+        <div class="bar-row">
+          <strong>${label}</strong>
+          <div class="bar-track"><div class="bar-fill ${tone}" style="width:${Math.max(4, Math.min(100, (value / max) * 100))}%"></div></div>
+          <div class="bar-value">${label === "Revenue" ? fmt.currency(value) : fmt.number(value)}</div>
+        </div>
+      `).join("");
+    }
+
+    function renderTimeline() {
+      const cells = [
+        ["Metric", "July baseline", "Aug 1-4 baseline", "Aug test launch", "Next snapshot"],
+        ["Spend", fmt.currency(dashboardData.july.reddit.spend), fmt.currency(dashboardData.august.preTestMtd.spend), "$26.79/day planned", "Pending"],
+        ["Reddit clicks", fmt.number(dashboardData.july.reddit.clicks), fmt.number(dashboardData.august.preTestMtd.clicks), "Processing", "Pending"],
+        ["GA4 sessions", fmt.number(dashboardData.july.ga4PaidProxy.sessions), "Pending", "UTMs ready", "Pending"],
+        ["Purchases / revenue", `${fmt.number(dashboardData.july.ga4PaidProxy.purchases)} / ${fmt.currency(0)}`, "Pending", "Pixel installed", "Pending"]
+      ];
+
+      document.getElementById("timeline").innerHTML = cells.flatMap((row, rowIndex) => row.map((cell, colIndex) => {
+        if (rowIndex === 0) return `<div class="head">${cell}</div>`;
+        if (colIndex === 0) return `<div class="metric">${cell}</div>`;
+        return `<div><strong>${cell}</strong></div>`;
+      })).join("");
+    }
+
+    function renderSetupRows() {
+      document.getElementById("setupRows").innerHTML = dashboardData.august.tests.map(test => `
+        <tr>
+          <td class="row-label"><strong>${test.adGroup}</strong><span>${test.adGroupId}</span></td>
+          <td class="row-label"><strong>${test.ad}</strong><span>${test.adId}</span></td>
+          <td><span class="status ${statusClass(test.status)}">${test.status}</span></td>
+          <td class="num">${fmt.currency(test.dailyBudget)}</td>
+          <td><code>${test.utmContent}</code></td>
+          <td><a href="${test.destination}" target="_blank" rel="noopener">${test.destination.replace("https://lloydpans.com", "")}</a></td>
+        </tr>
+      `).join("");
+    }
+
+    function renderNotes() {
+      document.getElementById("readoutNotes").innerHTML = dashboardData.notes.map(noteTemplate).join("");
+      document.getElementById("actionNotes").innerHTML = dashboardData.actions.map(noteTemplate).join("");
+    }
+
+    renderStatusPills();
+    renderKpis();
+    renderFunnel();
+    renderHealth();
+    renderCampaignTable();
+    renderBars();
+    renderTimeline();
+    renderSetupRows();
+    renderNotes();
+  </script>
+</body>
+</html>
