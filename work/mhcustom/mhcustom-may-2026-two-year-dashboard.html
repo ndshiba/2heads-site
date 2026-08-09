@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MH Custom US Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --ink:#1f2a33; --muted:#677784; --navy:#17354a; --brick:#a8523b; --gold:#c39b48; --paper:#f6f2ea; --line:rgba(32,52,66,0.12);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Georgia, 'Iowan Old Style', serif; color:var(--ink); background:linear-gradient(180deg,#f4efe6 0%,#f8f4ec 55%,#eee5d9 100%); }
+    .shell { max-width:1440px; margin:0 auto; padding:28px 20px 56px; }
+    .hero, .kpis, .grid { display:grid; gap:16px; }
+    .hero { grid-template-columns:1.4fr 1fr; margin-bottom:18px; }
+    .kpis { grid-template-columns:repeat(4,minmax(0,1fr)); margin-bottom:18px; }
+    .grid { grid-template-columns:repeat(12,minmax(0,1fr)); }
+    .panel { background:rgba(255,255,255,0.9); border:1px solid var(--line); border-radius:22px; padding:20px; box-shadow:0 16px 50px rgba(30,40,48,0.08); }
+    .hero .panel:first-child { padding:28px; }
+    .eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:11px; color:var(--muted); margin-bottom:10px; }
+    h1 { margin:0 0 10px; font-size:clamp(30px,4vw,54px); line-height:.98; color:var(--navy); max-width:11ch; }
+    h2 { margin:0 0 8px; font-size:24px; color:var(--navy); }
+    p { margin:0; line-height:1.5; }
+    .sub { color:#334754; max-width:64ch; }
+    .note { margin-top:14px; display:inline-block; padding:10px 14px; border-radius:999px; background:rgba(23,53,74,.08); color:var(--navy); font-size:13px; }
+    .insight { padding:14px; border-radius:16px; background:linear-gradient(135deg, rgba(23,53,74,.05), rgba(195,155,72,.08)); border:1px solid rgba(23,53,74,.08); margin-bottom:10px; }
+    .insight strong { display:block; margin-bottom:6px; color:var(--navy); font-size:15px; }
+    .kpi { background:rgba(255,255,255,0.84); border:1px solid var(--line); border-radius:18px; padding:18px; }
+    .kpi small { color:var(--muted); text-transform:uppercase; letter-spacing:.12em; font-size:12px; }
+    .kpi .v { margin:10px 0 8px; font-size:34px; color:var(--navy); }
+    .kpi .d { color:var(--muted); font-size:14px; }
+    .span-8 { grid-column:span 8; } .span-4 { grid-column:span 4; } .span-6 { grid-column:span 6; } .span-12 { grid-column:span 12; }
+    canvas { width:100% !important; height:320px !important; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td { text-align:left; padding:10px 8px; border-bottom:1px solid rgba(31,42,51,.08); vertical-align:top; }
+    th { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .foot { margin-top:14px; color:var(--muted); font-size:13px; line-height:1.5; }
+    @media (max-width:1080px) { .hero, .kpis { grid-template-columns:1fr 1fr; } .span-8,.span-6,.span-4 { grid-column:span 12; } }
+    @media (max-width:720px) { .hero,.kpis { grid-template-columns:1fr; } .shell { padding:18px 14px 40px; } }
+  </style>
+</head>
+<body>
+<div class="shell">
+  <section class="hero">
+    <div class="panel">
+      <div class="eyebrow">MH Custom • US-Only • Verified Data Only</div>
+      <h1>Accurate where verified, explicit where limited.</h1>
+      <p class="sub">This rebuild removes the misleading parts of the previous dashboard. GA4 still covers the full 24-month US window. Search Console is shown only where current access or archived exports support it. Semrush comes from your paid account, but without Guru the historical compare layer is not available.</p>
+      <div class="note">GA4 US 24 months • GSC US verified live range begins Feb 2025 • Semrush US current snapshot only</div>
+    </div>
+    <div class="panel">
+      <div class="insight"><strong>Traffic story</strong>US GA4 sessions still fell from 16,743 to 10,362 (-38.1%).</div>
+      <div class="insight"><strong>Search story</strong>Verified US GSC clicks changed from 669 to 458 in the matched Feb-May window (-31.5%).</div>
+      <div class="insight"><strong>Brand story</strong>Brand share in matched US GSC query clicks rose from 32.7% to 45.9%.</div>
+      <div class="insight"><strong>Semrush reality</strong>Semrush historical compare is unavailable on the current plan, so Semrush is shown as a paid-account current snapshot only.</div>
+    </div>
+  </section>
+
+  <section class="kpis">
+    <div class="kpi"><small>US GA4 Sessions</small><div class="v">10,362</div><div class="d">vs prior 12 months: -38.1%</div></div>
+    <div class="kpi"><small>US GA4 Conversions</small><div class="v">288.0</div><div class="d">vs prior 12 months: -29.2%</div></div>
+    <div class="kpi"><small>US GSC Clicks</small><div class="v">458</div><div class="d">Feb-May 2026 vs Feb-May 2025: -31.5%</div></div>
+    <div class="kpi"><small>Brand Click Share</small><div class="v">45.9%</div><div class="d">Feb-May matched window change: +13.1%</div></div>
+  </section>
+
+  <section class="grid">
+    <div class="panel span-8">
+      <h2>US GA4 Sessions, Full 24 Months</h2>
+      <canvas id="ga4Chart"></canvas>
+    </div>
+    <div class="panel span-4">
+      <h2>Semrush Snapshot</h2>
+      <div class="insight"><strong>Organic Keywords</strong>271</div>
+      <div class="insight"><strong>Estimated Organic Traffic</strong>376</div>
+      <div class="insight"><strong>Traffic Value</strong>$591</div>
+      <div class="insight"><strong>Paid Keywords</strong>0</div>
+    </div>
+
+    <div class="panel span-8">
+      <h2>US GSC Clicks, Verified Live History</h2>
+      <p class="sub">This line starts at the first live month we can verify through current Search Console access: February 2025.</p>
+      <canvas id="gscChart"></canvas>
+    </div>
+    <div class="panel span-4">
+      <h2>Read This Carefully</h2>
+      <div class="foot">
+        <div>1. We know MH Custom had search clicks before 2025.</div>
+        <div>2. The current Search Console properties we can access do not return 2024 month-level history.</div>
+        <div>3. Older archived workbooks prove earlier activity, but they do not give us a clean 2024 monthly series.</div>
+      </div>
+    </div>
+
+    <div class="panel span-6"><h2>GA4 Landing Page Winners and Losers</h2><table><thead><tr><th>Landing Page</th><th>Prior 12</th><th>Last 12</th><th>Delta</th></tr></thead><tbody><tr><td>/freepower-io-countertop-charger</td><td>0</td><td>369</td><td>+369</td></tr><tr><td>/harrisburg-pa-kitchen-designers/nicole-ruda-designer</td><td>0</td><td>59</td><td>+59</td></tr><tr><td>/pa-kitchen-photo-gallery</td><td>822</td><td>855</td><td>+33</td></tr><tr><td>/portfolio-filterable/traditional,kitchen/maximizing-small-kitchen</td><td>0</td><td>25</td><td>+25</td></tr><tr><td>/considering-a-kitchen-remodel/kitchen-remodeling-cost</td><td>54</td><td>78</td><td>+24</td></tr><tr><td>/kitchen-design-process</td><td>84</td><td>103</td><td>+19</td></tr><tr><td>/kitchen-corner-cabinet-storage-solutions</td><td>5,665</td><td>2,025</td><td>-3,640</td></tr><tr><td>/portfolio-filterable/contemporary,kitchen/mechanicsburg-70s-split-level-renovation</td><td>1,572</td><td>749</td><td>-823</td></tr><tr><td>/</td><td>4,186</td><td>3,384</td><td>-802</td></tr><tr><td>/why-we-love-microwave-drawers-for-a-kitchen-remodeling-project</td><td>720</td><td>91</td><td>-629</td></tr><tr><td>/re-imagining-kitchen-pantry-cabinet</td><td>1,122</td><td>634</td><td>-488</td></tr><tr><td>(not set)</td><td>683</td><td>502</td><td>-181</td></tr></tbody></table></div>
+    <div class="panel span-6"><h2>GSC Query Shifts</h2><p class="sub">Matched window only: Feb-May 2025 vs Feb-May 2026.</p><table><thead><tr><th>Query</th><th>Feb-May 2025</th><th>Feb-May 2026</th><th>Delta</th></tr></thead><tbody><tr><td>mother hubbard</td><td>66</td><td>78</td><td>+12</td></tr><tr><td>mother hubbard&#x27;s cupboard</td><td>0</td><td>9</td><td>+9</td></tr><tr><td>freepower charger cost</td><td>0</td><td>6</td><td>+6</td></tr><tr><td>mother hubbards</td><td>10</td><td>15</td><td>+5</td></tr><tr><td>mother hubbard kitchens</td><td>8</td><td>12</td><td>+4</td></tr><tr><td>kitchen cabinets mechanicsburg pa</td><td>5</td><td>9</td><td>+4</td></tr><tr><td>mother hubbard cabinets</td><td>35</td><td>5</td><td>-30</td></tr><tr><td>kitchen corner cabinet ideas</td><td>29</td><td>0</td><td>-29</td></tr><tr><td>corner kitchen cabinet</td><td>27</td><td>1</td><td>-26</td></tr><tr><td>kitchen corner cabinets</td><td>29</td><td>9</td><td>-20</td></tr><tr><td>kitchen design checklist pdf</td><td>19</td><td>0</td><td>-19</td></tr><tr><td>corner cabinet ideas</td><td>24</td><td>8</td><td>-16</td></tr></tbody></table></div>
+
+    <div class="panel span-6"><h2>Top GSC Pages</h2><p class="sub">Matched US clicks: Feb-May 2025 vs Feb-May 2026.</p><table><thead><tr><th>Page</th><th>Feb-May 2025</th><th>Feb-May 2026</th><th>Delta</th></tr></thead><tbody><tr><td>https://mhcustom.com/</td><td>286</td><td>289</td><td>+3</td></tr><tr><td>https://mhcustom.com/kitchen-corner-cabinet-storage-solutions/</td><td>246</td><td>90</td><td>-156</td></tr><tr><td>https://mhcustom.com/freepower-io-countertop-charger/</td><td>0</td><td>34</td><td>+34</td></tr><tr><td>https://mhcustom.com/portfolio-filterable/transitional,kitchen/hampden-township-center-hall-colonial/</td><td>3</td><td>7</td><td>+4</td></tr><tr><td>https://mhcustom.com/pa-kitchen-photo-gallery/</td><td>10</td><td>7</td><td>-3</td></tr><tr><td>https://mhcustom.com/portfolio-filterable/contemporary,kitchen/mechanicsburg-70s-split-level-renovation/</td><td>27</td><td>7</td><td>-20</td></tr><tr><td>https://mhcustom.com/why-we-love-microwave-drawers-for-a-kitchen-remodeling-project/</td><td>21</td><td>6</td><td>-15</td></tr><tr><td>https://mhcustom.com/microwave-drawers-offer-improved-ergonomics-but-at-a-price/</td><td>1</td><td>5</td><td>+4</td></tr><tr><td>https://mhcustom.com/mother-hubbards-custom-cabinetry-showroom/</td><td>2</td><td>4</td><td>+2</td></tr><tr><td>https://mhcustom.com/harrisburg-kitchen-remodel-contact-us/</td><td>1</td><td>2</td><td>+1</td></tr></tbody></table></div>
+    <div class="panel span-6"><h2>Top Converting Pages</h2><table><thead><tr><th>Page</th><th>Sessions</th><th>Conversions</th></tr></thead><tbody><tr><td>/</td><td>3,384</td><td>190.0</td></tr><tr><td>/harrisburg-kitchen-remodel-contact-us</td><td>109</td><td>80.0</td></tr><tr><td>/re-imagining-kitchen-pantry-cabinet</td><td>634</td><td>3.0</td></tr><tr><td>/pa-kitchen-photo-gallery</td><td>855</td><td>2.0</td></tr><tr><td>/harrisburg-kitchen-showroom</td><td>58</td><td>2.0</td></tr><tr><td>/considering-a-kitchen-remodel/planning-a-kitchen-remodel-in-harrisburg</td><td>10</td><td>2.0</td></tr><tr><td>/kitchen-corner-cabinet-storage-solutions</td><td>2,025</td><td>1.0</td></tr><tr><td>/kitchen-design-process</td><td>103</td><td>1.0</td></tr><tr><td>/harrisburg-pa-kitchen-designers/nicole-ruda-designer</td><td>59</td><td>1.0</td></tr><tr><td>/harrisburg-pa-kitchen-designers</td><td>46</td><td>1.0</td></tr></tbody></table></div>
+
+    <div class="panel span-6"><h2>Current Semrush Keywords</h2><table><thead><tr><th>Keyword</th><th>Pos.</th><th>Vol.</th><th>URL</th></tr></thead><tbody><tr><td>mother hubbard&#x27;s custom cabinetry</td><td>1</td><td>70</td><td>https://mhcustom.com/</td></tr><tr><td>mother hubbards cupboards</td><td>3</td><td>320</td><td>https://mhcustom.com/</td></tr><tr><td>hubbard kitchen</td><td>2</td><td>70</td><td>https://mhcustom.com/</td></tr><tr><td>freepower</td><td>4</td><td>880</td><td>https://mhcustom.com/freepower-io-countertop-charger/</td></tr><tr><td>kitchen remodeling mechanicsburg pa</td><td>4</td><td>140</td><td>https://mhcustom.com/</td></tr><tr><td>free power</td><td>4</td><td>590</td><td>https://mhcustom.com/freepower-io-countertop-charger/</td></tr><tr><td>70s split level renovation</td><td>5</td><td>140</td><td>https://mhcustom.com/portfolio-filterable/contemporary,kitchen/mechanicsburg-70s-split-level-renovation/</td></tr><tr><td>freepower charger cost</td><td>2</td><td>70</td><td>https://mhcustom.com/freepower-io-countertop-charger/</td></tr><tr><td>kitchen designer harrisburg</td><td>6</td><td>50</td><td>https://mhcustom.com/</td></tr><tr><td>kitchen corner cupboard storage solutions</td><td>16</td><td>140</td><td>https://mhcustom.com/kitchen-corner-cabinet-storage-solutions/</td></tr></tbody></table></div>
+    <div class="panel span-6"><h2>Current Semrush Competitors</h2><table><thead><tr><th>Competitor</th><th>Common KW</th><th>Traffic</th><th>Cost</th></tr></thead><tbody><tr><td>creativedesignhomeremodeling.com</td><td>12</td><td>338</td><td>530</td></tr><tr><td>freepower.io</td><td>14</td><td>2342</td><td>1955</td></tr><tr><td>coloradonest.com</td><td>19</td><td>888</td><td>1100</td></tr><tr><td>reesebuilders.com</td><td>11</td><td>91</td><td>427</td></tr><tr><td>riverwoodcraft.com</td><td>12</td><td>890</td><td>1109</td></tr><tr><td>rbln7.com</td><td>5</td><td>216</td><td>227</td></tr><tr><td>canadiancountertops.com</td><td>6</td><td>2</td><td>4</td></tr><tr><td>superiorcabinets.ca</td><td>26</td><td>1847</td><td>2943</td></tr><tr><td>ebersoleremodeling.com</td><td>8</td><td>321</td><td>2600</td></tr><tr><td>stoneybrookehrd.com</td><td>8</td><td>13</td><td>65</td></tr></tbody></table></div>
+
+    <div class="panel span-12">
+      <h2>Bottom Line</h2>
+      <p class="sub">This version is intentionally stricter than the prior dashboard: GA4 is shown across the full 24-month US window, GSC is shown only where we have verified live or archived coverage, and Semrush is limited to current paid-account snapshots because historical compare is blocked without Guru.</p>
+      <div class="foot">
+        <div>Dashboard path: /Volumes/Crucial External 4TB Mini 1/Dropbox/MHCC/2026 Reports/2026-05/mhcustom-us-dashboard.html</div>
+        <div>Built from existing US GA4 report files, live GSC US pulls, and Semrush US current paid-account snapshots.</div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+const data = {"ga4_months":["2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05"],"ga4_sessions":[1318,1462,1403,1473,1540,1359,1192,1791,1514,1540,1069,1082,986,1005,952,799,768,939,791,1001,903,857,684,677],"gsc_months":["2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05"],"gsc_clicks":[277,351,281,294,249,233,247,234,243,255,205,286,280,224,232,205],"channel_labels":["Organic Search","Direct","Paid Search","Organic Social","Referral","AI Assistants","Cross-network","Display"],"channel_values":[5912,1989,1634,619,86,42,31,22],"kpis":{"sessions_last12":"10,362","sessions_delta":"vs prior 12 months: -38.1%","conversions_last12":"288.0","conversions_delta":"vs prior 12 months: -29.2%","gsc_clicks_last":"458","gsc_clicks_delta":"Feb-May 2026 vs Feb-May 2025: -31.5%","brand_share_last":"45.9%","brand_share_delta":"Feb-May matched window change: +13.1%"},"semrush":{"organic_keywords":"271","organic_traffic":"376","organic_cost":"$591","paid_keywords":"0"},"insights":["US GA4 sessions still fell from 16,743 to 10,362 (-38.1%).","Verified US GSC clicks changed from 669 to 458 in the matched Feb-May window (-31.5%).","Brand share in matched US GSC query clicks rose from 32.7% to 45.9%.","Semrush historical compare is unavailable on the current plan, so Semrush is shown as a paid-account current snapshot only."],"landing_table":"<table><thead><tr><th>Landing Page</th><th>Prior 12</th><th>Last 12</th><th>Delta</th></tr></thead><tbody><tr><td>/freepower-io-countertop-charger</td><td>0</td><td>369</td><td>+369</td></tr><tr><td>/harrisburg-pa-kitchen-designers/nicole-ruda-designer</td><td>0</td><td>59</td><td>+59</td></tr><tr><td>/pa-kitchen-photo-gallery</td><td>822</td><td>855</td><td>+33</td></tr><tr><td>/portfolio-filterable/traditional,kitchen/maximizing-small-kitchen</td><td>0</td><td>25</td><td>+25</td></tr><tr><td>/considering-a-kitchen-remodel/kitchen-remodeling-cost</td><td>54</td><td>78</td><td>+24</td></tr><tr><td>/kitchen-design-process</td><td>84</td><td>103</td><td>+19</td></tr><tr><td>/kitchen-corner-cabinet-storage-solutions</td><td>5,665</td><td>2,025</td><td>-3,640</td></tr><tr><td>/portfolio-filterable/contemporary,kitchen/mechanicsburg-70s-split-level-renovation</td><td>1,572</td><td>749</td><td>-823</td></tr><tr><td>/</td><td>4,186</td><td>3,384</td><td>-802</td></tr><tr><td>/why-we-love-microwave-drawers-for-a-kitchen-remodeling-project</td><td>720</td><td>91</td><td>-629</td></tr><tr><td>/re-imagining-kitchen-pantry-cabinet</td><td>1,122</td><td>634</td><td>-488</td></tr><tr><td>(not set)</td><td>683</td><td>502</td><td>-181</td></tr></tbody></table>","query_table":"<table><thead><tr><th>Query</th><th>Feb-May 2025</th><th>Feb-May 2026</th><th>Delta</th></tr></thead><tbody><tr><td>mother hubbard</td><td>66</td><td>78</td><td>+12</td></tr><tr><td>mother hubbard&#x27;s cupboard</td><td>0</td><td>9</td><td>+9</td></tr><tr><td>freepower charger cost</td><td>0</td><td>6</td><td>+6</td></tr><tr><td>mother hubbards</td><td>10</td><td>15</td><td>+5</td></tr><tr><td>mother hubbard kitchens</td><td>8</td><td>12</td><td>+4</td></tr><tr><td>kitchen cabinets mechanicsburg pa</td><td>5</td><td>9</td><td>+4</td></tr><tr><td>mother hubbard cabinets</td><td>35</td><td>5</td><td>-30</td></tr><tr><td>kitchen corner cabinet ideas</td><td>29</td><td>0</td><td>-29</td></tr><tr><td>corner kitchen cabinet</td><td>27</td><td>1</td><td>-26</td></tr><tr><td>kitchen corner cabinets</td><td>29</td><td>9</td><td>-20</td></tr><tr><td>kitchen design checklist pdf</td><td>19</td><td>0</td><td>-19</td></tr><tr><td>corner cabinet ideas</td><td>24</td><td>8</td><td>-16</td></tr></tbody></table>","top_page_table":"<table><thead><tr><th>Page</th><th>Feb-May 2025</th><th>Feb-May 2026</th><th>Delta</th></tr></thead><tbody><tr><td>https://mhcustom.com/</td><td>286</td><td>289</td><td>+3</td></tr><tr><td>https://mhcustom.com/kitchen-corner-cabinet-storage-solutions/</td><td>246</td><td>90</td><td>-156</td></tr><tr><td>https://mhcustom.com/freepower-io-countertop-charger/</td><td>0</td><td>34</td><td>+34</td></tr><tr><td>https://mhcustom.com/portfolio-filterable/transitional,kitchen/hampden-township-center-hall-colonial/</td><td>3</td><td>7</td><td>+4</td></tr><tr><td>https://mhcustom.com/pa-kitchen-photo-gallery/</td><td>10</td><td>7</td><td>-3</td></tr><tr><td>https://mhcustom.com/portfolio-filterable/contemporary,kitchen/mechanicsburg-70s-split-level-renovation/</td><td>27</td><td>7</td><td>-20</td></tr><tr><td>https://mhcustom.com/why-we-love-microwave-drawers-for-a-kitchen-remodeling-project/</td><td>21</td><td>6</td><td>-15</td></tr><tr><td>https://mhcustom.com/microwave-drawers-offer-improved-ergonomics-but-at-a-price/</td><td>1</td><td>5</td><td>+4</td></tr><tr><td>https://mhcustom.com/mother-hubbards-custom-cabinetry-showroom/</td><td>2</td><td>4</td><td>+2</td></tr><tr><td>https://mhcustom.com/harrisburg-kitchen-remodel-contact-us/</td><td>1</td><td>2</td><td>+1</td></tr></tbody></table>","converting_pages_table":"<table><thead><tr><th>Page</th><th>Sessions</th><th>Conversions</th></tr></thead><tbody><tr><td>/</td><td>3,384</td><td>190.0</td></tr><tr><td>/harrisburg-kitchen-remodel-contact-us</td><td>109</td><td>80.0</td></tr><tr><td>/re-imagining-kitchen-pantry-cabinet</td><td>634</td><td>3.0</td></tr><tr><td>/pa-kitchen-photo-gallery</td><td>855</td><td>2.0</td></tr><tr><td>/harrisburg-kitchen-showroom</td><td>58</td><td>2.0</td></tr><tr><td>/considering-a-kitchen-remodel/planning-a-kitchen-remodel-in-harrisburg</td><td>10</td><td>2.0</td></tr><tr><td>/kitchen-corner-cabinet-storage-solutions</td><td>2,025</td><td>1.0</td></tr><tr><td>/kitchen-design-process</td><td>103</td><td>1.0</td></tr><tr><td>/harrisburg-pa-kitchen-designers/nicole-ruda-designer</td><td>59</td><td>1.0</td></tr><tr><td>/harrisburg-pa-kitchen-designers</td><td>46</td><td>1.0</td></tr></tbody></table>","semrush_keywords_table":"<table><thead><tr><th>Keyword</th><th>Pos.</th><th>Vol.</th><th>URL</th></tr></thead><tbody><tr><td>mother hubbard&#x27;s custom cabinetry</td><td>1</td><td>70</td><td>https://mhcustom.com/</td></tr><tr><td>mother hubbards cupboards</td><td>3</td><td>320</td><td>https://mhcustom.com/</td></tr><tr><td>hubbard kitchen</td><td>2</td><td>70</td><td>https://mhcustom.com/</td></tr><tr><td>freepower</td><td>4</td><td>880</td><td>https://mhcustom.com/freepower-io-countertop-charger/</td></tr><tr><td>kitchen remodeling mechanicsburg pa</td><td>4</td><td>140</td><td>https://mhcustom.com/</td></tr><tr><td>free power</td><td>4</td><td>590</td><td>https://mhcustom.com/freepower-io-countertop-charger/</td></tr><tr><td>70s split level renovation</td><td>5</td><td>140</td><td>https://mhcustom.com/portfolio-filterable/contemporary,kitchen/mechanicsburg-70s-split-level-renovation/</td></tr><tr><td>freepower charger cost</td><td>2</td><td>70</td><td>https://mhcustom.com/freepower-io-countertop-charger/</td></tr><tr><td>kitchen designer harrisburg</td><td>6</td><td>50</td><td>https://mhcustom.com/</td></tr><tr><td>kitchen corner cupboard storage solutions</td><td>16</td><td>140</td><td>https://mhcustom.com/kitchen-corner-cabinet-storage-solutions/</td></tr></tbody></table>","semrush_competitors_table":"<table><thead><tr><th>Competitor</th><th>Common KW</th><th>Traffic</th><th>Cost</th></tr></thead><tbody><tr><td>creativedesignhomeremodeling.com</td><td>12</td><td>338</td><td>530</td></tr><tr><td>freepower.io</td><td>14</td><td>2342</td><td>1955</td></tr><tr><td>coloradonest.com</td><td>19</td><td>888</td><td>1100</td></tr><tr><td>reesebuilders.com</td><td>11</td><td>91</td><td>427</td></tr><tr><td>riverwoodcraft.com</td><td>12</td><td>890</td><td>1109</td></tr><tr><td>rbln7.com</td><td>5</td><td>216</td><td>227</td></tr><tr><td>canadiancountertops.com</td><td>6</td><td>2</td><td>4</td></tr><tr><td>superiorcabinets.ca</td><td>26</td><td>1847</td><td>2943</td></tr><tr><td>ebersoleremodeling.com</td><td>8</td><td>321</td><td>2600</td></tr><tr><td>stoneybrookehrd.com</td><td>8</td><td>13</td><td>65</td></tr></tbody></table>","bottom_line":"This version is intentionally stricter than the prior dashboard: GA4 is shown across the full 24-month US window, GSC is shown only where we have verified live or archived coverage, and Semrush is limited to current paid-account snapshots because historical compare is blocked without Guru."};
+const labelColor = "#556671", gridColor = "rgba(23,53,74,0.08)";
+new Chart(document.getElementById("ga4Chart"), {
+  type: "line",
+  data: { labels: data.ga4_months, datasets: [{ label: "Sessions", data: data.ga4_sessions, borderColor: "#17354a", backgroundColor: "rgba(23,53,74,0.12)", pointRadius: 2, tension: 0.28 }] },
+  options: { maintainAspectRatio: false, plugins: { legend: { labels: { color: labelColor } } }, scales: { x: { ticks: { color: labelColor } }, y: { ticks: { color: labelColor }, grid: { color: gridColor } } } }
+});
+new Chart(document.getElementById("gscChart"), {
+  type: "line",
+  data: { labels: data.gsc_months, datasets: [{ label: "Clicks", data: data.gsc_clicks, borderColor: "#a8523b", backgroundColor: "rgba(168,82,59,0.12)", pointRadius: 2, tension: 0.28 }] },
+  options: { maintainAspectRatio: false, plugins: { legend: { labels: { color: labelColor } } }, scales: { x: { ticks: { color: labelColor } }, y: { ticks: { color: labelColor }, grid: { color: gridColor } } } }
+});
+</script>
+</body></html>
