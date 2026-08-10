@@ -56,6 +56,31 @@
       width: min(1060px, 100%);
     }
 
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 26px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .breadcrumbs a {
+      color: #f1c879;
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .breadcrumbs span {
+      color: rgba(255, 255, 255, 0.58);
+    }
+
     .eyebrow {
       text-transform: uppercase;
       letter-spacing: 0.12em;
@@ -502,12 +527,23 @@
         min-height: 78vh;
       }
 
+      .hero-inner {
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      .breadcrumbs {
+        margin-bottom: 24px;
+      }
+
       h1 {
         font-size: 38px;
+        max-width: 100%;
         overflow-wrap: anywhere;
       }
 
       .hero p {
+        max-width: 100%;
         font-size: 17px;
         overflow-wrap: anywhere;
       }
@@ -515,6 +551,11 @@
       .hero-meta {
         display: grid;
         align-items: start;
+      }
+
+      .pill {
+        width: 100%;
+        justify-content: flex-start;
       }
 
       .section-head,
@@ -541,6 +582,11 @@
 <body>
   <header class="hero">
     <div class="hero-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/work/alb/">ALB Work</a>
+        <span aria-hidden="true">/</span>
+        <span>Recipe Page GEO Punch List</span>
+      </nav>
       <div class="eyebrow">Recipe Page GEO Punch List</div>
       <h1>Make every recipe easier for AI systems to find, trust, extract, and cite.</h1>
       <p>A visual, prioritized briefing for improving recipe pages. The slow-roasted lamb shoulder page is used as the working example, but the template applies across the recipe library.</p>
