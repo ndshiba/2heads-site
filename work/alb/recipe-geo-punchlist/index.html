@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Recipe Page GEO Punch List</title>
+  <style>
+    :root {
+      --ink: #191716;
+      --muted: #645d55;
+      --paper: #f8f5ef;
+      --panel: #fffdf8;
+      --line: #ded6c8;
+      --lamb-red: #9f3a33;
+      --green: #32695b;
+      --blue: #345f84;
+      --gold: #c69a4b;
+      --black: #050505;
+      --soft-red: #f4e4df;
+      --soft-green: #e5efe9;
+      --soft-blue: #e4edf4;
+      --soft-gold: #f4ecd8;
+      --shadow: 0 18px 50px rgba(25, 23, 22, 0.12);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: grid;
+      place-items: end start;
+      padding: 48px;
+      background:
+        linear-gradient(90deg, rgba(8, 8, 8, 0.88), rgba(8, 8, 8, 0.68) 52%, rgba(8, 8, 8, 0.34)),
+        url("assets/current-hero.jpg") center top / cover;
+      color: #fff;
+    }
+
+    .hero-inner {
+      width: min(1060px, 100%);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      font-weight: 800;
+      color: #f1c879;
+      margin-bottom: 14px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      letter-spacing: 0;
+      line-height: 1.08;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(40px, 5vw, 64px);
+      max-width: 660px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 22px 0 0;
+      font-size: clamp(18px, 2.1vw, 25px);
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 100%;
+      min-height: 34px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 750;
+      overflow-wrap: anywhere;
+      backdrop-filter: blur(8px);
+    }
+
+    .band {
+      padding: 70px 48px;
+    }
+
+    .band.alt {
+      background: #fff;
+    }
+
+    .wrap {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.6fr);
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4.6vw, 58px);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .priority-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .priority {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 8px solid var(--lamb-red);
+      padding: 22px;
+      min-height: 265px;
+      box-shadow: var(--shadow);
+    }
+
+    .priority:nth-child(2) {
+      border-top-color: var(--green);
+    }
+
+    .priority:nth-child(3) {
+      border-top-color: var(--blue);
+    }
+
+    .priority h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .priority ol {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .priority li + li {
+      margin-top: 8px;
+    }
+
+    .signal {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 34px;
+      height: 34px;
+      margin-bottom: 18px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 850;
+      font-size: 14px;
+    }
+
+    .visual-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.65fr);
+      gap: 30px;
+      align-items: start;
+      margin-top: 30px;
+    }
+
+    .screenshot {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .screenshot img {
+      width: 100%;
+      display: block;
+    }
+
+    .callout {
+      position: absolute;
+      max-width: 300px;
+      padding: 12px 14px;
+      border: 2px solid currentColor;
+      background: rgba(255, 253, 248, 0.96);
+      color: var(--lamb-red);
+      font-weight: 800;
+      font-size: 14px;
+      box-shadow: 0 12px 28px rgba(25, 23, 22, 0.16);
+    }
+
+    .callout.green {
+      color: var(--green);
+    }
+
+    .callout.blue {
+      color: var(--blue);
+    }
+
+    .callout.gold {
+      color: #8b6421;
+    }
+
+    .callout:after {
+      content: "";
+      position: absolute;
+      width: 74px;
+      height: 2px;
+      background: currentColor;
+      transform-origin: left center;
+    }
+
+    .c1 {
+      top: 32%;
+      right: 4%;
+    }
+
+    .c1:after {
+      left: -76px;
+      top: 50%;
+    }
+
+    .c2 {
+      top: 58%;
+      right: 5%;
+    }
+
+    .c2:after {
+      left: -76px;
+      top: 50%;
+    }
+
+    .c3 {
+      top: 19%;
+      left: 5%;
+    }
+
+    .c3:after {
+      right: -76px;
+      top: 50%;
+    }
+
+    .c4 {
+      top: 49%;
+      right: 8%;
+    }
+
+    .c4:after {
+      left: -76px;
+      top: 50%;
+    }
+
+    .notes {
+      display: grid;
+      gap: 14px;
+    }
+
+    .note {
+      padding: 18px;
+      border-left: 6px solid var(--line);
+      background: #fff;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .note p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .note.red {
+      border-color: var(--lamb-red);
+      background: var(--soft-red);
+    }
+
+    .note.green {
+      border-color: var(--green);
+      background: var(--soft-green);
+    }
+
+    .note.blue {
+      border-color: var(--blue);
+      background: var(--soft-blue);
+    }
+
+    .note.gold {
+      border-color: var(--gold);
+      background: var(--soft-gold);
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .example {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .example h3 {
+      font-size: 19px;
+      margin-bottom: 16px;
+    }
+
+    .example.bad {
+      border-top: 8px solid var(--lamb-red);
+    }
+
+    .example.good {
+      border-top: 8px solid var(--green);
+    }
+
+    .mock-title {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .mock-copy {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border: 1px solid var(--line);
+    }
+
+    .fact {
+      padding: 13px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      min-height: 70px;
+    }
+
+    .fact:nth-child(2n) {
+      border-right: 0;
+    }
+
+    .fact span {
+      display: block;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 850;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .fact b {
+      font-size: 17px;
+    }
+
+    .steps {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .steps li + li {
+      margin-top: 11px;
+    }
+
+    code,
+    pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      color: #f6f1e9;
+      background: #171514;
+      padding: 22px;
+      border-left: 8px solid var(--gold);
+      overflow: auto;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .schema-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .check {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 14px;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .check .num {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      background: var(--black);
+      color: #fff;
+      font-weight: 850;
+    }
+
+    .check h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .check p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .source-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .source-list a {
+      display: block;
+      padding: 13px 15px;
+      background: #fff;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--blue);
+      font-weight: 750;
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 880px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .band {
+        padding: 36px 22px;
+      }
+
+      .hero {
+        min-height: 78vh;
+      }
+
+      h1 {
+        font-size: 38px;
+        overflow-wrap: anywhere;
+      }
+
+      .hero p {
+        font-size: 17px;
+        overflow-wrap: anywhere;
+      }
+
+      .hero-meta {
+        display: grid;
+        align-items: start;
+      }
+
+      .section-head,
+      .visual-row,
+      .schema-grid,
+      .before-after,
+      .priority-grid,
+      .checklist {
+        grid-template-columns: 1fr;
+      }
+
+      .callout {
+        position: static;
+        margin: 10px;
+        max-width: none;
+      }
+
+      .callout:after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Recipe Page GEO Punch List</div>
+      <h1>Make every recipe easier for AI systems to find, trust, extract, and cite.</h1>
+      <p>A visual, prioritized briefing for improving recipe pages. The slow-roasted lamb shoulder page is used as the working example, but the template applies across the recipe library.</p>
+      <div class="hero-meta">
+        <span class="pill">Generalized recipe framework</span>
+        <span class="pill">Grounded in Google + Schema.org docs</span>
+        <span class="pill">Example: AmericanLamb.com lamb shoulder</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The Prioritized Punch List</h2>
+          <p>Do the list in this order. The first tier makes the page technically eligible and extractable. The second tier makes it useful enough to cite. The third tier helps the whole recipe library compound.</p>
+        </div>
+
+        <div class="priority-grid">
+          <article class="priority">
+            <div class="signal">P1</div>
+            <h3>Make the recipe machine-readable.</h3>
+            <ol>
+              <li>Verify Googlebot, Bingbot, OAI-SearchBot, and normal users are not blocked or challenged.</li>
+              <li>Add complete <code>Recipe</code> JSON-LD as the main structured data object.</li>
+              <li>Make schema match visible content: author, images, times, servings, ingredients, and steps.</li>
+              <li>Validate with Rich Results Test and URL Inspection before scaling.</li>
+            </ol>
+          </article>
+
+          <article class="priority">
+            <div class="signal">P2</div>
+            <h3>Make the answer easy to extract.</h3>
+            <ol>
+              <li>Add a short answer block directly under the H1.</li>
+              <li>Add a clean quick-facts table with units, temperature, rest time, and yield.</li>
+              <li>Rewrite directions as named, numbered steps that map to <code>HowToStep</code>.</li>
+              <li>Separate true cooking variants from the main recipe flow.</li>
+            </ol>
+          </article>
+
+          <article class="priority">
+            <div class="signal">P3</div>
+            <h3>Build recipe authority over time.</h3>
+            <ol>
+              <li>Add cut-specific expertise: why this cut works, texture goals, substitutions, storage, reheating.</li>
+              <li>Use multiple high-quality images: finished dish plus step/process images where possible.</li>
+              <li>Strengthen internal links to cut, method, time/temp, and recipe hub pages.</li>
+              <li>Track rich results, AI citations, AI referrals, and recipe-page engagement after launch.</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>What The Example Page Shows</h2>
+          <p>The current page has a strong food image and a clear recipe body. The GEO opportunity is to turn that visible content into cleaner answer units and structured recipe data.</p>
+        </div>
+
+        <div class="visual-row">
+          <figure class="screenshot">
+            <img src="assets/current-hero.jpg" alt="Screenshot of the slow roasted lamb shoulder recipe header">
+            <figcaption class="callout c1">Add a direct 2-4 sentence answer summary under the title.</figcaption>
+            <figcaption class="callout c2 green">Quick facts are present, but cook time needs a unit and should include internal temperature.</figcaption>
+          </figure>
+
+          <div class="notes">
+            <div class="note red">
+              <strong>Current technical gap</strong>
+              <p>The page exposes Article/BlogPosting JSON-LD, but the recipe content is not marked up as a <code>Recipe</code> object.</p>
+            </div>
+            <div class="note green">
+              <strong>Good foundation</strong>
+              <p>The page already has a completed-dish image, prep time, cook time, servings, ingredients, directions, and a USDA temperature note.</p>
+            </div>
+            <div class="note blue">
+              <strong>Best next move</strong>
+              <p>Use this layout as the visible foundation, then add an extraction-ready intro, stronger quick facts, numbered steps, and matching schema.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Fix The Recipe Body For Extraction</h2>
+          <p>AI systems do better when the page has reusable answer blocks. Ingredients should be list items. Directions should be numbered steps. Repeated or ambiguous lines should be removed.</p>
+        </div>
+
+        <div class="visual-row">
+          <figure class="screenshot">
+            <img src="assets/current-body.jpg" alt="Screenshot of ingredients and directions on the current recipe page">
+            <figcaption class="callout c3 gold">Ingredients are visible, but should be real list items and mirrored in schema.</figcaption>
+            <figcaption class="callout c4">Directions should become named steps. This screenshot also shows a duplicated roasting instruction.</figcaption>
+          </figure>
+
+          <div class="notes">
+            <div class="note gold">
+              <strong>General rule</strong>
+              <p>If a human sees a recipe fact, the crawler should see the same fact in structured data.</p>
+            </div>
+            <div class="note red">
+              <strong>Do not hide the good stuff</strong>
+              <p>Recipe-specific expertise should be visible text, not only in schema or image text.</p>
+            </div>
+            <div class="note green">
+              <strong>Suggested direction format</strong>
+              <p>Use short named steps like "Season the lamb", "Sear the shoulder", and "Roast covered". Each step can have a stable anchor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Before And After Content Pattern</h2>
+          <p>This is the reusable template Brightly can apply to any recipe page. The "after" version makes the same content easier for Google, Bing, ChatGPT search, and human skimmers to parse.</p>
+        </div>
+
+        <div class="before-after">
+          <article class="example bad">
+            <h3>Before: visually acceptable, weaker extraction</h3>
+            <div class="mock-title">Slow Roasted Lamb Shoulder</div>
+            <p class="mock-copy">Recipe by "Daddios Kitchen"</p>
+            <div class="facts">
+              <div class="fact"><span>Prep time</span><b>10 min</b></div>
+              <div class="fact"><span>Cook time</span><b>40</b></div>
+              <div class="fact"><span>Total time</span><b>50 min</b></div>
+              <div class="fact"><span>Servings</span><b>4</b></div>
+            </div>
+            <ol class="steps" style="margin-top: 18px;">
+              <li>Preheat oven to 325&deg;F.</li>
+              <li>Season American lamb on both sides using sea salt and black pepper.</li>
+              <li>Cover your dutch oven and roast for about 30 minutes or until internal temperature is 145F degrees.</li>
+            </ol>
+          </article>
+
+          <article class="example good">
+            <h3>After: answer-first and schema-ready</h3>
+            <div class="mock-title">Slow Roasted Lamb Shoulder</div>
+            <p class="mock-copy">Slow-roasted lamb shoulder is best cooked covered at 325&deg;F until it reaches 145&deg;F, then rested for 3 minutes. This version sears the shoulder first, then roasts it with onion, rosemary, garlic, and stock for tender slices served with mashed potatoes, gravy, and green beans.</p>
+            <div class="facts">
+              <div class="fact"><span>Cut</span><b>Lamb shoulder</b></div>
+              <div class="fact"><span>Method</span><b>Sear + roast</b></div>
+              <div class="fact"><span>Oven temp</span><b>325&deg;F</b></div>
+              <div class="fact"><span>Cook target</span><b>145&deg;F + 3 min rest</b></div>
+              <div class="fact"><span>Prep time</span><b>10 min</b></div>
+              <div class="fact"><span>Total time</span><b>50 min</b></div>
+            </div>
+            <ol class="steps" style="margin-top: 18px;">
+              <li><b>Preheat the oven.</b> Heat the oven to 325&deg;F.</li>
+              <li><b>Season the lamb.</b> Season both sides with salt and pepper.</li>
+              <li><b>Sear the shoulder.</b> Brown the lamb in butter for 2-3 minutes per side.</li>
+              <li><b>Roast covered.</b> Add onion, rosemary, garlic, and stock, then roast covered until 145&deg;F.</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Recipe Schema Example</h2>
+          <p>This is a discussion sample, not production code. The important point is the shape: recipe data, image variants, ISO durations, ingredients, and named instructions should all be explicit.</p>
+        </div>
+
+        <div class="schema-grid">
+          <div class="notes">
+            <div class="note red">
+              <strong>Current example page</strong>
+              <p>Detected schema types: <code>Article</code>, <code>BlogPosting</code>, <code>WebPage</code>, <code>ImageObject</code>, <code>BreadcrumbList</code>, <code>WebSite</code>, <code>Organization</code>, and <code>Person</code>.</p>
+            </div>
+            <div class="note green">
+              <strong>Recommended main entity</strong>
+              <p>Add <code>Recipe</code> and connect it to the page with <code>mainEntity</code> or an equivalent graph relationship.</p>
+            </div>
+            <div class="note blue">
+              <strong>Scale rule</strong>
+              <p>Build the schema from the same fields that render the page, so visible copy and structured data cannot drift apart.</p>
+            </div>
+          </div>
+
+          <pre>{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": "Slow Roasted Lamb Shoulder",
+  "description": "A seared lamb shoulder roasted with onion, rosemary, garlic, and stock.",
+  "image": [
+    "https://americanlamb.com/.../lamb-shoulder-1x1.jpg",
+    "https://americanlamb.com/.../lamb-shoulder-4x3.jpg",
+    "https://americanlamb.com/.../lamb-shoulder-16x9.jpg"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "American Lamb Board"
+  },
+  "prepTime": "PT10M",
+  "cookTime": "PT40M",
+  "totalTime": "PT50M",
+  "recipeYield": "4 servings",
+  "recipeCategory": "Main course",
+  "cookingMethod": "Roasting",
+  "keywords": "lamb shoulder, roasted lamb, American lamb",
+  "recipeIngredient": [
+    "1.5 pounds American lamb shoulder",
+    "1 yellow onion, quartered",
+    "1 tablespoon butter",
+    "1 teaspoon sea salt"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Preheat the oven",
+      "text": "Preheat the oven to 325 degrees F.",
+      "url": "https://americanlamb.com/recipes/slow-roasted-lamb-shoulder/#step-1"
+    }
+  ]
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>The Repeatable Recipe Template</h2>
+          <p>Every priority below has both a user benefit and an AI-extraction benefit. This keeps GEO work practical instead of turning pages into generic SEO copy.</p>
+        </div>
+
+        <div class="checklist">
+          <article class="check">
+            <div class="num">1</div>
+            <div>
+              <h3>Crawl and index access</h3>
+              <p>Confirm the page, robots.txt, sitemap, images, and CDN/security layer are accessible to search crawlers and AI search crawlers.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">2</div>
+            <div>
+              <h3>Answer block</h3>
+              <p>Place a concise recipe answer under the H1: what it is, why it works, time/temp, and serving outcome.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">3</div>
+            <div>
+              <h3>Quick facts</h3>
+              <p>Use a table for cut, method, oven temp, prep, cook, total time, servings, internal temp, and rest time.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">4</div>
+            <div>
+              <h3>Recipe JSON-LD</h3>
+              <p>Mark up the actual recipe with <code>Recipe</code>, not only <code>Article</code>. Include ingredients and instructions.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">5</div>
+            <div>
+              <h3>Named steps</h3>
+              <p>Turn directions into ordered, named steps that can be mapped to <code>HowToStep</code> and linked with anchors.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">6</div>
+            <div>
+              <h3>Image set</h3>
+              <p>Use finished-dish images in 1:1, 4:3, and 16:9 where possible, plus step images for complex techniques.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">7</div>
+            <div>
+              <h3>Cut-specific expertise</h3>
+              <p>Add practical lamb-specific notes: cut choice, doneness, texture, substitutions, storage, reheating, and serving ideas.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">8</div>
+            <div>
+              <h3>Internal links</h3>
+              <p>Connect the recipe to cut pages, method pages, time/temp guidance, seasonal hubs, and related recipes.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">9</div>
+            <div>
+              <h3>Useful FAQs</h3>
+              <p>Add only FAQs that match real query variants, such as cook time, oven temp, covered vs uncovered, and safe internal temperature.</p>
+            </div>
+          </article>
+
+          <article class="check">
+            <div class="num">10</div>
+            <div>
+              <h3>Measurement loop</h3>
+              <p>Track rich results, GSC performance, Bing AI visibility where available, AI referrals, and recipe-page engagement.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Proof And Measurement</h2>
+          <p>A recipe page should be judged by more than rankings. The goal is eligibility, extractability, citation likelihood, and useful traffic.</p>
+        </div>
+
+        <div class="visual-row">
+          <figure class="screenshot">
+            <img src="assets/current-lower.jpg" alt="Screenshot showing USDA temperature note and lower recipe content">
+            <figcaption class="callout c3 blue">Safety and temperature guidance is valuable proof. Make it structured, direct, and visibly tied to the recipe.</figcaption>
+          </figure>
+
+          <div class="notes">
+            <div class="note green">
+              <strong>Launch QA</strong>
+              <p>Run Rich Results Test, URL Inspection, schema validation, page speed/mobile checks, and a crawler-access check before treating a template as ready.</p>
+            </div>
+            <div class="note blue">
+              <strong>Post-launch metrics</strong>
+              <p>Watch GSC recipe queries, impressions, clicks, rich-result eligibility, AI-search referral traffic, recipe-page engagement, and assisted paths to recipe hubs.</p>
+            </div>
+            <div class="note gold">
+              <strong>Pilot recommendation</strong>
+              <p>Start with 5-10 high-value organic recipe pages, update the template, validate the implementation, then compare against the next 6-8 weeks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Source Notes</h2>
+          <p>These recommendations are grounded in current official documentation and the live example page inspection from August 10, 2026.</p>
+        </div>
+
+        <ul class="source-list">
+          <li><a href="https://developers.google.com/search/docs/appearance/structured-data/recipe">Google Search Central: Recipe structured data</a></li>
+          <li><a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central: AI features and your website</a></li>
+          <li><a href="https://schema.org/Recipe">Schema.org: Recipe type</a></li>
+          <li><a href="https://platform.openai.com/docs/bots">OpenAI: Crawlers and OAI-SearchBot</a></li>
+          <li><a href="https://www.foodsafety.gov/food-safety-charts/safe-minimum-internal-temperatures">FoodSafety.gov: Safe minimum internal temperatures</a></li>
+        </ul>
+
+        <p class="footer-note">Note: a plain HTTP fetch from this machine was redirected to a SiteGround captcha page for robots.txt and sitemap URLs, while the Chromium browser loaded the recipe normally. That should be verified against server/CDN logs before making a crawler-access conclusion.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
