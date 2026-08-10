@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Colao & Peter - Google Ads, GTM, GA4, and Website Ecosystem</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a18;
+      --muted: #68645c;
+      --paper: #f5f4f0;
+      --white: #ffffff;
+      --line: #e2ddd5;
+      --gold: #bda26b;
+      --gold-soft: #f6f0df;
+      --green: #346b4a;
+      --green-soft: #e8f3ec;
+      --blue: #365d7d;
+      --blue-soft: #e8f0f6;
+      --red: #9a3f3f;
+      --red-soft: #f7e7e7;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    a { color: #8a7147; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .breadcrumb {
+      background: #f0ede7;
+      border-bottom: 1px solid var(--line);
+      padding: 8px 32px;
+      font-size: 12px;
+      color: #888;
+    }
+    .breadcrumb a { color: var(--gold); font-weight: 700; }
+
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark {
+      width: 4px;
+      height: 34px;
+      background: var(--gold);
+      border-radius: 2px;
+      flex: 0 0 auto;
+    }
+    .brand h1 {
+      font-size: 17px;
+      line-height: 1.2;
+      letter-spacing: -0.2px;
+    }
+    .brand h1 span { color: var(--gold); }
+    .brand-sub {
+      font-size: 11px;
+      color: #888;
+      margin-top: 2px;
+      letter-spacing: 0.3px;
+    }
+    .status-badge {
+      border: 1px solid #cdbb8d;
+      background: var(--gold-soft);
+      color: #705b35;
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 36px 32px 90px; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 30px;
+    }
+    .hero-main {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 30px;
+    }
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .hero-main h2 {
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -0.4px;
+      margin-bottom: 14px;
+    }
+    .hero-main p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 620px;
+    }
+
+    .quick-state {
+      display: grid;
+      gap: 10px;
+    }
+    .state-row {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 15px 16px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+    .state-row strong { display: block; font-size: 13px; }
+    .state-row span { display: block; color: #777; font-size: 12px; margin-top: 2px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      min-width: 86px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+    .pill.green { background: var(--green-soft); color: var(--green); border: 1px solid #b8d9c3; }
+    .pill.blue { background: var(--blue-soft); color: var(--blue); border: 1px solid #b8cedf; }
+    .pill.gold { background: var(--gold-soft); color: #715b35; border: 1px solid #e0cf9b; }
+
+    .section { margin-top: 34px; }
+    .section-title {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 9px;
+      margin-bottom: 15px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 18px;
+    }
+    .panel h3 {
+      color: var(--ink);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .panel p, .panel li {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .panel ul { padding-left: 18px; }
+    .panel li { margin-bottom: 6px; }
+    .panel li:last-child { margin-bottom: 0; }
+
+    .flow {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      align-items: stretch;
+    }
+    .flow-step {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 14px;
+      min-height: 126px;
+      background: #fbfaf7;
+    }
+    .flow-step:after {
+      content: ">";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #a99b80;
+      font-weight: 800;
+      font-size: 16px;
+      z-index: 2;
+    }
+    .flow-step:last-child:after { content: ""; }
+    .flow-step .num {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 9px;
+    }
+    .flow-step h3 { font-size: 13px; margin-bottom: 6px; }
+    .flow-step p { font-size: 12px; color: var(--muted); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 13px;
+    }
+    th {
+      text-align: left;
+      background: #f4f1ec;
+      color: #6f614b;
+      font-size: 10px;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      padding: 11px 13px;
+      border-bottom: 1px solid var(--line);
+    }
+    td {
+      padding: 12px 13px;
+      border-bottom: 1px solid #f0ece5;
+      vertical-align: top;
+      color: var(--muted);
+    }
+    tr:last-child td { border-bottom: 0; }
+    td strong { color: var(--ink); }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      color: #4d4638;
+      background: #f7f4ed;
+      border: 1px solid #e9decb;
+      padding: 1px 5px;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    .callout {
+      background: var(--blue-soft);
+      border: 1px solid #c4d7e6;
+      border-left: 4px solid var(--blue);
+      border-radius: 6px;
+      padding: 15px 18px;
+      color: #294b64;
+      font-size: 13px;
+    }
+    .callout strong { display: block; color: #1d3d56; margin-bottom: 4px; }
+    .callout.gold {
+      background: var(--gold-soft);
+      border-color: #e0cf9b;
+      border-left-color: var(--gold);
+      color: #5f4c2c;
+    }
+    .callout.gold strong { color: #4a3b22; }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      border-radius: 4px;
+      padding: 3px 8px;
+      background: #f7f4ed;
+      border: 1px solid #e9decb;
+      color: #5e523e;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer {
+      margin-top: 44px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: #aaa;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .grid-2, .grid-3, .flow { grid-template-columns: 1fr; }
+      .flow-step:after { content: "v"; right: 50%; top: auto; bottom: -18px; transform: translateX(50%); }
+      .flow-step:last-child:after { content: ""; }
+      .header { align-items: flex-start; flex-direction: column; }
+      .status-badge { align-self: flex-start; }
+    }
+
+    @media (max-width: 560px) {
+      .breadcrumb, .header { padding-left: 20px; padding-right: 20px; }
+      .wrap { padding: 24px 18px 70px; }
+      .hero-main { padding: 22px; }
+      .hero-main h2 { font-size: 25px; }
+      table { font-size: 12px; }
+      th, td { padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="breadcrumb"><a href="index.html">Reports</a> / Google Ads Ecosystem</div>
+
+  <header class="header">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <h1>Colao <span>&amp;</span> Peter</h1>
+        <div class="brand-sub">Signature Care Google Ads ecosystem</div>
+      </div>
+    </div>
+    <div class="status-badge">Live as of Aug 10, 2026</div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">AdWords, GTM, GA4, and website</div>
+        <h2>How the Signature Care advertising system fits together.</h2>
+        <p>This page explains the working ecosystem behind the C&amp;P landscape maintenance campaign: what Google Ads controls, what the website does, what GTM listens for, and how GA4 and Google Ads receive attribution when a visitor turns into a lead.</p>
+        <p><a href="signature-care-google-ads-campaign-review-2026-08-06.html">Back to the Signature Care campaign review with keywords, ads, negatives, and launch notes &rarr;</a></p>
+      </div>
+      <div class="quick-state">
+        <div class="state-row">
+          <div><strong>Campaign #1</strong><span>Estate landscape maintenance</span></div>
+          <div class="pill green">Eligible</div>
+        </div>
+        <div class="state-row">
+          <div><strong>Campaign #2</strong><span>Competitor landscape maintenance</span></div>
+          <div class="pill gold">Pending</div>
+        </div>
+        <div class="state-row">
+          <div><strong>Total Budget</strong><span>$26.31/day + $6.58/day</span></div>
+          <div class="pill blue">$32.89/day</div>
+        </div>
+        <div class="state-row">
+          <div><strong>Conversion Goal</strong><span>GA4 form_submitted imported to Ads</span></div>
+          <div class="pill green">Primary</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">The Five-Part System</div>
+      <div class="flow">
+        <div class="flow-step">
+          <div class="num">1</div>
+          <h3>Google Ads</h3>
+          <p>Controls campaigns, budgets, keywords, ads, click IDs, and final URLs.</p>
+        </div>
+        <div class="flow-step">
+          <div class="num">2</div>
+          <h3>Landing Page</h3>
+          <p>Receives traffic on the Signature Care maintenance page and preserves URL parameters.</p>
+        </div>
+        <div class="flow-step">
+          <div class="num">3</div>
+          <h3>GTM</h3>
+          <p>Loads tracking, stores the click signal, and listens for contact-page actions.</p>
+        </div>
+        <div class="flow-step">
+          <div class="num">4</div>
+          <h3>Website Form</h3>
+          <p>Elementor form success triggers a clean lead event without depending on a thank-you page.</p>
+        </div>
+        <div class="flow-step">
+          <div class="num">5</div>
+          <h3>GA4 + Ads</h3>
+          <p>GA4 records the lead, then Google Ads imports it as a primary lead-form conversion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Current Live Campaigns</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Campaign</th>
+            <th>Status</th>
+            <th>Budget</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Campaign #1</strong><br><code>24111769670</code></td>
+            <td>Enabled, serving, eligible. Main RSA is approved.</td>
+            <td><strong>$26.31/day</strong></td>
+            <td>Main estate landscape maintenance campaign for premium category terms.</td>
+          </tr>
+          <tr>
+            <td><strong>Campaign #2 - Competitor Landscape Maintenance</strong><br><code>24122874704</code></td>
+            <td>Enabled and serving status is active, but primary status is pending while Google reviews the new competitor RSAs.</td>
+            <td><strong>$6.58/day</strong></td>
+            <td>Competitor-name campaign for JR's six named maintenance competitors.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-title">What Each Piece Owns</div>
+      <div class="grid-3">
+        <div class="panel">
+          <h3>Google Ads owns demand capture</h3>
+          <ul>
+            <li>Campaign status and budgets</li>
+            <li>Exact and phrase match keywords</li>
+            <li>Negative keywords</li>
+            <li>Responsive search ads</li>
+            <li>Auto-tagged click IDs</li>
+            <li>Imported conversion reporting</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>The website owns the buyer experience</h3>
+          <ul>
+            <li>Signature Care landing page</li>
+            <li>Contact CTAs</li>
+            <li>Elementor contact form</li>
+            <li>Phone links</li>
+            <li>Message submission</li>
+            <li>Trust-building page content</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>GTM and GA4 own measurement</h3>
+          <ul>
+            <li>GA4 page_view</li>
+            <li>GCLID storage</li>
+            <li>Contact-page view event</li>
+            <li>Phone-click event</li>
+            <li>Elementor form success listener</li>
+            <li>GA4 form_submitted key event</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Attribution Flow</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>What Happens</th>
+            <th>Why It Matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Searcher clicks ad</strong></td>
+            <td>Google Ads sends the user to the final URL. Auto-tagging adds a <code>gclid</code>. Campaign #2 also includes manual UTMs.</td>
+            <td>GA4 can attribute the session back to Google Ads, campaign, and click.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Landing page loads</strong></td>
+            <td>The Signature Care page returns 200 and loads GTM <code>GTM-KZ6TFDKT</code> plus GA4 <code>G-XBHQWBW7RZ</code>.</td>
+            <td>The visit is measurable before the visitor clicks anything else.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Visitor goes to contact</strong></td>
+            <td>The page CTAs lead to the production contact page with <code>?signature-care=property-walk</code>.</td>
+            <td>The contact-page visit can be tied to the ad session and Signature Care intent.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Visitor submits form</strong></td>
+            <td>GTM listens for Elementor success on form <code>c7172e6</code> and pushes <code>elementor_form_success</code>.</td>
+            <td>The lead event is based on a successful form submission, not just a button click.</td>
+          </tr>
+          <tr>
+            <td><strong>5. GA4 records lead</strong></td>
+            <td>GTM fires GA4 event <code>form_submitted</code>, marked as a key event in GA4.</td>
+            <td>GA4 can report lead volume by source, campaign, landing page, and content.</td>
+          </tr>
+          <tr>
+            <td><strong>6. Ads imports conversion</strong></td>
+            <td>Google Ads imports <code>www.colaopeter.com - GA4 (web) form_submitted</code> as a primary submit-lead-form conversion.</td>
+            <td>Google Ads can optimize and report against actual website leads.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Tracking Details</div>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Campaign #1 attribution</h3>
+          <p>Campaign #1 uses Google Ads auto-tagging. It does not currently add manual UTMs to the ad final URL, but the account has auto-tagging enabled, so GA4 should classify those clicks through the Google Ads integration and click ID.</p>
+        </div>
+        <div class="panel">
+          <h3>Campaign #2 attribution</h3>
+          <p>Campaign #2 uses both auto-tagging and explicit UTMs. Its URL includes <code>utm_campaign=signature_care_competitor_landscape_maintenance</code> and competitor-specific <code>utm_content</code> values.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Primary Identifiers</div>
+      <div class="tag-list">
+        <span class="tag">Google Ads customer: 848-303-4203</span>
+        <span class="tag">Campaign #1: 24111769670</span>
+        <span class="tag">Campaign #2: 24122874704</span>
+        <span class="tag">GTM: GTM-KZ6TFDKT</span>
+        <span class="tag">GA4 stream/tag: G-XBHQWBW7RZ</span>
+        <span class="tag">GA4 property: 387610456</span>
+        <span class="tag">Elementor form: c7172e6</span>
+        <span class="tag">GA4 event: form_submitted</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">How To Read Early Results</div>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>In Google Ads</h3>
+          <ul>
+            <li>Confirm Campaign #2 clears review from pending to eligible.</li>
+            <li>Watch search terms daily during the first week.</li>
+            <li>Check spend split against the $32.89/day combined budget.</li>
+            <li>Use Auction Insights once there is enough impression data.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>In GA4</h3>
+          <ul>
+            <li>Use source / medium, campaign, landing page, and event name.</li>
+            <li>Track <code>form_submitted</code>, <code>contact_page_view</code>, and phone clicks.</li>
+            <li>Separate Campaign #1 category traffic from Campaign #2 competitor traffic.</li>
+            <li>Expect normal GA4 and Ads conversion-reporting lag.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">Known Caveats</div>
+      <div class="callout gold">
+        <strong>No fake lead has been submitted.</strong>
+        The tracking chain is configured and live, but the cleanest end-to-end proof will be the first real or intentional test Elementor submission after launch.
+      </div>
+      <div style="height: 10px;"></div>
+      <div class="callout">
+        <strong>Campaign #2 needs Google review.</strong>
+        The competitor campaign is enabled, but its new RSAs still show approval status unknown and campaign primary status pending while Google reviews the ads and keywords.
+      </div>
+    </section>
+
+    <footer class="footer">
+      Prepared for Nathan Shiba and Colao &amp; Peter. Current as of Aug 10, 2026, 11:55 AM CDT. Source notes: <code>projects/cp-landscaping-maintenance-agreements.md</code>.
+    </footer>
+  </main>
+</body>
+</html>

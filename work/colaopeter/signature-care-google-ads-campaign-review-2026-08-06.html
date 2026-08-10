@@ -73,6 +73,7 @@
 
   .status-pill { display: inline-block; padding: 3px 10px; border-radius: 10px; font-size: 11px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; }
   .paused { background: var(--warn-soft); color: var(--warn); border: 1px solid var(--warn-line); }
+  .live { background: var(--ok-soft); color: var(--ok); border: 1px solid var(--ok-line); }
 
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .card { border: 1px solid var(--line); border-radius: 6px; padding: 15px 17px; background: #fff; }
@@ -182,12 +183,12 @@
 
     <div class="title-block">
       <h2>Signature Care — Google Ads Campaign Review</h2>
-      <div class="sub">Prepared 2026-08-06 · for JR review before launch</div>
+      <div class="sub">Prepared 2026-08-06 · updated 2026-08-10 after live activation</div>
     </div>
 
     <div class="callout">
       <strong>Where things stand right now</strong>
-      The campaign has been fully built and created in the ad account, but it is <strong>paused and spending $0.00/day</strong>. Nothing goes live or costs a dollar until we swap in the client payment method and switch it back on. This page is for review before that happens.
+      The Signature Care campaign is now <strong>enabled, serving, eligible, and approved</strong>. The separate competitor landscape maintenance campaign is also enabled and serving, with its new ads pending normal Google review. For the tracking layer behind both campaigns, see the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
     </div>
 
     <div class="section">
@@ -197,12 +198,13 @@
         <tr><td>Account</td><td>Colao &amp; Peter (Google Ads, under Shiba &amp; Associates MCC)</td></tr>
         <tr><td>Campaign name</td><td>Campaign #1 — Signature Care / Estate Landscape Maintenance</td></tr>
         <tr><td>Campaign type</td><td>Search only <em>(no Display, no Performance Max)</em></td></tr>
-        <tr><td>Status</td><td><span class="status-pill paused">Paused — $0 spend</span></td></tr>
-        <tr><td>Monthly budget</td><td>$1,000/month target &rarr; <strong>$32.89/day</strong></td></tr>
+        <tr><td>Status</td><td><span class="status-pill live">Enabled — eligible and serving</span></td></tr>
+        <tr><td>Monthly budget</td><td>$1,000/month target &rarr; <strong>$32.89/day total</strong>: Campaign #1 $26.31/day, Campaign #2 $6.58/day</td></tr>
         <tr><td>Bid strategy</td><td>Maximize Clicks, capped at <strong>$8.00 max CPC</strong></td></tr>
         <tr><td>Networks</td><td>Google Search + Search Partners (Display disabled)</td></tr>
         <tr><td>Landing page</td><td><code>colaopeter.com/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/</code></td></tr>
         <tr><td>GA4 property linked</td><td>387610456</td></tr>
+        <tr><td>Attribution ecosystem</td><td><a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem &rarr;</a></td></tr>
         <tr><td>Google Ads campaign</td><td><a href="https://ads.google.com/aw/campaigns?campaignId=24111769670&amp;ocid=8459626549" target="_blank" rel="noopener">Open Campaign #1 in Google Ads &rarr;</a> <span style="color:var(--muted);font-size:11.5px;">(requires Google Ads account access)</span></td></tr>
       </table>
     </div>
@@ -269,7 +271,7 @@
 
     <div class="section">
       <div class="section-title">Keyword SERP Test &amp; Expansion — 2026-08-07</div>
-      <p style="font-size:13px;margin-bottom:10px;">Ran all 10 original keywords through live Google Search, anchored to the C&amp;P office (24868 Arcola Mills Drive, Sterling, VA 20166) via the location picker, capturing paid/LSA results, local-pack competitors, and Google AI Overview presence + citations for each.</p>
+      <p style="font-size:13px;margin-bottom:10px;">Ran all 10 original keywords through live Google Search, anchored to the C&amp;P office (24868 Arcola Mills Drive, Sterling, VA 20166) via the location picker, capturing paid/LSA results, local-pack competitors, and Google AI Overview presence + citations for each as the campaign begins serving.</p>
       <div class="callout">
         <strong>Key finding: AI Overview visibility gap</strong>
         Only 2 of 10 keywords trigger a Google AI Overview. <code>"landscape maintenance agreement virginia"</code> is the standout — the only query where the AI Overview cites real <strong>local</strong> Sterling-area competitors by name (Fine Landscapes, Complete Landscaping Service, Community Landscape Services) instead of generic national sources. C&amp;P has no equivalent authoritative content yet — priority GEO content target once Signature Care launches.
@@ -293,7 +295,7 @@
         </div>
       </div>
 
-      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Ad group keyword count: 14 &rarr; 20 after this batch (see full table above). The 6 additions were added directly in the live Google Ads account; verified showing status <em>Not eligible / Under review, Campaign is paused</em> — expected for brand-new keywords, and no live-spend risk since the campaign remains Paused/$0 spend pending the payment-method swap. Two Potomac-modifier keywords were subsequently removed on 2026-08-07, bringing the final live count to 18.</p>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Ad group keyword count: 14 &rarr; 20 after this batch (see full table above). The 6 additions were added directly in the live Google Ads account. Two Potomac-modifier keywords were subsequently removed on 2026-08-07, bringing the final Campaign #1 live keyword count to 18.</p>
     </div>
 
     <div class="section">
@@ -510,7 +512,7 @@
     </script>
 
     <div class="section">
-      <div class="section-title">Build-to-Launch Timeline</div>
+      <div class="section-title">Build-to-Live Timeline</div>
       <div class="diagram-wrap">
       <svg viewBox="0 0 1020 220" xmlns="http://www.w3.org/2000/svg" width="100%" height="220" font-family="-apple-system,Helvetica,Arial,sans-serif">
         <defs>
@@ -537,10 +539,10 @@
         <circle cx="270" cy="108" r="6" fill="#2a6e2a"/>
         <text x="270" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">DONE</text>
 
-        <rect x="420" y="20" width="120" height="80" rx="8" fill="#FDF6E8" stroke="#8a6a20" stroke-width="1.5"/>
-        <text x="480" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Paused Immediately</text>
-        <text x="480" y="65" text-anchor="middle" font-size="10.5" fill="#7a766c">$0.00/day, 0 impr,</text>
-        <text x="480" y="78" text-anchor="middle" font-size="10.5" fill="#7a766c">0 clicks, $0 cost</text>
+        <rect x="420" y="20" width="120" height="80" rx="8" fill="#EEF7EE" stroke="#2a6e2a" stroke-width="1.5"/>
+        <text x="480" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Controls Set</text>
+        <text x="480" y="65" text-anchor="middle" font-size="10.5" fill="#7a766c">Budget, geo,</text>
+        <text x="480" y="78" text-anchor="middle" font-size="10.5" fill="#7a766c">and bid cap locked</text>
         <circle cx="480" cy="108" r="6" fill="#2a6e2a"/>
         <text x="480" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">DONE</text>
 
@@ -551,24 +553,24 @@
         <circle cx="690" cy="108" r="6" fill="#2a6e2a"/>
         <text x="690" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">DONE</text>
 
-        <rect x="840" y="20" width="160" height="80" rx="8" fill="#f8e9e9" stroke="#9c3b3b" stroke-width="1.5"/>
-        <text x="920" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Swap Payment</text>
-        <text x="920" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">+ Re-enable</text>
-        <text x="920" y="73" text-anchor="middle" font-size="10.5" fill="#7a766c">Client card required</text>
-        <text x="920" y="86" text-anchor="middle" font-size="10.5" fill="#7a766c">before go-live</text>
-        <circle cx="920" cy="108" r="6" fill="#9c3b3b"/>
-        <text x="920" y="130" text-anchor="middle" font-size="10" fill="#9c3b3b" font-weight="700">PENDING</text>
+        <rect x="840" y="20" width="160" height="80" rx="8" fill="#EEF7EE" stroke="#2a6e2a" stroke-width="1.5"/>
+        <text x="920" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Campaigns Enabled</text>
+        <text x="920" y="60" text-anchor="middle" font-size="10.5" fill="#7a766c">#1 eligible, #2</text>
+        <text x="920" y="73" text-anchor="middle" font-size="10.5" fill="#7a766c">pending ad review</text>
+        <text x="920" y="86" text-anchor="middle" font-size="10.5" fill="#7a766c">within $1k/month</text>
+        <circle cx="920" cy="108" r="6" fill="#2a6e2a"/>
+        <text x="920" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">LIVE</text>
       </svg>
       </div>
     </div>
 
     <div class="section">
       <div class="section-title">What Happens Next</div>
-      <div class="callout warn">
-        <strong>Blocking item: client payment method</strong>
-        The campaign currently has the agency's own card on file as a placeholder from account setup. Before this goes live, that needs to be swapped for Colao &amp; Peter's card. Once that's done, the campaign flips from Paused to Enabled and starts serving that day.
+      <div class="callout">
+        <strong>First-week monitoring</strong>
+        Watch search terms, CPCs, spend pacing, competitor campaign ad approvals, and lead attribution. The tracking chain is documented in the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
       </div>
-      <p style="font-size:13px;">Everything else — targeting, budget, bid cap, keywords, negatives, ad copy, landing page — is built and ready. This review is the last checkpoint before spend begins.</p>
+      <p style="font-size:13px;">Everything else — targeting, budget, bid cap, keywords, negatives, ad copy, landing page, and conversion import — is active. The next useful checkpoint is performance quality, not launch readiness.</p>
     </div>
 
     <div class="footer">
