@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T12:05:19",
+  "generated_at": "2026-08-20T16:00:01",
   "customer_id": "8483034203",
   "start_date": "2026-07-22",
   "end_date": "2026-08-20",
@@ -110,11 +110,11 @@
       "date": "2026-08-20",
       "campaign_id": "24111769670",
       "campaign": "Campaign #1",
-      "impressions": 375,
-      "clicks": 6,
-      "cost": 24.65,
-      "avg_cpc": 4.11,
-      "ctr": 1.6,
+      "impressions": 390,
+      "clicks": 10,
+      "cost": 40.89,
+      "avg_cpc": 4.09,
+      "ctr": 2.56,
       "conversions": 0.0,
       "conversion_value": 0.0,
       "search_impression_share": 12.71
@@ -10415,28 +10415,28 @@
     },
     {
       "date": "2026-08-20",
-      "impressions": 375,
-      "clicks": 6,
-      "cost": 24.65,
+      "impressions": 390,
+      "clicks": 10,
+      "cost": 40.89,
       "conversions": 0.0,
       "campaigns": {
         "Campaign #1": {
           "date": "2026-08-20",
           "campaign_id": "24111769670",
           "campaign": "Campaign #1",
-          "impressions": 375,
-          "clicks": 6,
-          "cost": 24.65,
-          "avg_cpc": 4.11,
-          "ctr": 1.6,
+          "impressions": 390,
+          "clicks": 10,
+          "cost": 40.89,
+          "avg_cpc": 4.09,
+          "ctr": 2.56,
           "conversions": 0.0,
           "conversion_value": 0.0,
           "search_impression_share": 12.71
         }
       },
       "changes": [],
-      "avg_cpc": 4.11,
-      "ctr": 1.6,
+      "avg_cpc": 4.09,
+      "ctr": 2.56,
       "change_count": 0,
       "change_categories": []
     }
