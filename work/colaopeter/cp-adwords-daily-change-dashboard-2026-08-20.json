@@ -1,32 +1,8 @@
 {
-  "generated_at": "2026-08-20T16:08:49",
+  "generated_at": "2026-08-20T16:14:52",
   "customer_id": "8483034203",
   "start_date": "2026-07-22",
   "end_date": "2026-08-20",
-  "campaigns": [
-    {
-      "id": "24111769670",
-      "name": "Campaign #1",
-      "status": "ENABLED",
-      "primary_status": "LEARNING",
-      "serving_status": "SERVING",
-      "channel": "SEARCH",
-      "bidding": "TARGET_SPEND",
-      "cpc_ceiling": 6.0,
-      "daily_budget": 26.31
-    },
-    {
-      "id": "24122874704",
-      "name": "Campaign #2 - Competitor Landscape Maintenance",
-      "status": "ENABLED",
-      "primary_status": "LEARNING",
-      "serving_status": "SERVING",
-      "channel": "SEARCH",
-      "bidding": "TARGET_SPEND",
-      "cpc_ceiling": 16.0,
-      "daily_budget": 6.58
-    }
-  ],
   "metrics": [
     {
       "date": "2026-08-11",
@@ -110,11 +86,11 @@
       "date": "2026-08-20",
       "campaign_id": "24111769670",
       "campaign": "Campaign #1",
-      "impressions": 414,
+      "impressions": 420,
       "clicks": 10,
       "cost": 40.89,
       "avg_cpc": 4.09,
-      "ctr": 2.42,
+      "ctr": 2.38,
       "conversions": 0.0,
       "conversion_value": 0.0,
       "search_impression_share": 12.71
@@ -5023,7 +4999,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5036,7 +5011,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5049,7 +5023,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5062,7 +5035,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5075,7 +5047,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5088,7 +5059,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5101,7 +5071,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5114,7 +5083,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5127,7 +5095,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5140,7 +5107,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5153,7 +5119,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5166,7 +5131,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5179,7 +5143,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5192,7 +5155,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5205,7 +5167,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -5218,7 +5179,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [
         {
           "datetime": "2026-08-06 15:19:58.573039",
@@ -6647,7 +6607,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [
         {
           "datetime": "2026-08-07 10:26:00.376911",
@@ -6815,7 +6774,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -6828,7 +6786,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -6841,7 +6798,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [
         {
           "datetime": "2026-08-10 11:46:51.997903",
@@ -8961,21 +8917,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {
-        "Campaign #1": {
-          "date": "2026-08-11",
-          "campaign_id": "24111769670",
-          "campaign": "Campaign #1",
-          "impressions": 0,
-          "clicks": 0,
-          "cost": 0.0,
-          "avg_cpc": 0.0,
-          "ctr": 0.0,
-          "conversions": 0.0,
-          "conversion_value": 0.0,
-          "search_impression_share": 9.99
-        }
-      },
       "changes": [
         {
           "datetime": "2026-08-11 06:09:48.558495",
@@ -9171,7 +9112,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -9184,7 +9124,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [
         {
           "datetime": "2026-08-13 13:20:37.126383",
@@ -9326,7 +9265,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {},
       "changes": [
         {
           "datetime": "2026-08-14 12:25:28.461887",
@@ -9649,21 +9587,6 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "campaigns": {
-        "Campaign #1": {
-          "date": "2026-08-15",
-          "campaign_id": "24111769670",
-          "campaign": "Campaign #1",
-          "impressions": 0,
-          "clicks": 0,
-          "cost": 0.0,
-          "avg_cpc": 0.0,
-          "ctr": 0.0,
-          "conversions": 0.0,
-          "conversion_value": 0.0,
-          "search_impression_share": 9.99
-        }
-      },
       "changes": [],
       "avg_cpc": 0,
       "ctr": 0,
@@ -9676,21 +9599,6 @@
       "clicks": 10,
       "cost": 39.58,
       "conversions": 0.0,
-      "campaigns": {
-        "Campaign #1": {
-          "date": "2026-08-16",
-          "campaign_id": "24111769670",
-          "campaign": "Campaign #1",
-          "impressions": 93,
-          "clicks": 10,
-          "cost": 39.58,
-          "avg_cpc": 3.96,
-          "ctr": 10.75,
-          "conversions": 0.0,
-          "conversion_value": 0.0,
-          "search_impression_share": 20.08
-        }
-      },
       "changes": [
         {
           "datetime": "2026-08-16 13:23:46.235103",
@@ -10159,21 +10067,6 @@
       "clicks": 18,
       "cost": 52.61,
       "conversions": 0.0,
-      "campaigns": {
-        "Campaign #1": {
-          "date": "2026-08-17",
-          "campaign_id": "24111769670",
-          "campaign": "Campaign #1",
-          "impressions": 240,
-          "clicks": 18,
-          "cost": 52.61,
-          "avg_cpc": 2.92,
-          "ctr": 7.5,
-          "conversions": 0.0,
-          "conversion_value": 0.0,
-          "search_impression_share": 9.99
-        }
-      },
       "changes": [
         {
           "datetime": "2026-08-17 12:34:35.783215",
@@ -10202,21 +10095,6 @@
       "clicks": 14,
       "cost": 44.28,
       "conversions": 0.0,
-      "campaigns": {
-        "Campaign #1": {
-          "date": "2026-08-18",
-          "campaign_id": "24111769670",
-          "campaign": "Campaign #1",
-          "impressions": 423,
-          "clicks": 14,
-          "cost": 44.28,
-          "avg_cpc": 3.16,
-          "ctr": 3.31,
-          "conversions": 0.0,
-          "conversion_value": 0.0,
-          "search_impression_share": 9.99
-        }
-      },
       "changes": [
         {
           "datetime": "2026-08-18 05:46:44.289599",
@@ -10392,21 +10270,6 @@
       "clicks": 17,
       "cost": 51.57,
       "conversions": 0.0,
-      "campaigns": {
-        "Campaign #1": {
-          "date": "2026-08-19",
-          "campaign_id": "24111769670",
-          "campaign": "Campaign #1",
-          "impressions": 378,
-          "clicks": 17,
-          "cost": 51.57,
-          "avg_cpc": 3.03,
-          "ctr": 4.5,
-          "conversions": 0.0,
-          "conversion_value": 0.0,
-          "search_impression_share": 9.99
-        }
-      },
       "changes": [],
       "avg_cpc": 3.03,
       "ctr": 4.5,
@@ -10415,28 +10278,13 @@
     },
     {
       "date": "2026-08-20",
-      "impressions": 414,
+      "impressions": 420,
       "clicks": 10,
       "cost": 40.89,
       "conversions": 0.0,
-      "campaigns": {
-        "Campaign #1": {
-          "date": "2026-08-20",
-          "campaign_id": "24111769670",
-          "campaign": "Campaign #1",
-          "impressions": 414,
-          "clicks": 10,
-          "cost": 40.89,
-          "avg_cpc": 4.09,
-          "ctr": 2.42,
-          "conversions": 0.0,
-          "conversion_value": 0.0,
-          "search_impression_share": 12.71
-        }
-      },
       "changes": [],
       "avg_cpc": 4.09,
-      "ctr": 2.42,
+      "ctr": 2.38,
       "change_count": 0,
       "change_categories": []
     }
