@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T05:43:44",
+  "generated_at": "2026-08-21T05:49:45",
   "start_date": "2026-08-05",
   "end_date": "2026-08-21",
   "ga4_property": "387610456",
@@ -963,11 +963,11 @@
     {
       "date": "2026-08-21",
       "ads": {
-        "impressions": 67,
+        "impressions": 69,
         "clicks": 1,
         "cost": 3.6,
         "avg_cpc": 3.6,
-        "ctr": 1.49,
+        "ctr": 1.45,
         "conversions": 0.0
       },
       "channels": {
@@ -1070,12 +1070,12 @@
     }
   },
   "ads_totals": {
-    "impressions": 1645,
+    "impressions": 1647,
     "clicks": 74,
     "cost": 243.61,
     "conversions": 0.0,
     "avg_cpc": 3.29,
-    "ctr": 4.5
+    "ctr": 4.49
   },
   "campaign_rows": [
     {
