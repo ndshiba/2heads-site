@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T05:49:45",
+  "generated_at": "2026-08-21T05:59:08",
   "start_date": "2026-08-05",
   "end_date": "2026-08-21",
   "ga4_property": "387610456",
@@ -231,7 +231,7 @@
           "sessions": 5,
           "engagedSessions": 5,
           "engagementRate": 1.0,
-          "averageSessionDuration": 1609.7440451999998,
+          "averageSessionDuration": 1609.7440452,
           "eventCount": 64,
           "keyEvents": 0.0,
           "events": {
@@ -963,11 +963,11 @@
     {
       "date": "2026-08-21",
       "ads": {
-        "impressions": 69,
+        "impressions": 68,
         "clicks": 1,
         "cost": 3.6,
         "avg_cpc": 3.6,
-        "ctr": 1.45,
+        "ctr": 1.47,
         "conversions": 0.0
       },
       "channels": {
@@ -1070,12 +1070,12 @@
     }
   },
   "ads_totals": {
-    "impressions": 1647,
+    "impressions": 1646,
     "clicks": 74,
     "cost": 243.61,
     "conversions": 0.0,
     "avg_cpc": 3.29,
-    "ctr": 4.49
+    "ctr": 4.5
   },
   "campaign_rows": [
     {
