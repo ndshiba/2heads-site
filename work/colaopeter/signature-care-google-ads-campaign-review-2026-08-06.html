@@ -95,9 +95,15 @@
 
   .footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid #ddd8cf; font-size: 11px; color: #bbb; }
   code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+  .breadcrumb{background:#F0EDE7;border-bottom:1px solid var(--line);padding:8px 32px;font-size:12px;color:#888}
+  .breadcrumb a{color:var(--gold);text-decoration:none;font-weight:700}
+  .breadcrumb a:hover{text-decoration:underline}
+  .breadcrumb span{margin:0 6px;color:#bbb}
 </style>
 </head>
 <body>
+
+  <div class="breadcrumb"><a href="./">CP Web Performance Hub</a><span>/</span>Signature Care Campaign Review</div>
 
   <div class="header">
     <div class="header-left">
@@ -114,12 +120,12 @@
 
     <div class="title-block">
       <h2>Signature Care — Google Ads Campaign Review</h2>
-      <div class="sub">Prepared 2026-08-06 · updated 2026-08-10 after live activation</div>
+      <div class="sub">Prepared 2026-08-06 · updated 2026-08-21 after live status refresh</div>
     </div>
 
     <div class="callout">
       <strong>Where things stand right now</strong>
-      The Signature Care campaign is now <strong>enabled, serving, eligible, and approved</strong>. The separate competitor landscape maintenance campaign is also enabled and serving, with its new ads pending normal Google review. For the tracking layer behind both campaigns, see the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
+      The Signature Care campaign is now <strong>enabled and learning</strong>. The separate competitor landscape maintenance campaign is also enabled and learning; its six active ads are approved, but it has not yet received impressions. For the tracking layer behind both campaigns, see the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
     </div>
 
     <div class="section">
@@ -129,9 +135,9 @@
         <tr><td>Account</td><td>Colao &amp; Peter (Google Ads, under Shiba &amp; Associates MCC)</td></tr>
         <tr><td>Campaign name</td><td>Campaign #1 — Signature Care / Estate Landscape Maintenance</td></tr>
         <tr><td>Campaign type</td><td>Search only <em>(no Display, no Performance Max)</em></td></tr>
-        <tr><td>Status</td><td><span class="status-pill live">Enabled — eligible and serving</span></td></tr>
+        <tr><td>Status</td><td><span class="status-pill live">Enabled — learning</span></td></tr>
         <tr><td>Monthly budget</td><td>$1,000/month target &rarr; <strong>$32.89/day total</strong>: Campaign #1 $26.31/day, Campaign #2 $6.58/day</td></tr>
-        <tr><td>Bid strategy</td><td>Maximize Clicks, capped at <strong>$8.00 max CPC</strong></td></tr>
+        <tr><td>Bid strategy</td><td>Maximize Clicks, capped at <strong>$6.00 max CPC</strong> after the 2026-08-17 ceiling reduction</td></tr>
         <tr><td>Networks</td><td>Google Search + Search Partners (Display disabled)</td></tr>
         <tr><td>Landing page</td><td><code>colaopeter.com/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/</code></td></tr>
         <tr><td>GA4 property linked</td><td>387610456</td></tr>
@@ -152,8 +158,8 @@
           <p>Google auto-recommended $102.75/day (~$3,082/month) — over 3x the approved budget. We set it manually to $32.89/day to match the $1,000/month ceiling.</p>
         </div>
         <div class="card">
-          <h3>Maximize Clicks + $8 CPC cap</h3>
-          <p>Zero conversion history on a brand-new account makes conversion-based bidding unreliable out of the gate. Maximize Clicks with a hard $8.00 CPC ceiling gets qualified traffic in the door without runaway cost-per-click.</p>
+          <h3>Maximize Clicks + $6 CPC cap</h3>
+          <p>Zero conversion history on a brand-new account makes conversion-based bidding unreliable out of the gate. Maximize Clicks with a hard $6.00 CPC ceiling gets qualified traffic in the door without runaway cost-per-click.</p>
         </div>
         <div class="card">
           <h3>3 live targets + expansion queue</h3>
@@ -293,8 +299,8 @@
     </div>
 
     <div class="section">
-      <div class="section-title">Ad Copy — Headlines (In Review with Nathan)</div>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">Responsive Search Ads rotate/test multiple headlines per position. Below is the candidate set being finalized before lock-in — pulled from original drafts and the Property Maintenance brochure.</p>
+      <div class="section-title">Ad Copy — Live Headline Inventory</div>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">Responsive Search Ads rotate/test multiple headlines per position. Below is the approved inventory used for Campaign #1 and mirrored into the corrected competitor-campaign RSAs.</p>
       <table>
         <tr><th>#1 Headlines</th><th>#2 Headlines</th><th>#3 Headlines</th></tr>
         <tr>
@@ -369,7 +375,7 @@
         <rect x="420" y="20" width="120" height="80" rx="8" fill="#EEF7EE" stroke="#2a6e2a" stroke-width="1.5"/>
         <text x="480" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Controls Set</text>
         <text x="480" y="65" text-anchor="middle" font-size="10.5" fill="#7a766c">Budget, geo,</text>
-        <text x="480" y="78" text-anchor="middle" font-size="10.5" fill="#7a766c">and bid cap locked</text>
+        <text x="480" y="78" text-anchor="middle" font-size="10.5" fill="#7a766c">$6 bid cap locked</text>
         <circle cx="480" cy="108" r="6" fill="#2a6e2a"/>
         <text x="480" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">DONE</text>
 
@@ -382,8 +388,8 @@
 
         <rect x="840" y="20" width="160" height="80" rx="8" fill="#EEF7EE" stroke="#2a6e2a" stroke-width="1.5"/>
         <text x="920" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Campaigns Enabled</text>
-        <text x="920" y="60" text-anchor="middle" font-size="10.5" fill="#7a766c">#1 eligible, #2</text>
-        <text x="920" y="73" text-anchor="middle" font-size="10.5" fill="#7a766c">pending ad review</text>
+        <text x="920" y="60" text-anchor="middle" font-size="10.5" fill="#7a766c">#1 + #2 learning</text>
+        <text x="920" y="73" text-anchor="middle" font-size="10.5" fill="#7a766c">active ads approved</text>
         <text x="920" y="86" text-anchor="middle" font-size="10.5" fill="#7a766c">within $1k/month</text>
         <circle cx="920" cy="108" r="6" fill="#2a6e2a"/>
         <text x="920" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">LIVE</text>
@@ -395,9 +401,9 @@
       <div class="section-title">What Happens Next</div>
       <div class="callout">
         <strong>First-week monitoring</strong>
-        Watch search terms, CPCs, spend pacing, competitor campaign ad approvals, and lead attribution. The tracking chain is documented in the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
+        Watch search terms, CPCs, spend pacing, first competitor-campaign impressions, and lead attribution. The tracking chain is documented in the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
       </div>
-      <p style="font-size:13px;">Everything else — targeting, budget, bid cap, keywords, negatives, ad copy, landing page, and conversion import — is active. The next useful checkpoint is performance quality, not launch readiness.</p>
+      <p style="font-size:13px;">Everything else — targeting, budget, bid cap, keywords, negatives, ad copy, landing page, and conversion import — is active. The next useful checkpoint is performance quality, especially paid-search engagement and whether the competitor campaign starts earning eligible impressions.</p>
     </div>
 
     <div class="footer">

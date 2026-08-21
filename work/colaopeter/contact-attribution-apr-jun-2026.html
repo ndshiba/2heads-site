@@ -141,13 +141,13 @@
   </style>
 </head>
 <body>
-<div class="breadcrumb"><a href="index.html">← Reports</a><span>/</span>Contact Form Attribution</div>
+<div class="breadcrumb"><a href="./">CP Web Performance Hub</a><span>/</span>Contact Form Attribution</div>
 
   <!-- Hero -->
   <div class="hero">
     <div class="eyebrow">Colao &amp; Peter · Analytics</div>
     <h1>Contact Form <span>Attribution</span></h1>
-    <div class="subtitle">Sessions that reached and interacted with the contact form — April 1 through June 25, 2026</div>
+    <div class="subtitle">Historical snapshot: sessions that reached and interacted with the contact form — April 1 through June 25, 2026</div>
     <div class="meta">
       <div><span>Period</span><br>Apr 1 – Jun 25, 2026</div>
       <div><span>Signal</span><br>generate_lead · /contact page</div>
@@ -407,6 +407,7 @@
     <div class="section">
       <div class="section-label">Methodology</div>
       <div class="prose">
+        <p><strong>Current context:</strong> this is a historical pre-Signature-Care snapshot. Current confirmed-form tracking now uses the GA4 <strong>form_submitted</strong> key event added in August 2026; use the Signature Care engagement dashboard for current landing-page behavior.</p>
         <p>Data source: GA4 Data API, date range April 1 – June 25, 2026.</p>
         <p>The signal used is the <strong>generate_lead</strong> GA4 event, filtered to sessions where the event fired on a page path containing <code>/contact</code>. The <strong>sessions</strong> metric counts distinct GA4 sessions meeting that condition — not individual event firings.</p>
         <p>Landing page is the first page a user hit in their session before eventually reaching the contact page. Source and medium reflect GA4's last-non-direct session attribution model.</p>
@@ -421,7 +422,7 @@
         <ul>
           <li><strong>Submit clicks, not completions.</strong> The generate_lead tag fires when the Submit button is clicked — it does not confirm successful form completion. These 87 sessions include people who clicked Submit but may have abandoned due to validation errors or other friction. The number of actual submissions during this period is unknown.</li>
           <li><strong>Event multi-firing.</strong> The generate_lead tag fires on all Submit buttons site-wide, not exclusively the contact form. The sessions metric mitigates this (a session is counted once regardless of how many times the event fires within it), but sessions touching /careers/ or other pages with Submit buttons are not excluded.</li>
-          <li><strong>No form_submitted event exists yet.</strong> A dedicated GA4 event tied to Elementor's confirmed form completion signal (elementorFormSubmit) is not yet implemented. Until it is, Submit-click sessions are the closest available proxy.</li>
+          <li><strong>No form_submitted event existed during this historical period.</strong> A dedicated GA4 event tied to Elementor's confirmed form completion signal was implemented later for the Signature Care launch and verified with a labeled 2026-08-11 tracking test. For Apr-Jun, Submit-click sessions remain the closest available proxy.</li>
           <li><strong>Small sample.</strong> 87 sessions across roughly three months. Percentages are directional, not statistically reliable at this scale.</li>
           <li><strong>Staging data — May 2026.</strong> A GTM fix blocking staging hostnames was published June 11, 2026. Data prior to that date may contain a small amount of staging-originated sessions that could not be fully isolated at the session level.</li>
         </ul>
@@ -431,7 +432,7 @@
   </div><!-- /page-wrap -->
 
   <div class="footer">
-    Shiba &amp; Associates · Colao &amp; Peter · Generated June 26, 2026<br>
+    Shiba &amp; Associates · Colao &amp; Peter · Generated June 26, 2026 · Context refreshed Aug 21, 2026<br>
     For internal use only · Not for distribution
   </div>
 
