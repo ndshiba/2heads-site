@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T05:59:08",
+  "generated_at": "2026-08-21T06:19:46",
   "start_date": "2026-08-05",
   "end_date": "2026-08-21",
   "ga4_property": "387610456",
@@ -30,6 +30,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -39,6 +40,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 5,
           "keyEvents": 0.0,
           "events": {
@@ -52,6 +54,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -61,6 +64,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -70,6 +74,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -92,6 +97,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -101,6 +107,7 @@
           "engagedSessions": 1,
           "engagementRate": 0.16666666666666666,
           "averageSessionDuration": 1.3238636666666668,
+          "userEngagementDuration": 0.0,
           "eventCount": 20,
           "keyEvents": 2.0,
           "events": {
@@ -115,6 +122,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -124,6 +132,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 18,
           "keyEvents": 0.0,
           "events": {
@@ -137,6 +146,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -159,6 +169,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -168,6 +179,7 @@
           "engagedSessions": 4,
           "engagementRate": 0.4,
           "averageSessionDuration": 345.8422176,
+          "userEngagementDuration": 2956.0,
           "eventCount": 61,
           "keyEvents": 0.0,
           "events": {
@@ -183,6 +195,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -192,6 +205,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -201,6 +215,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -223,6 +238,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -232,6 +248,7 @@
           "engagedSessions": 5,
           "engagementRate": 1.0,
           "averageSessionDuration": 1609.7440452,
+          "userEngagementDuration": 13699.0,
           "eventCount": 64,
           "keyEvents": 0.0,
           "events": {
@@ -247,6 +264,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -256,6 +274,7 @@
           "engagedSessions": 1,
           "engagementRate": 1.0,
           "averageSessionDuration": 194.590003,
+          "userEngagementDuration": 30.0,
           "eventCount": 7,
           "keyEvents": 0.0,
           "events": {
@@ -270,6 +289,7 @@
           "engagedSessions": 1,
           "engagementRate": 1.0,
           "averageSessionDuration": 198.921856,
+          "userEngagementDuration": 199.0,
           "eventCount": 3,
           "keyEvents": 0.0,
           "events": {
@@ -296,6 +316,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -305,6 +326,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -314,6 +336,7 @@
           "engagedSessions": 1,
           "engagementRate": 1.0,
           "averageSessionDuration": 22.839769,
+          "userEngagementDuration": 17.0,
           "eventCount": 3,
           "keyEvents": 0.0,
           "events": {
@@ -327,6 +350,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 6,
           "keyEvents": 0.0,
           "events": {
@@ -340,6 +364,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -362,6 +387,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -371,6 +397,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -380,6 +407,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -389,6 +417,7 @@
           "engagedSessions": 1,
           "engagementRate": 0.2,
           "averageSessionDuration": 181.9687056,
+          "userEngagementDuration": 964.0,
           "eventCount": 26,
           "keyEvents": 1.0,
           "events": {
@@ -408,6 +437,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -430,6 +460,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -439,6 +470,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 3,
           "keyEvents": 0.0,
           "events": {
@@ -452,6 +484,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -461,6 +494,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -470,6 +504,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -492,6 +527,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -501,6 +537,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 2.886491,
+          "userEngagementDuration": 0.0,
           "eventCount": 9,
           "keyEvents": 0.0,
           "events": {
@@ -515,6 +552,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -524,6 +562,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -533,6 +572,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -555,6 +595,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -564,6 +605,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 3,
           "keyEvents": 0.0,
           "events": {
@@ -577,6 +619,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -586,6 +629,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -595,6 +639,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -617,6 +662,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -626,6 +672,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -635,6 +682,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -644,6 +692,7 @@
           "engagedSessions": 4,
           "engagementRate": 0.36363636363636365,
           "averageSessionDuration": 46.398286818181816,
+          "userEngagementDuration": 419.0,
           "eventCount": 51,
           "keyEvents": 0.0,
           "events": {
@@ -661,6 +710,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -683,6 +733,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -692,6 +743,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -701,6 +753,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -710,6 +763,7 @@
           "engagedSessions": 9,
           "engagementRate": 0.6428571428571429,
           "averageSessionDuration": 28.579610642857144,
+          "userEngagementDuration": 357.0,
           "eventCount": 58,
           "keyEvents": 0.0,
           "events": {
@@ -727,6 +781,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -749,6 +804,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -758,6 +814,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -767,6 +824,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -776,6 +834,7 @@
           "engagedSessions": 3,
           "engagementRate": 0.25,
           "averageSessionDuration": 45.21225875,
+          "userEngagementDuration": 168.0,
           "eventCount": 46,
           "keyEvents": 0.0,
           "events": {
@@ -792,6 +851,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -814,6 +874,7 @@
           "engagedSessions": 2,
           "engagementRate": 1.0,
           "averageSessionDuration": 109.1093645,
+          "userEngagementDuration": 136.0,
           "eventCount": 12,
           "keyEvents": 0.0,
           "events": {
@@ -830,6 +891,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 10,
           "keyEvents": 0.0,
           "events": {
@@ -843,6 +905,7 @@
           "engagedSessions": 1,
           "engagementRate": 1.0,
           "averageSessionDuration": 18.911197,
+          "userEngagementDuration": 0.0,
           "eventCount": 3,
           "keyEvents": 0.0,
           "events": {
@@ -855,6 +918,7 @@
           "engagedSessions": 6,
           "engagementRate": 0.46153846153846156,
           "averageSessionDuration": 60.565741,
+          "userEngagementDuration": 344.0,
           "eventCount": 77,
           "keyEvents": 0.0,
           "events": {
@@ -874,6 +938,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -896,6 +961,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -905,6 +971,7 @@
           "engagedSessions": 1,
           "engagementRate": 1.0,
           "averageSessionDuration": 60.044534,
+          "userEngagementDuration": 60.0,
           "eventCount": 4,
           "keyEvents": 0.0,
           "events": {
@@ -919,6 +986,7 @@
           "engagedSessions": 1,
           "engagementRate": 1.0,
           "averageSessionDuration": 35.073952,
+          "userEngagementDuration": 15.0,
           "eventCount": 5,
           "keyEvents": 0.0,
           "events": {
@@ -932,6 +1000,7 @@
           "engagedSessions": 8,
           "engagementRate": 0.5,
           "averageSessionDuration": 193.96845106249998,
+          "userEngagementDuration": 715.0,
           "eventCount": 83,
           "keyEvents": 0.0,
           "events": {
@@ -950,6 +1019,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 3,
           "keyEvents": 0.0,
           "events": {
@@ -963,11 +1033,11 @@
     {
       "date": "2026-08-21",
       "ads": {
-        "impressions": 68,
-        "clicks": 1,
-        "cost": 3.6,
-        "avg_cpc": 3.6,
-        "ctr": 1.47,
+        "impressions": 64,
+        "clicks": 2,
+        "cost": 8.53,
+        "avg_cpc": 4.26,
+        "ctr": 3.12,
         "conversions": 0.0
       },
       "channels": {
@@ -976,6 +1046,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -985,6 +1056,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -994,6 +1066,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -1003,6 +1076,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -1012,6 +1086,7 @@
           "engagedSessions": 0,
           "engagementRate": 0.0,
           "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
           "eventCount": 0,
           "keyEvents": 0.0,
           "events": {}
@@ -1025,6 +1100,7 @@
       "engagedSessions": 49,
       "engagementRate": 0.4083,
       "averageSessionDuration": 154.38,
+      "userEngagementDuration": 20079.0,
       "eventCount": 580,
       "keyEvents": 3.0
     },
@@ -1033,6 +1109,7 @@
       "engagedSessions": 2,
       "engagementRate": 1.0,
       "averageSessionDuration": 109.11,
+      "userEngagementDuration": 136.0,
       "eventCount": 12,
       "keyEvents": 0.0
     },
@@ -1041,6 +1118,7 @@
       "engagedSessions": 11,
       "engagementRate": 0.3333,
       "averageSessionDuration": 351.02,
+      "userEngagementDuration": 16715.0,
       "eventCount": 179,
       "keyEvents": 2.0
     },
@@ -1049,6 +1127,7 @@
       "engagedSessions": 3,
       "engagementRate": 1.0,
       "averageSessionDuration": 25.61,
+      "userEngagementDuration": 32.0,
       "eventCount": 11,
       "keyEvents": 0.0
     },
@@ -1057,6 +1136,7 @@
       "engagedSessions": 32,
       "engagementRate": 0.4,
       "averageSessionDuration": 80.6,
+      "userEngagementDuration": 2997.0,
       "eventCount": 372,
       "keyEvents": 1.0
     },
@@ -1065,17 +1145,18 @@
       "engagedSessions": 1,
       "engagementRate": 0.5,
       "averageSessionDuration": 99.46,
+      "userEngagementDuration": 199.0,
       "eventCount": 6,
       "keyEvents": 0.0
     }
   },
   "ads_totals": {
-    "impressions": 1646,
-    "clicks": 74,
-    "cost": 243.61,
+    "impressions": 1642,
+    "clicks": 75,
+    "cost": 248.54,
     "conversions": 0.0,
-    "avg_cpc": 3.29,
-    "ctr": 4.5
+    "avg_cpc": 3.31,
+    "ctr": 4.57
   },
   "campaign_rows": [
     {
@@ -1178,51 +1259,56 @@
       "keyEvents": 0
     }
   ],
-  "medium_rows": [
+  "visitor_type_rows": [
     {
-      "sessionMedium": "cpc",
+      "visitorType": "Paid Search",
       "sessions": 80,
       "engagedSessions": 32,
       "engagementRate": 0.4,
-      "bounceRate": 0.6,
-      "averageSessionDuration": 80.604077375,
-      "userEngagementDuration": 2997
+      "averageSessionDuration": 80.6,
+      "userEngagementDuration": 2997.0,
+      "eventCount": 372,
+      "keyEvents": 1.0
     },
     {
-      "sessionMedium": "(none)",
+      "visitorType": "Direct",
       "sessions": 33,
       "engagedSessions": 11,
-      "engagementRate": 0.3333333333333333,
-      "bounceRate": 0.6666666666666666,
-      "averageSessionDuration": 351.023927,
-      "userEngagementDuration": 16715
+      "engagementRate": 0.3333,
+      "averageSessionDuration": 351.02,
+      "userEngagementDuration": 16715.0,
+      "eventCount": 179,
+      "keyEvents": 2.0
     },
     {
-      "sessionMedium": "referral",
+      "visitorType": "Organic Search",
       "sessions": 3,
-      "engagedSessions": 2,
-      "engagementRate": 0.6666666666666666,
-      "bounceRate": 0.3333333333333333,
-      "averageSessionDuration": 73.92054166666667,
-      "userEngagementDuration": 216
+      "engagedSessions": 3,
+      "engagementRate": 1.0,
+      "averageSessionDuration": 25.61,
+      "userEngagementDuration": 32.0,
+      "eventCount": 11,
+      "keyEvents": 0.0
     },
     {
-      "sessionMedium": "(data not available)",
+      "visitorType": "Cross-network",
       "sessions": 2,
       "engagedSessions": 2,
-      "engagementRate": 1,
-      "bounceRate": 0,
-      "averageSessionDuration": 109.1093645,
-      "userEngagementDuration": 136
+      "engagementRate": 1.0,
+      "averageSessionDuration": 109.11,
+      "userEngagementDuration": 136.0,
+      "eventCount": 12,
+      "keyEvents": 0.0
     },
     {
-      "sessionMedium": "organic",
+      "visitorType": "Referral",
       "sessions": 2,
-      "engagedSessions": 2,
-      "engagementRate": 1,
-      "bounceRate": 0,
-      "averageSessionDuration": 26.9925745,
-      "userEngagementDuration": 15
+      "engagedSessions": 1,
+      "engagementRate": 0.5,
+      "averageSessionDuration": 99.46,
+      "userEngagementDuration": 199.0,
+      "eventCount": 6,
+      "keyEvents": 0.0
     }
   ],
   "event_totals": {
