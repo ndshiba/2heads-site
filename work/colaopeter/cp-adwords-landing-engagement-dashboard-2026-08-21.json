@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T05:38:03",
+  "generated_at": "2026-08-21T05:43:44",
   "start_date": "2026-08-05",
   "end_date": "2026-08-21",
   "ga4_property": "387610456",
@@ -231,7 +231,7 @@
           "sessions": 5,
           "engagedSessions": 5,
           "engagementRate": 1.0,
-          "averageSessionDuration": 1609.7440452,
+          "averageSessionDuration": 1609.7440451999998,
           "eventCount": 64,
           "keyEvents": 0.0,
           "events": {
@@ -963,11 +963,11 @@
     {
       "date": "2026-08-21",
       "ads": {
-        "impressions": 64,
+        "impressions": 67,
         "clicks": 1,
         "cost": 3.6,
         "avg_cpc": 3.6,
-        "ctr": 1.56,
+        "ctr": 1.49,
         "conversions": 0.0
       },
       "channels": {
@@ -1070,12 +1070,12 @@
     }
   },
   "ads_totals": {
-    "impressions": 1642,
+    "impressions": 1645,
     "clicks": 74,
     "cost": 243.61,
     "conversions": 0.0,
     "avg_cpc": 3.29,
-    "ctr": 4.51
+    "ctr": 4.5
   },
   "campaign_rows": [
     {
@@ -1176,6 +1176,53 @@
       "engagedSessions": 1,
       "eventCount": 3,
       "keyEvents": 0
+    }
+  ],
+  "medium_rows": [
+    {
+      "sessionMedium": "cpc",
+      "sessions": 80,
+      "engagedSessions": 32,
+      "engagementRate": 0.4,
+      "bounceRate": 0.6,
+      "averageSessionDuration": 80.604077375,
+      "userEngagementDuration": 2997
+    },
+    {
+      "sessionMedium": "(none)",
+      "sessions": 33,
+      "engagedSessions": 11,
+      "engagementRate": 0.3333333333333333,
+      "bounceRate": 0.6666666666666666,
+      "averageSessionDuration": 351.023927,
+      "userEngagementDuration": 16715
+    },
+    {
+      "sessionMedium": "referral",
+      "sessions": 3,
+      "engagedSessions": 2,
+      "engagementRate": 0.6666666666666666,
+      "bounceRate": 0.3333333333333333,
+      "averageSessionDuration": 73.92054166666667,
+      "userEngagementDuration": 216
+    },
+    {
+      "sessionMedium": "(data not available)",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "engagementRate": 1,
+      "bounceRate": 0,
+      "averageSessionDuration": 109.1093645,
+      "userEngagementDuration": 136
+    },
+    {
+      "sessionMedium": "organic",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "engagementRate": 1,
+      "bounceRate": 0,
+      "averageSessionDuration": 26.9925745,
+      "userEngagementDuration": 15
     }
   ],
   "event_totals": {
