@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T06:19:46",
+  "generated_at": "2026-08-21T06:50:15",
   "start_date": "2026-08-05",
   "end_date": "2026-08-21",
   "ga4_property": "387610456",
@@ -16,14 +16,6 @@
   "daily": [
     {
       "date": "2026-08-05",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -83,14 +75,6 @@
     },
     {
       "date": "2026-08-06",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -155,14 +139,6 @@
     },
     {
       "date": "2026-08-07",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -224,14 +200,6 @@
     },
     {
       "date": "2026-08-09",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -302,14 +270,6 @@
     },
     {
       "date": "2026-08-10",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -373,14 +333,6 @@
     },
     {
       "date": "2026-08-11",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -446,14 +398,6 @@
     },
     {
       "date": "2026-08-12",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -513,14 +457,6 @@
     },
     {
       "date": "2026-08-13",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -581,14 +517,6 @@
     },
     {
       "date": "2026-08-14",
-      "ads": {
-        "impressions": 0,
-        "clicks": 0,
-        "cost": 0.0,
-        "avg_cpc": 0.0,
-        "ctr": 0.0,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -648,14 +576,6 @@
     },
     {
       "date": "2026-08-16",
-      "ads": {
-        "impressions": 93,
-        "clicks": 10,
-        "cost": 39.58,
-        "avg_cpc": 3.96,
-        "ctr": 10.75,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -719,14 +639,6 @@
     },
     {
       "date": "2026-08-17",
-      "ads": {
-        "impressions": 240,
-        "clicks": 18,
-        "cost": 52.61,
-        "avg_cpc": 2.92,
-        "ctr": 7.5,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -790,14 +702,6 @@
     },
     {
       "date": "2026-08-18",
-      "ads": {
-        "impressions": 423,
-        "clicks": 14,
-        "cost": 44.28,
-        "avg_cpc": 3.16,
-        "ctr": 3.31,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -860,14 +764,6 @@
     },
     {
       "date": "2026-08-19",
-      "ads": {
-        "impressions": 378,
-        "clicks": 17,
-        "cost": 51.57,
-        "avg_cpc": 3.03,
-        "ctr": 4.5,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 2,
@@ -947,14 +843,6 @@
     },
     {
       "date": "2026-08-20",
-      "ads": {
-        "impressions": 444,
-        "clicks": 14,
-        "cost": 51.97,
-        "avg_cpc": 3.71,
-        "ctr": 3.15,
-        "conversions": 0.0
-      },
       "channels": {
         "Cross-network": {
           "sessions": 0,
@@ -1029,69 +917,6 @@
           }
         }
       }
-    },
-    {
-      "date": "2026-08-21",
-      "ads": {
-        "impressions": 64,
-        "clicks": 2,
-        "cost": 8.53,
-        "avg_cpc": 4.26,
-        "ctr": 3.12,
-        "conversions": 0.0
-      },
-      "channels": {
-        "Cross-network": {
-          "sessions": 0,
-          "engagedSessions": 0,
-          "engagementRate": 0.0,
-          "averageSessionDuration": 0.0,
-          "userEngagementDuration": 0.0,
-          "eventCount": 0,
-          "keyEvents": 0.0,
-          "events": {}
-        },
-        "Direct": {
-          "sessions": 0,
-          "engagedSessions": 0,
-          "engagementRate": 0.0,
-          "averageSessionDuration": 0.0,
-          "userEngagementDuration": 0.0,
-          "eventCount": 0,
-          "keyEvents": 0.0,
-          "events": {}
-        },
-        "Organic Search": {
-          "sessions": 0,
-          "engagedSessions": 0,
-          "engagementRate": 0.0,
-          "averageSessionDuration": 0.0,
-          "userEngagementDuration": 0.0,
-          "eventCount": 0,
-          "keyEvents": 0.0,
-          "events": {}
-        },
-        "Paid Search": {
-          "sessions": 0,
-          "engagedSessions": 0,
-          "engagementRate": 0.0,
-          "averageSessionDuration": 0.0,
-          "userEngagementDuration": 0.0,
-          "eventCount": 0,
-          "keyEvents": 0.0,
-          "events": {}
-        },
-        "Referral": {
-          "sessions": 0,
-          "engagedSessions": 0,
-          "engagementRate": 0.0,
-          "averageSessionDuration": 0.0,
-          "userEngagementDuration": 0.0,
-          "eventCount": 0,
-          "keyEvents": 0.0,
-          "events": {}
-        }
-      }
     }
   ],
   "totals": {
@@ -1149,14 +974,6 @@
       "eventCount": 6,
       "keyEvents": 0.0
     }
-  },
-  "ads_totals": {
-    "impressions": 1642,
-    "clicks": 75,
-    "cost": 248.54,
-    "conversions": 0.0,
-    "avg_cpc": 3.31,
-    "ctr": 4.57
   },
   "campaign_rows": [
     {
@@ -1311,6 +1128,68 @@
       "keyEvents": 0.0
     }
   ],
+  "click_summary_rows": [
+    {
+      "visitorType": "All",
+      "sessions": 120,
+      "ctaClickUsers": 1,
+      "phoneClickUsers": 1,
+      "ctaOrPhoneUsers": 2,
+      "ctaClicks": 2,
+      "phoneClicks": 2,
+      "ctaOrPhoneClicks": 4
+    },
+    {
+      "visitorType": "Paid Search",
+      "sessions": 80,
+      "ctaClickUsers": 0,
+      "phoneClickUsers": 1,
+      "ctaOrPhoneUsers": 1,
+      "ctaClicks": 0,
+      "phoneClicks": 2,
+      "ctaOrPhoneClicks": 2
+    },
+    {
+      "visitorType": "Direct",
+      "sessions": 33,
+      "ctaClickUsers": 1,
+      "phoneClickUsers": 0,
+      "ctaOrPhoneUsers": 1,
+      "ctaClicks": 2,
+      "phoneClicks": 0,
+      "ctaOrPhoneClicks": 2
+    },
+    {
+      "visitorType": "Organic Search",
+      "sessions": 3,
+      "ctaClickUsers": 0,
+      "phoneClickUsers": 0,
+      "ctaOrPhoneUsers": 0,
+      "ctaClicks": 0,
+      "phoneClicks": 0,
+      "ctaOrPhoneClicks": 0
+    },
+    {
+      "visitorType": "Cross-network",
+      "sessions": 2,
+      "ctaClickUsers": 0,
+      "phoneClickUsers": 0,
+      "ctaOrPhoneUsers": 0,
+      "ctaClicks": 0,
+      "phoneClicks": 0,
+      "ctaOrPhoneClicks": 0
+    },
+    {
+      "visitorType": "Referral",
+      "sessions": 2,
+      "ctaClickUsers": 0,
+      "phoneClickUsers": 0,
+      "ctaOrPhoneUsers": 0,
+      "ctaClicks": 0,
+      "phoneClicks": 0,
+      "ctaOrPhoneClicks": 0
+    }
+  ],
   "event_totals": {
     "All": {
       "page_view": 185,
@@ -1427,7 +1306,7 @@
   },
   "notes": [
     "GA4 filter: landingPagePlusQueryString contains the Signature Care slug. Visitor type is GA4 sessionDefaultChannelGroup.",
-    "Google Ads delivery starts on 2026-08-16 in the API data and only overlays Paid Search rows.",
+    "CTA/phone users are GA4 totalUsers who triggered consultation_click and/or phone_click after landing on the Signature Care page.",
     "The Paid Search key event is the labeled 2026-08-11 live tracking test, not a confirmed prospect lead."
   ]
 }
