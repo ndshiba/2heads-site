@@ -4,21 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>C&P Google Ads Landing Page Engagement</title>
+  <title>C&P Landing Page Engagement by Visitor Type</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
   <style>
     * { box-sizing: border-box; }
     :root {
       --ink:#1a1a18; --muted:#6d695f; --paper:#f6f4ef; --white:#fff; --line:#e2ddd4;
       --gold:#bda26b; --gold-soft:#f5ecd5; --green:#2f684c; --blue:#315f83; --red:#994242;
-      --violet:#68518b; --orange:#a85f2b;
     }
     body { margin:0; font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; color:var(--ink); background:var(--paper); }
     header { background:var(--white); border-bottom:1px solid var(--line); padding:18px 28px; display:flex; justify-content:space-between; gap:20px; align-items:center; }
     h1 { margin:0; font-size:22px; line-height:1.15; letter-spacing:0; }
     .sub { margin-top:5px; color:var(--muted); font-size:12px; max-width:980px; }
-    .badge { display:inline-flex; align-items:center; border:1px solid #d8c58e; background:var(--gold-soft); color:#705a31; border-radius:999px; padding:6px 11px; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.7px; white-space:nowrap; }
+    .badge { display:inline-flex; border:1px solid #d8c58e; background:var(--gold-soft); color:#705a31; border-radius:999px; padding:6px 11px; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.7px; white-space:nowrap; }
     main { max-width:1280px; margin:0 auto; padding:24px 24px 70px; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; }
+    button { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:6px; padding:8px 11px; font:inherit; font-weight:750; cursor:pointer; }
+    button.active { background:var(--ink); color:#fff; border-color:var(--ink); }
     .kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-bottom:16px; }
     .kpi,.panel { background:var(--white); border:1px solid var(--line); border-radius:6px; }
     .kpi { padding:14px 15px; min-height:92px; }
@@ -33,12 +35,6 @@
     th,td { border-bottom:1px solid var(--line); padding:8px 7px; text-align:left; vertical-align:top; font-size:12px; }
     th { color:#776f61; text-transform:uppercase; letter-spacing:.7px; font-size:10px; background:#fbfaf7; }
     .num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
-    .timeline { display:grid; gap:8px; }
-    .day { display:grid; grid-template-columns:80px 1fr 74px; gap:10px; align-items:center; }
-    .track { height:10px; background:#eee8dd; border-radius:4px; overflow:hidden; }
-    .fill { height:100%; background:var(--blue); border-radius:4px; }
-    .fill.green { background:var(--green); }
-    .fill.gold { background:var(--gold); }
     .notes { display:grid; gap:10px; }
     .callout { border-left:4px solid var(--gold); background:#fbfaf7; padding:12px 13px; color:var(--muted); }
     .callout strong { color:var(--ink); display:block; margin-bottom:3px; }
@@ -54,23 +50,23 @@
       main { padding:16px; }
       .kpis { grid-template-columns:1fr; }
       .chart-wrap { height:300px; }
-      .day { grid-template-columns:68px 1fr 58px; }
     }
   </style>
 </head>
 <body>
   <header>
     <div>
-      <h1>Signature Care Landing Page Engagement From Paid Ads</h1>
-      <div class="sub">GA4 paid-search sessions landing on <code>/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/</code>, matched against Google Ads delivery starting 2026-08-05. Built 2026-08-21T05:08:07.</div>
+      <h1>Signature Care Landing Page Engagement by Visitor Type</h1>
+      <div class="sub">Filterable GA4 engagement for visitors landing on <code>/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/</code> from 2026-08-05 forward. Google Ads delivery overlays Paid Search only. Built 2026-08-21T05:38:03.</div>
     </div>
     <div class="badge">GA4 + Google Ads</div>
   </header>
   <main>
+    <div class="filters" id="filters"></div>
     <section class="kpis" id="kpis"></section>
     <section class="grid">
       <div class="panel">
-        <h2>Daily Paid Landing-Page Engagement</h2>
+        <h2 id="chartTitle">Daily Engagement</h2>
         <div class="chart-wrap"><canvas id="dailyChart"></canvas></div>
       </div>
       <div class="panel">
@@ -80,72 +76,126 @@
     </section>
     <section class="split">
       <div class="panel">
-        <h2>Session Campaign Breakdown</h2>
-        <table><thead><tr><th>GA4 Campaign</th><th>Source / Medium</th><th class="num">Sessions</th><th class="num">Engaged</th><th class="num">Key Events</th></tr></thead><tbody id="campaignRows"></tbody></table>
+        <h2>Campaign / Source Breakdown</h2>
+        <table><thead><tr><th>Visitor Type</th><th>GA4 Campaign</th><th>Source / Medium</th><th class="num">Sessions</th><th class="num">Engaged</th><th class="num">Key</th></tr></thead><tbody id="campaignRows"></tbody></table>
       </div>
       <div class="panel">
         <h2>Engagement Events</h2>
-        <table><thead><tr><th>Event</th><th class="num">Count</th><th class="num">Key Events</th></tr></thead><tbody id="eventRows"></tbody></table>
+        <table><thead><tr><th>Event</th><th class="num">Count</th><th class="num">Key</th></tr></thead><tbody id="eventRows"></tbody></table>
       </div>
     </section>
     <section class="panel full">
       <h2>Daily Detail</h2>
       <table>
-        <thead><tr><th>Date</th><th class="num">Ads Impr.</th><th class="num">Ads Clicks</th><th class="num">Cost</th><th class="num">GA4 Sessions</th><th class="num">Engaged</th><th class="num">Eng. Rate</th><th class="num">Avg Sec.</th><th class="num">Events</th><th class="num">Key</th></tr></thead>
+        <thead><tr><th>Date</th><th class="num">Ads Clicks</th><th class="num">Cost</th><th class="num">Sessions</th><th class="num">Engaged</th><th class="num">Eng. Rate</th><th class="num">Avg Sec.</th><th class="num">Events</th><th class="num">Key</th></tr></thead>
         <tbody id="dailyRows"></tbody>
       </table>
     </section>
   </main>
   <script>
-    const payload = {"generated_at":"2026-08-21T05:08:07","start_date":"2026-08-05","end_date":"2026-08-21","ga4_property":"387610456","google_ads_customer_id":"8483034203","landing_page":"/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/","daily":[{"date":"2026-08-06","ads_impressions":0,"ads_clicks":0,"ads_cost":0.0,"ads_avg_cpc":0.0,"ads_ctr":0.0,"ads_conversions":0.0,"ga4_sessions":6,"ga4_engaged_sessions":0,"ga4_engagement_rate":0.0,"ga4_avg_session_duration":0.0,"ga4_events":18,"ga4_key_events":0.0,"click_to_session_capture":null,"events":{"first_visit":6,"page_view":6,"session_start":6}},{"date":"2026-08-09","ads_impressions":0,"ads_clicks":0,"ads_cost":0.0,"ads_avg_cpc":0.0,"ads_ctr":0.0,"ads_conversions":0.0,"ga4_sessions":1,"ga4_engaged_sessions":1,"ga4_engagement_rate":1.0,"ga4_avg_session_duration":194.590003,"ga4_events":7,"ga4_key_events":0.0,"click_to_session_capture":null,"events":{"page_view":3,"contact_page_view":2,"session_start":1,"user_engagement":1}},{"date":"2026-08-10","ads_impressions":0,"ads_clicks":0,"ads_cost":0.0,"ads_avg_cpc":0.0,"ads_ctr":0.0,"ads_conversions":0.0,"ga4_sessions":2,"ga4_engaged_sessions":0,"ga4_engagement_rate":0.0,"ga4_avg_session_duration":0.0,"ga4_events":6,"ga4_key_events":0.0,"click_to_session_capture":null,"events":{"first_visit":2,"page_view":2,"session_start":2}},{"date":"2026-08-11","ads_impressions":0,"ads_clicks":0,"ads_cost":0.0,"ads_avg_cpc":0.0,"ads_ctr":0.0,"ads_conversions":0.0,"ga4_sessions":5,"ga4_engaged_sessions":1,"ga4_engagement_rate":0.2,"ga4_avg_session_duration":181.9687056,"ga4_events":26,"ga4_key_events":1.0,"click_to_session_capture":null,"events":{"page_view":6,"session_start":5,"first_visit":4,"generate_lead":4,"contact_page_view":2,"user_engagement":2,"form_start":1,"form_submitted":1,"scroll":1}},{"date":"2026-08-16","ads_impressions":93,"ads_clicks":10,"ads_cost":39.58,"ads_avg_cpc":3.96,"ads_ctr":10.75,"ads_conversions":0.0,"ga4_sessions":11,"ga4_engaged_sessions":4,"ga4_engagement_rate":0.36363636363636365,"ga4_avg_session_duration":46.398286818181816,"ga4_events":51,"ga4_key_events":0.0,"click_to_session_capture":1.1,"events":{"page_view":15,"first_visit":11,"session_start":11,"user_engagement":7,"scroll":3,"click":2,"phone_click":2}},{"date":"2026-08-17","ads_impressions":240,"ads_clicks":18,"ads_cost":52.61,"ads_avg_cpc":2.92,"ads_ctr":7.5,"ads_conversions":0.0,"ga4_sessions":14,"ga4_engaged_sessions":9,"ga4_engagement_rate":0.6428571428571429,"ga4_avg_session_duration":28.579610642857144,"ga4_events":58,"ga4_key_events":0.0,"click_to_session_capture":0.7778,"events":{"page_view":16,"first_visit":14,"session_start":14,"user_engagement":6,"contact_page_view":4,"click":2,"scroll":2}},{"date":"2026-08-18","ads_impressions":423,"ads_clicks":14,"ads_cost":44.28,"ads_avg_cpc":3.16,"ads_ctr":3.31,"ads_conversions":0.0,"ga4_sessions":12,"ga4_engaged_sessions":3,"ga4_engagement_rate":0.25,"ga4_avg_session_duration":45.21225875,"ga4_events":46,"ga4_key_events":0.0,"click_to_session_capture":0.8571,"events":{"page_view":13,"first_visit":12,"session_start":12,"click":4,"user_engagement":3,"scroll":2}},{"date":"2026-08-19","ads_impressions":378,"ads_clicks":17,"ads_cost":51.57,"ads_avg_cpc":3.03,"ads_ctr":4.5,"ads_conversions":0.0,"ga4_sessions":13,"ga4_engaged_sessions":6,"ga4_engagement_rate":0.46153846153846156,"ga4_avg_session_duration":60.565741,"ga4_events":77,"ga4_key_events":0.0,"click_to_session_capture":0.7647,"events":{"page_view":19,"first_visit":13,"session_start":13,"click":10,"user_engagement":8,"contact_page_view":6,"generate_lead":4,"scroll":3,"form_start":1}},{"date":"2026-08-20","ads_impressions":444,"ads_clicks":14,"ads_cost":51.97,"ads_avg_cpc":3.71,"ads_ctr":3.15,"ads_conversions":0.0,"ga4_sessions":16,"ga4_engaged_sessions":8,"ga4_engagement_rate":0.5,"ga4_avg_session_duration":193.96845106249998,"ga4_events":83,"ga4_key_events":0.0,"click_to_session_capture":1.1429,"events":{"page_view":24,"user_engagement":17,"session_start":16,"first_visit":13,"contact_page_view":6,"scroll":4,"generate_lead":2,"click":1}},{"date":"2026-08-21","ads_impressions":52,"ads_clicks":1,"ads_cost":3.6,"ads_avg_cpc":3.6,"ads_ctr":1.92,"ads_conversions":0.0,"ga4_sessions":0,"ga4_engaged_sessions":0,"ga4_engagement_rate":0.0,"ga4_avg_session_duration":0.0,"ga4_events":0,"ga4_key_events":0.0,"click_to_session_capture":0.0,"events":{}}],"totals":{"ads_impressions":1630,"ads_clicks":74,"ads_cost":243.61,"ads_conversions":0.0,"ga4_sessions":80,"ga4_engaged_sessions":32,"ga4_events":372,"ga4_key_events":1.0,"ads_avg_cpc":3.29,"ads_ctr":4.54,"ga4_engagement_rate":0.4,"click_to_session_capture":1.0811},"live_ad_totals":{"ads_impressions":1630,"ads_clicks":74,"ads_cost":243.61,"ga4_sessions":66,"ga4_engaged_sessions":30,"ga4_key_events":0.0,"ga4_engagement_rate":0.4545,"click_to_session_capture":0.8919},"campaign_rows":[{"sessionCampaignName":"Campaign #1","sessionSourceMedium":"google / cpc","sessions":65,"engagedSessions":30,"eventCount":312,"keyEvents":0},{"sessionCampaignName":"(not set)","sessionSourceMedium":"google / cpc","sessions":6,"engagedSessions":0,"eventCount":18,"keyEvents":0},{"sessionCampaignName":"signature_care_competitor_landscape_maintenance","sessionSourceMedium":"google / cpc","sessions":6,"engagedSessions":0,"eventCount":18,"keyEvents":0},{"sessionCampaignName":"signature_care_estate_landscape_maintenance","sessionSourceMedium":"google / cpc","sessions":2,"engagedSessions":2,"eventCount":21,"keyEvents":1},{"sessionCampaignName":"(organic)","sessionSourceMedium":"google / cpc","sessions":1,"engagedSessions":0,"eventCount":3,"keyEvents":0}],"event_totals":{"page_view":104,"session_start":80,"first_visit":75,"user_engagement":44,"contact_page_view":20,"click":19,"scroll":15,"generate_lead":10,"phone_click":2,"form_start":2,"form_submitted":1},"key_event_totals":{"page_view":0,"user_engagement":0,"session_start":0,"first_visit":0,"click":0,"contact_page_view":0,"generate_lead":0,"scroll":0,"phone_click":0,"form_start":0,"form_submitted":1},"notes":["GA4 filter: session default channel group = Paid Search and landingPagePlusQueryString contains the Signature Care slug.","Google Ads delivery starts on 2026-08-16 in the API data. Earlier GA4 paid-search rows are launch/testing traffic.","The single GA4 key event is the labeled 2026-08-11 live tracking test, not a confirmed prospect lead."]};
+    const payload = {"generated_at":"2026-08-21T05:38:03","start_date":"2026-08-05","end_date":"2026-08-21","ga4_property":"387610456","google_ads_customer_id":"8483034203","landing_page":"/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/","visitor_types":["All","Paid Search","Organic Search","Cross-network","Direct","Referral"],"daily":[{"date":"2026-08-05","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":2,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":5,"keyEvents":0.0,"events":{"page_view":2,"session_start":2,"first_visit":1}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-06","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":6,"engagedSessions":1,"engagementRate":0.16666666666666666,"averageSessionDuration":1.3238636666666668,"eventCount":20,"keyEvents":2.0,"events":{"first_visit":6,"page_view":6,"session_start":6,"consultation_click":2}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":6,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":18,"keyEvents":0.0,"events":{"first_visit":6,"page_view":6,"session_start":6}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-07","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":10,"engagedSessions":4,"engagementRate":0.4,"averageSessionDuration":345.8422176,"eventCount":61,"keyEvents":0.0,"events":{"page_view":25,"user_engagement":15,"session_start":10,"first_visit":8,"scroll":3}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-09","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":5,"engagedSessions":5,"engagementRate":1.0,"averageSessionDuration":1609.7440452,"eventCount":64,"keyEvents":0.0,"events":{"page_view":27,"user_engagement":22,"scroll":9,"session_start":5,"first_visit":1}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":1,"engagedSessions":1,"engagementRate":1.0,"averageSessionDuration":194.590003,"eventCount":7,"keyEvents":0.0,"events":{"page_view":3,"contact_page_view":2,"session_start":1,"user_engagement":1}},"Referral":{"sessions":1,"engagedSessions":1,"engagementRate":1.0,"averageSessionDuration":198.921856,"eventCount":3,"keyEvents":0.0,"events":{"page_view":1,"scroll":1,"session_start":1}}}},{"date":"2026-08-10","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Organic Search":{"sessions":1,"engagedSessions":1,"engagementRate":1.0,"averageSessionDuration":22.839769,"eventCount":3,"keyEvents":0.0,"events":{"page_view":1,"scroll":1,"session_start":1}},"Paid Search":{"sessions":2,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":6,"keyEvents":0.0,"events":{"first_visit":2,"page_view":2,"session_start":2}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-11","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":5,"engagedSessions":1,"engagementRate":0.2,"averageSessionDuration":181.9687056,"eventCount":26,"keyEvents":1.0,"events":{"page_view":6,"session_start":5,"first_visit":4,"generate_lead":4,"contact_page_view":2,"user_engagement":2,"form_start":1,"form_submitted":1,"scroll":1}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-12","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":1,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":3,"keyEvents":0.0,"events":{"first_visit":1,"page_view":1,"session_start":1}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-13","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":3,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":2.886491,"eventCount":9,"keyEvents":0.0,"events":{"page_view":3,"session_start":3,"scroll":2,"first_visit":1}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-14","ads":{"impressions":0,"clicks":0,"cost":0.0,"avg_cpc":0.0,"ctr":0.0,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":1,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":3,"keyEvents":0.0,"events":{"first_visit":1,"page_view":1,"session_start":1}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-16","ads":{"impressions":93,"clicks":10,"cost":39.58,"avg_cpc":3.96,"ctr":10.75,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":11,"engagedSessions":4,"engagementRate":0.36363636363636365,"averageSessionDuration":46.398286818181816,"eventCount":51,"keyEvents":0.0,"events":{"page_view":15,"first_visit":11,"session_start":11,"user_engagement":7,"scroll":3,"click":2,"phone_click":2}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-17","ads":{"impressions":240,"clicks":18,"cost":52.61,"avg_cpc":2.92,"ctr":7.5,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":14,"engagedSessions":9,"engagementRate":0.6428571428571429,"averageSessionDuration":28.579610642857144,"eventCount":58,"keyEvents":0.0,"events":{"page_view":16,"first_visit":14,"session_start":14,"user_engagement":6,"contact_page_view":4,"click":2,"scroll":2}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-18","ads":{"impressions":423,"clicks":14,"cost":44.28,"avg_cpc":3.16,"ctr":3.31,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":12,"engagedSessions":3,"engagementRate":0.25,"averageSessionDuration":45.21225875,"eventCount":46,"keyEvents":0.0,"events":{"page_view":13,"first_visit":12,"session_start":12,"click":4,"user_engagement":3,"scroll":2}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-19","ads":{"impressions":378,"clicks":17,"cost":51.57,"avg_cpc":3.03,"ctr":4.5,"conversions":0.0},"channels":{"Cross-network":{"sessions":2,"engagedSessions":2,"engagementRate":1.0,"averageSessionDuration":109.1093645,"eventCount":12,"keyEvents":0.0,"events":{"page_view":4,"first_visit":2,"session_start":2,"user_engagement":2,"click":1,"scroll":1}},"Direct":{"sessions":4,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":10,"keyEvents":0.0,"events":{"page_view":4,"session_start":4,"first_visit":2}},"Organic Search":{"sessions":1,"engagedSessions":1,"engagementRate":1.0,"averageSessionDuration":18.911197,"eventCount":3,"keyEvents":0.0,"events":{"page_view":2,"session_start":1}},"Paid Search":{"sessions":13,"engagedSessions":6,"engagementRate":0.46153846153846156,"averageSessionDuration":60.565741,"eventCount":77,"keyEvents":0.0,"events":{"page_view":19,"first_visit":13,"session_start":13,"click":10,"user_engagement":8,"contact_page_view":6,"generate_lead":4,"scroll":3,"form_start":1}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}},{"date":"2026-08-20","ads":{"impressions":444,"clicks":14,"cost":51.97,"avg_cpc":3.71,"ctr":3.15,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":1,"engagedSessions":1,"engagementRate":1.0,"averageSessionDuration":60.044534,"eventCount":4,"keyEvents":0.0,"events":{"first_visit":1,"page_view":1,"session_start":1,"user_engagement":1}},"Organic Search":{"sessions":1,"engagedSessions":1,"engagementRate":1.0,"averageSessionDuration":35.073952,"eventCount":5,"keyEvents":0.0,"events":{"page_view":2,"user_engagement":2,"session_start":1}},"Paid Search":{"sessions":16,"engagedSessions":8,"engagementRate":0.5,"averageSessionDuration":193.96845106249998,"eventCount":83,"keyEvents":0.0,"events":{"page_view":24,"user_engagement":17,"session_start":16,"first_visit":13,"contact_page_view":6,"scroll":4,"generate_lead":2,"click":1}},"Referral":{"sessions":1,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":3,"keyEvents":0.0,"events":{"first_visit":1,"page_view":1,"session_start":1}}}},{"date":"2026-08-21","ads":{"impressions":64,"clicks":1,"cost":3.6,"avg_cpc":3.6,"ctr":1.56,"conversions":0.0},"channels":{"Cross-network":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Direct":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Organic Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Paid Search":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}},"Referral":{"sessions":0,"engagedSessions":0,"engagementRate":0.0,"averageSessionDuration":0.0,"eventCount":0,"keyEvents":0.0,"events":{}}}}],"totals":{"All":{"sessions":120,"engagedSessions":49,"engagementRate":0.4083,"averageSessionDuration":154.38,"eventCount":580,"keyEvents":3.0},"Cross-network":{"sessions":2,"engagedSessions":2,"engagementRate":1.0,"averageSessionDuration":109.11,"eventCount":12,"keyEvents":0.0},"Direct":{"sessions":33,"engagedSessions":11,"engagementRate":0.3333,"averageSessionDuration":351.02,"eventCount":179,"keyEvents":2.0},"Organic Search":{"sessions":3,"engagedSessions":3,"engagementRate":1.0,"averageSessionDuration":25.61,"eventCount":11,"keyEvents":0.0},"Paid Search":{"sessions":80,"engagedSessions":32,"engagementRate":0.4,"averageSessionDuration":80.6,"eventCount":372,"keyEvents":1.0},"Referral":{"sessions":2,"engagedSessions":1,"engagementRate":0.5,"averageSessionDuration":99.46,"eventCount":6,"keyEvents":0.0}},"ads_totals":{"impressions":1642,"clicks":74,"cost":243.61,"conversions":0.0,"avg_cpc":3.29,"ctr":4.51},"campaign_rows":[{"sessionDefaultChannelGroup":"Paid Search","sessionCampaignName":"Campaign #1","sessionSourceMedium":"google / cpc","sessions":65,"engagedSessions":30,"eventCount":312,"keyEvents":0},{"sessionDefaultChannelGroup":"Direct","sessionCampaignName":"(direct)","sessionSourceMedium":"(direct) / (none)","sessions":33,"engagedSessions":11,"eventCount":179,"keyEvents":2},{"sessionDefaultChannelGroup":"Paid Search","sessionCampaignName":"(not set)","sessionSourceMedium":"google / cpc","sessions":6,"engagedSessions":0,"eventCount":18,"keyEvents":0},{"sessionDefaultChannelGroup":"Paid Search","sessionCampaignName":"signature_care_competitor_landscape_maintenance","sessionSourceMedium":"google / cpc","sessions":6,"engagedSessions":0,"eventCount":18,"keyEvents":0},{"sessionDefaultChannelGroup":"Cross-network","sessionCampaignName":"(cross-network)","sessionSourceMedium":"(data not available)","sessions":2,"engagedSessions":2,"eventCount":12,"keyEvents":0},{"sessionDefaultChannelGroup":"Organic Search","sessionCampaignName":"(organic)","sessionSourceMedium":"google / organic","sessions":2,"engagedSessions":2,"eventCount":8,"keyEvents":0},{"sessionDefaultChannelGroup":"Paid Search","sessionCampaignName":"signature_care_estate_landscape_maintenance","sessionSourceMedium":"google / cpc","sessions":2,"engagedSessions":2,"eventCount":21,"keyEvents":1},{"sessionDefaultChannelGroup":"Organic Search","sessionCampaignName":"(referral)","sessionSourceMedium":"search.google.com / referral","sessions":1,"engagedSessions":1,"eventCount":3,"keyEvents":0},{"sessionDefaultChannelGroup":"Paid Search","sessionCampaignName":"(organic)","sessionSourceMedium":"google / cpc","sessions":1,"engagedSessions":0,"eventCount":3,"keyEvents":0},{"sessionDefaultChannelGroup":"Referral","sessionCampaignName":"(referral)","sessionSourceMedium":"mail.yahoo.com / referral","sessions":1,"engagedSessions":0,"eventCount":3,"keyEvents":0},{"sessionDefaultChannelGroup":"Referral","sessionCampaignName":"(referral)","sessionSourceMedium":"us14.admin.mailchimp.com / referral","sessions":1,"engagedSessions":1,"eventCount":3,"keyEvents":0}],"event_totals":{"All":{"page_view":185,"session_start":120,"first_visit":100,"user_engagement":86,"scroll":32,"click":20,"contact_page_view":20,"generate_lead":10,"consultation_click":2,"phone_click":2,"form_start":2,"form_submitted":1},"Cross-network":{"page_view":4,"first_visit":2,"session_start":2,"user_engagement":2,"click":1,"scroll":1},"Direct":{"page_view":70,"user_engagement":38,"session_start":33,"first_visit":22,"scroll":14,"consultation_click":2},"Organic Search":{"page_view":5,"session_start":3,"user_engagement":2,"scroll":1},"Paid Search":{"page_view":104,"session_start":80,"first_visit":75,"user_engagement":44,"contact_page_view":20,"click":19,"scroll":15,"generate_lead":10,"phone_click":2,"form_start":2,"form_submitted":1},"Referral":{"page_view":2,"session_start":2,"scroll":1,"first_visit":1}},"key_event_totals":{"All":{"page_view":0,"user_engagement":0,"session_start":0,"first_visit":0,"click":0,"scroll":0,"contact_page_view":0,"generate_lead":0,"consultation_click":2,"phone_click":0,"form_start":0,"form_submitted":1},"Cross-network":{"page_view":0,"first_visit":0,"session_start":0,"user_engagement":0,"click":0,"scroll":0},"Direct":{"page_view":0,"user_engagement":0,"session_start":0,"scroll":0,"first_visit":0,"consultation_click":2},"Organic Search":{"page_view":0,"user_engagement":0,"scroll":0,"session_start":0},"Paid Search":{"page_view":0,"user_engagement":0,"session_start":0,"first_visit":0,"click":0,"contact_page_view":0,"generate_lead":0,"scroll":0,"phone_click":0,"form_start":0,"form_submitted":1},"Referral":{"page_view":0,"scroll":0,"session_start":0,"first_visit":0}},"notes":["GA4 filter: landingPagePlusQueryString contains the Signature Care slug. Visitor type is GA4 sessionDefaultChannelGroup.","Google Ads delivery starts on 2026-08-16 in the API data and only overlays Paid Search rows.","The Paid Search key event is the labeled 2026-08-11 live tracking test, not a confirmed prospect lead."]};
+    let selected = "All";
+    let chart;
     const money = v => "$" + Number(v || 0).toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:2});
     const num = v => Number(v || 0).toLocaleString("en-US");
     const pct = v => `${(Number(v || 0) * 100).toFixed(1)}%`;
     const seconds = v => Number(v || 0).toFixed(0) + "s";
-    const totals = payload.totals;
-    const live = payload.live_ad_totals;
-    document.getElementById("kpis").innerHTML = [
-      ["Paid Landing Sessions", num(totals.ga4_sessions), `${num(totals.ga4_engaged_sessions)} engaged since 8/5`],
-      ["Engagement Rate", pct(totals.ga4_engagement_rate), "All paid-search Signature Care landings"],
-      ["Live Ads Clicks", num(live.ads_clicks), `${money(live.ads_cost)} spend from 8/16+ delivery`],
-      ["Click Capture", live.click_to_session_capture === null ? "n/a" : pct(live.click_to_session_capture), "GA4 landing sessions / Ads clicks on delivery days"],
-      ["Real Leads", "0", "1 key event was the 8/11 tracking test"]
-    ].map(k => `<div class="kpi"><div class="label">${k[0]}</div><div class="value">${k[1]}</div><div class="note">${k[2]}</div></div>`).join("");
-    document.getElementById("notes").innerHTML = [
-      ["The campaign is now measurable", `Live Google Ads delivery began 8/16. On delivery days, GA4 recorded ${num(live.ga4_sessions)} paid-search landing sessions against ${num(live.ads_clicks)} Ads clicks.`],
-      ["Engagement is mixed, lead signal is not there yet", `${num(totals.ga4_engaged_sessions)} of ${num(totals.ga4_sessions)} paid landing sessions engaged. The only key event is the labeled 8/11 conversion-chain test.`],
-      ["Pre-8/16 paid rows are setup/test traffic", "8/6, 8/9, 8/10, and 8/11 show GA4 paid-search traffic before Ads API delivery. Keep them for tracking context, not spend performance."]
-    ].map(n => `<div class="callout"><strong>${n[0]}</strong>${n[1]}</div>`).join("");
-    const days = payload.daily;
-    new Chart(document.getElementById("dailyChart"), {
-      type:"bar",
-      data:{
-        labels:days.map(d=>d.date.slice(5)),
-        datasets:[
-          { label:"Ads clicks", data:days.map(d=>d.ads_clicks), backgroundColor:"#315f83", borderRadius:3 },
-          { label:"GA4 sessions", data:days.map(d=>d.ga4_sessions), backgroundColor:"#bda26b", borderRadius:3 },
-          { label:"Engaged sessions", data:days.map(d=>d.ga4_engaged_sessions), backgroundColor:"#2f684c", borderRadius:3 }
-        ]
-      },
-      options:{
-        maintainAspectRatio:false,
-        interaction:{ mode:"index", intersect:false },
-        scales:{ x:{ grid:{ display:false } }, y:{ beginAtZero:true, ticks:{ precision:0 } } },
-        plugins:{ legend:{ position:"bottom" } }
+
+    function channelFor(day, type) {
+      if (type === "All") {
+        return Object.values(day.channels).reduce((a, c) => {
+          a.sessions += c.sessions; a.engagedSessions += c.engagedSessions; a.eventCount += c.eventCount; a.keyEvents += c.keyEvents;
+          a.durationWeighted += c.averageSessionDuration * c.sessions;
+          return a;
+        }, {sessions:0, engagedSessions:0, eventCount:0, keyEvents:0, durationWeighted:0});
       }
+      const c = day.channels[type] || {};
+      return {
+        sessions:c.sessions || 0,
+        engagedSessions:c.engagedSessions || 0,
+        eventCount:c.eventCount || 0,
+        keyEvents:c.keyEvents || 0,
+        durationWeighted:(c.averageSessionDuration || 0) * (c.sessions || 0),
+      };
+    }
+    function dailyRows(type) {
+      return payload.daily.map(d => {
+        const c = channelFor(d, type);
+        return {
+          date:d.date, ads:d.ads, sessions:c.sessions, engagedSessions:c.engagedSessions,
+          engagementRate:c.sessions ? c.engagedSessions / c.sessions : 0,
+          averageSessionDuration:c.sessions ? c.durationWeighted / c.sessions : 0,
+          eventCount:c.eventCount, keyEvents:c.keyEvents
+        };
+      }).filter(d => d.sessions || (type === "Paid Search" && d.ads.clicks));
+    }
+    function renderFilters() {
+      document.getElementById("filters").innerHTML = payload.visitor_types.map(type => `<button data-type="${type}" class="${type === selected ? "active" : ""}">${type}</button>`).join("");
+    }
+    function renderKpis() {
+      const t = payload.totals[selected] || {sessions:0, engagedSessions:0, engagementRate:0, averageSessionDuration:0, eventCount:0, keyEvents:0};
+      const paid = selected === "Paid Search";
+      document.getElementById("kpis").innerHTML = [
+        ["Visitor Type", selected, paid ? "Paid Search includes Google Ads and setup/test UTMs" : "GA4 default channel group"],
+        ["Sessions", num(t.sessions), `${num(t.engagedSessions)} engaged`],
+        ["Engagement Rate", pct(t.engagementRate), `${seconds(t.averageSessionDuration)} avg session duration`],
+        ["Events", num(t.eventCount), `${num(t.keyEvents)} key events`],
+        paid ? ["Ads Delivery", num(payload.ads_totals.clicks), `${money(payload.ads_totals.cost)} spend / ${num(payload.ads_totals.impressions)} impressions`] : ["Ads Delivery", "n/a", "Shown only for Paid Search"]
+      ].map(k => `<div class="kpi"><div class="label">${k[0]}</div><div class="value">${k[1]}</div><div class="note">${k[2]}</div></div>`).join("");
+    }
+    function renderNotes() {
+      const paid = payload.totals["Paid Search"] || {sessions:0, engagedSessions:0, keyEvents:0};
+      const organic = payload.totals["Organic Search"] || {sessions:0, engagedSessions:0, keyEvents:0};
+      document.getElementById("notes").innerHTML = [
+        ["Organic vs paid is now filterable", `Paid Search: ${num(paid.sessions)} sessions / ${num(paid.engagedSessions)} engaged. Organic Search: ${num(organic.sessions)} sessions / ${num(organic.engagedSessions)} engaged.`],
+        ["Lead caveat", "Paid Search has 1 key event, but it is the labeled 8/11 live tracking test, not a confirmed prospect lead."],
+        ["Ads overlay", "Google Ads clicks and spend appear in the chart/table only when Paid Search is selected, because Ads does not apply to organic/direct/referral visitor types."]
+      ].map(n => `<div class="callout"><strong>${n[0]}</strong>${n[1]}</div>`).join("");
+    }
+    function renderChart() {
+      const rows = dailyRows(selected);
+      const datasets = [
+        { label:"Sessions", data:rows.map(d=>d.sessions), backgroundColor:"#bda26b", borderRadius:3 },
+        { label:"Engaged sessions", data:rows.map(d=>d.engagedSessions), backgroundColor:"#2f684c", borderRadius:3 }
+      ];
+      if (selected === "Paid Search") datasets.unshift({ label:"Ads clicks", data:rows.map(d=>d.ads.clicks), backgroundColor:"#315f83", borderRadius:3 });
+      const config = {
+        type:"bar",
+        data:{ labels:rows.map(d=>d.date.slice(5)), datasets },
+        options:{ maintainAspectRatio:false, interaction:{mode:"index",intersect:false}, scales:{x:{grid:{display:false}}, y:{beginAtZero:true,ticks:{precision:0}}}, plugins:{legend:{position:"bottom"}} }
+      };
+      if (chart) { chart.destroy(); }
+      chart = new Chart(document.getElementById("dailyChart"), config);
+      document.getElementById("chartTitle").textContent = selected === "All" ? "Daily Engagement - All Visitor Types" : `Daily Engagement - ${selected}`;
+    }
+    function renderCampaignRows() {
+      document.getElementById("campaignRows").innerHTML = payload.campaign_rows
+        .filter(r => selected === "All" || r.sessionDefaultChannelGroup === selected)
+        .sort((a,b)=>b.sessions-a.sessions)
+        .map(r => `<tr><td>${r.sessionDefaultChannelGroup}</td><td>${r.sessionCampaignName}</td><td>${r.sessionSourceMedium}</td><td class="num">${num(r.sessions)}</td><td class="num">${num(r.engagedSessions)}</td><td class="num">${num(r.keyEvents)}</td></tr>`)
+        .join("");
+    }
+    function renderEventRows() {
+      const events = payload.event_totals[selected] || {};
+      const keys = payload.key_event_totals[selected] || {};
+      document.getElementById("eventRows").innerHTML = Object.entries(events)
+        .map(([event,count]) => `<tr><td>${event}</td><td class="num">${num(count)}</td><td class="num">${num(keys[event] || 0)}</td></tr>`)
+        .join("");
+    }
+    function renderDailyTable() {
+      document.getElementById("dailyRows").innerHTML = dailyRows(selected).reverse().map(d => `<tr>
+        <td>${d.date}</td><td class="num">${selected === "Paid Search" ? num(d.ads.clicks) : "n/a"}</td><td class="num">${selected === "Paid Search" ? money(d.ads.cost) : "n/a"}</td>
+        <td class="num">${num(d.sessions)}</td><td class="num">${num(d.engagedSessions)}</td><td class="num">${pct(d.engagementRate)}</td>
+        <td class="num">${seconds(d.averageSessionDuration)}</td><td class="num">${num(d.eventCount)}</td><td class="num">${num(d.keyEvents)}</td>
+      </tr>`).join("");
+    }
+    function render() { renderFilters(); renderKpis(); renderNotes(); renderChart(); renderCampaignRows(); renderEventRows(); renderDailyTable(); }
+    document.getElementById("filters").addEventListener("click", e => {
+      if (!e.target.dataset.type) return;
+      selected = e.target.dataset.type;
+      render();
     });
-    document.getElementById("campaignRows").innerHTML = payload.campaign_rows
-      .sort((a,b)=>b.sessions-a.sessions)
-      .map(r => `<tr><td>${r.sessionCampaignName}</td><td>${r.sessionSourceMedium}</td><td class="num">${num(r.sessions)}</td><td class="num">${num(r.engagedSessions)}</td><td class="num">${num(r.keyEvents)}</td></tr>`)
-      .join("");
-    document.getElementById("eventRows").innerHTML = Object.entries(payload.event_totals)
-      .map(([event,count]) => `<tr><td>${event}</td><td class="num">${num(count)}</td><td class="num">${num(payload.key_event_totals[event] || 0)}</td></tr>`)
-      .join("");
-    document.getElementById("dailyRows").innerHTML = [...days].reverse().map(d => `<tr>
-      <td>${d.date}</td><td class="num">${num(d.ads_impressions)}</td><td class="num">${num(d.ads_clicks)}</td><td class="num">${money(d.ads_cost)}</td>
-      <td class="num">${num(d.ga4_sessions)}</td><td class="num">${num(d.ga4_engaged_sessions)}</td><td class="num">${pct(d.ga4_engagement_rate)}</td>
-      <td class="num">${seconds(d.ga4_avg_session_duration)}</td><td class="num">${num(d.ga4_events)}</td><td class="num">${num(d.ga4_key_events)}</td>
-    </tr>`).join("");
+    render();
   </script>
 </body>
 </html>
