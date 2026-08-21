@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T07:36:57",
+  "generated_at": "2026-08-21T07:48:30",
   "start_date": "2025-01-01",
   "end_date": "2026-08-21",
   "current_month_note": "August 2026 is month-to-date.",
@@ -2696,6 +2696,90 @@
       "keyEvents": 0.0
     }
   ],
+  "ai_source_rows": [
+    {
+      "sourceMedium": "chatgpt.com / (not set)",
+      "sessions": 32,
+      "engagedSessions": 21,
+      "engagementRate": 0.6562,
+      "totalUsers": 28,
+      "eventCount": 235,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "chatgpt.com / referral",
+      "sessions": 31,
+      "engagedSessions": 20,
+      "engagementRate": 0.6452,
+      "totalUsers": 27,
+      "eventCount": 200,
+      "keyEvents": 2.0
+    },
+    {
+      "sourceMedium": "chatgpt.com / ai-assistant",
+      "sessions": 12,
+      "engagedSessions": 10,
+      "engagementRate": 0.8333,
+      "totalUsers": 10,
+      "eventCount": 80,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "gemini.google.com / referral",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "engagementRate": 1.0,
+      "totalUsers": 4,
+      "eventCount": 100,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "claude.ai / referral",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "engagementRate": 1.0,
+      "totalUsers": 2,
+      "eventCount": 8,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "gemini.google.com / ai-assistant",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "engagementRate": 1.0,
+      "totalUsers": 2,
+      "eventCount": 44,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "perplexity.ai / referral",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "engagementRate": 1.0,
+      "totalUsers": 2,
+      "eventCount": 22,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "claude.ai / ai-assistant",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 9,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "perplexity / (not set)",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 1,
+      "eventCount": 3,
+      "keyEvents": 0.0
+    }
+  ],
+  "ai_reference_url": "cp-ai-adwords-analysis-2026-07-20.html",
   "source_medium_rows": [
     {
       "pageKey": "2025-a-year-of-thoughtful-outdoor-design",
@@ -4410,7 +4494,7 @@
   ],
   "notes": [
     "Sessions are GA4 landing-page sessions by landingPagePlusQueryString, normalized without query strings.",
-    "AI Assistants are source/medium rows containing chatgpt, openai, perplexity, claude, gemini, copilot, you.com, poe.com, phind, or searchgpt.",
+    "AI Assistants are source/medium rows containing chatgpt, openai, perplexity, claude, gemini, copilot, grok, x.ai, you.com, poe.com, phind, or searchgpt.",
     "The three blog posts are the latest posts returned by the live WordPress posts API at build time."
   ]
 }
