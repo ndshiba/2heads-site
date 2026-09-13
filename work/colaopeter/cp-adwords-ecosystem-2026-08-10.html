@@ -167,19 +167,21 @@
 
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
     }
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 12px;
     }
+    .grid-2 > *, .grid-3 > * { min-width: 0; }
     .panel {
       background: var(--white);
       border: 1px solid var(--line);
       border-radius: 6px;
       padding: 18px;
+      min-width: 0;
     }
     .panel h3 {
       color: var(--ink);
@@ -258,12 +260,14 @@
       text-transform: uppercase;
       padding: 11px 13px;
       border-bottom: 1px solid var(--line);
+      overflow-wrap: anywhere;
     }
     td {
       padding: 12px 13px;
       border-bottom: 1px solid #f0ece5;
       vertical-align: top;
       color: var(--muted);
+      overflow-wrap: anywhere;
     }
     tr:last-child td { border-bottom: 0; }
     td strong { color: var(--ink); }
@@ -333,7 +337,13 @@
       .wrap { padding: 24px 18px 70px; }
       .hero-main { padding: 22px; }
       .hero-main h2 { font-size: 25px; }
-      table { font-size: 12px; }
+      table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        font-size: 12px;
+        -webkit-overflow-scrolling: touch;
+      }
       th, td { padding: 10px; }
     }
   </style>
@@ -349,7 +359,7 @@
         <div class="brand-sub">Signature Care Google Ads ecosystem</div>
       </div>
     </div>
-    <div class="status-badge">Current as of Aug 21, 2026</div>
+	    <div class="status-badge">Current as of Sep 13, 2026</div>
   </header>
 
   <main class="wrap">
@@ -362,20 +372,20 @@
       </div>
       <div class="quick-state">
         <div class="state-row">
-          <div><strong>Campaign #1</strong><span>Estate landscape maintenance</span></div>
-          <div class="pill green">Learning</div>
+	          <div><strong>Campaign #1</strong><span>Estate landscape maintenance · 32 live keywords · 85 negatives</span></div>
+	          <div class="pill green">Serving</div>
         </div>
         <div class="state-row">
-          <div><strong>Campaign #2</strong><span>Competitor landscape maintenance</span></div>
-          <div class="pill green">Learning</div>
+	          <div><strong>Campaign #2</strong><span>Competitor landscape maintenance · 11 ad groups</span></div>
+	          <div class="pill green">Serving</div>
         </div>
         <div class="state-row">
           <div><strong>Total Budget</strong><span>$26.31/day + $6.58/day</span></div>
           <div class="pill blue">$32.89/day</div>
         </div>
         <div class="state-row">
-          <div><strong>Conversion Goal</strong><span>GA4 form_submitted imported to Ads</span></div>
-          <div class="pill green">Primary</div>
+	          <div><strong>Conversion Goal</strong><span>GA4 form_submitted imported to Ads · no real leads proven yet</span></div>
+	          <div class="pill green">Primary</div>
         </div>
       </div>
     </section>
@@ -425,19 +435,93 @@
         <tbody>
           <tr>
             <td><strong>Campaign #1</strong><br><code>24111769670</code></td>
-            <td>Enabled and learning. Main RSA is approved.</td>
-            <td><strong>$26.31/day</strong></td>
-            <td>Main estate landscape maintenance campaign for premium category terms.</td>
+	            <td>Enabled, eligible, and serving. Google Ads still shows 0 conversions/all-conversions through 2026-09-13.</td>
+	            <td><strong>$26.31/day</strong><br><span style="font-size:11px;color:#888;">$6.00 CPC ceiling</span></td>
+	            <td>Main estate landscape maintenance campaign for premium category terms. Current live structure: 32 enabled positive keywords and 85 campaign-level negatives.</td>
           </tr>
           <tr>
             <td><strong>Campaign #2 - Competitor Landscape Maintenance</strong><br><code>24122874704</code></td>
-            <td>Enabled and learning. Six active competitor RSAs are approved, but the campaign has not yet received impressions.</td>
-            <td><strong>$6.58/day</strong></td>
-            <td>Competitor-name campaign for JR's six named maintenance competitors.</td>
+	            <td>Enabled, eligible, and serving. Expanded on 2026-09-13; new RSAs are pending Google's normal review.</td>
+	            <td><strong>$6.58/day</strong><br><span style="font-size:11px;color:#888;">$16.00 CPC ceiling</span></td>
+	            <td>Competitor-name campaign for JR-backed firms. Current live structure: 11 enabled ad groups and 102 enabled competitor keywords.</td>
           </tr>
         </tbody>
       </table>
-    </section>
+	    </section>
+
+	    <section class="section">
+	      <div class="section-title">Sep 13 Upstream Signals</div>
+	      <div class="grid-3">
+	        <div class="panel">
+	          <h3>Top-funnel delivery improved</h3>
+	          <p>Campaign #1 moved from August's 4,211 impressions / 214 clicks / $2.70 CPC / 5.08% CTR to September-to-date's 2,799 impressions / 232 clicks / $1.48 CPC / 8.29% CTR.</p>
+	        </div>
+	        <div class="panel">
+	          <h3>Mid-funnel signal is thin but real</h3>
+	          <p>GA4 paid landing-page sessions showed contact-page users, phone-click users, and form-start users in both August and September-to-date. That is useful behavior, but it is not a lead yet.</p>
+	        </div>
+	        <div class="panel">
+	          <h3>Search terms needed cleanup</h3>
+	          <p>Search-term evidence skewed into lawn-care, senior chore-service, weed removal, one-off turf tasks, gutters, price-shopping, and random brand bleed. The Sep 13 negative update was built from that waste.</p>
+	        </div>
+	      </div>
+	      <div style="height: 12px;"></div>
+	      <table>
+	        <thead>
+	          <tr>
+	            <th>Period</th>
+	            <th>Paid Landing-Page Sessions</th>
+	            <th>Engaged Sessions</th>
+	            <th>Mid-Funnel Users</th>
+	            <th>Conversion Caveat</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	          <tr>
+	            <td><strong>August 2026</strong></td>
+	            <td>217</td>
+	            <td>90</td>
+	            <td>14 contact-page · 4 phone-click · 3 form-start</td>
+	            <td>1 paid key event, but it was the 2026-08-11 tracking test.</td>
+	          </tr>
+	          <tr>
+	            <td><strong>September to date</strong><br><span style="font-size:11px;color:#888;">through 2026-09-13</span></td>
+	            <td>203</td>
+	            <td>49</td>
+	            <td>8 contact-page · 1 phone-click · 1 form-start</td>
+	            <td>0 key events and 0 Google Ads conversions.</td>
+	          </tr>
+	        </tbody>
+	      </table>
+	    </section>
+
+	    <section class="section">
+	      <div class="section-title">Sep 13 Targeting Updates</div>
+	      <div class="grid-2">
+	        <div class="panel">
+	          <h3>Negative keyword cleanup</h3>
+	          <p>Campaign #1 now has 85 campaign-level negatives after adding 53 new broad negatives from live August/September waste. The new exclusions cover lawn-care/lawn-service, senior chore, weed removal, turf/DIY, yard/garden cleanup, gutters/cleaning, tree-removal, pricing/deals, and unrelated company-name bleed.</p>
+	        </div>
+	        <div class="panel">
+	          <h3>Competitor campaign expansion</h3>
+	          <p>Campaign #2 now covers JR's original six plus Epling Landscaping, Fine Landscapes, Pristine Acres, Planted Earth, and Green Hill Landscaping. Green Hill is included as churn-source conquest logic, not as a premium benchmark.</p>
+	        </div>
+	      </div>
+	      <div style="height: 12px;"></div>
+	      <div class="tag-list">
+	        <span class="tag">McHale</span>
+	        <span class="tag">Surrounds</span>
+	        <span class="tag">Wheat's</span>
+	        <span class="tag">Kane Landscaping</span>
+	        <span class="tag">Brandon Rushing</span>
+	        <span class="tag">White Pearl</span>
+	        <span class="tag">Epling Landscaping</span>
+	        <span class="tag">Fine Landscapes</span>
+	        <span class="tag">Pristine Acres</span>
+	        <span class="tag">Planted Earth</span>
+	        <span class="tag">Green Hill Landscaping</span>
+	      </div>
+	    </section>
 
     <section class="section">
       <div class="section-title">What Each Piece Owns</div>
@@ -445,8 +529,8 @@
         <div class="panel">
           <h3>Google Ads owns demand capture</h3>
           <ul>
-            <li>Campaign status and budgets</li>
-            <li>Exact and phrase match keywords</li>
+	            <li>Campaign status and budgets</li>
+	            <li>Exact and phrase match keywords</li>
             <li>Negative keywords</li>
             <li>Responsive search ads</li>
             <li>Auto-tagged click IDs</li>
@@ -531,8 +615,8 @@
           <p>Campaign #1 uses Google Ads auto-tagging. It does not currently add manual UTMs to the ad final URL, but the account has auto-tagging enabled, so GA4 should classify those clicks through the Google Ads integration and click ID.</p>
         </div>
         <div class="panel">
-          <h3>Campaign #2 attribution</h3>
-          <p>Campaign #2 uses both auto-tagging and explicit UTMs. Its URL includes <code>utm_campaign=signature_care_competitor_landscape_maintenance</code> and competitor-specific <code>utm_content</code> values.</p>
+	          <h3>Campaign #2 attribution</h3>
+	          <p>Campaign #2 uses both auto-tagging and explicit UTMs. Its URL includes <code>utm_campaign=signature_care_competitor_landscape_maintenance</code> and competitor-specific <code>utm_content</code> values, including the Sep 13 additions for Epling, Fine Landscapes, Pristine Acres, Planted Earth, and Green Hill.</p>
         </div>
       </div>
     </section>
@@ -557,8 +641,8 @@
         <div class="panel">
           <h3>In Google Ads</h3>
           <ul>
-            <li>Watch Campaign #2 for its first eligible impressions now that active ads are approved.</li>
-            <li>Watch search terms daily during the first week.</li>
+	            <li>Watch Campaign #2 for impression volume across the expanded 11-ad-group competitor set.</li>
+	            <li>Watch post-cleanup search terms to confirm the 53 new negatives improve query quality.</li>
             <li>Check spend split against the $32.89/day combined budget.</li>
             <li>Use Auction Insights once there is enough impression data.</li>
           </ul>
@@ -567,7 +651,7 @@
           <h3>In GA4</h3>
           <ul>
             <li>Use source / medium, campaign, landing page, and event name.</li>
-            <li>Track <code>form_submitted</code>, <code>contact_page_view</code>, and phone clicks.</li>
+	            <li>Track <code>form_submitted</code>, contact-page users, form-start users, and phone-click users.</li>
             <li>Separate Campaign #1 category traffic from Campaign #2 competitor traffic.</li>
             <li>Expect normal GA4 and Ads conversion-reporting lag.</li>
           </ul>
@@ -583,13 +667,18 @@
       </div>
       <div style="height: 10px;"></div>
       <div class="callout">
-        <strong>Campaign #2 is approved but not delivering yet.</strong>
-        The competitor campaign is enabled and its six active RSAs are approved, but live Google Ads data showed 0 impressions and 0 clicks as of 2026-08-21.
-      </div>
-    </section>
+	        <strong>Competitor volume will still be sparse.</strong>
+	        Campaign #2 now has 11 enabled ad groups, but competitor-name + maintenance variants are low-volume terms. Many longer variants are rarely served or not eligible; bare brand terms are the practical volume path.
+	      </div>
+	      <div style="height: 10px;"></div>
+	      <div class="callout">
+	        <strong>Better CTR/CPC is not enough by itself.</strong>
+	        September-to-date showed cheaper clicks and stronger CTR, but the upstream search-term mix proved that traffic quality still needed active pruning. The negative list should be judged by whether the next search-term pull looks cleaner, not by CTR alone.
+	      </div>
+	    </section>
 
     <footer class="footer">
-      Prepared for Nathan Shiba and Colao &amp; Peter. Current as of Aug 21, 2026, 06:59 AM CDT. Source notes: <code>projects/colao-peter.md</code>.
+	      Prepared for Nathan Shiba and Colao &amp; Peter. Current as of Sep 13, 2026, 2:14 PM CDT. Source notes: <code>projects/colao-peter.md</code>.
     </footer>
   </main>
 </body>

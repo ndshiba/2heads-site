@@ -60,7 +60,7 @@
   }
 
   table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 6px; background: #fff; }
-  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
   th { background: #FAF8F3; color: var(--gold); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
   table { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
 
@@ -75,10 +75,12 @@
   .paused { background: var(--warn-soft); color: var(--warn); border: 1px solid var(--warn-line); }
   .live { background: var(--ok-soft); color: var(--ok); border: 1px solid var(--ok-line); }
 
-  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .card { border: 1px solid var(--line); border-radius: 6px; padding: 15px 17px; background: #fff; }
+  .grid-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; }
+  .grid-2 > * { min-width: 0; }
+  .card { border: 1px solid var(--line); border-radius: 6px; padding: 15px 17px; background: #fff; min-width: 0; }
   .card h3 { margin-bottom: 7px; font-size: 13px; color: var(--ink); font-weight: 700; }
   .card p { font-size: 12.5px; color: #555; }
+  .card h3, .card p { overflow-wrap: anywhere; }
 
   .kw-tag {
     display: inline-block; background: var(--ok-soft); color: var(--ok); border: 1px solid var(--ok-line);
@@ -92,6 +94,7 @@
   }
 
   .diagram-wrap { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+  .diagram-wrap svg { max-width: 100%; height: auto; display: block; }
 
   .footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid #ddd8cf; font-size: 11px; color: #bbb; }
   code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
@@ -99,6 +102,22 @@
   .breadcrumb a{color:var(--gold);text-decoration:none;font-weight:700}
   .breadcrumb a:hover{text-decoration:underline}
   .breadcrumb span{margin:0 6px;color:#bbb}
+
+  @media (max-width: 560px) {
+    .breadcrumb, .header { padding-left: 20px; padding-right: 20px; }
+    .container { padding: 24px 18px 70px; }
+    .header { align-items: flex-start; flex-direction: column; gap: 10px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      font-size: 12px;
+      -webkit-overflow-scrolling: touch;
+    }
+    th, td { padding: 10px; }
+    .diagram-wrap { padding: 10px; overflow: hidden; }
+  }
 </style>
 </head>
 <body>
@@ -120,12 +139,12 @@
 
     <div class="title-block">
       <h2>Signature Care — Google Ads Campaign Review</h2>
-      <div class="sub">Prepared 2026-08-06 · updated 2026-08-21 after live status refresh</div>
+	      <div class="sub">Prepared 2026-08-06 · updated 2026-09-13 after live Ads/GA4 readout and targeting cleanup</div>
     </div>
 
     <div class="callout">
       <strong>Where things stand right now</strong>
-      The Signature Care campaign is now <strong>enabled and learning</strong>. The separate competitor landscape maintenance campaign is also enabled and learning; its six active ads are approved, but it has not yet received impressions. For the tracking layer behind both campaigns, see the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
+	      The Signature Care campaign is now <strong>enabled, eligible, and serving</strong>. Delivery improved in September-to-date, but Google Ads still shows <strong>0 real conversions</strong>; GA4 shows only a small mid-funnel pulse. The separate competitor campaign is also enabled/eligible/serving and was expanded today from JR's older competitor notes to <strong>11 enabled competitor ad groups</strong>. For the tracking layer behind both campaigns, see the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
     </div>
 
     <div class="section">
@@ -135,16 +154,39 @@
         <tr><td>Account</td><td>Colao &amp; Peter (Google Ads, under Shiba &amp; Associates MCC)</td></tr>
         <tr><td>Campaign name</td><td>Campaign #1 — Signature Care / Estate Landscape Maintenance</td></tr>
         <tr><td>Campaign type</td><td>Search only <em>(no Display, no Performance Max)</em></td></tr>
-        <tr><td>Status</td><td><span class="status-pill live">Enabled — learning</span></td></tr>
+	        <tr><td>Status</td><td><span class="status-pill live">Enabled — eligible / serving</span></td></tr>
         <tr><td>Monthly budget</td><td>$1,000/month target &rarr; <strong>$32.89/day total</strong>: Campaign #1 $26.31/day, Campaign #2 $6.58/day</td></tr>
-        <tr><td>Bid strategy</td><td>Maximize Clicks, capped at <strong>$6.00 max CPC</strong> after the 2026-08-17 ceiling reduction</td></tr>
+	        <tr><td>Bid strategy</td><td>Maximize Clicks. Campaign #1 is capped at <strong>$6.00 max CPC</strong> after the 2026-08-17 ceiling reduction; Campaign #2 remains capped at <strong>$16.00 max CPC</strong>.</td></tr>
         <tr><td>Networks</td><td>Google Search + Search Partners (Display disabled)</td></tr>
         <tr><td>Landing page</td><td><code>colaopeter.com/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/</code></td></tr>
         <tr><td>GA4 property linked</td><td>387610456</td></tr>
-        <tr><td>Attribution ecosystem</td><td><a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem &rarr;</a></td></tr>
-        <tr><td>Google Ads campaign</td><td><a href="https://ads.google.com/aw/campaigns?campaignId=24111769670&amp;ocid=8459626549" target="_blank" rel="noopener">Open Campaign #1 in Google Ads &rarr;</a> <span style="color:var(--muted);font-size:11.5px;">(requires Google Ads account access)</span></td></tr>
-      </table>
-    </div>
+	        <tr><td>Attribution ecosystem</td><td><a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem &rarr;</a></td></tr>
+	        <tr><td>Google Ads campaign</td><td><a href="https://ads.google.com/aw/campaigns?campaignId=24111769670&amp;ocid=8459626549" target="_blank" rel="noopener">Open Campaign #1 in Google Ads &rarr;</a> <span style="color:var(--muted);font-size:11.5px;">(requires Google Ads account access)</span></td></tr>
+	      </table>
+	    </div>
+
+	    <div class="section">
+	      <div class="section-title">Live Funnel Readout — Aug / Sep 2026</div>
+	      <div class="callout warn">
+	        <strong>Verdict as of 2026-09-13</strong>
+	        Top-funnel delivery is improving and CPC is down, but bottom-funnel success is not proven. The only August Paid Search key event is the known 2026-08-11 tracking test, not a real lead. The useful signal is mid-funnel behavior: contact-page visits, phone clicks, and form starts from paid landing-page sessions.
+	      </div>
+	      <table>
+	        <tr><th>Period</th><th>Google Ads — Campaign #1</th><th>GA4 Paid Landing-Page Signals</th><th>Read</th></tr>
+	        <tr>
+	          <td><strong>August 2026</strong></td>
+	          <td>4,211 impressions · 214 clicks · $577.81 spend · $2.70 CPC · 5.08% CTR · 0 Ads conversions</td>
+	          <td>217 paid sessions · 90 engaged · 205 users · 14 contact-page users · 4 phone-click users · 3 form-start users · 1 key event, the tracking test</td>
+	          <td>Traffic is real, and some visitors are moving past the landing page, but no qualified lead is proven.</td>
+	        </tr>
+	        <tr>
+	          <td><strong>September to date</strong><br><span style="color:var(--muted);font-size:11px;">through 2026-09-13</span></td>
+	          <td>2,799 impressions · 232 clicks · $344.50 spend · $1.48 CPC · 8.29% CTR · 0 Ads conversions</td>
+	          <td>203 paid sessions · 49 engaged · 199 users · 8 contact-page users · 1 phone-click user · 1 form-start user · 0 key events</td>
+	          <td>Better cost and CTR, but search terms were too commodity before today's negative cleanup.</td>
+	        </tr>
+	      </table>
+	    </div>
 
     <div class="section">
       <div class="section-title">Why This Setup</div>
@@ -162,8 +204,8 @@
           <p>Zero conversion history on a brand-new account makes conversion-based bidding unreliable out of the gate. Maximize Clicks with a hard $6.00 CPC ceiling gets qualified traffic in the door without runaway cost-per-click.</p>
         </div>
         <div class="card">
-          <h3>3 live targets + expansion queue</h3>
-          <p>The live spend is concentrated on Great Falls, McLean, and Vienna. JR's broader qualified-market list is tracked separately as expansion inventory, not active targeting yet.</p>
+	          <h3>3 live geo targets + broader competitor coverage</h3>
+	          <p>The live geography remains concentrated on Great Falls, McLean, and Vienna. Competitor coverage was expanded separately through brand-name conquest ad groups, without broadening the active location targets.</p>
         </div>
       </div>
     </div>
@@ -183,8 +225,8 @@
     </div>
 
     <div class="section">
-      <div class="section-title">Keywords — 18 Live in Ad Group (Exact / Phrase Match Only)</div>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">All match types are Exact <code>[ ]</code> or Phrase <code>" "</code>. No broad match anywhere in the campaign. 13 built at campaign launch (incl. town-modifier variants) remain live; 5 more added 2026-08-07 after the keyword SERP test below remain live; 2 Potomac-modifier keywords (1 from launch, 1 from the 2026-08-07 batch) were removed 2026-08-07, and Potomac, MD was also removed as a location target the same day (see Geographic Targeting section above) — both changes verified live in Google Ads.</p>
+	      <div class="section-title">Campaign #1 Keywords — 32 Live in Ad Group (Exact / Phrase Match Only)</div>
+	      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">All match types are Exact <code>[ ]</code> or Phrase <code>" "</code>. No broad match anywhere in Campaign #1. Live Google Ads API readback on 2026-09-13 found 32 enabled positive keywords. Potomac-modifier keywords and the Potomac location target remain removed.</p>
       <table>
         <tr><th>Keyword</th><th>Match Type</th><th>Added</th></tr>
         <tr><td>estate landscape maintenance</td><td>Exact</td><td>Launch</td></tr>
@@ -203,9 +245,23 @@
         <tr><td>estate landscape management</td><td>Exact</td><td>2026-08-07</td></tr>
         <tr><td>landscape maintenance agreement mclean</td><td>Phrase</td><td>2026-08-07</td></tr>
         <tr><td>landscape maintenance agreement great falls</td><td>Phrase</td><td>2026-08-07</td></tr>
-        <tr><td>property care for estate homes</td><td>Phrase</td><td>2026-08-07</td></tr>
-        <tr><td>outdoor living maintenance</td><td>Phrase</td><td>2026-08-07</td></tr>
-      </table>
+	        <tr><td>property care for estate homes</td><td>Phrase</td><td>2026-08-07</td></tr>
+	        <tr><td>outdoor living maintenance</td><td>Phrase</td><td>2026-08-07</td></tr>
+	        <tr><td>residential landscape maintenance</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>landscape maintenance services</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>landscape maintenance company</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>full service landscape maintenance</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>garden maintenance service</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>high end landscape maintenance</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>private estate landscaping</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>estate landscaping services</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>luxury grounds maintenance</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>estate grounds maintenance</td><td>Phrase</td><td>Post-launch expansion</td></tr>
+	        <tr><td>architect led maintenance</td><td>Phrase</td><td>2026-08-17</td></tr>
+	        <tr><td>landscape architect care</td><td>Phrase</td><td>2026-08-17</td></tr>
+	        <tr><td>architectural grounds care</td><td>Phrase</td><td>2026-08-17</td></tr>
+	        <tr><td>estate grounds care</td><td>Phrase</td><td>2026-08-17</td></tr>
+	      </table>
       <p style="font-size:12px;color:var(--muted);margin-top:8px;">Google's auto-suggested keywords — <em>lawn maintenance, lawn care, lawn mowing, grass maintenance</em> — were removed. Those terms feed directly into the commodity mowing-company auction (Angi, LawnStarter, ProMow) identified in prior competitor research as the wrong buyer for this offer.</p>
     </div>
 
@@ -235,8 +291,8 @@
         </div>
       </div>
 
-      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Ad group keyword count: 14 &rarr; 20 after this batch (see full table above). The 6 additions were added directly in the live Google Ads account. Two Potomac-modifier keywords were subsequently removed on 2026-08-07, bringing the final Campaign #1 live keyword count to 18.</p>
-    </div>
+	      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Initial ad group keyword count moved from 14 to 20 after this batch. Two Potomac-modifier keywords were removed on 2026-08-07, then later bridge/architect-led terms were added as the zero-delivery and early search-term data came in. Current Campaign #1 live positive keyword count is 32.</p>
+	    </div>
 
     <div class="section">
       <div class="section-title">Ad Creative Suggestions — Images (2026-08-07)</div>
@@ -261,8 +317,9 @@
     </div>
 
     <div class="section">
-      <div class="section-title">Negative Keywords — All 32 Added Before Launch</div>
-      <div class="grid-2">
+	      <div class="section-title">Negative Keywords — 85 Live Campaign-Level Exclusions</div>
+	      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">The 32 pre-launch negatives are still live. On 2026-09-13, 53 more broad negatives were added from August/September search-term waste, after validate-only and post-apply API verification.</p>
+	      <div class="grid-2">
         <div class="card">
           <h3>Price / commodity shoppers</h3>
           <span class="neg-tag">cheap</span><span class="neg-tag">budget</span><span class="neg-tag">discount</span>
@@ -290,13 +347,53 @@
           <span class="neg-tag">commercial</span><span class="neg-tag">HOA</span><span class="neg-tag">apartment</span>
           <span class="neg-tag">rental property</span><span class="neg-tag">property management company</span>
         </div>
-        <div class="card">
-          <h3>Geo leak / test</h3>
-          <span class="neg-tag">Florida</span><span class="neg-tag">near me</span>
-          <p style="margin-top:8px;">"near me" flagged as a test candidate — may be too restrictive; watch early performance before deciding to keep it.</p>
-        </div>
-      </div>
-    </div>
+	        <div class="card">
+	          <h3>Geo leak / test</h3>
+	          <span class="neg-tag">Florida</span><span class="neg-tag">near me</span>
+	          <p style="margin-top:8px;">"near me" flagged as a test candidate — may be too restrictive; watch early performance before deciding to keep it.</p>
+	        </div>
+	        <div class="card">
+	          <h3>Added from live search terms</h3>
+	          <span class="neg-tag">lawn care</span><span class="neg-tag">lawn service</span><span class="neg-tag">lawn companies</span>
+	          <span class="neg-tag">grass cutting</span><span class="neg-tag">cut my grass</span><span class="neg-tag">seniors</span>
+	          <span class="neg-tag">elderly</span><span class="neg-tag">weed removal</span><span class="neg-tag">weeds removal</span>
+	          <span class="neg-tag">yard maintenance</span><span class="neg-tag">garden cleanup</span><span class="neg-tag">cleaning gutters</span>
+	          <span class="neg-tag">gutter</span><span class="neg-tag">tree removal</span><span class="neg-tag">pricing</span>
+	          <span class="neg-tag">deals</span><span class="neg-tag">trugreen</span><span class="neg-tag">new image landscape</span>
+	        </div>
+	        <div class="card">
+	          <h3>Why the cleanup mattered</h3>
+	          <p>September's lower CPC and stronger CTR were not clean success by themselves. The largest click terms still included commodity, chore-service, DIY turf, price-shopping, and random competitor/company bleed. The negative update is meant to protect budget while the campaign keeps learning.</p>
+	        </div>
+	      </div>
+	    </div>
+
+	    <div class="section">
+	      <div class="section-title">Competitor Campaign — Expanded 2026-09-13</div>
+	      <div class="callout">
+	        <strong>JR source trail corrected</strong>
+	        The first September competitor pass followed only the August 21 Epling/Epping note. Nathan flagged that JR had named more competitors earlier, so the May 15, June 26, August 7, and August 21 records were rechecked. Campaign #2 now has 11 enabled competitor ad groups and 102 enabled competitor keywords.
+	      </div>
+	      <table>
+	        <tr><th>Competitor Set</th><th>Ad Groups</th><th>Notes</th></tr>
+	        <tr>
+	          <td><strong>Original JR maintenance set</strong></td>
+	          <td>McHale, Surrounds, Wheat's, Kane Landscaping, Brandon Rushing, White Pearl</td>
+	          <td>Built at Campaign #2 launch from JR's maintenance competitor list.</td>
+	        </tr>
+	        <tr>
+	          <td><strong>September Epling add</strong></td>
+	          <td>Epling Landscaping</td>
+	          <td>August 21 "Epping" reference resolved to Epling Landscaping and Lawn Service in Loudoun County.</td>
+	        </tr>
+	        <tr>
+	          <td><strong>Corrected older-JR add</strong></td>
+	          <td>Fine Landscapes, Pristine Acres, Planted Earth, Green Hill Landscaping</td>
+	          <td>Fine/Pristine from May 15; Fine/Planted Earth from June 26; Green Hill from August 7 as lower-tier conquest/churn-source logic.</td>
+	        </tr>
+	      </table>
+	      <p style="font-size:12px;color:var(--muted);margin-top:8px;">All new competitor RSAs use the approved C&amp;P-only copy with no competitor names in ad text. New ad approval status is <code>UNKNOWN</code> immediately after creation, which is normal while Google reviews. Most longer competitor+maintenance terms remain rarely served; bare brand terms are the better volume bet.</p>
+	    </div>
 
     <div class="section">
       <div class="section-title">Ad Copy — Live Headline Inventory</div>
@@ -381,15 +478,15 @@
 
         <rect x="630" y="20" width="120" height="80" rx="8" fill="#EEF7EE" stroke="#2a6e2a" stroke-width="1.5"/>
         <text x="690" y="48" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Negatives Added</text>
-        <text x="690" y="65" text-anchor="middle" font-size="10.5" fill="#7a766c">All 32 negative</text>
-        <text x="690" y="78" text-anchor="middle" font-size="10.5" fill="#7a766c">keywords in place</text>
+	        <text x="690" y="65" text-anchor="middle" font-size="10.5" fill="#7a766c">85 campaign-level</text>
+	        <text x="690" y="78" text-anchor="middle" font-size="10.5" fill="#7a766c">negatives in place</text>
         <circle cx="690" cy="108" r="6" fill="#2a6e2a"/>
         <text x="690" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">DONE</text>
 
         <rect x="840" y="20" width="160" height="80" rx="8" fill="#EEF7EE" stroke="#2a6e2a" stroke-width="1.5"/>
-        <text x="920" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Campaigns Enabled</text>
-        <text x="920" y="60" text-anchor="middle" font-size="10.5" fill="#7a766c">#1 + #2 learning</text>
-        <text x="920" y="73" text-anchor="middle" font-size="10.5" fill="#7a766c">active ads approved</text>
+	        <text x="920" y="42" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a18">Sep 13 Update</text>
+	        <text x="920" y="60" text-anchor="middle" font-size="10.5" fill="#7a766c">#1 + #2 serving</text>
+	        <text x="920" y="73" text-anchor="middle" font-size="10.5" fill="#7a766c">11 competitor groups</text>
         <text x="920" y="86" text-anchor="middle" font-size="10.5" fill="#7a766c">within $1k/month</text>
         <circle cx="920" cy="108" r="6" fill="#2a6e2a"/>
         <text x="920" y="130" text-anchor="middle" font-size="10" fill="#2a6e2a" font-weight="700">LIVE</text>
@@ -401,13 +498,13 @@
       <div class="section-title">What Happens Next</div>
       <div class="callout">
         <strong>First-week monitoring</strong>
-        Watch search terms, CPCs, spend pacing, first competitor-campaign impressions, and lead attribution. The tracking chain is documented in the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
+	        Watch post-cleanup search-term quality, CPCs, spend pacing, new competitor-ad approval, competitor-campaign impressions, and lead attribution. The tracking chain is documented in the <a href="cp-adwords-ecosystem-2026-08-10.html">Google Ads, GTM, GA4 &amp; Website Ecosystem</a> page.
       </div>
-      <p style="font-size:13px;">Everything else — targeting, budget, bid cap, keywords, negatives, ad copy, landing page, and conversion import — is active. The next useful checkpoint is performance quality, especially paid-search engagement and whether the competitor campaign starts earning eligible impressions.</p>
+	      <p style="font-size:13px;">Everything else — targeting, budget, bid caps, keywords, negatives, ad copy, landing page, and conversion import — is active. The next useful checkpoint is quality: whether the 53 new negatives improve query mix, whether the expanded competitor campaign gets any real impression volume, and whether GA4's mid-funnel signals turn into qualified calls or forms.</p>
     </div>
 
     <div class="footer">
-      Private and intended for Colao &amp; Peter use only. Pages are blocked from search engine indexing.
+	      Private and intended for Colao &amp; Peter use only. Pages are blocked from search engine indexing. Current as of 2026-09-13, 2:14 PM CDT.
     </div>
 
   </div>
