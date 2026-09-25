@@ -41,7 +41,15 @@
     .notes { display:grid; gap:10px; }
     .callout { border-left:4px solid var(--gold); background:#fbfaf7; padding:12px 13px; color:var(--muted); }
     .callout strong { color:var(--ink); display:block; margin-bottom:3px; }
-    .split { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px; }
+    .split { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:14px; margin-top:14px; }
+    .campaign-table { table-layout:fixed; }
+    .campaign-table th,.campaign-table td { overflow-wrap:anywhere; }
+    .campaign-table th:nth-child(1) { width:15%; }
+    .campaign-table th:nth-child(2) { width:32%; }
+    .campaign-table th:nth-child(3) { width:19%; }
+    .campaign-table th:nth-child(4) { width:11%; }
+    .campaign-table th:nth-child(5) { width:14%; }
+    .campaign-table th:nth-child(6) { width:9%; }
     .full { margin-top:14px; }
     code { background:#f1ece2; padding:1px 4px; border-radius:3px; }
     @media (max-width: 980px) {
@@ -53,6 +61,12 @@
       main { padding:16px; }
       .kpis { grid-template-columns:1fr; }
       .chart-wrap { height:300px; }
+      .campaign-table,.campaign-table tbody,.campaign-table tr,.campaign-table td { display:block; width:100%; }
+      .campaign-table thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+      .campaign-table tr { padding:8px 0; border-bottom:1px solid var(--line); }
+      .campaign-table tr:last-child { border-bottom:0; padding-bottom:0; }
+      .campaign-table td { display:grid; grid-template-columns:minmax(112px,38%) minmax(0,1fr); gap:12px; padding:4px 0; border:0; text-align:right; }
+      .campaign-table td::before { content:attr(data-label); color:#776f61; font-size:10px; font-weight:800; letter-spacing:.7px; text-align:left; text-transform:uppercase; }
     }
   </style>
 </head>
@@ -81,7 +95,7 @@
     <section class="split">
       <div class="panel">
         <h2>Campaign / Source Breakdown</h2>
-        <table><thead><tr><th>Visitor Type</th><th>GA4 Campaign</th><th>Source / Medium</th><th class="num">Sessions</th><th class="num">Engaged</th><th class="num">Key</th></tr></thead><tbody id="campaignRows"></tbody></table>
+        <table class="campaign-table"><thead><tr><th>Visitor Type</th><th>GA4 Campaign</th><th>Source / Medium</th><th class="num">Sessions</th><th class="num">Engaged</th><th class="num">Key</th></tr></thead><tbody id="campaignRows"></tbody></table>
       </div>
       <div class="panel">
         <h2>Engagement Events</h2>
@@ -211,7 +225,7 @@
       document.getElementById("campaignRows").innerHTML = payload.campaign_rows
         .filter(r => selected === "All" || r.sessionDefaultChannelGroup === selected)
         .sort((a,b)=>b.sessions-a.sessions)
-        .map(r => `<tr><td>${r.sessionDefaultChannelGroup}</td><td>${r.sessionCampaignName}</td><td>${r.sessionSourceMedium}</td><td class="num">${num(r.sessions)}</td><td class="num">${num(r.engagedSessions)}</td><td class="num">${num(r.keyEvents)}</td></tr>`)
+        .map(r => `<tr><td data-label="Visitor type">${r.sessionDefaultChannelGroup}</td><td data-label="GA4 campaign">${r.sessionCampaignName}</td><td data-label="Source / medium">${r.sessionSourceMedium}</td><td class="num" data-label="Sessions">${num(r.sessions)}</td><td class="num" data-label="Engaged">${num(r.engagedSessions)}</td><td class="num" data-label="Key">${num(r.keyEvents)}</td></tr>`)
         .join("");
     }
     function renderEventRows() {
