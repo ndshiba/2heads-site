@@ -1,0 +1,1395 @@
+{
+  "range": {
+    "start": "2025-07",
+    "end": "2026-08",
+    "months": 14
+  },
+  "sources": [
+    {
+      "name": "URL property",
+      "site": "https://www.colaopeter.com/",
+      "start": "2025-07-01",
+      "end": "2026-01-31"
+    },
+    {
+      "name": "Domain property",
+      "site": "sc-domain:colaopeter.com",
+      "start": "2026-02-01",
+      "end": "2026-08-31"
+    }
+  ],
+  "notes": {
+    "propertySplit": "Jul 2025\u2013Jan 2026 uses the URL property; Feb\u2013Aug 2026 uses the domain property.",
+    "home": "Home combines the colaopeter.com and www.colaopeter.com homepage variants."
+  },
+  "pages": [
+    {
+      "id": "home",
+      "label": "Home (all variants)",
+      "path": "/",
+      "urls": [
+        "https://www.colaopeter.com/",
+        "https://colaopeter.com/",
+        "https://www.colaopeter.com/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 154,
+          "impressions": 8031,
+          "ctr": 0.0192,
+          "position": 33.1,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 150,
+          "impressions": 8839,
+          "ctr": 0.017,
+          "position": 39.2,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 172,
+          "impressions": 5521,
+          "ctr": 0.0312,
+          "position": 29.8,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 169,
+          "impressions": 3200,
+          "ctr": 0.0528,
+          "position": 18.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 129,
+          "impressions": 3083,
+          "ctr": 0.0418,
+          "position": 13.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 92,
+          "impressions": 4622,
+          "ctr": 0.0199,
+          "position": 11.8,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 152,
+          "impressions": 5904,
+          "ctr": 0.0257,
+          "position": 13.8,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 128,
+          "impressions": 6570,
+          "ctr": 0.0195,
+          "position": 14.6,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 172,
+          "impressions": 6148,
+          "ctr": 0.028,
+          "position": 9.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 189,
+          "impressions": 7030,
+          "ctr": 0.0269,
+          "position": 10.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 175,
+          "impressions": 6441,
+          "ctr": 0.0272,
+          "position": 8.1,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 188,
+          "impressions": 6046,
+          "ctr": 0.0311,
+          "position": 4.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 172,
+          "impressions": 5501,
+          "ctr": 0.0313,
+          "position": 4.9,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 149,
+          "impressions": 4897,
+          "ctr": 0.0304,
+          "position": 4.8,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "our-team",
+      "label": "Our Team",
+      "path": "/our-team/",
+      "urls": [
+        "https://www.colaopeter.com/our-team/",
+        "https://colaopeter.com/our-team/",
+        "https://www.colaopeter.com/our-team/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 15,
+          "impressions": 863,
+          "ctr": 0.0174,
+          "position": 6.3,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 18,
+          "impressions": 1121,
+          "ctr": 0.0161,
+          "position": 10.6,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 25,
+          "impressions": 1027,
+          "ctr": 0.0243,
+          "position": 5.8,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 15,
+          "impressions": 846,
+          "ctr": 0.0177,
+          "position": 5.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 17,
+          "impressions": 712,
+          "ctr": 0.0239,
+          "position": 4.3,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 8,
+          "impressions": 507,
+          "ctr": 0.0158,
+          "position": 4.9,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 20,
+          "impressions": 529,
+          "ctr": 0.0378,
+          "position": 3.3,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 12,
+          "impressions": 317,
+          "ctr": 0.0379,
+          "position": 4.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 18,
+          "impressions": 477,
+          "ctr": 0.0377,
+          "position": 5.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 14,
+          "impressions": 473,
+          "ctr": 0.0296,
+          "position": 6.4,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 12,
+          "impressions": 460,
+          "ctr": 0.0261,
+          "position": 4.3,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 22,
+          "impressions": 528,
+          "ctr": 0.0417,
+          "position": 4.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 11,
+          "impressions": 491,
+          "ctr": 0.0224,
+          "position": 4.3,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 17,
+          "impressions": 356,
+          "ctr": 0.0478,
+          "position": 6.4,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "custom-deck",
+      "label": "Custom Deck Builder",
+      "path": "/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/",
+      "urls": [
+        "https://www.colaopeter.com/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/",
+        "https://colaopeter.com/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/",
+        "https://www.colaopeter.com/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 2,
+          "impressions": 17343,
+          "ctr": 0.0001,
+          "position": 49.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 5,
+          "impressions": 17385,
+          "ctr": 0.0003,
+          "position": 50.4,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 0,
+          "impressions": 10807,
+          "ctr": 0.0,
+          "position": 46.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 2,
+          "impressions": 5460,
+          "ctr": 0.0004,
+          "position": 34.4,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 2,
+          "impressions": 5633,
+          "ctr": 0.0004,
+          "position": 30.4,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 1,
+          "impressions": 7311,
+          "ctr": 0.0001,
+          "position": 30.2,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 4,
+          "impressions": 10470,
+          "ctr": 0.0004,
+          "position": 30.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 7,
+          "impressions": 13825,
+          "ctr": 0.0005,
+          "position": 30.4,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 9,
+          "impressions": 8916,
+          "ctr": 0.001,
+          "position": 16.8,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 12,
+          "impressions": 9737,
+          "ctr": 0.0012,
+          "position": 18.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 7,
+          "impressions": 7359,
+          "ctr": 0.001,
+          "position": 22.4,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 6,
+          "impressions": 4653,
+          "ctr": 0.0013,
+          "position": 17.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 7,
+          "impressions": 2617,
+          "ctr": 0.0027,
+          "position": 18.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 9,
+          "impressions": 2738,
+          "ctr": 0.0033,
+          "position": 17.3,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "custom-pool",
+      "label": "Custom Pool Design & Renovations",
+      "path": "/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/",
+      "urls": [
+        "https://www.colaopeter.com/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/",
+        "https://colaopeter.com/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/",
+        "https://www.colaopeter.com/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 28,
+          "impressions": 25203,
+          "ctr": 0.0011,
+          "position": 44.1,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 9,
+          "impressions": 17068,
+          "ctr": 0.0005,
+          "position": 44.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 11,
+          "impressions": 9646,
+          "ctr": 0.0011,
+          "position": 35.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 9,
+          "impressions": 5806,
+          "ctr": 0.0016,
+          "position": 22.7,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 3,
+          "impressions": 5277,
+          "ctr": 0.0006,
+          "position": 27.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 0,
+          "impressions": 6803,
+          "ctr": 0.0,
+          "position": 37.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 7,
+          "impressions": 8239,
+          "ctr": 0.0008,
+          "position": 39.6,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 7,
+          "impressions": 9425,
+          "ctr": 0.0007,
+          "position": 36.1,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 13,
+          "impressions": 8234,
+          "ctr": 0.0016,
+          "position": 31.3,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 14,
+          "impressions": 7454,
+          "ctr": 0.0019,
+          "position": 30.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 15,
+          "impressions": 10221,
+          "ctr": 0.0015,
+          "position": 28.3,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 23,
+          "impressions": 11775,
+          "ctr": 0.002,
+          "position": 25.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 11,
+          "impressions": 8460,
+          "ctr": 0.0013,
+          "position": 25.6,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 9,
+          "impressions": 6673,
+          "ctr": 0.0013,
+          "position": 25.2,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "label": "About Outdoor Living",
+      "path": "/about-outdoor-living-landscaping-company-sterling-great-falls-leesburg-arlington-mclean-va-washington-dc/",
+      "urls": [
+        "https://www.colaopeter.com/about-outdoor-living-landscaping-company-sterling-great-falls-leesburg-arlington-mclean-va-washington-dc/",
+        "https://colaopeter.com/about-outdoor-living-landscaping-company-sterling-great-falls-leesburg-arlington-mclean-va-washington-dc/",
+        "https://www.colaopeter.com/about-outdoor-living-landscaping-company-sterling-great-falls-leesburg-arlington-mclean-va-washington-dc/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 4,
+          "impressions": 224,
+          "ctr": 0.0179,
+          "position": 14.2,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 3,
+          "impressions": 248,
+          "ctr": 0.0121,
+          "position": 12.1,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 7,
+          "impressions": 340,
+          "ctr": 0.0206,
+          "position": 5.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 7,
+          "impressions": 259,
+          "ctr": 0.027,
+          "position": 4.9,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 2,
+          "impressions": 212,
+          "ctr": 0.0094,
+          "position": 6.6,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 5,
+          "impressions": 170,
+          "ctr": 0.0294,
+          "position": 10.1,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 6,
+          "impressions": 404,
+          "ctr": 0.0149,
+          "position": 8.7,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 2,
+          "impressions": 225,
+          "ctr": 0.0089,
+          "position": 8.8,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 4,
+          "impressions": 229,
+          "ctr": 0.0175,
+          "position": 10.6,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 3,
+          "impressions": 221,
+          "ctr": 0.0136,
+          "position": 6.9,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 4,
+          "impressions": 190,
+          "ctr": 0.0211,
+          "position": 7.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 0,
+          "impressions": 190,
+          "ctr": 0.0,
+          "position": 6.1,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 2,
+          "impressions": 251,
+          "ctr": 0.008,
+          "position": 5.6,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 4,
+          "impressions": 213,
+          "ctr": 0.0188,
+          "position": 5.1,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "outdoor-landscape",
+      "label": "Outdoor Landscape Design",
+      "path": "/outdoor-landscape-design-landscaping-company-landscape-architect-potomac-md/",
+      "urls": [
+        "https://www.colaopeter.com/outdoor-landscape-design-landscaping-company-landscape-architect-potomac-md/",
+        "https://colaopeter.com/outdoor-landscape-design-landscaping-company-landscape-architect-potomac-md/",
+        "https://www.colaopeter.com/outdoor-landscape-design-landscaping-company-landscape-architect-potomac-md/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 1,
+          "impressions": 7623,
+          "ctr": 0.0001,
+          "position": 52.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 2,
+          "impressions": 7270,
+          "ctr": 0.0003,
+          "position": 55.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 1,
+          "impressions": 2629,
+          "ctr": 0.0004,
+          "position": 43.8,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 2,
+          "impressions": 1760,
+          "ctr": 0.0011,
+          "position": 37.6,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 1,
+          "impressions": 1522,
+          "ctr": 0.0007,
+          "position": 39.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 1,
+          "impressions": 2279,
+          "ctr": 0.0004,
+          "position": 38.2,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 2,
+          "impressions": 2808,
+          "ctr": 0.0007,
+          "position": 34.6,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 2,
+          "impressions": 3331,
+          "ctr": 0.0006,
+          "position": 29.8,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 5,
+          "impressions": 4142,
+          "ctr": 0.0012,
+          "position": 38.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 8,
+          "impressions": 3372,
+          "ctr": 0.0024,
+          "position": 29.6,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 1,
+          "impressions": 4212,
+          "ctr": 0.0002,
+          "position": 33.6,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 4,
+          "impressions": 3672,
+          "ctr": 0.0011,
+          "position": 31.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 1,
+          "impressions": 1367,
+          "ctr": 0.0007,
+          "position": 21.1,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 4,
+          "impressions": 1350,
+          "ctr": 0.003,
+          "position": 17.6,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "path": "/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/",
+      "urls": [
+        "https://www.colaopeter.com/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/",
+        "https://colaopeter.com/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/",
+        "https://www.colaopeter.com/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 0,
+          "impressions": 105,
+          "ctr": 0.0,
+          "position": 44.3,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 0,
+          "impressions": 99,
+          "ctr": 0.0,
+          "position": 60.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 1,
+          "impressions": 98,
+          "ctr": 0.0102,
+          "position": 38.4,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 0,
+          "impressions": 88,
+          "ctr": 0.0,
+          "position": 38.3,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 1,
+          "impressions": 80,
+          "ctr": 0.0125,
+          "position": 36.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 0,
+          "impressions": 101,
+          "ctr": 0.0,
+          "position": 32.4,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 0,
+          "impressions": 111,
+          "ctr": 0.0,
+          "position": 31.2,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 0,
+          "impressions": 161,
+          "ctr": 0.0,
+          "position": 18.7,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 2,
+          "impressions": 243,
+          "ctr": 0.0082,
+          "position": 10.2,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 4,
+          "impressions": 252,
+          "ctr": 0.0159,
+          "position": 10.4,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 5,
+          "impressions": 369,
+          "ctr": 0.0136,
+          "position": 7.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 2,
+          "impressions": 447,
+          "ctr": 0.0045,
+          "position": 4.7,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 1,
+          "impressions": 348,
+          "ctr": 0.0029,
+          "position": 6.8,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 3,
+          "impressions": 325,
+          "ctr": 0.0092,
+          "position": 4.0,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "mclean",
+      "label": "Landscape Design McLean",
+      "path": "/landscape-design-mclean-va/",
+      "urls": [
+        "https://www.colaopeter.com/landscape-design-mclean-va/",
+        "https://colaopeter.com/landscape-design-mclean-va/",
+        "https://www.colaopeter.com/landscape-design-mclean-va/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 4,
+          "impressions": 4600,
+          "ctr": 0.0009,
+          "position": 24.7,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 2,
+          "impressions": 4218,
+          "ctr": 0.0005,
+          "position": 31.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 4,
+          "impressions": 3136,
+          "ctr": 0.0013,
+          "position": 30.1,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 2,
+          "impressions": 1808,
+          "ctr": 0.0011,
+          "position": 21.9,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 1,
+          "impressions": 1958,
+          "ctr": 0.0005,
+          "position": 25.1,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 3,
+          "impressions": 2043,
+          "ctr": 0.0015,
+          "position": 22.8,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 3,
+          "impressions": 1871,
+          "ctr": 0.0016,
+          "position": 23.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 2,
+          "impressions": 1884,
+          "ctr": 0.0011,
+          "position": 20.3,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 6,
+          "impressions": 2531,
+          "ctr": 0.0024,
+          "position": 16.0,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 7,
+          "impressions": 2446,
+          "ctr": 0.0029,
+          "position": 22.8,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 3,
+          "impressions": 3027,
+          "ctr": 0.001,
+          "position": 23.9,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 1,
+          "impressions": 4275,
+          "ctr": 0.0002,
+          "position": 32.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 2,
+          "impressions": 2555,
+          "ctr": 0.0008,
+          "position": 27.7,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 3,
+          "impressions": 2440,
+          "ctr": 0.0012,
+          "position": 19.6,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    },
+    {
+      "id": "arlington",
+      "label": "Professional Landscape Design Arlington",
+      "path": "/professional-landscape-design-arlington-va/",
+      "urls": [
+        "https://www.colaopeter.com/professional-landscape-design-arlington-va/",
+        "https://colaopeter.com/professional-landscape-design-arlington-va/",
+        "https://www.colaopeter.com/professional-landscape-design-arlington-va/"
+      ],
+      "months": [
+        {
+          "month": "2025-07",
+          "label": "Jul 2025",
+          "clicks": 2,
+          "impressions": 3469,
+          "ctr": 0.0006,
+          "position": 34.2,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-08",
+          "label": "Aug 2025",
+          "clicks": 2,
+          "impressions": 3662,
+          "ctr": 0.0005,
+          "position": 35.5,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-09",
+          "label": "Sep 2025",
+          "clicks": 3,
+          "impressions": 1873,
+          "ctr": 0.0016,
+          "position": 30.7,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-10",
+          "label": "Oct 2025",
+          "clicks": 2,
+          "impressions": 445,
+          "ctr": 0.0045,
+          "position": 29.9,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-11",
+          "label": "Nov 2025",
+          "clicks": 0,
+          "impressions": 416,
+          "ctr": 0.0,
+          "position": 32.0,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2025-12",
+          "label": "Dec 2025",
+          "clicks": 0,
+          "impressions": 661,
+          "ctr": 0.0,
+          "position": 41.4,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-01",
+          "label": "Jan 2026",
+          "clicks": 0,
+          "impressions": 846,
+          "ctr": 0.0,
+          "position": 33.9,
+          "property": "URL property",
+          "observed": true
+        },
+        {
+          "month": "2026-02",
+          "label": "Feb 2026",
+          "clicks": 1,
+          "impressions": 1428,
+          "ctr": 0.0007,
+          "position": 24.2,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-03",
+          "label": "Mar 2026",
+          "clicks": 5,
+          "impressions": 1563,
+          "ctr": 0.0032,
+          "position": 17.7,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-04",
+          "label": "Apr 2026",
+          "clicks": 12,
+          "impressions": 1453,
+          "ctr": 0.0083,
+          "position": 20.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-05",
+          "label": "May 2026",
+          "clicks": 4,
+          "impressions": 2048,
+          "ctr": 0.002,
+          "position": 25.6,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-06",
+          "label": "Jun 2026",
+          "clicks": 4,
+          "impressions": 1932,
+          "ctr": 0.0021,
+          "position": 17.5,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-07",
+          "label": "Jul 2026",
+          "clicks": 2,
+          "impressions": 2112,
+          "ctr": 0.0009,
+          "position": 16.8,
+          "property": "Domain property",
+          "observed": true
+        },
+        {
+          "month": "2026-08",
+          "label": "Aug 2026",
+          "clicks": 3,
+          "impressions": 2026,
+          "ctr": 0.0015,
+          "position": 20.4,
+          "property": "Domain property",
+          "observed": true
+        }
+      ]
+    }
+  ]
+}

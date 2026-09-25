@@ -65,8 +65,22 @@ tr:hover td{background:#FAF8F5}
 .tab-btn{border:1px solid #ddd;background:#f9f9f9;padding:5px 14px;font-size:12px;cursor:pointer;border-radius:4px;margin-right:6px}
 .tab-btn.active{background:#1a1a18;color:#fff;border-color:#1a1a18}
 .gsc-note{font-size:11px;color:#888;margin-top:8px;font-style:italic}
+.page-picker-note{font-size:12px;color:#666;margin:-4px 0 12px}
+.page-selectable{cursor:pointer}
+.page-selectable[aria-selected="true"] td{background:#E8F3FD}
+.page-choice{border:0;background:transparent;color:#0D47A1;font:inherit;font-weight:700;padding:0;text-align:left;cursor:pointer;text-decoration:underline;text-decoration-color:#90CAF9;text-underline-offset:3px}
+.page-choice:hover,.page-choice:focus-visible{color:#1565C0;text-decoration-color:#1976D2}
+.page-choice:focus-visible{outline:2px solid #1976D2;outline-offset:3px;border-radius:2px}
+.page-url{display:block;font-size:10px;color:#888;margin-top:3px;overflow-wrap:anywhere}
+.page-history-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin-bottom:14px}
+.page-history-head h3{font-size:16px;color:#1a1a18;margin-top:3px}
+.page-history-head p{font-size:12px;color:#666;margin-top:5px;max-width:700px}
+.page-history-range{font-size:11px;font-weight:700;color:#0D47A1;background:#E3F2FD;border:1px solid #90CAF9;border-radius:12px;padding:4px 8px;white-space:nowrap}
+.page-history-table{font-size:12px}
+.page-history-table th,.page-history-table td{padding:8px 10px}
+.page-history-empty{color:#666;font-size:13px;padding:18px 0}
 @media(max-width:900px){.kpi-row,.kpi-row-4{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}}
-@media(max-width:560px){.header{padding:16px}.header h1{font-size:18px}.container{padding:16px}.card{padding:16px}.breadcrumb{padding:8px 16px}}
+@media(max-width:560px){.header{padding:16px}.header h1{font-size:18px}.container{padding:16px}.card{padding:16px}.breadcrumb{padding:8px 16px}.page-history-head{display:block}.page-history-range{display:inline-block;margin-top:10px}.page-history-table{font-size:11px}.page-history-table th,.page-history-table td{padding:7px 5px}.page-history-table th:first-child,.page-history-table td:first-child{padding-left:0}.page-history-table th:last-child,.page-history-table td:last-child{padding-right:0}}
 .breadcrumb{background:#F0EDE7;border-bottom:1px solid #e2ddd5;padding:8px 32px;font-size:12px;color:#888}
 .breadcrumb a{color:#BDA26B;text-decoration:none;font-weight:600}
 .breadcrumb a:hover{text-decoration:underline}
@@ -228,74 +242,187 @@ tr:hover td{background:#FAF8F5}
 
   <div class="card">
     <div style="font-weight:600;font-size:13px;margin-bottom:12px;color:#1a1a18">Top Pages by Organic Clicks &mdash; August 2026</div>
+    <p class="page-picker-note">Select a page to see its 14-month organic-search history. Home combines both website-address variants.</p>
     <table>
       <thead><tr><th>Page</th><th class="num">Clicks</th><th class="num">Imps</th><th class="num">CTR</th><th class="num">Pos</th><th></th></tr></thead>
       <tbody>
-        <tr>
-          <td>home (colaopeter.com/)</td>
-          <td class="num">90</td><td class="num">731</td><td class="num">12.3%</td>
-          <td class="num"><span class="pos-badge pos-low">#10</span></td>
+        <tr class="page-selectable" data-page-id="home" aria-selected="true" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="home">Home (all variants)</button><span class="page-url">colaopeter.com/ + www.colaopeter.com/</span></td>
+          <td class="num">149</td><td class="num">4,897</td><td class="num">3.0%</td>
+          <td class="num"><span class="pos-badge pos-mid">#5</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:100.0%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>home (www.colaopeter.com/)</td>
-          <td class="num">59</td><td class="num">4,166</td><td class="num">1.4%</td>
-          <td class="num"><span class="pos-badge pos-mid">#4</span></td>
-          <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:65.6%;background:#1976D2"></div></div></td>
-        </tr>
-        <tr>
-          <td>our-team</td>
+        <tr class="page-selectable" data-page-id="our-team" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="our-team">our-team</button></td>
           <td class="num">17</td><td class="num">356</td><td class="num">4.8%</td>
           <td class="num"><span class="pos-badge pos-mid">#6</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:18.9%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>custom-deck-builder-washington-dc-sterling...</td>
+        <tr class="page-selectable" data-page-id="custom-deck" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="custom-deck">custom-deck-builder-washington-dc-sterling...</button></td>
           <td class="num">9</td><td class="num">2,738</td><td class="num">0.3%</td>
           <td class="num"><span class="pos-badge pos-low">#17</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:10.0%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>custom-pool-design-renovations-sterling-wa...</td>
+        <tr class="page-selectable" data-page-id="custom-pool" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="custom-pool">custom-pool-design-renovations-sterling-wa...</button></td>
           <td class="num">9</td><td class="num">6,673</td><td class="num">0.1%</td>
           <td class="num"><span class="pos-badge pos-low">#25</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:10.0%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>about-outdoor-living-landscaping-company-s...</td>
+        <tr class="page-selectable" data-page-id="about" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="about">about-outdoor-living-landscaping-company-s...</button></td>
           <td class="num">4</td><td class="num">213</td><td class="num">1.9%</td>
           <td class="num"><span class="pos-badge pos-mid">#5</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:4.4%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>outdoor-landscape-design-landscaping-compa...</td>
+        <tr class="page-selectable" data-page-id="outdoor-landscape" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="outdoor-landscape">outdoor-landscape-design-landscaping-compa...</button></td>
           <td class="num">4</td><td class="num">1,350</td><td class="num">0.3%</td>
           <td class="num"><span class="pos-badge pos-low">#18</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:4.4%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>contact-outdoor-design-luxury-landscaping-...</td>
+        <tr class="page-selectable" data-page-id="contact" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="contact">contact-outdoor-design-luxury-landscaping-...</button></td>
           <td class="num">3</td><td class="num">325</td><td class="num">0.9%</td>
           <td class="num"><span class="pos-badge pos-mid">#4</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:3.3%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>landscape-design-mclean-va</td>
+        <tr class="page-selectable" data-page-id="mclean" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="mclean">landscape-design-mclean-va</button></td>
           <td class="num">3</td><td class="num">2,440</td><td class="num">0.1%</td>
           <td class="num"><span class="pos-badge pos-low">#20</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:3.3%;background:#1976D2"></div></div></td>
         </tr>
-        <tr>
-          <td>professional-landscape-design-arlington-va</td>
+        <tr class="page-selectable" data-page-id="arlington" aria-selected="false" tabindex="0">
+          <td><button class="page-choice" type="button" data-page-id="arlington">professional-landscape-design-arlington-va</button></td>
           <td class="num">3</td><td class="num">2,026</td><td class="num">0.1%</td>
           <td class="num"><span class="pos-badge pos-low">#20</span></td>
           <td style="width:80px"><div class="bar-wrap"><div class="bar-fill" style="width:3.3%;background:#1976D2"></div></div></td>
         </tr></tbody>
     </table>
-    <div class="insight gsc">📄 <strong>Homepage combined (both variants): 172 of 234 clicks (74%).</strong> custom-pool-design page holds steady at 11 clicks from 8,460 impressions (0.1% CTR, pos 26) — still the biggest title/meta rewrite opportunity by impression volume. our-team held its #4 position with 2.2% CTR.</div>
+    <div class="insight gsc">📄 <strong>Homepage combined (both variants): 149 of 225 clicks (66%).</strong> The custom-pool page has the largest impression volume at 6,673 impressions and only 0.1% CTR. Select any page to inspect its 14-month trend.</div>
   </div>
 </div>
+
+<!-- ── Selected Page History ── -->
+<div class="card" id="pageHistoryPanel" aria-live="polite">
+  <div class="page-history-head">
+    <div>
+      <div class="source-label" style="margin-left:0">Google Search Console · Selected page</div>
+      <h3 id="pageHistoryTitle">Loading page history…</h3>
+      <p id="pageHistoryDescription">Monthly organic-search performance for the selected page.</p>
+    </div>
+    <div class="page-history-range">Jul 2025 – Aug 2026</div>
+  </div>
+  <div class="chart-wrap"><canvas id="pageHistoryChart"></canvas></div>
+  <p class="gsc-note" id="pageHistoryNote">The source property changes after January 2026; the chart marks that boundary.</p>
+  <table class="page-history-table" style="margin-top:14px">
+    <thead><tr><th>Month</th><th class="num">Clicks</th><th class="num">Imps</th><th class="num">CTR</th><th class="num">Pos</th><th class="num">Source</th></tr></thead>
+    <tbody id="pageHistoryRows"><tr><td colspan="6" class="page-history-empty">Loading source-backed history…</td></tr></tbody>
+  </table>
+</div>
 </div><!-- /container -->
+
+<script>
+// ── Clickable top-page history (static GSC build data; no browser-side API) ──
+var pageHistoryData, pageHistoryChart;
+
+function pageHistoryEscape(value){
+  return String(value).replace(/[&<>"']/g, function(char){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char];
+  });
+}
+function pageHistoryNumber(value){ return Number(value || 0).toLocaleString(); }
+function pageHistoryPercent(value){ return (Number(value || 0) * 100).toFixed(1) + '%'; }
+function pageHistorySource(value){ return value === 'Domain property' ? 'Domain' : 'URL'; }
+
+function selectPageHistory(pageId, scrollToPanel){
+  if(!pageHistoryData) return;
+  var page = pageHistoryData.pages.find(function(item){ return item.id === pageId; });
+  if(!page) return;
+  document.querySelectorAll('.page-selectable').forEach(function(row){
+    row.setAttribute('aria-selected', String(row.dataset.pageId === pageId));
+  });
+
+  document.getElementById('pageHistoryTitle').textContent = page.label + ' — Organic Search History';
+  document.getElementById('pageHistoryDescription').textContent =
+    page.id === 'home'
+      ? 'Combined homepage performance across colaopeter.com and www.colaopeter.com.'
+      : 'Performance for this page path across both website-address variants.';
+  document.getElementById('pageHistoryNote').textContent =
+    'Jul 2025–Jan 2026 uses the URL property; Feb–Aug 2026 uses the domain property. The dashed line marks the property boundary.';
+
+  var rowHtml = page.months.map(function(item){
+    var noData = !item.observed;
+    return '<tr>' +
+      '<td>' + pageHistoryEscape(item.label) + '</td>' +
+      '<td class="num">' + (noData ? '—' : pageHistoryNumber(item.clicks)) + '</td>' +
+      '<td class="num">' + (noData ? '—' : pageHistoryNumber(item.impressions)) + '</td>' +
+      '<td class="num">' + (noData ? '—' : pageHistoryPercent(item.ctr)) + '</td>' +
+      '<td class="num">' + (noData || item.position === null ? '—' : '#' + item.position.toFixed(1)) + '</td>' +
+      '<td class="num">' + pageHistorySource(item.property) + '</td>' +
+    '</tr>';
+  }).join('');
+  document.getElementById('pageHistoryRows').innerHTML = rowHtml;
+
+  if(pageHistoryChart) pageHistoryChart.destroy();
+  pageHistoryChart = new Chart(document.getElementById('pageHistoryChart').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: page.months.map(function(item){ return item.label.replace(' 20', " '"); }),
+      datasets: [{
+        label: 'Organic clicks',
+        data: page.months.map(function(item){ return item.clicks; }),
+        backgroundColor: page.months.map(function(item){
+          return item.property === 'Domain property' ? 'rgba(25,118,210,0.60)' : 'rgba(120,144,156,0.55)';
+        }),
+        borderColor: page.months.map(function(item){
+          return item.property === 'Domain property' ? '#1976D2' : '#78909C';
+        }),
+        borderWidth: 1,
+        borderRadius: 3
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: {display: false},
+        tooltip: {callbacks: {label: function(context){
+          var item = page.months[context.dataIndex];
+          return [' Organic clicks: ' + context.parsed.y.toLocaleString(), ' Impressions: ' + item.impressions.toLocaleString(), ' CTR: ' + pageHistoryPercent(item.ctr), ' Avg. position: ' + (item.position === null ? '—' : '#' + item.position.toFixed(1)), ' Source: ' + item.property];
+        }}},
+        annotation: {annotations: {propertySplit: {
+          type: 'line', xMin: 6.5, xMax: 6.5, borderColor: 'rgba(180,0,0,0.55)', borderWidth: 2, borderDash: [5,4],
+          label: {content: 'Property split', display: true, position: 'start', font: {size: 10}, color: 'rgba(180,0,0,0.75)', backgroundColor: 'rgba(255,255,255,0.85)'}
+        }}}
+      },
+      scales: {
+        x: {grid: {display: false}, ticks: {font: {size: 11}}},
+        y: {beginAtZero: true, grid: {color: 'rgba(0,0,0,0.05)'}, ticks: {font: {size: 11}, precision: 0}}
+      }
+    }
+  });
+  if(scrollToPanel) document.getElementById('pageHistoryPanel').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function initPageHistory(){
+  document.querySelectorAll('.page-selectable').forEach(function(row){
+    row.addEventListener('click', function(){ selectPageHistory(row.dataset.pageId, true); });
+    row.addEventListener('keydown', function(event){
+      if(event.key === 'Enter' || event.key === ' '){ event.preventDefault(); selectPageHistory(row.dataset.pageId, true); }
+    });
+  });
+  fetch('cp-gsc-page-history-2026-08.json')
+    .then(function(response){ if(!response.ok) throw new Error('History file unavailable'); return response.json(); })
+    .then(function(data){ pageHistoryData = data; selectPageHistory('home', false); })
+    .catch(function(){
+      document.getElementById('pageHistoryTitle').textContent = 'Page history is temporarily unavailable';
+      document.getElementById('pageHistoryRows').innerHTML = '<tr><td colspan="6" class="page-history-empty">The static page-history source did not load. Refresh the page or try again shortly.</td></tr>';
+    });
+}
+initPageHistory();
+</script>
 
 <script>
 Chart.defaults.font.family = "-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif";
