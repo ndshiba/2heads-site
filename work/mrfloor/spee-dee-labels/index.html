@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Mr. Floor Spee Dee Labels Plugin Runbook — v0.1.9</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18212f;
+      --muted: #5f6b7a;
+      --line: #d9e0e8;
+      --soft: #f5f7fa;
+      --panel: #ffffff;
+      --blue: #2368b8;
+      --blue-soft: #e8f1fb;
+      --green: #18794e;
+      --green-soft: #e7f5ee;
+      --red: #b42318;
+      --red-soft: #fff0ed;
+      --amber: #a15c07;
+      --amber-soft: #fff6df;
+      --wp: #f0f0f1;
+      --wp-border: #c3c4c7;
+      --shadow: 0 14px 38px rgba(24, 33, 47, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #eef2f6;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.45;
+    }
+
+    main {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 24px 0 44px;
+    }
+
+    header {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      margin-bottom: 16px;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4vw, 42px);
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0 0 10px;
+      overflow-wrap: anywhere;
+    }
+
+    code {
+      background: #eef2f7;
+      border: 1px solid #dbe3ee;
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .92em;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .lede {
+      max-width: 880px;
+      color: var(--muted);
+      font-size: 17px;
+      margin-top: 10px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      padding: 4px 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .pill.good {
+      border-color: #b8dec9;
+      background: var(--green-soft);
+      color: var(--green);
+    }
+
+    .pill.warn {
+      border-color: #f5d48b;
+      background: var(--amber-soft);
+      color: var(--amber);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 8px 22px rgba(24, 33, 47, .06);
+      padding: 18px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(280px, .9fr) minmax(420px, 1.35fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .split > *,
+    .card > *,
+    figure {
+      min-width: 0;
+    }
+
+    .step-list {
+      counter-reset: steps;
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .step-list li {
+      counter-increment: steps;
+      position: relative;
+      min-height: 42px;
+      padding-left: 52px;
+      overflow-wrap: anywhere;
+    }
+
+    .step-list li::before {
+      content: counter(steps);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 750;
+    }
+
+    .step-list strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .note {
+      border-left: 4px solid var(--blue);
+      background: var(--blue-soft);
+      border-radius: 4px;
+      padding: 12px 14px;
+      color: #164877;
+      margin-top: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .warning {
+      border-left: 4px solid var(--amber);
+      background: var(--amber-soft);
+      border-radius: 4px;
+      padding: 12px 14px;
+      color: #6e4006;
+      margin-top: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .danger {
+      border-left: 4px solid var(--red);
+      background: var(--red-soft);
+      border-radius: 4px;
+      padding: 12px 14px;
+      color: #851d15;
+      margin-top: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .screen {
+      overflow: hidden;
+      border: 1px solid #c8ced6;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(18, 31, 46, .12);
+    }
+
+    .screen-caption {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .browserbar {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      background: #eef1f5;
+      border-bottom: 1px solid #cdd5df;
+      padding: 9px 11px;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #d45042;
+    }
+
+    .dot:nth-child(2) {
+      background: #e6b64b;
+    }
+
+    .dot:nth-child(3) {
+      background: #57b66d;
+      margin-right: 8px;
+    }
+
+    .url {
+      flex: 1;
+      min-width: 0;
+      background: #fff;
+      border: 1px solid #ccd4df;
+      border-radius: 5px;
+      padding: 5px 8px;
+      color: #53606e;
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .wp-page {
+      background: var(--wp);
+      padding: 14px;
+      font-size: 12px;
+      min-height: 330px;
+    }
+
+    .wp-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 10px;
+    }
+
+    .notice {
+      background: #fff;
+      border-left: 4px solid #72aee6;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+      color: #26323f;
+    }
+
+    .notice.red {
+      border-left-color: #d63638;
+      background: #fff7f7;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      border-bottom: 1px solid var(--wp-border);
+      margin: 12px 0 11px;
+    }
+
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--wp-border);
+      border-bottom: 0;
+      background: #dcdcde;
+      padding: 5px 10px;
+      color: #2c3338;
+      font-weight: 600;
+    }
+
+    .tab.active {
+      background: #fff;
+      color: #000;
+      margin-bottom: -1px;
+    }
+
+    .wp-panel {
+      background: #fff;
+      border: 1px solid var(--wp-border);
+    }
+
+    .wp-panel h4 {
+      margin: 0;
+      padding: 10px 11px 4px;
+      font-size: 13px;
+    }
+
+    .wp-table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    .wp-table th,
+    .wp-table td {
+      border-top: 1px solid #dcdcde;
+      padding: 8px 7px;
+      text-align: left;
+      vertical-align: middle;
+      word-break: break-word;
+    }
+
+    .wp-table th {
+      color: #2c3338;
+      font-weight: 600;
+      background: #f6f7f7;
+    }
+
+    .wp-table tr:nth-child(even) td {
+      background: #f6f7f7;
+    }
+
+    .check {
+      width: 36px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 29px;
+      border: 1px solid #2271b1;
+      border-radius: 3px;
+      background: #f6f7f7;
+      color: #135e96;
+      padding: 4px 10px;
+      font-weight: 650;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .button.primary {
+      background: #2271b1;
+      color: #fff;
+    }
+
+    .button.disabled {
+      border-color: #c3c4c7;
+      color: #8c8f94;
+      background: #f0f0f1;
+    }
+
+    .button.red {
+      border-color: #b32d2e;
+      color: #b32d2e;
+      background: #fff;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: 175px minmax(0, 1fr);
+      gap: 8px 12px;
+      padding: 10px 12px 14px;
+      align-items: center;
+    }
+
+    .input {
+      min-height: 30px;
+      border: 1px solid #8c8f94;
+      border-radius: 3px;
+      background: #fff;
+      padding: 5px 7px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: #26323f;
+      overflow-wrap: anywhere;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 30px;
+    }
+
+    .box {
+      width: 16px;
+      height: 16px;
+      border: 1px solid #8c8f94;
+      background: #fff;
+      display: inline-grid;
+      place-items: center;
+      color: #2271b1;
+      font-weight: 800;
+    }
+
+    .box.checked::after {
+      content: "✓";
+      font-size: 13px;
+    }
+
+    .callout {
+      position: relative;
+      outline: 3px solid rgba(35, 104, 184, .42);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    .callout::after {
+      content: attr(data-callout);
+      position: absolute;
+      z-index: 2;
+      right: -8px;
+      top: -14px;
+      transform: translateY(-100%);
+      max-width: 240px;
+      background: #12395e;
+      color: #fff;
+      border-radius: 5px;
+      padding: 6px 8px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 6px 18px rgba(18, 57, 94, .24);
+      white-space: normal;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .legend-item {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 6px;
+      padding: 10px;
+      min-height: 76px;
+    }
+
+    .legend-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .mini-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      align-items: stretch;
+      margin-top: 12px;
+    }
+
+    .flow-step {
+      position: relative;
+      border: 1px solid #cdd9e5;
+      background: #fff;
+      border-radius: 7px;
+      padding: 12px 10px;
+      min-height: 88px;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: ">";
+      position: absolute;
+      right: -11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .flow-step span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .cmd {
+      overflow-x: auto;
+      background: #101923;
+      color: #e5edf6;
+      border-radius: 6px;
+      padding: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: pre;
+    }
+
+    .print-note {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .slot {
+      min-height: 120px;
+      border: 1px dashed #92a4b8;
+      border-radius: 7px;
+      background: #fafcff;
+      display: grid;
+      place-items: center;
+      color: #506073;
+      font-weight: 700;
+      text-align: center;
+      padding: 12px;
+    }
+
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 880px) {
+      main {
+        width: min(100% - 20px, 700px);
+        padding-top: 14px;
+      }
+
+      header,
+      .card {
+        padding: 14px;
+      }
+
+      .split,
+      .legend,
+      .mini-flow,
+      .print-note {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-step:not(:last-child)::after {
+        content: "v";
+        right: 50%;
+        top: auto;
+        bottom: -17px;
+        transform: translateX(50%);
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wp-page {
+        padding: 10px;
+        font-size: 11px;
+      }
+
+      .wp-table {
+        table-layout: auto;
+      }
+
+      .wp-table th,
+      .wp-table td {
+        padding: 7px 5px;
+      }
+
+      .hide-small {
+        display: none;
+      }
+
+      .button {
+        white-space: normal;
+        text-align: center;
+      }
+
+      .callout::after {
+        position: static;
+        display: block;
+        transform: none;
+        margin-top: 8px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      .card,
+      header,
+      .screen {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Mr. Floor Spee Dee Labels Plugin Runbook</h1>
+      <p class="lede">How to review and quote Spee Dee-eligible orders, create one authorized live shipment, build a selected-label 2-up PDF, save it for Debbie, and correct mistakes without creating another shipment.</p>
+      <div class="meta">
+        <span class="pill good">Production and staging: v0.1.9</span>
+        <span class="pill good">Default label: 4x6 Label</span>
+        <span class="pill warn">Production is currently live: dry-run off, create on</span>
+        <span class="pill">Staging is protected: dry-run on, create off</span>
+        <span class="pill">Admin page: WooCommerce > Spee Dee Labels</span>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Fast Version</h2>
+      <div class="mini-flow">
+        <div class="flow-step"><strong>1. Verify Mode</strong><span>Production is live; staging is the safe test environment.</span></div>
+        <div class="flow-step"><strong>2. Quote Order</strong><span>Use Ready. A quote returns here and does not create a shipment.</span></div>
+        <div class="flow-step"><strong>3. Create One</strong><span>Select exactly one approved quoted order in the live Print Queue.</span></div>
+        <div class="flow-step"><strong>4. Select Labels</strong><span>Only label-ready rows can be batched; quoted rows cannot print.</span></div>
+        <div class="flow-step"><strong>5. Download Batch</strong><span>The dated batch PDF opens in a new tab; save it for Debbie.</span></div>
+        <div class="flow-step"><strong>6. Cancel Mistakes</strong><span>Cancel the shipment before removing any created queue row.</span></div>
+      </div>
+      <div class="danger">
+        <strong>Live-creation alert:</strong> production currently has real shipment creation enabled. Every selected eligible quoted order creates a live Dispatch Science/Spee Dee shipment. If you are not authorized to make that shipment, stop before selecting a row or changing Settings.
+      </div>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>1. Open The Plugin</h2>
+        <ol class="step-list">
+          <li><strong>Log in to WordPress admin.</strong> Use production for live work, staging for tests only.</li>
+          <li><strong>Open the plugin page.</strong> Go to <code>WooCommerce > Spee Dee Labels</code>.</li>
+          <li><strong>Ignore the license mismatch banner.</strong> That banner belongs to another plugin and does not affect Spee Dee labels.</li>
+        </ol>
+        <div class="note">
+          Production URL: <code>https://www.mrfloor.com/wp-admin/admin.php?page=mrfloor-speedee-labels</code><br>
+          Staging URL: <code>https://mrfloor23stg.wpenginepowered.com/wp-admin/admin.php?page=mrfloor-speedee-labels</code>
+        </div>
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">mrfloor23stg.wpenginepowered.com/wp-admin/admin.php?page=mrfloor-speedee-labels</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="notice red"><strong>License Mismatch</strong><br>Your license key does not match your current domain.</div>
+            <div class="notice">Dry-run mode is on. Shipment creation is intentionally disabled.</div>
+            <div class="tabs">
+              <span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
+            </div>
+            <div class="wp-panel">
+              <h4>Ready To Review</h4>
+              <table class="wp-table">
+                <thead><tr><th>Order</th><th>Ship To</th><th>Packages</th><th>Status</th><th>Action</th></tr></thead>
+                <tbody>
+                  <tr><td>#40872</td><td>Chicago, IL 60659</td><td>1 pc / 10.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
+                  <tr><td>#40863</td><td>Sparta, TN 38583</td><td>1 pc / 10.00 lb</td><td>Needs attention</td><td><span class="button callout" data-callout="Only unqueued orders show Check Spee Dee.">Check Spee Dee</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <figcaption class="screen-caption">Screenshot 1: Ready tab. Already-quoted orders show <strong>View Queue</strong>, not <strong>Check Spee Dee</strong>.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>2. Confirm The Operating Mode</h2>
+        <ol class="step-list">
+          <li><strong>Open Settings before any create action.</strong> Do not assume the mode from an old screenshot or a prior shift.</li>
+          <li><strong>Current production mode (verified September 25):</strong> <code>Dry-run mode</code> is unchecked and <code>Shipment creation</code> is checked. That is live mode.</li>
+          <li><strong>Current staging mode:</strong> <code>Dry-run mode</code> is checked and <code>Shipment creation</code> is unchecked. Use staging for safe test work.</li>
+          <li><strong>Leave carrier fields alone.</strong> The tested default is <code>Label</code> with viewer ID <code>a420e67552e</code>.</li>
+        </ol>
+        <div class="warning">
+          Do not toggle production settings as a troubleshooting step. If live mode is not intended for the work in front of you, stop and get direction; use staging for a test instead.
+        </div>
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Settings</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="notice">Dry-run mode is on. Shipment creation is intentionally disabled.</div>
+            <div class="tabs">
+              <span class="tab">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab active">Settings</span>
+            </div>
+            <div class="wp-panel">
+              <h4>Settings</h4>
+              <div class="field-grid">
+                <div>API base URL</div><div class="input">https://speedee.dsapp.io/integration/api/v1</div>
+                <div>Label Template Name</div><div class="input callout" data-callout="Use the tested 4x6 template.">Label</div>
+                <div>Label Report Viewer ID</div><div class="input">a420e67552e</div>
+                <div>Dry-run mode</div><div class="checkbox-row callout" data-callout="Checked means no shipment creation."><span class="box checked"></span> Disable real shipment creation</div>
+                <div>Shipment creation</div><div class="checkbox-row"><span class="box"></span> Allow create-order API calls when dry-run is off</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="screen-caption">Screenshot 2: Staging safe-mode reference. Production is currently configured differently: dry-run off and shipment creation on.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>3. Quote Or Find An Order</h2>
+        <ol class="step-list">
+          <li><strong>Use Ready for new orders.</strong> Click <code>Check Spee Dee</code> when the button appears.</li>
+          <li><strong>A successful quote returns to Ready.</strong> The confirmation says the order is in Print Queue, so you can keep reviewing Ready orders without using Back.</li>
+          <li><strong>If you see View Queue, the order is already quoted.</strong> Open the <code>Print Queue</code> when you are ready to review it.</li>
+          <li><strong>Read the Packages column; do not hand-edit it.</strong> The plugin converts cleaner orders into Debbie's approved cartons. Replacement mop-pad-only orders are intentionally blocked for USPS bubble-pack handling, not forced into Spee Dee.</li>
+          <li><strong>Out-of-service states are blocked.</strong> GA/TN and similar rows should go to <code>Needs Attention</code> instead of calling Spee Dee.</li>
+        </ol>
+        <div class="note">
+          A quote does not create a shipment, label, customer email, or carrier charge. It only checks price/service and stores the order in the local plugin queue.
+        </div>
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Ready</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="tabs">
+              <span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
+            </div>
+            <div class="wp-panel">
+              <h4>Ready To Review</h4>
+              <table class="wp-table">
+                <thead><tr><th>Order</th><th>Ship To</th><th>Packages</th><th>Status</th><th>Action</th></tr></thead>
+                <tbody>
+                  <tr><td>#40872</td><td>Chicago, IL 60659</td><td>1 pc / 10.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
+                  <tr><td>#40865</td><td>Northbrook, IL 60062</td><td>1 pc / 10.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
+                  <tr><td>#40864</td><td>Chicago, IL 60614</td><td>3 pc / 23.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
+                  <tr><td>#40863</td><td>Sparta, TN 38583</td><td>1 pc / 10.00 lb</td><td>Needs attention</td><td><span class="button">Check Spee Dee</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <figcaption class="screen-caption">Screenshot 3: Ready tab behavior after orders are already quoted.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>4. Create One Shipment</h2>
+        <ol class="step-list">
+          <li><strong>Confirm you have authorization.</strong> Production is currently live. Do not use its enabled state as permission to create a shipment.</li>
+          <li><strong>Open Print Queue and select exactly one eligible quoted order.</strong> The same checkboxes are used for creation and batching, so confirm the one selected row before continuing.</li>
+          <li><strong>Click Create Spee Dee shipments for selected.</strong> Wait for the page to return to the queue; do not click again.</li>
+          <li><strong>Confirm Label ready.</strong> The row should show a shipment/tracking value and a <code>Download label</code> link, which opens the stored PDF in a new tab.</li>
+          <li><strong>Check the Woo order tracking card.</strong> The plugin writes <code>Spee-Dee Delivery</code>, the tracking value (an <code>SD...</code> shipment ID is used if no barcode is returned), and the customer tracking-portal link.</li>
+          <li><strong>If the shipment exists but the PDF is missing, use Fetch label.</strong> It retries label retrieval only; it does not create a second shipment.</li>
+        </ol>
+        <div class="danger">
+          Creation is a real external API call to Dispatch Science and is the charge-risk action. Use one selected order until the workflow is fully approved.
+        </div>
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="tabs">
+              <span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
+            </div>
+            <div class="wp-panel">
+              <h4>Print Queue</h4>
+              <table class="wp-table">
+                <thead><tr><th class="check">✓</th><th>Order</th><th>Queue Status</th><th>Quote</th><th>Shipment</th><th>Action</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><span class="box checked callout" data-callout="Select one row for the first create test."></span></td>
+                    <td>#40872</td>
+                    <td>Quoted — no label yet<br>Creation is required</td>
+                    <td>$9.61</td>
+                    <td></td>
+                    <td><span class="button red">Remove</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="box"></span></td>
+                    <td>#40865</td>
+                    <td>quoted</td>
+                    <td>$9.61</td>
+                    <td></td>
+                    <td><span class="button red">Remove</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="padding:12px;"><span class="button primary">Create Spee Dee shipments for selected</span></div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="screen-caption">Screenshot 4: Print Queue before creation. Select one quoted order only after live shipment creation is authorized.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>5. Generate And Save The 2-Up PDF</h2>
+        <ol class="step-list">
+          <li><strong>Stay on Print Queue and select only Label ready rows.</strong> Quoted rows do not have labels. The plugin fails closed if any selected row is not label-ready.</li>
+          <li><strong>Choose <code>2-up letter</code> and a Start slot.</strong> Use <code>Top</code> for a new sheet or <code>Bottom</code> if the top half has already been used.</li>
+          <li><strong>Click Generate 2-up batch PDF.</strong> Open the <code>Batches</code> tab and download the latest batch. The link opens in a new tab and changes to <code>Opening…</code>.</li>
+          <li><strong>Use the generated filename.</strong> It is automatically named <code>speedee-batch-YYYY-MM-DD-01.pdf</code>; the last two digits advance for each local WordPress day.</li>
+          <li><strong>Save the downloaded PDF to Dropbox.</strong> Use <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code>.</li>
+          <li><strong>Debbie prints in Skokie.</strong> Print actual size on 8.5x11 half-sheet label stock, scale 100 percent, duplex off.</li>
+        </ol>
+        <div class="warning">
+          Downloading, saving, and printing the PDF does not create another Spee Dee charge. The charge-risk step is creating the shipment.
+        </div>
+        <div class="note">
+          If you see <code>No labels are ready to batch</code>, the queue contains quotes only or created shipments whose PDFs were not stored. Create an approved shipment first, or use <code>Fetch label</code> for an existing shipment with no PDF.
+        </div>
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Batch PDF</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="tabs">
+              <span class="tab">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab active">Batches</span><span class="tab">Settings</span>
+            </div>
+            <div class="wp-panel">
+              <h4>Print Batches</h4>
+              <table class="wp-table">
+                <thead><tr><th>Batch / Filename</th><th>Layout</th><th>Labels</th><th>Created</th><th>Download</th><th>PDF</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>#2<br><code>speedee-batch-YYYY-MM-DD-01.pdf</code></td>
+                    <td>2up-letter</td>
+                    <td>1</td>
+                    <td>2026-09-13 09:00</td>
+                    <td>Not opened yet</td>
+                    <td><span class="button callout" data-callout="This opens a new tab. Save that PDF to Dropbox.">Download batch</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="padding:12px;">
+                <div class="notice">Save to: Dropbox / Mr. Floor / Spee Dee Delivery / speedee-batch-YYYY-MM-DD-01.pdf</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="screen-caption">Screenshot 5: Download the generated batch PDF in a new tab, then save the unchanged dated filename to the shared Dropbox folder for Debbie.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card">
+      <h2>Dropbox Handoff</h2>
+      <div class="legend">
+        <div class="legend-item"><strong>Folder</strong> <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code></div>
+        <div class="legend-item"><strong>Filename</strong> <code>speedee-batch-YYYY-MM-DD-01.pdf</code> (the sequence advances automatically)</div>
+        <div class="legend-item"><strong>Printer owner</strong> Debbie prints the saved PDF at Mr. Floor in Skokie.</div>
+      </div>
+      <div class="note">
+        Keep Dropbox manual; it avoids Dropbox API credentials in WordPress and makes every created shipment visible before anyone prints it. <strong>Last opened</strong> in Batches confirms a protected PDF download request only—not a physical print.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Print Sheet Orientation</h2>
+      <p>The plugin imports the Spee Dee 4x6 <code>Label</code> PDF and rotates it at true size into a half-letter slot. Debbie should print the Dropbox PDF at 100 percent scale, with duplex off.</p>
+      <div class="print-note">
+        <div class="slot">Top start slot<br>Use for a fresh 8.5x11 label sheet</div>
+        <div class="slot">Bottom start slot<br>Use when the top half is already used</div>
+      </div>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>6. Cancel Or Clear A Mistake</h2>
+        <ol class="step-list">
+          <li><strong>Cancel shipment</strong> voids the external Dispatch Science order and removes the matching <code>Spee-Dee Delivery</code> tracking record from WooCommerce.</li>
+          <li><strong>Remove</strong> only removes the local plugin queue row. Use this for quoted rows or stale queue cleanup.</li>
+          <li><strong>Confirm the cancellation banner.</strong> Do not Remove a created row until the cancellation succeeds. If cancellation fails, leave the row in place and escalate it.</li>
+        </ol>
+        <div class="danger">
+          Do not use Remove as a substitute for Cancel after a shipment has been created. Production currently runs in live mode; do not change Settings merely to clean up a row.
+        </div>
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Cancel</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="tabs">
+              <span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
+            </div>
+            <div class="wp-panel">
+              <h4>Print Queue</h4>
+              <table class="wp-table">
+                <thead><tr><th>Order</th><th>Queue Status</th><th>Shipment</th><th>Action</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>#40872</td>
+                    <td>label_ready</td>
+                    <td>SD1234567<br>Download label</td>
+                    <td><span class="button callout" data-callout="Use this to reverse the external test shipment.">Cancel shipment</span> <span class="button red">Remove</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <figcaption class="screen-caption">Screenshot 6: Cancel is the reversible path for a created shipment.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card">
+      <h2>Operator Checks</h2>
+      <div class="legend">
+        <div class="legend-item"><strong>Live-state check</strong> At last verification, production was <code>dry_run=0</code> / <code>enable_create=1</code>; staging was <code>dry_run=1</code> / <code>enable_create=0</code>. Check Settings again before you act.</div>
+        <div class="legend-item"><strong>Quoted state</strong> Quoted rows have price only. They do not have shipment ID, tracking, or label file, and cannot be batched.</div>
+        <div class="legend-item"><strong>Label-ready state</strong> Created rows should show shipment/tracking and a Download label link before batching. Use Fetch label if the shipment exists but the PDF is missing.</div>
+      </div>
+      <div class="note" style="margin-top:14px;">If a row's state does not match this guide, treat the live WordPress UI as the immediate source of truth and stop before a create, batch, or cancel action. The plugin owner can inspect the queue and settings directly.</div>
+    </section>
+
+    <footer>
+      Built for Mr. Floor production and staging. Updated against matching production and staging plugin version 0.1.9 and live settings on September 25, 2026. Sensitive credentials are intentionally omitted.
+    </footer>
+  </main>
+</body>
+</html>
