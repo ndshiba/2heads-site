@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-21T07:48:30",
+  "generated_at": "2026-09-24T20:07:20",
   "start_date": "2025-01-01",
-  "end_date": "2026-08-21",
-  "current_month_note": "August 2026 is month-to-date.",
+  "end_date": "2026-08-31",
+  "current_month_note": "Data through 2026-08-31; the final listed month is complete when its last calendar day is used.",
   "ga4_property": "387610456",
   "pages": [
     {
@@ -1341,22 +1341,22 @@
       "pageKey": "home",
       "month": "2026-08",
       "source": "Organic Search",
-      "sessions": 147,
-      "engagedSessions": 109,
-      "engagementRate": 0.7415,
-      "totalUsers": 105,
-      "eventCount": 1284,
-      "keyEvents": 1.0
+      "sessions": 210,
+      "engagedSessions": 161,
+      "engagementRate": 0.7667,
+      "totalUsers": 148,
+      "eventCount": 1873,
+      "keyEvents": 3.0
     },
     {
       "pageKey": "home",
       "month": "2026-08",
       "source": "AI Assistants",
-      "sessions": 1,
-      "engagedSessions": 1,
+      "sessions": 6,
+      "engagedSessions": 6,
       "engagementRate": 1.0,
-      "totalUsers": 1,
-      "eventCount": 30,
+      "totalUsers": 6,
+      "eventCount": 57,
       "keyEvents": 0.0
     },
     {
@@ -1374,44 +1374,44 @@
       "pageKey": "home",
       "month": "2026-08",
       "source": "Direct",
-      "sessions": 239,
-      "engagedSessions": 84,
-      "engagementRate": 0.3515,
-      "totalUsers": 224,
-      "eventCount": 1082,
-      "keyEvents": 2.0
+      "sessions": 360,
+      "engagedSessions": 129,
+      "engagementRate": 0.3583,
+      "totalUsers": 322,
+      "eventCount": 1775,
+      "keyEvents": 6.0
     },
     {
       "pageKey": "home",
       "month": "2026-08",
       "source": "Referral",
-      "sessions": 10,
-      "engagedSessions": 7,
-      "engagementRate": 0.7,
-      "totalUsers": 8,
-      "eventCount": 62,
+      "sessions": 16,
+      "engagedSessions": 10,
+      "engagementRate": 0.625,
+      "totalUsers": 14,
+      "eventCount": 96,
       "keyEvents": 1.0
     },
     {
       "pageKey": "home",
       "month": "2026-08",
       "source": "Organic Social",
-      "sessions": 3,
-      "engagedSessions": 2,
+      "sessions": 6,
+      "engagedSessions": 4,
       "engagementRate": 0.6667,
-      "totalUsers": 3,
-      "eventCount": 15,
+      "totalUsers": 6,
+      "eventCount": 26,
       "keyEvents": 0.0
     },
     {
       "pageKey": "home",
       "month": "2026-08",
       "source": "Other",
-      "sessions": 213,
-      "engagedSessions": 17,
-      "engagementRate": 0.0798,
-      "totalUsers": 213,
-      "eventCount": 663,
+      "sessions": 507,
+      "engagedSessions": 37,
+      "engagementRate": 0.073,
+      "totalUsers": 507,
+      "eventCount": 1593,
       "keyEvents": 0.0
     },
     {
@@ -1814,33 +1814,33 @@
       "pageKey": "signature-care",
       "month": "2026-08",
       "source": "Organic Search",
-      "sessions": 3,
-      "engagedSessions": 3,
+      "sessions": 4,
+      "engagedSessions": 4,
       "engagementRate": 1.0,
-      "totalUsers": 3,
-      "eventCount": 11,
+      "totalUsers": 4,
+      "eventCount": 16,
       "keyEvents": 0.0
     },
     {
       "pageKey": "signature-care",
       "month": "2026-08",
       "source": "Paid Search",
-      "sessions": 80,
-      "engagedSessions": 32,
-      "engagementRate": 0.4,
-      "totalUsers": 76,
-      "eventCount": 372,
+      "sessions": 217,
+      "engagedSessions": 90,
+      "engagementRate": 0.4147,
+      "totalUsers": 205,
+      "eventCount": 990,
       "keyEvents": 1.0
     },
     {
       "pageKey": "signature-care",
       "month": "2026-08",
       "source": "Direct",
-      "sessions": 41,
-      "engagedSessions": 15,
-      "engagementRate": 0.3659,
-      "totalUsers": 34,
-      "eventCount": 249,
+      "sessions": 45,
+      "engagedSessions": 17,
+      "engagementRate": 0.3778,
+      "totalUsers": 38,
+      "eventCount": 313,
       "keyEvents": 2.0
     },
     {
@@ -1858,11 +1858,11 @@
       "pageKey": "signature-care",
       "month": "2026-08",
       "source": "Other",
-      "sessions": 2,
-      "engagedSessions": 2,
+      "sessions": 3,
+      "engagedSessions": 3,
       "engagementRate": 1.0,
-      "totalUsers": 2,
-      "eventCount": 12,
+      "totalUsers": 3,
+      "eventCount": 16,
       "keyEvents": 0.0
     },
     {
@@ -2001,11 +2001,11 @@
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "month": "2026-08",
       "source": "Organic Search",
-      "sessions": 2,
+      "sessions": 3,
       "engagedSessions": 1,
-      "engagementRate": 0.5,
+      "engagementRate": 0.3333,
       "totalUsers": 1,
-      "eventCount": 20,
+      "eventCount": 23,
       "keyEvents": 0.0
     },
     {
@@ -2023,22 +2023,22 @@
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "month": "2026-08",
       "source": "Direct",
-      "sessions": 10,
-      "engagedSessions": 5,
-      "engagementRate": 0.5,
-      "totalUsers": 9,
-      "eventCount": 43,
+      "sessions": 11,
+      "engagedSessions": 6,
+      "engagementRate": 0.5455,
+      "totalUsers": 10,
+      "eventCount": 51,
       "keyEvents": 0.0
     },
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "month": "2026-08",
       "source": "Organic Social",
-      "sessions": 3,
-      "engagedSessions": 2,
-      "engagementRate": 0.6667,
-      "totalUsers": 3,
-      "eventCount": 11,
+      "sessions": 4,
+      "engagedSessions": 3,
+      "engagementRate": 0.75,
+      "totalUsers": 4,
+      "eventCount": 15,
       "keyEvents": 0.0
     },
     {
@@ -2326,16 +2326,16 @@
       "url": "https://colaopeter.com/",
       "published": null,
       "modified": null,
-      "sessions": 21511,
-      "engagedSessions": 6078,
-      "engagementRate": 0.2826,
-      "totalUsers": 19939,
-      "eventCount": 104885,
-      "keyEvents": 316.0,
-      "organicSessions": 4017,
-      "aiSessions": 83,
+      "sessions": 22003,
+      "engagedSessions": 6205,
+      "engagementRate": 0.282,
+      "totalUsers": 20388,
+      "eventCount": 107169,
+      "keyEvents": 322.0,
+      "organicSessions": 4080,
+      "aiSessions": 88,
       "paidSessions": 6,
-      "organicAiSessions": 4100
+      "organicAiSessions": 4168
     },
     {
       "pageKey": "signature-care",
@@ -2345,16 +2345,16 @@
       "url": "https://colaopeter.com/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/",
       "published": "2026-08-09",
       "modified": "2026-08-09",
-      "sessions": 218,
-      "engagedSessions": 93,
-      "engagementRate": 0.4266,
-      "totalUsers": 195,
-      "eventCount": 1085,
+      "sessions": 361,
+      "engagedSessions": 155,
+      "engagementRate": 0.4294,
+      "totalUsers": 330,
+      "eventCount": 1776,
       "keyEvents": 3.0,
-      "organicSessions": 40,
+      "organicSessions": 41,
       "aiSessions": 0,
-      "paidSessions": 80,
-      "organicAiSessions": 40
+      "paidSessions": 217,
+      "organicAiSessions": 41
     },
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
@@ -2364,16 +2364,16 @@
       "url": "https://colaopeter.com/luxury-pool-renovations-reimagining-what-you-already-have/",
       "published": "2026-06-28",
       "modified": "2026-07-05",
-      "sessions": 74,
-      "engagedSessions": 48,
-      "engagementRate": 0.6486,
-      "totalUsers": 59,
-      "eventCount": 813,
+      "sessions": 77,
+      "engagedSessions": 50,
+      "engagementRate": 0.6494,
+      "totalUsers": 61,
+      "eventCount": 828,
       "keyEvents": 38.0,
-      "organicSessions": 4,
+      "organicSessions": 5,
       "aiSessions": 4,
       "paidSessions": 0,
-      "organicAiSessions": 8
+      "organicAiSessions": 9
     },
     {
       "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
@@ -2418,21 +2418,21 @@
     {
       "pageKey": "home",
       "source": "Organic Search",
-      "sessions": 4017,
-      "engagedSessions": 3089,
-      "engagementRate": 0.769,
-      "totalUsers": 3079,
-      "eventCount": 35614,
-      "keyEvents": 97.0
+      "sessions": 4080,
+      "engagedSessions": 3141,
+      "engagementRate": 0.7699,
+      "totalUsers": 3122,
+      "eventCount": 36203,
+      "keyEvents": 99.0
     },
     {
       "pageKey": "home",
       "source": "AI Assistants",
-      "sessions": 83,
-      "engagedSessions": 58,
-      "engagementRate": 0.6988,
-      "totalUsers": 73,
-      "eventCount": 674,
+      "sessions": 88,
+      "engagedSessions": 63,
+      "engagementRate": 0.7159,
+      "totalUsers": 78,
+      "eventCount": 701,
       "keyEvents": 2.0
     },
     {
@@ -2448,31 +2448,31 @@
     {
       "pageKey": "home",
       "source": "Direct",
-      "sessions": 5786,
-      "engagedSessions": 1840,
-      "engagementRate": 0.318,
-      "totalUsers": 5332,
-      "eventCount": 30067,
-      "keyEvents": 136.0
+      "sessions": 5907,
+      "engagedSessions": 1885,
+      "engagementRate": 0.3191,
+      "totalUsers": 5430,
+      "eventCount": 30760,
+      "keyEvents": 140.0
     },
     {
       "pageKey": "home",
       "source": "Referral",
-      "sessions": 308,
-      "engagedSessions": 228,
-      "engagementRate": 0.7403,
-      "totalUsers": 242,
-      "eventCount": 2379,
+      "sessions": 314,
+      "engagedSessions": 231,
+      "engagementRate": 0.7357,
+      "totalUsers": 248,
+      "eventCount": 2413,
       "keyEvents": 49.0
     },
     {
       "pageKey": "home",
       "source": "Organic Social",
-      "sessions": 2745,
-      "engagedSessions": 279,
-      "engagementRate": 0.1016,
-      "totalUsers": 2685,
-      "eventCount": 9070,
+      "sessions": 2748,
+      "engagedSessions": 281,
+      "engagementRate": 0.1023,
+      "totalUsers": 2688,
+      "eventCount": 9081,
       "keyEvents": 14.0
     },
     {
@@ -2488,41 +2488,41 @@
     {
       "pageKey": "home",
       "source": "Other",
-      "sessions": 8565,
-      "engagedSessions": 582,
+      "sessions": 8859,
+      "engagedSessions": 602,
       "engagementRate": 0.068,
-      "totalUsers": 8521,
-      "eventCount": 27057,
+      "totalUsers": 8815,
+      "eventCount": 27987,
       "keyEvents": 18.0
     },
     {
       "pageKey": "signature-care",
       "source": "Organic Search",
-      "sessions": 40,
-      "engagedSessions": 18,
-      "engagementRate": 0.45,
-      "totalUsers": 34,
-      "eventCount": 193,
+      "sessions": 41,
+      "engagedSessions": 19,
+      "engagementRate": 0.4634,
+      "totalUsers": 35,
+      "eventCount": 198,
       "keyEvents": 0.0
     },
     {
       "pageKey": "signature-care",
       "source": "Paid Search",
-      "sessions": 80,
-      "engagedSessions": 32,
-      "engagementRate": 0.4,
-      "totalUsers": 76,
-      "eventCount": 372,
+      "sessions": 217,
+      "engagedSessions": 90,
+      "engagementRate": 0.4147,
+      "totalUsers": 205,
+      "eventCount": 990,
       "keyEvents": 1.0
     },
     {
       "pageKey": "signature-care",
       "source": "Direct",
-      "sessions": 89,
-      "engagedSessions": 38,
-      "engagementRate": 0.427,
-      "totalUsers": 76,
-      "eventCount": 482,
+      "sessions": 93,
+      "engagedSessions": 40,
+      "engagementRate": 0.4301,
+      "totalUsers": 80,
+      "eventCount": 546,
       "keyEvents": 2.0
     },
     {
@@ -2548,21 +2548,21 @@
     {
       "pageKey": "signature-care",
       "source": "Other",
-      "sessions": 4,
-      "engagedSessions": 3,
-      "engagementRate": 0.75,
-      "totalUsers": 4,
-      "eventCount": 22,
+      "sessions": 5,
+      "engagedSessions": 4,
+      "engagementRate": 0.8,
+      "totalUsers": 5,
+      "eventCount": 26,
       "keyEvents": 0.0
     },
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "source": "Organic Search",
-      "sessions": 4,
+      "sessions": 5,
       "engagedSessions": 3,
-      "engagementRate": 0.75,
+      "engagementRate": 0.6,
       "totalUsers": 3,
-      "eventCount": 34,
+      "eventCount": 37,
       "keyEvents": 4.0
     },
     {
@@ -2578,11 +2578,11 @@
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "source": "Direct",
-      "sessions": 51,
-      "engagedSessions": 30,
-      "engagementRate": 0.5882,
-      "totalUsers": 37,
-      "eventCount": 541,
+      "sessions": 52,
+      "engagedSessions": 31,
+      "engagementRate": 0.5962,
+      "totalUsers": 38,
+      "eventCount": 549,
       "keyEvents": 18.0
     },
     {
@@ -2598,11 +2598,11 @@
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "source": "Organic Social",
-      "sessions": 9,
-      "engagedSessions": 6,
-      "engagementRate": 0.6667,
-      "totalUsers": 9,
-      "eventCount": 31,
+      "sessions": 10,
+      "engagedSessions": 7,
+      "engagementRate": 0.7,
+      "totalUsers": 10,
+      "eventCount": 35,
       "keyEvents": 0.0
     },
     {
@@ -2717,11 +2717,20 @@
     },
     {
       "sourceMedium": "chatgpt.com / ai-assistant",
-      "sessions": 12,
-      "engagedSessions": 10,
-      "engagementRate": 0.8333,
-      "totalUsers": 10,
-      "eventCount": 80,
+      "sessions": 14,
+      "engagedSessions": 12,
+      "engagementRate": 0.8571,
+      "totalUsers": 12,
+      "eventCount": 91,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "gemini.google.com / ai-assistant",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "engagementRate": 1.0,
+      "totalUsers": 4,
+      "eventCount": 57,
       "keyEvents": 0.0
     },
     {
@@ -2743,21 +2752,21 @@
       "keyEvents": 0.0
     },
     {
-      "sourceMedium": "gemini.google.com / ai-assistant",
-      "sessions": 2,
-      "engagedSessions": 2,
-      "engagementRate": 1.0,
-      "totalUsers": 2,
-      "eventCount": 44,
-      "keyEvents": 0.0
-    },
-    {
       "sourceMedium": "perplexity.ai / referral",
       "sessions": 2,
       "engagedSessions": 2,
       "engagementRate": 1.0,
       "totalUsers": 2,
       "eventCount": 22,
+      "keyEvents": 0.0
+    },
+    {
+      "sourceMedium": "chatgpt.com / (none)",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 3,
       "keyEvents": 0.0
     },
     {
@@ -2824,32 +2833,42 @@
     {
       "pageKey": "home",
       "sourceMedium": "fb / paid",
-      "sessions": 6784,
-      "engagedSessions": 318,
-      "engagementRate": 0.0469,
-      "totalUsers": 6778,
-      "eventCount": 20754,
+      "sessions": 6834,
+      "engagedSessions": 322,
+      "engagementRate": 0.0471,
+      "totalUsers": 6828,
+      "eventCount": 20907,
       "keyEvents": 0.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "(direct) / (none)",
-      "sessions": 5786,
-      "engagedSessions": 1840,
-      "engagementRate": 0.318,
-      "totalUsers": 5332,
-      "eventCount": 30067,
-      "keyEvents": 136.0
+      "sessions": 5907,
+      "engagedSessions": 1885,
+      "engagementRate": 0.3191,
+      "totalUsers": 5430,
+      "eventCount": 30760,
+      "keyEvents": 140.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "google / organic",
-      "sessions": 3635,
-      "engagedSessions": 2777,
-      "engagementRate": 0.764,
-      "totalUsers": 2775,
-      "eventCount": 31787,
-      "keyEvents": 71.0
+      "sessions": 3691,
+      "engagedSessions": 2822,
+      "engagementRate": 0.7646,
+      "totalUsers": 2811,
+      "eventCount": 32317,
+      "keyEvents": 73.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "ig / paid",
+      "sessions": 1500,
+      "engagedSessions": 91,
+      "engagementRate": 0.0607,
+      "totalUsers": 1497,
+      "eventCount": 4655,
+      "keyEvents": 0.0
     },
     {
       "pageKey": "home",
@@ -2860,16 +2879,6 @@
       "totalUsers": 1289,
       "eventCount": 4089,
       "keyEvents": 4.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "ig / paid",
-      "sessions": 1256,
-      "engagedSessions": 75,
-      "engagementRate": 0.0597,
-      "totalUsers": 1253,
-      "eventCount": 3878,
-      "keyEvents": 0.0
     },
     {
       "pageKey": "home",
@@ -2884,11 +2893,11 @@
     {
       "pageKey": "home",
       "sourceMedium": "facebook.com / referral",
-      "sessions": 578,
-      "engagedSessions": 57,
-      "engagementRate": 0.0986,
-      "totalUsers": 571,
-      "eventCount": 1822,
+      "sessions": 580,
+      "engagedSessions": 58,
+      "engagementRate": 0.1,
+      "totalUsers": 573,
+      "eventCount": 1829,
       "keyEvents": 2.0
     },
     {
@@ -2904,11 +2913,11 @@
     {
       "pageKey": "home",
       "sourceMedium": "bing / organic",
-      "sessions": 258,
-      "engagedSessions": 213,
-      "engagementRate": 0.8256,
-      "totalUsers": 210,
-      "eventCount": 2597,
+      "sessions": 263,
+      "engagedSessions": 218,
+      "engagementRate": 0.8289,
+      "totalUsers": 215,
+      "eventCount": 2647,
       "keyEvents": 0.0
     },
     {
@@ -2924,11 +2933,11 @@
     {
       "pageKey": "home",
       "sourceMedium": "duckduckgo / organic",
-      "sessions": 54,
-      "engagedSessions": 44,
-      "engagementRate": 0.8148,
-      "totalUsers": 41,
-      "eventCount": 527,
+      "sessions": 55,
+      "engagedSessions": 45,
+      "engagementRate": 0.8182,
+      "totalUsers": 42,
+      "eventCount": 532,
       "keyEvents": 0.0
     },
     {
@@ -3093,6 +3102,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "chatgpt.com / ai-assistant",
+      "sessions": 10,
+      "engagedSessions": 8,
+      "engagementRate": 0.8,
+      "totalUsers": 8,
+      "eventCount": 64,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "l.instagram.com / referral",
       "sessions": 9,
       "engagedSessions": 2,
@@ -3109,16 +3128,6 @@
       "engagementRate": 0.4444,
       "totalUsers": 9,
       "eventCount": 38,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "chatgpt.com / ai-assistant",
-      "sessions": 8,
-      "engagedSessions": 6,
-      "engagementRate": 0.75,
-      "totalUsers": 6,
-      "eventCount": 53,
       "keyEvents": 0.0
     },
     {
@@ -3153,6 +3162,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "digital.modernluxury.com / referral",
+      "sessions": 6,
+      "engagedSessions": 4,
+      "engagementRate": 0.6667,
+      "totalUsers": 6,
+      "eventCount": 51,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "docs.google.com / referral",
       "sessions": 6,
       "engagedSessions": 5,
@@ -3173,32 +3192,32 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "homeservicebase.com / referral",
+      "sessions": 6,
+      "engagedSessions": 4,
+      "engagementRate": 0.6667,
+      "totalUsers": 6,
+      "eventCount": 45,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "yelp.com / referral",
+      "sessions": 6,
+      "engagedSessions": 5,
+      "engagementRate": 0.8333,
+      "totalUsers": 6,
+      "eventCount": 49,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "account.squarespace.com / referral",
       "sessions": 5,
       "engagedSessions": 4,
       "engagementRate": 0.8,
       "totalUsers": 1,
       "eventCount": 31,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "digital.modernluxury.com / referral",
-      "sessions": 5,
-      "engagedSessions": 4,
-      "engagementRate": 0.8,
-      "totalUsers": 5,
-      "eventCount": 48,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "yelp.com / referral",
-      "sessions": 5,
-      "engagedSessions": 4,
-      "engagementRate": 0.8,
-      "totalUsers": 5,
-      "eventCount": 45,
       "keyEvents": 0.0
     },
     {
@@ -3233,22 +3252,22 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "gemini.google.com / ai-assistant",
+      "sessions": 4,
+      "engagedSessions": 4,
+      "engagementRate": 1.0,
+      "totalUsers": 4,
+      "eventCount": 57,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "gemini.google.com / referral",
       "sessions": 4,
       "engagedSessions": 4,
       "engagementRate": 1.0,
       "totalUsers": 4,
       "eventCount": 100,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "homeservicebase.com / referral",
-      "sessions": 4,
-      "engagedSessions": 2,
-      "engagementRate": 0.5,
-      "totalUsers": 4,
-      "eventCount": 24,
       "keyEvents": 0.0
     },
     {
@@ -3443,16 +3462,6 @@
     },
     {
       "pageKey": "home",
-      "sourceMedium": "gemini.google.com / ai-assistant",
-      "sessions": 2,
-      "engagedSessions": 2,
-      "engagementRate": 1.0,
-      "totalUsers": 2,
-      "eventCount": 44,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
       "sourceMedium": "loudoun.hometownguru.com / referral",
       "sessions": 2,
       "engagedSessions": 1,
@@ -3524,6 +3533,16 @@
     {
       "pageKey": "home",
       "sourceMedium": "phimarshcer.online / referral",
+      "sessions": 2,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 2,
+      "eventCount": 6,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "sunblog.asia / referral",
       "sessions": 2,
       "engagedSessions": 0,
       "engagementRate": 0.0,
@@ -3627,6 +3646,16 @@
       "sessions": 1,
       "engagedSessions": 0,
       "engagementRate": 0.0,
+      "totalUsers": 1,
+      "eventCount": 3,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "chatgpt.com / (none)",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
       "totalUsers": 1,
       "eventCount": 3,
       "keyEvents": 0.0
@@ -3739,6 +3768,16 @@
       "engagementRate": 0.0,
       "totalUsers": 1,
       "eventCount": 3,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "edit.agsci.psu.edu / referral",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 4,
       "keyEvents": 0.0
     },
     {
@@ -4053,6 +4092,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "search.google.com / referral",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 4,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "seoreviewtools.com / referral",
       "sessions": 1,
       "engagedSessions": 0,
@@ -4174,22 +4223,32 @@
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "sourceMedium": "(direct) / (none)",
-      "sessions": 51,
-      "engagedSessions": 30,
-      "engagementRate": 0.5882,
-      "totalUsers": 37,
-      "eventCount": 541,
+      "sessions": 52,
+      "engagedSessions": 31,
+      "engagementRate": 0.5962,
+      "totalUsers": 38,
+      "eventCount": 549,
       "keyEvents": 18.0
     },
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "sourceMedium": "facebook.com / referral",
-      "sessions": 6,
-      "engagedSessions": 5,
-      "engagementRate": 0.8333,
-      "totalUsers": 6,
-      "eventCount": 23,
+      "sessions": 7,
+      "engagedSessions": 6,
+      "engagementRate": 0.8571,
+      "totalUsers": 7,
+      "eventCount": 27,
       "keyEvents": 0.0
+    },
+    {
+      "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
+      "sourceMedium": "google / organic",
+      "sessions": 5,
+      "engagedSessions": 3,
+      "engagementRate": 0.6,
+      "totalUsers": 3,
+      "eventCount": 37,
+      "keyEvents": 4.0
     },
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
@@ -4200,16 +4259,6 @@
       "totalUsers": 4,
       "eventCount": 27,
       "keyEvents": 0.0
-    },
-    {
-      "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
-      "sourceMedium": "google / organic",
-      "sessions": 4,
-      "engagedSessions": 3,
-      "engagementRate": 0.75,
-      "totalUsers": 3,
-      "eventCount": 34,
-      "keyEvents": 4.0
     },
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
@@ -4373,32 +4422,32 @@
     },
     {
       "pageKey": "signature-care",
-      "sourceMedium": "(direct) / (none)",
-      "sessions": 89,
-      "engagedSessions": 38,
-      "engagementRate": 0.427,
-      "totalUsers": 76,
-      "eventCount": 482,
-      "keyEvents": 2.0
-    },
-    {
-      "pageKey": "signature-care",
       "sourceMedium": "google / cpc",
-      "sessions": 80,
-      "engagedSessions": 32,
-      "engagementRate": 0.4,
-      "totalUsers": 76,
-      "eventCount": 372,
+      "sessions": 217,
+      "engagedSessions": 90,
+      "engagementRate": 0.4147,
+      "totalUsers": 205,
+      "eventCount": 990,
       "keyEvents": 1.0
     },
     {
       "pageKey": "signature-care",
+      "sourceMedium": "(direct) / (none)",
+      "sessions": 93,
+      "engagedSessions": 40,
+      "engagementRate": 0.4301,
+      "totalUsers": 80,
+      "eventCount": 546,
+      "keyEvents": 2.0
+    },
+    {
+      "pageKey": "signature-care",
       "sourceMedium": "google / organic",
-      "sessions": 35,
-      "engagedSessions": 13,
-      "engagementRate": 0.3714,
-      "totalUsers": 30,
-      "eventCount": 167,
+      "sessions": 36,
+      "engagedSessions": 14,
+      "engagementRate": 0.3889,
+      "totalUsers": 31,
+      "eventCount": 172,
       "keyEvents": 0.0
     },
     {
@@ -4414,11 +4463,11 @@
     {
       "pageKey": "signature-care",
       "sourceMedium": "(data not available)",
-      "sessions": 2,
-      "engagedSessions": 2,
+      "sessions": 3,
+      "engagedSessions": 3,
       "engagementRate": 1.0,
-      "totalUsers": 2,
-      "eventCount": 12,
+      "totalUsers": 3,
+      "eventCount": 16,
       "keyEvents": 0.0
     },
     {

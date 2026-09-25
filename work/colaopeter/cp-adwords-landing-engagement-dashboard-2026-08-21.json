@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-21T06:56:16",
-  "start_date": "2026-08-05",
-  "end_date": "2026-08-21",
+  "generated_at": "2026-09-24T20:06:28",
+  "start_date": "2026-08-01",
+  "end_date": "2026-08-31",
   "ga4_property": "387610456",
   "google_ads_customer_id": "8483034203",
   "landing_page": "/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/",
@@ -14,6 +14,184 @@
     "Referral"
   ],
   "daily": [
+    {
+      "date": "2026-08-02",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 1,
+          "engagedSessions": 1,
+          "engagementRate": 1.0,
+          "averageSessionDuration": 52.720139,
+          "userEngagementDuration": 47.0,
+          "eventCount": 3,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 1,
+            "scroll": 1,
+            "session_start": 1
+          }
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 6,
+          "engagedSessions": 3,
+          "engagementRate": 0.5,
+          "averageSessionDuration": 1557.3391503333335,
+          "userEngagementDuration": 11544.0,
+          "eventCount": 65,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 27,
+            "user_engagement": 17,
+            "scroll": 13,
+            "session_start": 6,
+            "first_visit": 2
+          }
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-04",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 1,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 2,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 1,
+            "session_start": 1
+          }
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
     {
       "date": "2026-08-05",
       "channels": {
@@ -917,52 +1095,770 @@
           }
         }
       }
+    },
+    {
+      "date": "2026-08-21",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 1,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 3,
+          "keyEvents": 0.0,
+          "events": {
+            "first_visit": 1,
+            "page_view": 1,
+            "session_start": 1
+          }
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 16,
+          "engagedSessions": 7,
+          "engagementRate": 0.4375,
+          "averageSessionDuration": 71.6721540625,
+          "userEngagementDuration": 564.0,
+          "eventCount": 100,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 32,
+            "user_engagement": 26,
+            "session_start": 16,
+            "first_visit": 14,
+            "scroll": 8,
+            "contact_page_view": 3,
+            "click": 1
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-22",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 15,
+          "engagedSessions": 7,
+          "engagementRate": 0.4666666666666667,
+          "averageSessionDuration": 106.59449666666666,
+          "userEngagementDuration": 648.0,
+          "eventCount": 76,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 24,
+            "user_engagement": 17,
+            "session_start": 15,
+            "first_visit": 13,
+            "scroll": 5,
+            "contact_page_view": 2
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-23",
+      "channels": {
+        "Cross-network": {
+          "sessions": 1,
+          "engagedSessions": 1,
+          "engagementRate": 1.0,
+          "averageSessionDuration": 7.384394,
+          "userEngagementDuration": 0.0,
+          "eventCount": 4,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 2,
+            "first_visit": 1,
+            "session_start": 1
+          }
+        },
+        "Direct": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 13,
+          "engagedSessions": 5,
+          "engagementRate": 0.38461538461538464,
+          "averageSessionDuration": 67.7536176923077,
+          "userEngagementDuration": 295.0,
+          "eventCount": 53,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 16,
+            "first_visit": 13,
+            "session_start": 13,
+            "user_engagement": 6,
+            "scroll": 3,
+            "click": 2
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 1,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 3,
+          "keyEvents": 0.0,
+          "events": {
+            "first_visit": 1,
+            "page_view": 1,
+            "session_start": 1
+          }
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 12,
+          "engagedSessions": 5,
+          "engagementRate": 0.4166666666666667,
+          "averageSessionDuration": 30.263534583333335,
+          "userEngagementDuration": 227.0,
+          "eventCount": 47,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 14,
+            "session_start": 12,
+            "first_visit": 11,
+            "user_engagement": 4,
+            "click": 2,
+            "contact_page_view": 2,
+            "scroll": 2
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 1,
+          "engagedSessions": 1,
+          "engagementRate": 1.0,
+          "averageSessionDuration": 553.235574,
+          "userEngagementDuration": 238.0,
+          "eventCount": 47,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 23,
+            "user_engagement": 18,
+            "contact_page_view": 2,
+            "scroll": 2,
+            "first_visit": 1,
+            "session_start": 1
+          }
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 9,
+          "engagedSessions": 2,
+          "engagementRate": 0.2222222222222222,
+          "averageSessionDuration": 170.8359162222222,
+          "userEngagementDuration": 56.0,
+          "eventCount": 32,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 10,
+            "first_visit": 9,
+            "session_start": 9,
+            "user_engagement": 4
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 1,
+          "engagedSessions": 1,
+          "engagementRate": 1.0,
+          "averageSessionDuration": 197.074883,
+          "userEngagementDuration": 40.0,
+          "eventCount": 11,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 4,
+            "user_engagement": 4,
+            "first_visit": 1,
+            "scroll": 1,
+            "session_start": 1
+          }
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 9,
+          "engagedSessions": 7,
+          "engagementRate": 0.7777777777777778,
+          "averageSessionDuration": 50.04850711111111,
+          "userEngagementDuration": 321.0,
+          "eventCount": 58,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 12,
+            "first_visit": 9,
+            "session_start": 9,
+            "user_engagement": 9,
+            "click": 4,
+            "contact_page_view": 4,
+            "generate_lead": 4,
+            "phone_click": 4,
+            "scroll": 2,
+            "form_start": 1
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 4,
+          "engagedSessions": 2,
+          "engagementRate": 0.5,
+          "averageSessionDuration": 41.1234955,
+          "userEngagementDuration": 69.0,
+          "eventCount": 16,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 4,
+            "session_start": 4,
+            "first_visit": 3,
+            "click": 2,
+            "scroll": 2,
+            "user_engagement": 1
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 12,
+          "engagedSessions": 6,
+          "engagementRate": 0.5,
+          "averageSessionDuration": 52.869463249999995,
+          "userEngagementDuration": 171.0,
+          "eventCount": 52,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 18,
+            "session_start": 12,
+            "first_visit": 11,
+            "user_engagement": 7,
+            "contact_page_view": 2,
+            "click": 1,
+            "scroll": 1
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-29",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Organic Search": {
+          "sessions": 1,
+          "engagedSessions": 1,
+          "engagementRate": 1.0,
+          "averageSessionDuration": 75.226233,
+          "userEngagementDuration": 32.0,
+          "eventCount": 5,
+          "keyEvents": 0.0,
+          "events": {
+            "first_visit": 1,
+            "page_view": 1,
+            "scroll": 1,
+            "session_start": 1,
+            "user_engagement": 1
+          }
+        },
+        "Paid Search": {
+          "sessions": 13,
+          "engagedSessions": 6,
+          "engagementRate": 0.46153846153846156,
+          "averageSessionDuration": 22.146789,
+          "userEngagementDuration": 268.0,
+          "eventCount": 51,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 13,
+            "session_start": 13,
+            "first_visit": 12,
+            "user_engagement": 8,
+            "click": 4,
+            "scroll": 1
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-30",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 23,
+          "engagedSessions": 7,
+          "engagementRate": 0.30434782608695654,
+          "averageSessionDuration": 21.266001,
+          "userEngagementDuration": 496.0,
+          "eventCount": 91,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 24,
+            "first_visit": 23,
+            "session_start": 23,
+            "user_engagement": 10,
+            "click": 8,
+            "phone_click": 2,
+            "scroll": 1
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "channels": {
+        "Cross-network": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Direct": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Organic Search": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        },
+        "Paid Search": {
+          "sessions": 11,
+          "engagedSessions": 4,
+          "engagementRate": 0.36363636363636365,
+          "averageSessionDuration": 20.35631490909091,
+          "userEngagementDuration": 84.0,
+          "eventCount": 42,
+          "keyEvents": 0.0,
+          "events": {
+            "page_view": 13,
+            "first_visit": 11,
+            "session_start": 11,
+            "user_engagement": 5,
+            "scroll": 2
+          }
+        },
+        "Referral": {
+          "sessions": 0,
+          "engagedSessions": 0,
+          "engagementRate": 0.0,
+          "averageSessionDuration": 0.0,
+          "userEngagementDuration": 0.0,
+          "eventCount": 0,
+          "keyEvents": 0.0,
+          "events": {}
+        }
+      }
     }
   ],
   "totals": {
     "All": {
-      "sessions": 120,
-      "engagedSessions": 49,
-      "engagementRate": 0.4083,
-      "averageSessionDuration": 154.38,
-      "userEngagementDuration": 20079.0,
-      "eventCount": 580,
+      "sessions": 271,
+      "engagedSessions": 115,
+      "engagementRate": 0.4244,
+      "averageSessionDuration": 134.81,
+      "userEngagementDuration": 35179.0,
+      "eventCount": 1341,
       "keyEvents": 3.0
     },
     "Cross-network": {
-      "sessions": 2,
-      "engagedSessions": 2,
-      "engagementRate": 1.0,
-      "averageSessionDuration": 109.11,
-      "userEngagementDuration": 136.0,
-      "eventCount": 12,
-      "keyEvents": 0.0
-    },
-    "Direct": {
-      "sessions": 33,
-      "engagedSessions": 11,
-      "engagementRate": 0.3333,
-      "averageSessionDuration": 351.02,
-      "userEngagementDuration": 16715.0,
-      "eventCount": 179,
-      "keyEvents": 2.0
-    },
-    "Organic Search": {
       "sessions": 3,
       "engagedSessions": 3,
       "engagementRate": 1.0,
-      "averageSessionDuration": 25.61,
-      "userEngagementDuration": 32.0,
-      "eventCount": 11,
+      "averageSessionDuration": 75.2,
+      "userEngagementDuration": 136.0,
+      "eventCount": 16,
+      "keyEvents": 0.0
+    },
+    "Direct": {
+      "sessions": 45,
+      "engagedSessions": 17,
+      "engagementRate": 0.3778,
+      "averageSessionDuration": 482.91,
+      "userEngagementDuration": 28584.0,
+      "eventCount": 313,
+      "keyEvents": 2.0
+    },
+    "Organic Search": {
+      "sessions": 4,
+      "engagedSessions": 4,
+      "engagementRate": 1.0,
+      "averageSessionDuration": 38.01,
+      "userEngagementDuration": 64.0,
+      "eventCount": 16,
       "keyEvents": 0.0
     },
     "Paid Search": {
-      "sessions": 80,
-      "engagedSessions": 32,
-      "engagementRate": 0.4,
-      "averageSessionDuration": 80.6,
-      "userEngagementDuration": 2997.0,
-      "eventCount": 372,
+      "sessions": 217,
+      "engagedSessions": 90,
+      "engagementRate": 0.4147,
+      "averageSessionDuration": 65.56,
+      "userEngagementDuration": 6196.0,
+      "eventCount": 990,
       "keyEvents": 1.0
     },
     "Referral": {
@@ -980,19 +1876,28 @@
       "sessionDefaultChannelGroup": "Paid Search",
       "sessionCampaignName": "Campaign #1",
       "sessionSourceMedium": "google / cpc",
-      "sessions": 65,
-      "engagedSessions": 30,
-      "eventCount": 312,
+      "sessions": 200,
+      "engagedSessions": 87,
+      "eventCount": 921,
       "keyEvents": 0
     },
     {
       "sessionDefaultChannelGroup": "Direct",
       "sessionCampaignName": "(direct)",
       "sessionSourceMedium": "(direct) / (none)",
-      "sessions": 33,
-      "engagedSessions": 11,
-      "eventCount": 179,
+      "sessions": 45,
+      "engagedSessions": 17,
+      "eventCount": 313,
       "keyEvents": 2
+    },
+    {
+      "sessionDefaultChannelGroup": "Paid Search",
+      "sessionCampaignName": "signature_care_competitor_landscape_maintenance",
+      "sessionSourceMedium": "google / cpc",
+      "sessions": 8,
+      "engagedSessions": 1,
+      "eventCount": 27,
+      "keyEvents": 0
     },
     {
       "sessionDefaultChannelGroup": "Paid Search",
@@ -1004,30 +1909,21 @@
       "keyEvents": 0
     },
     {
-      "sessionDefaultChannelGroup": "Paid Search",
-      "sessionCampaignName": "signature_care_competitor_landscape_maintenance",
-      "sessionSourceMedium": "google / cpc",
-      "sessions": 6,
-      "engagedSessions": 0,
-      "eventCount": 18,
-      "keyEvents": 0
-    },
-    {
       "sessionDefaultChannelGroup": "Cross-network",
       "sessionCampaignName": "(cross-network)",
       "sessionSourceMedium": "(data not available)",
-      "sessions": 2,
-      "engagedSessions": 2,
-      "eventCount": 12,
+      "sessions": 3,
+      "engagedSessions": 3,
+      "eventCount": 16,
       "keyEvents": 0
     },
     {
       "sessionDefaultChannelGroup": "Organic Search",
       "sessionCampaignName": "(organic)",
       "sessionSourceMedium": "google / organic",
-      "sessions": 2,
-      "engagedSessions": 2,
-      "eventCount": 8,
+      "sessions": 3,
+      "engagedSessions": 3,
+      "eventCount": 13,
       "keyEvents": 0
     },
     {
@@ -1079,42 +1975,42 @@
   "visitor_type_rows": [
     {
       "visitorType": "Paid Search",
-      "sessions": 80,
-      "engagedSessions": 32,
-      "engagementRate": 0.4,
-      "averageSessionDuration": 80.6,
-      "userEngagementDuration": 2997.0,
-      "eventCount": 372,
+      "sessions": 217,
+      "engagedSessions": 90,
+      "engagementRate": 0.4147,
+      "averageSessionDuration": 65.56,
+      "userEngagementDuration": 6196.0,
+      "eventCount": 990,
       "keyEvents": 1.0
     },
     {
       "visitorType": "Direct",
-      "sessions": 33,
-      "engagedSessions": 11,
-      "engagementRate": 0.3333,
-      "averageSessionDuration": 351.02,
-      "userEngagementDuration": 16715.0,
-      "eventCount": 179,
+      "sessions": 45,
+      "engagedSessions": 17,
+      "engagementRate": 0.3778,
+      "averageSessionDuration": 482.91,
+      "userEngagementDuration": 28584.0,
+      "eventCount": 313,
       "keyEvents": 2.0
     },
     {
       "visitorType": "Organic Search",
-      "sessions": 3,
-      "engagedSessions": 3,
+      "sessions": 4,
+      "engagedSessions": 4,
       "engagementRate": 1.0,
-      "averageSessionDuration": 25.61,
-      "userEngagementDuration": 32.0,
-      "eventCount": 11,
+      "averageSessionDuration": 38.01,
+      "userEngagementDuration": 64.0,
+      "eventCount": 16,
       "keyEvents": 0.0
     },
     {
       "visitorType": "Cross-network",
-      "sessions": 2,
-      "engagedSessions": 2,
+      "sessions": 3,
+      "engagedSessions": 3,
       "engagementRate": 1.0,
-      "averageSessionDuration": 109.11,
+      "averageSessionDuration": 75.2,
       "userEngagementDuration": 136.0,
-      "eventCount": 12,
+      "eventCount": 16,
       "keyEvents": 0.0
     },
     {
@@ -1131,27 +2027,27 @@
   "click_summary_rows": [
     {
       "visitorType": "All",
-      "sessions": 120,
+      "sessions": 271,
       "ctaClickUsers": 1,
-      "phoneClickUsers": 1,
-      "ctaOrPhoneUsers": 2,
+      "phoneClickUsers": 4,
+      "ctaOrPhoneUsers": 5,
       "ctaClicks": 2,
-      "phoneClicks": 2,
-      "ctaOrPhoneClicks": 4
+      "phoneClicks": 8,
+      "ctaOrPhoneClicks": 10
     },
     {
       "visitorType": "Paid Search",
-      "sessions": 80,
+      "sessions": 217,
       "ctaClickUsers": 0,
-      "phoneClickUsers": 1,
-      "ctaOrPhoneUsers": 1,
+      "phoneClickUsers": 4,
+      "ctaOrPhoneUsers": 4,
       "ctaClicks": 0,
-      "phoneClicks": 2,
-      "ctaOrPhoneClicks": 2
+      "phoneClicks": 8,
+      "ctaOrPhoneClicks": 8
     },
     {
       "visitorType": "Direct",
-      "sessions": 33,
+      "sessions": 45,
       "ctaClickUsers": 1,
       "phoneClickUsers": 0,
       "ctaOrPhoneUsers": 1,
@@ -1161,7 +2057,7 @@
     },
     {
       "visitorType": "Organic Search",
-      "sessions": 3,
+      "sessions": 4,
       "ctaClickUsers": 0,
       "phoneClickUsers": 0,
       "ctaOrPhoneUsers": 0,
@@ -1171,7 +2067,7 @@
     },
     {
       "visitorType": "Cross-network",
-      "sessions": 2,
+      "sessions": 3,
       "ctaClickUsers": 0,
       "phoneClickUsers": 0,
       "ctaOrPhoneUsers": 0,
@@ -1192,52 +2088,54 @@
   ],
   "event_totals": {
     "All": {
-      "page_view": 185,
-      "session_start": 120,
-      "first_visit": 100,
-      "user_engagement": 86,
-      "scroll": 32,
-      "click": 20,
-      "contact_page_view": 20,
-      "generate_lead": 10,
+      "page_view": 426,
+      "session_start": 271,
+      "first_visit": 237,
+      "user_engagement": 223,
+      "scroll": 77,
+      "click": 44,
+      "contact_page_view": 35,
+      "generate_lead": 14,
+      "phone_click": 8,
+      "form_start": 3,
       "consultation_click": 2,
-      "phone_click": 2,
-      "form_start": 2,
       "form_submitted": 1
     },
     "Cross-network": {
-      "page_view": 4,
-      "first_visit": 2,
-      "session_start": 2,
+      "page_view": 6,
+      "first_visit": 3,
+      "session_start": 3,
       "user_engagement": 2,
       "click": 1,
       "scroll": 1
     },
     "Direct": {
-      "page_view": 70,
-      "user_engagement": 38,
-      "session_start": 33,
-      "first_visit": 22,
-      "scroll": 14,
-      "consultation_click": 2
+      "page_view": 128,
+      "user_engagement": 77,
+      "session_start": 45,
+      "scroll": 31,
+      "first_visit": 28,
+      "consultation_click": 2,
+      "contact_page_view": 2
     },
     "Organic Search": {
-      "page_view": 5,
-      "session_start": 3,
-      "user_engagement": 2,
-      "scroll": 1
+      "page_view": 6,
+      "session_start": 4,
+      "user_engagement": 3,
+      "scroll": 2,
+      "first_visit": 1
     },
     "Paid Search": {
-      "page_view": 104,
-      "session_start": 80,
-      "first_visit": 75,
-      "user_engagement": 44,
-      "contact_page_view": 20,
-      "click": 19,
-      "scroll": 15,
-      "generate_lead": 10,
-      "phone_click": 2,
-      "form_start": 2,
+      "page_view": 284,
+      "session_start": 217,
+      "first_visit": 204,
+      "user_engagement": 141,
+      "click": 43,
+      "scroll": 42,
+      "contact_page_view": 33,
+      "generate_lead": 14,
+      "phone_click": 8,
+      "form_start": 3,
       "form_submitted": 1
     },
     "Referral": {
@@ -1251,14 +2149,14 @@
     "All": {
       "page_view": 0,
       "user_engagement": 0,
-      "session_start": 0,
       "first_visit": 0,
-      "click": 0,
+      "session_start": 0,
       "scroll": 0,
+      "click": 0,
       "contact_page_view": 0,
       "generate_lead": 0,
-      "consultation_click": 2,
       "phone_click": 0,
+      "consultation_click": 2,
       "form_start": 0,
       "form_submitted": 1
     },
@@ -1273,26 +2171,28 @@
     "Direct": {
       "page_view": 0,
       "user_engagement": 0,
-      "session_start": 0,
       "scroll": 0,
+      "session_start": 0,
       "first_visit": 0,
-      "consultation_click": 2
+      "consultation_click": 2,
+      "contact_page_view": 0
     },
     "Organic Search": {
       "page_view": 0,
       "user_engagement": 0,
       "scroll": 0,
-      "session_start": 0
+      "session_start": 0,
+      "first_visit": 0
     },
     "Paid Search": {
       "page_view": 0,
       "user_engagement": 0,
-      "session_start": 0,
       "first_visit": 0,
+      "session_start": 0,
       "click": 0,
+      "scroll": 0,
       "contact_page_view": 0,
       "generate_lead": 0,
-      "scroll": 0,
       "phone_click": 0,
       "form_start": 0,
       "form_submitted": 1

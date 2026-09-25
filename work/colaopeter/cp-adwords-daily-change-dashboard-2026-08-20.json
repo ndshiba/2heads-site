@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-20T16:18:37",
+  "generated_at": "2026-09-24T20:07:17",
   "customer_id": "8483034203",
-  "start_date": "2026-07-22",
-  "end_date": "2026-08-20",
+  "start_date": "2026-08-01",
+  "end_date": "2026-08-31",
   "metrics": [
     {
       "date": "2026-08-11",
@@ -86,137 +86,160 @@
       "date": "2026-08-20",
       "campaign_id": "24111769670",
       "campaign": "Campaign #1",
-      "impressions": 424,
-      "clicks": 10,
-      "cost": 40.89,
-      "avg_cpc": 4.09,
-      "ctr": 2.36,
+      "impressions": 262,
+      "clicks": 14,
+      "cost": 51.97,
+      "avg_cpc": 3.71,
+      "ctr": 5.34,
       "conversions": 0.0,
       "conversion_value": 0.0,
-      "search_impression_share": 12.71
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-21",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 367,
+      "clicks": 14,
+      "cost": 43.94,
+      "avg_cpc": 3.14,
+      "ctr": 3.81,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-22",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 348,
+      "clicks": 17,
+      "cost": 49.89,
+      "avg_cpc": 2.93,
+      "ctr": 4.89,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-23",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 385,
+      "clicks": 16,
+      "cost": 49.43,
+      "avg_cpc": 3.09,
+      "ctr": 4.16,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 10.91
+    },
+    {
+      "date": "2026-08-24",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 140,
+      "clicks": 11,
+      "cost": 23.18,
+      "avg_cpc": 2.11,
+      "ctr": 7.86,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-25",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 180,
+      "clicks": 12,
+      "cost": 19.71,
+      "avg_cpc": 1.64,
+      "ctr": 6.67,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-26",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 191,
+      "clicks": 10,
+      "cost": 21.01,
+      "avg_cpc": 2.1,
+      "ctr": 5.24,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-27",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 225,
+      "clicks": 3,
+      "cost": 3.76,
+      "avg_cpc": 1.25,
+      "ctr": 1.33,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-28",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 319,
+      "clicks": 19,
+      "cost": 49.88,
+      "avg_cpc": 2.63,
+      "ctr": 5.96,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-29",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 268,
+      "clicks": 10,
+      "cost": 23.69,
+      "avg_cpc": 2.37,
+      "ctr": 3.73,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-30",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 239,
+      "clicks": 18,
+      "cost": 32.43,
+      "avg_cpc": 1.8,
+      "ctr": 7.53,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
+    },
+    {
+      "date": "2026-08-31",
+      "campaign_id": "24111769670",
+      "campaign": "Campaign #1",
+      "impressions": 153,
+      "clicks": 11,
+      "cost": 20.88,
+      "avg_cpc": 1.9,
+      "ctr": 7.19,
+      "conversions": 0.0,
+      "conversion_value": 0.0,
+      "search_impression_share": 9.99
     }
   ],
   "days": [
-    {
-      "date": "2026-07-22",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-23",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-24",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-25",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-26",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-27",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-28",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-29",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-30",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
-    {
-      "date": "2026-07-31",
-      "impressions": 0,
-      "clicks": 0,
-      "cost": 0.0,
-      "conversions": 0.0,
-      "change_category_counts": {},
-      "avg_cpc": 0,
-      "ctr": 0,
-      "change_count": 0,
-      "change_categories": []
-    },
     {
       "date": "2026-08-01",
       "impressions": 0,
@@ -283,27 +306,11 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Audience": 14,
-        "Keyword": 47,
-        "Other": 1,
-        "Geo": 7,
-        "Bid/Budget": 5,
-        "Ad Copy": 1,
-        "Asset": 2
-      },
+      "change_category_counts": {},
       "avg_cpc": 0,
       "ctr": 0,
-      "change_count": 77,
-      "change_categories": [
-        "Ad Copy",
-        "Asset",
-        "Audience",
-        "Bid/Budget",
-        "Geo",
-        "Keyword",
-        "Other"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-07",
@@ -311,17 +318,11 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Geo": 1,
-        "Keyword": 7
-      },
+      "change_category_counts": {},
       "avg_cpc": 0,
       "ctr": 0,
-      "change_count": 8,
-      "change_categories": [
-        "Geo",
-        "Keyword"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-08",
@@ -353,25 +354,11 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Other": 2,
-        "Bid/Budget": 8,
-        "Geo": 5,
-        "Keyword": 51,
-        "Audience": 42,
-        "Ad Copy": 6
-      },
+      "change_category_counts": {},
       "avg_cpc": 0,
       "ctr": 0,
-      "change_count": 114,
-      "change_categories": [
-        "Ad Copy",
-        "Audience",
-        "Bid/Budget",
-        "Geo",
-        "Keyword",
-        "Other"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-11",
@@ -379,15 +366,11 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Ad Copy": 12
-      },
+      "change_category_counts": {},
       "avg_cpc": 0,
       "ctr": 0,
-      "change_count": 12,
-      "change_categories": [
-        "Ad Copy"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-12",
@@ -407,15 +390,11 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Audience": 7
-      },
+      "change_category_counts": {},
       "avg_cpc": 0,
       "ctr": 0,
-      "change_count": 7,
-      "change_categories": [
-        "Audience"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-14",
@@ -423,17 +402,11 @@
       "clicks": 0,
       "cost": 0.0,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Keyword": 10,
-        "Geo": 8
-      },
+      "change_category_counts": {},
       "avg_cpc": 0,
       "ctr": 0,
-      "change_count": 18,
-      "change_categories": [
-        "Geo",
-        "Keyword"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-15",
@@ -453,17 +426,11 @@
       "clicks": 10,
       "cost": 39.58,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Bid/Budget": 2,
-        "Keyword": 24
-      },
+      "change_category_counts": {},
       "avg_cpc": 3.96,
       "ctr": 10.75,
-      "change_count": 26,
-      "change_categories": [
-        "Bid/Budget",
-        "Keyword"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-17",
@@ -471,15 +438,11 @@
       "clicks": 18,
       "cost": 52.61,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Bid/Budget": 1
-      },
+      "change_category_counts": {},
       "avg_cpc": 2.92,
       "ctr": 7.5,
-      "change_count": 1,
-      "change_categories": [
-        "Bid/Budget"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-18",
@@ -487,15 +450,11 @@
       "clicks": 14,
       "cost": 44.28,
       "conversions": 0.0,
-      "change_category_counts": {
-        "Keyword": 10
-      },
+      "change_category_counts": {},
       "avg_cpc": 3.16,
       "ctr": 3.31,
-      "change_count": 10,
-      "change_categories": [
-        "Keyword"
-      ]
+      "change_count": 0,
+      "change_categories": []
     },
     {
       "date": "2026-08-19",
@@ -511,15 +470,148 @@
     },
     {
       "date": "2026-08-20",
-      "impressions": 424,
-      "clicks": 10,
-      "cost": 40.89,
+      "impressions": 262,
+      "clicks": 14,
+      "cost": 51.97,
       "conversions": 0.0,
       "change_category_counts": {},
-      "avg_cpc": 4.09,
-      "ctr": 2.36,
+      "avg_cpc": 3.71,
+      "ctr": 5.34,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-21",
+      "impressions": 367,
+      "clicks": 14,
+      "cost": 43.94,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 3.14,
+      "ctr": 3.81,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-22",
+      "impressions": 348,
+      "clicks": 17,
+      "cost": 49.89,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 2.93,
+      "ctr": 4.89,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-23",
+      "impressions": 385,
+      "clicks": 16,
+      "cost": 49.43,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 3.09,
+      "ctr": 4.16,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-24",
+      "impressions": 140,
+      "clicks": 11,
+      "cost": 23.18,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 2.11,
+      "ctr": 7.86,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-25",
+      "impressions": 180,
+      "clicks": 12,
+      "cost": 19.71,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 1.64,
+      "ctr": 6.67,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-26",
+      "impressions": 191,
+      "clicks": 10,
+      "cost": 21.01,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 2.1,
+      "ctr": 5.24,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-27",
+      "impressions": 225,
+      "clicks": 3,
+      "cost": 3.76,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 1.25,
+      "ctr": 1.33,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-28",
+      "impressions": 319,
+      "clicks": 19,
+      "cost": 49.88,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 2.63,
+      "ctr": 5.96,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-29",
+      "impressions": 268,
+      "clicks": 10,
+      "cost": 23.69,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 2.37,
+      "ctr": 3.73,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-30",
+      "impressions": 239,
+      "clicks": 18,
+      "cost": 32.43,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 1.8,
+      "ctr": 7.53,
+      "change_count": 0,
+      "change_categories": []
+    },
+    {
+      "date": "2026-08-31",
+      "impressions": 153,
+      "clicks": 11,
+      "cost": 20.88,
+      "conversions": 0.0,
+      "change_category_counts": {},
+      "avg_cpc": 1.9,
+      "ctr": 7.19,
       "change_count": 0,
       "change_categories": []
     }
-  ]
+  ],
+  "change_events_available": false
 }
