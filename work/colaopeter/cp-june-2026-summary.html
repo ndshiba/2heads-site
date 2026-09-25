@@ -23,8 +23,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 /* ── Section titles - same border-left treatment ─────────────────────────── */
 .section-title{font-size:15px;font-weight:700;color:#1a1a18;margin:32px 0 12px;border-left:4px solid #BDA26B;padding-left:10px}
 .section-title.gsc{border-color:#1976D2}
-.section-title.smr{border-color:#FF6B35}
-.section-title.steps{border-color:#43A047}
 
 /* ── Cards - same as dashboard ───────────────────────────────────────────── */
 .card{background:#fff;border-radius:8px;padding:20px;border:1px solid #e8e3dc;margin-bottom:18px}
@@ -60,17 +58,11 @@ tr:hover td{background:#FAF8F5}
 .chart-note{font-size:11px;color:#aaa;margin-top:6px;font-style:italic}
 
 /* ── Next step cards ──────────────────────────────────────────────────────── */
-.step{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid #f0ede7}
-.step:last-child{border-bottom:none}
-.step-num{font-size:22px;font-weight:700;color:#BDA26B;min-width:28px;padding-top:1px}
-.step h4{font-size:14px;font-weight:700;color:#1a1a18;margin-bottom:5px}
-.step p{font-size:13px;color:#555;line-height:1.6;margin:0}
 
 /* ── Source badges ────────────────────────────────────────────────────────── */
 .src-badge{display:inline-flex;align-items:center;font-size:10px;font-weight:700;letter-spacing:.3px;padding:2px 8px;border-radius:20px;margin-left:6px;vertical-align:middle;text-transform:uppercase}
 .src-ga4{background:#E8F5E9;color:#1B5E20;border:1px solid #A5D6A7}
 .src-gsc{background:#E3F2FD;color:#0D47A1;border:1px solid #90CAF9}
-.src-smr{background:#FFF0E8;color:#BF360C;border:1px solid #FFAB91}
 
 /* ── Body text spacing ────────────────────────────────────────────────────── */
 .body-text p{margin-bottom:14px;font-size:14px;line-height:1.7;color:#333}
@@ -95,7 +87,7 @@ tr:hover td{background:#FAF8F5}
 <div class="header">
   <div>
     <h1>🏡 <span class="header-accent">Colao &amp; Peter</span> - June 2026 Performance Summary</h1>
-    <p>Prepared July 10, 2026 &nbsp;&middot;&nbsp; GA4 &nbsp;&middot;&nbsp; Google Search Console &nbsp;&middot;&nbsp; Semrush</p>
+    <p>Prepared July 10, 2026 &nbsp;&middot;&nbsp; GA4 &nbsp;&middot;&nbsp; Google Search Console</p>
   </div>
 </div>
 <div class="breadcrumb"><a href="index.html">← Reports</a><span>/</span>June 2026 Performance Summary</div>
@@ -187,54 +179,9 @@ tr:hover td{background:#FAF8F5}
   The impression decline is not a business problem. <strong>The site is appearing less often in search results - but where it does appear, it ranks better and gets clicked more.</strong> That pattern held in May and it held again in June.
 </div>
 
-<!-- ── SEMRUSH ──────────────────────────────────────────────────────────────── -->
-<div class="section-title smr">Keyword Rankings <span class="src-badge src-smr">📈 Semrush</span></div>
-
-<div class="kpi-row-4" style="grid-template-columns:repeat(2,1fr);max-width:480px">
-  <div class="kpi">
-    <div class="label">Keywords ranking</div>
-    <div class="value">367</div>
-    <div class="sub">organic positions · US</div>
-  </div>
-  <div class="kpi">
-    <div class="label">Est. monthly traffic</div>
-    <div class="value">308</div>
-    <div class="sub"><span class="delta-up">+110% YoY</span> vs 147 Jun 2025</div>
-  </div>
-</div>
-
-<div class="body-text">
-  <p>Estimated organic traffic reached 308 in June - up 110% year over year from 147 in June 2025, and up 10% from May's 279. The improvement in traffic is happening alongside a smaller but sharper keyword footprint: the site now ranks for fewer total keywords than earlier this year, but the positions that remain are better-placed and more targeted to the work C&amp;P actually does.</p>
-  <p>Top non-branded rankings in June: "Potomac MD landscape designer" (#1), "luxury custom pools" (#2), "custom pool design" (#4). These are the categories - pool renovations, luxury landscapes, custom decks - where C&amp;P has the most competitive content and the clearest differentiation from local competitors.</p>
-</div>
-
-<div class="card">
-  <div class="chart-wrap short"><canvas id="posChart"></canvas></div>
-  <p class="chart-note">367 organic keywords by position group &nbsp;&middot;&nbsp; Semrush US, June 2026</p>
-</div>
-
-<!-- ── NEXT STEPS ──────────────────────────────────────────────────────────── -->
-<div class="section-title steps">Recommended Next Steps</div>
-<div class="card">
-  <div class="step">
-    <div class="step-num">1</div>
-    <div>
-      <h4>Second long-form article — pool houses or outdoor living</h4>
-      <p>The pool renovations article is now linked from the <a href="https://colaopeter.com/pool-remodeling-pool-resurfacing-arlington-great-falls-leesburg-mclean-sterling-va-washington-dc/" style="color:#BDA26B">pool service hub page</a> — the site architecture piece is in place. The next content investment should follow the same pattern: a specific topic that C&amp;P clients are actively researching, written with the depth and specifics that only an experienced contractor can provide. Pool houses, pergolas, or outdoor kitchens are strong candidates with real search volume and clear alignment to C&amp;P's portfolio.</p>
-    </div>
-  </div>
-  <div class="step">
-    <div class="step-num">2</div>
-    <div>
-      <h4>Evaluate Paid Social as data accumulates</h4>
-      <p>281 sessions from Meta ads in the first month. Too early to draw conclusions on ROI — one month of data isn’t enough to see return-visit or delayed conversion patterns. By August there should be enough signal to assess whether the audience targeting is reaching the right Northern Virginia market and whether any of those visitors come back and convert.</p>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <div class="footer">
-  Data: Google Analytics 4 (property 387610456) &nbsp;&middot;&nbsp; Google Search Console (sc-domain:colaopeter.com) &nbsp;&middot;&nbsp; Semrush US database &nbsp;&middot;&nbsp; June 2026<br>
+  Data: Google Analytics 4 (property 387610456) &nbsp;&middot;&nbsp; Google Search Console (sc-domain:colaopeter.com) &nbsp;&middot;&nbsp; June 2026<br>
   Reports hub: <a href="https://2.0heads.com/work/colaopeter/" style="color:#BDA26B">2.0heads.com/work/colaopeter/</a>
 </div>
 
@@ -306,36 +253,6 @@ Chart.defaults.font.family = "-apple-system,BlinkMacSystemFont,'Segoe UI',sans-s
   });
 })();
 
-// ── Position distribution ─────────────────────────────────────────────────────
-(function(){
-  var ctx = document.getElementById('posChart').getContext('2d');
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Pos 1-3','Pos 4-10','Pos 11-20','Pos 21-50','Pos 51-100'],
-      datasets:[{
-        label: 'Keywords',
-        data: [22,46,48,158,93],
-        backgroundColor: ['#2E7D32','#43A047','#81C784','#FFB74D','#E53935'],
-        borderWidth: 0,
-        borderRadius: 3
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend:{display:false},
-        tooltip:{callbacks:{label:function(c){return ' '+c.parsed.x+' keywords';}}}
-      },
-      scales: {
-        x:{grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:11}}},
-        y:{grid:{display:false},ticks:{font:{size:11}}}
-      }
-    }
-  });
-})();
 </script>
 </body>
 </html>
