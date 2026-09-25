@@ -353,7 +353,7 @@ function selectPageHistory(pageId, scrollToPanel){
   document.getElementById('pageHistoryNote').textContent =
     'Jul 2025–Jan 2026 uses the URL property; Feb–Aug 2026 uses the domain property. The dashed line marks the property boundary.';
 
-  var rowHtml = page.months.map(function(item){
+  var rowHtml = page.months.slice().reverse().map(function(item){
     var noData = !item.observed;
     return '<tr>' +
       '<td>' + pageHistoryEscape(item.label) + '</td>' +
