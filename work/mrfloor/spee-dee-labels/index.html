@@ -415,6 +415,45 @@
       background: #fff;
     }
 
+    .batch-help {
+      margin: 12px 12px 0;
+      color: #2c3338;
+      font-size: 12px;
+    }
+
+    .batch-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      gap: 9px;
+      margin-top: 10px;
+      padding: 12px;
+      border-top: 1px solid #dcdcde;
+      background: #f6f7f7;
+    }
+
+    .batch-select {
+      display: grid;
+      gap: 4px;
+      color: #2c3338;
+      font-size: 11px;
+      font-weight: 650;
+    }
+
+    .select-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-width: 108px;
+      min-height: 29px;
+      border: 1px solid #8c8f94;
+      border-radius: 3px;
+      background: #fff;
+      padding: 4px 7px;
+      color: #2c3338;
+      font-weight: 400;
+    }
+
     .box {
       width: 16px;
       height: 16px;
@@ -824,9 +863,10 @@
       <div>
         <h2>6. Generate And Save The 2-Up PDF</h2>
         <ol class="step-list">
-          <li><strong>Stay on Print Queue and select only Label ready rows.</strong> Quoted rows do not have labels. The plugin fails closed if any selected row is not label-ready.</li>
-          <li><strong>Choose <code>2-up letter</code> and a Start slot.</strong> Use <code>Top</code> for a new sheet or <code>Bottom</code> if the top half has already been used.</li>
-          <li><strong>Click Generate 2-up batch PDF.</strong> Open the <code>Batches</code> tab and download the latest batch. The link opens in a new tab and changes to <code>Opening…</code>.</li>
+          <li><strong>Stay on Print Queue after creating the shipment.</strong> The created row now says <code>Label ready to batch</code> and shows its shipment value plus <code>Download label</code>.</li>
+          <li><strong>Select only Label ready to batch rows.</strong> Quoted rows do not have stored labels. The plugin fails closed if any selected row is not label-ready.</li>
+          <li><strong>Use the second Print Queue action: Generate 2-up batch PDF.</strong> It becomes active when at least one stored label is ready. Choose <code>2-up letter</code> and a Start slot: <code>Top</code> for a fresh sheet or <code>Bottom</code> if the top half has already been used.</li>
+          <li><strong>The button pushes the selected stored labels into a new batch.</strong> It then opens the <code>Batches</code> tab, where you download the latest PDF. The link opens in a new tab and changes to <code>Opening…</code>.</li>
           <li><strong>Use the generated filename.</strong> It is automatically named <code>speedee-batch-YYYY-MM-DD-01.pdf</code>; the last two digits advance for each local WordPress day.</li>
           <li><strong>Save the downloaded PDF to Dropbox.</strong> Use <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code>.</li>
           <li><strong>Debbie prints in Skokie.</strong> Print actual size on 8.5x11 half-sheet label stock, scale 100 percent, duplex off.</li>
@@ -840,34 +880,48 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Batch PDF</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue after label creation</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
             <div class="tabs">
-              <span class="tab">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab active">Batches</span><span class="tab">Settings</span>
+              <span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
             </div>
             <div class="wp-panel">
-              <h4>Print Batches</h4>
+              <h4>Print Queue</h4>
               <table class="wp-table">
-                <thead><tr><th>Batch / Filename</th><th>Layout</th><th>Labels</th><th>Created</th><th>Download</th><th>PDF</th></tr></thead>
+                <thead><tr><th class="check">✓</th><th>Order</th><th>Queue Status</th><th>Quote</th><th>Shipment</th><th>Action</th></tr></thead>
                 <tbody>
                   <tr>
-                    <td>#2<br><code>speedee-batch-YYYY-MM-DD-01.pdf</code></td>
-                    <td>2up-letter</td>
-                    <td>1</td>
-                    <td>2026-09-13 09:00</td>
-                    <td>Not opened yet</td>
-                    <td><span class="button callout" data-callout="This opens a new tab. Save that PDF to Dropbox.">Download batch</span></td>
+                    <td><span class="box checked callout" data-callout="Select the created row that now has a stored label."></span></td>
+                    <td>#40872</td>
+                    <td><strong>Label ready to batch</strong></td>
+                    <td>$9.61</td>
+                    <td>SD1234567<br><span style="color:#135e96;">Download label</span></td>
+                    <td><span class="button red">Cancel shipment</span> <span class="button red">Remove</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="box"></span></td>
+                    <td>#40865</td>
+                    <td><strong>Quoted — no label yet</strong><br>Creation is still required.</td>
+                    <td>$9.61</td>
+                    <td></td>
+                    <td><span class="button red">Remove</span></td>
                   </tr>
                 </tbody>
               </table>
               <div style="padding:12px;">
-                <div class="notice">Save to: Dropbox / Mr. Floor / Spee Dee Delivery / speedee-batch-YYYY-MM-DD-01.pdf</div>
+                <span class="button primary">Create Spee Dee shipments for selected</span>
+              </div>
+              <p class="batch-help"><strong>1 stored label is ready to batch.</strong> Select it, then generate the PDF.</p>
+              <div class="batch-controls">
+                <div class="batch-select"><span>Sheet layout</span><span class="select-box">2-up letter <b>⌄</b></span></div>
+                <div class="batch-select"><span>Start slot</span><span class="select-box">Top <b>⌄</b></span></div>
+                <span class="button callout" data-callout="Second Print Queue action: it moves only the selected stored labels into a new 2-up batch PDF.">Generate 2-up batch PDF</span>
               </div>
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 6: Download the generated batch PDF in a new tab, then save the unchanged dated filename to the shared Dropbox folder for Debbie.</figcaption>
+        <figcaption class="screen-caption">Screenshot 6: After a shipment has a stored label, select the <strong>Label ready to batch</strong> row and use the second Print Queue action: <strong>Generate 2-up batch PDF</strong>.</figcaption>
       </figure>
     </section>
 
