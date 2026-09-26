@@ -415,32 +415,6 @@
       background: #fff;
     }
 
-    .field-grid {
-      display: grid;
-      grid-template-columns: 175px minmax(0, 1fr);
-      gap: 8px 12px;
-      padding: 10px 12px 14px;
-      align-items: center;
-    }
-
-    .input {
-      min-height: 30px;
-      border: 1px solid #8c8f94;
-      border-radius: 3px;
-      background: #fff;
-      padding: 5px 7px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      color: #26323f;
-      overflow-wrap: anywhere;
-    }
-
-    .checkbox-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 30px;
-    }
-
     .box {
       width: 16px;
       height: 16px;
@@ -601,10 +575,6 @@
         transform: translateX(50%);
       }
 
-      .field-grid {
-        grid-template-columns: 1fr;
-      }
-
       .wp-page {
         padding: 10px;
         font-size: 11px;
@@ -660,10 +630,8 @@
       <h1>Mr. Floor Spee Dee Labels Plugin Runbook</h1>
       <p class="lede">Start at the Mr. Floor WordPress sign-in, open WooCommerce &gt; Spee Dee Labels, then review and quote eligible orders, create one authorized live shipment, build a selected-label 2-up PDF, save it for Debbie, and correct mistakes without creating another shipment.</p>
       <div class="meta">
-        <span class="pill good">Production and staging: v0.1.9</span>
+        <span class="pill good">Plugin version: v0.1.9</span>
         <span class="pill good">Default label: 4x6 Label</span>
-        <span class="pill warn">Production is currently live: dry-run off, create on</span>
-        <span class="pill">Staging is protected: dry-run on, create off</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
       </div>
     </header>
@@ -673,15 +641,14 @@
       <div class="mini-flow">
         <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your own assigned account.</span></div>
         <div class="flow-step"><strong>2. Navigate</strong><span>Open WooCommerce, then select Spee Dee Labels.</span></div>
-        <div class="flow-step"><strong>3. Verify Mode</strong><span>Production is live; staging is the safe test environment.</span></div>
-        <div class="flow-step"><strong>4. Quote Order</strong><span>Use Ready. A quote returns here and does not create a shipment.</span></div>
-        <div class="flow-step"><strong>5. Create One</strong><span>Select exactly one approved quoted order in the live Print Queue.</span></div>
-        <div class="flow-step"><strong>6. Select Labels</strong><span>Only label-ready rows can be batched; quoted rows cannot print.</span></div>
-        <div class="flow-step"><strong>7. Download Batch</strong><span>The dated batch PDF opens in a new tab; save it for Debbie.</span></div>
-        <div class="flow-step"><strong>8. Cancel Mistakes</strong><span>Cancel the shipment before removing any created queue row.</span></div>
+        <div class="flow-step"><strong>3. Quote Order</strong><span>Use Ready. A quote returns here and does not create a shipment.</span></div>
+        <div class="flow-step"><strong>4. Create One</strong><span>Select exactly one approved quoted order in the Print Queue.</span></div>
+        <div class="flow-step"><strong>5. Select Labels</strong><span>Only label-ready rows can be batched; quoted rows cannot print.</span></div>
+        <div class="flow-step"><strong>6. Download Batch</strong><span>The dated batch PDF opens in a new tab; save it for Debbie.</span></div>
+        <div class="flow-step"><strong>7. Cancel Mistakes</strong><span>Cancel the shipment before removing any created queue row.</span></div>
       </div>
       <div class="danger">
-        <strong>Live-creation alert:</strong> production currently has real shipment creation enabled. Every selected eligible quoted order creates a live Dispatch Science/Spee Dee shipment. If you are not authorized to make that shipment, stop before selecting a row or changing Settings.
+        <strong>Creation alert:</strong> every selected eligible quoted order creates a Dispatch Science/Spee Dee shipment. If you are not authorized to make that shipment, stop before selecting a row.
       </div>
     </section>
 
@@ -689,13 +656,12 @@
       <div>
         <h2>1. Sign In To Mr. Floor WordPress</h2>
         <ol class="step-list">
-          <li><strong>Open the production WordPress login page.</strong> Go to <code>https://www.mrfloor.com/wp-login.php</code>. Use staging only when you have been instructed to test.</li>
+          <li><strong>Open the Mr. Floor WordPress login page.</strong> Go to <code>https://www.mrfloor.com/wp-login.php</code>.</li>
           <li><strong>Enter your assigned WordPress username or email address and password.</strong> Use your own account; do not share credentials or use someone else&rsquo;s saved browser login.</li>
           <li><strong>Click Log In.</strong> You should arrive at the Mr. Floor WordPress Dashboard. If you do not have access, stop and ask the Mr. Floor/2.0heads administrator for an account rather than attempting work in WordPress.</li>
         </ol>
         <div class="note">
-          <strong>Production:</strong> <code>https://www.mrfloor.com/wp-login.php</code><br>
-          <strong>Staging (tests only):</strong> <code>https://mrfloor23stg.wpenginepowered.com/wp-login.php</code>
+          <strong>WordPress login:</strong> <code>https://www.mrfloor.com/wp-login.php</code>
         </div>
       </div>
       <figure>
@@ -712,7 +678,7 @@
         <ol class="step-list">
           <li><strong>Find WooCommerce in the black menu on the left.</strong> Move your pointer over <code>WooCommerce</code> to open its submenu.</li>
           <li><strong>Select Spee Dee Labels.</strong> It is inside the WooCommerce submenu, below <code>Zoho Feeds</code>. Do not choose <code>Orders</code>; that opens the regular WooCommerce order list, not the shipping-label tool.</li>
-          <li><strong>Wait for the Spee Dee Labels page.</strong> It opens on the <code>Ready</code> tab. From here, continue with the live-mode check below before quoting, creating, batching, or canceling anything.</li>
+          <li><strong>Wait for the Spee Dee Labels page.</strong> It opens on the <code>Ready</code> tab. From here, continue with quoting, creating, batching, or canceling as needed.</li>
         </ol>
         <div class="warning">
           The direct plugin page is <code>https://www.mrfloor.com/wp-admin/admin.php?page=mrfloor-speedee-labels</code>, but the menu path above is the normal starting path after logging in.
@@ -737,11 +703,10 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">mrfloor23stg.wpenginepowered.com/wp-admin/admin.php?page=mrfloor-speedee-labels</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">www.mrfloor.com/wp-admin/admin.php?page=mrfloor-speedee-labels</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
             <div class="notice red"><strong>License Mismatch</strong><br>Your license key does not match your current domain.</div>
-            <div class="notice">Dry-run mode is on. Shipment creation is intentionally disabled.</div>
             <div class="tabs">
               <span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
             </div>
@@ -763,45 +728,7 @@
 
     <section class="card split">
       <div>
-        <h2>4. Confirm The Operating Mode</h2>
-        <ol class="step-list">
-          <li><strong>Open Settings before any create action.</strong> Do not assume the mode from an old screenshot or a prior shift.</li>
-          <li><strong>Current production mode (rechecked September 26):</strong> <code>Dry-run mode</code> is unchecked and <code>Shipment creation</code> is checked. That is live mode.</li>
-          <li><strong>Current staging mode:</strong> <code>Dry-run mode</code> is checked and <code>Shipment creation</code> is unchecked. Use staging for safe test work.</li>
-          <li><strong>Leave carrier fields alone.</strong> The tested default is <code>Label</code> with viewer ID <code>a420e67552e</code>.</li>
-        </ol>
-        <div class="warning">
-          Do not toggle production settings as a troubleshooting step. If live mode is not intended for the work in front of you, stop and get direction; use staging for a test instead.
-        </div>
-      </div>
-      <figure>
-        <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Settings</div></div>
-          <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
-            <div class="notice">Dry-run mode is on. Shipment creation is intentionally disabled.</div>
-            <div class="tabs">
-              <span class="tab">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab active">Settings</span>
-            </div>
-            <div class="wp-panel">
-              <h4>Settings</h4>
-              <div class="field-grid">
-                <div>API base URL</div><div class="input">https://speedee.dsapp.io/integration/api/v1</div>
-                <div>Label Template Name</div><div class="input callout" data-callout="Use the tested 4x6 template.">Label</div>
-                <div>Label Report Viewer ID</div><div class="input">a420e67552e</div>
-                <div>Dry-run mode</div><div class="checkbox-row callout" data-callout="Checked means no shipment creation."><span class="box checked"></span> Disable real shipment creation</div>
-                <div>Shipment creation</div><div class="checkbox-row"><span class="box"></span> Allow create-order API calls when dry-run is off</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <figcaption class="screen-caption">Screenshot 4: Staging safe-mode reference. Production is currently configured differently: dry-run off and shipment creation on.</figcaption>
-      </figure>
-    </section>
-
-    <section class="card split">
-      <div>
-        <h2>5. Quote Or Find An Order</h2>
+        <h2>4. Quote Or Find An Order</h2>
         <ol class="step-list">
           <li><strong>Use Ready for new orders.</strong> Click <code>Check Spee Dee</code> when the button appears.</li>
           <li><strong>A successful quote returns to Ready.</strong> The confirmation says the order is in Print Queue, so you can keep reviewing Ready orders without using Back.</li>
@@ -835,15 +762,15 @@
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 5: Ready tab behavior after orders are already quoted.</figcaption>
+        <figcaption class="screen-caption">Screenshot 4: Ready tab behavior after orders are already quoted.</figcaption>
       </figure>
     </section>
 
     <section class="card split">
       <div>
-        <h2>6. Create One Shipment</h2>
+        <h2>5. Create One Shipment</h2>
         <ol class="step-list">
-          <li><strong>Confirm you have authorization.</strong> Production is currently live. Do not use its enabled state as permission to create a shipment.</li>
+          <li><strong>Confirm you have authorization.</strong> Do not create a shipment unless you are authorized to do so.</li>
           <li><strong>Open Print Queue and select exactly one eligible quoted order.</strong> The same checkboxes are used for creation and batching, so confirm the one selected row before continuing.</li>
           <li><strong>Click Create Spee Dee shipments for selected.</strong> Wait for the page to return to the queue; do not click again.</li>
           <li><strong>Confirm Label ready.</strong> The row should show a shipment/tracking value and a <code>Download label</code> link, which opens the stored PDF in a new tab.</li>
@@ -889,13 +816,13 @@
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 6: Print Queue before creation. Select one quoted order only after live shipment creation is authorized.</figcaption>
+        <figcaption class="screen-caption">Screenshot 5: Print Queue before creation. Select one quoted order only after shipment creation is authorized.</figcaption>
       </figure>
     </section>
 
     <section class="card split">
       <div>
-        <h2>7. Generate And Save The 2-Up PDF</h2>
+        <h2>6. Generate And Save The 2-Up PDF</h2>
         <ol class="step-list">
           <li><strong>Stay on Print Queue and select only Label ready rows.</strong> Quoted rows do not have labels. The plugin fails closed if any selected row is not label-ready.</li>
           <li><strong>Choose <code>2-up letter</code> and a Start slot.</strong> Use <code>Top</code> for a new sheet or <code>Bottom</code> if the top half has already been used.</li>
@@ -940,7 +867,7 @@
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 7: Download the generated batch PDF in a new tab, then save the unchanged dated filename to the shared Dropbox folder for Debbie.</figcaption>
+        <figcaption class="screen-caption">Screenshot 6: Download the generated batch PDF in a new tab, then save the unchanged dated filename to the shared Dropbox folder for Debbie.</figcaption>
       </figure>
     </section>
 
@@ -967,14 +894,14 @@
 
     <section class="card split">
       <div>
-        <h2>8. Cancel Or Clear A Mistake</h2>
+        <h2>7. Cancel Or Clear A Mistake</h2>
         <ol class="step-list">
           <li><strong>Cancel shipment</strong> voids the external Dispatch Science order and removes the matching <code>Spee-Dee Delivery</code> tracking record from WooCommerce.</li>
           <li><strong>Remove</strong> only removes the local plugin queue row. Use this for quoted rows or stale queue cleanup.</li>
           <li><strong>Confirm the cancellation banner.</strong> Do not Remove a created row until the cancellation succeeds. If cancellation fails, leave the row in place and escalate it.</li>
         </ol>
         <div class="danger">
-          Do not use Remove as a substitute for Cancel after a shipment has been created. Production currently runs in live mode; do not change Settings merely to clean up a row.
+          Do not use Remove as a substitute for Cancel after a shipment has been created.
         </div>
       </div>
       <figure>
@@ -1001,14 +928,13 @@
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 8: Cancel is the reversible path for a created shipment.</figcaption>
+        <figcaption class="screen-caption">Screenshot 7: Cancel is the reversible path for a created shipment.</figcaption>
       </figure>
     </section>
 
     <section class="card">
       <h2>Operator Checks</h2>
       <div class="legend">
-        <div class="legend-item"><strong>Live-state check</strong> At last verification, production was <code>dry_run=0</code> / <code>enable_create=1</code>; staging was <code>dry_run=1</code> / <code>enable_create=0</code>. Check Settings again before you act.</div>
         <div class="legend-item"><strong>Quoted state</strong> Quoted rows have price only. They do not have shipment ID, tracking, or label file, and cannot be batched.</div>
         <div class="legend-item"><strong>Label-ready state</strong> Created rows should show shipment/tracking and a Download label link before batching. Use Fetch label if the shipment exists but the PDF is missing.</div>
       </div>
@@ -1016,7 +942,7 @@
     </section>
 
     <footer>
-      Built for Mr. Floor production and staging. WordPress login and navigation screens added September 26, 2026; live production mode rechecked the same day. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. WordPress login and navigation screens added September 26, 2026. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
