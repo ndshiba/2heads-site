@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Spee Dee Labels Plugin Runbook — v0.1.9</title>
+  <title>Mr. Floor Spee Dee Labels Plugin Runbook — v0.1.15</title>
   <style>
     :root {
       color-scheme: light;
@@ -667,9 +667,9 @@
   <main>
     <header>
       <h1>Mr. Floor Spee Dee Labels Plugin Runbook</h1>
-      <p class="lede">Start at the Mr. Floor WordPress sign-in, open WooCommerce &gt; Spee Dee Labels, then review and quote eligible orders, create one authorized live shipment, build a selected-label 2-up PDF, save it for Debbie, and correct mistakes without creating another shipment.</p>
+      <p class="lede">Start at the Mr. Floor WordPress sign-in, open WooCommerce &gt; Spee Dee Labels, then review and quote eligible orders, create authorized shipments in groups of no more than five, build a selected-label 2-up PDF, save it for Debbie, and correct mistakes without creating another shipment.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.9</span>
+        <span class="pill good">Plugin version: v0.1.15</span>
         <span class="pill good">Default label: 4x6 Label</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
       </div>
@@ -681,7 +681,7 @@
         <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your own assigned account.</span></div>
         <div class="flow-step"><strong>2. Navigate</strong><span>Open WooCommerce, then select Spee Dee Labels.</span></div>
         <div class="flow-step"><strong>3. Quote Order</strong><span>Use Ready. A quote returns here and does not create a shipment.</span></div>
-        <div class="flow-step"><strong>4. Create One</strong><span>Select exactly one approved quoted order in the Print Queue.</span></div>
+        <div class="flow-step"><strong>4. Create Up To Five</strong><span>Select no more than five approved quoted orders in the Print Queue.</span></div>
         <div class="flow-step"><strong>5. Select Labels</strong><span>Only label-ready rows can be batched; quoted rows cannot print.</span></div>
         <div class="flow-step"><strong>6. Download Batch</strong><span>The dated batch PDF opens in a new tab; save it for Debbie.</span></div>
         <div class="flow-step"><strong>7. Cancel Mistakes</strong><span>Cancel the shipment before removing any created queue row.</span></div>
@@ -807,17 +807,17 @@
 
     <section class="card split">
       <div>
-        <h2>5. Create One Shipment</h2>
+        <h2>5. Create Shipments In Groups Of Five</h2>
         <ol class="step-list">
           <li><strong>Confirm you have authorization.</strong> Do not create a shipment unless you are authorized to do so.</li>
-          <li><strong>Open Print Queue and select exactly one eligible quoted order.</strong> The same checkboxes are used for creation and batching, so confirm the one selected row before continuing.</li>
-          <li><strong>Click Create Spee Dee shipments for selected.</strong> Wait for the page to return to the queue; do not click again.</li>
-          <li><strong>Confirm Label ready.</strong> The row should show a shipment/tracking value and a <code>Download label</code> link, which opens the stored PDF in a new tab.</li>
+          <li><strong>Open Print Queue and select no more than five eligible quoted orders.</strong> The same checkboxes are used for creation and batching, so confirm every selected row is <code>Quoted — no label yet</code>. For a larger set, use five, five, five, and then the final smaller group.</li>
+          <li><strong>Click Create Spee Dee shipments for selected once.</strong> The queue immediately shows <code>Preparing order #… (1 of total)</code>, then advances one order at a time. Do not click again or refresh while that progress message is visible.</li>
+          <li><strong>Confirm every selected row says Label ready to batch.</strong> Each row should show a shipment/tracking value and a <code>Download label</code> link, which opens the stored PDF in a new tab. If progress does not appear or a row does not become label-ready, stop before retrying.</li>
           <li><strong>Check the Woo order tracking card.</strong> The plugin writes <code>Spee-Dee Delivery</code>, the tracking value (an <code>SD...</code> shipment ID is used if no barcode is returned), and the customer tracking-portal link.</li>
           <li><strong>If the shipment exists but the PDF is missing, use Fetch label.</strong> It retries label retrieval only; it does not create a second shipment.</li>
         </ol>
         <div class="danger">
-          Creation is a real external API call to Dispatch Science and is the charge-risk action. Use one selected order until the workflow is fully approved.
+          Creation is a real external API call to Dispatch Science and is the charge-risk action. The tested operating limit is five selected orders per run; never use a 20-order selection.
         </div>
       </div>
       <figure>
@@ -834,7 +834,7 @@
                 <thead><tr><th class="check">✓</th><th>Order</th><th>Queue Status</th><th>Quote</th><th>Shipment</th><th>Action</th></tr></thead>
                 <tbody>
                   <tr>
-                    <td><span class="box checked callout" data-callout="Select one row for the first create test."></span></td>
+                    <td><span class="box checked callout" data-callout="Select no more than five eligible quoted rows in one run."></span></td>
                     <td>#40872</td>
                     <td>Quoted — no label yet<br>Creation is required</td>
                     <td>$9.61</td>
@@ -842,7 +842,7 @@
                     <td><span class="button red">Remove</span></td>
                   </tr>
                   <tr>
-                    <td><span class="box"></span></td>
+                    <td><span class="box checked"></span></td>
                     <td>#40865</td>
                     <td>quoted</td>
                     <td>$9.61</td>
@@ -855,7 +855,7 @@
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 5: Print Queue before creation. Select one quoted order only after shipment creation is authorized.</figcaption>
+        <figcaption class="screen-caption">Screenshot 5: Print Queue before creation. Select up to five authorized quoted orders, click Create once, and wait for the sequential progress to finish.</figcaption>
       </figure>
     </section>
 
@@ -863,8 +863,8 @@
       <div>
         <h2>6. Generate And Save The 2-Up PDF</h2>
         <ol class="step-list">
-          <li><strong>Stay on Print Queue after creating the shipment.</strong> The created row now says <code>Label ready to batch</code> and shows its shipment value plus <code>Download label</code>.</li>
-          <li><strong>Select only Label ready to batch rows.</strong> Quoted rows do not have stored labels. The plugin fails closed if any selected row is not label-ready.</li>
+          <li><strong>Stay on Print Queue after the final create group finishes.</strong> Each created row now says <code>Label ready to batch</code> and shows its shipment value plus <code>Download label</code>.</li>
+          <li><strong>Select only Label ready to batch rows.</strong> Select every ready label intended for this print run; leave quoted or attention rows unchecked. The plugin fails closed if any selected row is not label-ready.</li>
           <li><strong>Use the second Print Queue action: Generate 2-up batch PDF.</strong> It becomes active when at least one stored label is ready. Choose <code>2-up letter</code> and a Start slot: <code>Top</code> for a fresh sheet or <code>Bottom</code> if the top half has already been used.</li>
           <li><strong>The button pushes the selected stored labels into a new batch.</strong> It then opens the <code>Batches</code> tab, where you download the latest PDF. The link opens in a new tab and changes to <code>Opening…</code>.</li>
           <li><strong>Use the generated filename.</strong> It is automatically named <code>speedee-batch-YYYY-MM-DD-01.pdf</code>; the last two digits advance for each local WordPress day.</li>
