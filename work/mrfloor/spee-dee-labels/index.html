@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Spee Dee Labels Plugin Runbook — v0.1.15</title>
+  <title>Mr. Floor Spee Dee Labels Plugin Runbook — v0.1.16</title>
   <style>
     :root {
       color-scheme: light;
@@ -669,7 +669,7 @@
       <h1>Mr. Floor Spee Dee Labels Plugin Runbook</h1>
       <p class="lede">Start at the Mr. Floor WordPress sign-in, open WooCommerce &gt; Spee Dee Labels, then review and quote eligible orders, create authorized shipments in groups of no more than five, build a selected-label 2-up PDF, save it for Debbie, and correct mistakes without creating another shipment.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.15</span>
+        <span class="pill good">Plugin version: v0.1.16</span>
         <span class="pill good">Default label: 4x6 Label</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
       </div>
@@ -866,7 +866,7 @@
           <li><strong>Stay on Print Queue after the final create group finishes.</strong> Each created row now says <code>Label ready to batch</code> and shows its shipment value plus <code>Download label</code>.</li>
           <li><strong>Select only Label ready to batch rows.</strong> Select every ready label intended for this print run; leave quoted or attention rows unchecked. The plugin fails closed if any selected row is not label-ready.</li>
           <li><strong>Use the second Print Queue action: Generate 2-up batch PDF.</strong> It becomes active when at least one stored label is ready. Choose <code>2-up letter</code> and a Start slot: <code>Top</code> for a fresh sheet or <code>Bottom</code> if the top half has already been used.</li>
-          <li><strong>The button pushes the selected stored labels into a new batch.</strong> It then opens the <code>Batches</code> tab, where you download the latest PDF. The link opens in a new tab and changes to <code>Opening…</code>.</li>
+          <li><strong>The button pushes every page in each selected stored label PDF into a new batch.</strong> A two-package shipment prints two labels; the <code>Labels</code> count on the Batches tab is the actual number of label pages, not merely the number of orders. It then opens the <code>Batches</code> tab, where you download the latest PDF. The link opens in a new tab and changes to <code>Opening…</code>.</li>
           <li><strong>Use the generated filename.</strong> It is automatically named <code>speedee-batch-YYYY-MM-DD-01.pdf</code>; the last two digits advance for each local WordPress day.</li>
           <li><strong>Save the downloaded PDF to Dropbox.</strong> Use <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code>.</li>
           <li><strong>Debbie prints in Skokie.</strong> Print actual size on 8.5x11 half-sheet label stock, scale 100 percent, duplex off.</li>
@@ -876,6 +876,9 @@
         </div>
         <div class="note">
           If you see <code>No labels are ready to batch</code>, the queue contains quotes only or created shipments whose PDFs were not stored. Create an approved shipment first, or use <code>Fetch label</code> for an existing shipment with no PDF.
+        </div>
+        <div class="note">
+          <strong>Reprinting an older multi-package order:</strong> use <code>Download label</code> beside that order in Print Queue. It opens the original carrier PDF with every package-label page; do not create a second shipment just to recover a missed label.
         </div>
       </div>
       <figure>
