@@ -908,5 +908,2919 @@
         "sessions": 891
       }
     }
-  ]
+  ],
+  "timeline": [
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-01",
+      "direct": 5,
+      "engaged_sessions": 30,
+      "label": "Jan 1",
+      "observed": true,
+      "organic": 25,
+      "sessions": 42
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-02",
+      "direct": 4,
+      "engaged_sessions": 32,
+      "label": "Jan 2",
+      "observed": true,
+      "organic": 23,
+      "sessions": 40
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-03",
+      "direct": 1,
+      "engaged_sessions": 17,
+      "label": "Jan 3",
+      "observed": true,
+      "organic": 15,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-04",
+      "direct": 5,
+      "engaged_sessions": 25,
+      "label": "Jan 4",
+      "observed": true,
+      "organic": 23,
+      "sessions": 36
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-05",
+      "direct": 6,
+      "engaged_sessions": 22,
+      "label": "Jan 5",
+      "observed": true,
+      "organic": 11,
+      "sessions": 31
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-06",
+      "direct": 6,
+      "engaged_sessions": 12,
+      "label": "Jan 6",
+      "observed": true,
+      "organic": 8,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-07",
+      "direct": 3,
+      "engaged_sessions": 18,
+      "label": "Jan 7",
+      "observed": true,
+      "organic": 19,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-08",
+      "direct": 4,
+      "engaged_sessions": 27,
+      "label": "Jan 8",
+      "observed": true,
+      "organic": 20,
+      "sessions": 32
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-09",
+      "direct": 6,
+      "engaged_sessions": 21,
+      "label": "Jan 9",
+      "observed": true,
+      "organic": 20,
+      "sessions": 34
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-10",
+      "direct": 3,
+      "engaged_sessions": 17,
+      "label": "Jan 10",
+      "observed": true,
+      "organic": 14,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-01-11",
+      "direct": 0,
+      "engaged_sessions": 28,
+      "label": "Jan 11",
+      "observed": true,
+      "organic": 20,
+      "sessions": 34
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-12",
+      "direct": 3,
+      "engaged_sessions": 25,
+      "label": "Jan 12",
+      "observed": true,
+      "organic": 21,
+      "sessions": 30
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-13",
+      "direct": 7,
+      "engaged_sessions": 18,
+      "label": "Jan 13",
+      "observed": true,
+      "organic": 20,
+      "sessions": 33
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-14",
+      "direct": 7,
+      "engaged_sessions": 26,
+      "label": "Jan 14",
+      "observed": true,
+      "organic": 21,
+      "sessions": 35
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-15",
+      "direct": 12,
+      "engaged_sessions": 35,
+      "label": "Jan 15",
+      "observed": true,
+      "organic": 25,
+      "sessions": 44
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-16",
+      "direct": 4,
+      "engaged_sessions": 24,
+      "label": "Jan 16",
+      "observed": true,
+      "organic": 21,
+      "sessions": 34
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-17",
+      "direct": 9,
+      "engaged_sessions": 22,
+      "label": "Jan 17",
+      "observed": true,
+      "organic": 23,
+      "sessions": 39
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-18",
+      "direct": 4,
+      "engaged_sessions": 28,
+      "label": "Jan 18",
+      "observed": true,
+      "organic": 29,
+      "sessions": 39
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-19",
+      "direct": 3,
+      "engaged_sessions": 22,
+      "label": "Jan 19",
+      "observed": true,
+      "organic": 18,
+      "sessions": 31
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-20",
+      "direct": 3,
+      "engaged_sessions": 20,
+      "label": "Jan 20",
+      "observed": true,
+      "organic": 23,
+      "sessions": 30
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-21",
+      "direct": 3,
+      "engaged_sessions": 14,
+      "label": "Jan 21",
+      "observed": true,
+      "organic": 14,
+      "sessions": 24
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-22",
+      "direct": 9,
+      "engaged_sessions": 29,
+      "label": "Jan 22",
+      "observed": true,
+      "organic": 25,
+      "sessions": 44
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-23",
+      "direct": 3,
+      "engaged_sessions": 20,
+      "label": "Jan 23",
+      "observed": true,
+      "organic": 23,
+      "sessions": 32
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-24",
+      "direct": 10,
+      "engaged_sessions": 19,
+      "label": "Jan 24",
+      "observed": true,
+      "organic": 12,
+      "sessions": 28
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-25",
+      "direct": 7,
+      "engaged_sessions": 13,
+      "label": "Jan 25",
+      "observed": true,
+      "organic": 15,
+      "sessions": 29
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-26",
+      "direct": 3,
+      "engaged_sessions": 16,
+      "label": "Jan 26",
+      "observed": true,
+      "organic": 16,
+      "sessions": 28
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-27",
+      "direct": 9,
+      "engaged_sessions": 25,
+      "label": "Jan 27",
+      "observed": true,
+      "organic": 18,
+      "sessions": 32
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-28",
+      "direct": 8,
+      "engaged_sessions": 24,
+      "label": "Jan 28",
+      "observed": true,
+      "organic": 14,
+      "sessions": 29
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-29",
+      "direct": 3,
+      "engaged_sessions": 14,
+      "label": "Jan 29",
+      "observed": true,
+      "organic": 13,
+      "sessions": 20
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-30",
+      "direct": 14,
+      "engaged_sessions": 25,
+      "label": "Jan 30",
+      "observed": true,
+      "organic": 22,
+      "sessions": 43
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-01-31",
+      "direct": 11,
+      "engaged_sessions": 24,
+      "label": "Jan 31",
+      "observed": true,
+      "organic": 15,
+      "sessions": 32
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-02-01",
+      "direct": 7,
+      "engaged_sessions": 33,
+      "label": "Feb 1",
+      "observed": true,
+      "organic": 25,
+      "sessions": 40
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-02-02",
+      "direct": 5,
+      "engaged_sessions": 29,
+      "label": "Feb 2",
+      "observed": true,
+      "organic": 23,
+      "sessions": 36
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-02-03",
+      "direct": 5,
+      "engaged_sessions": 25,
+      "label": "Feb 3",
+      "observed": true,
+      "organic": 22,
+      "sessions": 33
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-02-04",
+      "direct": 6,
+      "engaged_sessions": 19,
+      "label": "Feb 4",
+      "observed": true,
+      "organic": 11,
+      "sessions": 28
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-02-05",
+      "direct": 9,
+      "engaged_sessions": 24,
+      "label": "Feb 5",
+      "observed": true,
+      "organic": 20,
+      "sessions": 35
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-02-06",
+      "direct": 16,
+      "engaged_sessions": 21,
+      "label": "Feb 6",
+      "observed": true,
+      "organic": 10,
+      "sessions": 39
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-02-07",
+      "direct": 5,
+      "engaged_sessions": 27,
+      "label": "Feb 7",
+      "observed": true,
+      "organic": 19,
+      "sessions": 34
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-08",
+      "direct": 6,
+      "engaged_sessions": 17,
+      "label": "Feb 8",
+      "observed": true,
+      "organic": 14,
+      "sessions": 28
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-09",
+      "direct": 7,
+      "engaged_sessions": 24,
+      "label": "Feb 9",
+      "observed": true,
+      "organic": 19,
+      "sessions": 36
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-10",
+      "direct": 3,
+      "engaged_sessions": 19,
+      "label": "Feb 10",
+      "observed": true,
+      "organic": 16,
+      "sessions": 24
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-11",
+      "direct": 2,
+      "engaged_sessions": 24,
+      "label": "Feb 11",
+      "observed": true,
+      "organic": 25,
+      "sessions": 35
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-12",
+      "direct": 4,
+      "engaged_sessions": 26,
+      "label": "Feb 12",
+      "observed": true,
+      "organic": 20,
+      "sessions": 32
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-13",
+      "direct": 5,
+      "engaged_sessions": 18,
+      "label": "Feb 13",
+      "observed": true,
+      "organic": 18,
+      "sessions": 29
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-14",
+      "direct": 7,
+      "engaged_sessions": 17,
+      "label": "Feb 14",
+      "observed": true,
+      "organic": 13,
+      "sessions": 27
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-15",
+      "direct": 3,
+      "engaged_sessions": 19,
+      "label": "Feb 15",
+      "observed": true,
+      "organic": 12,
+      "sessions": 26
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-16",
+      "direct": 6,
+      "engaged_sessions": 24,
+      "label": "Feb 16",
+      "observed": true,
+      "organic": 25,
+      "sessions": 37
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-17",
+      "direct": 7,
+      "engaged_sessions": 20,
+      "label": "Feb 17",
+      "observed": true,
+      "organic": 22,
+      "sessions": 35
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-18",
+      "direct": 6,
+      "engaged_sessions": 20,
+      "label": "Feb 18",
+      "observed": true,
+      "organic": 18,
+      "sessions": 31
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-19",
+      "direct": 8,
+      "engaged_sessions": 17,
+      "label": "Feb 19",
+      "observed": true,
+      "organic": 9,
+      "sessions": 23
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-20",
+      "direct": 6,
+      "engaged_sessions": 20,
+      "label": "Feb 20",
+      "observed": true,
+      "organic": 21,
+      "sessions": 31
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-21",
+      "direct": 7,
+      "engaged_sessions": 24,
+      "label": "Feb 21",
+      "observed": true,
+      "organic": 22,
+      "sessions": 37
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-22",
+      "direct": 8,
+      "engaged_sessions": 30,
+      "label": "Feb 22",
+      "observed": true,
+      "organic": 23,
+      "sessions": 42
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-23",
+      "direct": 12,
+      "engaged_sessions": 25,
+      "label": "Feb 23",
+      "observed": true,
+      "organic": 17,
+      "sessions": 37
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-24",
+      "direct": 11,
+      "engaged_sessions": 24,
+      "label": "Feb 24",
+      "observed": true,
+      "organic": 23,
+      "sessions": 38
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-25",
+      "direct": 8,
+      "engaged_sessions": 27,
+      "label": "Feb 25",
+      "observed": true,
+      "organic": 16,
+      "sessions": 38
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-26",
+      "direct": 3,
+      "engaged_sessions": 22,
+      "label": "Feb 26",
+      "observed": true,
+      "organic": 23,
+      "sessions": 31
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-27",
+      "direct": 3,
+      "engaged_sessions": 13,
+      "label": "Feb 27",
+      "observed": true,
+      "organic": 13,
+      "sessions": 20
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-02-28",
+      "direct": 2,
+      "engaged_sessions": 12,
+      "label": "Feb 28",
+      "observed": true,
+      "organic": 12,
+      "sessions": 19
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-01",
+      "direct": 4,
+      "engaged_sessions": 22,
+      "label": "Mar 1",
+      "observed": true,
+      "organic": 17,
+      "sessions": 32
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-02",
+      "direct": 5,
+      "engaged_sessions": 24,
+      "label": "Mar 2",
+      "observed": true,
+      "organic": 18,
+      "sessions": 35
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-03",
+      "direct": 6,
+      "engaged_sessions": 15,
+      "label": "Mar 3",
+      "observed": true,
+      "organic": 8,
+      "sessions": 20
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-04",
+      "direct": 2,
+      "engaged_sessions": 12,
+      "label": "Mar 4",
+      "observed": true,
+      "organic": 9,
+      "sessions": 17
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-05",
+      "direct": 7,
+      "engaged_sessions": 20,
+      "label": "Mar 5",
+      "observed": true,
+      "organic": 13,
+      "sessions": 27
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-06",
+      "direct": 4,
+      "engaged_sessions": 12,
+      "label": "Mar 6",
+      "observed": true,
+      "organic": 11,
+      "sessions": 19
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-07",
+      "direct": 13,
+      "engaged_sessions": 25,
+      "label": "Mar 7",
+      "observed": true,
+      "organic": 16,
+      "sessions": 36
+    },
+    {
+      "creative": "Spice Up Your Kitchen",
+      "date": "2026-03-08",
+      "direct": 11,
+      "engaged_sessions": 22,
+      "label": "Mar 8",
+      "observed": true,
+      "organic": 19,
+      "sessions": 36
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-09",
+      "direct": 4,
+      "engaged_sessions": 25,
+      "label": "Mar 9",
+      "observed": true,
+      "organic": 25,
+      "sessions": 37
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-10",
+      "direct": 3,
+      "engaged_sessions": 21,
+      "label": "Mar 10",
+      "observed": true,
+      "organic": 20,
+      "sessions": 31
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-11",
+      "direct": 6,
+      "engaged_sessions": 22,
+      "label": "Mar 11",
+      "observed": true,
+      "organic": 15,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-12",
+      "direct": 5,
+      "engaged_sessions": 22,
+      "label": "Mar 12",
+      "observed": true,
+      "organic": 13,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-13",
+      "direct": 7,
+      "engaged_sessions": 23,
+      "label": "Mar 13",
+      "observed": true,
+      "organic": 18,
+      "sessions": 34
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-14",
+      "direct": 5,
+      "engaged_sessions": 14,
+      "label": "Mar 14",
+      "observed": true,
+      "organic": 13,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-15",
+      "direct": 4,
+      "engaged_sessions": 21,
+      "label": "Mar 15",
+      "observed": true,
+      "organic": 18,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-16",
+      "direct": 5,
+      "engaged_sessions": 19,
+      "label": "Mar 16",
+      "observed": true,
+      "organic": 19,
+      "sessions": 31
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-17",
+      "direct": 7,
+      "engaged_sessions": 26,
+      "label": "Mar 17",
+      "observed": true,
+      "organic": 20,
+      "sessions": 36
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-18",
+      "direct": 5,
+      "engaged_sessions": 14,
+      "label": "Mar 18",
+      "observed": true,
+      "organic": 15,
+      "sessions": 26
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-19",
+      "direct": 5,
+      "engaged_sessions": 16,
+      "label": "Mar 19",
+      "observed": true,
+      "organic": 15,
+      "sessions": 25
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-20",
+      "direct": 4,
+      "engaged_sessions": 17,
+      "label": "Mar 20",
+      "observed": true,
+      "organic": 16,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-21",
+      "direct": 3,
+      "engaged_sessions": 15,
+      "label": "Mar 21",
+      "observed": true,
+      "organic": 11,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-22",
+      "direct": 14,
+      "engaged_sessions": 23,
+      "label": "Mar 22",
+      "observed": true,
+      "organic": 16,
+      "sessions": 35
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-23",
+      "direct": 6,
+      "engaged_sessions": 11,
+      "label": "Mar 23",
+      "observed": true,
+      "organic": 9,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-24",
+      "direct": 8,
+      "engaged_sessions": 12,
+      "label": "Mar 24",
+      "observed": true,
+      "organic": 14,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-25",
+      "direct": 5,
+      "engaged_sessions": 20,
+      "label": "Mar 25",
+      "observed": true,
+      "organic": 23,
+      "sessions": 34
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-26",
+      "direct": 2,
+      "engaged_sessions": 15,
+      "label": "Mar 26",
+      "observed": true,
+      "organic": 11,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-27",
+      "direct": 3,
+      "engaged_sessions": 12,
+      "label": "Mar 27",
+      "observed": true,
+      "organic": 12,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-28",
+      "direct": 9,
+      "engaged_sessions": 18,
+      "label": "Mar 28",
+      "observed": true,
+      "organic": 14,
+      "sessions": 33
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-29",
+      "direct": 6,
+      "engaged_sessions": 14,
+      "label": "Mar 29",
+      "observed": true,
+      "organic": 14,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-30",
+      "direct": 7,
+      "engaged_sessions": 15,
+      "label": "Mar 30",
+      "observed": true,
+      "organic": 12,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-03-31",
+      "direct": 6,
+      "engaged_sessions": 11,
+      "label": "Mar 31",
+      "observed": true,
+      "organic": 12,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-01",
+      "direct": 3,
+      "engaged_sessions": 15,
+      "label": "Apr 1",
+      "observed": true,
+      "organic": 16,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-02",
+      "direct": 5,
+      "engaged_sessions": 16,
+      "label": "Apr 2",
+      "observed": true,
+      "organic": 18,
+      "sessions": 29
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-03",
+      "direct": 3,
+      "engaged_sessions": 18,
+      "label": "Apr 3",
+      "observed": true,
+      "organic": 17,
+      "sessions": 26
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-04",
+      "direct": 2,
+      "engaged_sessions": 10,
+      "label": "Apr 4",
+      "observed": true,
+      "organic": 8,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-05",
+      "direct": 7,
+      "engaged_sessions": 15,
+      "label": "Apr 5",
+      "observed": true,
+      "organic": 9,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-06",
+      "direct": 4,
+      "engaged_sessions": 25,
+      "label": "Apr 6",
+      "observed": true,
+      "organic": 25,
+      "sessions": 37
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-07",
+      "direct": 6,
+      "engaged_sessions": 15,
+      "label": "Apr 7",
+      "observed": true,
+      "organic": 12,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-08",
+      "direct": 3,
+      "engaged_sessions": 13,
+      "label": "Apr 8",
+      "observed": true,
+      "organic": 15,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-09",
+      "direct": 6,
+      "engaged_sessions": 15,
+      "label": "Apr 9",
+      "observed": true,
+      "organic": 11,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-10",
+      "direct": 3,
+      "engaged_sessions": 11,
+      "label": "Apr 10",
+      "observed": true,
+      "organic": 11,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-11",
+      "direct": 3,
+      "engaged_sessions": 12,
+      "label": "Apr 11",
+      "observed": true,
+      "organic": 11,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-12",
+      "direct": 2,
+      "engaged_sessions": 20,
+      "label": "Apr 12",
+      "observed": true,
+      "organic": 16,
+      "sessions": 25
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-13",
+      "direct": 3,
+      "engaged_sessions": 12,
+      "label": "Apr 13",
+      "observed": true,
+      "organic": 12,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-14",
+      "direct": 4,
+      "engaged_sessions": 11,
+      "label": "Apr 14",
+      "observed": true,
+      "organic": 11,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-15",
+      "direct": 2,
+      "engaged_sessions": 9,
+      "label": "Apr 15",
+      "observed": true,
+      "organic": 8,
+      "sessions": 14
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-16",
+      "direct": 2,
+      "engaged_sessions": 15,
+      "label": "Apr 16",
+      "observed": true,
+      "organic": 17,
+      "sessions": 26
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-17",
+      "direct": 8,
+      "engaged_sessions": 12,
+      "label": "Apr 17",
+      "observed": true,
+      "organic": 9,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-18",
+      "direct": 2,
+      "engaged_sessions": 13,
+      "label": "Apr 18",
+      "observed": true,
+      "organic": 8,
+      "sessions": 15
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-19",
+      "direct": 2,
+      "engaged_sessions": 17,
+      "label": "Apr 19",
+      "observed": true,
+      "organic": 15,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-20",
+      "direct": 1,
+      "engaged_sessions": 22,
+      "label": "Apr 20",
+      "observed": true,
+      "organic": 24,
+      "sessions": 33
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-21",
+      "direct": 4,
+      "engaged_sessions": 15,
+      "label": "Apr 21",
+      "observed": true,
+      "organic": 12,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-22",
+      "direct": 3,
+      "engaged_sessions": 21,
+      "label": "Apr 22",
+      "observed": true,
+      "organic": 20,
+      "sessions": 30
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-23",
+      "direct": 5,
+      "engaged_sessions": 20,
+      "label": "Apr 23",
+      "observed": true,
+      "organic": 15,
+      "sessions": 25
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-24",
+      "direct": 6,
+      "engaged_sessions": 13,
+      "label": "Apr 24",
+      "observed": true,
+      "organic": 12,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-25",
+      "direct": 2,
+      "engaged_sessions": 8,
+      "label": "Apr 25",
+      "observed": true,
+      "organic": 10,
+      "sessions": 16
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-26",
+      "direct": 4,
+      "engaged_sessions": 13,
+      "label": "Apr 26",
+      "observed": true,
+      "organic": 12,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-27",
+      "direct": 3,
+      "engaged_sessions": 16,
+      "label": "Apr 27",
+      "observed": true,
+      "organic": 17,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-28",
+      "direct": 11,
+      "engaged_sessions": 22,
+      "label": "Apr 28",
+      "observed": true,
+      "organic": 14,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-29",
+      "direct": 2,
+      "engaged_sessions": 18,
+      "label": "Apr 29",
+      "observed": true,
+      "organic": 11,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-04-30",
+      "direct": 8,
+      "engaged_sessions": 11,
+      "label": "Apr 30",
+      "observed": true,
+      "organic": 8,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-01",
+      "direct": 3,
+      "engaged_sessions": 12,
+      "label": "May 1",
+      "observed": true,
+      "organic": 11,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-02",
+      "direct": 2,
+      "engaged_sessions": 14,
+      "label": "May 2",
+      "observed": true,
+      "organic": 15,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-03",
+      "direct": 4,
+      "engaged_sessions": 16,
+      "label": "May 3",
+      "observed": true,
+      "organic": 9,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-04",
+      "direct": 4,
+      "engaged_sessions": 12,
+      "label": "May 4",
+      "observed": true,
+      "organic": 14,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-05",
+      "direct": 4,
+      "engaged_sessions": 19,
+      "label": "May 5",
+      "observed": true,
+      "organic": 17,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-06",
+      "direct": 4,
+      "engaged_sessions": 20,
+      "label": "May 6",
+      "observed": true,
+      "organic": 17,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-07",
+      "direct": 0,
+      "engaged_sessions": 16,
+      "label": "May 7",
+      "observed": true,
+      "organic": 13,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-08",
+      "direct": 4,
+      "engaged_sessions": 16,
+      "label": "May 8",
+      "observed": true,
+      "organic": 14,
+      "sessions": 26
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-09",
+      "direct": 3,
+      "engaged_sessions": 15,
+      "label": "May 9",
+      "observed": true,
+      "organic": 9,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-10",
+      "direct": 7,
+      "engaged_sessions": 15,
+      "label": "May 10",
+      "observed": true,
+      "organic": 12,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-11",
+      "direct": 1,
+      "engaged_sessions": 16,
+      "label": "May 11",
+      "observed": true,
+      "organic": 14,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-12",
+      "direct": 5,
+      "engaged_sessions": 11,
+      "label": "May 12",
+      "observed": true,
+      "organic": 11,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-13",
+      "direct": 2,
+      "engaged_sessions": 17,
+      "label": "May 13",
+      "observed": true,
+      "organic": 15,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-14",
+      "direct": 5,
+      "engaged_sessions": 10,
+      "label": "May 14",
+      "observed": true,
+      "organic": 9,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-15",
+      "direct": 3,
+      "engaged_sessions": 14,
+      "label": "May 15",
+      "observed": true,
+      "organic": 8,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-16",
+      "direct": 6,
+      "engaged_sessions": 9,
+      "label": "May 16",
+      "observed": true,
+      "organic": 7,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-17",
+      "direct": 2,
+      "engaged_sessions": 19,
+      "label": "May 17",
+      "observed": true,
+      "organic": 21,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-18",
+      "direct": 5,
+      "engaged_sessions": 20,
+      "label": "May 18",
+      "observed": true,
+      "organic": 18,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-19",
+      "direct": 2,
+      "engaged_sessions": 9,
+      "label": "May 19",
+      "observed": true,
+      "organic": 11,
+      "sessions": 16
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-20",
+      "direct": 7,
+      "engaged_sessions": 16,
+      "label": "May 20",
+      "observed": true,
+      "organic": 9,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-21",
+      "direct": 2,
+      "engaged_sessions": 15,
+      "label": "May 21",
+      "observed": true,
+      "organic": 15,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-22",
+      "direct": 2,
+      "engaged_sessions": 13,
+      "label": "May 22",
+      "observed": true,
+      "organic": 14,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-23",
+      "direct": 7,
+      "engaged_sessions": 12,
+      "label": "May 23",
+      "observed": true,
+      "organic": 5,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-24",
+      "direct": 10,
+      "engaged_sessions": 15,
+      "label": "May 24",
+      "observed": true,
+      "organic": 6,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-25",
+      "direct": 9,
+      "engaged_sessions": 19,
+      "label": "May 25",
+      "observed": true,
+      "organic": 16,
+      "sessions": 32
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-26",
+      "direct": 5,
+      "engaged_sessions": 13,
+      "label": "May 26",
+      "observed": true,
+      "organic": 10,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-27",
+      "direct": 1,
+      "engaged_sessions": 12,
+      "label": "May 27",
+      "observed": true,
+      "organic": 10,
+      "sessions": 15
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-28",
+      "direct": 1,
+      "engaged_sessions": 14,
+      "label": "May 28",
+      "observed": true,
+      "organic": 13,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-29",
+      "direct": 0,
+      "engaged_sessions": 16,
+      "label": "May 29",
+      "observed": true,
+      "organic": 14,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-30",
+      "direct": 2,
+      "engaged_sessions": 9,
+      "label": "May 30",
+      "observed": true,
+      "organic": 9,
+      "sessions": 16
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-05-31",
+      "direct": 6,
+      "engaged_sessions": 21,
+      "label": "May 31",
+      "observed": true,
+      "organic": 17,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-01",
+      "direct": 7,
+      "engaged_sessions": 21,
+      "label": "Jun 1",
+      "observed": true,
+      "organic": 18,
+      "sessions": 31
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-02",
+      "direct": 1,
+      "engaged_sessions": 12,
+      "label": "Jun 2",
+      "observed": true,
+      "organic": 13,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-03",
+      "direct": 2,
+      "engaged_sessions": 14,
+      "label": "Jun 3",
+      "observed": true,
+      "organic": 15,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-04",
+      "direct": 3,
+      "engaged_sessions": 16,
+      "label": "Jun 4",
+      "observed": true,
+      "organic": 16,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-05",
+      "direct": 6,
+      "engaged_sessions": 11,
+      "label": "Jun 5",
+      "observed": true,
+      "organic": 9,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-06",
+      "direct": 1,
+      "engaged_sessions": 11,
+      "label": "Jun 6",
+      "observed": true,
+      "organic": 10,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-07",
+      "direct": 4,
+      "engaged_sessions": 12,
+      "label": "Jun 7",
+      "observed": true,
+      "organic": 12,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-08",
+      "direct": 5,
+      "engaged_sessions": 21,
+      "label": "Jun 8",
+      "observed": true,
+      "organic": 12,
+      "sessions": 25
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-09",
+      "direct": 5,
+      "engaged_sessions": 23,
+      "label": "Jun 9",
+      "observed": true,
+      "organic": 15,
+      "sessions": 31
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-10",
+      "direct": 5,
+      "engaged_sessions": 17,
+      "label": "Jun 10",
+      "observed": true,
+      "organic": 16,
+      "sessions": 25
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-11",
+      "direct": 5,
+      "engaged_sessions": 9,
+      "label": "Jun 11",
+      "observed": true,
+      "organic": 6,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-12",
+      "direct": 1,
+      "engaged_sessions": 13,
+      "label": "Jun 12",
+      "observed": true,
+      "organic": 14,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-13",
+      "direct": 1,
+      "engaged_sessions": 11,
+      "label": "Jun 13",
+      "observed": true,
+      "organic": 10,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-14",
+      "direct": 3,
+      "engaged_sessions": 15,
+      "label": "Jun 14",
+      "observed": true,
+      "organic": 12,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-15",
+      "direct": 2,
+      "engaged_sessions": 14,
+      "label": "Jun 15",
+      "observed": true,
+      "organic": 11,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-16",
+      "direct": 4,
+      "engaged_sessions": 18,
+      "label": "Jun 16",
+      "observed": true,
+      "organic": 13,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-17",
+      "direct": 0,
+      "engaged_sessions": 13,
+      "label": "Jun 17",
+      "observed": true,
+      "organic": 14,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-18",
+      "direct": 3,
+      "engaged_sessions": 12,
+      "label": "Jun 18",
+      "observed": true,
+      "organic": 7,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-19",
+      "direct": 3,
+      "engaged_sessions": 13,
+      "label": "Jun 19",
+      "observed": true,
+      "organic": 8,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-20",
+      "direct": 2,
+      "engaged_sessions": 12,
+      "label": "Jun 20",
+      "observed": true,
+      "organic": 9,
+      "sessions": 15
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-21",
+      "direct": 21,
+      "engaged_sessions": 21,
+      "label": "Jun 21",
+      "observed": true,
+      "organic": 9,
+      "sessions": 35
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-22",
+      "direct": 5,
+      "engaged_sessions": 18,
+      "label": "Jun 22",
+      "observed": true,
+      "organic": 19,
+      "sessions": 30
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-23",
+      "direct": 6,
+      "engaged_sessions": 20,
+      "label": "Jun 23",
+      "observed": true,
+      "organic": 20,
+      "sessions": 32
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-24",
+      "direct": 0,
+      "engaged_sessions": 14,
+      "label": "Jun 24",
+      "observed": true,
+      "organic": 12,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-25",
+      "direct": 2,
+      "engaged_sessions": 14,
+      "label": "Jun 25",
+      "observed": true,
+      "organic": 9,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-26",
+      "direct": 2,
+      "engaged_sessions": 11,
+      "label": "Jun 26",
+      "observed": true,
+      "organic": 11,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-27",
+      "direct": 6,
+      "engaged_sessions": 14,
+      "label": "Jun 27",
+      "observed": true,
+      "organic": 11,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-28",
+      "direct": 6,
+      "engaged_sessions": 10,
+      "label": "Jun 28",
+      "observed": true,
+      "organic": 8,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-29",
+      "direct": 2,
+      "engaged_sessions": 9,
+      "label": "Jun 29",
+      "observed": true,
+      "organic": 9,
+      "sessions": 14
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-06-30",
+      "direct": 5,
+      "engaged_sessions": 10,
+      "label": "Jun 30",
+      "observed": true,
+      "organic": 11,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-01",
+      "direct": 9,
+      "engaged_sessions": 15,
+      "label": "Jul 1",
+      "observed": true,
+      "organic": 11,
+      "sessions": 25
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-02",
+      "direct": 5,
+      "engaged_sessions": 18,
+      "label": "Jul 2",
+      "observed": true,
+      "organic": 14,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-03",
+      "direct": 3,
+      "engaged_sessions": 7,
+      "label": "Jul 3",
+      "observed": true,
+      "organic": 4,
+      "sessions": 12
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-04",
+      "direct": 1,
+      "engaged_sessions": 9,
+      "label": "Jul 4",
+      "observed": true,
+      "organic": 6,
+      "sessions": 13
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-05",
+      "direct": 1,
+      "engaged_sessions": 6,
+      "label": "Jul 5",
+      "observed": true,
+      "organic": 2,
+      "sessions": 10
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-06",
+      "direct": 0,
+      "engaged_sessions": 12,
+      "label": "Jul 6",
+      "observed": true,
+      "organic": 8,
+      "sessions": 14
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-07",
+      "direct": 2,
+      "engaged_sessions": 13,
+      "label": "Jul 7",
+      "observed": true,
+      "organic": 11,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-08",
+      "direct": 3,
+      "engaged_sessions": 11,
+      "label": "Jul 8",
+      "observed": true,
+      "organic": 13,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-09",
+      "direct": 1,
+      "engaged_sessions": 16,
+      "label": "Jul 9",
+      "observed": true,
+      "organic": 17,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-10",
+      "direct": 1,
+      "engaged_sessions": 8,
+      "label": "Jul 10",
+      "observed": true,
+      "organic": 6,
+      "sessions": 13
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-11",
+      "direct": 1,
+      "engaged_sessions": 8,
+      "label": "Jul 11",
+      "observed": true,
+      "organic": 5,
+      "sessions": 10
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-12",
+      "direct": 4,
+      "engaged_sessions": 9,
+      "label": "Jul 12",
+      "observed": true,
+      "organic": 7,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-13",
+      "direct": 0,
+      "engaged_sessions": 15,
+      "label": "Jul 13",
+      "observed": true,
+      "organic": 8,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-14",
+      "direct": 2,
+      "engaged_sessions": 14,
+      "label": "Jul 14",
+      "observed": true,
+      "organic": 9,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-15",
+      "direct": 3,
+      "engaged_sessions": 11,
+      "label": "Jul 15",
+      "observed": true,
+      "organic": 7,
+      "sessions": 15
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-16",
+      "direct": 4,
+      "engaged_sessions": 11,
+      "label": "Jul 16",
+      "observed": true,
+      "organic": 8,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-17",
+      "direct": 1,
+      "engaged_sessions": 13,
+      "label": "Jul 17",
+      "observed": true,
+      "organic": 9,
+      "sessions": 16
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-18",
+      "direct": 0,
+      "engaged_sessions": 13,
+      "label": "Jul 18",
+      "observed": true,
+      "organic": 10,
+      "sessions": 16
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-19",
+      "direct": 4,
+      "engaged_sessions": 13,
+      "label": "Jul 19",
+      "observed": true,
+      "organic": 11,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-20",
+      "direct": 12,
+      "engaged_sessions": 20,
+      "label": "Jul 20",
+      "observed": true,
+      "organic": 11,
+      "sessions": 29
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-21",
+      "direct": 5,
+      "engaged_sessions": 11,
+      "label": "Jul 21",
+      "observed": true,
+      "organic": 4,
+      "sessions": 14
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-22",
+      "direct": 5,
+      "engaged_sessions": 13,
+      "label": "Jul 22",
+      "observed": true,
+      "organic": 7,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-23",
+      "direct": 5,
+      "engaged_sessions": 15,
+      "label": "Jul 23",
+      "observed": true,
+      "organic": 12,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-24",
+      "direct": 3,
+      "engaged_sessions": 11,
+      "label": "Jul 24",
+      "observed": true,
+      "organic": 5,
+      "sessions": 13
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-25",
+      "direct": 4,
+      "engaged_sessions": 11,
+      "label": "Jul 25",
+      "observed": true,
+      "organic": 6,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-26",
+      "direct": 14,
+      "engaged_sessions": 19,
+      "label": "Jul 26",
+      "observed": true,
+      "organic": 11,
+      "sessions": 30
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-27",
+      "direct": 3,
+      "engaged_sessions": 10,
+      "label": "Jul 27",
+      "observed": true,
+      "organic": 9,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-28",
+      "direct": 3,
+      "engaged_sessions": 13,
+      "label": "Jul 28",
+      "observed": true,
+      "organic": 10,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-29",
+      "direct": 2,
+      "engaged_sessions": 13,
+      "label": "Jul 29",
+      "observed": true,
+      "organic": 16,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-30",
+      "direct": 3,
+      "engaged_sessions": 9,
+      "label": "Jul 30",
+      "observed": true,
+      "organic": 11,
+      "sessions": 19
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-07-31",
+      "direct": 7,
+      "engaged_sessions": 19,
+      "label": "Jul 31",
+      "observed": true,
+      "organic": 15,
+      "sessions": 26
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-01",
+      "direct": 10,
+      "engaged_sessions": 16,
+      "label": "Aug 1",
+      "observed": true,
+      "organic": 11,
+      "sessions": 25
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-02",
+      "direct": 5,
+      "engaged_sessions": 15,
+      "label": "Aug 2",
+      "observed": true,
+      "organic": 11,
+      "sessions": 20
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-03",
+      "direct": 21,
+      "engaged_sessions": 29,
+      "label": "Aug 3",
+      "observed": true,
+      "organic": 14,
+      "sessions": 40
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-04",
+      "direct": 5,
+      "engaged_sessions": 19,
+      "label": "Aug 4",
+      "observed": true,
+      "organic": 16,
+      "sessions": 27
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-05",
+      "direct": 2,
+      "engaged_sessions": 12,
+      "label": "Aug 5",
+      "observed": true,
+      "organic": 8,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-06",
+      "direct": 3,
+      "engaged_sessions": 18,
+      "label": "Aug 6",
+      "observed": true,
+      "organic": 15,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-07",
+      "direct": 3,
+      "engaged_sessions": 17,
+      "label": "Aug 7",
+      "observed": true,
+      "organic": 12,
+      "sessions": 22
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-08",
+      "direct": 3,
+      "engaged_sessions": 18,
+      "label": "Aug 8",
+      "observed": true,
+      "organic": 15,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-09",
+      "direct": 4,
+      "engaged_sessions": 14,
+      "label": "Aug 9",
+      "observed": true,
+      "organic": 9,
+      "sessions": 17
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-10",
+      "direct": 9,
+      "engaged_sessions": 17,
+      "label": "Aug 10",
+      "observed": true,
+      "organic": 10,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-11",
+      "direct": 7,
+      "engaged_sessions": 18,
+      "label": "Aug 11",
+      "observed": true,
+      "organic": 16,
+      "sessions": 29
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-12",
+      "direct": 5,
+      "engaged_sessions": 15,
+      "label": "Aug 12",
+      "observed": true,
+      "organic": 15,
+      "sessions": 28
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-13",
+      "direct": 1,
+      "engaged_sessions": 10,
+      "label": "Aug 13",
+      "observed": true,
+      "organic": 8,
+      "sessions": 13
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-14",
+      "direct": 1,
+      "engaged_sessions": 15,
+      "label": "Aug 14",
+      "observed": true,
+      "organic": 13,
+      "sessions": 21
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-15",
+      "direct": 2,
+      "engaged_sessions": 11,
+      "label": "Aug 15",
+      "observed": true,
+      "organic": 7,
+      "sessions": 16
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-16",
+      "direct": 7,
+      "engaged_sessions": 16,
+      "label": "Aug 16",
+      "observed": true,
+      "organic": 11,
+      "sessions": 24
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-17",
+      "direct": 4,
+      "engaged_sessions": 31,
+      "label": "Aug 17",
+      "observed": true,
+      "organic": 26,
+      "sessions": 35
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-18",
+      "direct": 2,
+      "engaged_sessions": 21,
+      "label": "Aug 18",
+      "observed": true,
+      "organic": 22,
+      "sessions": 29
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-19",
+      "direct": 7,
+      "engaged_sessions": 16,
+      "label": "Aug 19",
+      "observed": true,
+      "organic": 16,
+      "sessions": 29
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-20",
+      "direct": 6,
+      "engaged_sessions": 21,
+      "label": "Aug 20",
+      "observed": true,
+      "organic": 18,
+      "sessions": 31
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-21",
+      "direct": 5,
+      "engaged_sessions": 17,
+      "label": "Aug 21",
+      "observed": true,
+      "organic": 11,
+      "sessions": 23
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-22",
+      "direct": 2,
+      "engaged_sessions": 14,
+      "label": "Aug 22",
+      "observed": true,
+      "organic": 9,
+      "sessions": 18
+    },
+    {
+      "creative": "No billboard scheduled",
+      "date": "2026-08-23",
+      "direct": 3,
+      "engaged_sessions": 17,
+      "label": "Aug 23",
+      "observed": true,
+      "organic": 12,
+      "sessions": 23
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-24",
+      "direct": 1,
+      "engaged_sessions": 12,
+      "label": "Aug 24",
+      "observed": true,
+      "organic": 13,
+      "sessions": 17
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-25",
+      "direct": 3,
+      "engaged_sessions": 10,
+      "label": "Aug 25",
+      "observed": true,
+      "organic": 9,
+      "sessions": 16
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-26",
+      "direct": 14,
+      "engaged_sessions": 15,
+      "label": "Aug 26",
+      "observed": true,
+      "organic": 10,
+      "sessions": 30
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-27",
+      "direct": 4,
+      "engaged_sessions": 12,
+      "label": "Aug 27",
+      "observed": true,
+      "organic": 8,
+      "sessions": 16
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-28",
+      "direct": 3,
+      "engaged_sessions": 11,
+      "label": "Aug 28",
+      "observed": true,
+      "organic": 11,
+      "sessions": 17
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-29",
+      "direct": 3,
+      "engaged_sessions": 16,
+      "label": "Aug 29",
+      "observed": true,
+      "organic": 14,
+      "sessions": 21
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-30",
+      "direct": 16,
+      "engaged_sessions": 19,
+      "label": "Aug 30",
+      "observed": true,
+      "organic": 12,
+      "sessions": 31
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-08-31",
+      "direct": 2,
+      "engaged_sessions": 4,
+      "label": "Aug 31",
+      "observed": true,
+      "organic": 6,
+      "sessions": 10
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-01",
+      "direct": 6,
+      "engaged_sessions": 17,
+      "label": "Sep 1",
+      "observed": true,
+      "organic": 12,
+      "sessions": 26
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-02",
+      "direct": 4,
+      "engaged_sessions": 11,
+      "label": "Sep 2",
+      "observed": true,
+      "organic": 5,
+      "sessions": 17
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-03",
+      "direct": 5,
+      "engaged_sessions": 20,
+      "label": "Sep 3",
+      "observed": true,
+      "organic": 15,
+      "sessions": 24
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-04",
+      "direct": 4,
+      "engaged_sessions": 22,
+      "label": "Sep 4",
+      "observed": true,
+      "organic": 21,
+      "sessions": 30
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-05",
+      "direct": 4,
+      "engaged_sessions": 20,
+      "label": "Sep 5",
+      "observed": true,
+      "organic": 12,
+      "sessions": 25
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-06",
+      "direct": 3,
+      "engaged_sessions": 8,
+      "label": "Sep 6",
+      "observed": true,
+      "organic": 5,
+      "sessions": 17
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-07",
+      "direct": 6,
+      "engaged_sessions": 12,
+      "label": "Sep 7",
+      "observed": true,
+      "organic": 10,
+      "sessions": 25
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-08",
+      "direct": 3,
+      "engaged_sessions": 17,
+      "label": "Sep 8",
+      "observed": true,
+      "organic": 16,
+      "sessions": 27
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-09",
+      "direct": 2,
+      "engaged_sessions": 13,
+      "label": "Sep 9",
+      "observed": true,
+      "organic": 12,
+      "sessions": 20
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-10",
+      "direct": 4,
+      "engaged_sessions": 14,
+      "label": "Sep 10",
+      "observed": true,
+      "organic": 16,
+      "sessions": 24
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-11",
+      "direct": 3,
+      "engaged_sessions": 19,
+      "label": "Sep 11",
+      "observed": true,
+      "organic": 11,
+      "sessions": 22
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-12",
+      "direct": 1,
+      "engaged_sessions": 13,
+      "label": "Sep 12",
+      "observed": true,
+      "organic": 9,
+      "sessions": 19
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-13",
+      "direct": 4,
+      "engaged_sessions": 15,
+      "label": "Sep 13",
+      "observed": true,
+      "organic": 9,
+      "sessions": 19
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-14",
+      "direct": 6,
+      "engaged_sessions": 17,
+      "label": "Sep 14",
+      "observed": true,
+      "organic": 11,
+      "sessions": 27
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-15",
+      "direct": 8,
+      "engaged_sessions": 16,
+      "label": "Sep 15",
+      "observed": true,
+      "organic": 17,
+      "sessions": 29
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-16",
+      "direct": 6,
+      "engaged_sessions": 16,
+      "label": "Sep 16",
+      "observed": true,
+      "organic": 12,
+      "sessions": 24
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-17",
+      "direct": 3,
+      "engaged_sessions": 18,
+      "label": "Sep 17",
+      "observed": true,
+      "organic": 13,
+      "sessions": 23
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-18",
+      "direct": 4,
+      "engaged_sessions": 22,
+      "label": "Sep 18",
+      "observed": true,
+      "organic": 21,
+      "sessions": 35
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-19",
+      "direct": 1,
+      "engaged_sessions": 8,
+      "label": "Sep 19",
+      "observed": true,
+      "organic": 12,
+      "sessions": 17
+    },
+    {
+      "creative": "Stir Your Imagination",
+      "date": "2026-09-20",
+      "direct": 1,
+      "engaged_sessions": 15,
+      "label": "Sep 20",
+      "observed": true,
+      "organic": 14,
+      "sessions": 23
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-21",
+      "direct": 9,
+      "engaged_sessions": 18,
+      "label": "Sep 21",
+      "observed": true,
+      "organic": 9,
+      "sessions": 26
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-22",
+      "direct": 4,
+      "engaged_sessions": 20,
+      "label": "Sep 22",
+      "observed": true,
+      "organic": 22,
+      "sessions": 32
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-23",
+      "direct": 2,
+      "engaged_sessions": 16,
+      "label": "Sep 23",
+      "observed": true,
+      "organic": 18,
+      "sessions": 26
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-24",
+      "direct": 4,
+      "engaged_sessions": 12,
+      "label": "Sep 24",
+      "observed": true,
+      "organic": 9,
+      "sessions": 17
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-25",
+      "direct": 6,
+      "engaged_sessions": 16,
+      "label": "Sep 25",
+      "observed": true,
+      "organic": 12,
+      "sessions": 25
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-26",
+      "direct": 4,
+      "engaged_sessions": 14,
+      "label": "Sep 26",
+      "observed": true,
+      "organic": 10,
+      "sessions": 21
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-27",
+      "direct": 17,
+      "engaged_sessions": 17,
+      "label": "Sep 27",
+      "observed": true,
+      "organic": 14,
+      "sessions": 35
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-28",
+      "direct": 3,
+      "engaged_sessions": 14,
+      "label": "Sep 28",
+      "observed": true,
+      "organic": 14,
+      "sessions": 20
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-29",
+      "direct": 2,
+      "engaged_sessions": 9,
+      "label": "Sep 29",
+      "observed": true,
+      "organic": 10,
+      "sessions": 15
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-09-30",
+      "direct": 4,
+      "engaged_sessions": 14,
+      "label": "Sep 30",
+      "observed": true,
+      "organic": 13,
+      "sessions": 20
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-01",
+      "direct": 2,
+      "engaged_sessions": 14,
+      "label": "Oct 1",
+      "observed": true,
+      "organic": 8,
+      "sessions": 23
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-02",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 2",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-03",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 3",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-04",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 4",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-05",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 5",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-06",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 6",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-07",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 7",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-08",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 8",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-09",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 9",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-10",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 10",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-11",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 11",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-12",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 12",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-13",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 13",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-14",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 14",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-15",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 15",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-16",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 16",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-17",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 17",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    },
+    {
+      "creative": "Kitchen in a Pickle",
+      "date": "2026-10-18",
+      "direct": 0,
+      "engaged_sessions": 0,
+      "label": "Oct 18",
+      "observed": false,
+      "organic": 0,
+      "sessions": 0
+    }
+  ],
+  "timeline_end": "2026-10-18",
+  "timeline_start": "2026-01-01"
 }
