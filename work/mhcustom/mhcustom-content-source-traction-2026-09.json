@@ -2,58 +2,6 @@
   "end": "2026-09-30",
   "monthly": {
     "/": {
-      "202501": {
-        "Direct": 124,
-        "Organic Search": 209,
-        "Organic Social": 8,
-        "Paid Search": 93,
-        "Referral": 8
-      },
-      "202502": {
-        "AI Assistants": 2,
-        "Direct": 92,
-        "Organic Search": 179,
-        "Organic Social": 6,
-        "Paid Search": 92,
-        "Referral": 6
-      },
-      "202503": {
-        "Direct": 118,
-        "Organic Search": 189,
-        "Organic Social": 2,
-        "Paid Search": 78,
-        "Referral": 4
-      },
-      "202504": {
-        "Direct": 77,
-        "Organic Search": 137,
-        "Organic Social": 4,
-        "Other": 1,
-        "Paid Search": 72,
-        "Referral": 5
-      },
-      "202505": {
-        "Direct": 104,
-        "Organic Search": 173,
-        "Organic Social": 2,
-        "Other": 1,
-        "Paid Search": 8,
-        "Referral": 10
-      },
-      "202506": {
-        "Direct": 87,
-        "Organic Search": 129,
-        "Organic Social": 2,
-        "Referral": 4
-      },
-      "202507": {
-        "AI Assistants": 1,
-        "Direct": 109,
-        "Organic Search": 136,
-        "Organic Social": 5,
-        "Other": 2,
-        "Referral": 1
-      },
       "202508": {
         "AI Assistants": 2,
         "Direct": 96,
@@ -174,33 +122,6 @@
       }
     },
     "/considering-a-kitchen-remodel/kitchen-remodeling-cost/": {
-      "202501": {
-        "Direct": 2,
-        "Organic Search": 1
-      },
-      "202502": {
-        "Organic Search": 1,
-        "Paid Search": 1
-      },
-      "202503": {
-        "Organic Search": 2,
-        "Paid Search": 2
-      },
-      "202504": {
-        "Direct": 2,
-        "Organic Search": 2,
-        "Paid Search": 2
-      },
-      "202505": {
-        "Direct": 3,
-        "Organic Search": 2
-      },
-      "202506": {
-        "Organic Search": 1
-      },
-      "202507": {
-        "Organic Search": 3
-      },
       "202508": {
         "Organic Search": 2,
         "Paid Search": 4
@@ -250,46 +171,6 @@
       }
     },
     "/kitchen-corner-cabinet-storage-solutions/": {
-      "202501": {
-        "Direct": 58,
-        "Organic Search": 347,
-        "Organic Social": 238,
-        "Referral": 2
-      },
-      "202502": {
-        "Direct": 59,
-        "Organic Search": 262,
-        "Organic Social": 211,
-        "Other": 1
-      },
-      "202503": {
-        "Direct": 56,
-        "Organic Search": 218,
-        "Organic Social": 144,
-        "Other": 1
-      },
-      "202504": {
-        "Direct": 33,
-        "Organic Search": 151,
-        "Organic Social": 66
-      },
-      "202505": {
-        "Direct": 18,
-        "Organic Search": 158,
-        "Organic Social": 54,
-        "Referral": 1
-      },
-      "202506": {
-        "Direct": 38,
-        "Organic Search": 147,
-        "Organic Social": 32
-      },
-      "202507": {
-        "AI Assistants": 1,
-        "Direct": 48,
-        "Organic Search": 135,
-        "Organic Social": 9
-      },
       "202508": {
         "AI Assistants": 1,
         "Direct": 13,
@@ -369,46 +250,6 @@
       }
     },
     "/pa-kitchen-photo-gallery/": {
-      "202501": {
-        "Direct": 13,
-        "Organic Search": 24,
-        "Organic Social": 2,
-        "Paid Search": 41,
-        "Referral": 1
-      },
-      "202502": {
-        "Direct": 22,
-        "Organic Search": 12,
-        "Paid Search": 52
-      },
-      "202503": {
-        "Direct": 19,
-        "Organic Search": 15,
-        "Paid Search": 69
-      },
-      "202504": {
-        "Direct": 10,
-        "Organic Search": 21,
-        "Organic Social": 1,
-        "Other": 4,
-        "Paid Search": 49
-      },
-      "202505": {
-        "Direct": 10,
-        "Organic Search": 24,
-        "Paid Search": 4
-      },
-      "202506": {
-        "Direct": 12,
-        "Organic Search": 6,
-        "Other": 1,
-        "Paid Search": 1
-      },
-      "202507": {
-        "Direct": 1,
-        "Organic Search": 5,
-        "Paid Search": 1
-      },
       "202508": {
         "Direct": 10,
         "Organic Search": 10,
@@ -503,94 +344,86 @@
   },
   "pages": [
     {
-      "engaged_sessions": 4526,
-      "engagement_rate": 0.7595234099681154,
+      "engaged_sessions": 2900,
+      "engagement_rate": 0.7882576787170427,
       "path": "/",
-      "sessions": 5959,
+      "sessions": 3679,
       "sources": {
         "AI Assistants": {
-          "engaged_sessions": 19,
-          "sessions": 23
+          "engaged_sessions": 17,
+          "sessions": 20
         },
         "Direct": {
-          "engaged_sessions": 865,
-          "sessions": 1490
+          "engaged_sessions": 534,
+          "sessions": 779
         },
         "Organic Search": {
-          "engaged_sessions": 2560,
-          "sessions": 2946
+          "engaged_sessions": 1581,
+          "sessions": 1794
         },
         "Organic Social": {
-          "engaged_sessions": 45,
-          "sessions": 57
+          "engaged_sessions": 23,
+          "sessions": 28
         },
         "Other": {
-          "engaged_sessions": 15,
-          "sessions": 34
+          "engaged_sessions": 14,
+          "sessions": 30
         },
         "Paid Search": {
-          "engaged_sessions": 949,
-          "sessions": 1304
+          "engaged_sessions": 686,
+          "sessions": 961
         },
         "Referral": {
-          "engaged_sessions": 73,
-          "sessions": 105
+          "engaged_sessions": 45,
+          "sessions": 67
         }
       },
       "title": "Home Page",
       "type": "Homepage"
     },
     {
-      "engaged_sessions": 740,
-      "engagement_rate": 0.5589123867069486,
+      "engaged_sessions": 512,
+      "engagement_rate": 0.5663716814159292,
       "path": "/pa-kitchen-photo-gallery/",
-      "sessions": 1324,
+      "sessions": 904,
       "sources": {
         "Direct": {
-          "engaged_sessions": 77,
-          "sessions": 163
+          "engaged_sessions": 36,
+          "sessions": 76
         },
         "Organic Search": {
-          "engaged_sessions": 103,
-          "sessions": 216
+          "engaged_sessions": 53,
+          "sessions": 109
         },
         "Organic Social": {
-          "engaged_sessions": 3,
-          "sessions": 5
+          "engaged_sessions": 1,
+          "sessions": 2
         },
         "Other": {
-          "engaged_sessions": 28,
-          "sessions": 33
+          "engaged_sessions": 24,
+          "sessions": 28
         },
         "Paid Search": {
-          "engaged_sessions": 528,
-          "sessions": 906
-        },
-        "Referral": {
-          "engaged_sessions": 1,
-          "sessions": 1
+          "engaged_sessions": 398,
+          "sessions": 689
         }
       },
       "title": "PA Kitchen Photo Gallery",
       "type": "Paid landing page"
     },
     {
-      "engaged_sessions": 72,
-      "engagement_rate": 0.6153846153846154,
+      "engaged_sessions": 56,
+      "engagement_rate": 0.6021505376344086,
       "path": "/considering-a-kitchen-remodel/kitchen-remodeling-cost/",
-      "sessions": 117,
+      "sessions": 93,
       "sources": {
-        "Direct": {
-          "engaged_sessions": 4,
-          "sessions": 7
-        },
         "Organic Search": {
-          "engaged_sessions": 11,
-          "sessions": 18
+          "engaged_sessions": 3,
+          "sessions": 6
         },
         "Paid Search": {
-          "engaged_sessions": 57,
-          "sessions": 92
+          "engaged_sessions": 53,
+          "sessions": 87
         }
       },
       "title": "Kitchen Remodel Cost Guide",
@@ -611,38 +444,34 @@
       "type": "Latest blog post"
     },
     {
-      "engaged_sessions": 3240,
-      "engagement_rate": 0.7472324723247232,
+      "engaged_sessions": 1418,
+      "engagement_rate": 0.7673160173160173,
       "path": "/kitchen-corner-cabinet-storage-solutions/",
-      "sessions": 4336,
+      "sessions": 1848,
       "sources": {
         "AI Assistants": {
-          "engaged_sessions": 4,
-          "sessions": 5
+          "engaged_sessions": 3,
+          "sessions": 4
         },
         "Direct": {
-          "engaged_sessions": 361,
-          "sessions": 527
+          "engaged_sessions": 130,
+          "sessions": 217
         },
         "Organic Search": {
-          "engaged_sessions": 2215,
-          "sessions": 2758
+          "engaged_sessions": 1087,
+          "sessions": 1340
         },
         "Organic Social": {
-          "engaged_sessions": 653,
-          "sessions": 1036
-        },
-        "Other": {
-          "engaged_sessions": 0,
-          "sessions": 2
+          "engaged_sessions": 194,
+          "sessions": 282
         },
         "Paid Search": {
           "engaged_sessions": 1,
           "sessions": 1
         },
         "Referral": {
-          "engaged_sessions": 6,
-          "sessions": 7
+          "engaged_sessions": 3,
+          "sessions": 4
         }
       },
       "title": "Kitchen Corner Cabinet Storage Solutions in 2026: 6 Smart Ideas",
@@ -663,5 +492,5 @@
       "type": "Latest blog post"
     }
   ],
-  "start": "2025-01-01"
+  "start": "2025-08-01"
 }
