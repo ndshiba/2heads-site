@@ -1,0 +1,912 @@
+{
+  "as_of": "2026-10-01",
+  "flights": [
+    {
+      "booked_end": "2026-03-08",
+      "complete": true,
+      "creatives": [
+        {
+          "name": "Kitchen in a Pickle",
+          "start": "2026-01-12"
+        },
+        {
+          "name": "Spice Up Your Kitchen",
+          "start": "2026-02-08"
+        }
+      ],
+      "daily": [
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-12",
+          "direct": 3,
+          "engaged_sessions": 25,
+          "label": "Jan 12",
+          "organic": 21,
+          "sessions": 30
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-13",
+          "direct": 7,
+          "engaged_sessions": 18,
+          "label": "Jan 13",
+          "organic": 20,
+          "sessions": 33
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-14",
+          "direct": 7,
+          "engaged_sessions": 26,
+          "label": "Jan 14",
+          "organic": 21,
+          "sessions": 35
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-15",
+          "direct": 12,
+          "engaged_sessions": 35,
+          "label": "Jan 15",
+          "organic": 25,
+          "sessions": 44
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-16",
+          "direct": 4,
+          "engaged_sessions": 24,
+          "label": "Jan 16",
+          "organic": 21,
+          "sessions": 34
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-17",
+          "direct": 9,
+          "engaged_sessions": 22,
+          "label": "Jan 17",
+          "organic": 23,
+          "sessions": 39
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-18",
+          "direct": 4,
+          "engaged_sessions": 28,
+          "label": "Jan 18",
+          "organic": 29,
+          "sessions": 39
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-19",
+          "direct": 3,
+          "engaged_sessions": 22,
+          "label": "Jan 19",
+          "organic": 18,
+          "sessions": 31
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-20",
+          "direct": 3,
+          "engaged_sessions": 20,
+          "label": "Jan 20",
+          "organic": 23,
+          "sessions": 30
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-21",
+          "direct": 3,
+          "engaged_sessions": 14,
+          "label": "Jan 21",
+          "organic": 14,
+          "sessions": 24
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-22",
+          "direct": 9,
+          "engaged_sessions": 29,
+          "label": "Jan 22",
+          "organic": 25,
+          "sessions": 44
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-23",
+          "direct": 3,
+          "engaged_sessions": 20,
+          "label": "Jan 23",
+          "organic": 23,
+          "sessions": 32
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-24",
+          "direct": 10,
+          "engaged_sessions": 19,
+          "label": "Jan 24",
+          "organic": 12,
+          "sessions": 28
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-25",
+          "direct": 7,
+          "engaged_sessions": 13,
+          "label": "Jan 25",
+          "organic": 15,
+          "sessions": 29
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-26",
+          "direct": 3,
+          "engaged_sessions": 16,
+          "label": "Jan 26",
+          "organic": 16,
+          "sessions": 28
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-27",
+          "direct": 9,
+          "engaged_sessions": 25,
+          "label": "Jan 27",
+          "organic": 18,
+          "sessions": 32
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-28",
+          "direct": 8,
+          "engaged_sessions": 24,
+          "label": "Jan 28",
+          "organic": 14,
+          "sessions": 29
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-29",
+          "direct": 3,
+          "engaged_sessions": 14,
+          "label": "Jan 29",
+          "organic": 13,
+          "sessions": 20
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-30",
+          "direct": 14,
+          "engaged_sessions": 25,
+          "label": "Jan 30",
+          "organic": 22,
+          "sessions": 43
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-01-31",
+          "direct": 11,
+          "engaged_sessions": 24,
+          "label": "Jan 31",
+          "organic": 15,
+          "sessions": 32
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-02-01",
+          "direct": 7,
+          "engaged_sessions": 33,
+          "label": "Feb 1",
+          "organic": 25,
+          "sessions": 40
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-02-02",
+          "direct": 5,
+          "engaged_sessions": 29,
+          "label": "Feb 2",
+          "organic": 23,
+          "sessions": 36
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-02-03",
+          "direct": 5,
+          "engaged_sessions": 25,
+          "label": "Feb 3",
+          "organic": 22,
+          "sessions": 33
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-02-04",
+          "direct": 6,
+          "engaged_sessions": 19,
+          "label": "Feb 4",
+          "organic": 11,
+          "sessions": 28
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-02-05",
+          "direct": 9,
+          "engaged_sessions": 24,
+          "label": "Feb 5",
+          "organic": 20,
+          "sessions": 35
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-02-06",
+          "direct": 16,
+          "engaged_sessions": 21,
+          "label": "Feb 6",
+          "organic": 10,
+          "sessions": 39
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-02-07",
+          "direct": 5,
+          "engaged_sessions": 27,
+          "label": "Feb 7",
+          "organic": 19,
+          "sessions": 34
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-08",
+          "direct": 6,
+          "engaged_sessions": 17,
+          "label": "Feb 8",
+          "organic": 14,
+          "sessions": 28
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-09",
+          "direct": 7,
+          "engaged_sessions": 24,
+          "label": "Feb 9",
+          "organic": 19,
+          "sessions": 36
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-10",
+          "direct": 3,
+          "engaged_sessions": 19,
+          "label": "Feb 10",
+          "organic": 16,
+          "sessions": 24
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-11",
+          "direct": 2,
+          "engaged_sessions": 24,
+          "label": "Feb 11",
+          "organic": 25,
+          "sessions": 35
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-12",
+          "direct": 4,
+          "engaged_sessions": 26,
+          "label": "Feb 12",
+          "organic": 20,
+          "sessions": 32
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-13",
+          "direct": 5,
+          "engaged_sessions": 18,
+          "label": "Feb 13",
+          "organic": 18,
+          "sessions": 29
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-14",
+          "direct": 7,
+          "engaged_sessions": 17,
+          "label": "Feb 14",
+          "organic": 13,
+          "sessions": 27
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-15",
+          "direct": 3,
+          "engaged_sessions": 19,
+          "label": "Feb 15",
+          "organic": 12,
+          "sessions": 26
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-16",
+          "direct": 6,
+          "engaged_sessions": 24,
+          "label": "Feb 16",
+          "organic": 25,
+          "sessions": 37
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-17",
+          "direct": 7,
+          "engaged_sessions": 20,
+          "label": "Feb 17",
+          "organic": 22,
+          "sessions": 35
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-18",
+          "direct": 6,
+          "engaged_sessions": 20,
+          "label": "Feb 18",
+          "organic": 18,
+          "sessions": 31
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-19",
+          "direct": 8,
+          "engaged_sessions": 17,
+          "label": "Feb 19",
+          "organic": 9,
+          "sessions": 23
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-20",
+          "direct": 6,
+          "engaged_sessions": 20,
+          "label": "Feb 20",
+          "organic": 21,
+          "sessions": 31
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-21",
+          "direct": 7,
+          "engaged_sessions": 24,
+          "label": "Feb 21",
+          "organic": 22,
+          "sessions": 37
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-22",
+          "direct": 8,
+          "engaged_sessions": 30,
+          "label": "Feb 22",
+          "organic": 23,
+          "sessions": 42
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-23",
+          "direct": 12,
+          "engaged_sessions": 25,
+          "label": "Feb 23",
+          "organic": 17,
+          "sessions": 37
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-24",
+          "direct": 11,
+          "engaged_sessions": 24,
+          "label": "Feb 24",
+          "organic": 23,
+          "sessions": 38
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-25",
+          "direct": 8,
+          "engaged_sessions": 27,
+          "label": "Feb 25",
+          "organic": 16,
+          "sessions": 38
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-26",
+          "direct": 3,
+          "engaged_sessions": 22,
+          "label": "Feb 26",
+          "organic": 23,
+          "sessions": 31
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-27",
+          "direct": 3,
+          "engaged_sessions": 13,
+          "label": "Feb 27",
+          "organic": 13,
+          "sessions": 20
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-02-28",
+          "direct": 2,
+          "engaged_sessions": 12,
+          "label": "Feb 28",
+          "organic": 12,
+          "sessions": 19
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-01",
+          "direct": 4,
+          "engaged_sessions": 22,
+          "label": "Mar 1",
+          "organic": 17,
+          "sessions": 32
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-02",
+          "direct": 5,
+          "engaged_sessions": 24,
+          "label": "Mar 2",
+          "organic": 18,
+          "sessions": 35
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-03",
+          "direct": 6,
+          "engaged_sessions": 15,
+          "label": "Mar 3",
+          "organic": 8,
+          "sessions": 20
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-04",
+          "direct": 2,
+          "engaged_sessions": 12,
+          "label": "Mar 4",
+          "organic": 9,
+          "sessions": 17
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-05",
+          "direct": 7,
+          "engaged_sessions": 20,
+          "label": "Mar 5",
+          "organic": 13,
+          "sessions": 27
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-06",
+          "direct": 4,
+          "engaged_sessions": 12,
+          "label": "Mar 6",
+          "organic": 11,
+          "sessions": 19
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-07",
+          "direct": 13,
+          "engaged_sessions": 25,
+          "label": "Mar 7",
+          "organic": 16,
+          "sessions": 36
+        },
+        {
+          "creative": "Spice Up Your Kitchen",
+          "date": "2026-03-08",
+          "direct": 11,
+          "engaged_sessions": 22,
+          "label": "Mar 8",
+          "organic": 19,
+          "sessions": 36
+        }
+      ],
+      "id": "winter",
+      "label": "January\u2013March 2026",
+      "observed_end": "2026-03-08",
+      "start": "2026-01-12",
+      "totals": {
+        "direct": 361,
+        "engaged_sessions": 1215,
+        "organic": 1010,
+        "sessions": 1779
+      }
+    },
+    {
+      "booked_end": "2026-10-18",
+      "complete": false,
+      "creatives": [
+        {
+          "name": "Stir Your Imagination",
+          "start": "2026-08-24"
+        },
+        {
+          "name": "Kitchen in a Pickle",
+          "start": "2026-09-21"
+        }
+      ],
+      "daily": [
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-24",
+          "direct": 1,
+          "engaged_sessions": 12,
+          "label": "Aug 24",
+          "organic": 13,
+          "sessions": 17
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-25",
+          "direct": 3,
+          "engaged_sessions": 10,
+          "label": "Aug 25",
+          "organic": 9,
+          "sessions": 16
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-26",
+          "direct": 14,
+          "engaged_sessions": 15,
+          "label": "Aug 26",
+          "organic": 10,
+          "sessions": 30
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-27",
+          "direct": 4,
+          "engaged_sessions": 12,
+          "label": "Aug 27",
+          "organic": 8,
+          "sessions": 16
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-28",
+          "direct": 3,
+          "engaged_sessions": 11,
+          "label": "Aug 28",
+          "organic": 11,
+          "sessions": 17
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-29",
+          "direct": 3,
+          "engaged_sessions": 16,
+          "label": "Aug 29",
+          "organic": 14,
+          "sessions": 21
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-30",
+          "direct": 16,
+          "engaged_sessions": 19,
+          "label": "Aug 30",
+          "organic": 12,
+          "sessions": 31
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-08-31",
+          "direct": 2,
+          "engaged_sessions": 4,
+          "label": "Aug 31",
+          "organic": 6,
+          "sessions": 10
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-01",
+          "direct": 6,
+          "engaged_sessions": 17,
+          "label": "Sep 1",
+          "organic": 12,
+          "sessions": 26
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-02",
+          "direct": 4,
+          "engaged_sessions": 11,
+          "label": "Sep 2",
+          "organic": 5,
+          "sessions": 17
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-03",
+          "direct": 5,
+          "engaged_sessions": 20,
+          "label": "Sep 3",
+          "organic": 15,
+          "sessions": 24
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-04",
+          "direct": 4,
+          "engaged_sessions": 22,
+          "label": "Sep 4",
+          "organic": 21,
+          "sessions": 30
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-05",
+          "direct": 4,
+          "engaged_sessions": 20,
+          "label": "Sep 5",
+          "organic": 12,
+          "sessions": 25
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-06",
+          "direct": 3,
+          "engaged_sessions": 8,
+          "label": "Sep 6",
+          "organic": 5,
+          "sessions": 17
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-07",
+          "direct": 6,
+          "engaged_sessions": 12,
+          "label": "Sep 7",
+          "organic": 10,
+          "sessions": 25
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-08",
+          "direct": 3,
+          "engaged_sessions": 17,
+          "label": "Sep 8",
+          "organic": 16,
+          "sessions": 27
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-09",
+          "direct": 2,
+          "engaged_sessions": 13,
+          "label": "Sep 9",
+          "organic": 12,
+          "sessions": 20
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-10",
+          "direct": 4,
+          "engaged_sessions": 14,
+          "label": "Sep 10",
+          "organic": 16,
+          "sessions": 24
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-11",
+          "direct": 3,
+          "engaged_sessions": 19,
+          "label": "Sep 11",
+          "organic": 11,
+          "sessions": 22
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-12",
+          "direct": 1,
+          "engaged_sessions": 13,
+          "label": "Sep 12",
+          "organic": 9,
+          "sessions": 19
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-13",
+          "direct": 4,
+          "engaged_sessions": 15,
+          "label": "Sep 13",
+          "organic": 9,
+          "sessions": 19
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-14",
+          "direct": 6,
+          "engaged_sessions": 17,
+          "label": "Sep 14",
+          "organic": 11,
+          "sessions": 27
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-15",
+          "direct": 8,
+          "engaged_sessions": 16,
+          "label": "Sep 15",
+          "organic": 17,
+          "sessions": 29
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-16",
+          "direct": 6,
+          "engaged_sessions": 16,
+          "label": "Sep 16",
+          "organic": 12,
+          "sessions": 24
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-17",
+          "direct": 3,
+          "engaged_sessions": 18,
+          "label": "Sep 17",
+          "organic": 13,
+          "sessions": 23
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-18",
+          "direct": 4,
+          "engaged_sessions": 22,
+          "label": "Sep 18",
+          "organic": 21,
+          "sessions": 35
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-19",
+          "direct": 1,
+          "engaged_sessions": 8,
+          "label": "Sep 19",
+          "organic": 12,
+          "sessions": 17
+        },
+        {
+          "creative": "Stir Your Imagination",
+          "date": "2026-09-20",
+          "direct": 1,
+          "engaged_sessions": 15,
+          "label": "Sep 20",
+          "organic": 14,
+          "sessions": 23
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-21",
+          "direct": 9,
+          "engaged_sessions": 18,
+          "label": "Sep 21",
+          "organic": 9,
+          "sessions": 26
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-22",
+          "direct": 4,
+          "engaged_sessions": 20,
+          "label": "Sep 22",
+          "organic": 22,
+          "sessions": 32
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-23",
+          "direct": 2,
+          "engaged_sessions": 16,
+          "label": "Sep 23",
+          "organic": 18,
+          "sessions": 26
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-24",
+          "direct": 4,
+          "engaged_sessions": 12,
+          "label": "Sep 24",
+          "organic": 9,
+          "sessions": 17
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-25",
+          "direct": 6,
+          "engaged_sessions": 16,
+          "label": "Sep 25",
+          "organic": 12,
+          "sessions": 25
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-26",
+          "direct": 4,
+          "engaged_sessions": 14,
+          "label": "Sep 26",
+          "organic": 10,
+          "sessions": 21
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-27",
+          "direct": 17,
+          "engaged_sessions": 17,
+          "label": "Sep 27",
+          "organic": 14,
+          "sessions": 35
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-28",
+          "direct": 3,
+          "engaged_sessions": 14,
+          "label": "Sep 28",
+          "organic": 14,
+          "sessions": 20
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-29",
+          "direct": 2,
+          "engaged_sessions": 9,
+          "label": "Sep 29",
+          "organic": 10,
+          "sessions": 15
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-09-30",
+          "direct": 4,
+          "engaged_sessions": 14,
+          "label": "Sep 30",
+          "organic": 13,
+          "sessions": 20
+        },
+        {
+          "creative": "Kitchen in a Pickle",
+          "date": "2026-10-01",
+          "direct": 2,
+          "engaged_sessions": 14,
+          "label": "Oct 1",
+          "organic": 8,
+          "sessions": 23
+        }
+      ],
+      "id": "fall",
+      "label": "August\u2013October 2026",
+      "observed_end": "2026-10-01",
+      "start": "2026-08-24",
+      "totals": {
+        "direct": 181,
+        "engaged_sessions": 576,
+        "organic": 475,
+        "sessions": 891
+      }
+    }
+  ]
+}
