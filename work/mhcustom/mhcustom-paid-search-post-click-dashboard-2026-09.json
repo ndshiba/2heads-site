@@ -1,0 +1,103 @@
+{
+  "events": [
+    {
+      "count": 259,
+      "event": "page_view",
+      "key_events": 0.0,
+      "users": 132
+    },
+    {
+      "count": 195,
+      "event": "user_engagement",
+      "key_events": 0.0,
+      "users": 89
+    },
+    {
+      "count": 144,
+      "event": "session_start",
+      "key_events": 0.0,
+      "users": 132
+    },
+    {
+      "count": 127,
+      "event": "first_visit",
+      "key_events": 0.0,
+      "users": 127
+    },
+    {
+      "count": 88,
+      "event": "scroll",
+      "key_events": 0.0,
+      "users": 62
+    },
+    {
+      "count": 2,
+      "event": "form_start",
+      "key_events": 0.0,
+      "users": 2
+    },
+    {
+      "count": 2,
+      "event": "form_submit",
+      "key_events": 0.0,
+      "users": 2
+    },
+    {
+      "count": 1,
+      "event": "view_search_results",
+      "key_events": 0.0,
+      "users": 1
+    }
+  ],
+  "landing_pages": [
+    {
+      "engaged_sessions": 52,
+      "engagement_rate": 0.6933333333333334,
+      "page": "/",
+      "sessions": 75,
+      "users": 74
+    },
+    {
+      "engaged_sessions": 33,
+      "engagement_rate": 0.6,
+      "page": "/pa-kitchen-photo-gallery/",
+      "sessions": 55,
+      "users": 52
+    },
+    {
+      "engaged_sessions": 0,
+      "engagement_rate": 0.0,
+      "page": "(not set)",
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "engaged_sessions": 3,
+      "engagement_rate": 0.6,
+      "page": "/considering-a-kitchen-remodel/kitchen-remodeling-cost/",
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "engaged_sessions": 1,
+      "engagement_rate": 0.5,
+      "page": "/preparing/kitchen-ideas-inspiration/",
+      "sessions": 2,
+      "users": 2
+    },
+    {
+      "engaged_sessions": 1,
+      "engagement_rate": 1.0,
+      "page": "/portfolio-filterable/",
+      "sessions": 1,
+      "users": 1
+    }
+  ],
+  "totals": {
+    "engaged_sessions": 90,
+    "engagement_rate": 0.6293706293706294,
+    "key_events": 0.0,
+    "sessions": 143,
+    "users": 132
+  }
+}

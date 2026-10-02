@@ -1,0 +1,667 @@
+{
+  "end": "2026-09-30",
+  "monthly": {
+    "/": {
+      "202501": {
+        "Direct": 124,
+        "Organic Search": 209,
+        "Organic Social": 8,
+        "Paid Search": 93,
+        "Referral": 8
+      },
+      "202502": {
+        "AI Assistants": 2,
+        "Direct": 92,
+        "Organic Search": 179,
+        "Organic Social": 6,
+        "Paid Search": 92,
+        "Referral": 6
+      },
+      "202503": {
+        "Direct": 118,
+        "Organic Search": 189,
+        "Organic Social": 2,
+        "Paid Search": 78,
+        "Referral": 4
+      },
+      "202504": {
+        "Direct": 77,
+        "Organic Search": 137,
+        "Organic Social": 4,
+        "Other": 1,
+        "Paid Search": 72,
+        "Referral": 5
+      },
+      "202505": {
+        "Direct": 104,
+        "Organic Search": 173,
+        "Organic Social": 2,
+        "Other": 1,
+        "Paid Search": 8,
+        "Referral": 10
+      },
+      "202506": {
+        "Direct": 87,
+        "Organic Search": 129,
+        "Organic Social": 2,
+        "Referral": 4
+      },
+      "202507": {
+        "AI Assistants": 1,
+        "Direct": 109,
+        "Organic Search": 136,
+        "Organic Social": 5,
+        "Other": 2,
+        "Referral": 1
+      },
+      "202508": {
+        "AI Assistants": 2,
+        "Direct": 96,
+        "Organic Search": 149,
+        "Organic Social": 5,
+        "Other": 1,
+        "Paid Search": 41,
+        "Referral": 7
+      },
+      "202509": {
+        "Direct": 58,
+        "Organic Search": 113,
+        "Organic Social": 6,
+        "Other": 1,
+        "Paid Search": 54,
+        "Referral": 16
+      },
+      "202510": {
+        "AI Assistants": 1,
+        "Direct": 71,
+        "Organic Search": 122,
+        "Organic Social": 2,
+        "Paid Search": 58,
+        "Referral": 3
+      },
+      "202511": {
+        "AI Assistants": 4,
+        "Direct": 68,
+        "Organic Search": 128,
+        "Organic Social": 3,
+        "Other": 1,
+        "Paid Search": 86,
+        "Referral": 3
+      },
+      "202512": {
+        "Direct": 49,
+        "Organic Search": 112,
+        "Paid Search": 72,
+        "Referral": 3
+      },
+      "202601": {
+        "AI Assistants": 1,
+        "Direct": 55,
+        "Organic Search": 124,
+        "Organic Social": 3,
+        "Other": 3,
+        "Paid Search": 74,
+        "Referral": 9
+      },
+      "202602": {
+        "AI Assistants": 3,
+        "Direct": 70,
+        "Organic Search": 160,
+        "Organic Social": 2,
+        "Other": 9,
+        "Paid Search": 62
+      },
+      "202603": {
+        "AI Assistants": 3,
+        "Direct": 54,
+        "Organic Search": 152,
+        "Organic Social": 3,
+        "Other": 7,
+        "Paid Search": 71,
+        "Referral": 3
+      },
+      "202604": {
+        "Direct": 54,
+        "Organic Search": 123,
+        "Other": 2,
+        "Paid Search": 70,
+        "Referral": 9
+      },
+      "202605": {
+        "AI Assistants": 1,
+        "Direct": 30,
+        "Organic Search": 121,
+        "Paid Search": 78,
+        "Referral": 1
+      },
+      "202606": {
+        "AI Assistants": 1,
+        "Direct": 36,
+        "Organic Search": 120,
+        "Organic Social": 2,
+        "Other": 1,
+        "Paid Search": 63,
+        "Referral": 4
+      },
+      "202607": {
+        "AI Assistants": 2,
+        "Direct": 37,
+        "Organic Search": 94,
+        "Organic Social": 1,
+        "Paid Search": 83,
+        "Referral": 3
+      },
+      "202608": {
+        "AI Assistants": 2,
+        "Direct": 61,
+        "Organic Search": 130,
+        "Other": 3,
+        "Paid Search": 74,
+        "Referral": 4
+      },
+      "202609": {
+        "Direct": 40,
+        "Organic Search": 146,
+        "Organic Social": 1,
+        "Other": 2,
+        "Paid Search": 75,
+        "Referral": 2
+      }
+    },
+    "/cabinetry-knowledge-family-legacy/": {
+      "202606": {
+        "Direct": 1
+      }
+    },
+    "/considering-a-kitchen-remodel/kitchen-remodeling-cost/": {
+      "202501": {
+        "Direct": 2,
+        "Organic Search": 1
+      },
+      "202502": {
+        "Organic Search": 1,
+        "Paid Search": 1
+      },
+      "202503": {
+        "Organic Search": 2,
+        "Paid Search": 2
+      },
+      "202504": {
+        "Direct": 2,
+        "Organic Search": 2,
+        "Paid Search": 2
+      },
+      "202505": {
+        "Direct": 3,
+        "Organic Search": 2
+      },
+      "202506": {
+        "Organic Search": 1
+      },
+      "202507": {
+        "Organic Search": 3
+      },
+      "202508": {
+        "Organic Search": 2,
+        "Paid Search": 4
+      },
+      "202509": {
+        "Paid Search": 9
+      },
+      "202510": {
+        "Paid Search": 5
+      },
+      "202511": {
+        "Organic Search": 1,
+        "Paid Search": 2
+      },
+      "202512": {
+        "Organic Search": 1,
+        "Paid Search": 6
+      },
+      "202601": {
+        "Paid Search": 7
+      },
+      "202602": {
+        "Paid Search": 7
+      },
+      "202603": {
+        "Paid Search": 4
+      },
+      "202604": {
+        "Organic Search": 1,
+        "Paid Search": 14
+      },
+      "202605": {
+        "Paid Search": 4
+      },
+      "202606": {
+        "Organic Search": 1,
+        "Paid Search": 6
+      },
+      "202607": {
+        "Paid Search": 8
+      },
+      "202608": {
+        "Paid Search": 6
+      },
+      "202609": {
+        "Paid Search": 5
+      }
+    },
+    "/kitchen-corner-cabinet-storage-solutions/": {
+      "202501": {
+        "Direct": 58,
+        "Organic Search": 347,
+        "Organic Social": 238,
+        "Referral": 2
+      },
+      "202502": {
+        "Direct": 59,
+        "Organic Search": 262,
+        "Organic Social": 211,
+        "Other": 1
+      },
+      "202503": {
+        "Direct": 56,
+        "Organic Search": 218,
+        "Organic Social": 144,
+        "Other": 1
+      },
+      "202504": {
+        "Direct": 33,
+        "Organic Search": 151,
+        "Organic Social": 66
+      },
+      "202505": {
+        "Direct": 18,
+        "Organic Search": 158,
+        "Organic Social": 54,
+        "Referral": 1
+      },
+      "202506": {
+        "Direct": 38,
+        "Organic Search": 147,
+        "Organic Social": 32
+      },
+      "202507": {
+        "AI Assistants": 1,
+        "Direct": 48,
+        "Organic Search": 135,
+        "Organic Social": 9
+      },
+      "202508": {
+        "AI Assistants": 1,
+        "Direct": 13,
+        "Organic Search": 138,
+        "Organic Social": 4
+      },
+      "202509": {
+        "Direct": 3,
+        "Organic Search": 100,
+        "Organic Social": 7
+      },
+      "202510": {
+        "Direct": 3,
+        "Organic Search": 96,
+        "Organic Social": 11
+      },
+      "202511": {
+        "Direct": 20,
+        "Organic Search": 131,
+        "Organic Social": 42,
+        "Referral": 1
+      },
+      "202512": {
+        "AI Assistants": 1,
+        "Direct": 29,
+        "Organic Search": 128,
+        "Organic Social": 35
+      },
+      "202601": {
+        "Direct": 27,
+        "Organic Search": 157,
+        "Organic Social": 29
+      },
+      "202602": {
+        "AI Assistants": 2,
+        "Direct": 21,
+        "Organic Search": 102,
+        "Organic Social": 14
+      },
+      "202603": {
+        "Direct": 23,
+        "Organic Search": 93,
+        "Organic Social": 21
+      },
+      "202604": {
+        "Direct": 11,
+        "Organic Search": 90,
+        "Organic Social": 14
+      },
+      "202605": {
+        "Direct": 18,
+        "Organic Search": 80,
+        "Organic Social": 19,
+        "Paid Search": 1,
+        "Referral": 2
+      },
+      "202606": {
+        "Direct": 16,
+        "Organic Search": 69,
+        "Organic Social": 25
+      },
+      "202607": {
+        "Direct": 5,
+        "Organic Search": 27,
+        "Organic Social": 17
+      },
+      "202608": {
+        "Direct": 16,
+        "Organic Search": 61,
+        "Organic Social": 14,
+        "Referral": 1
+      },
+      "202609": {
+        "Direct": 12,
+        "Organic Search": 68,
+        "Organic Social": 30
+      }
+    },
+    "/pa-kitchen-photo-gallery/": {
+      "202501": {
+        "Direct": 13,
+        "Organic Search": 24,
+        "Organic Social": 2,
+        "Paid Search": 41,
+        "Referral": 1
+      },
+      "202502": {
+        "Direct": 22,
+        "Organic Search": 12,
+        "Paid Search": 52
+      },
+      "202503": {
+        "Direct": 19,
+        "Organic Search": 15,
+        "Paid Search": 69
+      },
+      "202504": {
+        "Direct": 10,
+        "Organic Search": 21,
+        "Organic Social": 1,
+        "Other": 4,
+        "Paid Search": 49
+      },
+      "202505": {
+        "Direct": 10,
+        "Organic Search": 24,
+        "Paid Search": 4
+      },
+      "202506": {
+        "Direct": 12,
+        "Organic Search": 6,
+        "Other": 1,
+        "Paid Search": 1
+      },
+      "202507": {
+        "Direct": 1,
+        "Organic Search": 5,
+        "Paid Search": 1
+      },
+      "202508": {
+        "Direct": 10,
+        "Organic Search": 10,
+        "Other": 2,
+        "Paid Search": 42
+      },
+      "202509": {
+        "Direct": 2,
+        "Organic Search": 9,
+        "Other": 4,
+        "Paid Search": 58
+      },
+      "202510": {
+        "Direct": 9,
+        "Organic Search": 14,
+        "Other": 2,
+        "Paid Search": 60
+      },
+      "202511": {
+        "Direct": 11,
+        "Organic Search": 10,
+        "Other": 4,
+        "Paid Search": 47
+      },
+      "202512": {
+        "Direct": 7,
+        "Organic Search": 9,
+        "Other": 1,
+        "Paid Search": 45
+      },
+      "202601": {
+        "Direct": 1,
+        "Organic Search": 8,
+        "Other": 1,
+        "Paid Search": 61
+      },
+      "202602": {
+        "Direct": 11,
+        "Organic Search": 3,
+        "Other": 3,
+        "Paid Search": 58
+      },
+      "202603": {
+        "Direct": 7,
+        "Organic Search": 8,
+        "Other": 1,
+        "Paid Search": 52
+      },
+      "202604": {
+        "Direct": 4,
+        "Organic Search": 7,
+        "Other": 3,
+        "Paid Search": 39
+      },
+      "202605": {
+        "Direct": 3,
+        "Organic Search": 6,
+        "Paid Search": 50
+      },
+      "202606": {
+        "Direct": 2,
+        "Organic Search": 9,
+        "Other": 2,
+        "Paid Search": 47
+      },
+      "202607": {
+        "Direct": 4,
+        "Organic Search": 5,
+        "Organic Social": 1,
+        "Other": 1,
+        "Paid Search": 34
+      },
+      "202608": {
+        "Direct": 2,
+        "Organic Search": 10,
+        "Other": 2,
+        "Paid Search": 41
+      },
+      "202609": {
+        "Direct": 3,
+        "Organic Search": 1,
+        "Organic Social": 1,
+        "Other": 2,
+        "Paid Search": 55
+      }
+    },
+    "/why-kitchen-remodel-costs-vary-full-width-images/": {
+      "202609": {
+        "Direct": 1
+      }
+    }
+  },
+  "pages": [
+    {
+      "engaged_sessions": 4526,
+      "engagement_rate": 0.7595234099681154,
+      "path": "/",
+      "sessions": 5959,
+      "sources": {
+        "AI Assistants": {
+          "engaged_sessions": 19,
+          "sessions": 23
+        },
+        "Direct": {
+          "engaged_sessions": 865,
+          "sessions": 1490
+        },
+        "Organic Search": {
+          "engaged_sessions": 2560,
+          "sessions": 2946
+        },
+        "Organic Social": {
+          "engaged_sessions": 45,
+          "sessions": 57
+        },
+        "Other": {
+          "engaged_sessions": 15,
+          "sessions": 34
+        },
+        "Paid Search": {
+          "engaged_sessions": 949,
+          "sessions": 1304
+        },
+        "Referral": {
+          "engaged_sessions": 73,
+          "sessions": 105
+        }
+      },
+      "title": "Home Page",
+      "type": "Homepage"
+    },
+    {
+      "engaged_sessions": 740,
+      "engagement_rate": 0.5589123867069486,
+      "path": "/pa-kitchen-photo-gallery/",
+      "sessions": 1324,
+      "sources": {
+        "Direct": {
+          "engaged_sessions": 77,
+          "sessions": 163
+        },
+        "Organic Search": {
+          "engaged_sessions": 103,
+          "sessions": 216
+        },
+        "Organic Social": {
+          "engaged_sessions": 3,
+          "sessions": 5
+        },
+        "Other": {
+          "engaged_sessions": 28,
+          "sessions": 33
+        },
+        "Paid Search": {
+          "engaged_sessions": 528,
+          "sessions": 906
+        },
+        "Referral": {
+          "engaged_sessions": 1,
+          "sessions": 1
+        }
+      },
+      "title": "PA Kitchen Photo Gallery",
+      "type": "Paid landing page"
+    },
+    {
+      "engaged_sessions": 72,
+      "engagement_rate": 0.6153846153846154,
+      "path": "/considering-a-kitchen-remodel/kitchen-remodeling-cost/",
+      "sessions": 117,
+      "sources": {
+        "Direct": {
+          "engaged_sessions": 4,
+          "sessions": 7
+        },
+        "Organic Search": {
+          "engaged_sessions": 11,
+          "sessions": 18
+        },
+        "Paid Search": {
+          "engaged_sessions": 57,
+          "sessions": 92
+        }
+      },
+      "title": "Kitchen Remodel Cost Guide",
+      "type": "Paid landing page"
+    },
+    {
+      "engaged_sessions": 1,
+      "engagement_rate": 1.0,
+      "path": "/why-kitchen-remodel-costs-vary-full-width-images/",
+      "sessions": 1,
+      "sources": {
+        "Direct": {
+          "engaged_sessions": 1,
+          "sessions": 1
+        }
+      },
+      "title": "Why Kitchen Remodel Costs Vary So Much",
+      "type": "Latest blog post"
+    },
+    {
+      "engaged_sessions": 3240,
+      "engagement_rate": 0.7472324723247232,
+      "path": "/kitchen-corner-cabinet-storage-solutions/",
+      "sessions": 4336,
+      "sources": {
+        "AI Assistants": {
+          "engaged_sessions": 4,
+          "sessions": 5
+        },
+        "Direct": {
+          "engaged_sessions": 361,
+          "sessions": 527
+        },
+        "Organic Search": {
+          "engaged_sessions": 2215,
+          "sessions": 2758
+        },
+        "Organic Social": {
+          "engaged_sessions": 653,
+          "sessions": 1036
+        },
+        "Other": {
+          "engaged_sessions": 0,
+          "sessions": 2
+        },
+        "Paid Search": {
+          "engaged_sessions": 1,
+          "sessions": 1
+        },
+        "Referral": {
+          "engaged_sessions": 6,
+          "sessions": 7
+        }
+      },
+      "title": "Kitchen Corner Cabinet Storage Solutions in 2026: 6 Smart Ideas",
+      "type": "Latest blog post"
+    },
+    {
+      "engaged_sessions": 0,
+      "engagement_rate": 0.0,
+      "path": "/cabinetry-knowledge-family-legacy/",
+      "sessions": 1,
+      "sources": {
+        "Direct": {
+          "engaged_sessions": 0,
+          "sessions": 1
+        }
+      },
+      "title": "Cabinetry Knowledge Is Part of Our Family Legacy",
+      "type": "Latest blog post"
+    }
+  ],
+  "start": "2025-01-01"
+}

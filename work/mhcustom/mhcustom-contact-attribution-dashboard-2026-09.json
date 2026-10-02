@@ -1,0 +1,86 @@
+{
+  "channels": [
+    {
+      "contact_us": 12,
+      "form_start": 7,
+      "form_submit": 7,
+      "key_events": 7.0,
+      "label": "Direct",
+      "users": 17
+    },
+    {
+      "contact_us": 10,
+      "form_start": 7,
+      "form_submit": 5,
+      "key_events": 9.0,
+      "label": "Organic Search",
+      "users": 20
+    },
+    {
+      "contact_us": 0,
+      "form_start": 2,
+      "form_submit": 2,
+      "key_events": 0.0,
+      "label": "Paid Search",
+      "users": 4
+    }
+  ],
+  "landing_pages": [
+    {
+      "contact_us": 14,
+      "form_start": 9,
+      "form_submit": 7,
+      "key_events": 11.0,
+      "label": "/",
+      "users": 26
+    },
+    {
+      "contact_us": 8,
+      "form_start": 5,
+      "form_submit": 5,
+      "key_events": 5.0,
+      "label": "/harrisburg-kitchen-remodel-contact-us/",
+      "users": 11
+    },
+    {
+      "contact_us": 0,
+      "form_start": 2,
+      "form_submit": 2,
+      "key_events": 0.0,
+      "label": "/pa-kitchen-photo-gallery/",
+      "users": 4
+    }
+  ],
+  "sources": [
+    {
+      "contact_us": 12,
+      "form_start": 7,
+      "form_submit": 7,
+      "key_events": 7.0,
+      "label": "(direct) / (none)",
+      "users": 17
+    },
+    {
+      "contact_us": 10,
+      "form_start": 7,
+      "form_submit": 5,
+      "key_events": 9.0,
+      "label": "google / organic",
+      "users": 20
+    },
+    {
+      "contact_us": 0,
+      "form_start": 2,
+      "form_submit": 2,
+      "key_events": 0.0,
+      "label": "google / cpc",
+      "users": 4
+    }
+  ],
+  "totals": {
+    "contact_us": 22,
+    "form_start": 16,
+    "form_submit": 14,
+    "key_events": 16.0
+  }
+}

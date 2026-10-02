@@ -1,0 +1,356 @@
+{
+  "ads": {
+    "all_conversions": 323.0,
+    "avg_cpc": 2.6872461933701657,
+    "clicks": 181,
+    "conversions": 306.0,
+    "cost": 486.391561,
+    "ctr": 0.071939586645469,
+    "impressions": 2516
+  },
+  "campaigns": [
+    {
+      "all_conversions": 323.0,
+      "avg_cpc": 2.69,
+      "budget": 16.0,
+      "campaign": "2018-02-18 v1",
+      "channel": "SEARCH",
+      "clicks": 181,
+      "conversions": 306.0,
+      "cost": 486.39,
+      "ctr": 0.071939586645469,
+      "impressions": 2516,
+      "primary_status": "LIMITED",
+      "serving_status": "SERVING",
+      "status": "ENABLED"
+    }
+  ],
+  "conversion_actions": [
+    {
+      "all_conversions": 306.0,
+      "category": "CONTACT",
+      "conversions": 306.0,
+      "name": "Website Contact Us",
+      "status": "ENABLED",
+      "type": "WEBPAGE"
+    },
+    {
+      "all_conversions": 7.0,
+      "category": "PAGE_VIEW",
+      "conversions": 0.0,
+      "name": "Local actions - Website visits",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED"
+    },
+    {
+      "all_conversions": 10.0,
+      "category": "ENGAGEMENT",
+      "conversions": 0.0,
+      "name": "Local actions - Other engagements",
+      "status": "ENABLED",
+      "type": "GOOGLE_HOSTED"
+    }
+  ],
+  "daily": [
+    {
+      "all_conversions": 15.0,
+      "avg_cpc": 2.91,
+      "clicks": 6,
+      "conversions": 15.0,
+      "cost": 17.45,
+      "ctr": 0.03508771929824561,
+      "date": "2026-09-01",
+      "impressions": 171
+    },
+    {
+      "all_conversions": 20.0,
+      "avg_cpc": 2.62,
+      "clicks": 7,
+      "conversions": 20.0,
+      "cost": 18.36,
+      "ctr": 0.08641975308641975,
+      "date": "2026-09-02",
+      "impressions": 81
+    },
+    {
+      "all_conversions": 5.0,
+      "avg_cpc": 2.64,
+      "clicks": 4,
+      "conversions": 5.0,
+      "cost": 10.56,
+      "ctr": 0.025806451612903226,
+      "date": "2026-09-03",
+      "impressions": 155
+    },
+    {
+      "all_conversions": 26.0,
+      "avg_cpc": 2.53,
+      "clicks": 9,
+      "conversions": 24.0,
+      "cost": 22.81,
+      "ctr": 0.04891304347826087,
+      "date": "2026-09-04",
+      "impressions": 184
+    },
+    {
+      "all_conversions": 10.0,
+      "avg_cpc": 2.71,
+      "clicks": 8,
+      "conversions": 9.0,
+      "cost": 21.71,
+      "ctr": 0.0446927374301676,
+      "date": "2026-09-05",
+      "impressions": 179
+    },
+    {
+      "all_conversions": 17.0,
+      "avg_cpc": 2.45,
+      "clicks": 7,
+      "conversions": 14.0,
+      "cost": 17.15,
+      "ctr": 0.1206896551724138,
+      "date": "2026-09-06",
+      "impressions": 58
+    },
+    {
+      "all_conversions": 10.0,
+      "avg_cpc": 2.44,
+      "clicks": 7,
+      "conversions": 10.0,
+      "cost": 17.05,
+      "ctr": 0.12727272727272726,
+      "date": "2026-09-07",
+      "impressions": 55
+    },
+    {
+      "all_conversions": 10.0,
+      "avg_cpc": 2.48,
+      "clicks": 7,
+      "conversions": 10.0,
+      "cost": 17.34,
+      "ctr": 0.0945945945945946,
+      "date": "2026-09-08",
+      "impressions": 74
+    },
+    {
+      "all_conversions": 13.0,
+      "avg_cpc": 2.94,
+      "clicks": 5,
+      "conversions": 12.0,
+      "cost": 14.68,
+      "ctr": 0.050505050505050504,
+      "date": "2026-09-09",
+      "impressions": 99
+    },
+    {
+      "all_conversions": 10.0,
+      "avg_cpc": 2.96,
+      "clicks": 7,
+      "conversions": 9.0,
+      "cost": 20.69,
+      "ctr": 0.14583333333333334,
+      "date": "2026-09-10",
+      "impressions": 48
+    },
+    {
+      "all_conversions": 4.0,
+      "avg_cpc": 2.76,
+      "clicks": 5,
+      "conversions": 3.0,
+      "cost": 13.82,
+      "ctr": 0.07575757575757576,
+      "date": "2026-09-11",
+      "impressions": 66
+    },
+    {
+      "all_conversions": 14.0,
+      "avg_cpc": 2.44,
+      "clicks": 8,
+      "conversions": 14.0,
+      "cost": 19.51,
+      "ctr": 0.13559322033898305,
+      "date": "2026-09-12",
+      "impressions": 59
+    },
+    {
+      "all_conversions": 10.0,
+      "avg_cpc": 2.68,
+      "clicks": 7,
+      "conversions": 10.0,
+      "cost": 18.78,
+      "ctr": 0.15555555555555556,
+      "date": "2026-09-13",
+      "impressions": 45
+    },
+    {
+      "all_conversions": 13.0,
+      "avg_cpc": 2.56,
+      "clicks": 7,
+      "conversions": 13.0,
+      "cost": 17.9,
+      "ctr": 0.07954545454545454,
+      "date": "2026-09-14",
+      "impressions": 88
+    },
+    {
+      "all_conversions": 13.0,
+      "avg_cpc": 2.84,
+      "clicks": 6,
+      "conversions": 12.0,
+      "cost": 17.05,
+      "ctr": 0.14634146341463414,
+      "date": "2026-09-15",
+      "impressions": 41
+    },
+    {
+      "all_conversions": 7.0,
+      "avg_cpc": 2.53,
+      "clicks": 7,
+      "conversions": 6.0,
+      "cost": 17.7,
+      "ctr": 0.08974358974358974,
+      "date": "2026-09-16",
+      "impressions": 78
+    },
+    {
+      "all_conversions": 14.0,
+      "avg_cpc": 3.05,
+      "clicks": 6,
+      "conversions": 14.0,
+      "cost": 18.32,
+      "ctr": 0.1,
+      "date": "2026-09-17",
+      "impressions": 60
+    },
+    {
+      "all_conversions": 7.0,
+      "avg_cpc": 2.54,
+      "clicks": 7,
+      "conversions": 7.0,
+      "cost": 17.79,
+      "ctr": 0.1346153846153846,
+      "date": "2026-09-18",
+      "impressions": 52
+    },
+    {
+      "all_conversions": 9.0,
+      "avg_cpc": 3.35,
+      "clicks": 5,
+      "conversions": 9.0,
+      "cost": 16.77,
+      "ctr": 0.06578947368421052,
+      "date": "2026-09-19",
+      "impressions": 76
+    },
+    {
+      "all_conversions": 6.0,
+      "avg_cpc": 2.33,
+      "clicks": 7,
+      "conversions": 6.0,
+      "cost": 16.33,
+      "ctr": 0.029411764705882353,
+      "date": "2026-09-20",
+      "impressions": 238
+    },
+    {
+      "all_conversions": 17.0,
+      "avg_cpc": 2.74,
+      "clicks": 6,
+      "conversions": 13.0,
+      "cost": 16.42,
+      "ctr": 0.03571428571428571,
+      "date": "2026-09-21",
+      "impressions": 168
+    },
+    {
+      "all_conversions": 6.0,
+      "avg_cpc": 2.76,
+      "clicks": 6,
+      "conversions": 6.0,
+      "cost": 16.55,
+      "ctr": 0.0759493670886076,
+      "date": "2026-09-22",
+      "impressions": 79
+    },
+    {
+      "all_conversions": 5.0,
+      "avg_cpc": 2.66,
+      "clicks": 6,
+      "conversions": 5.0,
+      "cost": 15.94,
+      "ctr": 0.14285714285714285,
+      "date": "2026-09-23",
+      "impressions": 42
+    },
+    {
+      "all_conversions": 21.0,
+      "avg_cpc": 2.83,
+      "clicks": 6,
+      "conversions": 20.0,
+      "cost": 16.95,
+      "ctr": 0.11764705882352941,
+      "date": "2026-09-24",
+      "impressions": 51
+    },
+    {
+      "all_conversions": 11.0,
+      "avg_cpc": 2.76,
+      "clicks": 6,
+      "conversions": 10.0,
+      "cost": 16.54,
+      "ctr": 0.10344827586206896,
+      "date": "2026-09-25",
+      "impressions": 58
+    },
+    {
+      "all_conversions": 10.0,
+      "avg_cpc": 2.81,
+      "clicks": 7,
+      "conversions": 10.0,
+      "cost": 19.65,
+      "ctr": 0.07954545454545454,
+      "date": "2026-09-26",
+      "impressions": 88
+    },
+    {
+      "all_conversions": 6.0,
+      "avg_cpc": 2.61,
+      "clicks": 4,
+      "conversions": 6.0,
+      "cost": 10.44,
+      "ctr": 0.1,
+      "date": "2026-09-27",
+      "impressions": 40
+    },
+    {
+      "all_conversions": 2.0,
+      "avg_cpc": 3.44,
+      "clicks": 2,
+      "conversions": 2.0,
+      "cost": 6.87,
+      "ctr": 0.06666666666666667,
+      "date": "2026-09-28",
+      "impressions": 30
+    },
+    {
+      "all_conversions": 2.0,
+      "avg_cpc": 2.83,
+      "clicks": 3,
+      "conversions": 2.0,
+      "cost": 8.48,
+      "ctr": 0.10714285714285714,
+      "date": "2026-09-29",
+      "impressions": 28
+    },
+    {
+      "all_conversions": 10.0,
+      "avg_cpc": 2.26,
+      "clicks": 3,
+      "conversions": 10.0,
+      "cost": 6.78,
+      "ctr": 0.12,
+      "date": "2026-09-30",
+      "impressions": 25
+    }
+  ]
+}
