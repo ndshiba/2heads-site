@@ -1,4 +1,246 @@
 {
+  "daily": [
+    {
+      "date": "2026-09-01",
+      "engaged_sessions": 4,
+      "event_count": 35,
+      "key_events": 0.0,
+      "sessions": 7,
+      "users": 6
+    },
+    {
+      "date": "2026-09-02",
+      "engaged_sessions": 5,
+      "event_count": 58,
+      "key_events": 0.0,
+      "sessions": 7,
+      "users": 7
+    },
+    {
+      "date": "2026-09-03",
+      "engaged_sessions": 3,
+      "event_count": 15,
+      "key_events": 0.0,
+      "sessions": 3,
+      "users": 3
+    },
+    {
+      "date": "2026-09-04",
+      "engaged_sessions": 4,
+      "event_count": 45,
+      "key_events": 0.0,
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "date": "2026-09-05",
+      "engaged_sessions": 6,
+      "event_count": 32,
+      "key_events": 0.0,
+      "sessions": 8,
+      "users": 7
+    },
+    {
+      "date": "2026-09-06",
+      "engaged_sessions": 5,
+      "event_count": 32,
+      "key_events": 0.0,
+      "sessions": 8,
+      "users": 6
+    },
+    {
+      "date": "2026-09-07",
+      "engaged_sessions": 5,
+      "event_count": 37,
+      "key_events": 0.0,
+      "sessions": 7,
+      "users": 7
+    },
+    {
+      "date": "2026-09-08",
+      "engaged_sessions": 2,
+      "event_count": 17,
+      "key_events": 0.0,
+      "sessions": 4,
+      "users": 4
+    },
+    {
+      "date": "2026-09-09",
+      "engaged_sessions": 3,
+      "event_count": 34,
+      "key_events": 0.0,
+      "sessions": 4,
+      "users": 4
+    },
+    {
+      "date": "2026-09-10",
+      "engaged_sessions": 3,
+      "event_count": 14,
+      "key_events": 0.0,
+      "sessions": 3,
+      "users": 3
+    },
+    {
+      "date": "2026-09-11",
+      "engaged_sessions": 1,
+      "event_count": 8,
+      "key_events": 0.0,
+      "sessions": 2,
+      "users": 2
+    },
+    {
+      "date": "2026-09-12",
+      "engaged_sessions": 6,
+      "event_count": 41,
+      "key_events": 0.0,
+      "sessions": 8,
+      "users": 6
+    },
+    {
+      "date": "2026-09-13",
+      "engaged_sessions": 4,
+      "event_count": 30,
+      "key_events": 0.0,
+      "sessions": 6,
+      "users": 6
+    },
+    {
+      "date": "2026-09-14",
+      "engaged_sessions": 2,
+      "event_count": 24,
+      "key_events": 0.0,
+      "sessions": 7,
+      "users": 6
+    },
+    {
+      "date": "2026-09-15",
+      "engaged_sessions": 2,
+      "event_count": 20,
+      "key_events": 0.0,
+      "sessions": 4,
+      "users": 4
+    },
+    {
+      "date": "2026-09-16",
+      "engaged_sessions": 3,
+      "event_count": 22,
+      "key_events": 0.0,
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "date": "2026-09-17",
+      "engaged_sessions": 4,
+      "event_count": 31,
+      "key_events": 0.0,
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "date": "2026-09-18",
+      "engaged_sessions": 3,
+      "event_count": 27,
+      "key_events": 0.0,
+      "sessions": 6,
+      "users": 6
+    },
+    {
+      "date": "2026-09-19",
+      "engaged_sessions": 3,
+      "event_count": 25,
+      "key_events": 0.0,
+      "sessions": 3,
+      "users": 3
+    },
+    {
+      "date": "2026-09-20",
+      "engaged_sessions": 2,
+      "event_count": 16,
+      "key_events": 0.0,
+      "sessions": 4,
+      "users": 4
+    },
+    {
+      "date": "2026-09-21",
+      "engaged_sessions": 2,
+      "event_count": 42,
+      "key_events": 0.0,
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "date": "2026-09-22",
+      "engaged_sessions": 2,
+      "event_count": 19,
+      "key_events": 0.0,
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "date": "2026-09-23",
+      "engaged_sessions": 1,
+      "event_count": 13,
+      "key_events": 0.0,
+      "sessions": 4,
+      "users": 3
+    },
+    {
+      "date": "2026-09-24",
+      "engaged_sessions": 2,
+      "event_count": 50,
+      "key_events": 0.0,
+      "sessions": 3,
+      "users": 3
+    },
+    {
+      "date": "2026-09-25",
+      "engaged_sessions": 4,
+      "event_count": 35,
+      "key_events": 0.0,
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "date": "2026-09-26",
+      "engaged_sessions": 4,
+      "event_count": 26,
+      "key_events": 0.0,
+      "sessions": 5,
+      "users": 5
+    },
+    {
+      "date": "2026-09-27",
+      "engaged_sessions": 1,
+      "event_count": 14,
+      "key_events": 0.0,
+      "sessions": 3,
+      "users": 3
+    },
+    {
+      "date": "2026-09-28",
+      "engaged_sessions": 2,
+      "event_count": 9,
+      "key_events": 0.0,
+      "sessions": 2,
+      "users": 2
+    },
+    {
+      "date": "2026-09-29",
+      "engaged_sessions": 1,
+      "event_count": 9,
+      "key_events": 0.0,
+      "sessions": 2,
+      "users": 2
+    },
+    {
+      "date": "2026-09-30",
+      "engaged_sessions": 1,
+      "event_count": 38,
+      "key_events": 0.0,
+      "sessions": 3,
+      "users": 3
+    }
+  ],
   "events": [
     {
       "count": 259,
@@ -90,6 +332,26 @@
       "engagement_rate": 1.0,
       "page": "/portfolio-filterable/",
       "sessions": 1,
+      "users": 1
+    }
+  ],
+  "sources": [
+    {
+      "campaign": "2018-02-18 v1",
+      "engaged_sessions": 89,
+      "engagement_rate": 0.6267605633802817,
+      "key_events": 0.0,
+      "sessions": 142,
+      "source_medium": "google / cpc",
+      "users": 131
+    },
+    {
+      "campaign": "(organic)",
+      "engaged_sessions": 1,
+      "engagement_rate": 1.0,
+      "key_events": 0.0,
+      "sessions": 1,
+      "source_medium": "google / cpc",
       "users": 1
     }
   ],
