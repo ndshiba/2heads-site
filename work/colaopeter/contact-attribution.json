@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-10-09 05:25 CDT",
+  "start_date": "2026-09-01",
+  "end_date": "2026-09-30",
+  "ga4_property": "387610456",
+  "events": [
+    "contact_page_view",
+    "phone_click",
+    "form_start",
+    "form_submitted"
+  ],
+  "totals": {
+    "contact_page_view": {
+      "events": 214,
+      "users": 84
+    },
+    "phone_click": {
+      "events": 12,
+      "users": 6
+    },
+    "form_start": {
+      "events": 24,
+      "users": 24
+    },
+    "form_submitted": {
+      "events": 15,
+      "users": 15
+    }
+  },
+  "source_rows": [
+    {
+      "sessionSourceMedium": "(direct) / (none)",
+      "actions": 125,
+      "events": {
+        "contact_page_view": 104,
+        "form_start": 13,
+        "form_submitted": 8
+      }
+    },
+    {
+      "sessionSourceMedium": "google / organic",
+      "actions": 77,
+      "events": {
+        "contact_page_view": 62,
+        "form_start": 7,
+        "form_submitted": 6,
+        "phone_click": 2
+      }
+    },
+    {
+      "sessionSourceMedium": "google / cpc",
+      "actions": 40,
+      "events": {
+        "contact_page_view": 30,
+        "phone_click": 8,
+        "form_start": 2
+      }
+    },
+    {
+      "sessionSourceMedium": "bing / organic",
+      "actions": 6,
+      "events": {
+        "contact_page_view": 6
+      }
+    },
+    {
+      "sessionSourceMedium": "homeservicebase.com / referral",
+      "actions": 4,
+      "events": {
+        "contact_page_view": 4
+      }
+    },
+    {
+      "sessionSourceMedium": "m.yelp.com / referral",
+      "actions": 4,
+      "events": {
+        "contact_page_view": 2,
+        "form_start": 1,
+        "form_submitted": 1
+      }
+    },
+    {
+      "sessionSourceMedium": "search.google.com / referral",
+      "actions": 3,
+      "events": {
+        "phone_click": 2,
+        "form_start": 1
+      }
+    },
+    {
+      "sessionSourceMedium": "adwords.corp.google.com / referral",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "sessionSourceMedium": "m.facebook.com / referral",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "sessionSourceMedium": "omniai.usii.com / referral",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    }
+  ],
+  "landing_rows": [
+    {
+      "landingPagePlusQueryString": "/",
+      "actions": 117,
+      "events": {
+        "contact_page_view": 92,
+        "form_start": 11,
+        "form_submitted": 10,
+        "phone_click": 4
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/",
+      "actions": 68,
+      "events": {
+        "contact_page_view": 58,
+        "form_start": 6,
+        "form_submitted": 4
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/",
+      "actions": 41,
+      "events": {
+        "contact_page_view": 30,
+        "phone_click": 8,
+        "form_start": 3
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/what-is-hardscape-design-why-should-you-consider-it-in-middleburg-va-washington-dc-potomac-md-arlington-va-aldie-va-leesburg-and-surrounding-areas/",
+      "actions": 10,
+      "events": {
+        "contact_page_view": 8,
+        "form_start": 1,
+        "form_submitted": 1
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/",
+      "actions": 9,
+      "events": {
+        "contact_page_view": 7,
+        "form_start": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/our-team/",
+      "actions": 5,
+      "events": {
+        "contact_page_view": 4,
+        "form_start": 1
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/careers/",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/?signature-care=property-walk",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/furniture/",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/hardscape-design-sterling-great-falls-arlington-mclean-leesburg-va-washington-dc/",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/landscape-architect-for-outdoor-design-yard-maintenance-custom-deck-builder-and-custom-pool-design-in-washington-d-c/",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/landscaping-company-sterling-va/",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/review/",
+      "actions": 2,
+      "events": {
+        "contact_page_view": 2
+      }
+    },
+    {
+      "landingPagePlusQueryString": "/contact",
+      "actions": 1,
+      "events": {
+        "contact_page_view": 1
+      }
+    }
+  ]
+}
