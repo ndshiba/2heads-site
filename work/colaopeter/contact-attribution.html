@@ -29,15 +29,17 @@
     .panel { padding:16px; min-width:0; }
     .panel h2 { margin-bottom:12px; }
     .table-scroll { overflow-x:auto; }
-    table { width:100%; border-collapse:collapse; min-width:0; }
-    th,td { padding:9px 8px; border-bottom:1px solid var(--line); font-size:12px; text-align:left; vertical-align:top; }
+    table { width:100%; border-collapse:collapse; min-width:0; table-layout:fixed; }
+    th,td { padding:9px 6px; border-bottom:1px solid var(--line); font-size:12px; text-align:left; vertical-align:top; }
     th { background:#fbfaf7; color:#776f61; font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; }
     tr:last-child td { border-bottom:0; } .num { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; } .strong { font-weight:800; }
-    .label-cell { overflow-wrap:anywhere; min-width:175px; } .empty { color:var(--muted); text-align:center; padding:22px; }
+    th:first-child,td:first-child { width:37.5%; }
+    th:not(:first-child),td:not(:first-child) { width:12.5%; }
+    .label-cell { overflow-wrap:anywhere; min-width:0; } .empty { color:var(--muted); text-align:center; padding:22px; }
     .notes { margin-top:14px; } .notes h2 { margin-bottom:8px; } .notes p { margin:8px 0; color:var(--muted); } .notes strong { color:var(--ink); }
     .archive { margin-top:16px; color:var(--muted); font-size:12px; } .archive a { color:#705a31; }
     footer { margin-top:32px; color:#8c887e; font-size:12px; }
-    @media (max-width:760px) { header { padding:17px 16px; } main { padding:16px 16px 56px; } h1 { font-size:23px; } .kpis,.grid { grid-template-columns:1fr; } .kpi { min-height:0; } table { min-width:570px; } }
+    @media (max-width:760px) { header { padding:17px 16px; } main { padding:16px 16px 56px; } h1 { font-size:23px; } .kpis,.grid { grid-template-columns:1fr; } .kpi { min-height:0; } .table-scroll { overflow-x:visible; } table { min-width:0; } th,td { padding:7px 3px; font-size:11px; } th { font-size:9px; letter-spacing:.2px; } }
   </style>
 </head>
 <body>
@@ -54,14 +56,14 @@
       <section class="panel">
       <h2>Where contact actions came from</h2>
       <div class="table-scroll"><table>
-        <thead><tr><th>Source / medium</th><th class="num">Contact Us</th><th class="num">Phone</th><th class="num">Form start</th><th class="num">Submit</th><th class="num">Actions</th></tr></thead>
+        <thead><tr><th>Source / medium</th><th class="num">Contact</th><th class="num">Phone</th><th class="num">Start</th><th class="num">Submit</th><th class="num">Total</th></tr></thead>
         <tbody><tr><td class="label-cell">(direct) / (none)</td><td class="num">104</td><td class="num">0</td><td class="num">13</td><td class="num">8</td><td class="num strong">125</td></tr><tr><td class="label-cell">google / organic</td><td class="num">62</td><td class="num">2</td><td class="num">7</td><td class="num">6</td><td class="num strong">77</td></tr><tr><td class="label-cell">google / cpc</td><td class="num">30</td><td class="num">8</td><td class="num">2</td><td class="num">0</td><td class="num strong">40</td></tr><tr><td class="label-cell">bing / organic</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">6</td></tr><tr><td class="label-cell">homeservicebase.com / referral</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">4</td></tr><tr><td class="label-cell">m.yelp.com / referral</td><td class="num">2</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num strong">4</td></tr><tr><td class="label-cell">search.google.com / referral</td><td class="num">0</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num strong">3</td></tr><tr><td class="label-cell">adwords.corp.google.com / referral</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr><tr><td class="label-cell">m.facebook.com / referral</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr><tr><td class="label-cell">omniai.usii.com / referral</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr></tbody>
       </table></div>
     </section>
       <section class="panel">
       <h2>Which first pages preceded contact actions</h2>
       <div class="table-scroll"><table>
-        <thead><tr><th>First page of visit</th><th class="num">Contact Us</th><th class="num">Phone</th><th class="num">Form start</th><th class="num">Submit</th><th class="num">Actions</th></tr></thead>
+        <thead><tr><th>First page of visit</th><th class="num">Contact</th><th class="num">Phone</th><th class="num">Start</th><th class="num">Submit</th><th class="num">Total</th></tr></thead>
         <tbody><tr><td class="label-cell">/</td><td class="num">92</td><td class="num">4</td><td class="num">11</td><td class="num">10</td><td class="num strong">117</td></tr><tr><td class="label-cell">/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/</td><td class="num">58</td><td class="num">0</td><td class="num">6</td><td class="num">4</td><td class="num strong">68</td></tr><tr><td class="label-cell">/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/</td><td class="num">30</td><td class="num">8</td><td class="num">3</td><td class="num">0</td><td class="num strong">41</td></tr><tr><td class="label-cell">/what-is-hardscape-design-why-should-you-consider-it-in-middleburg-va-washington-dc-potomac-md-arlington-va-aldie-va-leesburg-and-surrounding-areas/</td><td class="num">8</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num strong">10</td></tr><tr><td class="label-cell">/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/</td><td class="num">7</td><td class="num">0</td><td class="num">2</td><td class="num">0</td><td class="num strong">9</td></tr><tr><td class="label-cell">/our-team/</td><td class="num">4</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num strong">5</td></tr><tr><td class="label-cell">/careers/</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr><tr><td class="label-cell">/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/?signature-care=property-walk</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr><tr><td class="label-cell">/furniture/</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr><tr><td class="label-cell">/hardscape-design-sterling-great-falls-arlington-mclean-leesburg-va-washington-dc/</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr><tr><td class="label-cell">/landscape-architect-for-outdoor-design-yard-maintenance-custom-deck-builder-and-custom-pool-design-in-washington-d-c/</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr><tr><td class="label-cell">/landscaping-company-sterling-va/</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num strong">2</td></tr></tbody>
       </table></div>
     </section>
@@ -71,7 +73,7 @@
       <p><strong>Actions are not leads.</strong> A Contact Us page visit, phone tap, or form start is a useful intent signal, but one person can trigger several actions. The tables therefore do not add up to unique enquiries.</p>
       <p><strong>Confirmed form submit is the strongest website signal here.</strong> It is emitted from Elementor's form-success signal, unlike the retired <code>generate_lead</code> click proxy that powered the Apr–Jun snapshot.</p>
       <p><strong>Attribution:</strong> source/medium and first page are GA4 session values. This report excludes the old staging-era period; the production hostname is the reporting scope.</p>
-      <p><strong>Built:</strong> 2026-10-09 05:25 CDT from GA4 property 387610456. Period is closed at Sep 30, 2026 so it matches the month-end dashboard views.</p>
+      <p><strong>Built:</strong> 2026-10-09 05:35 CDT from GA4 property 387610456. Period is closed at Sep 30, 2026 so it matches the month-end dashboard views.</p>
     </section>
     <p class="archive">Need the old methodology? <a href="contact-attribution-apr-jun-2026-historical.html">Open the archived Apr 1–Jun 25 submit-click snapshot</a>.</p>
     <footer>Private and intended for Colao &amp; Peter use only. Pages are blocked from search engine indexing.</footer>
