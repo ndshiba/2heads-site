@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T05:25:25",
+  "generated_at": "2026-10-09T08:47:17",
   "start_date": "2025-01-01",
   "end_date": "2026-09-30",
   "current_month_note": "Data through 2026-09-30; the final listed month is complete when its last calendar day is used.",
@@ -2459,6 +2459,27 @@
       "organicAiSessions": 4
     }
   ],
+  "newest_content_spotlight": {
+    "pageKey": "signature-care-property-maintenance-what-a-property-walk-reveals",
+    "title": "Signature Care Property Maintenance: What a Property Walk Reveals",
+    "type": "Blog Post",
+    "path": "/signature-care-property-maintenance-what-a-property-walk-reveals/",
+    "url": "https://colaopeter.com/signature-care-property-maintenance-what-a-property-walk-reveals/",
+    "published": "2026-09-12",
+    "modified": "2026-09-25",
+    "sessions": 16,
+    "engagedSessions": 9,
+    "engagementRate": 0.5625,
+    "totalUsers": 13,
+    "eventCount": 235,
+    "keyEvents": 0.0,
+    "organicSessions": 6,
+    "aiSessions": 0,
+    "paidSessions": 0,
+    "organicAiSessions": 6,
+    "latestMonth": "2026-09",
+    "latestMonthOrganicSessions": 6
+  },
   "source_rows": [
     {
       "pageKey": "home",
