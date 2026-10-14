@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.27</title>
+  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.28</title>
   <style>
     :root {
       color-scheme: light;
@@ -669,7 +669,7 @@
       <h1>Mr. Floor Shipping Labels Plugin Runbook</h1>
       <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. A rate shop is free. A label purchase is not.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.27</span>
+        <span class="pill good">Plugin version: v0.1.28</span>
         <span class="pill good">Spee Dee and Veeqo purchase enabled</span>
         <span class="pill good">Default label: 4x6 Label</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
@@ -682,8 +682,8 @@
         <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your assigned account.</span></div>
         <div class="flow-step"><strong>2. Open the Plugin</strong><span>WooCommerce, then Spee Dee Labels.</span></div>
         <div class="flow-step"><strong>3. Shop Rates</strong><span>Ready compares Spee Dee and Veeqo where applicable. This does not buy anything.</span></div>
-        <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in Print Queue. Selection is still quote-only.</span></div>
-        <div class="flow-step"><strong>5. Purchase And Verify PDFs</strong><span>Use the carrier-specific action, then confirm a stored readable PDF exists for every physical carton.</span></div>
+        <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in the same Ready row. Selection is still quote-only.</span></div>
+        <div class="flow-step"><strong>5. Purchase And Verify PDFs</strong><span>Purchase a selected Veeqo rate from Ready, or create selected Spee Dee shipments from Print Queue. Then confirm a stored readable PDF exists for every physical carton.</span></div>
         <div class="flow-step"><strong>6. Generate The Batch</strong><span>Select the label-ready row and make the explicit 2-up print batch.</span></div>
         <div class="flow-step"><strong>7. Resolve Exceptions</strong><span>Use the carrier's void action for a created label. Do not remove evidence to hide a mistake.</span></div>
       </div>
@@ -716,13 +716,14 @@
       <div>
         <h2>2. Shop Rates From Ready</h2>
         <ol class="step-list">
-          <li><strong>Check the order and packages.</strong> Confirm the recipient and destination. Do not hand-edit the cartons or weights. The plugin uses the approved product and carton data.</li>
+          <li><strong>Check the order, products, and packages.</strong> Confirm the recipient and destination. The <code>Products ordered</code> column lists every ordered product and quantity. Do not hand-edit the cartons or weights. The plugin uses the approved product and carton data.</li>
           <li><strong>For a Spee Dee service-area order, click <code>Compare shipping rates</code>.</strong> This queues a comparison that includes the Spee Dee quote and applicable Veeqo rates.</li>
           <li><strong>For an out-of-area order, click <code>Shop Veeqo rates</code>.</strong> This queues Veeqo rates only.</li>
-          <li><strong>Open Print Queue with <code>View rates</code> or <code>View Queue</code>.</strong> A rate shop saves the comparison for review. It creates no shipment, label, tracking update, email, or carrier charge.</li>
+          <li><strong>Stay on Ready to review and select the returned rate.</strong> A rate shop saves the comparison for review and keeps the action in the same Ready row. It creates no shipment, label, tracking update, email, or carrier charge.</li>
+          <li><strong>Use Print Queue after selection or label creation.</strong> It remains the place to create selected Spee Dee shipments, download stored labels, batch labels, void labels, and review the stored record.</li>
         </ol>
         <div class="note">
-          If a Veeqo quote is expired or the carton plan has changed, click <code>Refresh rates</code> before choosing a carrier. Do not try to use an old price.
+          If a Veeqo quote is expired or the carton plan has changed, click <code>Refresh rates</code> before choosing a carrier. Do not try to use an old price. USPS Bound Printed Matter and Media Mail are intentionally not quoted because Mr. Floor merchandise is not eligible for printed-material mail.
         </div>
       </div>
       <figure>
@@ -749,9 +750,9 @@
 
     <section class="card split">
       <div>
-        <h2>3. Select The Carrier In Print Queue</h2>
+        <h2>3. Select The Carrier On Ready</h2>
         <ol class="step-list">
-          <li><strong>Confirm Ship to.</strong> Read the full name and address in the Print Queue before choosing a rate.</li>
+          <li><strong>Confirm Ship to.</strong> Read the full name and address in the Ready row before choosing a rate.</li>
           <li><strong>Compare the visible carrier, service, delivery estimate, carton count, and total.</strong> The Veeqo total is the total for all physical cartons when more than one carton is shown.</li>
           <li><strong>Select one rate only.</strong> <code>Select Spee Dee $...</code> converts the row to the normal Spee Dee quoted state. <code>Select UPS $...</code>, <code>Select FedEx $...</code>, or another Veeqo carrier records that Veeqo choice without buying it.</li>
           <li><strong>Do not select tender-only services.</strong> The plugin blocks them from warehouse selection. If a desired service is unavailable, refresh rates or stop for review.</li>
@@ -762,12 +763,12 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Ready</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
+            <div class="tabs"><span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
-              <h4>Print Queue</h4>
+              <h4>Ready rate selection</h4>
               <table class="wp-table">
                 <thead><tr><th>Order</th><th>Ship To</th><th>Quote / rates</th><th>Action</th></tr></thead>
                 <tbody>
@@ -777,7 +778,7 @@
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Review before selecting. The action wording always names the selected carrier and amount.</figcaption>
+        <figcaption class="screen-caption">Select in Ready. The action wording always names the selected carrier and amount.</figcaption>
       </figure>
     </section>
 
@@ -815,8 +816,8 @@
       <div>
         <h2>5. Purchase A Selected Veeqo Label</h2>
         <ol class="step-list">
-          <li><strong>Use this branch only after selecting a current Veeqo rate.</strong> Re-read the carrier, service, total, and carton count in Print Queue.</li>
-          <li><strong>Click <code>Purchase selected Veeqo label</code>.</strong> The button may say plural labels for a multi-carton shipment. Confirm the browser prompt only if the displayed carrier, service, carton count, and amount are correct.</li>
+          <li><strong>Use this branch only after selecting a current Veeqo rate on Ready.</strong> Re-read the carrier, service, total, and carton count in that same Ready row.</li>
+          <li><strong>Click <code>Purchase selected Veeqo label</code> on Ready.</strong> The button may say plural labels for a multi-carton shipment. Confirm the browser prompt only if the displayed carrier, service, carton count, and amount are correct.</li>
           <li><strong>Wait for the recorded result.</strong> Do not double-click or refresh while purchase is in progress. The plugin locks the row against duplicate purchase clicks.</li>
           <li><strong>Confirm <code>Veeqo label ready to batch</code> and stored PDFs.</strong> Every physical carton receives its own purchased label. This status appears only after every carton PDF has been stored and is readable. The queue then allows individual download or 2-up batching.</li>
         </ol>
@@ -826,10 +827,10 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Ready</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
+            <div class="tabs"><span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Selected Veeqo rate</h4>
               <table class="wp-table"><tbody><tr><th>Carrier</th><td>UPS Ground</td></tr><tr><th>Cartons</th><td>2</td></tr><tr><th>Total</th><td>$47.26</td></tr><tr><th>Status</th><td>Selected: label purchase pending</td></tr></tbody></table>
@@ -845,6 +846,7 @@
       <div>
         <h2>6. Download Or Batch Stored Labels</h2>
         <ol class="step-list">
+          <li><strong>Open Print Queue only after the needed carrier action is complete.</strong> It is where stored label PDFs, batches, reprints, voids, and recorded shipment results remain available.</li>
           <li><strong>Select only label-ready rows.</strong> Use <code>Label ready to batch</code> for Spee Dee or <code>Veeqo label ready to batch</code> for Veeqo. Quotes, selected-but-unpurchased rows, and attention rows cannot print.</li>
           <li><strong>Use <code>Download label</code> for one order or reprint.</strong> It opens the stored carrier PDF. It does not create another shipment or charge.</li>
           <li><strong>Use <code>Generate 2-up batch PDF</code> for a print run.</strong> This is the explicit Veeqo print step after purchase, exactly as it is for Spee Dee. Pick <code>Top</code> for a fresh half-sheet label page or <code>Bottom</code> if the top half is already used.</li>
@@ -905,6 +907,7 @@
     <section class="card">
       <h2>Operator Checks</h2>
       <div class="legend">
+        <div class="legend-item"><strong>Products ordered</strong> Ready and Print Queue show each WooCommerce product line and quantity so the operator can spot a mismatched order before choosing a carrier.</div>
         <div class="legend-item"><strong>Quote only</strong> Rates are visible, but no label, tracking value, customer notification, or carrier charge exists.</div>
         <div class="legend-item"><strong>Veeqo selected</strong> The carrier and price are locked for review. There are no labels yet. Purchase is still pending and remains a separate click.</div>
         <div class="legend-item"><strong>Veeqo label ready to batch</strong> Every purchased Veeqo carton has a stored, readable PDF. Select the row, then explicitly generate the 2-up batch without another carrier charge.</div>
@@ -914,7 +917,7 @@
     </section>
 
     <footer>
-      Built for Mr. Floor. Updated October 14, 2026 for the v0.1.27 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. Updated October 14, 2026 for the v0.1.28 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
