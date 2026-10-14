@@ -682,9 +682,9 @@
         <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your assigned account.</span></div>
         <div class="flow-step"><strong>2. Open the Plugin</strong><span>WooCommerce, then Spee Dee Labels.</span></div>
         <div class="flow-step"><strong>3. Shop Rates</strong><span>Ready compares Spee Dee and Veeqo where applicable. This does not buy anything.</span></div>
-        <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in Print Queue.</span></div>
-        <div class="flow-step"><strong>5. Create the Label</strong><span>Use the carrier-specific action. Only that action creates a shipment and charge.</span></div>
-        <div class="flow-step"><strong>6. Print</strong><span>Download the stored PDF or make a selected-label 2-up batch.</span></div>
+        <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in Print Queue. Selection is still quote-only.</span></div>
+        <div class="flow-step"><strong>5. Purchase And Verify PDFs</strong><span>Use the carrier-specific action, then confirm a stored readable PDF exists for every physical carton.</span></div>
+        <div class="flow-step"><strong>6. Generate The Batch</strong><span>Select the label-ready row and make the explicit 2-up print batch.</span></div>
         <div class="flow-step"><strong>7. Resolve Exceptions</strong><span>Use the carrier's void action for a created label. Do not remove evidence to hide a mistake.</span></div>
       </div>
       <div class="danger">
@@ -818,10 +818,10 @@
           <li><strong>Use this branch only after selecting a current Veeqo rate.</strong> Re-read the carrier, service, total, and carton count in Print Queue.</li>
           <li><strong>Click <code>Purchase selected Veeqo label</code>.</strong> The button may say plural labels for a multi-carton shipment. Confirm the browser prompt only if the displayed carrier, service, carton count, and amount are correct.</li>
           <li><strong>Wait for the recorded result.</strong> Do not double-click or refresh while purchase is in progress. The plugin locks the row against duplicate purchase clicks.</li>
-          <li><strong>Confirm label-ready status and stored PDFs.</strong> Every physical carton receives its own purchased label. The queue then allows individual download or 2-up batching.</li>
+          <li><strong>Confirm <code>Veeqo label ready to batch</code> and stored PDFs.</strong> Every physical carton receives its own purchased label. This status appears only after every carton PDF has been stored and is readable. The queue then allows individual download or 2-up batching.</li>
         </ol>
         <div class="danger">
-          Veeqo purchase creates real carrier shipment(s) and charge(s). It is not an automatic next step after rate shopping. The plugin does not auto-notify the customer or write a WooCommerce tracking update after a Veeqo purchase.
+          <strong>Do not expect a label from selection alone.</strong> Veeqo purchase creates real carrier shipment(s) and charge(s), but it does not auto-generate the print batch. If any carton PDF is missing, unreadable, or the carrier returns an incomplete set, the row stops in <code>Needs Attention</code>. Do not repurchase to chase a label; preserve the row and resolve it first.
         </div>
       </div>
       <figure>
@@ -845,9 +845,9 @@
       <div>
         <h2>6. Download Or Batch Stored Labels</h2>
         <ol class="step-list">
-          <li><strong>Select only label-ready rows.</strong> Quotes and attention rows cannot print. This works the same for completed Spee Dee and Veeqo labels.</li>
+          <li><strong>Select only label-ready rows.</strong> Use <code>Label ready to batch</code> for Spee Dee or <code>Veeqo label ready to batch</code> for Veeqo. Quotes, selected-but-unpurchased rows, and attention rows cannot print.</li>
           <li><strong>Use <code>Download label</code> for one order or reprint.</strong> It opens the stored carrier PDF. It does not create another shipment or charge.</li>
-          <li><strong>Use <code>Generate 2-up batch PDF</code> for a print run.</strong> Pick <code>Top</code> for a fresh half-sheet label page or <code>Bottom</code> if the top half is already used.</li>
+          <li><strong>Use <code>Generate 2-up batch PDF</code> for a print run.</strong> This is the explicit Veeqo print step after purchase, exactly as it is for Spee Dee. Pick <code>Top</code> for a fresh half-sheet label page or <code>Bottom</code> if the top half is already used.</li>
           <li><strong>Print every label page.</strong> The batch includes one page for each physical label, not merely one page per order. Save the generated PDF to <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code>.</li>
         </ol>
         <div class="note">
@@ -862,13 +862,13 @@
             <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Print Queue</h4>
-              <table class="wp-table"><thead><tr><th>Order</th><th>Queue Status</th><th>Shipment</th></tr></thead><tbody><tr><td>#41032</td><td><strong>Label ready to batch</strong></td><td>2 labels stored<br><span style="color:#135e96;">Download label</span></td></tr></tbody></table>
-              <p class="batch-help"><strong>2 stored labels are ready to batch.</strong> Select the row, then generate the PDF.</p>
+              <table class="wp-table"><thead><tr><th>Order</th><th>Queue Status</th><th>Shipment</th></tr></thead><tbody><tr><td>#41032</td><td><strong>Veeqo label ready to batch</strong></td><td>2 Veeqo label PDFs stored<br><span style="color:#135e96;">Download label</span></td></tr></tbody></table>
+              <p class="batch-help"><strong>2 stored Veeqo labels are ready to batch.</strong> Select the row, then generate the PDF.</p>
               <div class="batch-controls"><div class="batch-select"><span>Start slot</span><span class="select-box">Top <b>⌄</b></span></div><span class="button callout" data-callout="This creates a local PDF batch only. It does not call a carrier.">Generate 2-up batch PDF</span></div>
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Batching and downloading use existing stored PDFs only. They do not buy another label.</figcaption>
+        <figcaption class="screen-caption">For Veeqo, this status proves every carton PDF was stored before batching. Batching and downloading use those stored PDFs only. They do not buy another label.</figcaption>
       </figure>
     </section>
 
@@ -906,8 +906,8 @@
       <h2>Operator Checks</h2>
       <div class="legend">
         <div class="legend-item"><strong>Quote only</strong> Rates are visible, but no label, tracking value, customer notification, or carrier charge exists.</div>
-        <div class="legend-item"><strong>Veeqo selected</strong> The carrier and price are locked for review. Purchase is still pending and remains a separate click.</div>
-        <div class="legend-item"><strong>Label ready to batch</strong> A stored PDF exists. It may be downloaded or added to a 2-up batch without creating another charge.</div>
+        <div class="legend-item"><strong>Veeqo selected</strong> The carrier and price are locked for review. There are no labels yet. Purchase is still pending and remains a separate click.</div>
+        <div class="legend-item"><strong>Veeqo label ready to batch</strong> Every purchased Veeqo carton has a stored, readable PDF. Select the row, then explicitly generate the 2-up batch without another carrier charge.</div>
         <div class="legend-item"><strong>Needs Attention</strong> Stop. Preserve the row and resolve the displayed issue before another carrier action.</div>
       </div>
       <div class="note" style="margin-top:14px;">Production status verified October 14, 2026: real-label mode is on, Spee Dee creation is enabled, and Veeqo purchase is enabled. These gates do not create labels by themselves. Staff should leave Settings alone unless an administrator specifically directs otherwise.</div>
