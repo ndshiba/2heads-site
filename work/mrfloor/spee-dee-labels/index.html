@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Spee Dee Labels Plugin Runbook — v0.1.17</title>
+  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.27</title>
   <style>
     :root {
       color-scheme: light;
@@ -666,10 +666,11 @@
 <body>
   <main>
     <header>
-      <h1>Mr. Floor Spee Dee Labels Plugin Runbook</h1>
-      <p class="lede">Start at the Mr. Floor WordPress sign-in, open WooCommerce &gt; Spee Dee Labels, then review and quote eligible orders, create authorized shipments in groups of no more than five, build a selected-label 2-up PDF, save it for Debbie, and correct mistakes without creating another shipment.</p>
+      <h1>Mr. Floor Shipping Labels Plugin Runbook</h1>
+      <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. A rate shop is free. A label purchase is not.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.17</span>
+        <span class="pill good">Plugin version: v0.1.27</span>
+        <span class="pill good">Spee Dee and Veeqo purchase enabled</span>
         <span class="pill good">Default label: 4x6 Label</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
       </div>
@@ -678,105 +679,50 @@
     <section class="card">
       <h2>Start-to-Finish Version</h2>
       <div class="mini-flow">
-        <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your own assigned account.</span></div>
-        <div class="flow-step"><strong>2. Navigate</strong><span>Open WooCommerce, then select Spee Dee Labels.</span></div>
-        <div class="flow-step"><strong>3. Quote Order</strong><span>Use Ready. A quote returns here and does not create a shipment.</span></div>
-        <div class="flow-step"><strong>4. Create Up To Five</strong><span>Select no more than five approved quoted orders in the Print Queue.</span></div>
-        <div class="flow-step"><strong>5. Select Labels</strong><span>Only label-ready rows can be batched; quoted rows cannot print.</span></div>
-        <div class="flow-step"><strong>6. Download Batch</strong><span>The dated batch PDF opens in a new tab; save it for Debbie.</span></div>
-        <div class="flow-step"><strong>7. Cancel Mistakes</strong><span>Cancel the shipment before removing any created queue row.</span></div>
+        <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your assigned account.</span></div>
+        <div class="flow-step"><strong>2. Open the Plugin</strong><span>WooCommerce, then Spee Dee Labels.</span></div>
+        <div class="flow-step"><strong>3. Shop Rates</strong><span>Ready compares Spee Dee and Veeqo where applicable. This does not buy anything.</span></div>
+        <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in Print Queue.</span></div>
+        <div class="flow-step"><strong>5. Create the Label</strong><span>Use the carrier-specific action. Only that action creates a shipment and charge.</span></div>
+        <div class="flow-step"><strong>6. Print</strong><span>Download the stored PDF or make a selected-label 2-up batch.</span></div>
+        <div class="flow-step"><strong>7. Resolve Exceptions</strong><span>Use the carrier's void action for a created label. Do not remove evidence to hide a mistake.</span></div>
       </div>
       <div class="danger">
-        <strong>Creation alert:</strong> every selected eligible quoted order creates a Dispatch Science/Spee Dee shipment. If you are not authorized to make that shipment, stop before selecting a row.
+        <strong>Charge-risk actions:</strong> <code>Create Spee Dee shipments for selected</code> creates Spee Dee shipments. <code>Purchase selected Veeqo label</code> creates Veeqo carrier shipments and charges. Selecting or refreshing a rate does neither.
       </div>
     </section>
 
     <section class="card split">
       <div>
-        <h2>1. Sign In To Mr. Floor WordPress</h2>
+        <h2>1. Sign In And Open Spee Dee Labels</h2>
         <ol class="step-list">
-          <li><strong>Open the Mr. Floor WordPress login page.</strong> Go to <code>https://www.mrfloor.com/wp-login.php</code>.</li>
-          <li><strong>Enter your assigned WordPress username or email address and password.</strong> Use your own account; do not share credentials or use someone else&rsquo;s saved browser login.</li>
-          <li><strong>Click Log In.</strong> You should arrive at the Mr. Floor WordPress Dashboard. If you do not have access, stop and ask the Mr. Floor/2.0heads administrator for an account rather than attempting work in WordPress.</li>
-        </ol>
-        <div class="note">
-          <strong>WordPress login:</strong> <code>https://www.mrfloor.com/wp-login.php</code>
-        </div>
-      </div>
-      <figure>
-        <div class="screen shot">
-          <img src="assets/mrfloor-wordpress-login.png" alt="Mr. Floor WordPress login page showing Username or Email Address, Password, Remember Me, and Log In controls.">
-        </div>
-        <figcaption class="screen-caption">Screenshot 1: Start at the Mr. Floor WordPress login page. Credentials are intentionally not included in this guide.</figcaption>
-      </figure>
-    </section>
-
-    <section class="card split">
-      <div>
-        <h2>2. Navigate To Spee Dee Labels</h2>
-        <ol class="step-list">
-          <li><strong>Find WooCommerce in the black menu on the left.</strong> Move your pointer over <code>WooCommerce</code> to open its submenu.</li>
-          <li><strong>Select Spee Dee Labels.</strong> It is inside the WooCommerce submenu, below <code>Zoho Feeds</code>. Do not choose <code>Orders</code>; that opens the regular WooCommerce order list, not the shipping-label tool.</li>
-          <li><strong>Wait for the Spee Dee Labels page.</strong> It opens on the <code>Ready</code> tab. From here, continue with quoting, creating, batching, or canceling as needed.</li>
+          <li><strong>Open Mr. Floor WordPress.</strong> Go to <code>https://www.mrfloor.com/wp-login.php</code> and use your own assigned account.</li>
+          <li><strong>Open WooCommerce, then Spee Dee Labels.</strong> Do not start from the regular Orders list. The shipping workflow is inside the plugin.</li>
+          <li><strong>Start on Ready.</strong> The working tabs are <code>Ready</code>, <code>Print Queue</code>, <code>Needs Attention</code>, <code>Batches</code>, and <code>Settings</code>.</li>
         </ol>
         <div class="warning">
-          The direct plugin page is <code>https://www.mrfloor.com/wp-admin/admin.php?page=mrfloor-speedee-labels</code>, but the menu path above is the normal starting path after logging in.
+          The direct page is <code>https://www.mrfloor.com/wp-admin/admin.php?page=mrfloor-speedee-labels</code>. Do not change Settings during ordinary fulfillment.
         </div>
       </div>
       <figure>
         <div class="screen shot">
           <img src="assets/mrfloor-speedee-navigation.png" alt="Mr. Floor WordPress dashboard with the WooCommerce submenu open and Spee Dee Labels visibly selected.">
         </div>
-        <figcaption class="screen-caption">Screenshot 2: From the WordPress Dashboard, open <strong>WooCommerce</strong> and choose <strong>Spee Dee Labels</strong>.</figcaption>
+        <figcaption class="screen-caption">From the WordPress Dashboard, open <strong>WooCommerce</strong> and choose <strong>Spee Dee Labels</strong>.</figcaption>
       </figure>
     </section>
 
     <section class="card split">
       <div>
-        <h2>3. Confirm You Are In The Right Tool</h2>
+        <h2>2. Shop Rates From Ready</h2>
         <ol class="step-list">
-          <li><strong>Confirm the page title says Spee Dee Labels.</strong> The working tabs are <code>Ready</code>, <code>Print Queue</code>, <code>Needs Attention</code>, <code>Batches</code>, and <code>Settings</code>.</li>
-          <li><strong>Start on Ready.</strong> This is where unqueued orders are reviewed and quoted. Already-quoted orders show <code>View Queue</code>, not <code>Check Spee Dee</code>.</li>
-          <li><strong>Ignore the license mismatch banner if it appears.</strong> That banner belongs to another plugin and does not affect Spee Dee labels.</li>
-        </ol>
-      </div>
-      <figure>
-        <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">www.mrfloor.com/wp-admin/admin.php?page=mrfloor-speedee-labels</div></div>
-          <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
-            <div class="notice red"><strong>License Mismatch</strong><br>Your license key does not match your current domain.</div>
-            <div class="tabs">
-              <span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
-            </div>
-            <div class="wp-panel">
-              <h4>Ready To Review</h4>
-              <table class="wp-table">
-                <thead><tr><th>Order</th><th>Ship To</th><th>Packages</th><th>Status</th><th>Action</th></tr></thead>
-                <tbody>
-                  <tr><td>#40872</td><td>Chicago, IL 60659</td><td>1 pc / 10.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
-                  <tr><td>#40863</td><td>Sparta, TN 38583</td><td>1 pc / 10.00 lb</td><td>Needs attention</td><td><span class="button callout" data-callout="Only unqueued orders show Check Spee Dee.">Check Spee Dee</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <figcaption class="screen-caption">Screenshot 3: Spee Dee Labels opens on <strong>Ready</strong>.</figcaption>
-      </figure>
-    </section>
-
-    <section class="card split">
-      <div>
-        <h2>4. Quote Or Find An Order</h2>
-        <ol class="step-list">
-          <li><strong>Use Ready for new orders.</strong> Click <code>Check Spee Dee</code> when the button appears.</li>
-          <li><strong>A successful quote returns to Ready.</strong> The confirmation says the order is in Print Queue, so you can keep reviewing Ready orders without using Back.</li>
-          <li><strong>If you see View Queue, the order is already quoted.</strong> Open the <code>Print Queue</code> when you are ready to review it.</li>
-          <li><strong>Read the Packages column; do not hand-edit it.</strong> The plugin converts cleaner orders into Debbie's approved cartons. A pad-only MPad6 order quotes as one recorded 2 lb, 4×4×12 parcel; the Spee Dee response remains the authority.</li>
-          <li><strong>Out-of-service states are blocked.</strong> GA/TN and similar rows should go to <code>Needs Attention</code> instead of calling Spee Dee.</li>
+          <li><strong>Check the order and packages.</strong> Confirm the recipient and destination. Do not hand-edit the cartons or weights. The plugin uses the approved product and carton data.</li>
+          <li><strong>For a Spee Dee service-area order, click <code>Compare shipping rates</code>.</strong> This queues a comparison that includes the Spee Dee quote and applicable Veeqo rates.</li>
+          <li><strong>For an out-of-area order, click <code>Shop Veeqo rates</code>.</strong> This queues Veeqo rates only.</li>
+          <li><strong>Open Print Queue with <code>View rates</code> or <code>View Queue</code>.</strong> A rate shop saves the comparison for review. It creates no shipment, label, tracking update, email, or carrier charge.</li>
         </ol>
         <div class="note">
-          A quote does not create a shipment, label, customer email, or carrier charge. It only checks price/service and stores the order in the local plugin queue.
+          If a Veeqo quote is expired or the carton plan has changed, click <code>Refresh rates</code> before choosing a carrier. Do not try to use an old price.
         </div>
       </div>
       <figure>
@@ -784,40 +730,34 @@
           <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Ready</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs">
-              <span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
-            </div>
+            <div class="tabs"><span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Ready To Review</h4>
               <table class="wp-table">
-                <thead><tr><th>Order</th><th>Ship To</th><th>Packages</th><th>Status</th><th>Action</th></tr></thead>
+                <thead><tr><th>Order</th><th>Ship To</th><th>Packages</th><th>Action</th></tr></thead>
                 <tbody>
-                  <tr><td>#40872</td><td>Chicago, IL 60659</td><td>1 pc / 10.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
-                  <tr><td>#40865</td><td>Northbrook, IL 60062</td><td>1 pc / 10.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
-                  <tr><td>#40864</td><td>Chicago, IL 60614</td><td>3 pc / 23.00 lb</td><td>quoted</td><td><span class="button">View Queue</span></td></tr>
-                  <tr><td>#40863</td><td>Sparta, TN 38583</td><td>1 pc / 10.00 lb</td><td>Needs attention</td><td><span class="button">Check Spee Dee</span></td></tr>
+                  <tr><td>#41031</td><td>Chicago, IL 60614</td><td>1 carton</td><td><span class="button callout" data-callout="Quotes only. No label or charge.">Compare shipping rates</span></td></tr>
+                  <tr><td>#41032</td><td>Columbus, OH 43215</td><td>2 cartons</td><td><span class="button">Shop Veeqo rates</span></td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 4: Ready tab behavior after orders are already quoted.</figcaption>
+        <figcaption class="screen-caption">Ready determines whether to compare Spee Dee and Veeqo or shop Veeqo alone. Both actions are quote-only.</figcaption>
       </figure>
     </section>
 
     <section class="card split">
       <div>
-        <h2>5. Create Shipments In Groups Of Five</h2>
+        <h2>3. Select The Carrier In Print Queue</h2>
         <ol class="step-list">
-          <li><strong>Confirm you have authorization.</strong> Do not create a shipment unless you are authorized to do so.</li>
-          <li><strong>Open Print Queue and select no more than five eligible quoted orders.</strong> The same checkboxes are used for creation and batching, so confirm every selected row is <code>Quoted — no label yet</code>. For a larger set, use five, five, five, and then the final smaller group.</li>
-          <li><strong>Click Create Spee Dee shipments for selected once.</strong> The queue immediately shows <code>Preparing order #… (1 of total)</code>, then advances one order at a time. Do not click again or refresh while that progress message is visible.</li>
-          <li><strong>Confirm every selected row says Label ready to batch.</strong> Each row should show a shipment/tracking value and a <code>Download label</code> link, which opens the stored PDF in a new tab. If progress does not appear or a row does not become label-ready, stop before retrying.</li>
-          <li><strong>Check the Woo order tracking card.</strong> The plugin writes <code>Spee-Dee Delivery</code>, the tracking value (an <code>SD...</code> shipment ID is used if no barcode is returned), and the customer tracking-portal link.</li>
-          <li><strong>If the shipment exists but the PDF is missing, use Fetch label.</strong> It retries label retrieval only; it does not create a second shipment.</li>
+          <li><strong>Confirm Ship to.</strong> Read the full name and address in the Print Queue before choosing a rate.</li>
+          <li><strong>Compare the visible carrier, service, delivery estimate, carton count, and total.</strong> The Veeqo total is the total for all physical cartons when more than one carton is shown.</li>
+          <li><strong>Select one rate only.</strong> <code>Select Spee Dee $...</code> converts the row to the normal Spee Dee quoted state. <code>Select UPS $...</code>, <code>Select FedEx $...</code>, or another Veeqo carrier records that Veeqo choice without buying it.</li>
+          <li><strong>Do not select tender-only services.</strong> The plugin blocks them from warehouse selection. If a desired service is unavailable, refresh rates or stop for review.</li>
         </ol>
-        <div class="danger">
-          Creation is a real external API call to Dispatch Science and is the charge-risk action. The tested operating limit is five selected orders per run; never use a 20-order selection.
+        <div class="warning">
+          <strong>Select</strong> is not purchase. After selecting Veeqo, the row reads <code>Selected: label purchase pending</code>. That is the last safe review point before a carrier charge.
         </div>
       </div>
       <figure>
@@ -825,60 +765,93 @@
           <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs">
-              <span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
-            </div>
+            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Print Queue</h4>
               <table class="wp-table">
-                <thead><tr><th class="check">✓</th><th>Order</th><th>Queue Status</th><th>Quote</th><th>Shipment</th><th>Action</th></tr></thead>
+                <thead><tr><th>Order</th><th>Ship To</th><th>Quote / rates</th><th>Action</th></tr></thead>
                 <tbody>
-                  <tr>
-                    <td><span class="box checked callout" data-callout="Select no more than five eligible quoted rows in one run."></span></td>
-                    <td>#40872</td>
-                    <td>Quoted — no label yet<br>Creation is required</td>
-                    <td>$9.61</td>
-                    <td></td>
-                    <td><span class="button red">Remove</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="box checked"></span></td>
-                    <td>#40865</td>
-                    <td>quoted</td>
-                    <td>$9.61</td>
-                    <td></td>
-                    <td><span class="button red">Remove</span></td>
-                  </tr>
+                  <tr><td>#41031</td><td>Chicago, IL 60614</td><td>Spee Dee $9.61<br>UPS Ground $12.22<br>FedEx Home $14.08</td><td><span class="button">Select Spee Dee $9.61</span><br><span class="button callout" data-callout="Selection records the rate. It does not purchase it.">Select UPS $12.22</span></td></tr>
                 </tbody>
               </table>
-              <div style="padding:12px;"><span class="button primary">Create Spee Dee shipments for selected</span></div>
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 5: Print Queue before creation. Select up to five authorized quoted orders, click Create once, and wait for the sequential progress to finish.</figcaption>
+        <figcaption class="screen-caption">Review before selecting. The action wording always names the selected carrier and amount.</figcaption>
       </figure>
     </section>
 
     <section class="card split">
       <div>
-        <h2>6. Generate And Save The 2-Up PDF</h2>
+        <h2>4. Create A Spee Dee Shipment</h2>
         <ol class="step-list">
-          <li><strong>Stay on Print Queue after the final create group finishes.</strong> Each created row now says <code>Label ready to batch</code> and shows its shipment value plus <code>Download label</code>.</li>
-          <li><strong>Select only Label ready to batch rows.</strong> Select every ready label intended for this print run; leave quoted or attention rows unchecked. The plugin fails closed if any selected row is not label-ready.</li>
-          <li><strong>Use the second Print Queue action: Generate 2-up batch PDF.</strong> It becomes active when at least one stored label is ready. Choose <code>2-up letter</code> and a Start slot: <code>Top</code> for a fresh sheet or <code>Bottom</code> if the top half has already been used.</li>
-          <li><strong>The button pushes every page in each selected stored label PDF into a new batch.</strong> A two-package shipment prints two labels; the <code>Labels</code> count on the Batches tab is the actual number of label pages, not merely the number of orders. It then opens the <code>Batches</code> tab, where you download the latest PDF. The link opens in a new tab and changes to <code>Opening…</code>.</li>
-          <li><strong>Use the generated filename.</strong> It is automatically named <code>speedee-batch-YYYY-MM-DD-01.pdf</code>; the last two digits advance for each local WordPress day.</li>
-          <li><strong>Save the downloaded PDF to Dropbox.</strong> Use <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code>.</li>
-          <li><strong>Debbie prints in Skokie.</strong> Print actual size on 8.5x11 half-sheet label stock, scale 100 percent, duplex off.</li>
+          <li><strong>Use this branch only after selecting Spee Dee.</strong> The row must be a regular <code>Quoted: no label yet</code> row, not Veeqo-selected.</li>
+          <li><strong>Select up to five approved quoted rows.</strong> Click <code>Create Spee Dee shipments for selected</code> once. The plugin prepares them one at a time.</li>
+          <li><strong>Wait for completion.</strong> Do not refresh or click again while the page shows <code>Preparing order</code>.</li>
+          <li><strong>Confirm each row becomes label-ready.</strong> A completed row has a shipment or tracking value and <code>Download label</code>. If the shipment exists but the PDF is missing, use <code>Fetch label</code>. That does not create a second shipment.</li>
         </ol>
-        <div class="warning">
-          Downloading, saving, and printing the PDF does not create another Spee Dee charge. The charge-risk step is creating the shipment.
+        <div class="danger">
+          This is a real Dispatch Science and Spee Dee creation call. It may create a billable shipment. Do not use it to reprint an older label.
         </div>
-        <div class="note">
-          If you see <code>No labels are ready to batch</code>, the queue contains quotes only or created shipments whose PDFs were not stored. Create an approved shipment first, or use <code>Fetch label</code> for an existing shipment with no PDF.
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
+            <div class="wp-panel">
+              <h4>Selected Spee Dee rate</h4>
+              <table class="wp-table"><tbody><tr><th>Carrier</th><td>Spee Dee</td></tr><tr><th>Status</th><td>Quoted: no label yet</td></tr><tr><th>Shipment</th><td>Not created</td></tr></tbody></table>
+              <div style="padding:12px;"><span class="button primary callout" data-callout="This creates the real Spee Dee shipment.">Create Spee Dee shipments for selected</span></div>
+            </div>
+          </div>
         </div>
+        <figcaption class="screen-caption">The Spee Dee action is separate from rate selection. Use the resulting label-ready row as proof that creation finished.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>5. Purchase A Selected Veeqo Label</h2>
+        <ol class="step-list">
+          <li><strong>Use this branch only after selecting a current Veeqo rate.</strong> Re-read the carrier, service, total, and carton count in Print Queue.</li>
+          <li><strong>Click <code>Purchase selected Veeqo label</code>.</strong> The button may say plural labels for a multi-carton shipment. Confirm the browser prompt only if the displayed carrier, service, carton count, and amount are correct.</li>
+          <li><strong>Wait for the recorded result.</strong> Do not double-click or refresh while purchase is in progress. The plugin locks the row against duplicate purchase clicks.</li>
+          <li><strong>Confirm label-ready status and stored PDFs.</strong> Every physical carton receives its own purchased label. The queue then allows individual download or 2-up batching.</li>
+        </ol>
+        <div class="danger">
+          Veeqo purchase creates real carrier shipment(s) and charge(s). It is not an automatic next step after rate shopping. The plugin does not auto-notify the customer or write a WooCommerce tracking update after a Veeqo purchase.
+        </div>
+      </div>
+      <figure>
+        <div class="screen">
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue</div></div>
+          <div class="wp-page">
+            <div class="wp-title">Spee Dee Labels</div>
+            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
+            <div class="wp-panel">
+              <h4>Selected Veeqo rate</h4>
+              <table class="wp-table"><tbody><tr><th>Carrier</th><td>UPS Ground</td></tr><tr><th>Cartons</th><td>2</td></tr><tr><th>Total</th><td>$47.26</td></tr><tr><th>Status</th><td>Selected: label purchase pending</td></tr></tbody></table>
+              <div style="padding:12px;"><span class="button primary callout" data-callout="This creates the carrier shipments and charges.">Purchase 2 selected Veeqo labels ($47.26)</span></div>
+            </div>
+          </div>
+        </div>
+        <figcaption class="screen-caption">The confirmation repeats the selected carrier, service, label count, and price. Stop if any detail is wrong.</figcaption>
+      </figure>
+    </section>
+
+    <section class="card split">
+      <div>
+        <h2>6. Download Or Batch Stored Labels</h2>
+        <ol class="step-list">
+          <li><strong>Select only label-ready rows.</strong> Quotes and attention rows cannot print. This works the same for completed Spee Dee and Veeqo labels.</li>
+          <li><strong>Use <code>Download label</code> for one order or reprint.</strong> It opens the stored carrier PDF. It does not create another shipment or charge.</li>
+          <li><strong>Use <code>Generate 2-up batch PDF</code> for a print run.</strong> Pick <code>Top</code> for a fresh half-sheet label page or <code>Bottom</code> if the top half is already used.</li>
+          <li><strong>Print every label page.</strong> The batch includes one page for each physical label, not merely one page per order. Save the generated PDF to <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code>.</li>
+        </ol>
         <div class="note">
-          <strong>Reprinting an older multi-package order:</strong> use <code>Download label</code> beside that order in Print Queue. It opens the original carrier PDF with every package-label page; do not create a second shipment just to recover a missed label.
+          Print actual size on 8.5x11 half-sheet label stock at 100 percent, with duplex off. The filename is <code>speedee-batch-YYYY-MM-DD-01.pdf</code>; the sequence advances automatically.
         </div>
       </div>
       <figure>
@@ -886,120 +859,62 @@
           <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue after label creation</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs">
-              <span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
-            </div>
+            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Print Queue</h4>
-              <table class="wp-table">
-                <thead><tr><th class="check">✓</th><th>Order</th><th>Queue Status</th><th>Quote</th><th>Shipment</th><th>Action</th></tr></thead>
-                <tbody>
-                  <tr>
-                    <td><span class="box checked callout" data-callout="Select the created row that now has a stored label."></span></td>
-                    <td>#40872</td>
-                    <td><strong>Label ready to batch</strong></td>
-                    <td>$9.61</td>
-                    <td>SD1234567<br><span style="color:#135e96;">Download label</span></td>
-                    <td><span class="button red">Cancel shipment</span> <span class="button red">Remove</span></td>
-                  </tr>
-                  <tr>
-                    <td><span class="box"></span></td>
-                    <td>#40865</td>
-                    <td><strong>Quoted — no label yet</strong><br>Creation is still required.</td>
-                    <td>$9.61</td>
-                    <td></td>
-                    <td><span class="button red">Remove</span></td>
-                  </tr>
-                </tbody>
-              </table>
-              <div style="padding:12px;">
-                <span class="button primary">Create Spee Dee shipments for selected</span>
-              </div>
-              <p class="batch-help"><strong>1 stored label is ready to batch.</strong> Select it, then generate the PDF.</p>
-              <div class="batch-controls">
-                <div class="batch-select"><span>Sheet layout</span><span class="select-box">2-up letter <b>⌄</b></span></div>
-                <div class="batch-select"><span>Start slot</span><span class="select-box">Top <b>⌄</b></span></div>
-                <span class="button callout" data-callout="Second Print Queue action: it moves only the selected stored labels into a new 2-up batch PDF.">Generate 2-up batch PDF</span>
-              </div>
+              <table class="wp-table"><thead><tr><th>Order</th><th>Queue Status</th><th>Shipment</th></tr></thead><tbody><tr><td>#41032</td><td><strong>Label ready to batch</strong></td><td>2 labels stored<br><span style="color:#135e96;">Download label</span></td></tr></tbody></table>
+              <p class="batch-help"><strong>2 stored labels are ready to batch.</strong> Select the row, then generate the PDF.</p>
+              <div class="batch-controls"><div class="batch-select"><span>Start slot</span><span class="select-box">Top <b>⌄</b></span></div><span class="button callout" data-callout="This creates a local PDF batch only. It does not call a carrier.">Generate 2-up batch PDF</span></div>
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 6: After a shipment has a stored label, select the <strong>Label ready to batch</strong> row and use the second Print Queue action: <strong>Generate 2-up batch PDF</strong>.</figcaption>
+        <figcaption class="screen-caption">Batching and downloading use existing stored PDFs only. They do not buy another label.</figcaption>
       </figure>
-    </section>
-
-    <section class="card">
-      <h2>Dropbox Handoff</h2>
-      <div class="legend">
-        <div class="legend-item"><strong>Folder</strong> <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code></div>
-        <div class="legend-item"><strong>Filename</strong> <code>speedee-batch-YYYY-MM-DD-01.pdf</code> (the sequence advances automatically)</div>
-        <div class="legend-item"><strong>Printer owner</strong> Debbie prints the saved PDF at Mr. Floor in Skokie.</div>
-      </div>
-      <div class="note">
-        Keep Dropbox manual; it avoids Dropbox API credentials in WordPress and makes every created shipment visible before anyone prints it. <strong>Last opened</strong> in Batches confirms a protected PDF download request only—not a physical print.
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Print Sheet Orientation</h2>
-      <p>The plugin imports the Spee Dee 4x6 <code>Label</code> PDF and rotates it at true size into a half-letter slot. Debbie should print the Dropbox PDF at 100 percent scale, with duplex off.</p>
-      <div class="print-note">
-        <div class="slot">Top start slot<br>Use for a fresh 8.5x11 label sheet</div>
-        <div class="slot">Bottom start slot<br>Use when the top half is already used</div>
-      </div>
     </section>
 
     <section class="card split">
       <div>
-        <h2>7. Cancel Or Clear A Mistake</h2>
+        <h2>7. Fix A Mistake Without Losing Evidence</h2>
         <ol class="step-list">
-          <li><strong>Cancel shipment</strong> voids the external Dispatch Science order and removes the matching <code>Spee-Dee Delivery</code> tracking record from WooCommerce.</li>
-          <li><strong>Remove</strong> only removes the local plugin queue row. Use this for quoted rows or stale queue cleanup.</li>
-          <li><strong>Confirm the cancellation banner.</strong> Do not Remove a created row until the cancellation succeeds. If cancellation fails, leave the row in place and escalate it.</li>
+          <li><strong>Expired rate or changed carton plan:</strong> use <code>Refresh rates</code>, then select again. Do not purchase a stale quote.</li>
+          <li><strong>Spee Dee shipment created by mistake:</strong> use <code>Cancel shipment</code> and wait for a successful cancellation before removing the local row.</li>
+          <li><strong>Veeqo label created by mistake:</strong> use <code>Void Veeqo label</code>. It submits a carrier void and refund request. Carrier refund eligibility controls the outcome.</li>
+          <li><strong>Partial purchase, missing stored PDF, or Needs Attention:</strong> stop. Do not remove the row, repurchase, or assume the carrier charge failed. The queue preserves the evidence needed to resolve it.</li>
+          <li><strong>Remove:</strong> clears only the local queue row. It never cancels or refunds a carrier shipment.</li>
         </ol>
         <div class="danger">
-          Do not use Remove as a substitute for Cancel after a shipment has been created.
+          Never use <code>Remove</code> as a substitute for canceling or voiding a real carrier label.
         </div>
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Cancel</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Needs Attention</div></div>
           <div class="wp-page">
             <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs">
-              <span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span>
-            </div>
+            <div class="tabs"><span class="tab">Ready</span><span class="tab">Print Queue</span><span class="tab active">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
-              <h4>Print Queue</h4>
-              <table class="wp-table">
-                <thead><tr><th>Order</th><th>Queue Status</th><th>Shipment</th><th>Action</th></tr></thead>
-                <tbody>
-                  <tr>
-                    <td>#40872</td>
-                    <td>label_ready</td>
-                    <td>SD1234567<br>Download label</td>
-                    <td><span class="button callout" data-callout="Use this to reverse the external test shipment.">Cancel shipment</span> <span class="button red">Remove</span></td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="notice red"><strong>Operator review required</strong><br>A partial Veeqo purchase or missing stored PDF can leave an active carrier label.</div>
+              <table class="wp-table"><tbody><tr><th>Safe action</th><td>Stop and preserve the row</td></tr><tr><th>Do not</th><td>Remove, repurchase, or assume the charge failed</td></tr></tbody></table>
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">Screenshot 7: Cancel is the reversible path for a created shipment.</figcaption>
+        <figcaption class="screen-caption">If the queue's status differs from this guide, stop before another carrier action and use the live UI as the immediate source of truth.</figcaption>
       </figure>
     </section>
 
     <section class="card">
       <h2>Operator Checks</h2>
       <div class="legend">
-        <div class="legend-item"><strong>Quoted state</strong> Quoted rows have price only. They do not have shipment ID, tracking, or label file, and cannot be batched.</div>
-        <div class="legend-item"><strong>Label-ready state</strong> Created rows should show shipment/tracking and a Download label link before batching. Use Fetch label if the shipment exists but the PDF is missing.</div>
+        <div class="legend-item"><strong>Quote only</strong> Rates are visible, but no label, tracking value, customer notification, or carrier charge exists.</div>
+        <div class="legend-item"><strong>Veeqo selected</strong> The carrier and price are locked for review. Purchase is still pending and remains a separate click.</div>
+        <div class="legend-item"><strong>Label ready to batch</strong> A stored PDF exists. It may be downloaded or added to a 2-up batch without creating another charge.</div>
+        <div class="legend-item"><strong>Needs Attention</strong> Stop. Preserve the row and resolve the displayed issue before another carrier action.</div>
       </div>
-      <div class="note" style="margin-top:14px;">If a row's state does not match this guide, treat the live WordPress UI as the immediate source of truth and stop before a create, batch, or cancel action. The plugin owner can inspect the queue and settings directly.</div>
+      <div class="note" style="margin-top:14px;">Production status verified October 14, 2026: real-label mode is on, Spee Dee creation is enabled, and Veeqo purchase is enabled. These gates do not create labels by themselves. Staff should leave Settings alone unless an administrator specifically directs otherwise.</div>
     </section>
 
     <footer>
-      Built for Mr. Floor. WordPress login and navigation screens added September 26, 2026. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. Updated October 14, 2026 for the v0.1.27 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
