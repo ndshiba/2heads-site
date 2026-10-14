@@ -720,10 +720,10 @@
           <li><strong>For a Spee Dee service-area order, click <code>Compare shipping rates</code>.</strong> This queues a comparison that includes the Spee Dee quote and applicable Veeqo rates.</li>
           <li><strong>For an out-of-area order, click <code>Shop Veeqo rates</code>.</strong> This queues Veeqo rates only.</li>
           <li><strong>Stay on Ready to review and select the returned rate.</strong> A rate shop saves the comparison for review and keeps the action in the same Ready row. It creates no shipment, label, tracking update, email, or carrier charge.</li>
-          <li><strong>Use Print Queue after selection or label creation.</strong> It remains the place to create selected Spee Dee shipments, download stored labels, batch labels, void labels, and review the stored record.</li>
+          <li><strong>Use Print Queue after label creation.</strong> It remains the place to create selected Spee Dee shipments, download stored labels, batch labels, void labels, and review the stored record.</li>
         </ol>
         <div class="note">
-          If a Veeqo quote is expired or the carton plan has changed, click <code>Refresh rates</code> before choosing a carrier. Do not try to use an old price. USPS Bound Printed Matter and Media Mail are intentionally not quoted because Mr. Floor merchandise is not eligible for printed-material mail.
+          After selecting Veeqo, use <code>Get fresh rates / change option</code> in the same Ready row whenever you want to review current choices again. It replaces the selected quote but creates no label or carrier charge. USPS Bound Printed Matter and Media Mail are intentionally not quoted because Mr. Floor merchandise is not eligible for printed-material mail.
         </div>
       </div>
       <figure>
@@ -755,10 +755,10 @@
           <li><strong>Confirm Ship to.</strong> Read the full name and address in the Ready row before choosing a rate.</li>
           <li><strong>Compare the visible carrier, service, delivery estimate, carton count, and total.</strong> The Veeqo total is the total for all physical cartons when more than one carton is shown.</li>
           <li><strong>Select one rate only.</strong> <code>Select Spee Dee $...</code> converts the row to the normal Spee Dee quoted state. <code>Select UPS $...</code>, <code>Select FedEx $...</code>, or another Veeqo carrier records that Veeqo choice without buying it.</li>
-          <li><strong>Do not select tender-only services.</strong> The plugin blocks them from warehouse selection. If a desired service is unavailable, refresh rates or stop for review.</li>
+          <li><strong>Do not select tender-only services.</strong> The plugin blocks them from warehouse selection. If a desired service is unavailable, use <code>Get fresh rates / change option</code> or stop for review.</li>
         </ol>
         <div class="warning">
-          <strong>Select</strong> is not purchase. After selecting Veeqo, the row reads <code>Selected: label purchase pending</code>. That is the last safe review point before a carrier charge.
+          <strong>Select</strong> is not purchase. After selecting Veeqo, the row reads <code>Selected: label purchase pending</code>. Use <code>Get fresh rates / change option</code> in that Ready row to replace the choice and compare again without creating a label or charge.
         </div>
       </div>
       <figure>
@@ -817,7 +817,8 @@
         <h2>5. Purchase A Selected Veeqo Label</h2>
         <ol class="step-list">
           <li><strong>Use this branch only after selecting a current Veeqo rate on Ready.</strong> Re-read the carrier, service, total, and carton count in that same Ready row.</li>
-          <li><strong>Click <code>Purchase selected Veeqo label</code> on Ready.</strong> The button may say plural labels for a multi-carton shipment. Confirm the browser prompt only if the displayed carrier, service, carton count, and amount are correct.</li>
+          <li><strong>Change your mind before purchase, if needed.</strong> Click <code>Get fresh rates / change option</code> in that Ready row to replace the selected quote and compare current choices again. It does not create a label or charge.</li>
+          <li><strong>Click <code>Purchase selected Veeqo label</code> on Ready only when the selected details are correct.</strong> The button may say plural labels for a multi-carton shipment. Confirm the browser prompt only if the displayed carrier, service, carton count, and amount are correct.</li>
           <li><strong>Wait for the recorded result.</strong> Do not double-click or refresh while purchase is in progress. The plugin locks the row against duplicate purchase clicks.</li>
           <li><strong>Confirm <code>Veeqo label ready to batch</code> and stored PDFs.</strong> Every physical carton receives its own purchased label. This status appears only after every carton PDF has been stored and is readable. The queue then allows individual download or 2-up batching.</li>
         </ol>
@@ -834,11 +835,11 @@
             <div class="wp-panel">
               <h4>Selected Veeqo rate</h4>
               <table class="wp-table"><tbody><tr><th>Carrier</th><td>UPS Ground</td></tr><tr><th>Cartons</th><td>2</td></tr><tr><th>Total</th><td>$47.26</td></tr><tr><th>Status</th><td>Selected: label purchase pending</td></tr></tbody></table>
-              <div style="padding:12px;"><span class="button primary callout" data-callout="This creates the carrier shipments and charges.">Purchase 2 selected Veeqo labels ($47.26)</span></div>
+              <div style="padding:12px;"><span class="button callout" data-callout="This replaces the selection with fresh quotes. No label or charge.">Get fresh rates / change option</span><br><span class="button primary callout" data-callout="This creates the carrier shipments and charges.">Purchase 2 selected Veeqo labels ($47.26)</span></div>
             </div>
           </div>
         </div>
-        <figcaption class="screen-caption">The confirmation repeats the selected carrier, service, label count, and price. Stop if any detail is wrong.</figcaption>
+        <figcaption class="screen-caption">Use the Ready-row change-option button to review fresh rates without a charge. Purchase only after the carrier, service, label count, and price are correct.</figcaption>
       </figure>
     </section>
 
@@ -878,7 +879,7 @@
       <div>
         <h2>7. Fix A Mistake Without Losing Evidence</h2>
         <ol class="step-list">
-          <li><strong>Expired rate or changed carton plan:</strong> use <code>Refresh rates</code>, then select again. Do not purchase a stale quote.</li>
+          <li><strong>Need another option, expired rate, or changed carton plan:</strong> use <code>Get fresh rates / change option</code> on Ready, then select again. Do not purchase a stale quote.</li>
           <li><strong>Spee Dee shipment created by mistake:</strong> use <code>Cancel shipment</code> and wait for a successful cancellation before removing the local row.</li>
           <li><strong>Veeqo label created by mistake:</strong> use <code>Void Veeqo label</code>. It submits a carrier void and refund request. Carrier refund eligibility controls the outcome.</li>
           <li><strong>Partial purchase, missing stored PDF, or Needs Attention:</strong> stop. Do not remove the row, repurchase, or assume the carrier charge failed. The queue preserves the evidence needed to resolve it.</li>
