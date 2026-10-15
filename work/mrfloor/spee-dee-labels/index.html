@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.33</title>
+  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.34</title>
   <style>
     :root {
       color-scheme: light;
@@ -669,7 +669,7 @@
       <h1>Mr. Floor Shipping Labels Plugin Runbook</h1>
       <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. A rate shop is free. A label purchase is not.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.33</span>
+        <span class="pill good">Plugin version: v0.1.34</span>
         <span class="pill good">Spee Dee and Veeqo purchase enabled</span>
         <span class="pill good">Default label: 4x6 Label</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
@@ -723,7 +723,7 @@
           <li><strong>Use Print Queue after label creation.</strong> It remains the place to create selected Spee Dee shipments, download stored labels, batch labels, void labels, and review the stored record.</li>
         </ol>
         <div class="note">
-          After selecting Veeqo, use <code>Get fresh rates / change option</code> in the same Ready row whenever you want to review current choices again. It replaces the selected quote but creates no label or carrier charge. USPS Bound Printed Matter and Media Mail are intentionally not quoted because Mr. Floor merchandise is not eligible for printed-material mail.
+          After selecting Veeqo, use <code>Get fresh rates / change option</code> in the same Ready row whenever you want to review current choices again. It replaces the selected quote but creates no label or carrier charge. If Ready shows a quote error, correct the shipping details or package data, then use <code>Reset error and get a new quote</code>. That also requests rates only, with no label or carrier charge. USPS Bound Printed Matter and Media Mail are intentionally not quoted because Mr. Floor merchandise is not eligible for printed-material mail.
         </div>
       </div>
       <figure>
@@ -880,6 +880,7 @@
         <h2>7. Fix A Mistake Without Losing Evidence</h2>
         <ol class="step-list">
           <li><strong>Need another option, expired rate, or changed carton plan:</strong> use <code>Get fresh rates / change option</code> on Ready, then select again. Do not purchase a stale quote.</li>
+          <li><strong>Quote error:</strong> correct the shipping details or package data first, then use <code>Reset error and get a new quote</code> in the Ready row. It requests fresh rates only and creates no label or carrier charge.</li>
           <li><strong>Spee Dee shipment created by mistake:</strong> use <code>Cancel shipment</code> and wait for a successful cancellation before removing the local row.</li>
           <li><strong>Veeqo label created by mistake:</strong> use <code>Void Veeqo label</code>. It submits a carrier void and refund request. Carrier refund eligibility controls the outcome.</li>
           <li><strong>Partial purchase, missing stored PDF, or Needs Attention:</strong> stop. Do not remove the row, repurchase, or assume the carrier charge failed. The queue preserves the evidence needed to resolve it.</li>
@@ -918,7 +919,7 @@
     </section>
 
     <footer>
-      Built for Mr. Floor. Updated October 14, 2026 for the v0.1.33 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. Updated October 14, 2026 for the v0.1.34 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
