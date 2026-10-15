@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-10-15T12:17:26.000127+00:00",
+  "reporting_window": {
+    "start_date": "2026-09-01",
+    "end_date": "2026-09-30"
+  },
+  "scope": {
+    "campaigns": [
+      "Campaign #1",
+      "Campaign #2 - Competitor Landscape Maintenance"
+    ],
+    "landing_page": "/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/",
+    "paid_channel": "Paid Search",
+    "organic_benchmark_channel": "Organic Search"
+  },
+  "delivery": {
+    "impressions": 7142,
+    "clicks": 386,
+    "spend": 871.35,
+    "conversions": 0.0,
+    "ctr": 0.05404648557826939,
+    "cpc": 2.2573834196891194
+  },
+  "paid_search": {
+    "sessions": 355,
+    "engaged_sessions": 103,
+    "engagement_rate": 0.2901,
+    "avg_session_seconds": 36.71,
+    "contact_page_visits": 28,
+    "phone_click_users": 4,
+    "phone_clicks": 8,
+    "form_starts": 2,
+    "form_submits": 0,
+    "generate_lead_events": 2,
+    "key_events": 0.0
+  },
+  "organic_search_benchmark": {
+    "sessions": 4,
+    "engaged_sessions": 4,
+    "engagement_rate": 1.0,
+    "avg_session_seconds": 1001.73,
+    "contact_page_visits": 0,
+    "phone_click_users": 0,
+    "phone_clicks": 0,
+    "form_starts": 1,
+    "form_submits": 1,
+    "generate_lead_events": 0,
+    "key_events": 0.0
+  },
+  "definitions": {
+    "engaged_session": "GA4 session lasting 10+ seconds, with a key event, or with 2+ page/screen views.",
+    "intent_actions": "Contact-page visits, phone-click users/events, and form starts are intent signals; they are not confirmed leads.",
+    "verified_lead": "Google Ads conversions and GA4 key events are shown separately. This window contains zero recorded Paid Search key events and zero Google Ads conversions.",
+    "organic_benchmark": "Organic Search uses the same landing-page filter and reporting window. Its small sample must not be treated as a performance trend."
+  },
+  "source_files": [
+    "work/colaopeter/cp-adwords-daily-change-dashboard-2026-08-20.json",
+    "work/colaopeter/cp-adwords-landing-engagement-dashboard-2026-08-21.json"
+  ]
+}
