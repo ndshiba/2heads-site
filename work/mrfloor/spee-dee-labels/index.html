@@ -685,7 +685,7 @@
         <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in the same Ready row. Selection is still quote-only.</span></div>
         <div class="flow-step"><strong>5. Purchase And Verify PDFs</strong><span>Purchase a selected Veeqo rate from Ready, or create selected Spee Dee shipments from Print Queue. Then confirm a stored readable PDF exists for every physical carton.</span></div>
         <div class="flow-step"><strong>6. Generate The Batch</strong><span>Select the label-ready row and make the explicit 2-up print batch.</span></div>
-        <div class="flow-step"><strong>7. Resolve Exceptions</strong><span>Use the carrier's void action for a created label. Do not remove evidence to hide a mistake.</span></div>
+        <div class="flow-step"><strong>7. Resolve Exceptions</strong><span>From Print Queue, use the carrier-specific cancellation action for a created label. Never remove evidence to hide a mistake.</span></div>
       </div>
       <div class="danger">
         <strong>Charge-risk actions:</strong> <code>Create Spee Dee shipments for selected</code> creates Spee Dee shipments. <code>Purchase selected Veeqo label</code> creates Veeqo carrier shipments and charges. Selecting or refreshing a rate does neither.
@@ -882,8 +882,10 @@
         <ol class="step-list">
           <li><strong>Need another option, expired rate, or changed carton plan:</strong> use <code>Get fresh rates / change option</code> on Ready, then select again. Do not purchase a stale quote.</li>
           <li><strong>Quote error:</strong> correct the shipping details or package data first, then use <code>Reset error and get a new quote</code> in the Ready row. It requests fresh rates only and creates no label or carrier charge.</li>
-          <li><strong>Spee Dee shipment created by mistake:</strong> use <code>Cancel shipment</code> and wait for a successful cancellation before removing the local row.</li>
-          <li><strong>Veeqo label created by mistake:</strong> use <code>Void Veeqo label</code>. It submits a carrier void and refund request. Carrier refund eligibility controls the outcome.</li>
+          <li><strong>Start in Print Queue and identify the correct row.</strong> Match the recipient and <code>Ship to</code> address, then confirm the carrier before taking a cancellation action. Do not use <code>Remove</code> first.</li>
+          <li><strong>Spee Dee shipment created by mistake:</strong> click <code>Cancel shipment</code>, confirm the prompt, and wait for the result. On success, the row becomes <code>canceled</code>, the plugin removes its stored Spee Dee tracking value from the Woo order, and it writes a private order note. Only then may you remove the local queue row if it is no longer useful.</li>
+          <li><strong>Veeqo label created by mistake, including UPS through Veeqo:</strong> click <code>Void Veeqo label</code>, then confirm the carrier void/refund request. The action voids every purchased carton in that row. On full success, the row becomes <code>Veeqo label voided</code> and the Woo order receives a private note. Veeqo/carrier refund eligibility controls the outcome.</li>
+          <li><strong>If either cancellation fails or the row moves to Needs Attention:</strong> stop. Preserve the row and the displayed error; do not remove, repurchase, or assume the carrier charge was reversed. Review the active carrier shipment before another action.</li>
           <li><strong>Partial purchase, missing stored PDF, or Needs Attention:</strong> stop. Do not remove the row, repurchase, or assume the carrier charge failed. The queue preserves the evidence needed to resolve it.</li>
           <li><strong>Remove:</strong> clears only the local queue row. It never cancels or refunds a carrier shipment.</li>
         </ol>
