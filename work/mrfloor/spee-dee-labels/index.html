@@ -782,7 +782,7 @@
       </figure>
     </section>
 
-    <section class="card split">
+    <section class="card split" id="operational-queue">
       <div>
         <h2>4. Create A Spee Dee Shipment</h2>
         <ol class="step-list">
@@ -798,19 +798,10 @@
         </div>
       </div>
       <figure>
-        <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue</div></div>
-          <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
-            <div class="wp-panel">
-              <h4>Selected Spee Dee rate</h4>
-              <table class="wp-table"><tbody><tr><th>Carrier</th><td>Spee Dee</td></tr><tr><th>Status</th><td>Quoted: no label yet</td></tr><tr><th>Shipment</th><td>Not created</td></tr></tbody></table>
-              <div style="padding:12px;"><span class="button primary callout" data-callout="This creates the real Spee Dee shipment.">Create Spee Dee shipments for selected</span></div>
-            </div>
-          </div>
+        <div class="screen shot">
+          <img src="assets/mrfloor-operational-queue.png" alt="Sanitized reference screenshot of the v0.1.38 Mr. Floor Print Queue. It has five columns: checkbox, Order and status, Ship to, Rate, and Label and actions.">
         </div>
-        <figcaption class="screen-caption">The Spee Dee action is separate from rate selection. Use the resulting label-ready row as proof that creation finished.</figcaption>
+        <figcaption class="screen-caption">v0.1.38 Print Queue layout reference. The final column keeps label status, downloads, and carrier actions together. This sanitized capture contains no live customer or shipment data.</figcaption>
       </figure>
     </section>
 
@@ -845,11 +836,11 @@
       </figure>
     </section>
 
-    <section class="card split">
+    <section class="card split" id="queue-rate-change">
       <div>
         <h2>6. Download Or Batch Stored Labels</h2>
         <ol class="step-list">
-          <li><strong>Open Print Queue only after the needed carrier action is complete.</strong> It is where stored label PDFs, batches, reprints, voids, and recorded shipment results remain available.</li>
+          <li><strong>Use the Label &amp; actions cell in Print Queue.</strong> It keeps stored label PDFs, downloads, cancellation/void controls, and recorded shipment results together without moving away from the order.</li>
           <li><strong>Select only label-ready rows.</strong> Use <code>Label ready to batch</code> for Spee Dee or <code>Veeqo label ready to batch</code> for Veeqo. Quotes, selected-but-unpurchased rows, and attention rows cannot print.</li>
           <li><strong>Use <code>Download label</code> for one order or reprint.</strong> It opens the stored carrier PDF. It does not create another shipment or charge.</li>
           <li><strong>Use <code>Generate 2-up batch PDF</code> for a print run.</strong> This is the explicit Veeqo print step after purchase, exactly as it is for Spee Dee. Pick <code>Top</code> for a fresh half-sheet label page or <code>Bottom</code> if the top half is already used.</li>
@@ -860,20 +851,10 @@
         </div>
       </div>
       <figure>
-        <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Print Queue after label creation</div></div>
-          <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
-            <div class="tabs"><span class="tab">Ready</span><span class="tab active">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
-            <div class="wp-panel">
-              <h4>Print Queue</h4>
-              <table class="wp-table"><thead><tr><th>Order</th><th>Queue Status</th><th>Shipment</th></tr></thead><tbody><tr><td>#41032</td><td><strong>Veeqo label ready to batch</strong></td><td>2 Veeqo label PDFs stored<br><span style="color:#135e96;">Download label</span></td></tr></tbody></table>
-              <p class="batch-help"><strong>2 stored Veeqo labels are ready to batch.</strong> Select the row, then generate the PDF.</p>
-              <div class="batch-controls"><div class="batch-select"><span>Start slot</span><span class="select-box">Top <b>⌄</b></span></div><span class="button callout" data-callout="This creates a local PDF batch only. It does not call a carrier.">Generate 2-up batch PDF</span></div>
-            </div>
-          </div>
+        <div class="screen shot">
+          <img src="assets/mrfloor-queue-rate-change.png" alt="Sanitized reference screenshot of an expanded Print Queue rate detail and the Change shipping method button that opens the matching Ready row.">
         </div>
-        <figcaption class="screen-caption">For Veeqo, this status proves every carton PDF was stored before batching. Batching and downloading use those stored PDFs only. They do not buy another label.</figcaption>
+        <figcaption class="screen-caption">Expand eligible rate choices only when needed. Before label purchase, <strong>Change shipping method</strong> opens the matching Ready row; it does not alter the Queue record or create a carrier charge.</figcaption>
       </figure>
     </section>
 
