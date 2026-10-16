@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.38</title>
+  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.39</title>
   <style>
     :root {
       color-scheme: light;
@@ -661,7 +661,16 @@
         box-shadow: none;
       }
     }
-  </style>
+
+    .renamed-navigation-image { position: relative; }
+    .renamed-navigation-image > img { display: block; }
+    .renamed-menu-label {
+      position: absolute; left: 18.4%; top: 70.2%; width: 15.5%; height: 3.6%;
+      display: flex; align-items: center; padding-left: .55%; box-sizing: border-box;
+      background: #23282d; color: #8b8cff; font-family: Arial, sans-serif;
+      font-size: clamp(8px, 1.15vw, 16px); line-height: 1; white-space: nowrap;
+    }
+</style>
 </head>
 <body>
   <main>
@@ -669,10 +678,10 @@
       <h1>Mr. Floor Shipping Labels Plugin Runbook</h1>
       <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. A rate shop is free. A label purchase is not.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.38</span>
+        <span class="pill good">Plugin version: v0.1.39</span>
         <span class="pill good">Spee Dee and Veeqo purchase enabled</span>
         <span class="pill good">Default label: 4x6 Label</span>
-        <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
+        <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Shipping Labels</span>
       </div>
     </header>
 
@@ -680,7 +689,7 @@
       <h2>Start-to-Finish Version</h2>
       <div class="mini-flow">
         <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your assigned account.</span></div>
-        <div class="flow-step"><strong>2. Open the Plugin</strong><span>WooCommerce, then Spee Dee Labels.</span></div>
+        <div class="flow-step"><strong>2. Open the Plugin</strong><span>WooCommerce, then Shipping Labels.</span></div>
         <div class="flow-step"><strong>3. Shop Rates</strong><span>Ready compares Spee Dee and Veeqo where applicable. This does not buy anything.</span></div>
         <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in the same Ready row. Selection is still quote-only.</span></div>
         <div class="flow-step"><strong>5. Purchase And Verify PDFs</strong><span>Purchase a selected Veeqo rate from Ready, or create selected Spee Dee shipments from Print Queue. Then confirm a stored readable PDF exists for every physical carton.</span></div>
@@ -694,10 +703,10 @@
 
     <section class="card split">
       <div>
-        <h2>1. Sign In And Open Spee Dee Labels</h2>
+        <h2>1. Sign In And Open Shipping Labels</h2>
         <ol class="step-list">
           <li><strong>Open Mr. Floor WordPress.</strong> Go to <code>https://www.mrfloor.com/wp-login.php</code> and use your own assigned account.</li>
-          <li><strong>Open WooCommerce, then Spee Dee Labels.</strong> Do not start from the regular Orders list. The shipping workflow is inside the plugin.</li>
+          <li><strong>Open WooCommerce, then Shipping Labels.</strong> Do not start from the regular Orders list. The shipping workflow is inside the plugin.</li>
           <li><strong>Start on Ready.</strong> The working tabs are <code>Ready</code>, <code>Print Queue</code>, <code>Needs Attention</code>, <code>Batches</code>, and <code>Settings</code>.</li>
         </ol>
         <div class="warning">
@@ -706,9 +715,12 @@
       </div>
       <figure>
         <div class="screen shot">
-          <img src="assets/mrfloor-speedee-navigation.png" alt="Mr. Floor WordPress dashboard with the WooCommerce submenu open and Spee Dee Labels visibly selected.">
+          <div class="renamed-navigation-image">
+          <img src="assets/mrfloor-speedee-navigation.png" alt="Mr. Floor WordPress dashboard with the WooCommerce submenu open and Shipping Labels visibly selected.">
+          <span class="renamed-menu-label" aria-hidden="true">Shipping Labels</span>
         </div>
-        <figcaption class="screen-caption">From the WordPress Dashboard, open <strong>WooCommerce</strong> and choose <strong>Spee Dee Labels</strong>.</figcaption>
+        </div>
+        <figcaption class="screen-caption">From the WordPress Dashboard, open <strong>WooCommerce</strong> and choose <strong>Shipping Labels</strong>.</figcaption>
       </figure>
     </section>
 
@@ -728,9 +740,9 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Ready</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Shipping Labels - Ready</div></div>
           <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
+            <div class="wp-title">Shipping Labels</div>
             <div class="tabs"><span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Ready To Review</h4>
@@ -763,9 +775,9 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Ready</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Shipping Labels - Ready</div></div>
           <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
+            <div class="wp-title">Shipping Labels</div>
             <div class="tabs"><span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Ready rate selection</h4>
@@ -799,9 +811,9 @@
       </div>
       <figure>
         <div class="screen shot">
-          <img src="assets/mrfloor-operational-queue.png" alt="Sanitized reference screenshot of the v0.1.38 Mr. Floor Print Queue. It has five columns: checkbox, Order and status, Ship to, Rate, and Label and actions.">
+          <img src="assets/mrfloor-operational-queue.png" alt="Sanitized reference screenshot of the v0.1.39 Mr. Floor Print Queue. It has five columns: checkbox, Order and status, Ship to, Rate, and Label and actions.">
         </div>
-        <figcaption class="screen-caption">v0.1.38 Print Queue layout reference. The final column keeps label status, downloads, and carrier actions together. This sanitized capture contains no live customer or shipment data.</figcaption>
+        <figcaption class="screen-caption">v0.1.39 Print Queue layout reference. The final column keeps label status, downloads, and carrier actions together. This sanitized capture contains no live customer or shipment data.</figcaption>
       </figure>
     </section>
 
@@ -821,9 +833,9 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Ready</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Shipping Labels - Ready</div></div>
           <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
+            <div class="wp-title">Shipping Labels</div>
             <div class="tabs"><span class="tab active">Ready</span><span class="tab">Print Queue</span><span class="tab">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <h4>Selected Veeqo rate</h4>
@@ -847,7 +859,7 @@
           <li><strong>Print every label page.</strong> The batch includes one page for each physical label, not merely one page per order. Save the generated PDF to <code>/Dropbox/Mr. Floor/Spee Dee Delivery</code>.</li>
         </ol>
         <div class="note">
-          Print actual size on 8.5x11 half-sheet label stock at 100 percent, with duplex off. The filename is <code>speedee-batch-YYYY-MM-DD-01.pdf</code>; the sequence advances automatically.
+          Print actual size on 8.5x11 half-sheet label stock at 100 percent, with duplex off. New batches use <code>mrfloor-shipping-labels-YYYY-MM-DD-01.pdf</code>; the sequence advances automatically. Existing batch filenames remain unchanged.
         </div>
       </div>
       <figure>
@@ -877,9 +889,9 @@
       </div>
       <figure>
         <div class="screen">
-          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Spee Dee Labels - Needs Attention</div></div>
+          <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="url">Shipping Labels - Needs Attention</div></div>
           <div class="wp-page">
-            <div class="wp-title">Spee Dee Labels</div>
+            <div class="wp-title">Shipping Labels</div>
             <div class="tabs"><span class="tab">Ready</span><span class="tab">Print Queue</span><span class="tab active">Needs Attention</span><span class="tab">Batches</span><span class="tab">Settings</span></div>
             <div class="wp-panel">
               <div class="notice red"><strong>Operator review required</strong><br>A partial Veeqo purchase or missing stored PDF can leave an active carrier label.</div>
@@ -904,7 +916,7 @@
     </section>
 
     <footer>
-      Built for Mr. Floor. Updated October 16, 2026 for the v0.1.38 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. Updated October 16, 2026 for the v0.1.39 multi-carrier shipping-label workflow. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
