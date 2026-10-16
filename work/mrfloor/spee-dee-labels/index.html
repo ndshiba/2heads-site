@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.37</title>
+  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.38</title>
   <style>
     :root {
       color-scheme: light;
@@ -669,7 +669,7 @@
       <h1>Mr. Floor Shipping Labels Plugin Runbook</h1>
       <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. A rate shop is free. A label purchase is not.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.37</span>
+        <span class="pill good">Plugin version: v0.1.38</span>
         <span class="pill good">Spee Dee and Veeqo purchase enabled</span>
         <span class="pill good">Default label: 4x6 Label</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Spee Dee Labels</span>
@@ -787,7 +787,8 @@
         <h2>4. Create A Spee Dee Shipment</h2>
         <ol class="step-list">
           <li><strong>Use this branch only after selecting Spee Dee.</strong> The row must be a regular <code>Quoted: no label yet</code> row, not Veeqo-selected.</li>
-          <li><strong>Keep Queue review concise.</strong> Print Queue shows 50 rows per page and only the three least expensive eligible rate options for each quoted row. Rate and quote-expiration dates are intentionally omitted from the operator view; expiration is still enforced. The checkbox and Order stay pinned on the left, while Label actions—including <code>Cancel shipment</code> and <code>Void Veeqo label</code>—stay pinned on the right as details scroll. Return to Ready to inspect the full stored rate set before choosing.</li>
+          <li><strong>Use the operational Queue.</strong> Print Queue shows 50 rows per page in five compact columns: checkbox, Order &amp; status, Ship to, Rate, and Label &amp; actions. Products and eligible rate choices expand inline; shipment, download, cancel, and void controls stay together. Rate and quote-expiration dates are intentionally omitted from the operator view; expiration is still enforced.</li>
+          <li><strong>Change an unpurchased shipping method from Queue.</strong> Use <code>Change shipping method</code>. It opens that exact order in Ready without changing the Queue record, where you can select a stored choice or use <code>Get fresh rates / change option</code>. A created/printed label must be canceled or voided successfully before requoting.</li>
           <li><strong>Select up to five approved quoted rows.</strong> Click <code>Create Spee Dee shipments for selected</code> once. The plugin prepares them one at a time.</li>
           <li><strong>Wait for completion.</strong> Do not refresh or click again while the page shows <code>Preparing order</code>.</li>
           <li><strong>Confirm each row becomes label-ready.</strong> A completed row has a shipment or tracking value and <code>Download label</code>. If the shipment exists but the PDF is missing, use <code>Fetch label</code>. That does not create a second shipment.</li>
@@ -922,7 +923,7 @@
     </section>
 
     <footer>
-      Built for Mr. Floor. Updated October 16, 2026 for the v0.1.37 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. Updated October 16, 2026 for the v0.1.38 Spee Dee and Veeqo workflow. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
