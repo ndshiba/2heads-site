@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.39</title>
+  <title>Mr. Floor Shipping Labels Plugin Runbook: v0.1.41</title>
   <style>
     :root {
       color-scheme: light;
@@ -676,9 +676,10 @@
   <main>
     <header>
       <h1>Mr. Floor Shipping Labels Plugin Runbook</h1>
-      <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. A rate shop is free. A label purchase is not.</p>
+      <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. The dashboard builds the current carton plan from the order. A rate shop is free. A label purchase is not.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.39</span>
+        <span class="pill good">Plugin version: v0.1.41</span>
+        <span class="pill good">Current carton-aware rate shopping</span>
         <span class="pill good">Spee Dee and Veeqo purchase enabled</span>
         <span class="pill good">Default label: 4x6 Label</span>
         <span class="pill path">Start: WordPress login &gt; WooCommerce &gt; Shipping Labels</span>
@@ -690,14 +691,17 @@
       <div class="mini-flow">
         <div class="flow-step"><strong>1. Sign In</strong><span>Log in to Mr. Floor WordPress with your assigned account.</span></div>
         <div class="flow-step"><strong>2. Open the Plugin</strong><span>WooCommerce, then Shipping Labels.</span></div>
-        <div class="flow-step"><strong>3. Shop Rates</strong><span>Ready compares Spee Dee and Veeqo where applicable. This does not buy anything.</span></div>
-        <div class="flow-step"><strong>4. Choose One Rate</strong><span>Inspect the address, carrier, service, carton count, and total in the same Ready row. Selection is still quote-only.</span></div>
+        <div class="flow-step"><strong>3. Shop Rates</strong><span>Ready uses the current order and carton plan to compare Spee Dee and Veeqo where applicable. This does not buy anything.</span></div>
+        <div class="flow-step"><strong>4. Choose One Rate</strong><span>Confirm Products ordered, Ship to, carrier, service, carton count, and total in the same Ready row. Selection is still quote-only.</span></div>
         <div class="flow-step"><strong>5. Purchase And Verify PDFs</strong><span>Purchase a selected Veeqo rate from Ready, or create selected Spee Dee shipments from Print Queue. Then confirm a stored readable PDF exists for every physical carton.</span></div>
         <div class="flow-step"><strong>6. Generate The Batch</strong><span>Select the label-ready row and make the explicit 2-up print batch.</span></div>
         <div class="flow-step"><strong>7. Resolve Exceptions</strong><span>From Print Queue, use the carrier-specific cancellation action for a created label. Never remove evidence to hide a mistake.</span></div>
       </div>
       <div class="danger">
         <strong>Charge-risk actions:</strong> <code>Create Spee Dee shipments for selected</code> creates Spee Dee shipments. <code>Purchase selected Veeqo label</code> creates Veeqo carrier shipments and charges. Selecting or refreshing a rate does neither.
+      </div>
+      <div class="note" style="margin-top:14px;">
+        <strong>Carrier branches:</strong> <strong>Spee Dee</strong> is selected in <code>Ready</code>, then created from <code>Print Queue</code>. <strong>Veeqo</strong> is selected and purchased from the same <code>Ready</code> row. Both begin with a quote-only rate shop.
       </div>
     </section>
 
@@ -728,14 +732,14 @@
       <div>
         <h2>2. Shop Rates From Ready</h2>
         <ol class="step-list">
-          <li><strong>Check the order, products, and packages.</strong> Confirm the recipient and destination. The <code>Products ordered</code> column lists every ordered product and quantity. Do not hand-edit the cartons or weights. The plugin uses the approved product and carton data.</li>
+          <li><strong>Check the order, products, and current carton plan.</strong> Confirm the recipient, destination, <code>Products ordered</code>, and stated carton count. The dashboard builds current confirmed cartons and weights from the order. Do not hand-edit cartons or weights, and do not use an older rate after the order or carton plan changes.</li>
           <li><strong>For a Spee Dee service-area order, click <code>Compare shipping rates</code>.</strong> This queues a comparison that includes the Spee Dee quote and applicable Veeqo rates.</li>
           <li><strong>For an out-of-area order, click <code>Shop Veeqo rates</code>.</strong> This queues Veeqo rates only.</li>
           <li><strong>Stay on Ready to review and select the returned rate.</strong> A rate shop saves the comparison for review and keeps the action in the same Ready row. It creates no shipment, label, tracking update, email, or carrier charge.</li>
           <li><strong>Use Print Queue after label creation.</strong> It remains the place to create selected Spee Dee shipments, download stored labels, batch labels, void labels, and review the stored record.</li>
         </ol>
         <div class="note">
-          After selecting Veeqo, use <code>Get fresh rates / change option</code> in the same Ready row whenever you want to review current choices again. It replaces the selected quote but creates no label or carrier charge. If Ready shows a quote error, correct the shipping details or package data, then use <code>Reset error and get a new quote</code>. That also requests rates only, with no label or carrier charge. USPS Bound Printed Matter, Media Mail, and Cubic services are intentionally not quoted because they are not eligible for Mr. Floor merchandise.
+          After selecting an unpurchased Spee Dee, Veeqo, or comparison rate, use <code>Get fresh rates / change option</code> in the same Ready row whenever the current choice needs review. It replaces the selection with fresh rates but creates no label or carrier charge. If a product or quantity correction changes the carton plan, refresh before selecting or purchasing. If Ready shows a quote error, correct the shipping details or package data, then use <code>Reset error and get a new quote</code>. That also requests rates only, with no label or carrier charge. USPS Bound Printed Matter, Media Mail, and Cubic services are intentionally not quoted because they are not eligible for Mr. Floor merchandise.
         </div>
       </div>
       <figure>
@@ -765,12 +769,12 @@
         <h2>3. Select The Carrier On Ready</h2>
         <ol class="step-list">
           <li><strong>Confirm Ship to.</strong> Read the full name and address in the Ready row before choosing a rate.</li>
-          <li><strong>Compare the visible carrier, service, carton count, and total.</strong> The Veeqo total is the total for all physical cartons when more than one carton is shown.</li>
+          <li><strong>Compare the visible carrier, service, carton count, and total.</strong> Confirm the products match the order. The Veeqo total is the total for all physical cartons when more than one carton is shown.</li>
           <li><strong>Select one rate only.</strong> <code>Select Spee Dee $...</code> converts the row to the normal Spee Dee quoted state. <code>Select UPS $...</code>, <code>Select FedEx $...</code>, or another Veeqo carrier records that Veeqo choice without buying it.</li>
           <li><strong>Do not select tender-only services.</strong> The plugin blocks them from warehouse selection. If a desired service is unavailable, use <code>Get fresh rates / change option</code> or stop for review.</li>
         </ol>
         <div class="warning">
-          <strong>Select</strong> is not purchase. After selecting Veeqo, the row reads <code>Selected: label purchase pending</code>. Use <code>Get fresh rates / change option</code> in that Ready row to replace the choice and compare again without creating a label or charge.
+          <strong>Select</strong> is not purchase. After selecting Veeqo, the row reads <code>Selected: label purchase pending</code>; a selected Spee Dee rate must still be created from Print Queue. Use <code>Get fresh rates / change option</code> in that Ready row to replace the choice and compare again without creating a label or charge. If Ready shows a changed carton plan, unavailable service, or stale selection, get fresh rates instead of trying to force a purchase.
         </div>
       </div>
       <figure>
@@ -811,9 +815,9 @@
       </div>
       <figure>
         <div class="screen shot">
-          <img src="assets/mrfloor-operational-queue.png" alt="Sanitized reference screenshot of the v0.1.39 Mr. Floor Print Queue. It has five columns: checkbox, Order and status, Ship to, Rate, and Label and actions.">
+          <img src="assets/mrfloor-operational-queue.png" alt="Sanitized reference screenshot of the Mr. Floor Print Queue. It has five columns: checkbox, Order and status, Ship to, Rate, and Label and actions.">
         </div>
-        <figcaption class="screen-caption">v0.1.39 Print Queue layout reference. The final column keeps label status, downloads, and carrier actions together. This sanitized capture contains no live customer or shipment data.</figcaption>
+        <figcaption class="screen-caption">Current five-column Print Queue layout reference. The final column keeps label status, downloads, and carrier actions together. This sanitized capture contains no live customer or shipment data.</figcaption>
       </figure>
     </section>
 
@@ -907,16 +911,17 @@
       <h2>Operator Checks</h2>
       <div class="legend">
         <div class="legend-item"><strong>Products ordered</strong> Ready and Print Queue show each WooCommerce product line and quantity so the operator can spot a mismatched order before choosing a carrier.</div>
+        <div class="legend-item"><strong>Current carton plan</strong> The dashboard uses current confirmed carton rules, including the latest pad, cleaner, and long-box plans. Verify the ordered products and carton count, but never override a weight or reuse an outdated rate. If the physical shipment cannot match the stated plan, stop for administrator review before rate shopping.</div>
         <div class="legend-item"><strong>Quote only</strong> Rates are visible, but no label, tracking value, customer notification, or carrier charge exists.</div>
         <div class="legend-item"><strong>Veeqo selected</strong> The carrier and price are locked for review. There are no labels yet. Purchase is still pending and remains a separate click.</div>
         <div class="legend-item"><strong>Veeqo label ready to batch</strong> Every purchased Veeqo carton has a stored, readable PDF. Select the row, then explicitly generate the 2-up batch without another carrier charge.</div>
         <div class="legend-item"><strong>Needs Attention</strong> Stop. Preserve the row and resolve the displayed issue before another carrier action.</div>
       </div>
-      <div class="note" style="margin-top:14px;">Production status verified October 14, 2026: real-label mode is on, Spee Dee creation is enabled, and Veeqo purchase is enabled. These gates do not create labels by themselves. Staff should leave Settings alone unless an administrator specifically directs otherwise.</div>
+      <div class="note" style="margin-top:14px;">Production status verified November 2, 2026: v0.1.41 is active, real-label mode is on, Spee Dee creation is enabled, and Veeqo purchase is enabled. These gates do not create labels by themselves. Staff should leave Settings alone unless an administrator specifically directs otherwise.</div>
     </section>
 
     <footer>
-      Built for Mr. Floor. Updated October 16, 2026 for the v0.1.39 multi-carrier shipping-label workflow. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. Updated November 2, 2026 for the v0.1.41 carton-aware, multi-carrier shipping-label workflow. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
