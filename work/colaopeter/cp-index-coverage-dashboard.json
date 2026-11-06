@@ -2,15 +2,15 @@
   "schema_version": 1,
   "site_property": "sc-domain:colaopeter.com",
   "first_scanned": "2026-10-09",
-  "last_checked": "2026-10-09",
-  "generated_at": "2026-10-09 06:29 CDT",
+  "last_checked": "2026-11-06",
+  "generated_at": "2026-11-06 09:06 CST",
   "scope_note": "Homepage, live primary navigation, and all published WordPress posts.",
   "summary": {
-    "monitored": 62,
+    "monitored": 63,
     "indexed": 52,
-    "not_indexed": 10,
+    "not_indexed": 11,
     "errors": 0,
-    "menu_urls": 22,
+    "menu_urls": 23,
     "blog_posts": 39
   },
   "records": [
@@ -30,7 +30,7 @@
       "user_canonical": null,
       "last_crawl": "2026-05-18T00:10:16Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/dive-into-luxury-with-custom-pool-design-in-leesburg-mclean-va-great-falls-va-washington-dc-and-surrounding-areas-exploring-the-best-pool-finishes-for-your-oasis/",
@@ -48,7 +48,7 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/from-vision-to-reality-why-fall-and-winter-are-the-ideal-seasons-to-begin-your-outdoor-transformation/",
@@ -66,7 +66,7 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscape-design-in-arlington-great-falls-leesburg-mclean-sterling-washington-d-c-and-the-surrounding-areas/",
@@ -84,29 +84,11 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscape-design-tips-in-purcellville-va-oakton-va-great-falls-va-washington-d-c-arlington-va-leesburg-and-surrounding-areas-how-to-make-spaces-stand-out-with-luxury-touches/",
       "title": "Landscape Design Tips in Purcellville, VA, Oakton, VA, Great Falls, VA, Washington D.C., Arlington, VA, Leesburg, and Surrounding Areas: How to Make Spaces Stand Out with Luxury Touches",
-      "scopes": [
-        "Blog"
-      ],
-      "state": "not_indexed",
-      "verdict": "NEUTRAL",
-      "last_status": "Crawled - currently not indexed",
-      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
-      "page_fetch_state": "SUCCESSFUL",
-      "robots_txt_state": "ALLOWED",
-      "google_canonical": null,
-      "user_canonical": null,
-      "last_crawl": "2026-04-24T18:46:48Z",
-      "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
-    },
-    {
-      "url": "https://colaopeter.com/outdoor-design-in-arlington-great-falls-leesburg-mclean-sterling-washington-d-c-and-the-surrounding-areas/",
-      "title": "Outdoor Design in Arlington, Great Falls, Leesburg, McLean, Sterling, Washington, D.C., and the Surrounding Areas",
       "scopes": [
         "Blog"
       ],
@@ -120,7 +102,25 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
+    },
+    {
+      "url": "https://colaopeter.com/outdoor-design-in-arlington-great-falls-leesburg-mclean-sterling-washington-d-c-and-the-surrounding-areas/",
+      "title": "Outdoor Design in Arlington, Great Falls, Leesburg, McLean, Sterling, Washington, D.C., and the Surrounding Areas",
+      "scopes": [
+        "Blog"
+      ],
+      "state": "not_indexed",
+      "verdict": "NEUTRAL",
+      "last_status": "URL is unknown to Google",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "google_canonical": null,
+      "user_canonical": null,
+      "last_crawl": null,
+      "first_scanned": "2026-10-09",
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/outdoor-design-in-leesburg-potomac-md-mclean-va-aldie-va-and-surrounding-areas-outdoor-fireplaces-vs-fire-pits-which-is-right-for-you/",
@@ -138,7 +138,7 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/pool-renovation-in-arlington-great-falls-leesburg-mclean-sterling-washington-d-c-and-the-surrounding-areas/",
@@ -156,7 +156,25 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
+    },
+    {
+      "url": "https://colaopeter.com/three-unique-pool-design-features-to-add-value-to-your-outdoor-space-in-leesburg-great-falls-va-arlington-va-washington-dc-mclean-va-sterling-va-and-nearby-cities/",
+      "title": "Three Unique Pool Design Features to Add Value to Your Outdoor Space in Leesburg, Great Falls, VA, Arlington, VA, Washington, DC, McLean, VA, Sterling, VA, and Nearby Cities",
+      "scopes": [
+        "Blog"
+      ],
+      "state": "not_indexed",
+      "verdict": "NEUTRAL",
+      "last_status": "Discovered - currently not indexed",
+      "indexing_state": "INDEXING_STATE_UNSPECIFIED",
+      "page_fetch_state": "PAGE_FETCH_STATE_UNSPECIFIED",
+      "robots_txt_state": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "google_canonical": null,
+      "user_canonical": null,
+      "last_crawl": null,
+      "first_scanned": "2026-10-09",
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/top-4-residential-landscaping-trends-to-invest-in-for-2024-in-washington-dc-arlington-va-great-falls-va-leesburg-mclean-va-sterling-va-and-nearby-cities/",
@@ -174,7 +192,7 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/why-choose-a-custom-deck-builder-for-pool-patios-and-decks-in-aldie-arlington-great-falls-leesburg-mclean-middleburg-va-and-nearby-cities/",
@@ -192,7 +210,7 @@
       "user_canonical": null,
       "last_crawl": null,
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/2025-a-year-of-thoughtful-outdoor-design/",
@@ -208,9 +226,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/2025-a-year-of-thoughtful-outdoor-design/",
       "user_canonical": "https://colaopeter.com/2025-a-year-of-thoughtful-outdoor-design/",
-      "last_crawl": "2026-06-29T15:52:02Z",
+      "last_crawl": "2026-10-11T04:50:32Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/5-signs-that-you-need-a-pool-remodel-in-in-aldie-arlington-great-falls-leesburg-mclean-middleburg-va-and-surrounding-areas/",
@@ -228,7 +246,7 @@
       "user_canonical": "https://colaopeter.com/5-signs-that-you-need-a-pool-remodel-in-in-aldie-arlington-great-falls-leesburg-mclean-middleburg-va-and-surrounding-areas/",
       "last_crawl": "2026-06-30T08:55:22Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/about-outdoor-living-landscaping-company-sterling-great-falls-leesburg-arlington-mclean-va-washington-dc/",
@@ -244,9 +262,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/about-outdoor-living-landscaping-company-sterling-great-falls-leesburg-arlington-mclean-va-washington-dc/",
       "user_canonical": "https://colaopeter.com/about-outdoor-living-landscaping-company-sterling-great-falls-leesburg-arlington-mclean-va-washington-dc/",
-      "last_crawl": "2026-09-30T22:44:20Z",
+      "last_crawl": "2026-11-01T08:43:05Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/aspects-of-luxury-yard-maintenance-that-are-often-neglected-in-great-falls-va-washington-dc-leesburg-mclean-va-sterling-va-arlington-va-and-surrounding-areas/",
@@ -264,7 +282,7 @@
       "user_canonical": "https://colaopeter.com/aspects-of-luxury-yard-maintenance-that-are-often-neglected-in-great-falls-va-washington-dc-leesburg-mclean-va-sterling-va-arlington-va-and-surrounding-areas/",
       "last_crawl": "2026-07-10T20:14:50Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/portfolio/",
@@ -280,9 +298,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/portfolio/",
       "user_canonical": "https://colaopeter.com/portfolio/",
-      "last_crawl": "2026-10-07T23:02:04Z",
+      "last_crawl": "2026-11-01T12:47:16Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/before-and-after/",
@@ -298,9 +316,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/before-and-after/",
       "user_canonical": "https://colaopeter.com/before-and-after/",
-      "last_crawl": "2026-10-08T03:52:56Z",
+      "last_crawl": "2026-11-03T18:47:17Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/blog/",
@@ -318,7 +336,7 @@
       "user_canonical": "https://colaopeter.com/blog/",
       "last_crawl": "2026-08-01T04:04:54Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/careers/",
@@ -336,7 +354,7 @@
       "user_canonical": "https://colaopeter.com/careers/",
       "last_crawl": "2026-08-12T18:48:56Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/cold-weather-start-dreaming-of-building-your-pool-with-colao-peter-luxury-outdoor-living/",
@@ -354,7 +372,7 @@
       "user_canonical": "https://colaopeter.com/cold-weather-start-dreaming-of-building-your-pool-with-colao-peter-luxury-outdoor-living/",
       "last_crawl": "2026-09-28T21:13:10Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/",
@@ -370,9 +388,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/",
       "user_canonical": "https://colaopeter.com/contact-outdoor-design-luxury-landscaping-washington-dc-sterling-mclean-leesburg-great-falls-arlington-va/",
-      "last_crawl": "2026-09-27T02:49:58Z",
+      "last_crawl": "2026-11-04T16:00:54Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/custom-deck-builder-in-arlington-great-falls-leesburg-mclean-sterling-washington-d-c-and-the-surrounding-areas/",
@@ -388,9 +406,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/custom-deck-builder-in-arlington-great-falls-leesburg-mclean-sterling-washington-d-c-and-the-surrounding-areas/",
       "user_canonical": "https://colaopeter.com/custom-deck-builder-in-arlington-great-falls-leesburg-mclean-sterling-washington-d-c-and-the-surrounding-areas/",
-      "last_crawl": "2026-07-17T17:07:05Z",
+      "last_crawl": "2026-10-25T14:39:14Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscape-design-custom-landscaping/",
@@ -406,9 +424,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/landscape-design-custom-landscaping/",
       "user_canonical": "https://colaopeter.com/landscape-design-custom-landscaping/",
-      "last_crawl": "2026-08-13T17:24:43Z",
+      "last_crawl": "2026-10-28T01:57:37Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/",
@@ -424,9 +442,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/",
       "user_canonical": "https://colaopeter.com/custom-pool-design-renovations-sterling-washington-dc-leesburg-great-falls-mclean-arlington-va/",
-      "last_crawl": "2026-10-02T11:12:54Z",
+      "last_crawl": "2026-10-26T12:39:24Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/custom-pools-in-arlington-va-leesburg-mclean-va-washington-dc-and-surrounding-areas/",
@@ -444,7 +462,7 @@
       "user_canonical": "https://colaopeter.com/custom-pools-in-arlington-va-leesburg-mclean-va-washington-dc-and-surrounding-areas/",
       "last_crawl": "2026-08-04T13:15:20Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/custom-pools-in-leesburg-mclean-great-falls-va-washington-dc-and-nearby-cities-essential-pool-maintenance-tips-for-crystal-clear-waters/",
@@ -460,9 +478,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/custom-pools-in-leesburg-mclean-great-falls-va-washington-dc-and-nearby-cities-essential-pool-maintenance-tips-for-crystal-clear-waters/",
       "user_canonical": "https://colaopeter.com/custom-pools-in-leesburg-mclean-great-falls-va-washington-dc-and-nearby-cities-essential-pool-maintenance-tips-for-crystal-clear-waters/",
-      "last_crawl": "2026-07-19T02:51:28Z",
+      "last_crawl": "2026-10-26T22:56:36Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/custom-pools-in-leesburg-mclean-great-falls-va-washington-dc-and-surrounding-areas-free-form-vs-rectangular-pools-choosing-the-perfect-shape-for-your-oasis/",
@@ -480,7 +498,7 @@
       "user_canonical": "https://colaopeter.com/custom-pools-in-leesburg-mclean-great-falls-va-washington-dc-and-surrounding-areas-free-form-vs-rectangular-pools-choosing-the-perfect-shape-for-your-oasis/",
       "last_crawl": "2026-10-06T04:19:13Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/custom-pools-vs-standard-pool-plans-pool-builder-in-leesburg-mclean-va-aldie-va-great-falls-va-sterling-va-arlington-va-and-surrounding-areas/",
@@ -496,9 +514,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/custom-pools-vs-standard-pool-plans-pool-builder-in-leesburg-mclean-va-aldie-va-great-falls-va-sterling-va-arlington-va-and-surrounding-areas/",
       "user_canonical": "https://colaopeter.com/custom-pools-vs-standard-pool-plans-pool-builder-in-leesburg-mclean-va-aldie-va-great-falls-va-sterling-va-arlington-va-and-surrounding-areas/",
-      "last_crawl": "2026-08-12T08:32:07Z",
+      "last_crawl": "2026-10-29T08:45:52Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/",
@@ -514,9 +532,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/",
       "user_canonical": "https://colaopeter.com/custom-deck-builder-washington-dc-sterling-arlington-leesburg-mclean-great-falls-va/",
-      "last_crawl": "2026-09-20T12:19:34Z",
+      "last_crawl": "2026-10-14T06:55:26Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/diy-vs-hiring-a-professional-pool-deck-builder-in-leesburg-sterling-va-aldie-va-great-falls-va-arlington-va-washington-d-c-and-nearby-cities/",
@@ -532,9 +550,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/diy-vs-hiring-a-professional-pool-deck-builder-in-leesburg-sterling-va-aldie-va-great-falls-va-arlington-va-washington-d-c-and-nearby-cities/",
       "user_canonical": "https://colaopeter.com/diy-vs-hiring-a-professional-pool-deck-builder-in-leesburg-sterling-va-aldie-va-great-falls-va-arlington-va-washington-d-c-and-nearby-cities/",
-      "last_crawl": "2026-08-12T16:37:38Z",
+      "last_crawl": "2026-10-26T07:31:01Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/driveways-walkways/",
@@ -552,7 +570,7 @@
       "user_canonical": "https://colaopeter.com/driveways-walkways/",
       "last_crawl": "2026-09-16T16:39:52Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/fire-water/",
@@ -568,9 +586,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/fire-water/",
       "user_canonical": "https://colaopeter.com/fire-water/",
-      "last_crawl": "2026-08-13T04:17:43Z",
+      "last_crawl": "2026-10-28T22:00:55Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/four-reasons-why-your-hardscape-design-is-just-as-important-as-your-landscape-design-in-arlington-va-great-falls-va-leesburg-washington-d-c-potomac-md-mclean-va-and-surrounding-areas/",
@@ -588,7 +606,7 @@
       "user_canonical": "https://colaopeter.com/four-reasons-why-your-hardscape-design-is-just-as-important-as-your-landscape-design-in-arlington-va-great-falls-va-leesburg-washington-d-c-potomac-md-mclean-va-and-surrounding-areas/",
       "last_crawl": "2026-09-18T05:02:21Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/",
@@ -604,9 +622,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/",
       "user_canonical": "https://colaopeter.com/",
-      "last_crawl": "2026-10-04T19:28:45Z",
+      "last_crawl": "2026-10-31T20:12:44Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/how-custom-landscaping-can-complement-your-home-design-in-oakton-va-leesburg-washington-d-c-purcellville-va-arlington-va-great-falls-va-and-surrounding-areas/",
@@ -624,7 +642,7 @@
       "user_canonical": "https://colaopeter.com/how-custom-landscaping-can-complement-your-home-design-in-oakton-va-leesburg-washington-d-c-purcellville-va-arlington-va-great-falls-va-and-surrounding-areas/",
       "last_crawl": "2026-09-16T20:06:35Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscape-architect-in-leesburg-potomac-md-washington-dc-arlington-va-the-magic-of-landscape-lighting/",
@@ -640,9 +658,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/landscape-architect-in-leesburg-potomac-md-washington-dc-arlington-va-the-magic-of-landscape-lighting/",
       "user_canonical": "https://colaopeter.com/landscape-architect-in-leesburg-potomac-md-washington-dc-arlington-va-the-magic-of-landscape-lighting/",
-      "last_crawl": "2026-07-21T12:18:47Z",
+      "last_crawl": "2026-10-29T14:36:39Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscape-design-architecture-washington-dc-arlington-va-great-falls-va-leesburg-mclean-va-sterling-va/",
@@ -660,7 +678,7 @@
       "user_canonical": "https://colaopeter.com/landscape-design-architecture-washington-dc-arlington-va-great-falls-va-leesburg-mclean-va-sterling-va/",
       "last_crawl": "2026-10-05T22:52:48Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscape-design-arlington-great-falls-sterling-mclean-leesburg-va-washington-dc/",
@@ -678,7 +696,7 @@
       "user_canonical": "https://colaopeter.com/landscape-design-arlington-great-falls-sterling-mclean-leesburg-va-washington-dc/",
       "last_crawl": "2026-09-30T06:54:14Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscaping-company-in-great-falls-va-mclean-sterling-washington-dc-and-nearby-cities/",
@@ -696,7 +714,7 @@
       "user_canonical": "https://colaopeter.com/landscaping-company-in-great-falls-va-mclean-sterling-washington-dc-and-nearby-cities/",
       "last_crawl": "2026-08-31T17:54:15Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/landscaping-company-in-leesburg-middleburg-va-washington-dc-aldie-va-pavers-vs-asphalt-choosing-the-perfect-driveway-surface/",
@@ -712,9 +730,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/landscaping-company-in-leesburg-middleburg-va-washington-dc-aldie-va-pavers-vs-asphalt-choosing-the-perfect-driveway-surface/",
       "user_canonical": "https://colaopeter.com/landscaping-company-in-leesburg-middleburg-va-washington-dc-aldie-va-pavers-vs-asphalt-choosing-the-perfect-driveway-surface/",
-      "last_crawl": "2026-10-06T20:52:42Z",
+      "last_crawl": "2026-10-22T17:10:59Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/luxury-pool-renovations-reimagining-what-you-already-have/",
@@ -732,7 +750,7 @@
       "user_canonical": "https://colaopeter.com/luxury-pool-renovations-reimagining-what-you-already-have/",
       "last_crawl": "2026-07-10T12:53:01Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/",
@@ -750,7 +768,7 @@
       "user_canonical": "https://colaopeter.com/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/",
       "last_crawl": "2026-08-17T17:58:36Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/hardscape-design-sterling-great-falls-arlington-mclean-leesburg-va-washington-dc/",
@@ -768,7 +786,7 @@
       "user_canonical": "https://colaopeter.com/hardscape-design-sterling-great-falls-arlington-mclean-leesburg-va-washington-dc/",
       "last_crawl": "2026-10-04T13:15:53Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/media-awards/",
@@ -786,7 +804,7 @@
       "user_canonical": "https://colaopeter.com/media-awards/",
       "last_crawl": "2026-09-30T05:58:12Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/our-team/",
@@ -802,9 +820,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/our-team/",
       "user_canonical": "https://colaopeter.com/our-team/",
-      "last_crawl": "2026-09-17T09:01:16Z",
+      "last_crawl": "2026-10-29T14:20:18Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/furniture/",
@@ -820,9 +838,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/furniture/",
       "user_canonical": "https://colaopeter.com/furniture/",
-      "last_crawl": "2026-08-12T07:20:56Z",
+      "last_crawl": "2026-10-24T20:52:55Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/pool-design-elements-that-should-not-be-ignored-in-leesburg-sterling-aldie-va-mclean-va-arlington-va-washington-d-c-and-nearby-cities/",
@@ -838,9 +856,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/pool-design-elements-that-should-not-be-ignored-in-leesburg-sterling-aldie-va-mclean-va-arlington-va-washington-d-c-and-nearby-cities/",
       "user_canonical": "https://colaopeter.com/pool-design-elements-that-should-not-be-ignored-in-leesburg-sterling-aldie-va-mclean-va-arlington-va-washington-d-c-and-nearby-cities/",
-      "last_crawl": "2026-07-20T08:27:52Z",
+      "last_crawl": "2026-10-28T16:49:40Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/pool-design-in-mclean-va-middleburg-va-washington-dc-leesburg-and-nearby-cities-the-many-benefits-of-a-pool-automatic-cover/",
@@ -856,9 +874,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/pool-design-in-mclean-va-middleburg-va-washington-dc-leesburg-and-nearby-cities-the-many-benefits-of-a-pool-automatic-cover/",
       "user_canonical": "https://colaopeter.com/pool-design-in-mclean-va-middleburg-va-washington-dc-leesburg-and-nearby-cities-the-many-benefits-of-a-pool-automatic-cover/",
-      "last_crawl": "2026-09-20T08:31:40Z",
+      "last_crawl": "2026-10-22T21:54:04Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/pool-houses-structures/",
@@ -874,9 +892,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/pool-houses-structures/",
       "user_canonical": "https://colaopeter.com/pool-houses-structures/",
-      "last_crawl": "2026-10-03T21:49:32Z",
+      "last_crawl": "2026-11-01T14:16:37Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/pool-remodeling-pool-resurfacing-arlington-great-falls-leesburg-mclean-sterling-va-washington-dc/",
@@ -894,7 +912,7 @@
       "user_canonical": "https://colaopeter.com/pool-remodeling-pool-resurfacing-arlington-great-falls-leesburg-mclean-sterling-va-washington-dc/",
       "last_crawl": "2026-09-20T05:55:23Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/review/",
@@ -912,7 +930,7 @@
       "user_canonical": "https://colaopeter.com/review/",
       "last_crawl": "2026-09-23T22:14:31Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/services/",
@@ -928,9 +946,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/services/",
       "user_canonical": "https://colaopeter.com/services/",
-      "last_crawl": "2026-09-29T20:52:01Z",
+      "last_crawl": "2026-10-26T09:24:44Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/signature-care-property-maintenance-what-a-property-walk-reveals/",
@@ -948,7 +966,7 @@
       "user_canonical": "https://colaopeter.com/signature-care-property-maintenance-what-a-property-walk-reveals/",
       "last_crawl": "2026-09-25T13:45:08Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/signs-you-need-pool-resurfacing-in-leesburg-sterling-va-arlington-va-mclean-va-washington-d-c-great-falls-va-and-surrounding-areas/",
@@ -966,7 +984,25 @@
       "user_canonical": "https://colaopeter.com/signs-you-need-pool-resurfacing-in-leesburg-sterling-va-arlington-va-mclean-va-washington-d-c-great-falls-va-and-surrounding-areas/",
       "last_crawl": "2026-08-29T08:07:33Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
+    },
+    {
+      "url": "https://colaopeter.com/sport-courts-putting-greens/",
+      "title": "Sport Courts & Putting Greens",
+      "scopes": [
+        "Menu"
+      ],
+      "state": "indexed",
+      "verdict": "PASS",
+      "last_status": "Submitted and indexed",
+      "indexing_state": "INDEXING_ALLOWED",
+      "page_fetch_state": "SUCCESSFUL",
+      "robots_txt_state": "ALLOWED",
+      "google_canonical": "https://colaopeter.com/sport-courts-putting-greens/",
+      "user_canonical": "https://colaopeter.com/sport-courts-putting-greens/",
+      "last_crawl": "2026-10-14T07:10:28Z",
+      "first_scanned": "2026-11-06",
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/three-important-elements-in-pool-resurfacing-in-leesburg-sterling-aldie-va-mclean-va-potomac-md-middleburg-va-and-surrounding-areas/",
@@ -984,7 +1020,7 @@
       "user_canonical": "https://colaopeter.com/three-important-elements-in-pool-resurfacing-in-leesburg-sterling-aldie-va-mclean-va-potomac-md-middleburg-va-and-surrounding-areas/",
       "last_crawl": "2026-08-29T02:46:12Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/three-pool-design-features-you-must-not-overlook-in-oakton-va-purcellville-va-and-surrounding-areas/",
@@ -1000,9 +1036,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/three-pool-design-features-you-must-not-overlook-in-oakton-va-purcellville-va-and-surrounding-areas/",
       "user_canonical": "https://colaopeter.com/three-pool-design-features-you-must-not-overlook-in-oakton-va-purcellville-va-and-surrounding-areas/",
-      "last_crawl": "2026-07-26T17:27:19Z",
+      "last_crawl": "2026-11-04T01:07:22Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/three-pool-renovation-styles-to-ditch-in-2024-in-leesburg-arlington-va-mclean-va-potomac-md-great-falls-va-washington-d-c-and-nearby-cities/",
@@ -1018,27 +1054,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/three-pool-renovation-styles-to-ditch-in-2024-in-leesburg-arlington-va-mclean-va-potomac-md-great-falls-va-washington-d-c-and-nearby-cities/",
       "user_canonical": "https://colaopeter.com/three-pool-renovation-styles-to-ditch-in-2024-in-leesburg-arlington-va-mclean-va-potomac-md-great-falls-va-washington-d-c-and-nearby-cities/",
-      "last_crawl": "2026-09-06T17:57:02Z",
+      "last_crawl": "2026-10-18T16:52:17Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
-    },
-    {
-      "url": "https://colaopeter.com/three-unique-pool-design-features-to-add-value-to-your-outdoor-space-in-leesburg-great-falls-va-arlington-va-washington-dc-mclean-va-sterling-va-and-nearby-cities/",
-      "title": "Three Unique Pool Design Features to Add Value to Your Outdoor Space in Leesburg, Great Falls, VA, Arlington, VA, Washington, DC, McLean, VA, Sterling, VA, and Nearby Cities",
-      "scopes": [
-        "Blog"
-      ],
-      "state": "indexed",
-      "verdict": "PASS",
-      "last_status": "Submitted and indexed",
-      "indexing_state": "INDEXING_ALLOWED",
-      "page_fetch_state": "SUCCESSFUL",
-      "robots_txt_state": "ALLOWED",
-      "google_canonical": "https://colaopeter.com/three-unique-pool-design-features-to-add-value-to-your-outdoor-space-in-leesburg-great-falls-va-arlington-va-washington-dc-mclean-va-sterling-va-and-nearby-cities/",
-      "user_canonical": "https://colaopeter.com/three-unique-pool-design-features-to-add-value-to-your-outdoor-space-in-leesburg-great-falls-va-arlington-va-washington-dc-mclean-va-sterling-va-and-nearby-cities/",
-      "last_crawl": "2026-06-19T20:32:46Z",
-      "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/welcome-to-colao-peter-luxury-outdoor-living/",
@@ -1054,9 +1072,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/welcome-to-colao-peter-luxury-outdoor-living/",
       "user_canonical": "https://colaopeter.com/welcome-to-colao-peter-luxury-outdoor-living/",
-      "last_crawl": "2026-09-20T18:54:38Z",
+      "last_crawl": "2026-11-05T03:49:05Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/what-is-hardscape-design-why-should-you-consider-it-in-middleburg-va-washington-dc-potomac-md-arlington-va-aldie-va-leesburg-and-surrounding-areas/",
@@ -1074,7 +1092,7 @@
       "user_canonical": "https://colaopeter.com/what-is-hardscape-design-why-should-you-consider-it-in-middleburg-va-washington-dc-potomac-md-arlington-va-aldie-va-leesburg-and-surrounding-areas/",
       "last_crawl": "2026-07-18T22:42:40Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/motorized-track-mounted-outdoor-screens-northern-virginia/",
@@ -1090,9 +1108,9 @@
       "robots_txt_state": "ALLOWED",
       "google_canonical": "https://colaopeter.com/motorized-track-mounted-outdoor-screens-northern-virginia/",
       "user_canonical": "https://colaopeter.com/motorized-track-mounted-outdoor-screens-northern-virginia/",
-      "last_crawl": "2026-09-30T01:29:30Z",
+      "last_crawl": "2026-11-04T13:31:27Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/yard-maintenance-is-no-longer-a-luxury-it-is-a-necessity-in-leesburg-sterling-va-aldie-va-washington-d-c-great-falls-va-arlington-va-and-surrounding-areas/",
@@ -1110,7 +1128,7 @@
       "user_canonical": "https://colaopeter.com/yard-maintenance-is-no-longer-a-luxury-it-is-a-necessity-in-leesburg-sterling-va-aldie-va-washington-d-c-great-falls-va-arlington-va-and-surrounding-areas/",
       "last_crawl": "2026-09-23T15:46:07Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     },
     {
       "url": "https://colaopeter.com/your-checklist-before-building-a-custom-deck-in-washington-d-c-aldie-va-potomac-md-leesburg-arlington-va-great-falls-va-and-surrounding-areas/",
@@ -1128,7 +1146,7 @@
       "user_canonical": "https://colaopeter.com/your-checklist-before-building-a-custom-deck-in-washington-d-c-aldie-va-potomac-md-leesburg-arlington-va-great-falls-va-and-surrounding-areas/",
       "last_crawl": "2026-08-31T09:52:03Z",
       "first_scanned": "2026-10-09",
-      "last_checked": "2026-10-09"
+      "last_checked": "2026-11-06"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-09T08:47:17",
+  "generated_at": "2026-11-06T09:04:21",
   "start_date": "2025-01-01",
-  "end_date": "2026-09-30",
-  "current_month_note": "Data through 2026-09-30; the final listed month is complete when its last calendar day is used.",
+  "end_date": "2026-10-31",
+  "current_month_note": "Data through 2026-10-31; the final listed month is complete when its last calendar day is used.",
   "ga4_property": "387610456",
   "pages": [
     {
@@ -92,7 +92,8 @@
     "2026-06",
     "2026-07",
     "2026-08",
-    "2026-09"
+    "2026-09",
+    "2026-10"
   ],
   "monthly_rows": [
     {
@@ -1482,6 +1483,72 @@
       "keyEvents": 0.0
     },
     {
+      "pageKey": "home",
+      "month": "2026-10",
+      "source": "Organic Search",
+      "sessions": 207,
+      "engagedSessions": 159,
+      "engagementRate": 0.7681,
+      "totalUsers": 148,
+      "eventCount": 2069,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "month": "2026-10",
+      "source": "AI Assistants",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 1,
+      "eventCount": 3,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "month": "2026-10",
+      "source": "Direct",
+      "sessions": 384,
+      "engagedSessions": 144,
+      "engagementRate": 0.375,
+      "totalUsers": 330,
+      "eventCount": 2116,
+      "keyEvents": 1.0
+    },
+    {
+      "pageKey": "home",
+      "month": "2026-10",
+      "source": "Referral",
+      "sessions": 18,
+      "engagedSessions": 13,
+      "engagementRate": 0.7222,
+      "totalUsers": 13,
+      "eventCount": 135,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "month": "2026-10",
+      "source": "Organic Social",
+      "sessions": 15,
+      "engagedSessions": 9,
+      "engagementRate": 0.6,
+      "totalUsers": 13,
+      "eventCount": 145,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "month": "2026-10",
+      "source": "Other",
+      "sessions": 139,
+      "engagedSessions": 9,
+      "engagementRate": 0.0647,
+      "totalUsers": 139,
+      "eventCount": 419,
+      "keyEvents": 0.0
+    },
+    {
       "pageKey": "signature-care",
       "month": "2025-01",
       "source": "Organic Search",
@@ -1988,6 +2055,39 @@
       "keyEvents": 0.0
     },
     {
+      "pageKey": "signature-care",
+      "month": "2026-10",
+      "source": "Organic Search",
+      "sessions": 4,
+      "engagedSessions": 3,
+      "engagementRate": 0.75,
+      "totalUsers": 4,
+      "eventCount": 29,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "signature-care",
+      "month": "2026-10",
+      "source": "Paid Search",
+      "sessions": 308,
+      "engagedSessions": 86,
+      "engagementRate": 0.2792,
+      "totalUsers": 295,
+      "eventCount": 1235,
+      "keyEvents": 1.0
+    },
+    {
+      "pageKey": "signature-care",
+      "month": "2026-10",
+      "source": "Direct",
+      "sessions": 14,
+      "engagedSessions": 2,
+      "engagementRate": 0.1429,
+      "totalUsers": 13,
+      "eventCount": 66,
+      "keyEvents": 0.0
+    },
+    {
       "pageKey": "signature-care-property-maintenance-what-a-property-walk-reveals",
       "month": "2026-09",
       "source": "Organic Search",
@@ -2007,6 +2107,17 @@
       "engagementRate": 0.6,
       "totalUsers": 7,
       "eventCount": 214,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "signature-care-property-maintenance-what-a-property-walk-reveals",
+      "month": "2026-10",
+      "source": "Direct",
+      "sessions": 6,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 4,
+      "eventCount": 15,
       "keyEvents": 0.0
     },
     {
@@ -2208,6 +2319,17 @@
       "keyEvents": 0.0
     },
     {
+      "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
+      "month": "2026-10",
+      "source": "Organic Social",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 4,
+      "keyEvents": 0.0
+    },
+    {
       "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
       "month": "2026-04",
       "source": "Direct",
@@ -2360,6 +2482,28 @@
       "totalUsers": 2,
       "eventCount": 13,
       "keyEvents": 0.0
+    },
+    {
+      "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
+      "month": "2026-10",
+      "source": "Direct",
+      "sessions": 4,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 4,
+      "eventCount": 12,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
+      "month": "2026-10",
+      "source": "Organic Social",
+      "sessions": 3,
+      "engagedSessions": 2,
+      "engagementRate": 0.6667,
+      "totalUsers": 3,
+      "eventCount": 11,
+      "keyEvents": 0.0
     }
   ],
   "page_summary": [
@@ -2371,16 +2515,16 @@
       "url": "https://colaopeter.com/",
       "published": null,
       "modified": null,
-      "sessions": 22901,
-      "engagedSessions": 6508,
-      "engagementRate": 0.2842,
-      "totalUsers": 21196,
-      "eventCount": 111787,
-      "keyEvents": 332.0,
-      "organicSessions": 4274,
-      "aiSessions": 92,
+      "sessions": 23665,
+      "engagedSessions": 6842,
+      "engagementRate": 0.2891,
+      "totalUsers": 21840,
+      "eventCount": 116674,
+      "keyEvents": 333.0,
+      "organicSessions": 4481,
+      "aiSessions": 93,
       "paidSessions": 6,
-      "organicAiSessions": 4366
+      "organicAiSessions": 4574
     },
     {
       "pageKey": "signature-care",
@@ -2390,16 +2534,16 @@
       "url": "https://colaopeter.com/lawn-maintenance-great-falls-mclean-sterling-leesburg-arlington-va-washington-dc/",
       "published": "2026-08-09",
       "modified": "2026-08-09",
-      "sessions": 735,
-      "engagedSessions": 267,
-      "engagementRate": 0.3633,
-      "totalUsers": 688,
-      "eventCount": 3211,
-      "keyEvents": 3.0,
-      "organicSessions": 45,
+      "sessions": 1061,
+      "engagedSessions": 358,
+      "engagementRate": 0.3374,
+      "totalUsers": 1000,
+      "eventCount": 4541,
+      "keyEvents": 4.0,
+      "organicSessions": 49,
       "aiSessions": 0,
-      "paidSessions": 572,
-      "organicAiSessions": 45
+      "paidSessions": 880,
+      "organicAiSessions": 49
     },
     {
       "pageKey": "signature-care-property-maintenance-what-a-property-walk-reveals",
@@ -2409,11 +2553,11 @@
       "url": "https://colaopeter.com/signature-care-property-maintenance-what-a-property-walk-reveals/",
       "published": "2026-09-12",
       "modified": "2026-09-25",
-      "sessions": 16,
+      "sessions": 22,
       "engagedSessions": 9,
-      "engagementRate": 0.5625,
-      "totalUsers": 13,
-      "eventCount": 235,
+      "engagementRate": 0.4091,
+      "totalUsers": 17,
+      "eventCount": 250,
       "keyEvents": 0.0,
       "organicSessions": 6,
       "aiSessions": 0,
@@ -2428,11 +2572,11 @@
       "url": "https://colaopeter.com/luxury-pool-renovations-reimagining-what-you-already-have/",
       "published": "2026-06-28",
       "modified": "2026-09-25",
-      "sessions": 81,
-      "engagedSessions": 52,
-      "engagementRate": 0.642,
-      "totalUsers": 65,
-      "eventCount": 840,
+      "sessions": 82,
+      "engagedSessions": 53,
+      "engagementRate": 0.6463,
+      "totalUsers": 66,
+      "eventCount": 844,
       "keyEvents": 38.0,
       "organicSessions": 7,
       "aiSessions": 4,
@@ -2447,11 +2591,11 @@
       "url": "https://colaopeter.com/motorized-track-mounted-outdoor-screens-northern-virginia/",
       "published": "2026-04-19",
       "modified": "2026-05-29",
-      "sessions": 68,
-      "engagedSessions": 41,
-      "engagementRate": 0.6029,
-      "totalUsers": 56,
-      "eventCount": 505,
+      "sessions": 75,
+      "engagedSessions": 43,
+      "engagementRate": 0.5733,
+      "totalUsers": 63,
+      "eventCount": 528,
       "keyEvents": 0.0,
       "organicSessions": 4,
       "aiSessions": 0,
@@ -2467,38 +2611,38 @@
     "url": "https://colaopeter.com/signature-care-property-maintenance-what-a-property-walk-reveals/",
     "published": "2026-09-12",
     "modified": "2026-09-25",
-    "sessions": 16,
+    "sessions": 22,
     "engagedSessions": 9,
-    "engagementRate": 0.5625,
-    "totalUsers": 13,
-    "eventCount": 235,
+    "engagementRate": 0.4091,
+    "totalUsers": 17,
+    "eventCount": 250,
     "keyEvents": 0.0,
     "organicSessions": 6,
     "aiSessions": 0,
     "paidSessions": 0,
     "organicAiSessions": 6,
-    "latestMonth": "2026-09",
-    "latestMonthOrganicSessions": 6
+    "latestMonth": "2026-10",
+    "latestMonthOrganicSessions": 0
   },
   "source_rows": [
     {
       "pageKey": "home",
       "source": "Organic Search",
-      "sessions": 4274,
-      "engagedSessions": 3282,
+      "sessions": 4481,
+      "engagedSessions": 3441,
       "engagementRate": 0.7679,
-      "totalUsers": 3263,
-      "eventCount": 37869,
+      "totalUsers": 3411,
+      "eventCount": 39938,
       "keyEvents": 103.0
     },
     {
       "pageKey": "home",
       "source": "AI Assistants",
-      "sessions": 92,
+      "sessions": 93,
       "engagedSessions": 66,
-      "engagementRate": 0.7174,
-      "totalUsers": 82,
-      "eventCount": 745,
+      "engagementRate": 0.7097,
+      "totalUsers": 83,
+      "eventCount": 748,
       "keyEvents": 2.0
     },
     {
@@ -2514,31 +2658,31 @@
     {
       "pageKey": "home",
       "source": "Direct",
-      "sessions": 6251,
-      "engagedSessions": 2005,
-      "engagementRate": 0.3207,
-      "totalUsers": 5738,
-      "eventCount": 32528,
-      "keyEvents": 145.0
+      "sessions": 6635,
+      "engagedSessions": 2149,
+      "engagementRate": 0.3239,
+      "totalUsers": 6068,
+      "eventCount": 34644,
+      "keyEvents": 146.0
     },
     {
       "pageKey": "home",
       "source": "Referral",
-      "sessions": 323,
-      "engagedSessions": 236,
-      "engagementRate": 0.7307,
-      "totalUsers": 256,
-      "eventCount": 2467,
+      "sessions": 341,
+      "engagedSessions": 249,
+      "engagementRate": 0.7302,
+      "totalUsers": 269,
+      "eventCount": 2602,
       "keyEvents": 49.0
     },
     {
       "pageKey": "home",
       "source": "Organic Social",
-      "sessions": 2775,
-      "engagedSessions": 289,
-      "engagementRate": 0.1041,
-      "totalUsers": 2715,
-      "eventCount": 9188,
+      "sessions": 2790,
+      "engagedSessions": 298,
+      "engagementRate": 0.1068,
+      "totalUsers": 2728,
+      "eventCount": 9333,
       "keyEvents": 15.0
     },
     {
@@ -2554,41 +2698,41 @@
     {
       "pageKey": "home",
       "source": "Other",
-      "sessions": 9179,
-      "engagedSessions": 628,
+      "sessions": 9318,
+      "engagedSessions": 637,
       "engagementRate": 0.0684,
-      "totalUsers": 9135,
-      "eventCount": 28966,
+      "totalUsers": 9274,
+      "eventCount": 29385,
       "keyEvents": 18.0
     },
     {
       "pageKey": "signature-care",
       "source": "Organic Search",
-      "sessions": 45,
-      "engagedSessions": 23,
-      "engagementRate": 0.5111,
-      "totalUsers": 39,
-      "eventCount": 231,
+      "sessions": 49,
+      "engagedSessions": 26,
+      "engagementRate": 0.5306,
+      "totalUsers": 43,
+      "eventCount": 260,
       "keyEvents": 0.0
     },
     {
       "pageKey": "signature-care",
       "source": "Paid Search",
-      "sessions": 572,
-      "engagedSessions": 193,
-      "engagementRate": 0.3374,
-      "totalUsers": 544,
-      "eventCount": 2325,
-      "keyEvents": 1.0
+      "sessions": 880,
+      "engagedSessions": 279,
+      "engagementRate": 0.317,
+      "totalUsers": 839,
+      "eventCount": 3560,
+      "keyEvents": 2.0
     },
     {
       "pageKey": "signature-care",
       "source": "Direct",
-      "sessions": 105,
-      "engagedSessions": 42,
-      "engagementRate": 0.4,
-      "totalUsers": 92,
-      "eventCount": 588,
+      "sessions": 119,
+      "engagedSessions": 44,
+      "engagementRate": 0.3697,
+      "totalUsers": 105,
+      "eventCount": 654,
       "keyEvents": 2.0
     },
     {
@@ -2634,11 +2778,11 @@
     {
       "pageKey": "signature-care-property-maintenance-what-a-property-walk-reveals",
       "source": "Direct",
-      "sessions": 10,
+      "sessions": 16,
       "engagedSessions": 6,
-      "engagementRate": 0.6,
-      "totalUsers": 7,
-      "eventCount": 214,
+      "engagementRate": 0.375,
+      "totalUsers": 11,
+      "eventCount": 229,
       "keyEvents": 0.0
     },
     {
@@ -2684,11 +2828,11 @@
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "source": "Organic Social",
-      "sessions": 10,
-      "engagedSessions": 7,
-      "engagementRate": 0.7,
-      "totalUsers": 10,
-      "eventCount": 35,
+      "sessions": 11,
+      "engagedSessions": 8,
+      "engagementRate": 0.7273,
+      "totalUsers": 11,
+      "eventCount": 39,
       "keyEvents": 0.0
     },
     {
@@ -2714,11 +2858,11 @@
     {
       "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
       "source": "Direct",
-      "sessions": 51,
+      "sessions": 55,
       "engagedSessions": 31,
-      "engagementRate": 0.6078,
-      "totalUsers": 41,
-      "eventCount": 439,
+      "engagementRate": 0.5636,
+      "totalUsers": 45,
+      "eventCount": 451,
       "keyEvents": 0.0
     },
     {
@@ -2734,11 +2878,11 @@
     {
       "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
       "source": "Organic Social",
-      "sessions": 9,
-      "engagedSessions": 6,
+      "sessions": 12,
+      "engagedSessions": 8,
       "engagementRate": 0.6667,
-      "totalUsers": 9,
-      "eventCount": 38,
+      "totalUsers": 12,
+      "eventCount": 49,
       "keyEvents": 0.0
     }
   ],
@@ -2763,11 +2907,11 @@
     },
     {
       "sourceMedium": "chatgpt.com / ai-assistant",
-      "sessions": 18,
+      "sessions": 19,
       "engagedSessions": 15,
-      "engagementRate": 0.8333,
-      "totalUsers": 16,
-      "eventCount": 135,
+      "engagementRate": 0.7895,
+      "totalUsers": 17,
+      "eventCount": 138,
       "keyEvents": 0.0
     },
     {
@@ -2839,41 +2983,41 @@
     {
       "pageKey": "home",
       "sourceMedium": "fb / paid",
-      "sessions": 6896,
-      "engagedSessions": 328,
-      "engagementRate": 0.0476,
-      "totalUsers": 6890,
-      "eventCount": 21095,
+      "sessions": 6957,
+      "engagedSessions": 333,
+      "engagementRate": 0.0479,
+      "totalUsers": 6951,
+      "eventCount": 21280,
       "keyEvents": 0.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "(direct) / (none)",
-      "sessions": 6251,
-      "engagedSessions": 2005,
-      "engagementRate": 0.3207,
-      "totalUsers": 5738,
-      "eventCount": 32528,
-      "keyEvents": 145.0
+      "sessions": 6635,
+      "engagedSessions": 2149,
+      "engagementRate": 0.3239,
+      "totalUsers": 6068,
+      "eventCount": 34644,
+      "keyEvents": 146.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "google / organic",
-      "sessions": 3859,
-      "engagedSessions": 2943,
-      "engagementRate": 0.7626,
-      "totalUsers": 2929,
-      "eventCount": 33731,
+      "sessions": 4033,
+      "engagedSessions": 3077,
+      "engagementRate": 0.763,
+      "totalUsers": 3052,
+      "eventCount": 35480,
       "keyEvents": 77.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "ig / paid",
-      "sessions": 1757,
-      "engagedSessions": 111,
-      "engagementRate": 0.0632,
-      "totalUsers": 1754,
-      "eventCount": 5445,
+      "sessions": 1834,
+      "engagedSessions": 115,
+      "engagementRate": 0.0627,
+      "totalUsers": 1831,
+      "eventCount": 5676,
       "keyEvents": 0.0
     },
     {
@@ -2889,21 +3033,21 @@
     {
       "pageKey": "home",
       "sourceMedium": "m.facebook.com / referral",
-      "sessions": 763,
-      "engagedSessions": 85,
-      "engagementRate": 0.1114,
-      "totalUsers": 747,
-      "eventCount": 2463,
+      "sessions": 767,
+      "engagedSessions": 86,
+      "engagementRate": 0.1121,
+      "totalUsers": 751,
+      "eventCount": 2476,
       "keyEvents": 2.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "facebook.com / referral",
-      "sessions": 584,
-      "engagedSessions": 61,
-      "engagementRate": 0.1045,
-      "totalUsers": 577,
-      "eventCount": 1845,
+      "sessions": 587,
+      "engagedSessions": 64,
+      "engagementRate": 0.109,
+      "totalUsers": 580,
+      "eventCount": 1857,
       "keyEvents": 2.0
     },
     {
@@ -2919,31 +3063,31 @@
     {
       "pageKey": "home",
       "sourceMedium": "bing / organic",
-      "sessions": 277,
-      "engagedSessions": 231,
-      "engagementRate": 0.8339,
-      "totalUsers": 228,
-      "eventCount": 2812,
+      "sessions": 297,
+      "engagedSessions": 248,
+      "engagementRate": 0.835,
+      "totalUsers": 243,
+      "eventCount": 3002,
       "keyEvents": 0.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "yahoo / organic",
-      "sessions": 71,
-      "engagedSessions": 56,
-      "engagementRate": 0.7887,
-      "totalUsers": 54,
-      "eventCount": 698,
+      "sessions": 75,
+      "engagedSessions": 58,
+      "engagementRate": 0.7733,
+      "totalUsers": 55,
+      "eventCount": 733,
       "keyEvents": 26.0
     },
     {
       "pageKey": "home",
       "sourceMedium": "duckduckgo / organic",
-      "sessions": 56,
-      "engagedSessions": 45,
-      "engagementRate": 0.8036,
-      "totalUsers": 43,
-      "eventCount": 534,
+      "sessions": 62,
+      "engagedSessions": 48,
+      "engagementRate": 0.7742,
+      "totalUsers": 49,
+      "eventCount": 571,
       "keyEvents": 0.0
     },
     {
@@ -2989,11 +3133,11 @@
     {
       "pageKey": "home",
       "sourceMedium": "houzz.com / referral",
-      "sessions": 24,
-      "engagedSessions": 17,
-      "engagementRate": 0.7083,
-      "totalUsers": 20,
-      "eventCount": 223,
+      "sessions": 27,
+      "engagedSessions": 20,
+      "engagementRate": 0.7407,
+      "totalUsers": 23,
+      "eventCount": 300,
       "keyEvents": 0.0
     },
     {
@@ -3058,22 +3202,22 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "homeanddesign.com / referral",
+      "sessions": 17,
+      "engagedSessions": 8,
+      "engagementRate": 0.4706,
+      "totalUsers": 11,
+      "eventCount": 68,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "us14.admin.mailchimp.com / referral",
       "sessions": 17,
       "engagedSessions": 14,
       "engagementRate": 0.8235,
       "totalUsers": 4,
       "eventCount": 118,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "homeanddesign.com / referral",
-      "sessions": 16,
-      "engagedSessions": 7,
-      "engagementRate": 0.4375,
-      "totalUsers": 10,
-      "eventCount": 63,
       "keyEvents": 0.0
     },
     {
@@ -3089,11 +3233,11 @@
     {
       "pageKey": "home",
       "sourceMedium": "chatgpt.com / ai-assistant",
-      "sessions": 14,
+      "sessions": 15,
       "engagedSessions": 11,
-      "engagementRate": 0.7857,
-      "totalUsers": 12,
-      "eventCount": 108,
+      "engagementRate": 0.7333,
+      "totalUsers": 13,
+      "eventCount": 111,
       "keyEvents": 0.0
     },
     {
@@ -3108,6 +3252,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "l.instagram.com / referral",
+      "sessions": 11,
+      "engagedSessions": 3,
+      "engagementRate": 0.2727,
+      "totalUsers": 11,
+      "eventCount": 39,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "marketing_materials / qr_code",
       "sessions": 11,
       "engagedSessions": 4,
@@ -3118,22 +3272,22 @@
     },
     {
       "pageKey": "home",
-      "sourceMedium": "l.instagram.com / referral",
-      "sessions": 10,
-      "engagedSessions": 3,
-      "engagementRate": 0.3,
-      "totalUsers": 10,
-      "eventCount": 36,
+      "sourceMedium": "upwork.com / referral",
+      "sessions": 11,
+      "engagedSessions": 9,
+      "engagementRate": 0.8182,
+      "totalUsers": 8,
+      "eventCount": 90,
       "keyEvents": 0.0
     },
     {
       "pageKey": "home",
-      "sourceMedium": "upwork.com / referral",
-      "sessions": 10,
-      "engagedSessions": 9,
-      "engagementRate": 0.9,
-      "totalUsers": 7,
-      "eventCount": 87,
+      "sourceMedium": "homeservicebase.com / referral",
+      "sessions": 9,
+      "engagedSessions": 7,
+      "engagementRate": 0.7778,
+      "totalUsers": 9,
+      "eventCount": 72,
       "keyEvents": 0.0
     },
     {
@@ -3148,12 +3302,12 @@
     },
     {
       "pageKey": "home",
-      "sourceMedium": "homeservicebase.com / referral",
+      "sourceMedium": "search.google.com / referral",
       "sessions": 8,
       "engagedSessions": 6,
       "engagementRate": 0.75,
-      "totalUsers": 8,
-      "eventCount": 64,
+      "totalUsers": 7,
+      "eventCount": 107,
       "keyEvents": 0.0
     },
     {
@@ -3174,6 +3328,26 @@
       "engagementRate": 0.5714,
       "totalUsers": 2,
       "eventCount": 21,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "yelp.com / referral",
+      "sessions": 7,
+      "engagedSessions": 6,
+      "engagementRate": 0.8571,
+      "totalUsers": 7,
+      "eventCount": 78,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "2.0heads.com / referral",
+      "sessions": 6,
+      "engagedSessions": 6,
+      "engagementRate": 1.0,
+      "totalUsers": 3,
+      "eventCount": 61,
       "keyEvents": 0.0
     },
     {
@@ -3208,32 +3382,22 @@
     },
     {
       "pageKey": "home",
-      "sourceMedium": "search.google.com / referral",
-      "sessions": 6,
-      "engagedSessions": 4,
-      "engagementRate": 0.6667,
-      "totalUsers": 5,
-      "eventCount": 53,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "yelp.com / referral",
-      "sessions": 6,
-      "engagedSessions": 5,
-      "engagementRate": 0.8333,
-      "totalUsers": 6,
-      "eventCount": 49,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
       "sourceMedium": "account.squarespace.com / referral",
       "sessions": 5,
       "engagedSessions": 4,
       "engagementRate": 0.8,
       "totalUsers": 1,
       "eventCount": 31,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "ig / social",
+      "sessions": 5,
+      "engagedSessions": 2,
+      "engagementRate": 0.4,
+      "totalUsers": 3,
+      "eventCount": 17,
       "keyEvents": 0.0
     },
     {
@@ -3324,6 +3488,16 @@
       "engagementRate": 0.6667,
       "totalUsers": 2,
       "eventCount": 17,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "loudoun.hometownguru.com / referral",
+      "sessions": 3,
+      "engagedSessions": 2,
+      "engagementRate": 0.6667,
+      "totalUsers": 3,
+      "eventCount": 15,
       "keyEvents": 0.0
     },
     {
@@ -3468,6 +3642,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "elmblue.lightning.force.com / referral",
+      "sessions": 2,
+      "engagedSessions": 2,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 19,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "encmbtia.online / referral",
       "sessions": 2,
       "engagedSessions": 0,
@@ -3498,22 +3682,12 @@
     },
     {
       "pageKey": "home",
-      "sourceMedium": "ig / social",
+      "sourceMedium": "listingmanager.costar.com / referral",
       "sessions": 2,
       "engagedSessions": 1,
       "engagementRate": 0.5,
-      "totalUsers": 2,
+      "totalUsers": 1,
       "eventCount": 6,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "home",
-      "sourceMedium": "loudoun.hometownguru.com / referral",
-      "sessions": 2,
-      "engagedSessions": 1,
-      "engagementRate": 0.5,
-      "totalUsers": 2,
-      "eventCount": 11,
       "keyEvents": 0.0
     },
     {
@@ -3624,6 +3798,16 @@
       "engagementRate": 0.5,
       "totalUsers": 2,
       "eventCount": 13,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "wnnkd.com / referral",
+      "sessions": 2,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 2,
+      "eventCount": 6,
       "keyEvents": 0.0
     },
     {
@@ -3818,6 +4002,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "echo.lightning.force.com / referral",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 1,
+      "eventCount": 4,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "edit.agsci.psu.edu / referral",
       "sessions": 1,
       "engagedSessions": 1,
@@ -3978,6 +4172,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "lawnager / directory",
+      "sessions": 1,
+      "engagedSessions": 0,
+      "engagementRate": 0.0,
+      "totalUsers": 1,
+      "eventCount": 3,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "lucxspace.com / referral",
       "sessions": 1,
       "engagedSessions": 0,
@@ -4044,6 +4248,16 @@
       "engagementRate": 1.0,
       "totalUsers": 1,
       "eventCount": 12,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
+      "sourceMedium": "pe.search.yahoo.com / referral",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 4,
       "keyEvents": 0.0
     },
     {
@@ -4168,6 +4382,16 @@
     },
     {
       "pageKey": "home",
+      "sourceMedium": "tellows.com / referral",
+      "sessions": 1,
+      "engagedSessions": 1,
+      "engagementRate": 1.0,
+      "totalUsers": 1,
+      "eventCount": 19,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "home",
       "sourceMedium": "tremila.lightning.force.com / referral",
       "sessions": 1,
       "engagedSessions": 1,
@@ -4269,11 +4493,11 @@
     {
       "pageKey": "luxury-pool-renovations-reimagining-what-you-already-have",
       "sourceMedium": "facebook.com / referral",
-      "sessions": 7,
-      "engagedSessions": 6,
-      "engagementRate": 0.8571,
-      "totalUsers": 7,
-      "eventCount": 27,
+      "sessions": 8,
+      "engagedSessions": 7,
+      "engagementRate": 0.875,
+      "totalUsers": 8,
+      "eventCount": 31,
       "keyEvents": 0.0
     },
     {
@@ -4379,21 +4603,21 @@
     {
       "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
       "sourceMedium": "(direct) / (none)",
-      "sessions": 51,
+      "sessions": 55,
       "engagedSessions": 31,
-      "engagementRate": 0.6078,
-      "totalUsers": 41,
-      "eventCount": 439,
+      "engagementRate": 0.5636,
+      "totalUsers": 45,
+      "eventCount": 451,
       "keyEvents": 0.0
     },
     {
       "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
       "sourceMedium": "facebook.com / referral",
-      "sessions": 4,
-      "engagedSessions": 2,
-      "engagementRate": 0.5,
-      "totalUsers": 4,
-      "eventCount": 14,
+      "sessions": 6,
+      "engagedSessions": 4,
+      "engagementRate": 0.6667,
+      "totalUsers": 6,
+      "eventCount": 22,
       "keyEvents": 0.0
     },
     {
@@ -4408,22 +4632,22 @@
     },
     {
       "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
+      "sourceMedium": "ig / social",
+      "sessions": 3,
+      "engagedSessions": 1,
+      "engagementRate": 0.3333,
+      "totalUsers": 3,
+      "eventCount": 15,
+      "keyEvents": 0.0
+    },
+    {
+      "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
       "sourceMedium": "us14.admin.mailchimp.com / referral",
       "sessions": 3,
       "engagedSessions": 1,
       "engagementRate": 0.3333,
       "totalUsers": 2,
       "eventCount": 8,
-      "keyEvents": 0.0
-    },
-    {
-      "pageKey": "motorized-track-mounted-outdoor-screens-northern-virginia",
-      "sourceMedium": "ig / social",
-      "sessions": 2,
-      "engagedSessions": 1,
-      "engagementRate": 0.5,
-      "totalUsers": 2,
-      "eventCount": 12,
       "keyEvents": 0.0
     },
     {
@@ -4469,31 +4693,31 @@
     {
       "pageKey": "signature-care",
       "sourceMedium": "google / cpc",
-      "sessions": 572,
-      "engagedSessions": 193,
-      "engagementRate": 0.3374,
-      "totalUsers": 544,
-      "eventCount": 2325,
-      "keyEvents": 1.0
+      "sessions": 880,
+      "engagedSessions": 279,
+      "engagementRate": 0.317,
+      "totalUsers": 839,
+      "eventCount": 3560,
+      "keyEvents": 2.0
     },
     {
       "pageKey": "signature-care",
       "sourceMedium": "(direct) / (none)",
-      "sessions": 105,
-      "engagedSessions": 42,
-      "engagementRate": 0.4,
-      "totalUsers": 92,
-      "eventCount": 588,
+      "sessions": 119,
+      "engagedSessions": 44,
+      "engagementRate": 0.3697,
+      "totalUsers": 105,
+      "eventCount": 654,
       "keyEvents": 2.0
     },
     {
       "pageKey": "signature-care",
       "sourceMedium": "google / organic",
-      "sessions": 38,
-      "engagedSessions": 16,
-      "engagementRate": 0.4211,
-      "totalUsers": 33,
-      "eventCount": 179,
+      "sessions": 42,
+      "engagedSessions": 19,
+      "engagementRate": 0.4524,
+      "totalUsers": 37,
+      "eventCount": 208,
       "keyEvents": 0.0
     },
     {
@@ -4609,11 +4833,11 @@
     {
       "pageKey": "signature-care-property-maintenance-what-a-property-walk-reveals",
       "sourceMedium": "(direct) / (none)",
-      "sessions": 10,
+      "sessions": 16,
       "engagedSessions": 6,
-      "engagementRate": 0.6,
-      "totalUsers": 7,
-      "eventCount": 214,
+      "engagementRate": 0.375,
+      "totalUsers": 11,
+      "eventCount": 229,
       "keyEvents": 0.0
     },
     {
