@@ -494,6 +494,33 @@
       });
     }
 
+    function selectedYearLabel() {
+      return state.range === "all" ? "all years" : state.range;
+    }
+
+    function sourceRowsForRange(data, rows, cohortId) {
+      const selectedMonths = new Set(rows.map(row => row.year_month));
+      const bySourceMedium = new Map();
+      sourceEntries(data)
+        .filter(entry => entry.cohort_id === cohortId)
+        .forEach(entry => {
+          const values = bySourceMedium.get(entry.source_medium) || emptyTotals();
+          entry.monthly
+            .filter(month => selectedMonths.has(month.year_month))
+            .forEach(month => addValues(values, month));
+          bySourceMedium.set(entry.source_medium, values);
+        });
+      return [...bySourceMedium.entries()]
+        .map(([source_medium, values]) => ({
+          source_medium,
+          ...values,
+          average_active_time_seconds: values.sessions ? values.active_time_seconds / values.sessions : 0
+        }))
+        .filter(row => row.sessions || row.active_time_seconds || row.outbound_clicks || row.checkouts || row.purchases || row.purchase_revenue)
+        .sort((a, b) => b.sessions - a.sessions || a.source_medium.localeCompare(b.source_medium))
+        .slice(0, 12);
+    }
+
     function barChartLabel() {
       const source = state.barSource || "All sources";
       const medium = state.barMedium === "all" ? "all media" : state.barMedium;
@@ -540,6 +567,7 @@
     }
 
     function stepRows(rows) {
+      if (!rows.length) return `<tr><td colspan="7" class="empty">No Pizza Today STEP delivery evidence is available for ${esc(selectedYearLabel())}.</td></tr>`;
       const dash = value => value === null || value === undefined ? "—" : fmtNumber(value);
       return rows.map(row => `<tr>
         <td>${esc(row.period)}</td>
@@ -552,11 +580,11 @@
       </tr>`).join("");
     }
 
-    function sourceRows(data) {
+    function sourceRows(data, rows) {
       const cohort = data.cohorts.find(item => item.id === state.sourceCohort) || data.cohorts[0];
-      const rows = data.top_sources[cohort.id] || [];
-      if (!rows.length) return `<tr><td colspan="6" class="empty">No source rows in this cohort.</td></tr>`;
-      return rows.map(row => {
+      const sourceRows = sourceRowsForRange(data, rows, cohort.id);
+      if (!sourceRows.length) return `<tr><td colspan="6" class="empty">No source rows in this cohort for ${esc(selectedYearLabel())}.</td></tr>`;
+      return sourceRows.map(row => {
         return `<tr>
           <td>${esc(row.source_medium)}</td>
           <td>${fmtNumber(row.sessions)}</td>
@@ -591,6 +619,9 @@
       const totals = Object.fromEntries(data.cohorts.map(cohort => [cohort.id, aggregate(rows, cohort.id)]));
       const maxSessions = Math.max(...Object.values(totals).map(total => total.sessions), 1);
       const rangeText = rangeLabel(rows);
+      const stepEvidence = state.range === "all"
+        ? data.step_reconciliation
+        : data.step_reconciliation.filter(row => row.period.endsWith(state.range));
       const sourceTabs = data.cohorts.map(cohort => `<button class="source-tab" type="button" data-source-cohort="${esc(cohort.id)}" aria-pressed="${String(cohort.id === state.sourceCohort)}">${esc(cohort.label)}</button>`).join("");
       const rangeButtons = [
         ["all", "All 25 months"], ["2024", "2024"], ["2025", "2025"], ["2026", "2026"]
@@ -598,7 +629,6 @@
       const sourceOptions = [`<option value="" ${state.barSource ? "" : "selected"}>All classified sources</option>`, ...sourceNames(data).map(source => `<option value="${esc(source)}" ${state.barSource === source ? "selected" : ""}>${esc(source)}</option>`)].join("");
       const mediumOptions = [`<option value="all" ${state.barMedium === "all" ? "selected" : ""}>All media for source</option>`, ...mediaForSource.map(medium => `<option value="${esc(medium)}" ${state.barMedium === medium ? "selected" : ""}>${esc(medium)}</option>`)].join("");
       const direct = data.qa.pizza_direct_primary_cohort;
-      const comparable = data.qa.pizza_comparable_source_grain;
 
       app.className = "";
       app.innerHTML = `
@@ -622,7 +652,7 @@
 
         <section class="controls" aria-label="Dashboard controls">
           <div class="control-group">
-            <span class="control-label">Comparison window</span>
+            <span class="control-label">Year</span>
             <div class="range-options">${rangeButtons}</div>
           </div>
           <div class="filter-controls" aria-label="Monthly sessions filters">
@@ -659,7 +689,7 @@
         <section class="section" aria-labelledby="comparison-heading">
           <div class="section-head">
             <div><p class="eyebrow">Side by side</p><h2 id="comparison-heading">Comparable outcome table</h2></div>
-            <p class="section-note">Revenue per session is a diagnostic only. It is not a ROAS calculation because spend is not in this snapshot.</p>
+            <p class="section-note">Every table follows ${esc(rangeText)}. Revenue per session is a diagnostic only, not ROAS.</p>
           </div>
           <div class="table-wrap"><table>
             <thead><tr><th>Cohort</th><th>Sessions</th><th>Avg active time</th><th>Outbound clicks</th><th>Checkouts</th><th>Purchases</th><th>GA4 revenue</th><th>Revenue / session</th></tr></thead>
@@ -672,14 +702,14 @@
             <div class="section-head"><div><p class="eyebrow">Pizza Today / Meta evidence</p><h2 id="pizza-heading">STEP delivery reconciled to GA4</h2></div></div>
             <div class="table-wrap"><table class="evidence-table">
               <thead><tr><th>Period</th><th>Facebook clicks</th><th>Instagram clicks</th><th>Component clicks</th><th>GA4 Pizza Today sessions</th><th>Sessions less clicks</th><th>Readout</th></tr></thead>
-              <tbody>${stepRows(data.step_reconciliation)}</tbody>
+              <tbody>${stepRows(stepEvidence)}</tbody>
             </table></div>
           </div>
           <aside class="callout">
             <h3>Pizza Today is not generic Paid Social.</h3>
             <p>${esc(data.meta.pizza_grain_note)}</p>
-            <p><strong>Direct primary cohort:</strong> ${fmtNumber(direct.sessions)} sessions, ${fmtDuration(direct.average_active_time_seconds)} average active time, ${fmtNumber(direct.outbound_clicks)} GA4 outbound clicks, ${fmtNumber(direct.checkouts)} checkouts, ${fmtNumber(direct.purchases)} purchases, and ${fmtMoneyPrecise(direct.purchase_revenue)} in GA4-attributed revenue.</p>
-            <p><strong>Comparable dashboard cohort:</strong> ${fmtNumber(comparable.sessions)} source-grain sessions. Platform clicks and GA4 sessions are different measures, so the deck is delivery evidence, not a one-to-one conversion table.</p>
+            <p><strong>Direct primary cohort, all-period support:</strong> ${fmtNumber(direct.sessions)} sessions, ${fmtDuration(direct.average_active_time_seconds)} average active time, ${fmtNumber(direct.outbound_clicks)} GA4 outbound clicks, ${fmtNumber(direct.checkouts)} checkouts, ${fmtNumber(direct.purchases)} purchases, and ${fmtMoneyPrecise(direct.purchase_revenue)} in GA4-attributed revenue.</p>
+            <p><strong>Comparable dashboard cohort for ${esc(rangeText)}:</strong> ${fmtNumber(totals.pizza_today.sessions)} source-grain sessions. Platform clicks and GA4 sessions are different measures, so the deck is delivery evidence, not a one-to-one conversion table. STEP delivery evidence is available only for 2026.</p>
           </aside>
         </section>
 
@@ -689,7 +719,7 @@
             <div class="source-tabs" aria-label="Choose cohort source detail">${sourceTabs}</div>
             <div class="table-wrap"><table class="source-table">
               <thead><tr><th>Source / medium</th><th>Sessions</th><th>Avg active time</th><th>Outbound clicks</th><th>Checkouts</th><th>GA4 revenue</th></tr></thead>
-              <tbody>${sourceRows(data)}</tbody>
+              <tbody>${sourceRows(data, rows)}</tbody>
             </table></div>
           </div>
           <aside>
