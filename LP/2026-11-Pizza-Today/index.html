@@ -321,6 +321,26 @@
     .callout p { margin: 0; font-size: 0.91rem; }
     .callout p + p { margin-top: 10px; }
     .callout strong { color: var(--warn); }
+    .placement-callout {
+      margin: 0 0 14px;
+      padding: 18px;
+      border: 1px solid rgba(123,90,166,0.27);
+      border-left: 4px solid #7b5aa6;
+      background: #f6f1fb;
+      color: #382650;
+    }
+    .placement-callout h3 { margin: 0 0 7px; font-size: 1rem; }
+    .placement-callout p { margin: 0; font-size: 0.91rem; }
+    .placement-callout p + p { margin-top: 10px; }
+    .placement-table { min-width: 1040px; }
+    .placement-table th:first-child,
+    .placement-table td:first-child { min-width: 205px; }
+    .placement-table th:nth-child(2), .placement-table td:nth-child(2) { min-width: 105px; }
+    .placement-table th:nth-child(3), .placement-table td:nth-child(3) { min-width: 140px; }
+    .placement-reason { min-width: 340px; text-align: left !important; }
+    .placement-reason strong { display: block; font-size: 0.84rem; line-height: 1.38; }
+    .placement-reason span { display: block; margin-top: 5px; color: var(--muted); font-size: 0.78rem; line-height: 1.35; }
+    .placement-evidence { color: #5c3c85; font-weight: 800; }
     .insight-list { margin: 0; padding: 0; list-style: none; }
     .insight-list li { position: relative; padding: 13px 0 13px 18px; border-bottom: 1px solid var(--line); }
     .insight-list li:last-child { border-bottom: 0; }
@@ -596,6 +616,45 @@
       }).join("");
     }
 
+    function pizzaPlacementRowsForRange(data, rows) {
+      const selectedMonths = new Set(rows.map(row => row.year_month));
+      return (data.pizza_placement_types || []).map(placement => {
+        const selected = placement.monthly.filter(month => selectedMonths.has(month.year_month));
+        const values = selected.reduce((total, month) => addValues(total, month), emptyTotals());
+        const metaClickIdSessions = selected.reduce(
+          (total, month) => total + Number(month.meta_click_id_sessions || 0), 0
+        );
+        return { ...placement, ...values, meta_click_id_sessions: metaClickIdSessions };
+      });
+    }
+
+    function pizzaPlacementTableRows(placementRows) {
+      if (!placementRows.length) return `<tr><td colspan="7" class="empty">Placement-type detail is unavailable for ${esc(selectedYearLabel())}.</td></tr>`;
+      return placementRows.map(row => `<tr>
+        <td><span class="cohort-name" style="--cohort-color:${esc(row.color)}"><i class="cohort-dot"></i>${esc(row.label)}</span></td>
+        <td>${fmtNumber(row.sessions)}</td>
+        <td class="placement-evidence">${row.id === "meta_social_associated" ? fmtNumber(row.meta_click_id_sessions) : "—"}</td>
+        <td>${fmtNumber(row.checkouts)}</td>
+        <td>${fmtNumber(row.purchases)}</td>
+        <td>${fmtMoneyPrecise(row.purchase_revenue)}</td>
+        <td class="placement-reason"><strong>${esc(row.definition)}</strong><span>${esc(row.evidence_note)}</span></td>
+      </tr>`).join("");
+    }
+
+    function pizzaPlacementCallout(data, placementRows, rangeText) {
+      const meta = placementRows.find(row => row.id === "meta_social_associated");
+      if (!meta) return "";
+      const clickIdText = meta.meta_click_id_sessions
+        ? `${fmtNumber(meta.meta_click_id_sessions)} landing-page-grain sessions retain a Meta <code>fbclid</code> click ID.`
+        : "No landing-page-grain sessions in this selected period retain a Meta <code>fbclid</code> click ID.";
+      return `<aside class="placement-callout">
+        <h3>Show the Meta-social sessions. Just label them correctly.</h3>
+        <p><strong>${fmtNumber(meta.sessions)} GA4 sessions</strong> are Meta-social associated for ${esc(rangeText)}. This is a source / campaign session total, not a Meta-reported ad-click total.</p>
+        <p>${clickIdText} That is linkage evidence in a separate GA4 reporting grain, so it is shown beside the session total rather than added to it.</p>
+        <p>${esc(data.meta.pizza_placement_note)}</p>
+      </aside>`;
+    }
+
     function insightItems(data, rows) {
       const totals = Object.fromEntries(data.cohorts.map(cohort => [cohort.id, aggregate(rows, cohort.id)]));
       const pizza = totals.pizza_today;
@@ -629,6 +688,7 @@
       const sourceOptions = [`<option value="" ${state.barSource ? "" : "selected"}>All classified sources</option>`, ...sourceNames(data).map(source => `<option value="${esc(source)}" ${state.barSource === source ? "selected" : ""}>${esc(source)}</option>`)].join("");
       const mediumOptions = [`<option value="all" ${state.barMedium === "all" ? "selected" : ""}>All media for source</option>`, ...mediaForSource.map(medium => `<option value="${esc(medium)}" ${state.barMedium === medium ? "selected" : ""}>${esc(medium)}</option>`)].join("");
       const direct = data.qa.pizza_direct_primary_cohort;
+      const pizzaPlacements = pizzaPlacementRowsForRange(data, rows);
 
       app.className = "";
       app.innerHTML = `
@@ -711,6 +771,19 @@
             <p><strong>Direct primary cohort, all-period support:</strong> ${fmtNumber(direct.sessions)} sessions, ${fmtDuration(direct.average_active_time_seconds)} average active time, ${fmtNumber(direct.outbound_clicks)} GA4 outbound clicks, ${fmtNumber(direct.checkouts)} checkouts, ${fmtNumber(direct.purchases)} purchases, and ${fmtMoneyPrecise(direct.purchase_revenue)} in GA4-attributed revenue.</p>
             <p><strong>Comparable dashboard cohort for ${esc(rangeText)}:</strong> ${fmtNumber(totals.pizza_today.sessions)} source-grain sessions. Platform clicks and GA4 sessions are different measures, so the deck is delivery evidence, not a one-to-one conversion table. STEP delivery evidence is available only for 2026.</p>
           </aside>
+        </section>
+
+        <section class="section" aria-labelledby="placement-heading">
+          <div class="section-head">
+            <div><p class="eyebrow">Evidence-led placement types</p><h2 id="placement-heading">Where Pizza Today traffic most likely ran</h2></div>
+            <p class="section-note">The Year selector applies here. Classifications are bounded by source / campaign evidence, so unresolved rows stay unresolved.</p>
+          </div>
+          ${pizzaPlacementCallout(data, pizzaPlacements, rangeText)}
+          <div class="table-wrap"><table class="placement-table">
+            <thead><tr><th>Placement type</th><th>GA4 sessions</th><th>Meta click-ID sessions*</th><th>Checkouts</th><th>Purchases</th><th>GA4 revenue</th><th>Classification basis</th></tr></thead>
+            <tbody>${pizzaPlacementTableRows(pizzaPlacements)}</tbody>
+          </table></div>
+          <p class="footnote">* <code>fbclid</code> is a Meta click ID observed in landing-page URLs. It is strong linkage evidence, not a Meta delivery-click count and not an additional session total.</p>
         </section>
 
         <section class="section split-grid" aria-labelledby="source-heading">
