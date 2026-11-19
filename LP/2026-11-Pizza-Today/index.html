@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://2.0heads.com/LP/2026-11-Pizza-Today/">
+  <meta name="theme-color" content="#ffffff">
+  <title>LloydPans Media Attribution Dashboard | 2.0heads</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --paper: #ffffff;
+      --panel: #f7f7f4;
+      --panel-strong: #efeee8;
+      --line: rgba(26, 26, 26, 0.13);
+      --muted: #666;
+      --accent: #c8a96e;
+      --pizza: #c88418;
+      --organic: #287a58;
+      --google: #3072c4;
+      --social: #9b4d96;
+      --publisher: #a15d2e;
+      --warn: #805900;
+      --warn-bg: #fff7dc;
+      --green: #1f6a4c;
+      --green-bg: #eaf6ef;
+      --shadow: 0 16px 42px rgba(0, 0, 0, 0.07);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { background: var(--paper); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--paper);
+      color: var(--ink);
+      font: 15px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    button, select { font: inherit; }
+    a { color: inherit; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+    }
+    .nav {
+      width: min(1360px, calc(100% - 40px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .logo span { color: var(--accent); }
+    .nav-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .nav-link { text-decoration: none; }
+    .nav-link:hover { color: var(--ink); }
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      min-height: 35px;
+      margin: 0 0 22px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .breadcrumb:hover { color: var(--ink); border-color: rgba(26, 26, 26, 0.28); }
+    .breadcrumb span { margin-right: 7px; font-size: 1.05rem; line-height: 1; }
+
+    main {
+      width: min(1360px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 42px 0 72px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(300px, 0.55fr);
+      gap: 36px;
+      align-items: end;
+      padding: 6px 0 32px;
+    }
+    h1 {
+      max-width: 800px;
+      margin: 0;
+      font-size: clamp(2.25rem, 5vw, 4.5rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+    .lede {
+      max-width: 790px;
+      margin: 19px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.4vw, 1.17rem);
+    }
+    .hero-readout {
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: var(--panel);
+    }
+    .hero-readout strong { display: block; font-size: 1.05rem; }
+    .hero-readout p { margin: 8px 0 0; color: var(--muted); font-size: 0.92rem; }
+
+    .status-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 28px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 29px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .pill.ok { color: var(--green); background: var(--green-bg); border-color: rgba(31, 106, 76, 0.24); }
+    .pill.warn { color: var(--warn); background: var(--warn-bg); border-color: rgba(128, 89, 0, 0.26); }
+
+    .controls {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 6px 0 14px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .control-label {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .range-options { display: flex; flex-wrap: wrap; gap: 6px; }
+    .range-button, .source-tab {
+      min-height: 35px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--muted);
+      background: #fff;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+    .range-button:hover, .source-tab:hover { color: var(--ink); border-color: rgba(26,26,26,0.28); }
+    .range-button[aria-pressed="true"], .source-tab[aria-pressed="true"] {
+      color: #fff;
+      border-color: var(--ink);
+      background: var(--ink);
+    }
+    .metric-select {
+      min-height: 35px;
+      min-width: 165px;
+      padding: 6px 28px 6px 9px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: var(--ink);
+      background: #fff;
+    }
+    .filter-controls { display: flex; flex-wrap: wrap; gap: 12px; }
+    .filter-select { min-width: 190px; max-width: 320px; }
+
+    .section { margin-top: 34px; }
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 1.32rem;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+    .section-note { max-width: 680px; color: var(--muted); font-size: 0.9rem; text-align: right; }
+
+    .cohort-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .cohort-card {
+      position: relative;
+      min-height: 208px;
+      padding: 17px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .cohort-card::before {
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      background: var(--cohort-color);
+      content: "";
+    }
+    .cohort-label { margin: 2px 0 15px; color: var(--muted); font-size: 0.81rem; font-weight: 800; letter-spacing: 0.03em; }
+    .cohort-value { font-size: clamp(1.55rem, 2.2vw, 2.25rem); font-weight: 800; line-height: 0.95; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
+    .cohort-sub { margin-top: 5px; color: var(--muted); font-size: 0.77rem; }
+    .cohort-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-top: 18px; }
+    .cohort-stat { min-width: 0; }
+    .cohort-stat span { display: block; color: var(--muted); font-size: 0.67rem; font-weight: 800; letter-spacing: 0.065em; text-transform: uppercase; }
+    .cohort-stat strong { display: block; margin-top: 2px; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+    .share-bar { height: 4px; margin-top: 17px; overflow: hidden; background: var(--panel-strong); }
+    .share-bar span { display: block; height: 100%; background: var(--cohort-color); }
+
+    .chart-panel {
+      padding: 18px 18px 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .chart-topline { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 6px; }
+    .chart-title { font-weight: 800; }
+    .chart-context { color: var(--muted); font-size: 0.84rem; text-align: right; }
+    .chart { width: 100%; min-height: 310px; }
+    .chart text { fill: var(--muted); font-family: inherit; font-size: 11px; }
+    .chart .gridline { stroke: rgba(26,26,26,0.1); stroke-width: 1; }
+    .chart .axis-label { fill: var(--muted); font-size: 10px; }
+    .chart .line { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; }
+    .chart .dot { stroke: #fff; stroke-width: 1.5; }
+    .chart .bar { fill: var(--chart-color, var(--accent)); }
+    .chart .bar:hover { opacity: 0.78; }
+    .chart-legend { display: flex; flex-wrap: wrap; gap: 10px 16px; padding: 4px 0 2px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 0.8rem; }
+    .legend-swatch { width: 10px; height: 10px; border-radius: 50%; background: var(--swatch); }
+
+    .table-wrap { width: 100%; overflow-x: auto; border: 1px solid var(--line); }
+    table { width: 100%; min-width: 790px; border-collapse: collapse; background: #fff; }
+    th, td { padding: 13px 14px; border-bottom: 1px solid var(--line); text-align: right; font-variant-numeric: tabular-nums; vertical-align: middle; }
+    th { color: var(--muted); background: var(--panel); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+    td { font-size: 0.9rem; }
+    th:first-child, td:first-child { min-width: 170px; text-align: left; }
+    tr:last-child td { border-bottom: 0; }
+    .cohort-name { display: flex; align-items: center; gap: 9px; font-weight: 800; }
+    .cohort-dot { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: var(--cohort-color); }
+    .muted-cell { color: var(--muted); }
+
+    /* The STEP reconciliation has seven headers; make that evidence table fit its desktop panel. */
+    .evidence-table { min-width: 0; table-layout: fixed; }
+    .evidence-table th,
+    .evidence-table td { padding: 10px 5px; }
+    .evidence-table th {
+      white-space: normal;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+      font-size: 0.66rem;
+      letter-spacing: 0.045em;
+      line-height: 1.22;
+    }
+    .evidence-table th:first-child,
+    .evidence-table td:first-child { min-width: 0; width: 10%; }
+    .evidence-table th:nth-child(2), .evidence-table td:nth-child(2) { width: 14%; }
+    .evidence-table th:nth-child(3), .evidence-table td:nth-child(3) { width: 15%; }
+    .evidence-table th:nth-child(4), .evidence-table td:nth-child(4) { width: 13%; }
+    .evidence-table th:nth-child(5), .evidence-table td:nth-child(5) { width: 17%; }
+    .evidence-table th:nth-child(6), .evidence-table td:nth-child(6) { width: 10%; }
+    .evidence-table th:nth-child(7), .evidence-table td:nth-child(7) { width: 21%; }
+    .evidence-table td:last-child { overflow-wrap: anywhere; text-align: left; }
+
+    .split-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.75fr); gap: 20px; align-items: start; }
+    /* Allow a wide evidence table to scroll inside its own frame on small screens. */
+    .split-grid > * { min-width: 0; }
+    .callout {
+      padding: 18px;
+      border: 1px solid rgba(128,89,0,0.24);
+      background: var(--warn-bg);
+      color: #4b3500;
+    }
+    .callout h3 { margin: 0 0 7px; font-size: 1rem; }
+    .callout p { margin: 0; font-size: 0.91rem; }
+    .callout p + p { margin-top: 10px; }
+    .callout strong { color: var(--warn); }
+    .insight-list { margin: 0; padding: 0; list-style: none; }
+    .insight-list li { position: relative; padding: 13px 0 13px 18px; border-bottom: 1px solid var(--line); }
+    .insight-list li:last-child { border-bottom: 0; }
+    .insight-list li::before { position: absolute; left: 0; top: 20px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); content: ""; }
+    .insight-list strong { display: block; margin-bottom: 2px; }
+    .insight-list span { color: var(--muted); font-size: 0.88rem; }
+
+    .source-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .source-table td:first-child { max-width: 370px; overflow-wrap: anywhere; font-weight: 700; }
+    .empty { padding: 26px; color: var(--muted); text-align: center; }
+
+    details {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+    summary { padding: 17px 0; cursor: pointer; font-weight: 800; }
+    .method-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; padding: 0 0 20px; }
+    .method-grid h3 { margin: 0 0 4px; font-size: 0.92rem; }
+    .method-grid p { margin: 0; color: var(--muted); font-size: 0.88rem; }
+    .footnote { margin: 15px 0 0; color: var(--muted); font-size: 0.8rem; }
+
+    footer { margin-top: 50px; padding: 28px 0 0; border-top: 1px solid var(--line); color: #8b8b8b; font-size: 0.82rem; }
+    .loading, .error {
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--muted);
+    }
+    .error { border-color: rgba(164, 55, 47, 0.25); background: #fbefed; color: #8d312a; }
+
+    @media (max-width: 1120px) {
+      .cohort-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .cohort-card:nth-child(4), .cohort-card:nth-child(5) { min-height: 185px; }
+    }
+    @media (max-width: 800px) {
+      .nav, main { width: min(100% - 28px, 1360px); }
+      .nav { min-height: 62px; }
+      .nav-meta .nav-link { display: none; }
+      main { padding-top: 28px; }
+      .hero { grid-template-columns: 1fr; gap: 22px; }
+      .controls { align-items: stretch; flex-direction: column; }
+      .filter-controls { width: 100%; }
+      .filter-select { width: 100%; max-width: none; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .section-note { text-align: left; }
+      .split-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: 1fr; }
+      .evidence-table { min-width: 700px; }
+    }
+    @media (max-width: 620px) {
+      .cohort-grid { grid-template-columns: 1fr 1fr; }
+      .cohort-card:last-child { grid-column: span 2; }
+      .chart { min-height: 260px; }
+    }
+    @media (max-width: 410px) {
+      .cohort-grid { grid-template-columns: 1fr; }
+      .cohort-card:last-child { grid-column: auto; }
+      .nav-meta { font-size: 0.74rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav">
+      <a class="logo" href="/" aria-label="2.0heads home">2<span>.0</span>heads</a>
+      <div class="nav-meta"><span>Internal review</span></div>
+    </div>
+  </header>
+
+  <main>
+    <a class="breadcrumb" href="/work/lloydpans/" aria-label="Back to LloydPans work"><span aria-hidden="true">←</span>Back to LloydPans work</a>
+    <div id="app" class="loading" aria-live="polite">Loading attribution snapshot…</div>
+  </main>
+
+  <script>
+    const state = { range: "all", sourceCohort: "pizza_today", barSource: "", barMedium: "all" };
+
+    const esc = (value) => String(value ?? "").replace(/[&<>'"]/g, character => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+    })[character]);
+    const fmtNumber = (value) => new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(Number(value || 0));
+    const fmtMoney = (value) => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(Number(value || 0));
+    const fmtMoneyPrecise = (value) => new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(Number(value || 0));
+    const fmtDuration = (value) => {
+      const seconds = Math.max(0, Math.round(Number(value || 0)));
+      return seconds >= 60 ? `${Math.floor(seconds / 60)}m ${String(seconds % 60).padStart(2, "0")}s` : `${seconds}s`;
+    };
+    const cohortColor = (cohort) => cohort.color || "#666";
+
+    function rowsForRange(data) {
+      if (state.range === "all") return data.monthly;
+      return data.monthly.filter(row => row.year_month.startsWith(state.range));
+    }
+
+    function rangeLabel(rows) {
+      if (!rows.length) return "No period selected";
+      return `${rows[0].month} to ${rows[rows.length - 1].month} · ${rows.length} complete ${rows.length === 1 ? "month" : "months"}`;
+    }
+
+    function aggregate(rows, cohortId) {
+      return rows.reduce((total, row) => {
+        const values = row.cohorts[cohortId];
+        Object.keys(total).forEach(metric => { total[metric] += Number(values[metric] || 0); });
+        return total;
+      }, { sessions: 0, active_time_seconds: 0, outbound_clicks: 0, checkouts: 0, purchases: 0, purchase_revenue: 0 });
+    }
+
+    function cardMarkup(cohort, totals, maxSessions) {
+      const averageActiveTime = totals.sessions ? totals.active_time_seconds / totals.sessions : 0;
+      const width = maxSessions ? Math.max(2, Math.round((totals.sessions / maxSessions) * 100)) : 0;
+      return `<article class="cohort-card" style="--cohort-color:${cohortColor(cohort)}">
+        <p class="cohort-label">${esc(cohort.label)}</p>
+        <div class="cohort-value">${fmtNumber(totals.sessions)}</div>
+        <div class="cohort-sub">source-grain sessions</div>
+        <div class="cohort-stats">
+          <div class="cohort-stat"><span>Avg active time</span><strong>${fmtDuration(averageActiveTime)}</strong></div>
+          <div class="cohort-stat"><span>Outbound clicks</span><strong>${fmtNumber(totals.outbound_clicks)}</strong></div>
+          <div class="cohort-stat"><span>Checkouts</span><strong>${fmtNumber(totals.checkouts)}</strong></div>
+          <div class="cohort-stat"><span>GA4 revenue</span><strong>${fmtMoney(totals.purchase_revenue)}</strong></div>
+        </div>
+        <div class="share-bar" aria-label="Relative session volume"><span style="width:${width}%"></span></div>
+      </article>`;
+    }
+
+    function emptyTotals() {
+      return { sessions: 0, active_time_seconds: 0, outbound_clicks: 0, checkouts: 0, purchases: 0, purchase_revenue: 0 };
+    }
+
+    function addValues(target, values) {
+      Object.keys(target).forEach(metric => { target[metric] += Number(values[metric] || 0); });
+      return target;
+    }
+
+    function sourceEntries(data) {
+      return data.source_mediums || [];
+    }
+
+    function sourceNames(data) {
+      return [...new Set(sourceEntries(data).map(entry => entry.source))].sort((a, b) => a.localeCompare(b));
+    }
+
+    function ensureBarSelection(data) {
+      const sources = sourceNames(data);
+      if (!sources.includes(state.barSource)) {
+        state.barSource = sources.includes("Pizza Today") ? "Pizza Today" : (sources[0] || "");
+      }
+      const media = [...new Set(sourceEntries(data)
+        .filter(entry => !state.barSource || entry.source === state.barSource)
+        .map(entry => entry.medium))]
+        .sort((a, b) => a.localeCompare(b));
+      if (state.barMedium !== "all" && !media.includes(state.barMedium)) state.barMedium = "all";
+      return media;
+    }
+
+    function selectedSourceEntries(data) {
+      return sourceEntries(data).filter(entry =>
+        (!state.barSource || entry.source === state.barSource) &&
+        (state.barMedium === "all" || entry.medium === state.barMedium)
+      );
+    }
+
+    function selectedSourceMetrics(data, rows) {
+      const entries = selectedSourceEntries(data);
+      return rows.map(row => {
+        const totals = entries.reduce((total, entry) => {
+          const month = entry.monthly.find(item => item.year_month === row.year_month);
+          return month ? addValues(total, month) : total;
+        }, emptyTotals());
+        return { month: row.month, year_month: row.year_month, ...totals };
+      });
+    }
+
+    function barChartLabel() {
+      const source = state.barSource || "All sources";
+      const medium = state.barMedium === "all" ? "all media" : state.barMedium;
+      return `${source} / ${medium}`;
+    }
+
+    function sourceBarSvg(data, rows) {
+      const values = selectedSourceMetrics(data, rows);
+      const width = 1100, height = 330, left = 60, right = 22, top = 18, bottom = 46;
+      const chartWidth = width - left - right, chartHeight = height - top - bottom;
+      const max = Math.max(...values.map(row => row.sessions), 1);
+      const paddedMax = max * 1.08;
+      const unit = chartWidth / Math.max(values.length, 1);
+      const barWidth = Math.max(4, Math.min(28, unit * 0.64));
+      const x = index => left + index * unit + (unit - barWidth) / 2;
+      const y = value => top + chartHeight - (value / paddedMax) * chartHeight;
+      const tickValues = [0, 0.25, 0.5, 0.75, 1].map(fraction => paddedMax * fraction);
+      const grid = tickValues.map(value => `<g><line class="gridline" x1="${left}" x2="${width - right}" y1="${y(value)}" y2="${y(value)}"/><text x="${left - 10}" y="${y(value) + 4}" text-anchor="end">${esc(fmtNumber(value))}</text></g>`).join("");
+      const labelIndexes = values.length <= 6 ? values.map((_, index) => index) : [0, Math.round((values.length - 1) / 3), Math.round((values.length - 1) * 2 / 3), values.length - 1];
+      const labels = [...new Set(labelIndexes)].map(index => `<text class="axis-label" x="${x(index) + barWidth / 2}" y="${height - 16}" text-anchor="middle">${esc(values[index].month.replace(" 20", " ’"))}</text>`).join("");
+      const entries = selectedSourceEntries(data);
+      const firstCohort = entries.length ? data.cohorts.find(cohort => cohort.id === entries[0].cohort_id) : null;
+      const color = firstCohort ? cohortColor(firstCohort) : "#c8a96e";
+      const bars = values.map((row, index) => `<rect class="bar" x="${x(index)}" y="${y(row.sessions)}" width="${barWidth}" height="${Math.max(0, top + chartHeight - y(row.sessions))}" rx="2" style="--chart-color:${color}"><title>${esc(row.month)} · ${fmtNumber(row.sessions)} sessions</title></rect>`).join("");
+      return `<svg class="chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="Monthly sessions bar chart for ${esc(barChartLabel())}" preserveAspectRatio="xMidYMid meet"><title>Monthly sessions — ${esc(barChartLabel())}</title>${grid}${bars}${labels}</svg>`;
+    }
+
+    function comparisonRows(rows, cohorts) {
+      return cohorts.map(cohort => {
+        const values = aggregate(rows, cohort.id);
+        const averageActiveTime = values.sessions ? values.active_time_seconds / values.sessions : 0;
+        const revenuePerSession = values.sessions ? values.purchase_revenue / values.sessions : 0;
+        return `<tr>
+          <td><span class="cohort-name" style="--cohort-color:${cohortColor(cohort)}"><i class="cohort-dot"></i>${esc(cohort.label)}</span></td>
+          <td>${fmtNumber(values.sessions)}</td>
+          <td>${fmtDuration(averageActiveTime)}</td>
+          <td>${fmtNumber(values.outbound_clicks)}</td>
+          <td>${fmtNumber(values.checkouts)}</td>
+          <td>${fmtNumber(values.purchases)}</td>
+          <td>${fmtMoneyPrecise(values.purchase_revenue)}</td>
+          <td>${fmtMoneyPrecise(revenuePerSession)}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    function stepRows(rows) {
+      const dash = value => value === null || value === undefined ? "—" : fmtNumber(value);
+      return rows.map(row => `<tr>
+        <td>${esc(row.period)}</td>
+        <td>${dash(row.facebook_clicks)}</td>
+        <td>${dash(row.instagram_clicks)}</td>
+        <td>${dash(row.component_clicks)}</td>
+        <td>${dash(row.ga4_pizza_sessions)}</td>
+        <td>${row.session_click_delta === null || row.session_click_delta === undefined ? "—" : `${row.session_click_delta > 0 ? "+" : ""}${fmtNumber(row.session_click_delta)}`}</td>
+        <td class="muted-cell">${esc(row.note)}</td>
+      </tr>`).join("");
+    }
+
+    function sourceRows(data) {
+      const cohort = data.cohorts.find(item => item.id === state.sourceCohort) || data.cohorts[0];
+      const rows = data.top_sources[cohort.id] || [];
+      if (!rows.length) return `<tr><td colspan="6" class="empty">No source rows in this cohort.</td></tr>`;
+      return rows.map(row => {
+        return `<tr>
+          <td>${esc(row.source_medium)}</td>
+          <td>${fmtNumber(row.sessions)}</td>
+          <td>${fmtDuration(row.average_active_time_seconds)}</td>
+          <td>${fmtNumber(row.outbound_clicks)}</td>
+          <td>${fmtNumber(row.checkouts)}</td>
+          <td>${fmtMoneyPrecise(row.purchase_revenue)}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    function insightItems(data, rows) {
+      const totals = Object.fromEntries(data.cohorts.map(cohort => [cohort.id, aggregate(rows, cohort.id)]));
+      const pizza = totals.pizza_today;
+      const social = totals.paid_social;
+      const google = totals.google_paid;
+      const publisher = totals.paid_publishers;
+      const pizzaTime = pizza.sessions ? pizza.active_time_seconds / pizza.sessions : 0;
+      const socialTime = social.sessions ? social.active_time_seconds / social.sessions : 0;
+      return [
+        `<li><strong>Pizza Today: ${fmtNumber(pizza.sessions)} comparable sessions</strong><span>${fmtDuration(pizzaTime)} average active time and ${fmtNumber(pizza.outbound_clicks)} recorded outbound clicks. Its direct all-period GA4 cohort is shown separately below so the source-grain difference stays visible.</span></li>`,
+        `<li><strong>Google Paid is the commercial paid-media baseline</strong><span>${fmtNumber(google.sessions)} sessions, ${fmtDuration(google.sessions ? google.active_time_seconds / google.sessions : 0)} average active time, ${fmtNumber(google.purchases)} GA4 purchases, and ${fmtMoney(google.purchase_revenue)} in GA4-attributed revenue.</span></li>`,
+        `<li><strong>Other Paid Social has scale, not demonstrated GA4 revenue</strong><span>${fmtNumber(social.sessions)} sessions, ${fmtDuration(socialTime)} average active time, ${fmtNumber(social.outbound_clicks)} recorded outbound clicks, and ${fmtMoney(social.purchase_revenue)} in GA4-attributed revenue.</span></li>`,
+        `<li><strong>Named paid publishers remain a separate check</strong><span>${fmtNumber(publisher.sessions)} sessions, ${fmtNumber(publisher.checkouts)} checkout events, and ${fmtMoney(publisher.purchase_revenue)} in recorded GA4 revenue.</span></li>`
+      ].join("");
+    }
+
+    function render(data) {
+      const app = document.getElementById("app");
+      const rows = rowsForRange(data);
+      const mediaForSource = ensureBarSelection(data);
+      const totals = Object.fromEntries(data.cohorts.map(cohort => [cohort.id, aggregate(rows, cohort.id)]));
+      const maxSessions = Math.max(...Object.values(totals).map(total => total.sessions), 1);
+      const rangeText = rangeLabel(rows);
+      const sourceTabs = data.cohorts.map(cohort => `<button class="source-tab" type="button" data-source-cohort="${esc(cohort.id)}" aria-pressed="${String(cohort.id === state.sourceCohort)}">${esc(cohort.label)}</button>`).join("");
+      const rangeButtons = [
+        ["all", "All 25 months"], ["2024", "2024"], ["2025", "2025"], ["2026", "2026"]
+      ].map(([id, label]) => `<button class="range-button" type="button" data-range="${id}" aria-pressed="${String(state.range === id)}">${label}</button>`).join("");
+      const sourceOptions = [`<option value="" ${state.barSource ? "" : "selected"}>All classified sources</option>`, ...sourceNames(data).map(source => `<option value="${esc(source)}" ${state.barSource === source ? "selected" : ""}>${esc(source)}</option>`)].join("");
+      const mediumOptions = [`<option value="all" ${state.barMedium === "all" ? "selected" : ""}>All media for source</option>`, ...mediaForSource.map(medium => `<option value="${esc(medium)}" ${state.barMedium === medium ? "selected" : ""}>${esc(medium)}</option>`)].join("");
+      const direct = data.qa.pizza_direct_primary_cohort;
+      const comparable = data.qa.pizza_comparable_source_grain;
+
+      app.className = "";
+      app.innerHTML = `
+        <section class="hero" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">LloydPans media review</p>
+            <h1 id="page-title">Pizza Today in the full acquisition picture.</h1>
+            <p class="lede">A source / medium comparison of Pizza Today against Organic Search, Google Paid, other paid social, and named paid publishers. It is designed to make attribution boundaries obvious before anyone tells a revenue fairy tale.</p>
+          </div>
+          <aside class="hero-readout">
+            <strong>${esc(rangeText)}</strong>
+            <p>Static GA4 snapshot, refreshed ${esc(new Date(data.meta.generated_at).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" }))}. Purchase revenue is GA4 attribution evidence, not Magento revenue or return on ad spend.</p>
+          </aside>
+        </section>
+
+        <div class="status-line" aria-label="Data status">
+          <span class="pill ok">✓ ${fmtNumber(data.qa.months_returned)} complete months loaded</span>
+          <span class="pill ok">✓ Pizza Today events and GA4 revenue reconcile</span>
+          <span class="pill warn">! Pizza Today direct cohort has a ${fmtNumber(data.qa.pizza_direct_minus_comparable_sessions)}-session GA4 dimension-grain variance</span>
+        </div>
+
+        <section class="controls" aria-label="Dashboard controls">
+          <div class="control-group">
+            <span class="control-label">Comparison window</span>
+            <div class="range-options">${rangeButtons}</div>
+          </div>
+          <div class="filter-controls" aria-label="Monthly sessions filters">
+            <label class="control-group">
+              <span class="control-label">Source</span>
+              <select class="metric-select filter-select" id="bar-source" aria-label="Monthly sessions source">${sourceOptions}</select>
+            </label>
+            <label class="control-group">
+              <span class="control-label">Medium</span>
+              <select class="metric-select filter-select" id="bar-medium" aria-label="Monthly sessions medium">${mediumOptions}</select>
+            </label>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="cohort-heading">
+          <div class="section-head">
+            <div><p class="eyebrow">Comparable source grain</p><h2 id="cohort-heading">Cohort scorecard</h2></div>
+            <p class="section-note">Every card uses the same selected source / medium reporting grain. The short bar is relative session volume, not share of all LloydPans traffic.</p>
+          </div>
+          <div class="cohort-grid">${data.cohorts.map(cohort => cardMarkup(cohort, totals[cohort.id], maxSessions)).join("")}</div>
+        </section>
+
+        <section class="section" aria-labelledby="trend-heading">
+          <div class="section-head">
+            <div><p class="eyebrow">Source / medium trend</p><h2 id="trend-heading">Monthly sessions, exactly filterable</h2></div>
+            <p class="section-note">Choose a source and medium above. Bars show raw GA4 sessions for that exact selection, not a blended channel estimate.</p>
+          </div>
+          <div class="chart-panel">
+            <div class="chart-topline"><span class="chart-title">${esc(barChartLabel())}</span><span class="chart-context">${esc(rangeText)}</span></div>
+            ${sourceBarSvg(data, rows)}
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="comparison-heading">
+          <div class="section-head">
+            <div><p class="eyebrow">Side by side</p><h2 id="comparison-heading">Comparable outcome table</h2></div>
+            <p class="section-note">Revenue per session is a diagnostic only. It is not a ROAS calculation because spend is not in this snapshot.</p>
+          </div>
+          <div class="table-wrap"><table>
+            <thead><tr><th>Cohort</th><th>Sessions</th><th>Avg active time</th><th>Outbound clicks</th><th>Checkouts</th><th>Purchases</th><th>GA4 revenue</th><th>Revenue / session</th></tr></thead>
+            <tbody>${comparisonRows(rows, data.cohorts)}</tbody>
+          </table></div>
+        </section>
+
+        <section class="section split-grid" aria-labelledby="pizza-heading">
+          <div>
+            <div class="section-head"><div><p class="eyebrow">Pizza Today / Meta evidence</p><h2 id="pizza-heading">STEP delivery reconciled to GA4</h2></div></div>
+            <div class="table-wrap"><table class="evidence-table">
+              <thead><tr><th>Period</th><th>Facebook clicks</th><th>Instagram clicks</th><th>Component clicks</th><th>GA4 Pizza Today sessions</th><th>Sessions less clicks</th><th>Readout</th></tr></thead>
+              <tbody>${stepRows(data.step_reconciliation)}</tbody>
+            </table></div>
+          </div>
+          <aside class="callout">
+            <h3>Pizza Today is not generic Paid Social.</h3>
+            <p>${esc(data.meta.pizza_grain_note)}</p>
+            <p><strong>Direct primary cohort:</strong> ${fmtNumber(direct.sessions)} sessions, ${fmtDuration(direct.average_active_time_seconds)} average active time, ${fmtNumber(direct.outbound_clicks)} GA4 outbound clicks, ${fmtNumber(direct.checkouts)} checkouts, ${fmtNumber(direct.purchases)} purchases, and ${fmtMoneyPrecise(direct.purchase_revenue)} in GA4-attributed revenue.</p>
+            <p><strong>Comparable dashboard cohort:</strong> ${fmtNumber(comparable.sessions)} source-grain sessions. Platform clicks and GA4 sessions are different measures, so the deck is delivery evidence, not a one-to-one conversion table.</p>
+          </aside>
+        </section>
+
+        <section class="section split-grid" aria-labelledby="source-heading">
+          <div>
+            <div class="section-head"><div><p class="eyebrow">Source detail</p><h2 id="source-heading">Top source / medium rows</h2></div></div>
+            <div class="source-tabs" aria-label="Choose cohort source detail">${sourceTabs}</div>
+            <div class="table-wrap"><table class="source-table">
+              <thead><tr><th>Source / medium</th><th>Sessions</th><th>Avg active time</th><th>Outbound clicks</th><th>Checkouts</th><th>GA4 revenue</th></tr></thead>
+              <tbody>${sourceRows(data)}</tbody>
+            </table></div>
+          </div>
+          <aside>
+            <p class="eyebrow">What the comparison says</p>
+            <ul class="insight-list">${insightItems(data, rows)}</ul>
+          </aside>
+        </section>
+
+        <section class="section" aria-labelledby="method-heading">
+          <details>
+            <summary id="method-heading">Attribution definitions and limits</summary>
+            <div class="method-grid">
+              ${data.cohorts.map(cohort => `<div><h3>${esc(cohort.label)}</h3><p>${esc(cohort.definition)}</p></div>`).join("")}
+              <div><h3>Data boundary</h3><p>${esc(data.meta.scope_note)} The dashboard intentionally keeps Pizza Today separate before any social or publisher classification, so it cannot be silently double counted.</p></div>
+              <div><h3>Click definition</h3><p>GA4's enhanced-measurement <code>click</code> event records an outbound link click from LloydPans. It is a real on-site action, but not a Google, Meta, or publisher delivery click. Pizza Today delivery clicks remain separately labeled in the STEP reconciliation.</p></div>
+              <div><h3>STEP deck limits</h3><p>February–March repeats January Ad 1 delivery and lacks a month split. September components total 653 clicks while the displayed slide total is 652. The dashboard preserves those flags rather than forcing clean-looking totals.</p></div>
+            </div>
+          </details>
+          <p class="footnote">Sources: live GA4 Data API snapshot for LloydPans property 251766040 and the Pizza Today STEP Facebook / Instagram delivery deck. No individual customer, order, or transaction data is in this page payload.</p>
+        </section>
+      `;
+
+      document.querySelectorAll("[data-range]").forEach(button => button.addEventListener("click", () => {
+        state.range = button.dataset.range;
+        render(data);
+      }));
+      document.getElementById("bar-source").addEventListener("change", event => {
+        state.barSource = event.target.value;
+        state.barMedium = "all";
+        render(data);
+      });
+      document.getElementById("bar-medium").addEventListener("change", event => {
+        state.barMedium = event.target.value;
+        render(data);
+      });
+      document.querySelectorAll("[data-source-cohort]").forEach(button => button.addEventListener("click", () => {
+        state.sourceCohort = button.dataset.sourceCohort;
+        render(data);
+      }));
+    }
+
+    fetch("data/lloydpans-media-snapshot.json", { cache: "no-store" })
+      .then(response => {
+        if (!response.ok) throw new Error(`Snapshot request failed: ${response.status}`);
+        return response.json();
+      })
+      .then(render)
+      .catch(error => {
+        const app = document.getElementById("app");
+        app.className = "error";
+        app.textContent = `Dashboard data could not load. ${error.message}`;
+      });
+  </script>
+  <footer>Shiba &amp; Associates / 2.0heads · LloydPans review dashboard · source snapshot embedded separately from the presentation layer.</footer>
+</body>
+</html>
