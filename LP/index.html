@@ -74,6 +74,21 @@
     }
     .nav-link { text-decoration: none; }
     .nav-link:hover { color: var(--ink); }
+    .breadcrumb {
+      display: inline-flex;
+      align-items: center;
+      min-height: 35px;
+      margin: 0 0 22px;
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .breadcrumb:hover { color: var(--ink); border-color: rgba(26, 26, 26, 0.28); }
+    .breadcrumb span { margin-right: 7px; font-size: 1.05rem; line-height: 1; }
 
     main {
       width: min(1360px, calc(100% - 40px));
@@ -371,11 +386,12 @@
   <header class="site-header">
     <div class="nav">
       <a class="logo" href="/" aria-label="2.0heads home">2<span>.0</span>heads</a>
-      <div class="nav-meta"><a class="nav-link" href="/work/lloydpans/">LloydPans work</a><span>Internal review</span></div>
+      <div class="nav-meta"><span>Internal review</span></div>
     </div>
   </header>
 
   <main>
+    <a class="breadcrumb" href="/work/lloydpans/" aria-label="Back to LloydPans work"><span aria-hidden="true">←</span>Back to LloydPans work</a>
     <div id="app" class="loading" aria-live="polite">Loading attribution snapshot…</div>
   </main>
 
