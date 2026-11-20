@@ -285,7 +285,7 @@
     .cohort-dot { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: var(--cohort-color); }
     .muted-cell { color: var(--muted); }
 
-    /* The STEP reconciliation has seven headers; make that evidence table fit its desktop panel. */
+    /* The delivery reconciliation has seven headers; make that evidence table fit its desktop panel. */
     .evidence-table { min-width: 0; table-layout: fixed; }
     .evidence-table th,
     .evidence-table td { padding: 10px 5px; }
@@ -586,8 +586,8 @@
       }).join("");
     }
 
-    function stepRows(rows) {
-      if (!rows.length) return `<tr><td colspan="7" class="empty">No Pizza Today STEP delivery evidence is available for ${esc(selectedYearLabel())}.</td></tr>`;
+    function deliveryRows(rows) {
+      if (!rows.length) return `<tr><td colspan="7" class="empty">No Pizza Today Facebook / Instagram delivery evidence is available for ${esc(selectedYearLabel())}.</td></tr>`;
       const dash = value => value === null || value === undefined ? "—" : fmtNumber(value);
       return rows.map(row => `<tr>
         <td>${esc(row.period)}</td>
@@ -678,9 +678,9 @@
       const totals = Object.fromEntries(data.cohorts.map(cohort => [cohort.id, aggregate(rows, cohort.id)]));
       const maxSessions = Math.max(...Object.values(totals).map(total => total.sessions), 1);
       const rangeText = rangeLabel(rows);
-      const stepEvidence = state.range === "all"
-        ? data.step_reconciliation
-        : data.step_reconciliation.filter(row => row.period.endsWith(state.range));
+      const deliveryEvidence = state.range === "all"
+        ? data.facebook_instagram_delivery
+        : data.facebook_instagram_delivery.filter(row => row.period.endsWith(state.range));
       const sourceTabs = data.cohorts.map(cohort => `<button class="source-tab" type="button" data-source-cohort="${esc(cohort.id)}" aria-pressed="${String(cohort.id === state.sourceCohort)}">${esc(cohort.label)}</button>`).join("");
       const rangeButtons = [
         ["all", "All 25 months"], ["2024", "2024"], ["2025", "2025"], ["2026", "2026"]
@@ -759,17 +759,17 @@
 
         <section class="section split-grid" aria-labelledby="pizza-heading">
           <div>
-            <div class="section-head"><div><p class="eyebrow">Pizza Today / Meta evidence</p><h2 id="pizza-heading">STEP delivery reconciled to GA4</h2></div></div>
+            <div class="section-head"><div><p class="eyebrow">Pizza Today / Meta evidence</p><h2 id="pizza-heading">Facebook / Instagram delivery reconciled to GA4</h2></div></div>
             <div class="table-wrap"><table class="evidence-table">
               <thead><tr><th>Period</th><th>Facebook clicks</th><th>Instagram clicks</th><th>Component clicks</th><th>GA4 Pizza Today sessions</th><th>Sessions less clicks</th><th>Readout</th></tr></thead>
-              <tbody>${stepRows(stepEvidence)}</tbody>
+              <tbody>${deliveryRows(deliveryEvidence)}</tbody>
             </table></div>
           </div>
           <aside class="callout">
             <h3>Pizza Today is not generic Paid Social.</h3>
             <p>${esc(data.meta.pizza_grain_note)}</p>
             <p><strong>Direct primary cohort, all-period support:</strong> ${fmtNumber(direct.sessions)} sessions, ${fmtDuration(direct.average_active_time_seconds)} average active time, ${fmtNumber(direct.outbound_clicks)} GA4 outbound clicks, ${fmtNumber(direct.checkouts)} checkouts, ${fmtNumber(direct.purchases)} purchases, and ${fmtMoneyPrecise(direct.purchase_revenue)} in GA4-attributed revenue.</p>
-            <p><strong>Comparable dashboard cohort for ${esc(rangeText)}:</strong> ${fmtNumber(totals.pizza_today.sessions)} source-grain sessions. Platform clicks and GA4 sessions are different measures, so the deck is delivery evidence, not a one-to-one conversion table. STEP delivery evidence is available only for 2026.</p>
+            <p><strong>Comparable dashboard cohort for ${esc(rangeText)}:</strong> ${fmtNumber(totals.pizza_today.sessions)} source-grain sessions. Platform clicks and GA4 sessions are different measures, so the deck is delivery evidence, not a one-to-one conversion table. Facebook / Instagram delivery evidence is available only for 2026.</p>
           </aside>
         </section>
 
@@ -807,11 +807,11 @@
             <div class="method-grid">
               ${data.cohorts.map(cohort => `<div><h3>${esc(cohort.label)}</h3><p>${esc(cohort.definition)}</p></div>`).join("")}
               <div><h3>Data boundary</h3><p>${esc(data.meta.scope_note)} The dashboard intentionally keeps Pizza Today separate before any social or publisher classification, so it cannot be silently double counted.</p></div>
-              <div><h3>Click definition</h3><p>GA4's enhanced-measurement <code>click</code> event records an outbound link click from LloydPans. It is a real on-site action, but not a Google, Meta, or publisher delivery click. Pizza Today delivery clicks remain separately labeled in the STEP reconciliation.</p></div>
-              <div><h3>STEP deck limits</h3><p>February–March repeats January Ad 1 delivery and lacks a month split. September components total 653 clicks while the displayed slide total is 652. The dashboard preserves those flags rather than forcing clean-looking totals.</p></div>
+              <div><h3>Click definition</h3><p>GA4's enhanced-measurement <code>click</code> event records an outbound link click from LloydPans. It is a real on-site action, but not a Google, Meta, or publisher delivery click. Pizza Today platform delivery clicks remain separately labeled in the Facebook / Instagram reconciliation.</p></div>
+              <div><h3>Delivery-report limits</h3><p>February–March repeats January Ad 1 delivery and lacks a month split. September components total 653 clicks while the displayed slide total is 652. The dashboard preserves those flags rather than forcing clean-looking totals.</p></div>
             </div>
           </details>
-          <p class="footnote">Sources: live GA4 Data API snapshot for LloydPans property 251766040 and the Pizza Today STEP Facebook / Instagram delivery deck. No individual customer, order, or transaction data is in this page payload.</p>
+          <p class="footnote">Sources: live GA4 Data API snapshot for LloydPans property 251766040 and the Pizza Today Facebook / Instagram delivery report. No individual customer, order, or transaction data is in this page payload.</p>
         </section>
       `;
 
