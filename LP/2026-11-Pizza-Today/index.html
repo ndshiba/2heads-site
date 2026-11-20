@@ -648,7 +648,6 @@
         ? `${fmtNumber(meta.meta_click_id_sessions)} landing-page-grain sessions retain a Meta <code>fbclid</code> click ID.`
         : "No landing-page-grain sessions in this selected period retain a Meta <code>fbclid</code> click ID.";
       return `<aside class="placement-callout">
-        <h3>Show the Meta-social sessions. Just label them correctly.</h3>
         <p><strong>${fmtNumber(meta.sessions)} GA4 sessions</strong> are Meta-social associated for ${esc(rangeText)}. This is a source / campaign session total, not a Meta-reported ad-click total.</p>
         <p>${clickIdText} That is linkage evidence in a separate GA4 reporting grain, so it is shown beside the session total rather than added to it.</p>
         <p>${esc(data.meta.pizza_placement_note)}</p>
