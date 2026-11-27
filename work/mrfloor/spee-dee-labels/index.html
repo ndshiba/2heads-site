@@ -678,7 +678,7 @@
       <h1>Mr. Floor Shipping Labels Plugin Runbook</h1>
       <p class="lede">Use one WooCommerce tool to compare Spee Dee with Veeqo rates, deliberately create the chosen carrier label, then download or batch the stored PDFs. The dashboard builds the current carton plan from the order. A rate shop is free. A label purchase is not.</p>
       <div class="meta">
-        <span class="pill good">Plugin version: v0.1.44</span>
+        <span class="pill good">Plugin version: v0.1.45</span>
         <span class="pill good">Current carton-aware rate shopping</span>
         <span class="pill good">Spee Dee and Veeqo purchase enabled</span>
         <span class="pill good">Default label: 4x6 Label</span>
@@ -880,6 +880,8 @@
         <ol class="step-list">
           <li><strong>Need another option, expired rate, or changed carton plan:</strong> use <code>Get fresh rates / change option</code> on Ready, then select again. Do not purchase a stale quote.</li>
           <li><strong>Quote error:</strong> correct the shipping details or package data first, then use <code>Reset error and get a new quote</code> in the Ready row. It requests fresh rates only and creates no label or carrier charge.</li>
+          <li><strong>Already fulfilled outside this plugin, with no Print Queue row:</strong> when a Ready row shows <code>Needs attention</code> only because it cannot be rate-shopped, click <code>Mark triaged outside system</code>. It records a private audit note and replaces that Ready status with <code>Triaged outside system</code>. It never creates a shipment, label, tracking update, customer email, or carrier charge.</li>
+          <li><strong>Correct an outside-system triage:</strong> use <code>Clear external triage</code> in that Ready row to restore normal review. Never use this control to hide a Print Queue or Needs Attention record that has a carrier shipment, purchased label, partial purchase, or other queue evidence.</li>
           <li><strong>Start in Print Queue and identify the correct row.</strong> Match the recipient and <code>Ship to</code> address, then confirm the carrier before taking a cancellation action. Do not use <code>Remove</code> first.</li>
           <li><strong>Spee Dee shipment created by mistake:</strong> click <code>Cancel shipment</code>, confirm the prompt, and wait for the result. On success, the row becomes <code>canceled</code>, the plugin removes its stored Spee Dee tracking value from the Woo order, and it writes a private order note. Only then may you remove the local queue row if it is no longer useful.</li>
           <li><strong>Veeqo label created by mistake, including UPS through Veeqo:</strong> click <code>Void Veeqo label</code>, then confirm the carrier void/refund request. The action voids every purchased carton in that row. On full success, the row becomes <code>Veeqo label voided</code> and the Woo order receives a private note. Veeqo/carrier refund eligibility controls the outcome.</li>
@@ -916,13 +918,14 @@
         <div class="legend-item"><strong>Quote only</strong> Rates are visible, but no label, tracking value, customer notification, or carrier charge exists.</div>
         <div class="legend-item"><strong>Veeqo selected</strong> The carrier and price are locked for review. There are no labels yet. Purchase is still pending and remains a separate click.</div>
         <div class="legend-item"><strong>Veeqo label ready to batch</strong> Every purchased Veeqo carton has a stored, readable PDF. Select the row, then explicitly generate the 2-up batch without another carrier charge.</div>
+        <div class="legend-item"><strong>Triaged outside system</strong> A Ready-only acknowledgement for an order fulfilled outside this plugin that has no local queue record. It adds only private audit evidence and can be cleared to restore normal review. It is not a carrier cancellation, void, or removal tool.</div>
         <div class="legend-item"><strong>Needs Attention</strong> Stop. Preserve the row and resolve the displayed issue before another carrier action.</div>
       </div>
-      <div class="note" style="margin-top:14px;">Production status verified November 3, 2026: v0.1.44 is active, real-label mode is on, Spee Dee creation is enabled, and Veeqo purchase is enabled. These gates do not create labels by themselves. Staff should leave Settings alone unless an administrator specifically directs otherwise.</div>
+      <div class="note" style="margin-top:14px;">Production status verified November 27, 2026: v0.1.45 is active, real-label mode is on, Spee Dee creation is enabled, and Veeqo purchase is enabled. Guarded staging remains dry-run with both creation gates off. These gates do not create labels by themselves. Staff should leave Settings alone unless an administrator specifically directs otherwise.</div>
     </section>
 
     <footer>
-      Built for Mr. Floor. Updated November 3, 2026 for the v0.1.44 carton-aware, multi-carrier shipping-label workflow. Sensitive credentials are intentionally omitted.
+      Built for Mr. Floor. Updated November 27, 2026 for the v0.1.45 carton-aware, multi-carrier shipping-label workflow. Sensitive credentials are intentionally omitted.
     </footer>
   </main>
 </body>
